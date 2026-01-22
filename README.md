@@ -1,5 +1,11 @@
 # FRAME Architecture – Repository Structure and Resources
 
+![Version](https://img.shields.io/github/v/tag/FRAME-ITS/FRAME?label=version&style=flat-square)
+![License](https://img.shields.io/github/license/FRAME-ITS/FRAME?style=flat-square)
+![Last Commit](https://img.shields.io/github/last-commit/FRAME-ITS/FRAME?style=flat-square)
+![Open Issues](https://img.shields.io/github/issues/FRAME-ITS/FRAME?style=flat-square)
+![Closed Issues](https://img.shields.io/github/issues-closed/FRAME-ITS/FRAME?style=flat-square)
+
 The **FRAME Architecture** (originally the European ITS Framework Architecture) has been a foundational reference for Intelligent Transport Systems (ITS) in Europe for more than two decades.  
 It was first published in 2000 as part of the EC‑funded **KAREN** project, following recommendations from the High Level Group on transport telematics and a supporting Council resolution.
 
