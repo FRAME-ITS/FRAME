@@ -1,6 +1,6 @@
-# Contributing to the NAP Reference Architecture
+# Contributing to the FRAME
 
-Thank you for your interest in contributing to the National Access Point Reference Architecture (NRA).  
+Thank you for your interest in contributing to the FRAME.  
 This document explains how contributions are organised, reviewed, and integrated into the project.
 
 ## 🧭 Contribution Workflow
@@ -33,7 +33,7 @@ You may propose changes by:
 
 - Opening an **issue**  
 - Submitting a **pull request**  
-- Providing feedback through NAPCORE working channels  
+- Providing feedback through FRAME maintainers working channels  
 
 Please reference:
 - The affected release or draft  
@@ -53,7 +53,7 @@ Drafts may undergo multiple iterations before stabilisation.
 
 ### 4. Release publication
 
-Once a draft is validated and approved by NAPCORE governance, it becomes a new numbered release in:
+Once a draft is validated and approved by FRAME maintainers, it becomes a new numbered release in:
 
 ```
 /releases/<version>
@@ -82,7 +82,7 @@ When contributing:
 
 ## 🤝 Code of Conduct
 
-Contributors are expected to follow NAPCORE’s collaborative principles:
+Contributors are expected to follow FRAME’s collaborative principles:
 - Respectful communication  
 - Evidence‑based argumentation  
 - Transparency of rationale  
@@ -90,4 +90,4 @@ Contributors are expected to follow NAPCORE’s collaborative principles:
 
 ## 📬 Questions or Feedback?
 
-Please open an issue in the repository or contact the NAPCORE working group responsible for the NRA.
+Please open an issue in the repository or contact the FRAME maintainers group.
