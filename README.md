@@ -1,29 +1,103 @@
-# FRAME NEXT - Next Level of FRAME
-The FRAME Architecture (originally called the European ITS Framework Architecture) was developed as a result of recommendations from the High Level Group on transport telematics, which were supported by a resolution of the Council of Ministers. It was created and first published by the EC funded project KAREN in October 2000. The underlying aim of this initiative was to promote the deployment of (mainly road-based) ITS in Europe by producing a framework which would provide a systematic basis for planning ITS implementations, facilitate their integration when multiple systems were to be deployed, and help to ensure inter-operability, including across European borders.
+# FRAME Architecture – Repository Structure and Resources
 
-The development of the FRAME Architecture and the FRAME Architecture tool continous.<br>
-If issues, questions or the need for information apears, this is the right place for it.
+The **FRAME Architecture** (originally the European ITS Framework Architecture) has been a foundational reference for Intelligent Transport Systems (ITS) in Europe for more than two decades.  
+It was first published in 2000 as part of the EC‑funded **KAREN** project, following recommendations from the High Level Group on transport telematics and a supporting Council resolution.
 
-## How to use it:
-Open issues and discussion topics could be found in the tap "issues".<br>
-If new issues are created, please use the correct lable for it.
+The purpose of FRAME has always been to provide:
+- A **systematic basis** for planning ITS implementations  
+- A framework enabling **integration** of multiple ITS systems  
+- A foundation for **interoperability**, including cross‑border use cases  
+- A **shared modelling methodology** for ITS architects and implementers  
 
-Information, descriptions and further links can be found within the tab "Wiki"<br>
+Development of the FRAME Architecture and the FRAME Toolbox continues, and this repository is the central place for issues, drafts, and releases.
 
-## Latest Versions Link:<br>
-[Complete FRAME Architecture including eCall, Truckparking, C-ITS, National Access Point (NAP) and National Body (NB) reference architecture](https://files.austriatech.at/#my-libs/lib/5ffeff21-ba3f-48cd-9424-2f1ab336774e/01_Files%20for%20Review)<br>
+## 📁 Repository Structure
 
-[FRAME Toolbox for EA import](https://files.austriatech.at/#my-libs/lib/5ffeff21-ba3f-48cd-9424-2f1ab336774e/06_EA%20Development/FRAME%20Toolbox)<br>
+The repository follows a clear structure to separate **stable releases** from **ongoing development**:
 
-[FRAME Workshops and tutorials](https://files.austriatech.at/#my-libs/lib/5ffeff21-ba3f-48cd-9424-2f1ab336774e/05_EA-Workshops_WebEx)<br>
+/releases/        → Official, stable FRAME Architecture releases 
+/drafts/          → Working drafts preparing future releases 
+/drafts/latest/   → Most up‑to‑date working draft
 
-For further topics like workshop requests, cooperations and others please contact us: [https://frame-online.eu/](https://frame-online.eu/)<br>
+### **Releases**
 
-## Ongoing developments of reference architectures:<br>
-Within the project [NAPCORE](https://napcore.eu/), with the main goal to harmonize the National Access Points (NAP) and National Bodies (NB) through 33 countries, the FRAME NAP reference Architecture faces an update procedure.
-Therefore we established another GitHub repository:<br>
-> NAPCORE National Access Point Reference Architecture<br>
-> [NAP Reference Architecture](https://github.com/NAPCORE/NAP-Reference-Architecture)
+Stable, versioned FRAME Architecture packages, including:
+- Enterprise Architect model files (`.qea`, `.xmi`)
+- Documentation exports
+- Methodology material
 
-> NAPCORE National Body Reference Architecture<br>
-> [NB Reference Architecture](https://github.com/NAPCORE/NB-Reference-Architecture)
+Releases are **immutable** once published.
+
+### **Drafts**
+
+Work‑in‑progress updates preparing the next FRAME release.  
+Drafts follow the naming pattern:
+
+```
+<target-version>-draft.<iteration>
+```
+
+Example:
+
+```
+2.1.0-draft.1
+```
+
+The folder `/drafts/latest` always contains the most current working draft, including corrections to existing releases.
+
+## 🧩 Working With FRAME Models
+
+FRAME models are provided as:
+- **XMI files** (model exchange)
+- **QEA files** (Enterprise Architect project)
+- **FRAME Toolbox** (required for stereotypes and modelling conventions)
+
+To open a FRAME model in Enterprise Architect:
+
+1. Create a **new, empty EA project**.  
+2. Load the **FRAME Toolbox**.  
+3. Import the FRAME `.xmi` file.  
+
+> Importing the XMI before loading the toolbox will break stereotypes.
+
+
+## 📚 Documentation and Resources
+
+Additional FRAME information, descriptions, and background material can be found in the **Wiki** section of this repository.
+
+Workshops, tutorials, and historical materials are available at:
+
+- FRAME Online: https://frame-online.eu/
+
+
+## 🔗 External Resources (Legacy Hosting)
+
+Some legacy materials remain hosted externally:
+
+- Complete FRAME Architecture (including eCall, Truck Parking, C‑ITS, NAP, NB)  
+- FRAME Toolbox for EA import  
+- FRAME Workshops and tutorials  
+
+These will be progressively migrated into the structured `/releases` and `/drafts` directories.
+
+
+## 🔄 Related Reference Architectures
+
+FRAME is used as the methodological basis for several ongoing reference architecture developments within **NAPCORE**:
+
+- **NAPCORE National Access Point Reference Architecture**  
+  https://github.com/NAPCORE/NAP-Reference-Architecture
+
+- **NAPCORE National Body Reference Architecture**  
+  https://github.com/NAPCORE/NB-Reference-Architecture
+
+
+## 🗨 Issues and Discussions
+
+Questions, issues, and proposals for improvement can be submitted via the **Issues** tab.  
+Please use appropriate labels to help categorise your contribution.
+
+## 🤝 Contact
+
+For workshop requests, cooperation, or general enquiries:  
+https://frame-online.eu/
