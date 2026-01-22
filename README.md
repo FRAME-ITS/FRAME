@@ -1,4 +1,4 @@
-# FRAME Architecture – Repository Structure and Resources
+# FRAME Architecture
 
 ![Version](https://img.shields.io/github/v/tag/FRAME-ITS/FRAME?label=version&style=flat-square)
 ![License](https://img.shields.io/github/license/FRAME-ITS/FRAME?style=flat-square)
