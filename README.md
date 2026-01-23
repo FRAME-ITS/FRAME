@@ -21,9 +21,9 @@ Development of the FRAME Architecture and the FRAME Toolbox continues, and this 
 
 The repository follows a clear structure to separate **stable releases** from **ongoing development**:
 
-/releases/        → Official, stable FRAME Architecture releases 
-/drafts/          → Working drafts preparing future releases 
-/drafts/latest/   → Most up‑to‑date working draft
+- `/releases/`        → Official, stable FRAME Architecture releases 
+- `/drafts/`          → Working drafts preparing future releases 
+- `/drafts/latest/`   → Most up‑to‑date working draft
 
 ### **Releases**
 
@@ -37,17 +37,10 @@ Releases are **immutable** once published.
 ### **Drafts**
 
 Work‑in‑progress updates preparing the next FRAME release.  
-Drafts follow the naming pattern:
 
-```
-<target-version>-draft.<iteration>
-```
+Drafts follow the naming pattern: `<target-version>-draft.<iteration>`
 
-Example:
-
-```
-2.1.0-draft.1
-```
+Example: `2.1.0-draft.1`
 
 The folder `/drafts/latest` always contains the most current working draft, including corrections to existing releases.
 
@@ -73,7 +66,8 @@ Additional FRAME information, descriptions, and background material can be found
 
 Workshops, tutorials, and historical materials are available at:
 
-- FRAME Online: https://frame-online.eu/
+- FRAME Online (legacy): https://frame-online.eu/
+- FRAME Online (in development): https://frame-its.github.io/FRAME-online/
 
 
 ## 🔗 External Resources (Legacy Hosting)
