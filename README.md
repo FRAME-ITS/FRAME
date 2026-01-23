@@ -101,3 +101,11 @@ Please use appropriate labels to help categorise your contribution.
 
 For workshop requests, cooperation, or general enquiries:  
 https://frame-online.eu/
+
+## 🏛️ Acknowledgment
+
+<img src="https://hadea.ec.europa.eu/sites/default/files/styles/embed_medium_2x/public/2022-01/en_horizontal_cef_logo_2.png?itok=Pfa-0dP0" alt="Co-financed y European Union" width="50%" height="auto" align="right">
+
+The FRAME has received funding from the European Union's Connecting Europe Facility (CEF) programme under grant agreement No **MOVE/C3/SUB/2016-405/CEF/PSA/SI2.759934**. 
+
+The content of this document reflects only the authors' views, and the European Union is not responsible for any use that may be made of the information it contains.
