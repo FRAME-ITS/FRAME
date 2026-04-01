@@ -68,6 +68,11 @@ Workshops, tutorials, and historical materials are available at:
 
 - FRAME Online (legacy): https://frame-online.eu/
 - FRAME Online (in development): https://frame-its.github.io/FRAME-online/
+- [how-to](./materials/): MS word documents describing how to import toolbox into the Enterprise Architect SW. How to develop archiztecture objects and overall development guide.
+
+## Licence
+
+FRAME NAP Reference Architecture toolbox are distributed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
 
 ## 🔗 External Resources (Legacy Hosting)

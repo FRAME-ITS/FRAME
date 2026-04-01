@@ -1,0 +1,76 @@
+name: Bug Report
+description: File a bug report.
+title: "[Bug]: "
+labels: ["bug", "triage"]
+projects: ["octo-org/1", "octo-org/44"]
+assignees:
+  - octocat
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report! Pleease fill in details for your issue.
+  - type: dropdown
+    id: view
+    attributes:
+      label: View
+      description: In that view is problem?
+      options:
+        - general (Default)
+        - Motivational Layer
+        - Ornanizational View
+        - Functional View
+        - Physical View
+        - Communications View
+      default: 0
+    validations:
+      required: true
+body:
+  - type: input
+    id: issue_name
+    attributes:
+      label: Issue Name
+      description: "Composed of the problem description and scope identification"
+      placeholder: "[View / Type / Object Name] – [Problem Description and Scope Identification]"
+    validations:
+      required: true
+
+  - type: textarea
+    id: short_description
+    attributes:
+      label: Short Description
+      description: "Provide a brief description of the issue"
+    validations:
+      required: true
+
+  - type: input
+    id: label
+    attributes:
+      label: Label
+      description: "Type of Comment"
+    validations:
+      required: true
+
+  - type: textarea
+    id: comments
+    attributes:
+      label: Comments
+      description: "Initial comments from the filing user"
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_change
+    attributes:
+      label: Proposed Change
+      description: "Initial proposal from the filing user"
+    validations:
+      required: true
+
+  - type: textarea
+    id: observation
+    attributes:
+      label: Observation
+      description: "A sequence of comments to the issue ending with a resolution"
+    validations:
+      required: true
