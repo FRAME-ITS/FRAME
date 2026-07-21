@@ -1,0 +1,87 @@
+name: Apply FRAME Issue Classification
+
+on:
+  workflow_dispatch:
+
+jobs:
+  classify-all:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Load classification map
+        id: map
+        uses: mikefarah/yq@v4
+        with:
+          cmd: yq eval '.issues' .github/classification-map.yml
+
+      - name: Fetch all open issues
+        id: fetch
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const issues = await github.paginate(
+              github.rest.issues.listForRepo,
+              {
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                state: "open"
+              }
+            );
+            core.setOutput("issues", JSON.stringify(issues));
+
+      - name: Classify each issue
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const issues = JSON.parse(core.getInput("issues"));
+            const fs = require("fs");
+            const yaml = require("js-yaml");
+
+            const map = yaml.load(
+              fs.readFileSync(".github/classification-map.yml", "utf8")
+            ).issues;
+
+            for (const issue of issues) {
+              const number = issue.number;
+              const entry = map[number];
+
+              if (!entry) {
+                console.log(`No classification for issue #${number}`);
+                continue;
+              }
+
+              // Apply labels
+              if (entry.labels && entry.labels.length > 0) {
+                await github.rest.issues.addLabels({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: number,
+                  labels: entry.labels
+                });
+              }
+
+              // Add comment
+              if (entry.comment) {
+                await github.rest.issues.createComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: number,
+                  body: entry.comment
+                });
+              }
+
+              // Mark as classified
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: number,
+                labels: ["classified"]
+              });
+
+              console.log(`Classified issue #${number}`);
+            }

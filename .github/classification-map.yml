@@ -1,0 +1,227 @@
+issues:
+  94:
+    labels: ["Level-3", "governance", "website", "documentation"]
+    comment: |
+      **Automatic classification applied**
+      - Level: 3 (Moderate Change)
+      - Requires TCP
+      - Impact: Governance + Website consolidation + Documentation cleanup
+
+  93:
+    labels: ["Level-5", "architecture", "reference-architecture", "strategy"]
+    comment: |
+      **Automatic classification applied**
+      - Level: 5 (Architectural Change)
+      - Requires TCP + RFC
+      - Impact: Repository architecture strategy + RA integration approach
+
+  92:
+    labels: ["Level-2", "model", "EA", "bug"]
+    comment: |
+      **Automatic classification applied**
+      - Level: 2 (Minor Improvement)
+      - No TCP required unless deeper structural issues found
+      - Impact: EA model corrections based on external review
+
+  91:
+    labels: ["Level-2", "model", "context-diagram", "bug"]
+    comment: |
+      **Automatic classification applied**
+      - Level: 2 (Minor Improvement)
+      - No TCP required
+      - Impact: Missing terminator in Context Diagram
+
+  90:
+    labels: ["Level-3", "documentation", "EA", "website"]
+    comment: |
+      **Automatic classification applied**
+      - Level: 3 (Moderate Change)
+      - Requires TCP
+      - Impact: Documentation update + EA versioning policy + Website clarification
+
+  89:
+    labels: ["Level-1", "documentation", "user-guide"]
+    comment: |
+      **Automatic classification applied**
+      - Level: 1 (Editorial Fix)
+      - No TCP required
+      - Impact: Missing acronyms in User Guide
+
+  88:
+    labels: ["Level-5", "methodology", "architecture", "documentation"]
+    comment: |
+      **Automatic classification applied**
+      - Level: 5 (Architectural Change)
+      - Requires TCP + RFC
+      - Impact: Methodology alignment + metamodel consistency + FAT rewrite
+
+  87:
+    labels: ["Level-2", "user-needs", "model", "bug"]
+    comment: |
+      **Automatic classification applied**
+      - Level: 2 (Minor Improvement)
+      - No TCP required
+      - Impact: Correction of NAP user needs wording
+
+  86:
+    labels: ["Level-3", "toolbox", "naming", "model"]
+    comment: |
+      **Automatic classification applied**
+      - Level: 3 (Moderate Change)
+      - Requires TCP
+      - Impact: Standardizing naming conventions across metamodel artefacts
+
+  85:
+    labels: ["Level-4", "metamodel", "relationships", "architecture"]
+    comment: |
+      **Automatic classification applied**
+      - Level: 4 (Major Model Change)
+      - Requires TCP
+      - Impact: Adding/removing metamodel relationships + conceptual alignment
+
+  84:
+    labels: ["Level-4", "metamodel", "definitions", "architecture"]
+    comment: |
+      **Automatic classification applied**
+      - Level: 4 (Major Model Change)
+      - Requires TCP
+      - Impact: Redefinition of core artefacts (Stakeholder, Vision, Mission, Service…)
+
+  82:
+    labels: ["Level-2", "toolbox", "connectors", "bug"]
+    comment: |
+      **Automatic classification applied**
+      - Level: 2 (Minor Improvement)
+      - No TCP required
+      - Impact: Correction of connector direction semantics
+
+  81:
+    labels: ["Level-3", "data-flows", "model", "connectors"]
+    comment: |
+      **Automatic classification applied**
+      - Level: 3 (Moderate Change)
+      - Requires TCP
+      - Impact: Adding missing connectors between data flow levels
+
+  80:
+    labels: ["Level-2", "data-flows", "model", "bug"]
+    comment: |
+      **Automatic classification applied**
+      - Level: 2 (Minor Improvement)
+      - No TCP required
+      - Impact: Fixing incorrect connector directions
+
+  79:
+    labels: ["Level-2", "data-flows", "model", "bug"]
+    comment: |
+      **Automatic classification applied**
+      - Level: 2 (Minor Improvement)
+      - No TCP required
+      - Impact: Incorrect connector type (“supertype of” instead of “component of”)
+
+  78:
+    labels: ["Level-3", "toolbox", "glossary", "documentation"]
+    comment: |
+      **Automatic classification applied**
+      - Level: 3 (Moderate Change)
+      - Requires TCP
+      - Impact: Introducing glossary mechanism + EA usability improvement
+
+  76:
+    labels: ["Level-3", "scripts", "model", "data-flows"]
+    comment: |
+      **Automatic classification applied**
+      - Level: 3 (Moderate Change)
+      - Requires TCP
+      - Impact: Detecting unused data flows via scripting
+
+  72:
+    labels: ["Level-2", "toolbox", "connectors", "bug"]
+    comment: |
+      **Automatic classification applied**
+      - Level: 2 (Minor Improvement)
+      - No TCP required
+      - Impact: Missing connector stereotype for HL function → data flow
+
+  71:
+    labels: ["Level-2", "toolbox", "connectors", "bug"]
+    comment: |
+      **Automatic classification applied**
+      - Level: 2 (Minor Improvement)
+      - No TCP required
+      - Impact: Cannot connect Data Store to Data Flow due to missing stereotype
+
+  69:
+    labels: ["Level-3", "toolbox", "connectors", "documentation"]
+    comment: |
+      **Automatic classification applied**
+      - Level: 3 (Moderate Change)
+      - Requires TCP
+      - Impact: Clarifying IN/OUT connector semantics + toolbox cleanup
+
+  67:
+    labels: ["Level-3", "model", "terminators", "consistency"]
+    comment: |
+      **Automatic classification applied**
+      - Level: 3 (Moderate Change)
+      - Requires TCP
+      - Impact: Harmonizing terminator usage across functional areas
+
+  64:
+    labels: ["Level-2", "data-flows", "model", "consistency"]
+    comment: |
+      **Automatic classification applied**
+      - Level: 2 (Minor Improvement)
+      - No TCP required
+      - Impact: Inconsistent grouping of data objects in data flows
+
+  62:
+    labels: ["Level-2", "user-needs", "model", "bug"]
+    comment: |
+      **Automatic classification applied**
+      - Level: 2 (Minor Improvement)
+      - No TCP required
+      - Impact: Self-referential “served by” connector
+
+  59:
+    labels: ["Level-3", "terminators", "architecture", "documentation"]
+    comment: |
+      **Automatic classification applied**
+      - Level: 3 (Moderate Change)
+      - Requires TCP
+      - Impact: Clarifying modelling of external systems via terminators
+
+  58:
+    labels: ["Level-3", "business-process", "metamodel", "documentation"]
+    comment: |
+      **Automatic classification applied**
+      - Level: 3 (Moderate Change)
+      - Requires TCP
+      - Impact: Decision whether Business Process artefact remains in FRAME
+
+  57:
+    labels: ["Level-2", "toolbox", "connectors", "usability"]
+    comment: |
+      **Automatic classification applied**
+      - Level: 2 (Minor Improvement)
+      - No TCP required
+      - Impact: Toolbox auto-selection for stereotype connectors
+
+  56:
+    labels: ["Level-3", "user-needs", "diagramming", "documentation"]
+    comment: |
+      **Automatic classification applied**
+      - Level: 3 (Moderate Change)
+      - Requires TCP
+      - Impact: Changing representation of User Needs on diagrams
+
+  55:
+    labels: ["Level-3", "organisational-view", "connectors", "terminators"]
+    comment: |
+      **Automatic classification applied**
+      - Level: 3 (Moderate Change)
+      - Requires TCP
+      - Impact: Allowing agreements to connect to external terminators
+
+  54:
+    labels: ["Level-3", "physical-view", "architecture", "documentation
