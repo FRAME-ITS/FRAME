@@ -14,23 +14,12 @@ jobs:
       - name: Convert classification map to JSON
         run: |
           yq eval -o=json '.issues' .github/classification-map.yml > classification.json
-          echo "Classification map converted to JSON."
 
       - name: Get all open issue numbers
-        id: list
-        uses: actions/github-script@v7
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const issues = await github.paginate(
-              github.rest.issues.listForRepo,
-              {
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                state: "open"
-              }
-            );
-            core.setOutput("numbers", JSON.stringify(issues.map(i => i.number)));
+        run: |
+          gh issue list --state open --json number --jq '.[].number' > issue_numbers.txt
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Apply classification
         uses: actions/github-script@v7
@@ -38,9 +27,15 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const fs = require('fs');
+
+            // Load classification map
             const map = JSON.parse(fs.readFileSync('classification.json', 'utf8'));
 
-            const numbers = JSON.parse(core.getOutput("numbers"));
+            // Load issue numbers
+            const numbers = fs.readFileSync('issue_numbers.txt', 'utf8')
+                              .split('\n')
+                              .map(n => n.trim())
+                              .filter(n => n !== '');
 
             for (const issueNumber of numbers) {
               const entry = map[issueNumber];
@@ -50,23 +45,28 @@ jobs:
                 continue;
               }
 
+              const labels = entry.labels || [];
+              const comment = entry.comment || '';
+
+              console.log(`Classifying issue #${issueNumber}`);
+
               // Apply labels
-              if (entry.labels && entry.labels.length > 0) {
+              if (labels.length > 0) {
                 await github.rest.issues.addLabels({
                   owner: context.repo.owner,
                   repo: context.repo.repo,
                   issue_number: issueNumber,
-                  labels: entry.labels
+                  labels: labels
                 });
               }
 
               // Add comment
-              if (entry.comment) {
+              if (comment.trim() !== '') {
                 await github.rest.issues.createComment({
                   owner: context.repo.owner,
                   repo: context.repo.repo,
                   issue_number: issueNumber,
-                  body: entry.comment
+                  body: comment
                 });
               }
 
@@ -78,5 +78,5 @@ jobs:
                 labels: ["classified"]
               });
 
-              console.log(`Classified issue #${issueNumber}`);
+              console.log(`✔ Classified issue #${issueNumber}`);
             }
