@@ -1,4 +1,4 @@
-name: Apply FRAME Issue Classification (All Issues)
+name: Apply FRAME Issue Classification (ALL)
 
 on:
   workflow_dispatch:
@@ -11,12 +11,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Convert classification map to JSON file
+      - name: Convert classification map to JSON
         run: |
           yq eval -o=json '.issues' .github/classification-map.yml > classification.json
           echo "Classification map converted to JSON."
 
-      - name: Get all open issues
+      - name: Get all open issue numbers
         id: list
         uses: actions/github-script@v7
         with:
@@ -30,7 +30,7 @@ jobs:
                 state: "open"
               }
             );
-            core.setOutput("numbers", issues.map(i => i.number));
+            core.setOutput("numbers", JSON.stringify(issues.map(i => i.number)));
 
       - name: Apply classification
         uses: actions/github-script@v7
@@ -40,10 +40,9 @@ jobs:
             const fs = require('fs');
             const map = JSON.parse(fs.readFileSync('classification.json', 'utf8'));
 
-            const numbers = core.getInput("numbers").split(",");
+            const numbers = JSON.parse(core.getOutput("numbers"));
 
-            for (const num of numbers) {
-              const issueNumber = num.trim();
+            for (const issueNumber of numbers) {
               const entry = map[issueNumber];
 
               if (!entry) {
