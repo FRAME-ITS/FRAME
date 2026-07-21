@@ -1,4 +1,4 @@
-name: Apply FRAME Issue Classification (All Issues)
+name: Apply FRAME Issue Classification (Bulk)
 
 on:
   workflow_dispatch:
@@ -11,11 +11,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Load classification map
+      - name: Load classification map (JSON)
         id: map
         run: |
-          echo "Loaded classification map"
-          yq eval '.issues' .github/classification-map.yml
+          MAP=$(yq eval -o=json '.issues' .github/classification-map.yml)
+          echo "MAP=$MAP" >> $GITHUB_ENV
 
       - name: Get list of open issues
         id: list
@@ -31,32 +31,44 @@ jobs:
                 state: "open"
               }
             );
-            return issues.map(i => i.number);
+            core.setOutput("numbers", issues.map(i => i.number));
 
       - name: Classify each issue
-        run: |
-          for ISSUE in ${{ steps.list.outputs.result }}; do
-            echo "Processing issue #$ISSUE"
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const map = JSON.parse(process.env.MAP);
+            const numbers = core.getInput("numbers").split(",");
 
-            LABELS=$(yq eval ".issues.${ISSUE}.labels[]" .github/classification-map.yml 2>/dev/null || true)
-            COMMENT=$(yq eval ".issues.${ISSUE}.comment" .github/classification-map.yml 2>/dev/null || true)
+            for (const num of numbers) {
+              const issueNumber = num.trim();
+              const entry = map[issueNumber];
 
-            if [ -z "$LABELS" ]; then
-              echo "No classification for issue #$ISSUE"
-              continue
-            fi
+              if (!entry) {
+                console.log(`No classification for issue #${issueNumber}`);
+                continue;
+              }
 
-            echo "Applying labels: $LABELS"
+              // Apply labels
+              if (entry.labels && entry.labels.length > 0) {
+                await github.rest.issues.addLabels({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: issueNumber,
+                  labels: entry.labels
+                });
+              }
 
-            gh issue edit $ISSUE --add-label "$LABELS"
+              // Add comment
+              if (entry.comment) {
+                await github.rest.issues.createComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: issueNumber,
+                  body: entry.comment
+                });
+              }
 
-            if [ -n "$COMMENT" ]; then
-              echo "Adding comment"
-              gh issue comment $ISSUE --body "$COMMENT"
-            fi
-
-            gh issue edit $ISSUE --add-label "classified"
-
-          done
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              console.log(`Classified issue #${issueNumber}`);
+            }
