@@ -1,0 +1,62 @@
+name: Apply FRAME Issue Classification (All Issues)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  classify-all:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Load classification map
+        id: map
+        run: |
+          echo "Loaded classification map"
+          yq eval '.issues' .github/classification-map.yml
+
+      - name: Get list of open issues
+        id: list
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const issues = await github.paginate(
+              github.rest.issues.listForRepo,
+              {
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                state: "open"
+              }
+            );
+            return issues.map(i => i.number);
+
+      - name: Classify each issue
+        run: |
+          for ISSUE in ${{ steps.list.outputs.result }}; do
+            echo "Processing issue #$ISSUE"
+
+            LABELS=$(yq eval ".issues.${ISSUE}.labels[]" .github/classification-map.yml 2>/dev/null || true)
+            COMMENT=$(yq eval ".issues.${ISSUE}.comment" .github/classification-map.yml 2>/dev/null || true)
+
+            if [ -z "$LABELS" ]; then
+              echo "No classification for issue #$ISSUE"
+              continue
+            fi
+
+            echo "Applying labels: $LABELS"
+
+            gh issue edit $ISSUE --add-label "$LABELS"
+
+            if [ -n "$COMMENT" ]; then
+              echo "Adding comment"
+              gh issue comment $ISSUE --body "$COMMENT"
+            fi
+
+            gh issue edit $ISSUE --add-label "classified"
+
+          done
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

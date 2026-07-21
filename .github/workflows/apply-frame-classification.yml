@@ -1,4 +1,4 @@
-name: Apply FRAME Issue Classification
+name: Apply FRAME Issue Classification (All Issues)
 
 on:
   workflow_dispatch:
@@ -11,17 +11,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Load classification map
+      - name: Load classification map (YAML → JSON)
         id: map
-        uses: mikefarah/yq@v4
-        with:
-          cmd: yq eval '.issues' .github/classification-map.yml
+        run: |
+          JSON=$(yq eval -o=json '.issues' .github/classification-map.yml)
+          echo "json=$JSON" >> $GITHUB_OUTPUT
 
-      - name: Fetch all open issues
-        id: fetch
+      - name: Get all open issues
+        id: issues
         uses: actions/github-script@v7
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const issues = await github.paginate(
               github.rest.issues.listForRepo,
@@ -31,36 +30,24 @@ jobs:
                 state: "open"
               }
             );
-            core.setOutput("issues", JSON.stringify(issues));
+            return issues.map(i => i.number);
 
       - name: Classify each issue
         uses: actions/github-script@v7
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const issues = JSON.parse(core.getInput("issues"));
-            const fs = require("fs");
-            const yaml = require("js-yaml");
+            const map = JSON.parse(process.env.MAP_JSON);
 
-            const map = yaml.load(
-              fs.readFileSync(".github/classification-map.yml", "utf8")
-            ).issues;
-
-            for (const issue of issues) {
-              const number = issue.number;
-              const entry = map[number];
-
-              if (!entry) {
-                console.log(`No classification for issue #${number}`);
-                continue;
-              }
+            for (const issueNumber of ${{ steps.issues.outputs.result }}) {
+              const entry = map[issueNumber];
+              if (!entry) continue;
 
               // Apply labels
               if (entry.labels && entry.labels.length > 0) {
                 await github.rest.issues.addLabels({
                   owner: context.repo.owner,
                   repo: context.repo.repo,
-                  issue_number: number,
+                  issue_number: issueNumber,
                   labels: entry.labels
                 });
               }
@@ -70,7 +57,7 @@ jobs:
                 await github.rest.issues.createComment({
                   owner: context.repo.owner,
                   repo: context.repo.repo,
-                  issue_number: number,
+                  issue_number: issueNumber,
                   body: entry.comment
                 });
               }
@@ -79,9 +66,9 @@ jobs:
               await github.rest.issues.addLabels({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                issue_number: number,
+                issue_number: issueNumber,
                 labels: ["classified"]
               });
-
-              console.log(`Classified issue #${number}`);
             }
+        env:
+          MAP_JSON: ${{ steps.map.outputs.json }}
