@@ -1,4 +1,4 @@
-name: Apply FRAME Issue Classification (Bulk)
+name: Apply FRAME Issue Classification (All Issues)
 
 on:
   workflow_dispatch:
@@ -11,13 +11,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Load classification map (JSON)
-        id: map
+      - name: Convert classification map to JSON file
         run: |
-          MAP=$(yq eval -o=json '.issues' .github/classification-map.yml)
-          echo "MAP=$MAP" >> $GITHUB_ENV
+          yq eval -o=json '.issues' .github/classification-map.yml > classification.json
+          echo "Classification map converted to JSON."
 
-      - name: Get list of open issues
+      - name: Get all open issues
         id: list
         uses: actions/github-script@v7
         with:
@@ -33,12 +32,14 @@ jobs:
             );
             core.setOutput("numbers", issues.map(i => i.number));
 
-      - name: Classify each issue
+      - name: Apply classification
         uses: actions/github-script@v7
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const map = JSON.parse(process.env.MAP);
+            const fs = require('fs');
+            const map = JSON.parse(fs.readFileSync('classification.json', 'utf8'));
+
             const numbers = core.getInput("numbers").split(",");
 
             for (const num of numbers) {
@@ -69,6 +70,14 @@ jobs:
                   body: entry.comment
                 });
               }
+
+              // Mark as classified
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issueNumber,
+                labels: ["classified"]
+              });
 
               console.log(`Classified issue #${issueNumber}`);
             }
