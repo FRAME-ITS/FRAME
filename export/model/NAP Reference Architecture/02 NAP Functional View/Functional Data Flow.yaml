@@ -380,6 +380,7 @@ elements:
     note: |
       It consists of inputs from the NAP Content Consumer containing data objects that provide a request for information about accessible traffic, travel data and any other relevant information which are described with metadata in the store of NAP Metadata. The request shall contain keywords or any refining demand in at least one metadata element.
     links:
+      - "Aggregation «Componentof» → fnap-mt_inputs"  # {9FFF3FB8-048B-4c62-88AB-1C46DA692FD4} → {572F1D4D-9EB2-41ef-9944-23A22C7DA25B}
       - "Association «IN» → F3.6 Operate National Access Point"  # {08E37D68-18B8-4107-AE07-8A03AE8532D8} → {7ADE914E-925B-4d69-8E2A-6E26A0C42EEE}
       - "Association «OUT» → F3.6.4 Manage Metadata Retrieval"  # {BD1D94B8-CF0A-4b46-A050-B1EE2E79CF10} → {2F2393E9-9A59-4344-A2C0-207945E7F438}
       - "Association «served by» → PDF Metadata to Content Consumer"  # {8E23A8F8-BE1B-47c4-AF0D-8982438D84BD} → {C25F8BCA-DCD4-4894-956E-40D0218D3ACA}
@@ -400,6 +401,7 @@ elements:
       TODO:
       - NAP User and NAP Operator are not mentioned anywhere, they shall be created as new terminators in NAP Actors
     links:
+      - "Aggregation «Componentof» → fnap-mt_inputs"  # {959751C3-B915-4dc4-AFC7-4BD893F79BEF} → {572F1D4D-9EB2-41ef-9944-23A22C7DA25B}
       - "Association «IN» → F3.6 Operate National Access Point"  # {5707AA49-29EA-41f2-9D67-6F4BA67DF751} → {7ADE914E-925B-4d69-8E2A-6E26A0C42EEE}
       - "Association «IN» → F3.6.5 Provide NAP User Support"  # {0D816A1C-CBF8-4e4e-A237-A9D5E6FA8AB6} → {E4E0DD97-20AB-4868-B0DE-C0C3C14EA4BA}
       - "Association «served by» → PDF Support of Content Consumer"  # {BEC7B4E4-8960-4b85-9E8E-EDE9219059EE} → {0B43348A-F713-49fe-A684-A88D53A58D67}
@@ -421,6 +423,7 @@ elements:
       TODO:
       - Should the authorization credentials be really done by this data flow? I assume yes, BUT then what if just log in to change data in NAP Users? Then it gets complicated, also what about the Provide Interface function should not it be also part of manage registrations? There shall also be an interface.
     links:
+      - "Aggregation «Componentof» → fnap-mt_inputs"  # {5E12A648-243C-4aa4-A848-DC6D99469B6F} → {572F1D4D-9EB2-41ef-9944-23A22C7DA25B}
       - "Association «IN» → F3.6 Operate National Access Point"  # {A9E975BF-0523-44fc-9A71-5374B7CEE5C6} → {7ADE914E-925B-4d69-8E2A-6E26A0C42EEE}
       - "Association «IN» → F3.6.3 Manage Content Providers Metadata"  # {19CCF105-8EDD-40cf-AA7A-85F98232F147} → {E8D1212C-A787-4da1-A4EB-B4E1896ABD19}
       - "Association «served by» → PDF Metadata from Content Provider"  # {21E24BE3-79FC-41cc-84EA-C8587F7F8F46} → {48F2D92D-8E82-4032-B932-CD8D2CB855B0}
@@ -438,6 +441,7 @@ elements:
       It consists of inputs from the NAP Content Provider containing data objects that provide a registration request of and information about a potential NAP Content Provider which wants to register or a request with credentials of registered NAP Content Provider for retrieval of its data upon a successful authorisation. (Details of the information about the NAP Content Provider will be found in the description of the store of NAP Users).
       The registration request contains relevant information about the entity to be registered under NAP Content Provider account, including identity information, licence terms approval, users, machines, and organization information.
     links:
+      - "Aggregation «Componentof» → fnap-mt_inputs"  # {9598F2DF-4EF6-4299-A9AC-31EEC2889082} → {572F1D4D-9EB2-41ef-9944-23A22C7DA25B}
       - "Association «IN» → F3.6 Operate National Access Point"  # {C5939786-F611-497d-BDC7-3556FCA9A119} → {7ADE914E-925B-4d69-8E2A-6E26A0C42EEE}
       - "Association «IN» → F3.6.2 Manage Registrations and Provide Authorisation Service"  # {ABFB167B-1A9F-45d9-9B5E-98FE8A090F95} → {15D991EA-63BC-40ac-936A-A0B8D3CBC28A}
       - "Association «served by» → PDF User Management of Content Provider"  # {E04F8C8F-EA60-4f85-8462-E01326EF8DC4} → {C5A68539-7FA7-4245-9B3A-F55B6668B579}
@@ -452,6 +456,7 @@ elements:
     note: |
       It consists of inputs from the NAP Content Provider containing data objects that provide a request for support describing an issue the NAP User have and to which the NAP Operator shall respond. The data objects are used by functionality in the Manage Traffic Functional Area.
     links:
+      - "Aggregation «Componentof» → fnap-mt_inputs"  # {49435A56-CACA-4c76-B9C3-D13C28930493} → {572F1D4D-9EB2-41ef-9944-23A22C7DA25B}
       - "Association «IN» → F3.6 Operate National Access Point"  # {5223F8C5-CD44-4a8a-B547-A57B3EA07B65} → {7ADE914E-925B-4d69-8E2A-6E26A0C42EEE}
       - "Association «IN» → F3.6.5 Provide NAP User Support"  # {B9AD334A-0476-4802-A3F3-860FA59E618A} → {E4E0DD97-20AB-4868-B0DE-C0C3C14EA4BA}
       - "Association «served by» → PDF Support of Content Provider"  # {6A93FF77-84E6-45d4-B038-023F74CA63C8} → {BA985F0C-2C6F-4329-BABC-91890CC23954}

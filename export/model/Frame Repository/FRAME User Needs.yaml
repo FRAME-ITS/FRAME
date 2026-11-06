@@ -4479,9 +4479,9 @@ elements:
     note: |
       The system shall make sources of static and dynamic urban and inter-urban road and traffic information accessible to authorised users, e.g. Information Service Providers (ISPs) and Broadcasters, who can then distribute it to their end-users.
     links:
-      - "Aggregation «componentof» → F3.6.4 Manage Metadata Retrieval"  # {8FEF9764-0DF1-4f57-94AA-61B847842680} → {D9EFBB62-DD12-4dd1-A835-DF560A82A1AD}
       - "Association «Servedby» → F3.6.3 Manage Content Providers Metadata"  # {DE2DC5E8-DEF8-4b3c-AFA2-08D62CA63B4A} → {B623B347-AA95-44be-9043-55050E3CFC41}
       - "Association «belongsto» → 6.5.1 National Access Point"  # {C39DF0C5-140D-4d4c-830D-74A7FF6F2057} → {3C63081F-29BC-4386-B0F2-DD35776CBD43}
+      - "Association «served by» → F3.6.4 Manage Metadata Retrieval"  # {8FEF9764-0DF1-4f57-94AA-61B847842680} → {D9EFBB62-DD12-4dd1-A835-DF560A82A1AD}
   - name: "6.5.1.2"
     guid: "{8B53ED2F-43EB-46a0-A402-06839400D42C}"
     type: "Requirement"
@@ -4491,10 +4491,10 @@ elements:
     note: |
       The system shall provide a discovery service of static and dynamic urban and inter-urban road and traffic information for authorised users, e.g. Information Service Providers (ISPs) and Broadcasters.
     links:
-      - "Aggregation «componentof» → F3.6.4 Manage Metadata Retrieval"  # {6249600E-70D4-436c-9CC0-834D3E519F14} → {D9EFBB62-DD12-4dd1-A835-DF560A82A1AD}
       - "Association «Servedby» → F3.6.1 Manage NAP Metadata Repository"  # {AED7E0D2-FD83-4334-92DD-C189AC91C525} → {FC985F0E-26B3-41e8-847E-A71AA3290132}
       - "Association «Servedby» → F3.6.3 Manage Content Providers Metadata"  # {DB43B678-BE5C-4746-B6D1-761125DC2021} → {B623B347-AA95-44be-9043-55050E3CFC41}
       - "Association «belongsto» → 6.5.1 National Access Point"  # {94925D90-03D5-4230-9755-D313A46DE01F} → {3C63081F-29BC-4386-B0F2-DD35776CBD43}
+      - "Association «served by» → F3.6.4 Manage Metadata Retrieval"  # {6249600E-70D4-436c-9CC0-834D3E519F14} → {D9EFBB62-DD12-4dd1-A835-DF560A82A1AD}
   - name: "6.5.1.3"
     guid: "{C4563722-720F-4328-A4FD-EDB31E047B0D}"
     type: "Requirement"
@@ -4504,9 +4504,9 @@ elements:
     note: |
       The system shall provide all the information available from it in the form of meta-data, with pointers (links) to where the actual data can be found.
     links:
-      - "Aggregation «componentof» → F3.6.4 Manage Metadata Retrieval"  # {2EB7DF9E-F91C-4a27-BD8A-9C64251992AE} → {D9EFBB62-DD12-4dd1-A835-DF560A82A1AD}
       - "Association «Servedby» → F3.6.3 Manage Content Providers Metadata"  # {42EC3BB9-5B90-4ffb-B932-6BAD5DAEDD77} → {B623B347-AA95-44be-9043-55050E3CFC41}
       - "Association «belongsto» → 6.5.1 National Access Point"  # {37A363AA-E601-48f3-AA09-DF928D9B9B33} → {3C63081F-29BC-4386-B0F2-DD35776CBD43}
+      - "Association «served by» → F3.6.4 Manage Metadata Retrieval"  # {2EB7DF9E-F91C-4a27-BD8A-9C64251992AE} → {D9EFBB62-DD12-4dd1-A835-DF560A82A1AD}
   - name: "6.5.1.4"
     guid: "{DEE5E27A-A115-404a-8B18-73C5EE884519}"
     type: "Requirement"
@@ -4538,9 +4538,9 @@ elements:
     note: |
       The system shall provide a search interface in the native language of the area covered and, at least, English.
     links:
-      - "Aggregation «componentof» → F3.6.4 Manage Metadata Retrieval"  # {5103B6A9-36C4-4994-AA01-B9C688B51C89} → {D9EFBB62-DD12-4dd1-A835-DF560A82A1AD}
       - "Association «Servedby» → F3.6.3 Manage Content Providers Metadata"  # {0AF1C125-BB94-4ce1-A785-716C4DA0D164} → {B623B347-AA95-44be-9043-55050E3CFC41}
       - "Association «belongsto» → 6.5.1 National Access Point"  # {05B09814-9FAF-4f15-8E2D-6F081C485A2E} → {3C63081F-29BC-4386-B0F2-DD35776CBD43}
+      - "Association «served by» → F3.6.4 Manage Metadata Retrieval"  # {5103B6A9-36C4-4994-AA01-B9C688B51C89} → {D9EFBB62-DD12-4dd1-A835-DF560A82A1AD}
   - name: "6.5.1.7"
     guid: "{4CC0040B-2B06-4e62-9B67-D95A88133266}"
     type: "Requirement"
@@ -4561,9 +4561,9 @@ elements:
     note: |
       The system shall provide information using "open" standard communication protocols.
     links:
-      - "Aggregation «componentof» → F3.6.4 Manage Metadata Retrieval"  # {7F4EEC44-65EA-4b31-886B-33759C226FAC} → {D9EFBB62-DD12-4dd1-A835-DF560A82A1AD}
       - "Association «Servedby» → F3.6.3 Manage Content Providers Metadata"  # {C5C45F05-91DE-4b0c-A1C0-1EE3C8E52135} → {B623B347-AA95-44be-9043-55050E3CFC41}
       - "Association «belongsto» → 6.5.1 National Access Point"  # {9133C18E-73A2-446a-BA51-7C398A96296B} → {3C63081F-29BC-4386-B0F2-DD35776CBD43}
+      - "Association «served by» → F3.6.4 Manage Metadata Retrieval"  # {7F4EEC44-65EA-4b31-886B-33759C226FAC} → {D9EFBB62-DD12-4dd1-A835-DF560A82A1AD}
   - name: "7.1 Traffic Control"
     guid: "{4AEDBFDB-F216-4949-9582-9C2D87885236}"
     type: "Requirement"
@@ -9900,7 +9900,7 @@ elements:
     note: |
       The system shall maintain a list of standard procedures, set by the Freight Transport Operations Manager, to be adopted/enacted in the case of specific incidents.
     links:
-      - "Association «belongsto» → F8.6.6 Manage Incident Response Data Store"  # {E7E67DE1-2135-425b-817F-8B68F533A8BE} → {CC117A33-746F-435a-99FD-47AE519B1C96}
+      - "Association «served by» → F8.6.6 Manage Incident Response Data Store"  # {E7E67DE1-2135-425b-817F-8B68F533A8BE} → {CC117A33-746F-435a-99FD-47AE519B1C96}
   - name: "9.11.1.15"
     guid: "{BADBBCD7-3BEF-4cc4-AC2A-3DE18E02A82C}"
     type: "Requirement"
@@ -9911,7 +9911,7 @@ elements:
     note: |
       The system shall be able to support the Freight Transport Operations Manager to negotiate the availability of third party services and/or resources, including other modes, during the transportation of Freight Transport Load Item(s) through the implementation of a Freight Transport Execution Pan.
     links:
-      - "Association «belongsto» → F8.6.5 Provide FTOM Interface for FTEP Monitoring"  # {134FD656-0B90-484e-BAA1-CC0EC2FD77FD} → {8AD8B9D5-30E2-40a0-BF8A-30F3F57ECDF6}
+      - "Association «served by» → F8.6.5 Provide FTOM Interface for FTEP Monitoring"  # {134FD656-0B90-484e-BAA1-CC0EC2FD77FD} → {8AD8B9D5-30E2-40a0-BF8A-30F3F57ECDF6}
   - name: "9.11.1.2"
     guid: "{50CEA6A4-DA8F-4c44-9025-0E489BDDC247}"
     type: "Requirement"
@@ -9985,7 +9985,7 @@ elements:
     note: |
       The system shall be able to request specific traffic management measures from the traffic management system for the passage of abnormal (e.g. overweight, over-sized) Freight Vehicles that result from abnormal Freight Transport Load Items.
     links:
-      - "Association «belongsto» → F8.6.1 Implement FTEP"  # {997AA87D-87B4-4de5-ADBC-359F65CBE771} → {510B21B5-5C4B-43ec-A42D-BAF28FD4E528}
+      - "Association «served by» → F8.6.1 Implement FTEP"  # {997AA87D-87B4-4de5-ADBC-359F65CBE771} → {510B21B5-5C4B-43ec-A42D-BAF28FD4E528}
   - name: "9.11.2.1"
     guid: "{03442F02-E9E1-46bf-AAA7-936B31C1E439}"
     type: "Requirement"
@@ -10760,8 +10760,8 @@ elements:
     note: |
       The system shall be able to maintain a database of the capabilities of the available Freight Vehicles.
     links:
-      - "Association «belongsto» → F8.6.4 Provide Interface to Other Transport Modes"  # {40D22C35-9F38-4db9-A409-99A65B29FA6F} → {16E599A1-12F3-4e20-80D6-9447C898EB54}
       - "Association «served by» → F8.4.4 Prepare Freight Transport Execution Plan for Implementation"  # {34138676-535E-4071-8722-9D22474421EE} → {0E77F27F-D215-45d0-B051-5C6E61E59127}
+      - "Association «served by» → F8.6.4 Provide Interface to Other Transport Modes"  # {40D22C35-9F38-4db9-A409-99A65B29FA6F} → {16E599A1-12F3-4e20-80D6-9447C898EB54}
   - name: "1.8 Maintainability"
     guid: "{63A3971E-4FA8-4bfd-B207-803CEAAD214D}"
     type: "Requirement"

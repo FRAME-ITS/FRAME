@@ -84,7 +84,6 @@ elements:
       - "Association «IN» → tft.ftu-new_FTEP_response"  # {C46ECA3B-7B74-4bef-B758-40A423E50D5A} → {DDE329AA-C136-4912-AB5B-E147B5485FCF}
       - "Association «IN» → tft.ftu-requested_FV_status"  # {1F1CC92A-73E8-4abd-BEF7-159721BFF0B2} → {6654F9D9-5F1C-4d0e-973B-5C8C597105D2}
       - "Association «belongsto» → 9.11.1.8"  # {5026E7A1-AA40-4741-80C5-EFA376E47422} → {1AC3E21C-4311-4d0d-A127-F53D7F63F3E4}
-      - "Association «belongsto» → F8.4.1 Provide Freight Transport User Interface"  # {AA9E392D-61FA-419c-A670-213A09A49170} → {6983F8F3-33BD-4e31-A9FB-DB14981B86DB}
   - name: "F8.4.2 Manage Freight Transport Execution Plan Store"
     guid: "{C9CF0B31-8844-4a24-A819-7403DB01B47A}"
     type: "Activity"

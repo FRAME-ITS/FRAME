@@ -1,74 +1,33 @@
 # Model check – FRAME.qea
 
-**184 errors, 96 warnings**
+**145 errors, 96 warnings**
 
 | Rule | Related issue | Errors | Warnings |
 |---|---|---|---|
-| componentof | #80, #81 | 33 | 42 |
+| componentof | #80, #81 | 8 | 42 |
 | context-diagram | #91 | 0 | 1 |
-| dangling |  | 3 | 0 |
 | duplicate |  | 0 | 2 |
 | function-flows |  | 0 | 1 |
 | function-parent |  | 0 | 5 |
-| generalization | #79 | 1 | 0 |
 | in-out | #69 | 128 | 23 |
 | release-hygiene |  | 0 | 1 |
-| self-reference | #62 | 1 | 2 |
-| servedby |  | 18 | 5 |
+| self-reference | #62 | 0 | 2 |
+| servedby |  | 9 | 5 |
 | stereotype-spelling | #86 | 0 | 3 |
 | unused-flow | #76 | 0 | 11 |
 
 ## Errors
 
-<details><summary><b>componentof</b> (33)</summary>
+<details><summary><b>componentof</b> (8)</summary>
 
-- «Componentof» High_Level_Data_Flow **fnap-mt_inputs** (Frame Repository) → fnap.cc-metadata_search_request (Low_Level_Data_Flow) runs whole → part or between low-level flows
-- «Componentof» High_Level_Data_Flow **fnap-mt_inputs** (Frame Repository) → fnap.cc-support_request (Low_Level_Data_Flow) runs whole → part or between low-level flows
-- «Componentof» High_Level_Data_Flow **fnap-mt_inputs** (Frame Repository) → fnap.cc-support_request (Low_Level_Data_Flow) runs whole → part or between low-level flows
-- «Componentof» High_Level_Data_Flow **fnap-mt_inputs** (Frame Repository) → fnap.cp-metadata_&_authorisation_credentials (Low_Level_Data_Flow) runs whole → part or between low-level flows
-- «Componentof» High_Level_Data_Flow **fnap-mt_inputs** (Frame Repository) → fnap.cp-metadata_&_authorisation_credentials (Low_Level_Data_Flow) runs whole → part or between low-level flows
-- «Componentof» High_Level_Data_Flow **fnap-mt_inputs** (Frame Repository) → fnap.cp-registration_request (Low_Level_Data_Flow) runs whole → part or between low-level flows
-- «Componentof» High_Level_Data_Flow **fnap-mt_inputs** (Frame Repository) → fnap.cp-registration_request (Low_Level_Data_Flow) runs whole → part or between low-level flows
-- «Componentof» High_Level_Data_Flow **fnap-mt_inputs** (Frame Repository) → fnap.cp-support_request (Low_Level_Data_Flow) runs whole → part or between low-level flows
-- «Componentof» High_Level_Data_Flow **fnap-mt_inputs** (Frame Repository) → fnap.cp-support_request (Low_Level_Data_Flow) runs whole → part or between low-level flows
-- «Componentof» High_Level_Data_Flow **fnap-mt_inputs** (Frame Repository) → fnap.cp-support_request (Low_Level_Data_Flow) runs whole → part or between low-level flows
-- «Componentof» High_Level_Data_Flow **fnap-mt_inputs** (Frame Repository) → fnap.cp-support_request (Low_Level_Data_Flow) runs whole → part or between low-level flows
-- «Componentof» High_Level_Data_Flow **mt.mpto_data_from_road_network_predictions** (Frame Repository) → mt.mpto_data_transfer (Low_Level_Data_Flow) runs whole → part or between low-level flows
-- «Componentof» High_Level_Data_Flow **mt.mpto_inter-urban_data_transfer** (Frame Repository) → mt.mpto_data_transfer (Low_Level_Data_Flow) runs whole → part or between low-level flows
-- «Componentof» High_Level_Data_Flow **mt.mpto_urban_data_transfer** (Frame Repository) → mt.mpto_data_transfer (Low_Level_Data_Flow) runs whole → part or between low-level flows
-- «Componentof» High_Level_Data_Flow **mt.pscs_data_for_coop_sys** (Frame Repository) → mt.pscs_rest_area_space_response (Low_Level_Data_Flow) runs whole → part or between low-level flows
-- «Componentof» High_Level_Data_Flow **tnap-mt_outputs** (Frame Repository) → tnap.cc-support_response (Low_Level_Data_Flow) runs whole → part or between low-level flows
-- «Componentof» High_Level_Data_Flow **tnap-mt_outputs** (Frame Repository) → tnap.cp-support_response (Low_Level_Data_Flow) runs whole → part or between low-level flows
-- «Componentof» High_Level_Data_Flow **tnap-mt_outputs** (Frame Repository) → tnap.cp-support_response (Low_Level_Data_Flow) runs whole → part or between low-level flows
-- «Componentof» High_Level_Data_Flow **tors-pscs_outputs** (Frame Repository) → tors.hgvm-hazardous_goods_vehicle_route_implementation (Low_Level_Data_Flow) runs whole → part or between low-level flows
 - «Componentof» Low_Level_Data_Flow **flds-psef_location_data** (Frame Repository) → flds-emergency_call_location (Low_Level_Data_Flow) runs whole → part or between low-level flows
 - «Componentof» Low_Level_Data_Flow **flds-psef_location_data** (Frame Repository) → flds-emergency_vehicle_location (Low_Level_Data_Flow) runs whole → part or between low-level flows
-- «component of» Functional_Area **F9. Provide Support for Cooperative Systems** (Frame Repository) → F9.1 Enable Cooperative Roadside Vehicle Interactions (High_Level_Function) runs whole → part
-- «component of» Functional_Area **F9. Provide Support for Cooperative Systems** (Frame Repository) → F9.2 Provide Access to Specific Lanes (High_Level_Function) runs whole → part
-- «component of» Functional_Area **F9. Provide Support for Cooperative Systems** (Frame Repository) → F9.3 Manage Vehicle Access to Sensitive Locations/ Areas (High_Level_Function) runs whole → part
-- «component of» Functional_Area **F9. Provide Support for Cooperative Systems** (Frame Repository) → F9.4 Provide Hazardous Goods Management (High_Level_Function) runs whole → part
-- «component of» Functional_Area **F9. Provide Support for Cooperative Systems** (Frame Repository) → F9.5 Manage Interurban Urban Traffic Zones (High_Level_Function) runs whole → part
-- «component of» Functional_Area **F9. Provide Support for Cooperative Systems** (Frame Repository) → F9.6 - Future messages and C-ITS services (High_Level_Function) runs whole → part
 - «component of» Low_Level_Data_Flow **fo.co-PSAP_data_update** (Frame Repository) → fo.co-PSAP_data_inputs (Low_Level_Data_Flow) runs whole → part or between low-level flows
 - «componentof» Low_Level_Data_Flow **fo.co-request_PSAP_data_output** (Frame Repository) → fo.co-PSAP_data_inputs (Low_Level_Data_Flow) runs whole → part or between low-level flows
 - «componentof» Low_Level_Data_Flow **mt.mffo_current_inter-urban_traffic_data** (Frame Repository) → mt.mffo_current_road_network_data (Low_Level_Data_Flow) runs whole → part or between low-level flows
 - «componentof» Low_Level_Data_Flow **mt.mffo_current_urban_traffic_data** (Frame Repository) → mt.mffo_current_road_network_data (Low_Level_Data_Flow) runs whole → part or between low-level flows
 - «componentof» Low_Level_Data_Flow **mt.mffo_historic_intre-urban_traffic_data** (Frame Repository) → mt.mffo_historic_road_network_data (Low_Level_Data_Flow) runs whole → part or between low-level flows
 - «componentof» Low_Level_Data_Flow **mt.mffo_historic_urban_traffic_data** (Frame Repository) → mt.mffo_historic_road_network_data (Low_Level_Data_Flow) runs whole → part or between low-level flows
-
-</details>
-
-<details><summary><b>dangling</b> (3)</summary>
-
-- Association «IN» {2B186A93-BA1E-4a1a-B115-BEEDEA3C87BA} has a missing end
-- Association «OUT» {AAADCD3B-84C1-466f-B8D4-983F4D943536} has a missing end
-- Usage «» {5101F0F4-2B49-4b1c-8801-63B52F4B7493} has a missing end
-
-</details>
-
-<details><summary><b>generalization</b> (1)</summary>
-
-- Generalization Low_Level_Data_Flow **fws-environment_data_for_PT** (Frame Repository) → fws-mpto_inputs: data flows are linked by «Componentof»
 
 </details>
 
@@ -205,13 +164,7 @@
 
 </details>
 
-<details><summary><b>self-reference</b> (1)</summary>
-
-- Low_Level_Function **F8.4.1 Provide Freight Transport User Interface** (Frame Repository) has a Association «belongsto» to itself
-
-</details>
-
-<details><summary><b>servedby</b> (18)</summary>
+<details><summary><b>servedby</b> (9)</summary>
 
 - User_Need **11.1.1.6** (C-ITS Reference Architecture) → F3.1.1.5 Provide Urban Traffic Management Facilities is Usage «», expected Association «Servedby»
 - User_Need **11.1.1.6** (C-ITS Reference Architecture) → F5.16.1 Manage Communication from Vehicle to Driver is Usage «», expected Association «Servedby»
@@ -222,15 +175,6 @@
 - User_Need **11.2.4.1** (C-ITS Reference Architecture) → F5.16.1 Manage Communication from Vehicle to Driver is Usage «», expected Association «Servedby»
 - User_Need **11.2.4.1** (C-ITS Reference Architecture) → F5.16.2 Output Commands and Dynamic Warnings is Usage «», expected Association «Servedby»
 - User_Need **11.2.4.1** (C-ITS Reference Architecture) → F9.3 Manage Vehicle Access to Sensitive Areas is Usage «», expected Association «Servedby»
-- User_Need **6.5.1.1** (Frame Repository) → F3.6.4 Manage Metadata Retrieval is Aggregation «componentof», expected Association «Servedby»
-- User_Need **6.5.1.2** (Frame Repository) → F3.6.4 Manage Metadata Retrieval is Aggregation «componentof», expected Association «Servedby»
-- User_Need **6.5.1.3** (Frame Repository) → F3.6.4 Manage Metadata Retrieval is Aggregation «componentof», expected Association «Servedby»
-- User_Need **6.5.1.6** (Frame Repository) → F3.6.4 Manage Metadata Retrieval is Aggregation «componentof», expected Association «Servedby»
-- User_Need **6.5.1.8** (Frame Repository) → F3.6.4 Manage Metadata Retrieval is Aggregation «componentof», expected Association «Servedby»
-- User_Need **9.10.1.3** (Frame Repository) → F8.6.4 Provide Interface to Other Transport Modes is Association «belongsto», expected Association «Servedby»
-- User_Need **9.11.1.14** (Frame Repository) → F8.6.6 Manage Incident Response Data Store is Association «belongsto», expected Association «Servedby»
-- User_Need **9.11.1.15** (Frame Repository) → F8.6.5 Provide FTOM Interface for FTEP Monitoring is Association «belongsto», expected Association «Servedby»
-- User_Need **9.11.1.9** (Frame Repository) → F8.6.1 Implement FTEP is Association «belongsto», expected Association «Servedby»
 
 </details>
 
@@ -365,9 +309,9 @@
 
 <details><summary><b>stereotype-spelling</b> (3)</summary>
 
-- connector stereotype written in 2 ways: «Servedby» 1746×, «served by» 128×
-- connector stereotype written in 2 ways: «belongsto» 872×, «belongs to» 5×
-- connector stereotype written in 3 ways: «Componentof» 1857×, «componentof» 609×, «component of» 157×
+- connector stereotype written in 2 ways: «Servedby» 1746×, «served by» 137×
+- connector stereotype written in 2 ways: «belongsto» 867×, «belongs to» 5×
+- connector stereotype written in 3 ways: «Componentof» 1851×, «componentof» 605×, «component of» 157×
 
 </details>
 

@@ -16,12 +16,6 @@ elements:
       
       Mnemonic: pscs
     links:
-      - "Aggregation «component of» → F9.1 Enable Cooperative Roadside Vehicle Interactions"  # {AF822CC0-588F-41c3-9CB0-8C35E8ADA419} → {480ED898-6E9F-4299-B95D-F346F41B530E}
-      - "Aggregation «component of» → F9.2 Provide Access to Specific Lanes"  # {E8549062-784F-4b8b-91CE-586B2829B5CA} → {FC09C0FD-642C-4559-A5A3-5A352589F9F1}
-      - "Aggregation «component of» → F9.3 Manage Vehicle Access to Sensitive Locations/ Areas"  # {16DA31DE-CF68-4b0a-8932-800CF7605C20} → {5DDE7C5E-7DE4-41d7-B23E-3340DD5B006E}
-      - "Aggregation «component of» → F9.4 Provide Hazardous Goods Management"  # {A05E5577-0680-4b32-A34B-FA3F6CC0B251} → {EAFB823A-1B9A-4a92-B32F-764139615027}
-      - "Aggregation «component of» → F9.5 Manage Interurban Urban Traffic Zones"  # {6EA0FEE1-AD1A-425f-8F1A-D95D254BDCC0} → {0A4E4F63-21D5-403a-BE69-6B7E67348D2B}
-      - "Aggregation «component of» → F9.6 - Future messages and C-ITS services"  # {84A0A230-388B-421b-80D8-BA39F66B3C59} → {3D97D2EF-56EE-4cb5-962D-CC9A4E6F052A}
       - "Aggregation «componentof» → System"  # {3C1E8011-0538-46da-BD36-4D2DBBA7A17A} → {A7365472-4893-4994-9241-EEED83ABEF7D}
       - "Association «IN» → pscs.mt_data_for_traffic_management"  # {59FE0BDC-D72D-4e50-8F86-8367D3FD908A} → {B26C3AAA-9357-4d61-81E8-6F97883E65A8}
       - "Association «IN» → pscs.mt_priority_requests"  # {3F3002FB-B1C3-4f45-86B0-76D8F718B7C5} → {CAAD40B8-C904-422c-AC36-AC30FAEBE177}

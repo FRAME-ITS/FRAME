@@ -1307,17 +1307,6 @@ elements:
       It consists of data objects received from the NAP Actors  that contain either Internet addresses from which data objects provided by ITS Services can be obtained, or requests for the Internet addresses.
     links:
       - "Aggregation «Componentof» → From NAP Actors"  # {2BEB934E-B329-4ea8-A77C-8E7447A03D8A} → {59087751-DC42-4fcc-AA52-7330F931BC0E}
-      - "Aggregation «Componentof» → fnap.cc-metadata_search_request"  # {9FFF3FB8-048B-4c62-88AB-1C46DA692FD4} → {CE5CAFBE-137B-4743-AB12-5EA3827B901A}
-      - "Aggregation «Componentof» → fnap.cc-support_request"  # {830DC608-B97E-41b5-A881-AF5C8507B10F} → {1309E545-2913-41f6-920A-68A496630817}
-      - "Aggregation «Componentof» → fnap.cc-support_request"  # {959751C3-B915-4dc4-AFC7-4BD893F79BEF} → {1309E545-2913-41f6-920A-68A496630817}
-      - "Aggregation «Componentof» → fnap.cp-metadata_&_authorisation_credentials"  # {18DB7F98-84BC-4eba-A811-8939A05D123F} → {00BDD6C9-80B2-4dee-90C4-810AB30E51F8}
-      - "Aggregation «Componentof» → fnap.cp-metadata_&_authorisation_credentials"  # {5E12A648-243C-4aa4-A848-DC6D99469B6F} → {8D75B934-0C29-40d6-9C80-4963B533B29D}
-      - "Aggregation «Componentof» → fnap.cp-registration_request"  # {9598F2DF-4EF6-4299-A9AC-31EEC2889082} → {2165053D-3E67-4324-90F7-172FAA37E259}
-      - "Aggregation «Componentof» → fnap.cp-registration_request"  # {DD4ECECE-2580-4c0c-BB75-ADB138234BF8} → {4C018359-5E45-494d-B61F-93B909FE1F63}
-      - "Aggregation «Componentof» → fnap.cp-support_request"  # {2601187E-08C6-483d-B4F3-5A2F29524C76} → {D597AA27-D232-49ad-8A7F-D4F246F9E217}
-      - "Aggregation «Componentof» → fnap.cp-support_request"  # {49435A56-CACA-4c76-B9C3-D13C28930493} → {1ED4DEC1-3019-4933-A419-5FE60CC29FF4}
-      - "Aggregation «Componentof» → fnap.cp-support_request"  # {4AFA3488-F197-42e1-88C8-BF6BF9ACB028} → {D597AA27-D232-49ad-8A7F-D4F246F9E217}
-      - "Aggregation «Componentof» → fnap.cp-support_request"  # {CB9AA34F-FB70-40e2-9D03-743CA44221AF} → {1ED4DEC1-3019-4933-A419-5FE60CC29FF4}
       - "Association «OUT» → F3. Manage Traffic"  # {B0B26300-C190-4059-8317-456DE38446DC} → {E9EDA059-38C0-41ba-9127-FF30B58B7C0D}
   - name: "fo-bridge_and_tunnel_inputs"
     guid: "{9AFBCBCF-E77B-45f2-BC4E-D1A44D8EEBB3}"
@@ -2646,8 +2635,6 @@ elements:
     order: 0
     note: |
       It contains data objects that provide the results from the simulation and modelling that are being sent to the Manage Public Transport Operations Area.
-    links:
-      - "Aggregation «Componentof» → mt.mpto_data_transfer"  # {87AA9488-8078-41e9-85B6-54241F2FF888} → {D26C7D92-6DAB-4ed2-997D-373075A42CAF}
   - name: "mt.mpto_incident_information"
     guid: "{9D276C12-ADEE-43c2-B2D8-573EAF6086F3}"
     type: "Interface"
@@ -2680,8 +2667,6 @@ elements:
     order: 0
     note: |
       It contains data objects that provide inter-urban traffic and road network data that can be used in the preparation of PT routes and schedules.
-    links:
-      - "Aggregation «Componentof» → mt.mpto_data_transfer"  # {1965FC29-4123-414b-937A-0D7BC6509742} → {D26C7D92-6DAB-4ed2-997D-373075A42CAF}
   - name: "mt.mpto_request_changes"
     guid: "{63581CD4-C9B6-4eed-9792-F72012C96CC0}"
     type: "Interface"
@@ -2738,8 +2723,6 @@ elements:
     order: 0
     note: |
       It contains data objects that provide urban traffic and road network data that can be used in the preparation of PT routes and schedules.
-    links:
-      - "Aggregation «Componentof» → mt.mpto_data_transfer"  # {10A2B692-6A1B-44d6-B331-3F5728996A50} → {D26C7D92-6DAB-4ed2-997D-373075A42CAF}
   - name: "mt.pepf_access_criteria"
     guid: "{CC643116-F47A-4649-AB03-372839D5DB39}"
     type: "Interface"
@@ -2810,7 +2793,6 @@ elements:
     note: |
       It contains data objects that provide traffic and incident data that is being sent from functionality in the Manage Traffic Functional Area to functionality in the Provide Support for Cooperative Systems Functional Area.
     links:
-      - "Aggregation «Componentof» → mt.pscs_rest_area_space_response"  # {2965CEFE-27A3-4e7a-A6F9-1E697BE179AB} → {B46D4111-5454-4579-A1C7-36CC3CD8F96D}
       - "Association «OUT» → F9. Provide Support for Cooperative Systems"  # {EA8A6788-5C85-4bf0-A9DE-4BCE8B4DCB09} → {F0D7E9A8-9F88-4e8f-AF0F-661C1990D546}
   - name: "mt.pscs_inter-urban_data_for_bus_lane_use"
     guid: "{7E31D4E3-52F2-4176-9BE2-7FDA56755D70}"
@@ -4979,9 +4961,6 @@ elements:
       It contains outputs to the NAP Actors that have been created from data objects provided by functionality in the Manage Traffic Functional Area and includes either confirmation of acceptance of inputs, or the Internet addresses from which access to data objects provided by ITS Services can be obtained.
     links:
       - "Aggregation «Componentof» → To NAP Actors"  # {2951C6EE-FE78-434b-9152-54D7EC7B58B8} → {80D9E677-C285-4d45-9344-044E34B0EF83}
-      - "Aggregation «Componentof» → tnap.cc-support_response"  # {97E7306F-15EC-4037-880C-222AB22EEC7F} → {27BFFD1B-0E50-4c8b-8CDF-8F958078802C}
-      - "Aggregation «Componentof» → tnap.cp-support_response"  # {22BEDDCB-0B1C-4fee-B7ED-B69DE8F69699} → {396E64F8-C99F-4e67-9ABE-3D0BF49B608F}
-      - "Aggregation «Componentof» → tnap.cp-support_response"  # {790ED8A9-DADA-4c17-9101-BEC63A9DE998} → {997937B5-775D-4297-8297-D9ABB198ACF2}
   - name: "to-bridge_and_tunnel_outputs"
     guid: "{4EAF8D9B-B14C-4ea9-87F5-AAAA00C47E8A}"
     type: "Interface"
@@ -5366,7 +5345,6 @@ elements:
       It consists of data objects from functionality in the Provide Support for Co-operative Systems Functional Area that are being transferred for use by functionality in another instance of the Provide Support for Co-operative Systems Functional Area.
     links:
       - "Aggregation «Componentof» → To Other Related System"  # {89371C4A-BFB3-4149-8159-F61594194BE0} → {B211B65C-3E19-4618-8019-7D7744237A96}
-      - "Aggregation «Componentof» → tors.hgvm-hazardous_goods_vehicle_route_implementation"  # {C6BF8471-6125-4ee4-9648-878545A0E92C} → {858AA098-3F67-45cf-82D4-5429D4C66038}
       - "Association «OUT» → Other Related System"  # {ABEA6933-A429-4fa1-ADA9-7A5CCEA2314B} → {AB919AF2-B1C5-45bf-8731-FB6EC44C2A2E}
   - name: "tors-psef_outputs"
     guid: "{87B7F1B7-3D63-456f-AB4C-95B0F27076BD}"

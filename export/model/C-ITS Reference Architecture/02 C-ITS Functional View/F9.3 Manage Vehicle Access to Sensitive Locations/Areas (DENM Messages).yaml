@@ -16,6 +16,7 @@ elements:
       This High Level Function 3 is related to events and their locations in traffic networks, were traffic interruptions have happened, and therefore represent a higher risk for road safety.
       These events are communicated with the standard DENM messages from all C-ITS actors. (I2V and V2V)
     links:
+      - "Aggregation «component of» → F9. Provide Support for Cooperative Systems"  # {16DA31DE-CF68-4b0a-8932-800CF7605C20} → {F0D7E9A8-9F88-4e8f-AF0F-661C1990D546}
       - "Aggregation «component of» → F9.3.1"  # {86E2B457-1947-4053-AB49-CC3F92C08708} → {426EB23D-5A11-4a41-B0F1-DC074F7A8F66}
       - "Aggregation «component of» → F9.3.10"  # {072EEDE9-8FBA-4b67-90B6-38DCF2E9A58F} → {CBC47407-8DA7-4361-B854-B957B24E3E06}
       - "Aggregation «component of» → F9.3.11"  # {10236074-EC40-40ed-ACEC-F690DEA36EF9} → {674B9301-BA0A-4918-AC89-FC60F4C85575}

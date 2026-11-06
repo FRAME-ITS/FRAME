@@ -14,6 +14,7 @@ elements:
     note: |
       This High Level Function provides means to communicate traffic rules and signs (I2V) and is based in IVIM messages.
     links:
+      - "Aggregation «component of» → F9. Provide Support for Cooperative Systems"  # {6EA0FEE1-AD1A-425f-8F1A-D95D254BDCC0} → {F0D7E9A8-9F88-4e8f-AF0F-661C1990D546}
       - "Aggregation «component of» → F9.5.1"  # {4FD429A6-F3B7-4e53-A02E-B1F5A473ECC7} → {562D63E2-2E62-47ee-946A-451EA7841C1B}
       - "Aggregation «component of» → F9.5.2"  # {DD11C455-CE9A-4bcd-A6BC-557AA79CC541} → {2F5FF087-6A3D-4bdb-9E77-77C02D5C975F}
       - "Aggregation «component of» → F9.5.3"  # {882D4275-26B2-4633-B74C-B35CF3D74D39} → {7708616F-753A-4f26-97C4-3822F487CF94}
