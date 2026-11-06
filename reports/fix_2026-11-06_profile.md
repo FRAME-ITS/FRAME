@@ -28,4 +28,6 @@ FRAME_Profile::belongsto   → FRAME_Profile::belongs to      871
 ```
 
 Every FRAME connector stereotype used in the model is now defined in the embedded technology (see `reports/mdg_technology.md`, produced by `tools/mdg.py`).
-The toolbox files in `releases/` and `drafts/latest/` (V1.0) are outdated and should be replaced by the V1.2 technology from the model.
+The toolbox files in `releases/` and `drafts/latest/` (V1.0) are outdated. The V1.2 technology extracted from the model is in
+`drafts/latest/toolbox/FRAME_Technology_V1.2_embedded.xml`, but it lacks the stereotype images and most scripts, so a complete
+V1.2 file has to be generated in Enterprise Architect before release 5.3 (see `drafts/latest/toolbox/README.md`).

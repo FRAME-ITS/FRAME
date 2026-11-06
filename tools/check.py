@@ -11,9 +11,9 @@ With --strict the script exits with code 1 when there are errors (for CI once th
 Conventions (FRAME Repository V5.2):
   «IN»   Association  function / terminator / data store / functional area / system  →  data flow
   «OUT»  Association  data flow  →  function / terminator / data store / functional area / system
-  «Componentof» Aggregation  part → whole  (low-level → high-level data flow, high-level → high-level data flow,
+  «component of» Aggregation  part → whole  (low-level → high-level data flow, high-level → high-level data flow,
                              low-level → high-level function → functional area → system, sub-terminator → terminator)
-  «Servedby» Association     User Need → low-level function
+  «served by» Association     User Need → low-level function
 """
 import sys, os, sqlite3
 from collections import defaultdict, Counter
@@ -80,9 +80,9 @@ def main(argv):
             elif s['st'] in FUNC and t['st'] in FUNC and FUNC[s['st']] > FUNC[t['st']]:
                 R('componentof', f'«{k["st"]}» {label(s)} → {t["name"]} ({t["st"].replace("FRAME_", "")}) runs whole → part')
         if k['type'] == 'Generalization' and (s['st'] in FLOW or t['st'] in FLOW):
-            R('generalization', f'Generalization {label(s)} → {t["name"]}: data flows are linked by «Componentof»')
+            R('generalization', f'Generalization {label(s)} → {t["name"]}: data flows are linked by «component of»')
         if s['st'] == 'FRAME_User_Need' and t['st'] in FUNC and st != 'servedby':
-            R('servedby', f'{label(s)} → {t["name"]} is {k["type"]} «{k["st"]}», expected Association «Servedby»')
+            R('servedby', f'{label(s)} → {t["name"]} is {k["type"]} «{k["st"]}», expected Association «served by»')
     for n, variants in spelling.items():
         if len(variants) > 1:
             W('stereotype-spelling', 'connector stereotype written in ' + str(len(variants)) + ' ways: '
@@ -103,7 +103,7 @@ def main(argv):
             if missing:
                 W('function-flows', f'{label(o)} has no {" and ".join(missing)} data flows')
             if not any(norm(k['st']) == 'componentof' and k['s']['id'] == o['id'] for k, _ in links[o['id']]):
-                W('function-parent', f'{label(o)} is not «Componentof» a high-level function or functional area')
+                W('function-parent', f'{label(o)} is not «component of» a high-level function or functional area')
     ctx = {o for o, ds in on_diagram.items() if any('Context Diagram' in (d or '') for d in ds)}
     if ctx:
         for o in repo:

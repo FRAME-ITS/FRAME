@@ -14,9 +14,9 @@
 
 <details><summary><b>servedby</b> (3)</summary>
 
-- User_Need **11.1.1.6** (C-ITS Reference Architecture) → F3.1.1.5 Provide Urban Traffic Management Facilities is Usage «», expected Association «Servedby»
-- User_Need **11.2.4.1** (C-ITS Reference Architecture) → F3.1 Provide Traffic Control is Usage «», expected Association «Servedby»
-- User_Need **11.2.4.1** (C-ITS Reference Architecture) → F9.3 Manage Vehicle Access to Sensitive Areas is Usage «», expected Association «Servedby»
+- User_Need **11.1.1.6** (C-ITS Reference Architecture) → F3.1.1.5 Provide Urban Traffic Management Facilities is Usage «», expected Association «served by»
+- User_Need **11.2.4.1** (C-ITS Reference Architecture) → F3.1 Provide Traffic Control is Usage «», expected Association «served by»
+- User_Need **11.2.4.1** (C-ITS Reference Architecture) → F9.3 Manage Vehicle Access to Sensitive Areas is Usage «», expected Association «served by»
 
 </details>
 
@@ -84,11 +84,11 @@
 
 <details><summary><b>servedby</b> (5)</summary>
 
-- User_Need **6.5.1.1** (NAP Reference Architecture) → F3.6.4 Manage Metadata Retrieval is Aggregation «component of», expected Association «Servedby»
-- User_Need **6.5.1.2** (NAP Reference Architecture) → F3.6.4 Manage Metadata Retrieval is Aggregation «component of», expected Association «Servedby»
-- User_Need **6.5.1.3** (NAP Reference Architecture) → F3.6.4 Manage Metadata Retrieval is Aggregation «component of», expected Association «Servedby»
-- User_Need **6.5.1.6** (NAP Reference Architecture) → F3.6.4 Manage Metadata Retrieval is Aggregation «component of», expected Association «Servedby»
-- User_Need **6.5.1.8** (NAP Reference Architecture) → F3.6.4 Manage Metadata Retrieval is Aggregation «component of», expected Association «Servedby»
+- User_Need **6.5.1.1** (NAP Reference Architecture) → F3.6.4 Manage Metadata Retrieval is Aggregation «component of», expected Association «served by»
+- User_Need **6.5.1.2** (NAP Reference Architecture) → F3.6.4 Manage Metadata Retrieval is Aggregation «component of», expected Association «served by»
+- User_Need **6.5.1.3** (NAP Reference Architecture) → F3.6.4 Manage Metadata Retrieval is Aggregation «component of», expected Association «served by»
+- User_Need **6.5.1.6** (NAP Reference Architecture) → F3.6.4 Manage Metadata Retrieval is Aggregation «component of», expected Association «served by»
+- User_Need **6.5.1.8** (NAP Reference Architecture) → F3.6.4 Manage Metadata Retrieval is Aggregation «component of», expected Association «served by»
 
 </details>
 
