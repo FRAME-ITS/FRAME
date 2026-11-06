@@ -6,7 +6,10 @@ Base: technology V1.2 as it was stored in the model (drafts/latest/toolbox/FRAME
      (function hierarchy «component of», user-need hierarchy «belongs to», «associate» Mission Statement – ITS Vision).
      Rules added for patterns the FRAME Repository uses throughout (sub-terminator, HL function in HL function,
      functional area in system, IN/OUT of System and functional areas in the Context / functional-area diagrams) and, in the
-     motivation layer, Business Expectation «defines» Mission Statement (FRAME Meta Model) and ITS Service «adheres to» Specification.
+     motivation layer, Business Expectation «defines» Mission Statement (FRAME Meta Model) and ITS Service «adheres to» Specification;
+     physical/functional/communication views: Application «contains» LL function / data store / physical data flow,
+     LL data flow «contains» Information Object, Component/Terminator «use» Physical Data Flow, process «triggers» process,
+     Specification «defines» Requirement; ITS Service Added Value «delivers value to» Stakeholder replaces «defines».
   2. Quick Linker references to stereotypes that the profile does not define are mapped to the defined name
      (Component of, Defines, instant of, associated).
   3. Stereotype names unified (not used by any connector in the model): «Impacts» → «impacts», «deliverd by» → «delivered by».
@@ -34,6 +37,16 @@ for old, new in (('Impacts', 'impacts'), ('deliverd by', 'delivered by')):
     x = re.sub(r'(?<=["])' + re.escape(old) + r'(?=")', new, x)
     x = x.replace(P + old + '"', P + new + '"').replace(P + old + '(', P + new + '(').replace(P + old + ';', P + new + ';')
     log.append(f'stereotype «{old}» renamed «{new}» ({n} occurrences)')
+# 3b. new connector stereotypes (decided 2026-11-06): «delivers value to» (ITS Service Added Value → Stakeholder, was «defines»)
+#     and «triggers» (process → process); defined like «use» (Association, Source -> Destination) and added to the toolbox page
+for st in ('delivers value to', 'triggers'):
+    if f'<Stereotype name="{st}"' in x: continue
+    use = re.search(r'<Stereotype name="use" metatype="use".*?</Stereotype>', x, re.S).group(0)
+    x = x.replace(use, use + '\n\t\t\t\t\t' + use.replace('name="use" metatype="use"', f'name="{st}" metatype="{st}"'), 1)
+    tag = '<Tag name="FRAME_Profile::use(UML::Association)" type="" description="" unit="" values="" default="use"/>'
+    x = x.replace(tag, tag + '\n\t\t\t\t\t\t\t' + tag.replace('::use(', f'::{st}(').replace('default="use"', f'default="{st}"'), 1)
+    log.append(f'new stereotype «{st}» (Association) with toolbox entry')
+
 # 2. Quick Linker references to undefined names
 for old, new in (('Component of', 'component of'), ('Defines', 'defines'), ('instant of', 'instants of'), ('associated', 'associate')):
     n = x.count(f'stereotype="{P}{old}"')
@@ -94,7 +107,20 @@ ADD = [('component of', 'FRAME_Terminator', 'FRAME_Terminator'),            # su
        # motivation layer: relationships of the FRAME Meta Model that the reference architectures (NAP, NB, C-ITS) had to draw as
        # plain UML Realisation/Instantiate links because the technology did not offer them
        ('defines', 'FRAME_Business_Expectation', 'FRAME_Mission_Statement'),
-       ('adheres to', 'FRAME_ITS_Service', 'FRAME_Specification')]
+       ('adheres to', 'FRAME_ITS_Service', 'FRAME_Specification'),
+       # decided 2026-11-06 from the reference architectures (physical, functional, communication views)
+       ('contains', 'FRAME_Application', 'FRAME_Low_Level_Function'), ('contains', 'FRAME_Application', 'FRAME_Datastore'),
+       ('contains', 'FRAME_Application', 'FRAME_Physical_Data_Flow'), ('contains', 'FRAME_Low_Level_Data_Flow', 'FRAME_Information_Object'),
+       ('use', 'FRAME_Component', 'FRAME_Physical_Data_Flow'), ('use', 'FRAME_Terminator', 'FRAME_Physical_Data_Flow'),
+       ('triggers', 'FRAME_ITS_Service_Process', 'FRAME_ITS_Service_Process'),
+       ('triggers', 'FRAME_ITS_Business_Process', 'FRAME_ITS_Business_Process'),
+       ('delivers value to', 'FRAME_ITS_Service_Added_Value', 'FRAME_Stakeholder'),
+       ('defines', 'FRAME_Specification', 'FRAME_Requirement')]
+# rules replaced by the above
+DROP = [('defines', 'FRAME_ITS_Service_Added_Value', 'FRAME_Stakeholder')]
+for st, src, tgt in DROP:
+    edit_rules(src, st, lambda t: [c for c in t if c != P + tgt])
+    log.append(f'Quick Linker removed: «{st}» {src[6:]} → {tgt[6:]}')
 for st, src, tgt in ADD:
     edit_rules(src, st, lambda t: t + [P + tgt] if P + tgt not in t else t)
     log.append(f'Quick Linker added: «{st}» {src[6:]} → {tgt[6:]}')

@@ -4,6 +4,8 @@ Built by `tools/fixes/2026-11-06_mdg_technology_V1.3.py`.
 
 - stereotype «Impacts» renamed «impacts» (10 occurrences)
 - stereotype «deliverd by» renamed «delivered by» (7 occurrences)
+- new stereotype «delivers value to» (Association) with toolbox entry
+- new stereotype «triggers» (Association) with toolbox entry
 - Quick Linker: «Component of» → «component of» (3 rules)
 - Quick Linker: «Defines» → «defines» (13 rules)
 - Quick Linker: «instant of» → «instants of» (1 rules)
@@ -15,6 +17,7 @@ Built by `tools/fixes/2026-11-06_mdg_technology_V1.3.py`.
 - Quick Linker reversed: «belongs to» User_Need_Service → User_Need_Topic  becomes  User_Need_Topic → User_Need_Service
 - Quick Linker reversed: «belongs to» User_Need_Topic → User_Need  becomes  User_Need → User_Need_Topic
 - Quick Linker reversed: «associate» Mission_Statement → ITS_Vision  becomes  ITS_Vision → Mission_Statement
+- Quick Linker removed: «defines» ITS_Service_Added_Value → Stakeholder
 - Quick Linker added: «component of» Terminator → Terminator
 - Quick Linker added: «component of» High_Level_Function → High_Level_Function
 - Quick Linker added: «component of» Functional_Area → System
@@ -24,16 +27,26 @@ Built by `tools/fixes/2026-11-06_mdg_technology_V1.3.py`.
 - Quick Linker added: «OUT» Low_Level_Data_Flow → Functional_Area
 - Quick Linker added: «defines» Business_Expectation → Mission_Statement
 - Quick Linker added: «adheres to» ITS_Service → Specification
-- Quick Linker: Application – 4 rules merged into 3
+- Quick Linker added: «contains» Application → Low_Level_Function
+- Quick Linker added: «contains» Application → Datastore
+- Quick Linker added: «contains» Application → Physical_Data_Flow
+- Quick Linker added: «contains» Low_Level_Data_Flow → Information_Object
+- Quick Linker added: «use» Component → Physical_Data_Flow
+- Quick Linker added: «use» Terminator → Physical_Data_Flow
+- Quick Linker added: «triggers» ITS_Service_Process → ITS_Service_Process
+- Quick Linker added: «triggers» ITS_Business_Process → ITS_Business_Process
+- Quick Linker added: «delivers value to» ITS_Service_Added_Value → Stakeholder
+- Quick Linker added: «defines» Specification → Requirement
+- Quick Linker: Application – 5 rules merged into 4
 - Quick Linker: ITS_Service – 5 rules merged into 4
-- Quick Linker: ITS_Service_Added_Value – 2 rules merged into 1
-- Quick Linker: ITS_Service_Process – 4 rules merged into 3
+- Quick Linker: ITS_Service_Added_Value – 3 rules merged into 2
+- Quick Linker: ITS_Service_Process – 5 rules merged into 4
 - Quick Linker: ITS_Vision – 3 rules merged into 2
 - Quick Linker: Low_Level_Data_Flow – 7 rules merged into 6
 - Quick Linker: Low_Level_Function – 8 rules merged into 6
 - Quick Linker: Mission_Statement – 2 rules merged into 1
 - Quick Linker: Role – 4 rules merged into 3
-- Quick Linker: Terminator – 6 rules merged into 5
+- Quick Linker: Terminator – 7 rules merged into 6
 - Quick Linker: User_Need – 4 rules merged into 3
 - Quick Linker: TDF_LowLevelFunction – 4 rules merged into 3
 - Quick Linker: UML links hidden (_HideUmlLinks) for Functional_Area, High_Level_Function, Low_Level_Function, High_Level_Data_Flow, Low_Level_Data_Flow, Terminator, Datastore, System, User_Need, User_Need_Topic, User_Need_Service, User_Need_Group

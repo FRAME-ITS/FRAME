@@ -14,6 +14,10 @@ What V1.3 changes against V1.2 (details in the changes file):
   IN/OUT of System and functional areas).
 - Motivation layer: Business Expectation «defines» Mission Statement (as in the FRAME Meta Model) and ITS Service «adheres to»
   Specification added – the NAP, National Body and C-ITS reference architectures had to draw these as plain UML links.
+- Physical, functional and communication views (decided 2026-11-06): Application «contains» LL function / data store / physical
+  data flow; LL data flow «contains» Information Object; Component / Terminator «use» Physical Data Flow (one link for both
+  directions); new stereotype «triggers» for ITS Service Process → Process and ITS Business Process → Process;
+  Specification «defines» Requirement; new stereotype «delivers value to» for ITS Service Added Value → Stakeholder (was «defines»).
 - Quick Linker references to undefined names fixed (Component of, Defines, instant of, associated); «Impacts» → «impacts»,
   «deliverd by» → «delivered by» (neither is used by a connector in the model).
 - For the core FRAME Repository stereotypes (functional area, functions, data flows, terminator, data store, system, user needs)

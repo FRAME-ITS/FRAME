@@ -529,8 +529,11 @@ elements:
     note: ""
     links:
       - "Dependency «stereotyped relationship» → FRAME_Component"  # {B90DA35A-1074-4718-940D-67F2DE61C242} → {B9980277-BF27-4a72-9016-B12E681D7202}
+      - "Dependency «stereotyped relationship» → FRAME_Datastore"  # {282FA4A4-1EF4-4AC5-B64A-EBACDD657576} → {2F437CA9-C0FF-41f3-9525-AE9C5C17757B}
       - "Dependency «stereotyped relationship» → FRAME_Information_Object"  # {6E3A1B9F-FC64-4cac-A523-48F10F83D77F} → {2895575A-3416-461c-8211-FB3E694B84DA}
       - "Dependency «stereotyped relationship» → FRAME_Interface"  # {D2161DD4-3F2D-4ce4-9759-D1519C977FAA} → {9979CBC4-0C01-4b3f-8926-786CD11CAD47}
+      - "Dependency «stereotyped relationship» → FRAME_Low_Level_Function"  # {45813340-013E-402C-A844-945454456D86} → {E7C4405D-7536-4094-B54F-2798F7745293}
+      - "Dependency «stereotyped relationship» → FRAME_Physical_Data_Flow"  # {DCC617B5-9A64-44B5-9591-5B49C8BB3F5C} → {D4B39B79-3440-41a8-B438-75EB7B8AC1F9}
       - "Dependency «stereotyped relationship» → FRAME_Requirement"  # {AB596917-88BF-4457-8262-A79B35AFD9B7} → {AEE79FAA-7700-45ad-8E09-D35B1F39DD5A}
       - "Dependency «stereotyped relationship» → FRAME_Specification"  # {615E53D2-D288-47b1-ADAD-5354B76C4E9D} → {A91B0704-2E6F-449c-BA75-85536AC7256A}
       - "Extension → Object"  # {3EE17FD8-0D84-473a-8494-3FE660699CF5} → {45FBE772-95C5-444a-93F9-057750D8F6C2}
@@ -556,6 +559,7 @@ elements:
     order: 0
     note: ""
     links:
+      - "Dependency «stereotyped relationship» → FRAME_Physical_Data_Flow"  # {A946A264-67C5-431E-AE78-62A9ED0F25B9} → {D4B39B79-3440-41a8-B438-75EB7B8AC1F9}
       - "Dependency «stereotyped relationship» → FRAME_Requirement"  # {D5ADF063-A2B7-43f8-800E-48AAE0DBDCBE} → {AEE79FAA-7700-45ad-8E09-D35B1F39DD5A}
       - "Dependency «stereotyped relationship» → FRAME_Specification"  # {81BD86E0-E54F-4dbd-B8FB-2B504C1CC514} → {A91B0704-2E6F-449c-BA75-85536AC7256A}
       - "Extension → Component"  # {5CF27EA4-9538-4a0c-A242-6DA65D8A2C16} → {1BFE4889-5A06-44a7-846C-E79E61AC6C21}
@@ -662,6 +666,7 @@ elements:
     order: 0
     note: ""
     links:
+      - "Dependency «stereotyped relationship» → FRAME_ITS_Business_Process"  # {BFFD06E6-21BB-426E-B97F-FB136B8CC486} → {0E201FEE-7071-4b48-9871-265D1B0E1388}
       - "Dependency «stereotyped relationship» → FRAME_Requirement"  # {912495F6-2AC5-46d8-9C17-31F51FC05DAC} → {AEE79FAA-7700-45ad-8E09-D35B1F39DD5A}
       - "Extension → Class"  # {2DD86B5B-27D4-41fd-AF83-221021F33D81} → {E5291D89-6C37-40a5-AB92-090F9E2BC7FB}
   - name: "FRAME_ITS_Domain"
@@ -704,7 +709,7 @@ elements:
     note: ""
     links:
       - "Dependency «stereotyped relationship» → FRAME_Requirement"  # {F747E84D-3FE2-4214-B833-DE945FFCEF91} → {AEE79FAA-7700-45ad-8E09-D35B1F39DD5A}
-      - "Dependency «stereotyped relationship» → FRAME_Stakeholder"  # {10C68FF5-E90D-4ac0-8003-6D124A7D3D33} → {1D9C9DEE-24BC-44aa-85BD-8CA8BC3CC0DA}
+      - "Dependency «stereotyped relationship» → FRAME_Stakeholder"  # {AA559391-8462-43F3-922A-8F45C1CC2D1E} → {1D9C9DEE-24BC-44aa-85BD-8CA8BC3CC0DA}
       - "Dependency «stereotyped relationship» → FRAME_User_Need"  # {234E56FB-6792-422f-8E77-7B50A452E92E} → {E1CBAD48-1841-4e5e-914C-C9A79ECD46A5}
       - "Extension → Class"  # {C300FA6F-A76E-43ab-ADCF-A8A78F53FD09} → {E771B262-AE56-4283-ABA8-306A21BDA785}
       - "Generalization → ArchiMate3::ArchiMate_Value"  # {B581C3D8-86D9-4ed1-9335-6A9347539A96} → {355C978F-4490-4e70-AB31-7C014B9451EF}
@@ -718,6 +723,7 @@ elements:
     note: ""
     links:
       - "Dependency «stereotyped relationship» → FRAME_Functionality"  # {593D4756-E177-4296-B507-C7A25DA3E787} → {C4DB1E76-7B23-43f5-A531-DE8028D4E618}
+      - "Dependency «stereotyped relationship» → FRAME_ITS_Service_Process"  # {F3AD99F0-AD27-4569-9E79-1F7B25FBB85F} → {EAEBF6AF-EE24-455c-AC04-41189A0AA548}
       - "Dependency «stereotyped relationship» → FRAME_Low_Level_Function"  # {8C1588B0-AA69-42fd-9F18-5D75C79801AE} → {E7C4405D-7536-4094-B54F-2798F7745293}
       - "Dependency «stereotyped relationship» → FRAME_Requirement"  # {29754751-1C3B-43ba-8302-6C3A9A3043BA} → {AEE79FAA-7700-45ad-8E09-D35B1F39DD5A}
       - "Dependency «stereotyped relationship» → FRAME_Role"  # {67014BA7-0807-41ce-899A-61D49CD493A2} → {8E2EF45B-FD45-417c-9E26-96C6F78A82C0}
@@ -784,6 +790,7 @@ elements:
       - "Dependency «stereotyped relationship» → FRAME_Functionality"  # {E0F83656-2A4C-443f-98C3-F3AF2DD047A8} → {C4DB1E76-7B23-43f5-A531-DE8028D4E618}
       - "Dependency «stereotyped relationship» → FRAME_High_Level_Data_Flow"  # {CB77D15F-8A3F-4fd1-BEEC-7C9A9FBFC637} → {6DBD0E8E-FC6A-444e-A6FB-CEB89E897D46}
       - "Dependency «stereotyped relationship» → FRAME_High_Level_Function"  # {1D499A81-C448-4270-999B-80E9984AFEE2} → {9864969F-F5CB-449e-AD25-C9CCB1CB954C}
+      - "Dependency «stereotyped relationship» → FRAME_Information_Object"  # {462679EB-D058-4ADA-B569-DE4660A59830} → {2895575A-3416-461c-8211-FB3E694B84DA}
       - "Dependency «stereotyped relationship» → FRAME_Low_Level_Function"  # {A9C3BC21-27FA-4738-8BC1-9B6DB7E19777} → {E7C4405D-7536-4094-B54F-2798F7745293}
       - "Dependency «stereotyped relationship» → FRAME_Physical_Data_Flow"  # {A64E48AB-CF1A-4083-9F19-E5957898CEDF} → {D4B39B79-3440-41a8-B438-75EB7B8AC1F9}
       - "Dependency «stereotyped relationship» → FRAME_Requirement"  # {00ECAF93-235E-495f-85A9-69595878C556} → {AEE79FAA-7700-45ad-8E09-D35B1F39DD5A}
@@ -912,6 +919,7 @@ elements:
     order: 0
     note: ""
     links:
+      - "Dependency «stereotyped relationship» → FRAME_Requirement"  # {95BCA958-1873-4F1E-BC65-29B8E1A7F6FA} → {AEE79FAA-7700-45ad-8E09-D35B1F39DD5A}
       - "Extension → DeploymentSpecification"  # {88BB4A08-D72A-4dc8-AAC9-1DB416A4B050} → {BA638F89-E3BB-466b-BF6E-5191534E46B5}
   - name: "FRAME_Stakeholder"
     guid: "{1D9C9DEE-24BC-44aa-85BD-8CA8BC3CC0DA}"
@@ -968,6 +976,7 @@ elements:
       - "Dependency «stereotyped relationship» → FRAME_Application"  # {8ED36835-54FA-4d12-BBFA-47F4FBC969F9} → {BE8F2B26-634D-48ee-8EAD-C8107758186C}
       - "Dependency «stereotyped relationship» → FRAME_High_Level_Data_Flow"  # {AE98E2C8-C71F-4f2a-9155-30EFF768719E} → {6DBD0E8E-FC6A-444e-A6FB-CEB89E897D46}
       - "Dependency «stereotyped relationship» → FRAME_Low_Level_Data_Flow"  # {2073D210-3965-4774-BC46-3D3AFE88968C} → {B96F54C8-EF1D-4c74-AD7F-396990418023}
+      - "Dependency «stereotyped relationship» → FRAME_Physical_Data_Flow"  # {F39CA761-A6F9-4EDD-AD1F-68714A0D2180} → {D4B39B79-3440-41a8-B438-75EB7B8AC1F9}
       - "Dependency «stereotyped relationship» → FRAME_Requirement"  # {192953CC-B65D-4ec7-8F86-2FDA7A992B0E} → {AEE79FAA-7700-45ad-8E09-D35B1F39DD5A}
       - "Dependency «stereotyped relationship» → FRAME_TDF_HighLevelFunction"  # {F3ECEEEA-D0FB-4183-808C-09D25AAFC13F} → {09C8B8CD-52F9-4efe-9061-3AB152575ECA}
       - "Dependency «stereotyped relationship» → FRAME_Terminator"  # {1B66F224-41BD-4A8D-BE05-3149802AE8FD} → {924DB332-8016-4030-B48A-73EA46503F2E}
@@ -1321,6 +1330,16 @@ elements:
     note: ""
     links:
       - "Extension → Deployment"  # {757E0F0F-5CC2-46b1-B7FF-FA08598C9EC6} → {BA3249FB-A3B6-40c5-B132-DCB8C6E2702E}
+  - name: "delivers value to"
+    guid: "{9D0E11F5-A166-4CD6-AC71-3CCF5E5C17BF}"
+    type: "Class"
+    stereotype: "stereotype"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Extension → Association"  # {8E7F8EE9-EFD1-46DC-B05C-1155B787D0A6} → {DE6FC006-93D9-4e08-81AB-D48D1213701E}
   - name: "fulfilled by"
     guid: "{72708906-2C77-4bdb-B7E2-6E7C63E75038}"
     type: "Class"
@@ -1431,6 +1450,16 @@ elements:
     note: ""
     links:
       - "Extension → Association"  # {4A65B5CE-E5BA-4394-974D-DA2851EB4879} → {6EF816E4-CB15-4842-A037-0EF3EBF43578}
+  - name: "triggers"
+    guid: "{D3810370-D2F0-448C-8E64-7DF0F255CF6F}"
+    type: "Class"
+    stereotype: "stereotype"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Extension → Association"  # {E15DC9AE-0B2E-40C0-A58C-B46FCA6FD07F} → {DE6FC006-93D9-4e08-81AB-D48D1213701E}
   - name: "use"
     guid: "{77226C2D-F2FF-4157-B200-52AA4873BCC1}"
     type: "Class"

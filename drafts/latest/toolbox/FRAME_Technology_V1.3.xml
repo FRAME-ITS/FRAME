@@ -104,6 +104,7 @@ AAAAAHN0ci5kYXRVVAUAB0VI119QSwUGAAAAAAEAAQA+AAAAXgIAAAAA</Image>
 					</Stereotype>
 					<Stereotype name="FRAME_Application" metatype="FRAME_Application" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" generalizes="ArchiMate3::ArchiMate_ApplicationComponent" baseStereotypes="ArchiMate3::ArchiMate_ApplicationComponent">
 						<stereotypedrelationships>
+							<stereotypedrelationship stereotype="FRAME_Profile::contains" constraint="FRAME_Profile::FRAME_Low_Level_Function;FRAME_Profile::FRAME_Datastore;FRAME_Profile::FRAME_Physical_Data_Flow"/>
 							<stereotypedrelationship stereotype="FRAME_Profile::adheres to" constraint="FRAME_Profile::FRAME_Specification"/>
 							<stereotypedrelationship stereotype="FRAME_Profile::defines" constraint="FRAME_Profile::FRAME_Requirement;FRAME_Profile::FRAME_Information_Object;FRAME_Profile::FRAME_Interface"/>
 							<stereotypedrelationship stereotype="FRAME_Profile::hosted by" constraint="FRAME_Profile::FRAME_Component"/>
@@ -139,6 +140,7 @@ gAAAAABzdHIuZGF0VVQFAAfP7klgUEsFBgAAAAABAAEAPgAAACkCAAAAAA==</Image>
 					</Stereotype>
 					<Stereotype name="FRAME_Component" metatype="FRAME_Component" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 						<stereotypedrelationships>
+							<stereotypedrelationship stereotype="FRAME_Profile::use" constraint="FRAME_Profile::FRAME_Physical_Data_Flow"/>
 							<stereotypedrelationship stereotype="FRAME_Profile::adheres to" constraint="FRAME_Profile::FRAME_Specification"/>
 							<stereotypedrelationship stereotype="FRAME_Profile::defines" constraint="FRAME_Profile::FRAME_Requirement"/>
 						</stereotypedrelationships>
@@ -352,6 +354,7 @@ AAAAAAAAgAAAAABzdHIuZGF0VVQFAAdPXClfUEsFBgAAAAABAAEAPgAAAC8CAAAAAA==</Image>
 					</Stereotype>
 					<Stereotype name="FRAME_ITS_Business_Process" metatype="ITS_Business_Process" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 						<stereotypedrelationships>
+							<stereotypedrelationship stereotype="FRAME_Profile::triggers" constraint="FRAME_Profile::FRAME_ITS_Business_Process"/>
 							<stereotypedrelationship stereotype="FRAME_Profile::defines" constraint="FRAME_Profile::FRAME_Requirement"/>
 						</stereotypedrelationships>
 						<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIADRqBFEGT0hkNAIAANIJAAAHABEAc3RyLmRhdFVUDQAHBmApXwZgKV8GYClf
@@ -411,7 +414,8 @@ AAAAAACAAAAAAHN0ci5kYXRVVAUABxhmGF9QSwUGAAAAAAEAAQA+AAAA+AEAAAAA</Image>
 					</Stereotype>
 					<Stereotype name="FRAME_ITS_Service_Added_Value" metatype="FRAME_ITS_Service_Added_Value" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" generalizes="ArchiMate3::ArchiMate_Value" baseStereotypes="ArchiMate3::ArchiMate_Value">
 						<stereotypedrelationships>
-							<stereotypedrelationship stereotype="FRAME_Profile::defines" constraint="FRAME_Profile::FRAME_Requirement;FRAME_Profile::FRAME_Stakeholder;FRAME_Profile::FRAME_User_Need"/>
+							<stereotypedrelationship stereotype="FRAME_Profile::delivers value to" constraint="FRAME_Profile::FRAME_Stakeholder"/>
+							<stereotypedrelationship stereotype="FRAME_Profile::defines" constraint="FRAME_Profile::FRAME_Requirement;FRAME_Profile::FRAME_User_Need"/>
 						</stereotypedrelationships>
 						<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIADSC9lBK5qeDhAEAADAEAAAHABEAc3RyLmRhdFVUDQAHtmYYX7ZmGF+2Zhhf
 jZPLTsMwEEVnWyT+AdFNKnXBmwViyRfwASg0fUQ0bpWkQEH8O+faddOkQUKVHdtz78ydRytb
@@ -432,6 +436,7 @@ AABzdHIuZGF0VVQFAAe2ZhhfUEsFBgAAAAABAAEAPgAAALoBAAAAAA==</Image>
 					</Stereotype>
 					<Stereotype name="FRAME_ITS_Service_Process" metatype="FRAME_ITS_Service_Process" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" generalizes="ArchiMate3::ArchiMate_BusinessProcess" baseStereotypes="ArchiMate3::ArchiMate_BusinessProcess">
 						<stereotypedrelationships>
+							<stereotypedrelationship stereotype="FRAME_Profile::triggers" constraint="FRAME_Profile::FRAME_ITS_Service_Process"/>
 							<stereotypedrelationship stereotype="FRAME_Profile::adheres to" constraint="FRAME_Profile::FRAME_Specification"/>
 							<stereotypedrelationship stereotype="FRAME_Profile::defines" constraint="FRAME_Profile::FRAME_Requirement;FRAME_Profile::FRAME_Functionality;FRAME_Profile::FRAME_Functionality;FRAME_Profile::FRAME_Role"/>
 							<stereotypedrelationship stereotype="FRAME_Profile::served by" constraint="FRAME_Profile::FRAME_Low_Level_Function"/>
@@ -481,7 +486,7 @@ AAAAAIAAAAAAc3RyLmRhdFVUBQAH7sIeX1BLBQYAAAAAAQABAD4AAAAtAgAAAAA=</Image>
 						<stereotypedrelationships>
 							<stereotypedrelationship stereotype="FRAME_Profile::adheres to" constraint="FRAME_Profile::FRAME_Specification"/>
 							<stereotypedrelationship stereotype="FRAME_Profile::component of" constraint="FRAME_Profile::FRAME_High_Level_Data_Flow"/>
-							<stereotypedrelationship stereotype="FRAME_Profile::contains" constraint="FRAME_Profile::FRAME_Data_Object"/>
+							<stereotypedrelationship stereotype="FRAME_Profile::contains" constraint="FRAME_Profile::FRAME_Data_Object;FRAME_Profile::FRAME_Information_Object"/>
 							<stereotypedrelationship stereotype="FRAME_Profile::defines" constraint="FRAME_Profile::FRAME_Requirement;FRAME_Profile::FRAME_Functionality"/>
 							<stereotypedrelationship stereotype="FRAME_Profile::OUT" constraint="FRAME_Profile::FRAME_Datastore;FRAME_Profile::FRAME_High_Level_Function;FRAME_Profile::FRAME_Low_Level_Function;FRAME_Profile::FRAME_System;FRAME_Profile::FRAME_Terminator;FRAME_Profile::FRAME_Functional_Area"/>
 							<stereotypedrelationship stereotype="FRAME_Profile::served by" constraint="FRAME_Profile::FRAME_Physical_Data_Flow"/>
@@ -642,6 +647,9 @@ AAA=</Image>
 						</TaggedValues>
 					</Stereotype>
 					<Stereotype name="FRAME_Specification" metatype="FRAME_Specification" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+						<stereotypedrelationships>
+							<stereotypedrelationship stereotype="FRAME_Profile::defines" constraint="FRAME_Profile::FRAME_Requirement"/>
+						</stereotypedrelationships>
 						<AppliesTo>
 							<Apply type="DeploymentSpecification">
 								<Property name="deploymentLocation" value=""/>
@@ -702,6 +710,7 @@ AAAAAHN0ci5kYXRVVAUAB2fRu19QSwUGAAAAAAEAAQA+AAAAUAEAAAAA</Image>
 					</Stereotype>
 					<Stereotype name="FRAME_Terminator" metatype="FRAME_Terminator" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" generalizes="ArchiMate3::ArchiMate_BusinessRole" baseStereotypes="ArchiMate3::ArchiMate_BusinessRole">
 						<stereotypedrelationships>
+							<stereotypedrelationship stereotype="FRAME_Profile::use" constraint="FRAME_Profile::FRAME_Physical_Data_Flow"/>
 							<stereotypedrelationship stereotype="FRAME_Profile::component of" constraint="FRAME_Profile::FRAME_Terminator"/>
 							<stereotypedrelationship stereotype="FRAME_Profile::defines" constraint="FRAME_Profile::FRAME_Requirement;FRAME_Profile::FRAME_Application"/>
 							<stereotypedrelationship stereotype="FRAME_Profile::IN" constraint="FRAME_Profile::FRAME_High_Level_Data_Flow;FRAME_Profile::FRAME_Low_Level_Data_Flow"/>
@@ -993,6 +1002,24 @@ AAAAAHN0ci5kYXRVVAUAB8zldV9QSwUGAAAAAAEAAQA+AAAAUAEAAAAA</Image>
 						</AppliesTo>
 					</Stereotype>
 					<Stereotype name="use" metatype="use" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+						<AppliesTo>
+							<Apply type="Association">
+								<Property name="_lineStyle" value="auto"/>
+								<Property name="compositionKind" value="none"/>
+								<Property name="direction" value="Source -&gt; Destination"/>
+							</Apply>
+						</AppliesTo>
+					</Stereotype>
+					<Stereotype name="triggers" metatype="triggers" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+						<AppliesTo>
+							<Apply type="Association">
+								<Property name="_lineStyle" value="auto"/>
+								<Property name="compositionKind" value="none"/>
+								<Property name="direction" value="Source -&gt; Destination"/>
+							</Apply>
+						</AppliesTo>
+					</Stereotype>
+					<Stereotype name="delivers value to" metatype="delivers value to" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 						<AppliesTo>
 							<Apply type="Association">
 								<Property name="_lineStyle" value="auto"/>
@@ -10816,6 +10843,8 @@ wQ3VtVk7wLDOVf+pnl9N9R+vHq1OjeEfN/T5+d8BAFS2xVKKLKxzAAAAAElFTkSuQmCC
 							<Tag name="FRAME_Profile::served by(UML::Association)" type="" description="" unit="" values="" default="served by"/>
 							<Tag name="FRAME_Profile::stored in(UML::Association)" type="" description="" unit="" values="" default="stored in"/>
 							<Tag name="FRAME_Profile::use(UML::Association)" type="" description="" unit="" values="" default="use"/>
+							<Tag name="FRAME_Profile::triggers(UML::Association)" type="" description="" unit="" values="" default="triggers"/>
+							<Tag name="FRAME_Profile::delivers value to(UML::Association)" type="" description="" unit="" values="" default="delivers value to"/>
 							<Tag name="isCollapsed" type="" description="" unit="" values="" default="true"/>
 							<Tag name="UML::Association" type="" description="" unit="" values="" default="associate"/>
 						</TaggedValues>

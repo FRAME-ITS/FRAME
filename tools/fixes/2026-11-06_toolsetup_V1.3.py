@@ -38,6 +38,28 @@ for old, new in RENAME_ST.items():
         c.execute('update t_attribute set Name=?, "Default"=? where ID=?', (a['Name'].replace(f'::{old}(', f'::{new}('), new if a['Default'].lower() == old.lower() else a['Default'], a['ID']))
         log.append(f'toolbox entry {a["Name"]} → {new}')
 
+# new connector stereotypes of V1.3: cloned from «use» (class, attributes, Extension to Association, diagram object, toolbox entry)
+for st in ('delivers value to', 'triggers'):
+    if c.execute('select 1 from t_object where Package_ID=? and Name=?', (P, st)).fetchone(): continue
+    u = dict(c.execute("select * from t_object where Package_ID=? and Name='use'", (P,)).fetchone()); uid = u.pop('Object_ID')
+    u.update(Name=st, ea_guid=guid()); new = c.execute(ins('t_object', u), list(u.values())).lastrowid
+    for a in c.execute('select * from t_attribute where Object_ID=?', (uid,)).fetchall():
+        a = dict(a); a.pop('ID'); a.update(Object_ID=new, ea_guid=guid())
+        if a['Name'] == '_metatype': a['Default'] = st
+        c.execute(ins('t_attribute', a), list(a.values()))
+    for k in c.execute("select * from t_connector where Start_Object_ID=? and Connector_Type='Extension'", (uid,)).fetchall():
+        k = dict(k); k.pop('Connector_ID'); k.update(Start_Object_ID=new, ea_guid=guid()); c.execute(ins('t_connector', k), list(k.values()))
+    for d in c.execute('select * from t_diagramobjects where Object_ID=?', (uid,)).fetchall():
+        d = dict(d); d.pop('Instance_ID'); off = 60 if st == 'triggers' else 120
+        d.update(Object_ID=new, RectTop=d['RectTop'] - off, RectBottom=d['RectBottom'] - off,
+                 ObjectStyle=re.sub(r'DUID=[0-9A-F]{8}', 'DUID=' + uuid.uuid4().hex[:8].upper(), d['ObjectStyle'] or ''))
+        c.execute(ins('t_diagramobjects', d), list(d.values()))
+    a = c.execute(f"select * from t_attribute where Object_ID in (select Object_ID from t_object where Package_ID={PT}) and Name='FRAME_Profile::use(UML::Association)'").fetchone()
+    if a:
+        a = dict(a); a.pop('ID'); a.update(Name=f'FRAME_Profile::{st}(UML::Association)', Default=st, ea_guid=guid())
+        c.execute(ins('t_attribute', a), list(a.values()))
+    log.append(f'new stereotype class «{st}» (copy of «use») with toolbox entry')
+
 name = {r[0]: r[1] for r in c.execute('select Object_ID, Name from t_object where Package_ID=?', (P,))}
 oid = {v: k for k, v in name.items()}
 def rels():
@@ -99,8 +121,16 @@ for st, s, t in sorted(want - have):
     tg = dict(c.execute('select * from t_connectortag where PropertyID=?', (ttag['PropertyID'],)).fetchone()); tg.pop('PropertyID')
     tg.update(ElementID=new, VALUE=st, ea_guid=guid()); c.execute(ins('t_connectortag', tg), list(tg.values()))
     log.append(f'rule added: «{st}» {s} → {t}')
+# rules the package has but V1.3 dropped (e.g. «defines» ITS Service Added Value → Stakeholder, now «delivers value to»)
+for k, tag in rels():
+    if tag and tag['VALUE'] and (tag['VALUE'], name[k['s']], name[k['t']]) not in want:
+        c.execute('delete from t_connectortag where ElementID=?', (k['Connector_ID'],))
+        c.execute('delete from t_diagramlinks where ConnectorID=?', (k['Connector_ID'],))
+        c.execute('delete from t_xref where Client=?', (k['ea_guid'],))
+        c.execute('delete from t_connector where Connector_ID=?', (k['Connector_ID'],))
+        log.append(f'rule removed (not in V1.3): «{tag["VALUE"]}» {name[k["s"]]} → {name[k["t"]]}')
 have = {(tag['VALUE'], name[k['s']], name[k['t']]) for k, tag in rels() if tag}
-extra = sorted(have - want)
+extra = sorted(have - want, key=str)
 
 # _HideUmlLinks
 CORE = ('FRAME_Functional_Area', 'FRAME_High_Level_Function', 'FRAME_Low_Level_Function', 'FRAME_High_Level_Data_Flow',
