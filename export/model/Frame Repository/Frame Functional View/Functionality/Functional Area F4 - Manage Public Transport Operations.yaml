@@ -174,6 +174,8 @@ elements:
       - "Association «IN» → mpto_PT_data_for_vehicle_sharing"  # {8BDABF31-A610-418f-863D-C4303DB96FAD} → {7F495FC8-C82C-40b4-B341-637B904E9CED}
       - "Association «IN» → mpto_PT_services_in_operation"  # {BDFE1237-0BB8-4d44-870B-90C14FD49BAC} → {C9BB6E62-0A74-4382-A688-7053139D1A50}
       - "Association «IN» → mpto_current_fare_scheme"  # {4BEC1851-C59B-4dcb-BBD5-B30C8931E85A} → {36EA93E5-3878-4ca3-BD13-CA39789E11EA}
+      - "Association «IN» → mpto_fare_scheme_for_PT_driver"  # {4E25A6E0-2058-43b0-8251-D2A14A65B1D7} → {940D2FB1-4095-4d19-B37B-1E73F78393DA}
+      - "Association «IN» → mpto_fare_scheme_for_service"  # {87C2429C-0363-44ce-9A3F-F8ED627DE2DA} → {BFD0DF8C-793F-4727-AA81-F060ED8D092F}
       - "Association «IN» → mpto_fare_scheme_planning_strategies"  # {2048A179-C0BE-4d77-8090-761D48D1809F} → {F5134D2F-7FF4-41f6-8408-D1555258E45B}
       - "Association «IN» → mpto_load_fare_scheme"  # {9F80E26E-ECB7-4d92-BB3F-8663316B31AC} → {05FB49F6-ABEF-4e08-A404-75C3A1460FF5}
       - "Association «IN» → mpto_load_static_data"  # {79E395B5-8C44-4c41-8BD3-79194589567F} → {74172621-2AC5-422c-BA0E-3D1CFBE72D80}
@@ -285,8 +287,6 @@ elements:
       - "Association «IN» → mpto_current_fare_credit"  # {9C853114-B53A-4b66-8B9A-3A1670564026} → {D0EFC395-E635-42f9-B2CC-0A90DC2BAB62}
       - "Association «IN» → mpto_deduct_fare_credit_for_journey"  # {8953CE44-B893-47db-9213-74F0EEAB266E} → {8B4AFC26-7EDE-4217-998C-7DDCF172D753}
       - "Association «IN» → mpto_fare_credit_balance"  # {A1F4BE34-B015-46c5-BF0B-B473DA61C518} → {F5DA4F9F-19A2-485f-83F3-09EFA936DB83}
-      - "Association «IN» → mpto_fare_scheme_for_PT_driver"  # {D8914F78-7EC1-410c-97C5-28D877D3DB97} → {940D2FB1-4095-4d19-B37B-1E73F78393DA}
-      - "Association «IN» → mpto_fare_scheme_for_service"  # {BD48A4C5-8720-4fd3-B81A-72D08CFFC525} → {BFD0DF8C-793F-4727-AA81-F060ED8D092F}
       - "Association «IN» → mpto_result_of_fare_transaction"  # {32E8ABEA-557E-40d1-A57F-D48B4CD47150} → {CCE55A3A-0798-470b-B7E0-31FBC7804AE4}
       - "Association «IN» → mpto_update_fare_credit"  # {49BF597C-FB08-4ae9-BAFD-77D73761B5C4} → {A84B5B7E-E184-486b-BE75-32F20528C6F7}
       - "Association «IN» → td.ptd-display_fares"  # {239B7932-D71E-4562-9015-3F5E11A17E4C} → {CFAF115A-3613-44b4-AB59-A77009EE91A5}

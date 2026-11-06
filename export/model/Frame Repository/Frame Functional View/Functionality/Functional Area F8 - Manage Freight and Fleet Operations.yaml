@@ -136,12 +136,12 @@ elements:
       - "Association «IN» → mffo_prepare_new_FTEP"  # {0CDA5E9D-29AC-41df-B239-779AC36CD064} → {074E4E76-C486-4a4f-8F5D-1B79F5B257A7}
       - "Association «IN» → mffo_request_FTA_facilities_for_FTOM"  # {90BC88E8-4D22-40a8-A367-C61BDE321A6D} → {13822913-7E8B-44c2-ABD2-DA3307E4F2D0}
       - "Association «IN» → mffo_save_new_FTEP_to_implement"  # {CA1DA886-0ED3-4b7b-9E58-40B8780DE0DD} → {DA4BC76E-4317-41c6-B7AE-1F2BB1933E01}
+      - "Association «IN» → tft.ftom-prepared_new_FTEP"  # {D0EE0D95-E444-41bc-B07A-CEFFCE92BA64} → {FC928E00-F02B-4f61-86C4-5C6CCC96179A}
       - "Association «IN» → tft.ftom-requested_FTA_facilities"  # {6BBA8159-EEC3-4f9a-84F1-B27C0F142395} → {14F853D9-6B4C-435d-A1E9-0915D5A829F2}
       - "Association «IN» → tft.ftom-requested_Freight_Vechicle_capabilities"  # {5980E8DB-A04A-4765-AE0B-69D081D75564} → {B71763AB-975D-42af-8136-FD2ED32E14A0}
+      - "Association «IN» → tft.ftom-requested_existing_FTEP"  # {AAE925B5-21F3-43e9-BA3B-580FC1E2007F} → {E70FE713-51BB-478d-AEC6-07D8EB7B7BF3}
       - "Association «IN» → tft.ftom-requested_traffic_management_policies"  # {6A098333-856D-4a71-A482-1E9A912EA622} → {C3B05625-AA71-483d-8C6D-E2EB918D8BF2}
       - "Association «IN» → ttp-FTOM_request_traffic_management_policies"  # {C31EDC3E-713A-402f-B710-512989AF1E24} → {3997E7E2-91FB-4c86-A9B2-1834A9704C5C}
-      - "Association «OUT» → tft.ftom-prepared_new_FTEP"  # {D0EE0D95-E444-41bc-B07A-CEFFCE92BA64} → {FC928E00-F02B-4f61-86C4-5C6CCC96179A}
-      - "Association «OUT» → tft.ftom-requested_existing_FTEP"  # {AAE925B5-21F3-43e9-BA3B-580FC1E2007F} → {E70FE713-51BB-478d-AEC6-07D8EB7B7BF3}
       - "Association «belongs to» → 9.11.1.1"  # {ABAC89CC-FB76-4b0d-87F5-E124DCDA42BC} → {23E6AFF0-4C32-48ce-8FC8-38257BD3BF16}
       - "Association «belongs to» → 9.11.1.2"  # {F46BA9BF-2000-4664-AD5F-E835E2E6BA66} → {50CEA6A4-DA8F-4c44-9025-0E489BDDC247}
       - "Association «belongs to» → 9.11.1.3"  # {F86321B2-A3DA-4a6e-BF83-C5A3084FC7C7} → {41CA4238-0A3A-4d25-925B-4030F0B608EC}

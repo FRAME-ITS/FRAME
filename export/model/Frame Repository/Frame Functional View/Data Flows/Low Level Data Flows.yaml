@@ -1570,8 +1570,8 @@ elements:
       It contains data objects that have been created by the Freight Transport Operations Manager to provide details of new and updated responses that the Freight Transport Execution Plan implementation functionality is to use when incidents occur that affect the movement of vehicles through the road network.
     links:
       - "Aggregation «component of» → fft-mffo_inputs"  # {04B15F63-12AD-4e38-907B-6A125B6DA88A} → {5AD13A9F-99E7-42bd-A30B-528626A5B517}
-      - "Association «IN» → F8.6.5 Provide FTOM Interface for FTEP Monitoring"  # {4A6444F9-693E-45e7-9EF0-012C32AFE3CD} → {8AD8B9D5-30E2-40a0-BF8A-30F3F57ECDF6}
       - "Association «OUT» → F8.6 Provide Freight Transport Service"  # {B4EC2F86-7B60-4e60-990C-A287EAEF0A03} → {4B60AD8D-35C5-4df5-A17B-3DD9C9952F2A}
+      - "Association «OUT» → F8.6.5 Provide FTOM Interface for FTEP Monitoring"  # {4A6444F9-693E-45e7-9EF0-012C32AFE3CD} → {8AD8B9D5-30E2-40a0-BF8A-30F3F57ECDF6}
   - name: "fft.ftom-message_for_Driver"
     guid: "{CC998CA7-427D-4b4a-AAA3-CA979FBE9459}"
     type: "Interface"
@@ -1609,8 +1609,8 @@ elements:
       It contains inputs the Freight Transport Operations Manager has made from which data objects are created to provide instructions to prepare a new Freight Transport Execution Plan, which can be based on an existing Plan if its identity is specified.
     links:
       - "Aggregation «component of» → fft-mffo_inputs"  # {93002613-A7A2-4a18-83E0-384653C6B5F3} → {5AD13A9F-99E7-42bd-A30B-528626A5B517}
-      - "Association «IN» → F8.4.3 Provide Freight Transport Operations Manager Interface"  # {78BEF4DF-A7F0-4698-989F-03877590D0DA} → {8FBDF54B-6B59-4624-BAA2-0843DE946DB2}
       - "Association «OUT» → F8.4 Manage FTEP Preparation"  # {6B1DB807-66C9-424b-B63F-27077312F6DC} → {BFCB99B2-2949-40c9-A40F-053438AB6BBC}
+      - "Association «OUT» → F8.4.3 Provide Freight Transport Operations Manager Interface"  # {78BEF4DF-A7F0-4698-989F-03877590D0DA} → {8FBDF54B-6B59-4624-BAA2-0843DE946DB2}
   - name: "fft.ftom-prepare_revised_FTEP"
     guid: "{3F2BB062-AB86-404b-850E-F8E5D74D6E75}"
     type: "Interface"
@@ -1635,8 +1635,8 @@ elements:
       It contains inputs the Freight Transport Operations Manager has made from which data objects are created to provide a request for details of an existing Freight Transport Execution Plan to be provided to the Freight Transport Operations Manager.
     links:
       - "Aggregation «component of» → fft-mffo_inputs"  # {D973CEBB-E034-4b72-91D1-3308C9F09D63} → {5AD13A9F-99E7-42bd-A30B-528626A5B517}
-      - "Association «IN» → F8.4.3 Provide Freight Transport Operations Manager Interface"  # {AA31D6AD-741F-4538-9017-4176EF8A2366} → {8FBDF54B-6B59-4624-BAA2-0843DE946DB2}
       - "Association «OUT» → F8.4 Manage FTEP Preparation"  # {6B7DFAD4-BE33-48ba-AE76-CD0D6D340C44} → {BFCB99B2-2949-40c9-A40F-053438AB6BBC}
+      - "Association «OUT» → F8.4.3 Provide Freight Transport Operations Manager Interface"  # {AA31D6AD-741F-4538-9017-4176EF8A2366} → {8FBDF54B-6B59-4624-BAA2-0843DE946DB2}
   - name: "fft.ftom-request_Freight_Vehicle_capabilities"
     guid: "{229BCABB-8A75-46da-AC3F-5A76D0D9D688}"
     type: "Interface"
@@ -1846,6 +1846,7 @@ elements:
     note: |
       It contains data objects from which the location of the Static Traveller making an emergency call can be determined.
     links:
+      - "Aggregation «component of» → From Location Data Source"  # {ECB18282-CE8F-41BF-B407-A316F252BD11} → {B81C99FC-BB55-44e6-813C-CD04A0309AF5}
       - "Association «OUT» → F2.1.10 Accept Roadside Emergency Call"  # {0471AB76-1748-4da7-8EAB-8A8CEF5919DC} → {C793F840-EF4D-433e-BE41-346972E00C28}
   - name: "flds-emergency_vehicle_location"
     guid: "{1F7307B7-0ABF-493d-A8F7-596C8D0D5075}"
@@ -1857,6 +1858,7 @@ elements:
     note: |
       It contains data objects from which an Emergency Vehicle can determine its current location.
     links:
+      - "Aggregation «component of» → From Location Data Source"  # {D0D94E2F-4BA0-47B8-BF55-1724CAEA7C36} → {B81C99FC-BB55-44e6-813C-CD04A0309AF5}
       - "Association «OUT» → F2.1.7 Manage use of Emergency Vehicle"  # {D0932BFF-2947-4d12-AB73-C1B10AF6C52B} → {5B46BB1A-BDD0-4baf-AF81-95C9D0184287}
   - name: "flds-hazardous_goods_vehicle_location"
     guid: "{5B2D9C42-E1BE-4e7f-9541-E5BD4E484FD1}"
@@ -1995,8 +1997,6 @@ elements:
       It consists of inputs from the Location Data Source containing data objects from which the location of an emergency vehicle can be determined and is for use by  functionality in the Provide Safety and Emergency Facilities Functional Area.
     links:
       - "Aggregation «component of» → From Location Data Source"  # {F4CD65D0-0A1B-45d0-BA9C-0D4A86D8A93C} → {B81C99FC-BB55-44e6-813C-CD04A0309AF5}
-      - "Aggregation «component of» → flds-emergency_call_location"  # {6BD19442-68D0-416f-BC23-C1E8E92E436D} → {972D8C11-D3B0-4383-BE19-9241CDDC49B4}
-      - "Aggregation «component of» → flds-emergency_vehicle_location"  # {3314148A-F057-4d18-9316-FB388E737A93} → {1F7307B7-0ABF-493d-A8F7-596C8D0D5075}
       - "Association «OUT» → F2. Provide Safety and Emergency Facilities"  # {9DE4775E-CCAD-4910-9944-7A53BCD05415} → {06D291DE-AA10-4891-8C30-E42616CA8483}
       - "Association «OUT» → F2.1 Manage Emergencies"  # {404F0119-E7CB-45e9-B62C-05593D1D8A47} → {8B0A6367-E6D7-47e2-9086-81FB2C700C13}
   - name: "flds-ptja_location_for_information"
@@ -2637,7 +2637,7 @@ elements:
     note: |
       It consists of inputs from the Communications Operator from which data objects are created that provide new and/or update PSAP data for use by functionality in the Provide Safety and Emergency Facilities Functional Area.
     links:
-      - "Aggregation «component of» → fo.co-PSAP_data_inputs"  # {E580947E-A6C6-4278-8938-0F51CB89C5EE} → {19BF87B2-DEE8-460b-84A9-C991320AEB62}
+      - "Aggregation «component of» → fo-psef_inputs"  # {BF4B9B8C-BF88-4717-97E2-8EACE93383A6} → {C53B9470-22A2-4614-83E4-B89591662B8D}
       - "Association «OUT» → F2.1.11.3 Provide PSAP Data Operator Interface"  # {37E4B26D-A4D6-4729-AD5E-B8B52722C0EB} → {7E3A2A8A-CD9E-44a7-94B3-209769E6BBDB}
   - name: "fo.eo-commands"
     guid: "{3DB32641-035B-4f7d-A288-B42C7B468D4A}"
@@ -7460,7 +7460,7 @@ elements:
     note: |
       It contains data objects that provide information about the current availability of PT Drivers and is used in the process of deciding whether or not to add extra PT Vehicles to a service.
     links:
-      - "Association «IN» → F4.4 Control PT Fleet"  # {2B911DAE-DC8A-4304-8FAD-FA51957E0D82} → {A2FF30DF-0587-4b92-A15D-1EC9040BD276}
+      - "Association «OUT» → F4.4 Control PT Fleet"  # {2B911DAE-DC8A-4304-8FAD-FA51957E0D82} → {A2FF30DF-0587-4b92-A15D-1EC9040BD276}
       - "Association «OUT» → F4.4.7 Manage use of Additional Vehicles"  # {B2531D4F-68EC-4544-A51C-9027EE948EB0} → {261F78A0-A165-4920-8879-DEBBBAD056BF}
   - name: "mpto_current_driver_statistics"
     guid: "{FD368FDF-5A0F-48be-B5A1-16DAB243FEF6}"
@@ -7595,7 +7595,7 @@ elements:
     note: |
       It contains data objects that provide confirmation that the fault previously reported on a Vehicle that is used to provide On-Demand Services has been fixed.  It will include data objects that provide the identity of the Vehicle, its location and the time
     links:
-      - "Association «IN» → F4.7 Provide On-demand Services"  # {1AA9E3C4-00D2-469e-B70E-5BDFF8E1FF89} → {ED1680A0-3B04-41e7-84AF-855C767F8066}
+      - "Association «OUT» → F4.7 Provide On-demand Services"  # {1AA9E3C4-00D2-469e-B70E-5BDFF8E1FF89} → {ED1680A0-3B04-41e7-84AF-855C767F8066}
       - "Association «OUT» → F4.7.3 Implement On-Demand Service"  # {A6700E2C-453C-4019-BE81-69D31F5B017F} → {D3D87063-83E3-470f-A9FE-C0A628578585}
   - name: "mpto_demand_vehicle_status"
     guid: "{396DFF44-AAA6-4b61-B2A9-18E4118C7CF4}"
@@ -7651,7 +7651,7 @@ elements:
     note: |
       It contains data objects that provide details of the current fare scheme for the service that the PT Vehicle is operating that has been requested for output to the PT Driver.
     links:
-      - "Association «IN» → F4.2 Plan PT Service"  # {4E25A6E0-2058-43b0-8251-D2A14A65B1D7} → {11256DFE-FADE-493f-803F-220E79388CDC}
+      - "Association «OUT» → F4.5 Provide PT Fare Facilities"  # {D8914F78-7EC1-410c-97C5-28D877D3DB97} → {0B6EE3D2-3124-4ff6-A5B3-3C8F646B059F}
       - "Association «OUT» → F4.5.1 Provide PT Drivers access to Fares"  # {D8D59146-1A33-4b41-8C28-68D0CD352591} → {05AF58D0-FF47-427e-A589-47A0E41D7775}
   - name: "mpto_fare_scheme_for_service"
     guid: "{BFD0DF8C-793F-4727-AA81-F060ED8D092F}"
@@ -7663,7 +7663,7 @@ elements:
     note: |
       It contains data objects that provide the current fare scheme for the PT service currently being performed by the PT Vehicle against which a PT fare card will be charged for a particular journey.
     links:
-      - "Association «IN» → F4.2 Plan PT Service"  # {87C2429C-0363-44ce-9A3F-F8ED627DE2DA} → {11256DFE-FADE-493f-803F-220E79388CDC}
+      - "Association «OUT» → F4.5 Provide PT Fare Facilities"  # {BD48A4C5-8720-4fd3-B81A-72D08CFFC525} → {0B6EE3D2-3124-4ff6-A5B3-3C8F646B059F}
       - "Association «OUT» → F4.5.2 Validate Fare Credit for Journey"  # {DE8378DD-0923-4363-AA55-6FDCAEFAD106} → {BAC7CE1B-B9B3-4fd3-890E-8DB3F4DE9F12}
   - name: "mpto_fare_scheme_planning_strategies"
     guid: "{F5134D2F-7FF4-41f6-8408-D1555258E45B}"
@@ -8973,7 +8973,6 @@ elements:
     note: |
       It contains data objects that provide the current traffic data flows for the inter-urban road network and are for use in the preparation of a Freight Transport Execution Plan (FTEP).
     links:
-      - "Aggregation «component of» → mt.mffo_current_road_network_data"  # {4AC79F20-4692-4aac-9BFB-6C84B4E2D88E} → {98EB8B41-1FBB-474e-8481-A900BA2B85EF}
       - "Aggregation «component of» → mt.mffo_data_for_FTEP_preparation"  # {743DF55A-C7DF-4c22-9E2C-864CBFEB869C} → {54C84804-44E6-4746-8DD2-5E3EE67EDAA2}
   - name: "mt.mffo_current_road_network_data"
     guid: "{98EB8B41-1FBB-474e-8481-A900BA2B85EF}"
@@ -8999,7 +8998,6 @@ elements:
     note: |
       It contains data objects that provide the current traffic data flows for the urban road network and are for use in the preparation of a Freight Transport Execution Plan (FTEP).
     links:
-      - "Aggregation «component of» → mt.mffo_current_road_network_data"  # {6620D9C8-AD2E-47db-9EE8-F9D2BD7D3049} → {98EB8B41-1FBB-474e-8481-A900BA2B85EF}
       - "Aggregation «component of» → mt.mffo_data_for_FTEP_preparation"  # {4D3047A2-712F-4a22-B88C-CF3499818B66} → {54C84804-44E6-4746-8DD2-5E3EE67EDAA2}
   - name: "mt.mffo_historic_intre-urban_traffic_data"
     guid: "{1E65CAD4-A13C-4cb0-86CC-32A467EA4CB2}"
@@ -9012,7 +9010,6 @@ elements:
       It contains data objects that provide the historic traffic data flows for the inter-urban road network and are for use in the preparation of a Freight Transport Execution Plan (FTEP).
     links:
       - "Aggregation «component of» → mt.mffo_data_for_FTEP_preparation"  # {151F9BC8-66D4-4bc5-9528-228980109327} → {54C84804-44E6-4746-8DD2-5E3EE67EDAA2}
-      - "Aggregation «component of» → mt.mffo_historic_road_network_data"  # {B1F0A6C2-FFE0-4b0f-9C23-BA377284DA6B} → {8B213947-1699-4fde-8B1F-2A35F4400F8C}
   - name: "mt.mffo_historic_road_network_data"
     guid: "{8B213947-1699-4fde-8B1F-2A35F4400F8C}"
     type: "Interface"
@@ -9037,7 +9034,6 @@ elements:
       It contains data objects that provide the historic traffic data flows for the urban road network and are for use in the preparation of a Freight Transport Execution Plan (FTEP).
     links:
       - "Aggregation «component of» → mt.mffo_data_for_FTEP_preparation"  # {8BDA1EB3-66AC-458e-B315-6B74F09657AB} → {54C84804-44E6-4746-8DD2-5E3EE67EDAA2}
-      - "Aggregation «component of» → mt.mffo_historic_road_network_data"  # {8B5B8EBB-2C8A-4913-9435-B535B653F985} → {8B213947-1699-4fde-8B1F-2A35F4400F8C}
   - name: "mt.mffo_incident_response"
     guid: "{EBAD543C-7B71-4f6d-B6C3-14D5DD674A99}"
     type: "Interface"
@@ -10801,7 +10797,7 @@ elements:
     note: |
       It contains data objects that provide the identities and details of the current number of spaces (or occupancy) and/or the status of some of the car parks in the urban road network.  The identities of the car parks whose data is included will be set by the source functionality.
     links:
-      - "Association «IN» → F3.1.5 Provide Management of Service Areas"  # {B760099F-E335-49e5-BB0B-3C2F425C20CD} → {962C365C-5E2E-4b47-BA9E-9537F154665A}
+      - "Association «OUT» → F3.1.5 Provide Management of Service Areas"  # {B760099F-E335-49e5-BB0B-3C2F425C20CD} → {962C365C-5E2E-4b47-BA9E-9537F154665A}
       - "Association «OUT» → F3.1.5.3 Output Service Area Messages"  # {0209A0E0-2879-467b-A7B2-A37F526DFA8F} → {F615BADC-78D3-4190-97BC-FA977207938A}
   - name: "mt_carpark_occupancy_for_output"
     guid: "{59DA1910-0D63-4602-927D-0C8DC9A2B46E}"
@@ -12218,7 +12214,7 @@ elements:
     note: |
       It contains data objects that provide details of the failure of an inter-urban traffic management strategy to be implemented.
     links:
-      - "Association «IN» → F3.1.2.13 Manage Inter-urban Traffic Strategies"  # {95803E51-1957-4d88-BF99-52BA9A8F87DC} → {44E4B5FB-6CF5-40a0-9CE1-D676DB87CA84}
+      - "Association «OUT» → F3.1.2.13 Manage Inter-urban Traffic Strategies"  # {95803E51-1957-4d88-BF99-52BA9A8F87DC} → {44E4B5FB-6CF5-40a0-9CE1-D676DB87CA84}
       - "Association «OUT» → F3.1.2.13.5 Manage Inter-urban Traffic Commands & Messages"  # {1648FF01-53A6-4af1-8D8D-9A89429DED75} → {E91C5E62-FC6E-4f19-AB1C-2607B4F77C39}
   - name: "mt_inter-urban_strategy_details_for_ramp_metering"
     guid: "{DC37AE94-B68A-44e6-AEA3-5C9C64119318}"
@@ -17388,7 +17384,7 @@ elements:
     note: |
       It contains data objects that provide a request from the Emergency Operator for a report containing statistics about incidents (e.g. date/time, type, location, duration, particular incident "hot spots") and the responses that have been made to them.
     links:
-      - "Association «IN» → F2.1.2 Manage Emergency Intervention"  # {F4B7B6C7-C920-4188-9239-240F61D6E76A} → {C982E490-F99F-42a0-BFE6-1F230467AB2C}
+      - "Association «OUT» → F2.1.2 Manage Emergency Intervention"  # {F4B7B6C7-C920-4188-9239-240F61D6E76A} → {C982E490-F99F-42a0-BFE6-1F230467AB2C}
       - "Association «OUT» → F2.1.2.5 Manage Incident and Emergency Data"  # {BFD7ABD8-486C-4b2d-B613-7E3A922B3B57} → {40CC5547-4CEA-41d7-ABB9-A29DE6E7BB46}
   - name: "psef_request_PSAP_data"
     guid: "{700FB26F-F21A-47fb-9540-0ED0EA14556A}"
@@ -18633,7 +18629,7 @@ elements:
     note: |
       It contains data objects that provide information about traffic regulations and commands dictating which lanes can be used that need to be sent by the Host Vehicle to Other Vehicles.
     links:
-      - "Association «IN» → F5.16 Provide Outputs to Host Vehicle Drivers"  # {C37BF3A2-69DD-4348-A1D1-1C68D4489E9D} → {0AAEF8C7-9771-4c0b-8E27-5BD596BF8380}
+      - "Association «OUT» → F5.12 Provide Vehicle Communications Interfaces"  # {FDC1D0E3-D86E-4366-928C-B707932AC07C} → {D7C917ED-CA9B-4e92-868E-80C5A2AA7BC3}
       - "Association «OUT» → F5.12.10 Provide V2V Communications"  # {7603836F-08B6-44db-82DB-AF6DC3F90AE6} → {E8E97C55-06E6-47db-94E5-B2ADF82A5CD0}
   - name: "pshvs_instructions_&_warnings_from_other_vehicles"
     guid: "{496E6A8D-0B7E-42c4-9D42-8C2769ABDBE8}"
@@ -18724,7 +18720,7 @@ elements:
     note: |
       It contains data objects that are to be loaded into the store of Operational Data.
     links:
-      - "Association «IN» → D5.1 Operational Data"  # {DC6847CE-2036-4c34-BBD0-0C361A0351CF} → {99434654-273A-4f7a-902B-79A4DB5ED9D4}
+      - "Association «OUT» → D5.1 Operational Data"  # {DC6847CE-2036-4c34-BBD0-0C361A0351CF} → {99434654-273A-4f7a-902B-79A4DB5ED9D4}
   - name: "pshvs_load_road_information"
     guid: "{960D5862-3D40-4003-BB23-0B6B4D644648}"
     type: "Interface"
@@ -18838,7 +18834,7 @@ elements:
     note: |
       It contains data objects that provide the current location of the Other Vehicle that has been received by the Host Vehicle.
     links:
-      - "Association «IN» → F5.13 Provide Vehicle Data and ISA"  # {7363EAA6-19E8-4f54-879D-C855467A9F2D} → {F91C0ED5-7F89-4fd1-B561-6CE9E766291A}
+      - "Association «OUT» → F5.13 Provide Vehicle Data and ISA"  # {7363EAA6-19E8-4f54-879D-C855467A9F2D} → {F91C0ED5-7F89-4fd1-B561-6CE9E766291A}
       - "Association «OUT» → F5.13.6 Determine Vehicle Position"  # {E2CF82BD-FAE7-4d33-BF72-62C0D17EDFA2} → {638106FA-A290-4941-8FF6-5278BD4C9F37}
   - name: "pshvs_location_of_other_vehicles_nearby"
     guid: "{88E719BE-338D-4a14-8ED0-09A2C531CD05}"
@@ -18929,7 +18925,7 @@ elements:
     note: |
       It contains data objects that provide the predicted trajectories for Other Vehicles for use in determining if the Host Vehicle is about to move into their paths.
     links:
-      - "Association «IN» → F5.15.3 Determine Host Vehicle Situation"  # {85D7E728-D524-41a1-B1B4-56DD17266893} → {D880D0A8-228C-4e34-8130-5ABAB4C9A865}
+      - "Association «OUT» → F5.15.3 Determine Host Vehicle Situation"  # {85D7E728-D524-41a1-B1B4-56DD17266893} → {D880D0A8-228C-4e34-8130-5ABAB4C9A865}
       - "Association «OUT» → F5.15.3.1 Predict Host Vehicle Trajectory"  # {434796C0-BABB-4324-9374-89E823FF3815} → {1104A701-AC9D-4027-81D9-C1D4476BC3DD}
   - name: "pshvs_output_commands_&_warnings"
     guid: "{1AC40800-2DDA-436a-A078-A76E195EA653}"
@@ -19018,7 +19014,7 @@ elements:
     note: |
       It contains data objects that are being read from the store of Operational Data.
     links:
-      - "Association «IN» → F5.11.13 Manage Operational Data Store"  # {6EC203A9-7761-49b0-9E58-57FDB78F66DF} → {7FB2F1F0-46C6-4ca4-85A8-86F78843F985}
+      - "Association «OUT» → F5.11.13 Manage Operational Data Store"  # {6EC203A9-7761-49b0-9E58-57FDB78F66DF} → {7FB2F1F0-46C6-4ca4-85A8-86F78843F985}
   - name: "pshvs_read_road_information"
     guid: "{73A0F09C-680D-4019-903C-9E97CBC45A9E}"
     type: "Interface"
@@ -19062,7 +19058,7 @@ elements:
     note: |
       It contains data objects that provide a request for the retrieval of Driver of the Host Vehicle condition data from the store of Operational Data.
     links:
-      - "Association «IN» → F5.11.13 Manage Operational Data Store"  # {C86E9220-1553-4025-B521-FA1500A47710} → {7FB2F1F0-46C6-4ca4-85A8-86F78843F985}
+      - "Association «OUT» → F5.11.13 Manage Operational Data Store"  # {C86E9220-1553-4025-B521-FA1500A47710} → {7FB2F1F0-46C6-4ca4-85A8-86F78843F985}
   - name: "pshvs_request_driver_stored_data"
     guid: "{F80665C7-C04F-48e0-8B34-F4D01C941DCA}"
     type: "Interface"
@@ -19073,7 +19069,7 @@ elements:
     note: |
       It contains data objects that provide a request for stored data to be retrieved from the store of Operational Data for the Driver of the Host Vehicle.
     links:
-      - "Association «IN» → F5.11.13 Manage Operational Data Store"  # {291C7C0B-E552-478f-A77D-28C441FA63D8} → {7FB2F1F0-46C6-4ca4-85A8-86F78843F985}
+      - "Association «OUT» → F5.11.13 Manage Operational Data Store"  # {291C7C0B-E552-478f-A77D-28C441FA63D8} → {7FB2F1F0-46C6-4ca4-85A8-86F78843F985}
   - name: "pshvs_request_tvd_incident_data"
     guid: "{954ACE25-13AA-4698-A30B-37F453E98AF1}"
     type: "Interface"
@@ -19084,7 +19080,7 @@ elements:
     note: |
       It contains data objects that request particular incident data is retrieved from the store of Operational Data.
     links:
-      - "Association «IN» → F5.11.13 Manage Operational Data Store"  # {722287A8-89A9-47e4-AABC-FB62B6CD9FEE} → {7FB2F1F0-46C6-4ca4-85A8-86F78843F985}
+      - "Association «OUT» → F5.11.13 Manage Operational Data Store"  # {722287A8-89A9-47e4-AABC-FB62B6CD9FEE} → {7FB2F1F0-46C6-4ca4-85A8-86F78843F985}
   - name: "pshvs_request_vehicle_trip_plan_for_implementation"
     guid: "{974BA61E-45C6-4c75-9B88-33B52BD3A69F}"
     type: "Interface"
@@ -19604,7 +19600,7 @@ elements:
     note: |
       It contains data objects that provide information about the Host Vehicle from its Vehicle Systems.  These data objects may include such things as Vehicle type, identity, size, weight, towing a trailer, fuel range, condition and capabilities, plus if appro
     links:
-      - "Association «IN» → F5.14 Provide In-vehicle Trip Planning & Implementation"  # {07BC91CC-3678-4547-B905-F9549F218BED} → {CD0DD7C8-43B3-4a5b-8DD2-AA6DEA02907E}
+      - "Association «OUT» → F5.14 Provide In-vehicle Trip Planning & Implementation"  # {07BC91CC-3678-4547-B905-F9549F218BED} → {CD0DD7C8-43B3-4a5b-8DD2-AA6DEA02907E}
       - "Association «OUT» → F5.14.17 Prepare and Amend Trip Plans"  # {5899C75B-7655-468c-8228-EB708AA1CFCA} → {635F7A9D-F419-43a6-A58C-CD756C0AA250}
   - name: "pshvs_vehicle_departed_from_route"
     guid: "{60850BC8-D8DF-4734-A5E3-125FCCBD3A24}"
@@ -20638,7 +20634,6 @@ elements:
       It consists of inputs from the Communications Operator from which data objects are created that provide a request for PSAP data available from functionality in the Provide Safety and Emergency Facilities Functional Area.
     links:
       - "Aggregation «component of» → fo-psef_inputs"  # {30A6F288-1DA3-4c13-9F1D-E6F2A59755ED} → {C53B9470-22A2-4614-83E4-B89591662B8D}
-      - "Aggregation «component of» → fo.co-PSAP_data_inputs"  # {BC746A8C-349A-48aa-8DF4-5BC3481F6E53} → {19BF87B2-DEE8-460b-84A9-C991320AEB62}
       - "Association «OUT» → F2.1 Manage Emergencies"  # {03E519CB-FAC5-47eb-88C7-BC4C7D6D9A75} → {8B0A6367-E6D7-47e2-9086-81FB2C700C13}
       - "Association «OUT» → F2.1.11 Manage eCall Messages"  # {F59C47C0-CA29-4484-815C-2A6EE0A8DCF3} → {89ADDE3A-4642-4d57-A89E-BFAE05F44CF1}
       - "Association «OUT» → F2.1.11.3 Provide PSAP Data Operator Interface"  # {67ACAD5E-2689-4503-BE90-DFD3BC262F53} → {7E3A2A8A-CD9E-44a7-94B3-209769E6BBDB}

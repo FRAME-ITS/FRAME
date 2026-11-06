@@ -1529,8 +1529,8 @@ elements:
       - "Association «IN» → tnap.cc-metadata_search_result"  # {A82C5A53-996E-411c-BE56-369E3142CA38} → {63E13C50-8801-4e2b-BA9D-170CDE8BD53D}
       - "Association «IN» → tnap.cc-support_response"  # {84B87FA9-1BFB-4ac9-9110-1549A4B265D7} → {72CEA537-E1D0-4568-A93D-9343F41193CC}
       - "Association «IN» → tnap.cp-metadata_&_success_report"  # {05C56B00-B019-4069-8988-0DC43838834B} → {B3154461-F9DC-4afd-8D5F-F44985AF55EC}
+      - "Association «IN» → tnap.cp-registration_response"  # {EE27D826-1981-436f-AE29-CE0A4BE43C15} → {43BA5834-14FF-41d8-89AB-BD55A7C65F2E}
       - "Association «IN» → tnap.cp-support_response"  # {25D6650D-CC6D-43f5-A2EE-29D95C0A874E} → {396E64F8-C99F-4e67-9ABE-3D0BF49B608F}
-      - "Association «OUT» → tnap.cp-registration_response"  # {EE27D826-1981-436f-AE29-CE0A4BE43C15} → {43BA5834-14FF-41d8-89AB-BD55A7C65F2E}
   - name: "F3.6.1 Manage NAP Metadata Repository"
     guid: "{FC985F0E-26B3-41e8-847E-A71AA3290132}"
     type: "Activity"
@@ -1596,7 +1596,7 @@ elements:
       - "Association «IN» → mt_NAP_metadata_mod_authorisation_result"  # {768C9897-B3B0-4194-B034-A450A93A16FE} → {BEA016F1-B13A-4ae8-951E-7F0A26FD3888}
       - "Association «IN» → mt_load_NAP_user_data"  # {8103610A-CDF6-4938-B692-8A2CEF7BFA89} → {6FE0CAF2-D55F-4f13-B39A-6D819C3E9C75}
       - "Association «IN» → tnap.cc-registration_response"  # {6CA155C5-4839-4563-9BFF-A9A95E43E568} → {60E6A67C-C9D0-464b-900F-9F28DC71E886}
-      - "Association «OUT» → tnap.cp-registration_response"  # {B2ABA73C-D040-40db-998B-95521C0703F4} → {43BA5834-14FF-41d8-89AB-BD55A7C65F2E}
+      - "Association «IN» → tnap.cp-registration_response"  # {B2ABA73C-D040-40db-998B-95521C0703F4} → {43BA5834-14FF-41d8-89AB-BD55A7C65F2E}
   - name: "F3.6.3 Manage Content Providers Metadata"
     guid: "{B623B347-AA95-44be-9043-55050E3CFC41}"
     type: "Activity"

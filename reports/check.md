@@ -1,64 +1,17 @@
 # Model check – FRAME.qea
 
-**39 errors, 62 warnings**
+**3 errors, 62 warnings**
 
 | Rule | Related issue | Errors | Warnings |
 |---|---|---|---|
-| componentof | #80, #81 | 8 | 42 |
+| componentof | #80, #81 | 0 | 42 |
 | duplicate |  | 0 | 2 |
 | function-flows |  | 0 | 1 |
-| in-out | #69 | 28 | 0 |
 | servedby |  | 3 | 5 |
 | stereotype-spelling | #86 | 0 | 1 |
 | unused-flow | #76 | 0 | 11 |
 
 ## Errors
-
-<details><summary><b>componentof</b> (8)</summary>
-
-- «component of» Low_Level_Data_Flow **flds-psef_location_data** (Frame Repository) → flds-emergency_call_location (Low_Level_Data_Flow) runs whole → part or between low-level flows
-- «component of» Low_Level_Data_Flow **flds-psef_location_data** (Frame Repository) → flds-emergency_vehicle_location (Low_Level_Data_Flow) runs whole → part or between low-level flows
-- «component of» Low_Level_Data_Flow **fo.co-PSAP_data_update** (Frame Repository) → fo.co-PSAP_data_inputs (Low_Level_Data_Flow) runs whole → part or between low-level flows
-- «component of» Low_Level_Data_Flow **fo.co-request_PSAP_data_output** (Frame Repository) → fo.co-PSAP_data_inputs (Low_Level_Data_Flow) runs whole → part or between low-level flows
-- «component of» Low_Level_Data_Flow **mt.mffo_current_inter-urban_traffic_data** (Frame Repository) → mt.mffo_current_road_network_data (Low_Level_Data_Flow) runs whole → part or between low-level flows
-- «component of» Low_Level_Data_Flow **mt.mffo_current_urban_traffic_data** (Frame Repository) → mt.mffo_current_road_network_data (Low_Level_Data_Flow) runs whole → part or between low-level flows
-- «component of» Low_Level_Data_Flow **mt.mffo_historic_intre-urban_traffic_data** (Frame Repository) → mt.mffo_historic_road_network_data (Low_Level_Data_Flow) runs whole → part or between low-level flows
-- «component of» Low_Level_Data_Flow **mt.mffo_historic_urban_traffic_data** (Frame Repository) → mt.mffo_historic_road_network_data (Low_Level_Data_Flow) runs whole → part or between low-level flows
-
-</details>
-
-<details><summary><b>in-out</b> (28)</summary>
-
-- «IN» Low_Level_Data_Flow **fft.ftom-incident_responses** (Frame Repository) → F8.6.5 Provide FTOM Interface for FTEP Monitoring: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fft.ftom-prepare_new_FTEP** (Frame Repository) → F8.4.3 Provide Freight Transport Operations Manager Interface: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fft.ftom-request_existing_FTEP** (Frame Repository) → F8.4.3 Provide Freight Transport Operations Manager Interface: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **mpto_current_driver_availability** (Frame Repository) → F4.4 Control PT Fleet: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **mpto_demand_vehicle_repaired** (Frame Repository) → F4.7 Provide On-demand Services: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **mpto_fare_scheme_for_PT_driver** (Frame Repository) → F4.2 Plan PT Service: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **mpto_fare_scheme_for_service** (Frame Repository) → F4.2 Plan PT Service: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **mt_carpark_occupancy_for_inter-urban** (Frame Repository) → F3.1.5 Provide Management of Service Areas: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **mt_inter-urban_strategy_command_response_failure** (Frame Repository) → F3.1.2.13 Manage Inter-urban Traffic Strategies: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **psef_request_emergency_response_statistics** (Frame Repository) → F2.1.2 Manage Emergency Intervention: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **pshvs_instructions_&_warnings_for_other_vehicles** (Frame Repository) → F5.16 Provide Outputs to Host Vehicle Drivers: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **pshvs_load_operational_data** (Frame Repository) → D5.1 Operational Data: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **pshvs_location_from_other_vehicle** (Frame Repository) → F5.13 Provide Vehicle Data and ISA: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **pshvs_other_vehicle_trajectory_for_host_vehicle** (Frame Repository) → F5.15.3 Determine Host Vehicle Situation: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **pshvs_read_operational_data** (Frame Repository) → F5.11.13 Manage Operational Data Store: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **pshvs_request_driver_condition** (Frame Repository) → F5.11.13 Manage Operational Data Store: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **pshvs_request_driver_stored_data** (Frame Repository) → F5.11.13 Manage Operational Data Store: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **pshvs_request_tvd_incident_data** (Frame Repository) → F5.11.13 Manage Operational Data Store: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **pshvs_vehicle_data_for_trip_planning** (Frame Repository) → F5.14 Provide In-vehicle Trip Planning & Implementation: expected «OUT» for this direction (or reverse the connector)
-- «OUT» Datastore **D5.1 Operational Data** (Frame Repository) → pshvs_read_operational_data: expected «IN» for this direction (or reverse the connector)
-- «OUT» High_Level_Function **F3.6 Operate National Access Point** (Frame Repository) → tnap.cp-registration_response: expected «IN» for this direction (or reverse the connector)
-- «OUT» Low_Level_Function **F3.6.2 Manage Registrations and Provide Authorisation Service** (Frame Repository) → tnap.cp-registration_response: expected «IN» for this direction (or reverse the connector)
-- «OUT» Low_Level_Function **F5.11.11 Monitor Status of Driver** (Frame Repository) → pshvs_request_driver_stored_data: expected «IN» for this direction (or reverse the connector)
-- «OUT» Low_Level_Function **F5.11.13 Manage Operational Data Store** (Frame Repository) → pshvs_load_operational_data: expected «IN» for this direction (or reverse the connector)
-- «OUT» Low_Level_Function **F5.11.6 Provide Incident Related Data** (Frame Repository) → pshvs_request_tvd_incident_data: expected «IN» for this direction (or reverse the connector)
-- «OUT» Low_Level_Function **F5.11.7 Provide In-vehicle eCall Facilities** (Frame Repository) → pshvs_request_driver_condition: expected «IN» for this direction (or reverse the connector)
-- «OUT» Low_Level_Function **F8.4.3 Provide Freight Transport Operations Manager Interface** (Frame Repository) → tft.ftom-prepared_new_FTEP: expected «IN» for this direction (or reverse the connector)
-- «OUT» Low_Level_Function **F8.4.3 Provide Freight Transport Operations Manager Interface** (Frame Repository) → tft.ftom-requested_existing_FTEP: expected «IN» for this direction (or reverse the connector)
-
-</details>
 
 <details><summary><b>servedby</b> (3)</summary>
 
