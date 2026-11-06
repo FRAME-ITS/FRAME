@@ -16,7 +16,7 @@ elements:
       For details please see the security view and the EU Central elements, TLM, CPOC, ECTL, EU Root CA with EA and AA and the links to the documents at:
       https://cpoc.jrc.ec.europa.eu/Documentation.html
     links:
-      - "Association «adheres to» → EU CCMS Provider"  # {24196C3B-D4E9-462c-A1C9-3D26E8AD510F} → {141D71A7-ABA6-4d67-80D8-8BD1B412CBA9}
+      - "Association «accepted by» → EU CCMS Provider"  # {24196C3B-D4E9-462c-A1C9-3D26E8AD510F} → {141D71A7-ABA6-4d67-80D8-8BD1B412CBA9}
   - name: "C-ITS Long Range Communication Service Agreement"
     guid: "{3B85872B-52EB-4509-A9E7-CE7F265327C2}"
     type: "Collaboration"
@@ -27,8 +27,8 @@ elements:
     note: |
       Hybrid day one C-ITS service contract between fleet operator and service providers.
     links:
-      - "Association «adheres to» → Driver"  # {70871D79-E4EA-4a0d-86F3-7DFFE02DD42E} → {D96513DF-8F0C-41e0-A1AE-3B65A11CC4AE}
-      - "Association «adheres to» → Vehicle Manufacturer and C-ITS station operator"  # {E10FE572-8309-4a43-A393-D02885BB61E1} → {0F3BBA70-5E3D-4c2a-B68F-961BDC0B1885}
+      - "Association «accepted by» → Driver"  # {70871D79-E4EA-4a0d-86F3-7DFFE02DD42E} → {D96513DF-8F0C-41e0-A1AE-3B65A11CC4AE}
+      - "Association «accepted by» → Vehicle Manufacturer and C-ITS station operator"  # {E10FE572-8309-4a43-A393-D02885BB61E1} → {0F3BBA70-5E3D-4c2a-B68F-961BDC0B1885}
   - name: "Third party service Agreement"
     guid: "{55DDB938-4CFE-4e83-8BE8-D648FFCA95FA}"
     type: "Collaboration"
@@ -39,8 +39,8 @@ elements:
     note: |
       Service contract with third party service provider for C-ITS related services at road infrastructures or in connection with mobile devices and C-ITS Stations.
     links:
-      - "Association «adheres to» → Driver"  # {C57ED4CF-89D5-447c-8C95-47C78A0F4C25} → {D96513DF-8F0C-41e0-A1AE-3B65A11CC4AE}
-      - "Association «adheres to» → Mobile Traveller"  # {9EFD9092-AD8C-42ad-B5D2-7E95BC83CCB3} → {89E1E006-9E0D-46f8-A64F-1D158457BCB0}
+      - "Association «accepted by» → Driver"  # {C57ED4CF-89D5-447c-8C95-47C78A0F4C25} → {D96513DF-8F0C-41e0-A1AE-3B65A11CC4AE}
+      - "Association «accepted by» → Mobile Traveller"  # {9EFD9092-AD8C-42ad-B5D2-7E95BC83CCB3} → {89E1E006-9E0D-46f8-A64F-1D158457BCB0}
   - name: "Vehicle purchasing/ leasing contract Agreement"
     guid: "{B38F9670-4EAD-4d22-934B-358CE571A894}"
     type: "Collaboration"
@@ -51,4 +51,4 @@ elements:
     note: |
       Contract for the purchasing or use of vehicle with C-ITS functionalities and services provided in a professional or in a personal domain.
     links:
-      - "Association «adheres to» → Vehicle Manufacturer and C-ITS station operator"  # {E1BADDE0-767B-48f1-A89E-A4E024884CB8} → {0F3BBA70-5E3D-4c2a-B68F-961BDC0B1885}
+      - "Association «accepted by» → Vehicle Manufacturer and C-ITS station operator"  # {E1BADDE0-767B-48f1-A89E-A4E024884CB8} → {0F3BBA70-5E3D-4c2a-B68F-961BDC0B1885}

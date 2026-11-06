@@ -19,8 +19,8 @@ elements:
       "Role View": ""
     note: ""
     links:
-      - "Association «accepted by» → Network Usage Contract"  # {77D2DFC3-0C62-4e35-B87E-AF63CA47734A} → {7798C178-BD30-4830-B7D4-16A395506D5F}
-      - "Association «accepted by» → eCall Delegated Regulation Mobile Network Systems"  # {36061676-A498-4773-AD44-D77CD5182F8F} → {1B607CF4-214F-469e-A7F0-5327CE16574D}
+      - "Association «adheres to» → Network Usage Contract"  # {77D2DFC3-0C62-4e35-B87E-AF63CA47734A} → {7798C178-BD30-4830-B7D4-16A395506D5F}
+      - "Association «adheres to» → eCall Delegated Regulation Mobile Network Systems"  # {36061676-A498-4773-AD44-D77CD5182F8F} → {1B607CF4-214F-469e-A7F0-5327CE16574D}
   - name: "PSAP Operator"
     guid: "{C1ADF028-16CF-46c1-B6F5-8C88B29DD830}"
     type: "Object"
@@ -35,7 +35,7 @@ elements:
       "Role View": ""
     note: ""
     links:
-      - "Association «accepted by» → eCall Delegated Regulation Public Service Answering Point - PSAP Systems"  # {009163AF-759C-4edc-A39C-429D6983C209} → {82173E21-2622-48bb-9D3D-246516F61B6D}
+      - "Association «adheres to» → eCall Delegated Regulation Public Service Answering Point - PSAP Systems"  # {009163AF-759C-4edc-A39C-429D6983C209} → {82173E21-2622-48bb-9D3D-246516F61B6D}
   - name: "Public Authorithy - EU Member States"
     guid: "{96C28E87-6CE7-4957-950A-ACD1C313C7D7}"
     type: "Object"
@@ -64,7 +64,7 @@ elements:
     note: |
       Optional: Organization which separates real eCalls from other requests from driver.
     links:
-      - "Association «accepted by» → eCall additional Service"  # {9D045BF3-5D40-4f3f-BA5C-4F231544C18F} → {7FAE0707-8124-469e-B459-1941A7BD00E7}
+      - "Association «adheres to» → eCall additional Service"  # {9D045BF3-5D40-4f3f-BA5C-4F231544C18F} → {7FAE0707-8124-469e-B459-1941A7BD00E7}
   - name: "Vehicle Manufacturer"
     guid: "{2B124BA8-846E-41d9-B4E4-51DF61F59E6D}"
     type: "Object"
@@ -79,7 +79,7 @@ elements:
       "Role View": ""
     note: ""
     links:
-      - "Association «accepted by» → eCall Delegated Regulation In Vehicle Systems"  # {F18E745E-F8E2-4232-802A-24C5F04EC0B7} → {DA146232-5A97-481d-A114-3A383988E3C2}
+      - "Association «adheres to» → eCall Delegated Regulation In Vehicle Systems"  # {F18E745E-F8E2-4232-802A-24C5F04EC0B7} → {DA146232-5A97-481d-A114-3A383988E3C2}
   - name: "eCall - Generator"
     guid: "{A9B47171-ABC4-4e66-859E-5C320E6FC5DB}"
     type: "Object"
@@ -107,5 +107,5 @@ elements:
       "Role View": ""
     note: ""
     links:
-      - "Association «accepted by» → Third Party service agreement"  # {D094ABA9-CF41-44a0-A0D8-553909819524} → {BEA8E2A4-80A9-48c9-B190-5828D7B3A106}
-      - "Association «accepted by» → Vehicle Purchasing Contract"  # {4AF89F5D-4841-4658-A4F2-FED747A69C35} → {8E15F8DA-AA35-4d11-8FB2-55DB6F6E81D7}
+      - "Association «adheres to» → Third Party service agreement"  # {D094ABA9-CF41-44a0-A0D8-553909819524} → {BEA8E2A4-80A9-48c9-B190-5828D7B3A106}
+      - "Association «adheres to» → Vehicle Purchasing Contract"  # {4AF89F5D-4841-4658-A4F2-FED747A69C35} → {8E15F8DA-AA35-4d11-8FB2-55DB6F6E81D7}

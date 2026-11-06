@@ -26,7 +26,7 @@ elements:
     order: 0
     note: ""
     links:
-      - "Association «adheres to» → Role"  # {A749230A-CD41-4481-B84F-DC565F0AEF02} → {6919B163-FD91-4478-B0D6-0A11A723D27B}
+      - "Association «accepted by» → Role"  # {A749230A-CD41-4481-B84F-DC565F0AEF02} → {6919B163-FD91-4478-B0D6-0A11A723D27B}
   - name: "Application"
     guid: "{9E05B1AE-4239-4341-BCF2-010BB287A0BB}"
     type: "Object"
@@ -55,7 +55,6 @@ elements:
       Business expectations of an actor involved in the ITS Service is an ITS architecture building block, which formulates the economic added value for an institution/company associated with an ITS service as a goal.
     links:
       - "Association «defines» → ITS_Service"  # {74E6BE36-188E-43CB-A9B1-E8F38A2F01AE} → {7153E4F6-663F-4457-B65B-207E5B95ED99}
-      - "Association «defines» → Mission Statement"  # {9D522F03-A7F7-43d7-8628-1027FB273E45} → {B3A79F6B-D9C7-45e4-9E34-B1F4A73D19DC}
   - name: "Component"
     guid: "{A3ECE56A-3A44-4971-9CEC-0D092A4DB634}"
     type: "Component"
@@ -188,14 +187,13 @@ elements:
     tags:
       "Field of Application": ""
     note: |
-      The ITS service describes the idea and functional elements of the ITS service as well as framework conditions.
-      The ITS Service is an architectural artifact that describes a value-added service provided by ITS actors in the field of transport, traffic, and mobility for end-users. The added value is created by combining technologies, organizations, processes, and people. The service can be delivered by a single actor or in cooperation with others, and it creates added value that may consist of individual benefits for mobile travelers, collective benefits for end-user groups or society, or a mixture of both.
+      The ITS service describes the idea and functional elements of the ITS service as well as framework conditions. The ITS Service is an architectural artifact that describes a value-added service provided by ITS actors to end-users. The added value is created by combining technologies, organizations, processes, and people. The service can be delivered by a single actor or in cooperation with others, and it creates added value that may consist of individual benefits for end users, collective benefits for end-user groups or society, or a mixture of both.
     links:
       - "Association «defines» → ITSBusinessProcess"  # {C4791D93-7831-4d3e-A98E-7A974B7ADB0C} → {69BD576D-9718-4c71-A12F-71329B3B65F0}
       - "Association «defines» → ITS_ServiceProcess"  # {FDD7EA6E-EE4C-4061-9133-1FC46B4555AC} → {AAE8BD5C-8D68-412e-AD63-C049013FCE0B}
       - "Association «defines» → Requirement"  # {23673D85-0AB3-43ce-B706-2E082F72B857} → {C94C247E-3F93-47ee-AA0A-75C521916D0A}
       - "Association «defines» → User_Need"  # {199F747E-D68F-4829-932D-5CB583632930} → {AAD160FE-1FEE-4cea-93C1-A68DDAE1E0CD}
-      - "Association «delivered by» → ITS_Service_Added_Value"  # {F50D00FC-C881-4287-B438-DA9BEAB31FD8} → {5973109B-76D5-4860-B8E0-E70ADB5483C0}
+      - "Association «delivers» → ITS_Service_Added_Value"  # {F50D00FC-C881-4287-B438-DA9BEAB31FD8} → {5973109B-76D5-4860-B8E0-E70ADB5483C0}
       - "Association «has» → ITS_Domain"  # {FA55D340-4A76-4440-9CF1-DFD2EFBC7D78} → {1A23C9AA-C9E1-4572-9F33-D101F6A2937D}
   - name: "ITS_ServiceProcess"
     guid: "{AAE8BD5C-8D68-412e-AD63-C049013FCE0B}"
@@ -221,7 +219,6 @@ elements:
     note: |
       The ITS Service added value is created when end-users are given access to ITS information within application processes via easily accessible service access points, enabling them to make their own ITS decisions safely, reliably, quickly, and effectively.
     links:
-      - "Association «defines» → User_Need"  # {F130565C-2FFB-4856-B394-B37D02B40C7E} → {AAD160FE-1FEE-4cea-93C1-A68DDAE1E0CD}
       - "Association «delivers value to» → Stakeholder"  # {4B664570-26A6-4bef-B256-CFF93DFEA378} → {D8941B60-3EFA-422b-93B5-1F7FDFB18CFF}
   - name: "ITS_Vision"
     guid: "{EEBB0D81-284E-4b97-B8DB-21FC225173BC}"
@@ -230,10 +227,10 @@ elements:
     status: "Proposed"
     version: "1.0"
     order: 0
-    note: ""
+    note: |
+      ITS Vision is the long-term objective and an aspirational goal for the future. The ITS Vision is shared by all ITS Stakeholders. It is a source of inspiration for the ITS Services and provides a clear goal to be adhered to by the ITS Services.
     links:
       - "Association «associate» → Mission Statement"  # {6D447C59-487B-4fac-924E-04733EB7CDEE} → {B3A79F6B-D9C7-45e4-9E34-B1F4A73D19DC}
-      - "Association «defines» → Requirement"  # {ACEA9F80-F3ED-48bb-BC5A-B0723D7D1586} → {C94C247E-3F93-47ee-AA0A-75C521916D0A}
   - name: "InformationObject"
     guid: "{23EBC3DA-D923-4f06-8F70-6D29A77E7973}"
     type: "Object"
@@ -299,7 +296,7 @@ elements:
     version: "1.0"
     order: 0
     note: |
-      The ITS Mission statement formulates a clearly structured, overarching, long-term policy objective and the benefits for the defined ITS service deployment, taking into account the interests of stakeholders and end-users. It represents a long-term framework for strengthening the security of action and investment for the involved actors and involves all modes and means of transport.
+      ITS Mission Statement is a short statement that describes what is needed to be done by the ITS Stakeholders in the present to achieve the ITS Vision. It summarizes the purpose of the existence of the ITS Services and guides their use by the ITS Actors and/or the end users. It formulates a clearly structured, overarching policy objective of the ITS service, considering the interests of stakeholders and end-users.
     links:
       - "Association «defines» → ITS_Service"  # {833D8409-F59A-43b0-80E5-6B2D8B401971} → {7153E4F6-663F-4457-B65B-207E5B95ED99}
   - name: "Organisation"
@@ -367,7 +364,7 @@ elements:
       Part of the ITS service chain, (partners contributing to the service delivery)
       The ITS Role is an architectural artifact that defines and semantically describes the stereotypes of ITS responsibilities, tasks, and capabilities that are typical and necessary for the value creation of ITS services. It is a significant component of ITS value-added chains for ITS information logistics and is taken by ITS actors and stakeholders depending on the requirements of the ITS service to be implemented. A single ITS actor or stakeholder can occupy one or more ITS roles. The role operates its capabilities, responsibilities, and tasks in the form of activities which, together with the activities of other ITS roles, constitute the ITS business process of an ITS service.
     links:
-      - "Association «accepted by» → Agreement"  # {322AA2AB-0141-4586-86D8-50EFCA83FB3E} → {59AC1C75-662C-4f63-B4A9-8E075FE15BE4}
+      - "Association «adheres to» → Agreement"  # {322AA2AB-0141-4586-86D8-50EFCA83FB3E} → {59AC1C75-662C-4f63-B4A9-8E075FE15BE4}
       - "Association «defines» → Organisation"  # {61F2CD8B-AE8F-4060-BD2D-970E315C7B1C} → {FAB885FE-E93D-4446-B40C-9C8CD237440F}
   - name: "Specification"
     guid: "{32E1A53D-B9C9-4180-BD66-998E967D5E33}"
@@ -387,7 +384,7 @@ elements:
     version: "1.0"
     order: 0
     note: |
-      ITS Stakeholders are usually non-IT decision makers, e.g., politicians, land-use planners, high-level managers, and others who usually have little or no knowledge of IT systems design and implementation beyond what they have acquired as end users.
+      ITS Stakeholders are organizations or individuals interested in the deployment, operation, or outcomes of ITS services. They can be directly or indirectly affected by the decisions made during the entire lifecycle of ITS Services. They are usually decision-makers such as politicians, high-level managers, and others e.g., the general public or user groups; who typically have little or no knowledge of systems design and implementation beyond what they have acquired as end users.
     links:
       - "Association «defines» → ITS_Vision"  # {91993B36-54E3-40a1-92B6-AE20D6A7612B} → {EEBB0D81-284E-4b97-B8DB-21FC225173BC}
       - "Association «has» → Business_Expectation"  # {C95F0F8D-A1C9-4c7d-8929-780EB23E2019} → {76442EA5-1026-40ac-9827-10B79B425CD5}

@@ -61,7 +61,7 @@ elements:
       Tasks and responsibilities:
       Provision of the service based on the consumed data, or any other task related to data processing and analysis. Sign a contract for content consumption with a content provider or with a proxy. Feedback to content providers. Timely and accurate integration of the subscribed content to their products and services.
     links:
-      - "Association «accepted by» → Privacy agreement (CC to NO) and general terms and conditions"  # {80010DB2-4CD6-42d4-AD69-983E77932321} → {AF555DF2-4535-42f6-993A-5BE72947BD12}
+      - "Association «adheres to» → Privacy agreement (CC to NO) and general terms and conditions"  # {80010DB2-4CD6-42d4-AD69-983E77932321} → {AF555DF2-4535-42f6-993A-5BE72947BD12}
       - "Dependency → Content Consumer"  # {33F8752C-7B9C-452a-9DD7-FCD405C8B1D2} → {11A68175-D1A4-4bdf-B3BC-83D813879077}
       - "Dependency → User"  # {0B149C71-36BE-49ea-AF06-8B42E7E3FD2E} → {13796023-E912-4a94-B857-0146211998B3}
       - "Dependency → User"  # {18EB4D5E-6E21-433d-8FFF-3571315C6E45} → {7E8C0358-EFB1-4ea6-81BA-6F18E8DE168B}
@@ -175,7 +175,7 @@ elements:
       
       NOTE: The organization performing the NAP Operator (NO) role can also perform other roles (i.e. Content Provider and Content Consumer) these roles do not intersect and shall be performed in such a way as to avoid conflict of interest.
     links:
-      - "Association «accepted by» → National Law or Contract MS - NAP"  # {BB081BAA-63A7-4879-A9A4-5888E2CE55F9} → {9A594D51-2CA2-4048-B043-981F4DF70F2D}
+      - "Association «adheres to» → National Law or Contract MS - NAP"  # {BB081BAA-63A7-4879-A9A4-5888E2CE55F9} → {9A594D51-2CA2-4048-B043-981F4DF70F2D}
       - "Dependency → NAP Content Manager"  # {26AEC905-84D0-49f2-B178-DA68D5A8C6BF} → {C38BD0E0-09FA-457c-B964-75087C1C932E}
       - "Dependency → NAP Content Manager Metadata"  # {61E7E000-2D0F-4ef1-8ADE-BB40F9BB68D9} → {D5D05E45-D97D-4db7-BE83-7319DD2CCAEE}
       - "Dependency → NAP Promoter"  # {49EA66FF-9DE5-4abb-83C0-527735D3C54D} → {73D0DF8B-4AB3-45f9-A8E0-A337FE64C0A8}

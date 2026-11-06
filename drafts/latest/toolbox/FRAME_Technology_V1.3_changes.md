@@ -8,6 +8,7 @@ Built by `tools/fixes/2026-11-06_mdg_technology_V1.3.py`.
 - new stereotype «triggers» (Association) with toolbox entry
 - new stereotype «implements» (Association) with toolbox entry
 - new stereotype «performs» (Association) with toolbox entry
+- new stereotype «delivers» (Association) with toolbox entry
 - Quick Linker: «Component of» → «component of» (3 rules)
 - Quick Linker: «Defines» → «defines» (13 rules)
 - Quick Linker: «instant of» → «instants of» (1 rules)
@@ -21,6 +22,11 @@ Built by `tools/fixes/2026-11-06_mdg_technology_V1.3.py`.
 - Quick Linker reversed: «associate» Mission_Statement → ITS_Vision  becomes  ITS_Vision → Mission_Statement
 - Quick Linker removed: «defines» ITS_Service_Added_Value → Stakeholder
 - Quick Linker removed: «defines» Role → Actor
+- Quick Linker removed: «adheres to» Agreement → Role
+- Quick Linker removed: «accepted by» Role → Agreement
+- Quick Linker removed: «delivered by» ITS_Service → ITS_Service_Added_Value
+- Quick Linker removed: «defines» ITS_Vision → Requirement
+- Quick Linker removed: «defines» ITS_Service_Added_Value → User_Need
 - Quick Linker added: «component of» Terminator → Terminator
 - Quick Linker added: «component of» High_Level_Function → High_Level_Function
 - Quick Linker added: «component of» Functional_Area → System
@@ -28,7 +34,6 @@ Built by `tools/fixes/2026-11-06_mdg_technology_V1.3.py`.
 - Quick Linker added: «OUT» High_Level_Data_Flow → System
 - Quick Linker added: «IN» Functional_Area → Low_Level_Data_Flow
 - Quick Linker added: «OUT» Low_Level_Data_Flow → Functional_Area
-- Quick Linker added: «defines» Business_Expectation → Mission_Statement
 - Quick Linker added: «adheres to» ITS_Service → Specification
 - Quick Linker added: «contains» Application → Low_Level_Function
 - Quick Linker added: «contains» Application → Datastore
@@ -49,11 +54,12 @@ Built by `tools/fixes/2026-11-06_mdg_technology_V1.3.py`.
 - Quick Linker added: «defines» Business_Expectation → ITS_Service
 - Quick Linker added: «owned by» Application → Role
 - Quick Linker added: «performs» Actor → Role
+- Quick Linker added: «adheres to» Role → Agreement
+- Quick Linker added: «accepted by» Agreement → Role
+- Quick Linker added: «delivers» ITS_Service → ITS_Service_Added_Value
 - Quick Linker: Application – 6 rules merged into 5
 - Quick Linker: ITS_Service – 5 rules merged into 4
-- Quick Linker: ITS_Service_Added_Value – 3 rules merged into 2
 - Quick Linker: ITS_Service_Process – 5 rules merged into 4
-- Quick Linker: ITS_Vision – 3 rules merged into 2
 - Quick Linker: Low_Level_Data_Flow – 7 rules merged into 6
 - Quick Linker: Low_Level_Function – 8 rules merged into 6
 - Quick Linker: Mission_Statement – 2 rules merged into 1

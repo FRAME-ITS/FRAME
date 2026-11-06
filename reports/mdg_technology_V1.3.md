@@ -1,6 +1,6 @@
-# MDG technology file FRAME_Technology_V1.3.xml compared with FRAME.qea
+# MDG technology embedded in FRAME.qea compared with FRAME.qea
 
-Technology **FRAME_Technology_V1.3.xml** – FRAME Architecture V1.3; profile FRAME_Profile defines 63 stereotypes.
+Technology **FRAME** – FRAME Architecture V1.3; profile FRAME_Profile defines 64 stereotypes.
 
 ## Quick Linker rules vs. use in the model
 
@@ -30,8 +30,7 @@ For each rule (source → target) the number of connectors drawn in that directi
 | «OUT» | Low_Level_Data_Flow | System | 1 | 0 |
 | «OUT» | Low_Level_Data_Flow | Terminator | 347 | 0 |
 | «OUT» | Terminator | TDF_HighLevelFunction | 0 | 0 |
-| «accepted by» | Role | Agreement | 15 | 0 |
-| «adheres to» | Agreement | Role | 33 | 0 |
+| «accepted by» | Agreement | Role | 33 | 0 |
 | «adheres to» | Application | Specification | 4 | 0 |
 | «adheres to» | Component | Specification | 7 | 0 |
 | «adheres to» | Data_Object | Specification | 1 | 0 |
@@ -43,6 +42,7 @@ For each rule (source → target) the number of connectors drawn in that directi
 | «adheres to» | Low_Level_Data_Flow | Specification | 0 | 0 |
 | «adheres to» | Low_Level_Function | Specification | 5 | 0 |
 | «adheres to» | Physical_Data_Flow | Specification | 0 | 0 |
+| «adheres to» | Role | Agreement | 15 | 0 |
 | «adheres to» | System | Specification | 1 | 0 |
 | «adheres to» | Terminator | Agreement | 2 | 0 |
 | «associate» | ITS_Vision | Mission_Statement | 3 | 0 |
@@ -70,8 +70,7 @@ For each rule (source → target) the number of connectors drawn in that directi
 | «defines» | Application | Information_Object | 0 | 0 |
 | «defines» | Application | Interface | 10 | 0 |
 | «defines» | Application | Requirement | 0 | 0 |
-| «defines» | Business_Expectation | ITS_Service | 1 | 0 |
-| «defines» | Business_Expectation | Mission_Statement | 13 | 0 |
+| «defines» | Business_Expectation | ITS_Service | 13 | 0 |
 | «defines» | Business_Expectation | Requirement | 0 | 0 |
 | «defines» | Component | Requirement | 0 | 0 |
 | «defines» | Datastore | Requirement | 0 | 0 |
@@ -85,12 +84,10 @@ For each rule (source → target) the number of connectors drawn in that directi
 | «defines» | ITS_Service | Requirement | 1 | 0 |
 | «defines» | ITS_Service | User_Need | 75 | 0 |
 | «defines» | ITS_Service_Added_Value | Requirement | 0 | 0 |
-| «defines» | ITS_Service_Added_Value | User_Need | 1 | 0 |
 | «defines» | ITS_Service_Process | Functionality | 0 | 0 |
 | «defines» | ITS_Service_Process | Requirement | 0 | 0 |
 | «defines» | ITS_Service_Process | Role | 14 | 0 |
 | «defines» | ITS_Vision | ITS_Service | 0 | 0 |
-| «defines» | ITS_Vision | Requirement | 1 | 0 |
 | «defines» | ITS_Vision | User_Need | 0 | 0 |
 | «defines» | Information_Object | Requirement | 0 | 0 |
 | «defines» | Interface | Requirement | 1 | 0 |
@@ -116,7 +113,7 @@ For each rule (source → target) the number of connectors drawn in that directi
 | «defines» | User_Need | Functionality | 0 | 0 |
 | «defines» | User_Need | Requirement | 1 | 0 |
 | «defines» | User_Need_Topic | Requirement | 0 | 0 |
-| «delivered by» | ITS_Service | ITS_Service_Added_Value | 1 | 0 |
+| «delivers» | ITS_Service | ITS_Service_Added_Value | 1 | 0 |
 | «delivers value to» | ITS_Service_Added_Value | Stakeholder | 51 | 0 |
 | «fulfilled by» | Requirement | Actor | 0 | 0 |
 | «fulfilled by» | Requirement | Agreement | 1 | 0 |

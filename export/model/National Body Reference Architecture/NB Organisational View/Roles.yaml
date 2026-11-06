@@ -60,7 +60,7 @@ elements:
     note: |
       The Member State
     links:
-      - "Association «accepted by» → Delegated Regulation"  # {62282D12-F895-4243-9078-44A8020F702D} → {18BED502-4259-4737-9DD1-6B52EBF5BA0F}
+      - "Association «adheres to» → Delegated Regulation"  # {62282D12-F895-4243-9078-44A8020F702D} → {18BED502-4259-4737-9DD1-6B52EBF5BA0F}
   - name: "National Access Point"
     guid: "{98435A5F-0A74-4cea-BA8E-AE02988208EE}"
     type: "Object"
@@ -76,7 +76,7 @@ elements:
     note: |
       Link to the NAP Reference Architecture
     links:
-      - "Association «accepted by» → National Law or Contract MS - NAP"  # {D23CE465-5F09-4cd4-AA70-6AC6D569DC12} → {9A594D51-2CA2-4048-B043-981F4DF70F2D}
+      - "Association «adheres to» → National Law or Contract MS - NAP"  # {D23CE465-5F09-4cd4-AA70-6AC6D569DC12} → {9A594D51-2CA2-4048-B043-981F4DF70F2D}
   - name: "National Body / Competent Authority"
     guid: "{DB0FFB19-1B79-4dbd-9F2B-5B224D345C66}"
     type: "Object"
@@ -96,4 +96,4 @@ elements:
       
       Member States shall notify the national bodies to the Commission.
     links:
-      - "Association «accepted by» → National Law or Contract MS - NB"  # {42960C0A-0DC1-4547-ACBC-12E42B467A9D} → {0BDE8A5E-CC0E-4fa9-89DD-1DCD42A5AA0B}
+      - "Association «adheres to» → National Law or Contract MS - NB"  # {42960C0A-0DC1-4547-ACBC-12E42B467A9D} → {0BDE8A5E-CC0E-4fa9-89DD-1DCD42A5AA0B}

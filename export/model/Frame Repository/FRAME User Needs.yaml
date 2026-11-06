@@ -4477,7 +4477,7 @@ elements:
     version: "7.0.7"
     order: 0
     note: |
-      The system shall make sources of static and dynamic urban and inter-urban road and traffic information accessible to authorised users, e.g. Information Service Providers (ISPs) and Broadcasters, who can then distribute it to their end-users.
+      The system shall make sources of static and dynamic urban and inter-urban road and traffic information accessible to all users, e.g. Information Service Providers (ISPs) and Broadcasters, who can then distribute it to their end-users.
     links:
       - "Association «belongs to» → 6.5.1 National Access Point"  # {C39DF0C5-140D-4d4c-830D-74A7FF6F2057} → {3C63081F-29BC-4386-B0F2-DD35776CBD43}
       - "Association «served by» → F3.6.3 Manage Content Providers Metadata"  # {DE2DC5E8-DEF8-4b3c-AFA2-08D62CA63B4A} → {B623B347-AA95-44be-9043-55050E3CFC41}
@@ -4489,7 +4489,7 @@ elements:
     version: "7.0.7"
     order: 0
     note: |
-      The system shall provide a discovery service of static and dynamic urban and inter-urban road and traffic information for authorised users, e.g. Information Service Providers (ISPs) and Broadcasters.
+      The system shall provide a discovery service of static and dynamic urban and inter-urban road and traffic information for all users, e.g. Information Service Providers (ISPs) and Broadcasters.
     links:
       - "Association «belongs to» → 6.5.1 National Access Point"  # {94925D90-03D5-4230-9755-D313A46DE01F} → {3C63081F-29BC-4386-B0F2-DD35776CBD43}
       - "Association «served by» → F3.6.1 Manage NAP Metadata Repository"  # {AED7E0D2-FD83-4334-92DD-C189AC91C525} → {FC985F0E-26B3-41e8-847E-A71AA3290132}

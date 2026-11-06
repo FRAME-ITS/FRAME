@@ -39,7 +39,7 @@ for old, new in RENAME_ST.items():
         log.append(f'toolbox entry {a["Name"]} → {new}')
 
 # new connector stereotypes of V1.3: cloned from «use» (class, attributes, Extension to Association, diagram object, toolbox entry)
-for st in ('delivers value to', 'triggers', 'implements', 'performs'):
+for st in ('delivers value to', 'triggers', 'implements', 'performs', 'delivers'):
     if c.execute('select 1 from t_object where Package_ID=? and Name=?', (P, st)).fetchone(): continue
     u = dict(c.execute("select * from t_object where Package_ID=? and Name='use'", (P,)).fetchone()); uid = u.pop('Object_ID')
     u.update(Name=st, ea_guid=guid()); new = c.execute(ins('t_object', u), list(u.values())).lastrowid
@@ -50,7 +50,7 @@ for st in ('delivers value to', 'triggers', 'implements', 'performs'):
     for k in c.execute("select * from t_connector where Start_Object_ID=? and Connector_Type='Extension'", (uid,)).fetchall():
         k = dict(k); k.pop('Connector_ID'); k.update(Start_Object_ID=new, ea_guid=guid()); c.execute(ins('t_connector', k), list(k.values()))
     for d in c.execute('select * from t_diagramobjects where Object_ID=?', (uid,)).fetchall():
-        d = dict(d); d.pop('Instance_ID'); off = {'triggers': 60, 'delivers value to': 120, 'implements': 180, 'performs': 240}[st]
+        d = dict(d); d.pop('Instance_ID'); off = {'triggers': 60, 'delivers value to': 120, 'implements': 180, 'performs': 240, 'delivers': 300}[st]
         d.update(Object_ID=new, RectTop=d['RectTop'] - off, RectBottom=d['RectBottom'] - off,
                  ObjectStyle=re.sub(r'DUID=[0-9A-F]{8}', 'DUID=' + uuid.uuid4().hex[:8].upper(), d['ObjectStyle'] or ''))
         c.execute(ins('t_diagramobjects', d), list(d.values()))
@@ -75,6 +75,14 @@ def rels():
         out.append((k, tag))
     return out
 
+def flip_direction(k):
+    # a connector drawn 'Destination -> Source' shows its arrow at the start; after swapping the ends the arrow must stay at the
+    # (new) end, so direction and end styles are swapped as well
+    r = c.execute('select Direction, SourceStyle, DestStyle, SourceIsNavigable, DestIsNavigable from t_connector where Connector_ID=?', (k,)).fetchone()
+    if r[0] == 'Destination -> Source':
+        c.execute('update t_connector set Direction=?, SourceStyle=?, DestStyle=?, SourceIsNavigable=?, DestIsNavigable=? where Connector_ID=?',
+                  ('Source -> Destination', r[2], r[1], r[4], r[3], k))
+
 # normalise tags, reverse
 for k, tag in rels():
     if not tag: continue
@@ -93,13 +101,6 @@ for k, tag in rels():
         flip_direction(k['Connector_ID'])
         log.append(f'rule reversed: «{v}» {name[k["s"]]} → {name[k["t"]]}  becomes  {name[k["t"]]} → {name[k["s"]]}')
 
-def flip_direction(k):
-    # a connector drawn 'Destination -> Source' shows its arrow at the start; after swapping the ends the arrow must stay at the
-    # (new) end, so direction and end styles are swapped as well
-    r = c.execute('select Direction, SourceStyle, DestStyle, SourceIsNavigable, DestIsNavigable from t_connector where Connector_ID=?', (k,)).fetchone()
-    if r[0] == 'Destination -> Source':
-        c.execute('update t_connector set Direction=?, SourceStyle=?, DestStyle=?, SourceIsNavigable=?, DestIsNavigable=? where Connector_ID=?',
-                  ('Source -> Destination', r[2], r[1], r[4], r[3], k))
 
 # duplicates
 seen = set()

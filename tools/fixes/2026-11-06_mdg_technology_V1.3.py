@@ -42,7 +42,7 @@ for old, new in (('Impacts', 'impacts'), ('deliverd by', 'delivered by')):
     log.append(f'stereotype «{old}» renamed «{new}» ({n} occurrences)')
 # 3b. new connector stereotypes (decided 2026-11-06): «delivers value to» (ITS Service Added Value → Stakeholder, was «defines»)
 #     and «triggers» (process → process); defined like «use» (Association, Source -> Destination) and added to the toolbox page
-for st in ('delivers value to', 'triggers', 'implements', 'performs'):
+for st in ('delivers value to', 'triggers', 'implements', 'performs', 'delivers'):
     if f'<Stereotype name="{st}"' in x: continue
     use = re.search(r'<Stereotype name="use" metatype="use".*?</Stereotype>', x, re.S).group(0)
     x = x.replace(use, use + '\n\t\t\t\t\t' + use.replace('name="use" metatype="use"', f'name="{st}" metatype="{st}"'), 1)
@@ -109,7 +109,6 @@ ADD = [('component of', 'FRAME_Terminator', 'FRAME_Terminator'),            # su
        ('IN', 'FRAME_Functional_Area', 'FRAME_Low_Level_Data_Flow'), ('OUT', 'FRAME_Low_Level_Data_Flow', 'FRAME_Functional_Area'),
        # motivation layer: relationships of the FRAME Meta Model that the reference architectures (NAP, NB, C-ITS) had to draw as
        # plain UML Realisation/Instantiate links because the technology did not offer them
-       ('defines', 'FRAME_Business_Expectation', 'FRAME_Mission_Statement'),
        ('adheres to', 'FRAME_ITS_Service', 'FRAME_Specification'),
        # decided 2026-11-06 from the reference architectures (physical, functional, communication views)
        ('contains', 'FRAME_Application', 'FRAME_Low_Level_Function'), ('contains', 'FRAME_Application', 'FRAME_Datastore'),
@@ -126,9 +125,17 @@ ADD = [('component of', 'FRAME_Terminator', 'FRAME_Terminator'),            # su
        ('owned by', 'FRAME_Component', 'FRAME_Role'), ('adheres to', 'FRAME_Data_Object', 'FRAME_Specification'),
        # NRA article (decided 2026-11-06)
        ('defines', 'FRAME_Business_Expectation', 'FRAME_ITS_Service'), ('owned by', 'FRAME_Application', 'FRAME_Role'),
-       ('performs', 'FRAME_Actor', 'FRAME_Role')]
+       ('performs', 'FRAME_Actor', 'FRAME_Role'),
+       # issues #82 (Role «adheres to» Agreement, Agreement «accepted by» Role) and #85 (ITS Service «delivers» Added Value), decided 2026-11-07
+       ('adheres to', 'FRAME_Role', 'FRAME_Agreement'), ('accepted by', 'FRAME_Agreement', 'FRAME_Role'),
+       ('delivers', 'FRAME_ITS_Service', 'FRAME_ITS_Service_Added_Value')]
 # rules replaced by the above
-DROP = [('defines', 'FRAME_ITS_Service_Added_Value', 'FRAME_Stakeholder'), ('defines', 'FRAME_Role', 'FRAME_Actor')]
+DROP = [('defines', 'FRAME_ITS_Service_Added_Value', 'FRAME_Stakeholder'), ('defines', 'FRAME_Role', 'FRAME_Actor'),
+        # issue #82: names were swapped against the direction
+        ('adheres to', 'FRAME_Agreement', 'FRAME_Role'), ('accepted by', 'FRAME_Role', 'FRAME_Agreement'),
+        # issue #85: connector 3 replaced by «delivers»; connectors 1, 4, 5 removed
+        ('delivered by', 'FRAME_ITS_Service', 'FRAME_ITS_Service_Added_Value'),
+        ('defines', 'FRAME_ITS_Vision', 'FRAME_Requirement'), ('defines', 'FRAME_ITS_Service_Added_Value', 'FRAME_User_Need')]
 for st, src, tgt in DROP:
     edit_rules(src, st, lambda t: [c for c in t if c != P + tgt])
     log.append(f'Quick Linker removed: «{st}» {src[6:]} → {tgt[6:]}')
