@@ -13,32 +13,32 @@ For each rule (source → target) the number of connectors drawn in that directi
 | «Defines» | Application | Interface | 0 | 0 |
 | «Defines» | Functionality | Application | 0 | 0 |
 | «Defines» | Functionality | Component | 0 | 0 |
-| «Defines» | ITS_Service | ITS_Business_Process | 2 | 0 |
+| «Defines» | ITS_Service | ITS_Business_Process | 1 | 0 |
 | «Defines» | ITS_Service | ITS_Service_Process | 7 | 0 |
 | «Defines» | ITS_Service | User_Need | 59 | 0 |
 | «Defines» | ITS_Service_Added_Value | User_Need | 1 | 0 |
 | «Defines» | ITS_Service_Process | Functionality | 0 | 0 |
-| «Defines» | ITS_Service_Process | Role | 14 | 0 |
+| «Defines» | ITS_Service_Process | Role | 13 | 0 |
 | «Defines» | ITS_Vision | ITS_Service | 0 | 0 |
 | «Defines» | ITS_Vision | User_Need | 0 | 0 |
 | «Defines» | Low_Level_Data_Flow | Functionality | 0 | 0 |
 | «Defines» | Low_Level_Function | Functionality | 0 | 0 |
 | «Defines» | Mission_Statement | ITS_Service | 16 | 0 |
 | «Defines» | Mission_Statement | User_Need | 0 | 0 |
-| «Defines» | Role | Actor | 27 | 0 |
-| «Defines» | Role | Organisation | 2 | 0 |
+| «Defines» | Role | Actor | 26 | 0 |
+| «Defines» | Role | Organisation | 1 | 0 |
 | «Defines» | Role | User_Need | 0 | 0 |
 | «Defines» | Terminator | Application | 0 | 0 |
 | «Defines» | User_Need | Functionality | 0 | 0 |
-| «IN» | Datastore | Low_Level_Data_Flow | 82 | 1 |
+| «IN» | Datastore | Low_Level_Data_Flow | 81 | 1 |
 | «IN» | Functional_Area | High_Level_Data_Flow | 196 | 0 |
 | «IN» | High_Level_Function | High_Level_Data_Flow | 239 | 0 |
 | «IN» | High_Level_Function | Low_Level_Data_Flow | 1430 | 11 |
-| «IN» | Low_Level_Function | Low_Level_Data_Flow | 1646 | 7 |
+| «IN» | Low_Level_Function | Low_Level_Data_Flow | 1645 | 7 |
 | «IN» | System | Low_Level_Data_Flow | 1 | 0 |
 | «IN» | TDF_HighLevelFunction | Terminator | 0 | 0 |
 | «IN» | Terminator | High_Level_Data_Flow | 180 | 0 |
-| «IN» | Terminator | Low_Level_Data_Flow | 429 | 1 |
+| «IN» | Terminator | Low_Level_Data_Flow | 428 | 1 |
 | «Impacts» | High_Level_Function | Functional_Area | 0 | 0 |
 | «Impacts» | Low_Level_Function | Functional_Area | 0 | 0 |
 | «OUT» | High_Level_Data_Flow | Functional_Area | 144 | 0 |
@@ -46,12 +46,12 @@ For each rule (source → target) the number of connectors drawn in that directi
 | «OUT» | High_Level_Data_Flow | Terminator | 143 | 0 |
 | «OUT» | Low_Level_Data_Flow | Datastore | 81 | 1 |
 | «OUT» | Low_Level_Data_Flow | High_Level_Function | 450 | 1 |
-| «OUT» | Low_Level_Data_Flow | Low_Level_Function | 1735 | 7 |
+| «OUT» | Low_Level_Data_Flow | Low_Level_Function | 1734 | 7 |
 | «OUT» | Low_Level_Data_Flow | System | 1 | 0 |
-| «OUT» | Low_Level_Data_Flow | Terminator | 347 | 1 |
+| «OUT» | Low_Level_Data_Flow | Terminator | 346 | 1 |
 | «OUT» | Terminator | TDF_HighLevelFunction | 0 | 0 |
-| «accepted by» | Role | Agreement | 16 | 0 |
-| «adheres to» | Agreement | Role | 34 | 0 |
+| «accepted by» | Role | Agreement | 15 | 0 |
+| «adheres to» | Agreement | Role | 33 | 0 |
 | «adheres to» | Application | Specification | 4 | 0 |
 | «adheres to» | Component | Specification | 7 | 0 |
 | «adheres to» | Datastore | Specification | 1 | 0 |
@@ -69,12 +69,12 @@ For each rule (source → target) the number of connectors drawn in that directi
 | «belongs to» | User_Need_Service | User_Need_Topic | 6 | 118 ⚠ |
 | «belongs to» | User_Need_Topic | User_Need | 39 | 606 ⚠ |
 | «component of» | Functional_Area | High_Level_Function | 1 | 61 ⚠ |
-| «component of» | High_Level_Data_Flow | High_Level_Data_Flow | 449 | 449 |
-| «component of» | High_Level_Function | Low_Level_Function | 33 | 310 ⚠ |
-| «component of» | Low_Level_Data_Flow | High_Level_Data_Flow | 1523 | 10 |
+| «component of» | High_Level_Data_Flow | High_Level_Data_Flow | 448 | 448 |
+| «component of» | High_Level_Function | Low_Level_Function | 33 | 315 ⚠ |
+| «component of» | Low_Level_Data_Flow | High_Level_Data_Flow | 1522 | 10 |
 | «contains» | Information_Object | Data_Object | 16 | 0 |
-| «contains» | Low_Level_Data_Flow | Data_Object | 2 | 0 |
-| «contains» | Physical_Data_Flow | Information_Object | 27 | 0 |
+| «contains» | Low_Level_Data_Flow | Data_Object | 1 | 0 |
+| «contains» | Physical_Data_Flow | Information_Object | 26 | 0 |
 | «defines» | Actor | Requirement | 0 | 0 |
 | «defines» | Agreement | Requirement | 0 | 0 |
 | «defines» | Application | Requirement | 0 | 0 |
@@ -130,21 +130,21 @@ For each rule (source → target) the number of connectors drawn in that directi
 | «fulfilled by» | Requirement | User_Need | 0 | 0 |
 | «fulfilled by» | Stakeholder | Requirement | 6 | 0 |
 | «has» | ITS_Service | ITS_Domain | 2 | 0 |
-| «has» | Organisation | ITS_Business_Process | 2 | 0 |
+| «has» | Organisation | ITS_Business_Process | 1 | 0 |
 | «has» | Stakeholder | Business_Expectation | 13 | 0 |
 | «has» | Stakeholder | Desired_Architecture_Goals | 10 | 0 |
 | «hosted by» | Application | Component | 9 | 0 |
 | «impacts» | Low_Level_Function | High_Level_Function | 0 | 0 |
 | «instant of» | Stakeholder | Organisation | 0 | 0 |
 | «is Type of» | Actor | Stakeholder | 18 | 0 |
-| «is Type of» | Actor | Terminator | 7 | 0 |
-| «is Type of» | Datastore | Component | 2 | 0 |
-| «is Type of» | Terminator | Terminator | 2 | 2 |
-| «served by» | ITS_Service_Process | Low_Level_Function | 46 | 0 |
+| «is Type of» | Actor | Terminator | 6 | 0 |
+| «is Type of» | Datastore | Component | 1 | 0 |
+| «is Type of» | Terminator | Terminator | 1 | 1 |
+| «served by» | ITS_Service_Process | Low_Level_Function | 45 | 0 |
 | «served by» | Low_Level_Data_Flow | Physical_Data_Flow | 60 | 0 |
-| «served by» | User_Need | Low_Level_Function | 1775 | 0 |
+| «served by» | User_Need | Low_Level_Function | 1780 | 0 |
 | «stored in» | Information_Object | Datastore | 3 | 0 |
-| «use» | Interface | Information_Object | 13 | 0 |
+| «use» | Interface | Information_Object | 12 | 0 |
 | «use» | Physical_Data_Flow | Interface | 18 | 0 |
 
 ## Connector stereotypes used in the model but not defined in the technology
