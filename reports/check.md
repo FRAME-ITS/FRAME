@@ -1,6 +1,6 @@
 # Model check – FRAME.qea
 
-**45 errors, 66 warnings**
+**39 errors, 66 warnings**
 
 | Rule | Related issue | Errors | Warnings |
 |---|---|---|---|
@@ -11,7 +11,7 @@
 | in-out | #69 | 28 | 0 |
 | release-hygiene |  | 0 | 1 |
 | self-reference | #62 | 0 | 2 |
-| servedby |  | 9 | 5 |
+| servedby |  | 3 | 5 |
 | stereotype-spelling | #86 | 0 | 1 |
 | unused-flow | #76 | 0 | 11 |
 
@@ -63,16 +63,10 @@
 
 </details>
 
-<details><summary><b>servedby</b> (9)</summary>
+<details><summary><b>servedby</b> (3)</summary>
 
 - User_Need **11.1.1.6** (C-ITS Reference Architecture) → F3.1.1.5 Provide Urban Traffic Management Facilities is Usage «», expected Association «Servedby»
-- User_Need **11.1.1.6** (C-ITS Reference Architecture) → F5.16.1 Manage Communication from Vehicle to Driver is Usage «», expected Association «Servedby»
-- User_Need **11.1.1.6** (C-ITS Reference Architecture) → F5.16.2 Output Commands and Dynamic Warnings is Usage «», expected Association «Servedby»
-- User_Need **11.1.4.1** (C-ITS Reference Architecture) → F5.16.1 Manage Communication from Vehicle to Driver is Usage «», expected Association «Servedby»
-- User_Need **11.1.4.1** (C-ITS Reference Architecture) → F5.16.2 Output Commands and Dynamic Warnings is Usage «», expected Association «Servedby»
 - User_Need **11.2.4.1** (C-ITS Reference Architecture) → F3.1 Provide Traffic Control is Usage «», expected Association «Servedby»
-- User_Need **11.2.4.1** (C-ITS Reference Architecture) → F5.16.1 Manage Communication from Vehicle to Driver is Usage «», expected Association «Servedby»
-- User_Need **11.2.4.1** (C-ITS Reference Architecture) → F5.16.2 Output Commands and Dynamic Warnings is Usage «», expected Association «Servedby»
 - User_Need **11.2.4.1** (C-ITS Reference Architecture) → F9.3 Manage Vehicle Access to Sensitive Areas is Usage «», expected Association «Servedby»
 
 </details>

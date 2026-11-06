@@ -66,8 +66,8 @@ elements:
     note: |
       For IVI based use cases the system shall be able to inform drivers of the content of all static and dynamic road signs that are part of the Vienna Convention.
     links:
-      - "Usage → F5.16.1 Manage Communication from Vehicle to Driver"  # {879F9848-9E4B-49d4-BF84-6FC084081E98} → {DE09B5F2-6135-412e-BF14-56D1B22FFA77}
-      - "Usage → F5.16.2 Output Commands and Dynamic Warnings"  # {AB5DA7F1-1CFB-46b7-A786-5A1B0BE9CC91} → {FB7FD2EE-ABFD-4a0c-8EF8-A16DDAA1E280}
+      - "Association «served by» → F5.16.1 Manage Communication from Vehicle to Driver"  # {879F9848-9E4B-49d4-BF84-6FC084081E98} → {DE09B5F2-6135-412e-BF14-56D1B22FFA77}
+      - "Association «served by» → F5.16.2 Output Commands and Dynamic Warnings"  # {AB5DA7F1-1CFB-46b7-A786-5A1B0BE9CC91} → {FB7FD2EE-ABFD-4a0c-8EF8-A16DDAA1E280}
   - name: "11.1.4.2"
     guid: "{B4ABB4F8-33ED-4af6-B1C8-CB6783BDB2AB}"
     type: "Requirement"
@@ -157,9 +157,9 @@ elements:
     note: |
       For IVI based use cases the system shall enable the road operator to optimize the management of warnings, information and regulations knowing the real-time traffic characteristics.
     links:
+      - "Association «served by» → F5.16.1 Manage Communication from Vehicle to Driver"  # {7F8951E7-ECF6-4530-A8B3-8C667F88CF6E} → {DE09B5F2-6135-412e-BF14-56D1B22FFA77}
+      - "Association «served by» → F5.16.2 Output Commands and Dynamic Warnings"  # {02FEF9DC-2A83-4fa2-8174-2402E5BD0D82} → {FB7FD2EE-ABFD-4a0c-8EF8-A16DDAA1E280}
       - "Usage → F3.1 Provide Traffic Control"  # {B2F167C6-426B-49f8-B65F-CD3829D85C7F} → {226ED187-DB7A-409f-B509-BA8DBFFB6DB6}
-      - "Usage → F5.16.1 Manage Communication from Vehicle to Driver"  # {7F8951E7-ECF6-4530-A8B3-8C667F88CF6E} → {DE09B5F2-6135-412e-BF14-56D1B22FFA77}
-      - "Usage → F5.16.2 Output Commands and Dynamic Warnings"  # {02FEF9DC-2A83-4fa2-8174-2402E5BD0D82} → {FB7FD2EE-ABFD-4a0c-8EF8-A16DDAA1E280}
       - "Usage → F9.3 Manage Vehicle Access to Sensitive Areas"  # {2DD42037-38F2-409a-B5C6-8FBC38D3A9E9} → {BECAF613-EAD1-4f7d-BBA6-63FBDADA831A}
   - name: "11.2.4.2"
     guid: "{2809968A-BA4A-4059-8158-C2EA685DFD61}"
