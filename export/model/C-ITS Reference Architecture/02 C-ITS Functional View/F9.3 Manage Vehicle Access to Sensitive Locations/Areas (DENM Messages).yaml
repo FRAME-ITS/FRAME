@@ -16,22 +16,22 @@ elements:
       This High Level Function 3 is related to events and their locations in traffic networks, were traffic interruptions have happened, and therefore represent a higher risk for road safety.
       These events are communicated with the standard DENM messages from all C-ITS actors. (I2V and V2V)
     links:
-      - "Aggregation «componentof» → F9. Provide Support for Cooperative Systems"  # {16DA31DE-CF68-4b0a-8932-800CF7605C20} → {F0D7E9A8-9F88-4e8f-AF0F-661C1990D546}
-      - "Aggregation «componentof» → F9.3.1"  # {86E2B457-1947-4053-AB49-CC3F92C08708} → {426EB23D-5A11-4a41-B0F1-DC074F7A8F66}
-      - "Aggregation «componentof» → F9.3.10"  # {072EEDE9-8FBA-4b67-90B6-38DCF2E9A58F} → {CBC47407-8DA7-4361-B854-B957B24E3E06}
-      - "Aggregation «componentof» → F9.3.11"  # {10236074-EC40-40ed-ACEC-F690DEA36EF9} → {674B9301-BA0A-4918-AC89-FC60F4C85575}
-      - "Aggregation «componentof» → F9.3.12"  # {46146D67-0A3A-49e0-A3A9-9C069454DC30} → {FA67C3CD-B926-4517-A44A-B06CC02DC604}
-      - "Aggregation «componentof» → F9.3.13"  # {68F447BC-8F1D-42e3-B0E9-52E94CBED88F} → {8833A6EE-C19D-4c1f-8BFE-172D44150651}
-      - "Aggregation «componentof» → F9.3.14"  # {6DDC0050-BA1E-486f-9167-01638D782F5E} → {F59058D3-E60B-4ed0-BC45-E322229ED55B}
-      - "Aggregation «componentof» → F9.3.15"  # {BF47673C-7317-416c-8695-049AFC35ABFC} → {6CD6F00D-A573-459a-84C7-8DA6DE1875FF}
-      - "Aggregation «componentof» → F9.3.2"  # {ACA1E81C-9F9F-4afa-8AE4-F7AD14147CF9} → {AD178D7C-FCDD-46ae-A5EA-B452D6CF95C6}
-      - "Aggregation «componentof» → F9.3.3"  # {95DA89E4-26DC-48ed-8628-CB16234FD630} → {68E5E5E3-4B48-458c-AB12-15AC94DFCFC7}
-      - "Aggregation «componentof» → F9.3.4"  # {16D6762A-6FBC-498a-AD94-46CD72902546} → {E2D0022E-A1CE-4a37-9BE5-E15E3C050CD9}
-      - "Aggregation «componentof» → F9.3.5"  # {29CF7667-E583-47ff-8AC1-5F679225C808} → {EC4D1324-FFBE-47f8-97EA-D9D47946FC4F}
-      - "Aggregation «componentof» → F9.3.6"  # {72A0B270-37B5-460d-BD66-41BACC8699B7} → {69EABC8B-51F2-455b-BAD7-69E37E73053E}
-      - "Aggregation «componentof» → F9.3.7"  # {C7CB8DCA-A78E-4da5-990F-6CF8915C4FCC} → {C9DDA2C9-1966-4754-B5BE-F6ED8C66DB89}
-      - "Aggregation «componentof» → F9.3.8"  # {4551E212-C45C-4c2d-958E-5A2F17723D60} → {15447CFA-1FAE-45d7-8ECC-26CBBD75B67E}
-      - "Aggregation «componentof» → F9.3.9"  # {14C7EFA0-768D-4c59-BE44-B62ABCEF1FBE} → {E659B303-DD48-4706-980D-5B6ED7362F06}
+      - "Aggregation «component of» → F9. Provide Support for Cooperative Systems"  # {16DA31DE-CF68-4b0a-8932-800CF7605C20} → {F0D7E9A8-9F88-4e8f-AF0F-661C1990D546}
+      - "Aggregation «component of» → F9.3.1"  # {86E2B457-1947-4053-AB49-CC3F92C08708} → {426EB23D-5A11-4a41-B0F1-DC074F7A8F66}
+      - "Aggregation «component of» → F9.3.10"  # {072EEDE9-8FBA-4b67-90B6-38DCF2E9A58F} → {CBC47407-8DA7-4361-B854-B957B24E3E06}
+      - "Aggregation «component of» → F9.3.11"  # {10236074-EC40-40ed-ACEC-F690DEA36EF9} → {674B9301-BA0A-4918-AC89-FC60F4C85575}
+      - "Aggregation «component of» → F9.3.12"  # {46146D67-0A3A-49e0-A3A9-9C069454DC30} → {FA67C3CD-B926-4517-A44A-B06CC02DC604}
+      - "Aggregation «component of» → F9.3.13"  # {68F447BC-8F1D-42e3-B0E9-52E94CBED88F} → {8833A6EE-C19D-4c1f-8BFE-172D44150651}
+      - "Aggregation «component of» → F9.3.14"  # {6DDC0050-BA1E-486f-9167-01638D782F5E} → {F59058D3-E60B-4ed0-BC45-E322229ED55B}
+      - "Aggregation «component of» → F9.3.15"  # {BF47673C-7317-416c-8695-049AFC35ABFC} → {6CD6F00D-A573-459a-84C7-8DA6DE1875FF}
+      - "Aggregation «component of» → F9.3.2"  # {ACA1E81C-9F9F-4afa-8AE4-F7AD14147CF9} → {AD178D7C-FCDD-46ae-A5EA-B452D6CF95C6}
+      - "Aggregation «component of» → F9.3.3"  # {95DA89E4-26DC-48ed-8628-CB16234FD630} → {68E5E5E3-4B48-458c-AB12-15AC94DFCFC7}
+      - "Aggregation «component of» → F9.3.4"  # {16D6762A-6FBC-498a-AD94-46CD72902546} → {E2D0022E-A1CE-4a37-9BE5-E15E3C050CD9}
+      - "Aggregation «component of» → F9.3.5"  # {29CF7667-E583-47ff-8AC1-5F679225C808} → {EC4D1324-FFBE-47f8-97EA-D9D47946FC4F}
+      - "Aggregation «component of» → F9.3.6"  # {72A0B270-37B5-460d-BD66-41BACC8699B7} → {69EABC8B-51F2-455b-BAD7-69E37E73053E}
+      - "Aggregation «component of» → F9.3.7"  # {C7CB8DCA-A78E-4da5-990F-6CF8915C4FCC} → {C9DDA2C9-1966-4754-B5BE-F6ED8C66DB89}
+      - "Aggregation «component of» → F9.3.8"  # {4551E212-C45C-4c2d-958E-5A2F17723D60} → {15447CFA-1FAE-45d7-8ECC-26CBBD75B67E}
+      - "Aggregation «component of» → F9.3.9"  # {14C7EFA0-768D-4c59-BE44-B62ABCEF1FBE} → {E659B303-DD48-4706-980D-5B6ED7362F06}
   - name: "F9.3.1"
     guid: "{426EB23D-5A11-4a41-B0F1-DC074F7A8F66}"
     type: "Activity"

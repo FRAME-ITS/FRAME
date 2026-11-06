@@ -71,7 +71,7 @@ elements:
     order: 0
     note: ""
     links:
-      - "Aggregation «componentof» → FRAME_High_Level_Data_Flow1"  # {0CFE7449-03E4-4336-B3CF-20FAEDDEFA65} → {961AF323-5A95-4363-9F61-851AAEFBDA9F}
+      - "Aggregation «component of» → FRAME_High_Level_Data_Flow1"  # {0CFE7449-03E4-4336-B3CF-20FAEDDEFA65} → {961AF323-5A95-4363-9F61-851AAEFBDA9F}
       - "Association «OUT» → FRAME_Terminator1"  # {8AAD849C-650C-4555-A7C2-DC2E06274432} → {D991956C-2E7C-48e6-94A4-D8DFB72EA682}
   - name: "FRAME_ITS_Service1"
     guid: "{8FB5E9DA-4F1C-43d6-A3DE-2010F5DF4D23}"
@@ -151,7 +151,7 @@ elements:
     order: 0
     note: ""
     links:
-      - "Aggregation «componentof» → FRAME_High_Level_Data_Flow1"  # {8FB540B3-75E1-496c-8F18-74EEF2BF369E} → {961AF323-5A95-4363-9F61-851AAEFBDA9F}
+      - "Aggregation «component of» → FRAME_High_Level_Data_Flow1"  # {8FB540B3-75E1-496c-8F18-74EEF2BF369E} → {961AF323-5A95-4363-9F61-851AAEFBDA9F}
       - "Association «OUT» → FRAME_Low_Level_Function1"  # {2AD01AB8-92DD-4426-81D1-93F8D6937684} → {FC341B5A-C143-4a48-9CE2-9E872E4AC47E}
       - "Association «OUT» → FRAME_Terminator1"  # {C1D17838-1AFD-4d1c-8F64-D7C2FB91FAF7} → {D991956C-2E7C-48e6-94A4-D8DFB72EA682}
       - "Association «contains» → FRAME_Data_Object1"  # {F7DCD13D-9229-4920-A412-81D938147F7A} → {FABF89F2-A405-4c7e-91DA-527193E2EF42}

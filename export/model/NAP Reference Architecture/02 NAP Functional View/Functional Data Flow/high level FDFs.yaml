@@ -52,14 +52,14 @@ elements:
     note: |
       It consists of data objects received from the NAP Actors  that contain either Internet addresses from which data objects provided by ITS Services can be obtained, or requests for the Internet addresses.
     links:
-      - "Aggregation «componentof» → From NAP Actors"  # {56E06AD9-3158-48cf-8522-ED317A04E3F0} → {C6FE2F39-008F-4811-AE0F-95EB671FFFD2}
-      - "Aggregation «componentof» → From NAP Actors"  # {BD2CBF4C-5B31-464b-AA8B-917882302FA3} → {59087751-DC42-4fcc-AA52-7330F931BC0E}
-      - "Aggregation «componentof» → fnap.cc-metadata_search_request"  # {235A8BC2-90AF-4137-B574-E296A987DAB5} → {CE5CAFBE-137B-4743-AB12-5EA3827B901A}
-      - "Aggregation «componentof» → fnap.cc-support_request"  # {59554B2E-D2A1-4646-9D63-63E774105B42} → {1309E545-2913-41f6-920A-68A496630817}
-      - "Aggregation «componentof» → fnap.cp-metadata_&_authorisation_credentials"  # {C9560383-87D9-4ce1-9FC6-95985BF755E6} → {8D75B934-0C29-40d6-9C80-4963B533B29D}
-      - "Aggregation «componentof» → fnap.cp-registration_request"  # {D30296CF-3A98-48e3-9F8B-6FB9150573B7} → {2165053D-3E67-4324-90F7-172FAA37E259}
-      - "Aggregation «componentof» → fnap.cp-support_request"  # {86D8690D-3A5D-4886-8C24-03639B3E48A1} → {1ED4DEC1-3019-4933-A419-5FE60CC29FF4}
-      - "Aggregation «componentof» → fnap.cp-support_request"  # {964D72F5-233F-40a9-9854-9FCFC9AC755E} → {1ED4DEC1-3019-4933-A419-5FE60CC29FF4}
+      - "Aggregation «component of» → From NAP Actors"  # {56E06AD9-3158-48cf-8522-ED317A04E3F0} → {C6FE2F39-008F-4811-AE0F-95EB671FFFD2}
+      - "Aggregation «component of» → From NAP Actors"  # {BD2CBF4C-5B31-464b-AA8B-917882302FA3} → {59087751-DC42-4fcc-AA52-7330F931BC0E}
+      - "Aggregation «component of» → fnap.cc-metadata_search_request"  # {235A8BC2-90AF-4137-B574-E296A987DAB5} → {CE5CAFBE-137B-4743-AB12-5EA3827B901A}
+      - "Aggregation «component of» → fnap.cc-support_request"  # {59554B2E-D2A1-4646-9D63-63E774105B42} → {1309E545-2913-41f6-920A-68A496630817}
+      - "Aggregation «component of» → fnap.cp-metadata_&_authorisation_credentials"  # {C9560383-87D9-4ce1-9FC6-95985BF755E6} → {8D75B934-0C29-40d6-9C80-4963B533B29D}
+      - "Aggregation «component of» → fnap.cp-registration_request"  # {D30296CF-3A98-48e3-9F8B-6FB9150573B7} → {2165053D-3E67-4324-90F7-172FAA37E259}
+      - "Aggregation «component of» → fnap.cp-support_request"  # {86D8690D-3A5D-4886-8C24-03639B3E48A1} → {1ED4DEC1-3019-4933-A419-5FE60CC29FF4}
+      - "Aggregation «component of» → fnap.cp-support_request"  # {964D72F5-233F-40a9-9854-9FCFC9AC755E} → {1ED4DEC1-3019-4933-A419-5FE60CC29FF4}
   - name: "tnap-mt_outputs"
     guid: "{B767384A-BAB2-4802-A07C-DA9BA8B1132A}"
     type: "Interface"
@@ -70,10 +70,10 @@ elements:
     note: |
       It contains outputs to the NAP Actors that have been created from data objects provided by functionality in the Manage Traffic Functional Area and includes either confirmation of acceptance of inputs, or the Internet addresses from which access to data objects provided by ITS Services can be obtained.
     links:
-      - "Aggregation «componentof» → To NAP Actors"  # {42AF7F23-3FE0-4294-9137-97CC3BC4A784} → {ADFABE98-0117-47ee-946B-6FFF3043F214}
-      - "Aggregation «componentof» → To NAP Actors"  # {978FF38E-8FE7-46e0-A28D-F66B17C0B909} → {80D9E677-C285-4d45-9344-044E34B0EF83}
-      - "Aggregation «componentof» → tnap.cc-support_response"  # {B3727561-99C7-499b-82AF-357824ACE10E} → {27BFFD1B-0E50-4c8b-8CDF-8F958078802C}
-      - "Aggregation «componentof» → tnap.cp-support_response"  # {0809F101-0F3B-409a-88E7-72503613ED5A} → {997937B5-775D-4297-8297-D9ABB198ACF2}
+      - "Aggregation «component of» → To NAP Actors"  # {42AF7F23-3FE0-4294-9137-97CC3BC4A784} → {ADFABE98-0117-47ee-946B-6FFF3043F214}
+      - "Aggregation «component of» → To NAP Actors"  # {978FF38E-8FE7-46e0-A28D-F66B17C0B909} → {80D9E677-C285-4d45-9344-044E34B0EF83}
+      - "Aggregation «component of» → tnap.cc-support_response"  # {B3727561-99C7-499b-82AF-357824ACE10E} → {27BFFD1B-0E50-4c8b-8CDF-8F958078802C}
+      - "Aggregation «component of» → tnap.cp-support_response"  # {0809F101-0F3B-409a-88E7-72503613ED5A} → {997937B5-775D-4297-8297-D9ABB198ACF2}
       - "Association «OUT» → NAP Actors"  # {C2F4596C-E792-4e22-B285-1AFACCBB514D} → {E89EDD6C-D939-4b97-AB60-AAD3FA5FE237}
   - name: "tnap-mt_outputs"
     guid: "{EACAFE4C-395F-4a01-B251-D6ED49DAFC30}"
@@ -87,7 +87,7 @@ elements:
     note: |
       It contains outputs to the NAP Actors that have been created from data objects provided by functionality in the Manage Traffic Functional Area and includes either confirmation of acceptance of inputs, or the Internet addresses from which access to data objects provided by ITS Services can be obtained.
     links:
-      - "Aggregation «componentof» → To NAP Actors"  # {1C762BAE-F94B-4af1-B57F-951EBA48B980} → {80D9E677-C285-4d45-9344-044E34B0EF83}
-      - "Aggregation «componentof» → To NAP Actors"  # {C8D968F2-9D04-4947-A71A-C2D79F711018} → {98E4FDFE-8123-4b37-B03A-5DCCED4FE24B}
-      - "Aggregation «componentof» → tnap.cc-support_response"  # {94CCE29A-55C0-474a-9578-3A7D16746A02} → {27BFFD1B-0E50-4c8b-8CDF-8F958078802C}
-      - "Aggregation «componentof» → tnap.cp-support_response"  # {3E3CA6F9-8EFB-40e8-BE56-BC378E7D9D88} → {997937B5-775D-4297-8297-D9ABB198ACF2}
+      - "Aggregation «component of» → To NAP Actors"  # {1C762BAE-F94B-4af1-B57F-951EBA48B980} → {80D9E677-C285-4d45-9344-044E34B0EF83}
+      - "Aggregation «component of» → To NAP Actors"  # {C8D968F2-9D04-4947-A71A-C2D79F711018} → {98E4FDFE-8123-4b37-B03A-5DCCED4FE24B}
+      - "Aggregation «component of» → tnap.cc-support_response"  # {94CCE29A-55C0-474a-9578-3A7D16746A02} → {27BFFD1B-0E50-4c8b-8CDF-8F958078802C}
+      - "Aggregation «component of» → tnap.cp-support_response"  # {3E3CA6F9-8EFB-40e8-BE56-BC378E7D9D88} → {997937B5-775D-4297-8297-D9ABB198ACF2}

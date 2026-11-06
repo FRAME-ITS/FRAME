@@ -16,7 +16,7 @@ elements:
       
       Mnemonic: mffo
     links:
-      - "Aggregation «componentof» → System"  # {E36A1B3C-E865-4dd7-A32C-7143D65F2356} → {A7365472-4893-4994-9241-EEED83ABEF7D}
+      - "Aggregation «component of» → System"  # {E36A1B3C-E865-4dd7-A32C-7143D65F2356} → {A7365472-4893-4994-9241-EEED83ABEF7D}
       - "Association «IN» → To Law Enforcement Agency"  # {519599D9-4AFE-48a1-BE83-EC162DBCBE6A} → {51620931-5B5E-442a-B721-2BD49EA9ACDA}
       - "Association «IN» → To Multi-Modal System"  # {42FD2B5B-1003-45ab-9F52-0ED0A5A8CDF3} → {B5C9D8C7-873B-40b6-A991-CC0A7C4FD415}
       - "Association «IN» → To Operator"  # {E94A8EEE-E6F9-4852-B5F7-DD7701431BA6} → {BED224D6-0F6C-4a10-9057-54D9140F33F4}
@@ -37,7 +37,7 @@ elements:
     note: |
       This High-level Function shall provide interfaces for the Freight Transport User and the Freight Transport Operations Manager.  The Freight Transport User shall be able to request the creation of Freight Transport Execution Plans to fulfil its need to move Freight Transport Load Items.  These Plans can be based on any that have been previously created, or completely new.  The Freight Transport Operations Manager shall be able to manage the creation of new Freight Transport Execution Plans, including the review of those previously created.
     links:
-      - "Aggregation «componentof» → F8. Manage Freight and Fleet Operations"  # {49BC3B54-BCD5-462e-9428-94B32DCCACBC} → {0D4120EB-FF16-47a1-96E4-B7F47AA4324B}
+      - "Aggregation «component of» → F8. Manage Freight and Fleet Operations"  # {49BC3B54-BCD5-462e-9428-94B32DCCACBC} → {0D4120EB-FF16-47a1-96E4-B7F47AA4324B}
       - "Association «IN» → mffo_FV_status_request_from_FTU"  # {7D67D312-1D6D-4d79-92C0-F8A1144CB0B5} → {4B91E791-6558-4e62-9748-5455BD862040}
       - "Association «IN» → mffo_collect_data_for_FTEP_preparation"  # {17023ACE-293B-4b16-8D52-1F19F403B31F} → {468087F9-940E-4ee6-94FA-5008AD5D19E1}
       - "Association «IN» → mffo_implement_FTEP"  # {A45631BD-292E-4e9e-A54C-6C9128C1A8EA} → {7ADE6F01-327E-4216-8EF6-A22C4187DA8B}
@@ -72,7 +72,7 @@ elements:
             (a) Provide the data objects created from the inputs specified in (1) above;
             (b) Collect data objects needed for the outputs specified in (1) above.
     links:
-      - "Aggregation «componentof» → F8.4 Manage FTEP Preparation"  # {D7FC4D69-4BB5-4d85-A08F-237C213825C6} → {BFCB99B2-2949-40c9-A40F-053438AB6BBC}
+      - "Aggregation «component of» → F8.4 Manage FTEP Preparation"  # {D7FC4D69-4BB5-4d85-A08F-237C213825C6} → {BFCB99B2-2949-40c9-A40F-053438AB6BBC}
       - "Association «IN» → mffo_FV_status_request_from_FTU"  # {64805011-29BB-4a42-AF43-995612EACF68} → {4B91E791-6558-4e62-9748-5455BD862040}
       - "Association «IN» → mffo_implement_FTEP"  # {82F41917-4D1C-4a74-8827-E6D27B340CFE} → {7ADE6F01-327E-4216-8EF6-A22C4187DA8B}
       - "Association «IN» → mffo_new_FTEP_FTU_approval_response"  # {7DF51651-8C9C-4c96-9508-EB3E3D76FFE4} → {16AF3AF3-C118-4a5f-83A4-FF2209440684}
@@ -83,7 +83,7 @@ elements:
       - "Association «IN» → tft.ftu-new_FTEP_for_approval"  # {9C9A06C7-4132-4e07-B77F-B66DFCD3F465} → {3C7F6CD3-4896-43d7-B2DC-D16FF340C3A8}
       - "Association «IN» → tft.ftu-new_FTEP_response"  # {C46ECA3B-7B74-4bef-B758-40A423E50D5A} → {DDE329AA-C136-4912-AB5B-E147B5485FCF}
       - "Association «IN» → tft.ftu-requested_FV_status"  # {1F1CC92A-73E8-4abd-BEF7-159721BFF0B2} → {6654F9D9-5F1C-4d0e-973B-5C8C597105D2}
-      - "Association «belongsto» → 9.11.1.8"  # {5026E7A1-AA40-4741-80C5-EFA376E47422} → {1AC3E21C-4311-4d0d-A127-F53D7F63F3E4}
+      - "Association «belongs to» → 9.11.1.8"  # {5026E7A1-AA40-4741-80C5-EFA376E47422} → {1AC3E21C-4311-4d0d-A127-F53D7F63F3E4}
   - name: "F8.4.2 Manage Freight Transport Execution Plan Store"
     guid: "{C9CF0B31-8844-4a24-A819-7403DB01B47A}"
     type: "Activity"
@@ -99,15 +99,15 @@ elements:
       (3) Provide approved Plans for implementation by other functionality in the Manage Freight and Fleet Operations Functional Area.
       (4) Respond to requests by providing details of previously prepared Freight Transport Execution Plans.
     links:
-      - "Aggregation «componentof» → F8.4 Manage FTEP Preparation"  # {3A447B73-BBF3-46e1-8615-9B0A978FF50A} → {BFCB99B2-2949-40c9-A40F-053438AB6BBC}
+      - "Aggregation «component of» → F8.4 Manage FTEP Preparation"  # {3A447B73-BBF3-46e1-8615-9B0A978FF50A} → {BFCB99B2-2949-40c9-A40F-053438AB6BBC}
       - "Association «IN» → mffo_FTOM_FTEP_data_response"  # {E5CB241C-D251-4f1f-9CF0-2FD39AFE8B35} → {7D5B529E-910B-4538-9442-E8EC3BA2CD69}
       - "Association «IN» → mffo_existing_FTEP_data"  # {26FF32B4-0D97-4768-A3A5-AFBE54176C9F} → {87D70485-D8B5-4ad3-A4EE-5F6324B6F5B6}
       - "Association «IN» → mffo_load_FTEP_data"  # {ABB4D0CC-4D00-4376-8FF5-2D4D0F26C338} → {D635585B-3712-4e67-B663-88B7BEDD5DA2}
       - "Association «IN» → mffo_requested_FTEP_details"  # {850FC863-6971-49b1-8B15-A38E31CE4665} → {87BD1BF0-F14D-4e8d-BF3A-4C8726678EC7}
       - "Association «IN» → mffo_requested_existing_FTEP_details"  # {DA57C6FE-DC06-46ad-9A7B-68CC019DC165} → {784C06DB-FE0E-4506-A17F-B752AD430A03}
-      - "Association «belongsto» → 9.11.1.1"  # {2E6B2C12-5FA1-4106-9D0D-4979E3CFEFEF} → {23E6AFF0-4C32-48ce-8FC8-38257BD3BF16}
-      - "Association «belongsto» → 9.11.1.3"  # {FCDC14CF-71BC-466d-9777-DFE50FCD4E8C} → {41CA4238-0A3A-4d25-925B-4030F0B608EC}
-      - "Association «belongsto» → 9.11.2.7"  # {7FAC3ACD-A260-45fa-8BD4-6BB2F454D6DA} → {489A4FF9-CA6E-4659-88EB-8CD5284BBE75}
+      - "Association «belongs to» → 9.11.1.1"  # {2E6B2C12-5FA1-4106-9D0D-4979E3CFEFEF} → {23E6AFF0-4C32-48ce-8FC8-38257BD3BF16}
+      - "Association «belongs to» → 9.11.1.3"  # {FCDC14CF-71BC-466d-9777-DFE50FCD4E8C} → {41CA4238-0A3A-4d25-925B-4030F0B608EC}
+      - "Association «belongs to» → 9.11.2.7"  # {7FAC3ACD-A260-45fa-8BD4-6BB2F454D6DA} → {489A4FF9-CA6E-4659-88EB-8CD5284BBE75}
   - name: "F8.4.3 Provide Freight Transport Operations Manager Interface"
     guid: "{8FBDF54B-6B59-4624-BAA2-0843DE946DB2}"
     type: "Activity"
@@ -127,7 +127,7 @@ elements:
       (2) Manage the store of Freight Transport Execution Plan details provided by the Freight Transport User to prevent the un-necessary repeat input of common data, e.g. the location from which the Freight Transport User regularly moves Freight Transport Load Items.
       (3) Manage the store of the capabilities of available Freight Transport Vehicles updating the content as Vehicles are required for use in the requested implementation of Freight Transport Execution Plans.
     links:
-      - "Aggregation «componentof» → F8.4 Manage FTEP Preparation"  # {BB10E6A2-5A19-44ef-AD57-45DA7D6DA3DA} → {BFCB99B2-2949-40c9-A40F-053438AB6BBC}
+      - "Aggregation «component of» → F8.4 Manage FTEP Preparation"  # {BB10E6A2-5A19-44ef-AD57-45DA7D6DA3DA} → {BFCB99B2-2949-40c9-A40F-053438AB6BBC}
       - "Association «IN» → mffo_FTOM_FTEP_data_request"  # {196FD58F-42C9-44a4-ACA0-FFF8E285627F} → {00925942-05D6-4111-B3F9-BAF12543EF7D}
       - "Association «IN» → mffo_load_FTEP_preparation_data"  # {108C2C27-2BD0-49e6-844D-63FE9D8DB712} → {DCDF7980-7C4D-436f-807E-728BBA8479A0}
       - "Association «IN» → mffo_load_Freight_Vehicle_capabilities"  # {2329340C-9BFF-4cc4-B377-AF1C64E0C009} → {B8EB7E9C-9B4B-4080-98FE-04239CA7C3A1}
@@ -142,10 +142,10 @@ elements:
       - "Association «IN» → ttp-FTOM_request_traffic_management_policies"  # {C31EDC3E-713A-402f-B710-512989AF1E24} → {3997E7E2-91FB-4c86-A9B2-1834A9704C5C}
       - "Association «OUT» → tft.ftom-prepared_new_FTEP"  # {D0EE0D95-E444-41bc-B07A-CEFFCE92BA64} → {FC928E00-F02B-4f61-86C4-5C6CCC96179A}
       - "Association «OUT» → tft.ftom-requested_existing_FTEP"  # {AAE925B5-21F3-43e9-BA3B-580FC1E2007F} → {E70FE713-51BB-478d-AEC6-07D8EB7B7BF3}
-      - "Association «belongsto» → 9.11.1.1"  # {ABAC89CC-FB76-4b0d-87F5-E124DCDA42BC} → {23E6AFF0-4C32-48ce-8FC8-38257BD3BF16}
-      - "Association «belongsto» → 9.11.1.2"  # {F46BA9BF-2000-4664-AD5F-E835E2E6BA66} → {50CEA6A4-DA8F-4c44-9025-0E489BDDC247}
-      - "Association «belongsto» → 9.11.1.3"  # {F86321B2-A3DA-4a6e-BF83-C5A3084FC7C7} → {41CA4238-0A3A-4d25-925B-4030F0B608EC}
-      - "Association «belongsto» → 9.11.2.6"  # {E7E08A9E-65F3-480b-82F5-0BED28F1DC85} → {358C0159-F730-4c8d-9234-1798CB43FE83}
+      - "Association «belongs to» → 9.11.1.1"  # {ABAC89CC-FB76-4b0d-87F5-E124DCDA42BC} → {23E6AFF0-4C32-48ce-8FC8-38257BD3BF16}
+      - "Association «belongs to» → 9.11.1.2"  # {F46BA9BF-2000-4664-AD5F-E835E2E6BA66} → {50CEA6A4-DA8F-4c44-9025-0E489BDDC247}
+      - "Association «belongs to» → 9.11.1.3"  # {F86321B2-A3DA-4a6e-BF83-C5A3084FC7C7} → {41CA4238-0A3A-4d25-925B-4030F0B608EC}
+      - "Association «belongs to» → 9.11.2.6"  # {E7E08A9E-65F3-480b-82F5-0BED28F1DC85} → {358C0159-F730-4c8d-9234-1798CB43FE83}
   - name: "F8.4.4 Prepare Freight Transport Execution Plan for Implementation"
     guid: "{0E77F27F-D215-45d0-B051-5C6E61E59127}"
     type: "Activity"
@@ -163,15 +163,15 @@ elements:
       (5) Upon request from the Freight Transport Operations Manager revise a Freight Transport Plan that is currently being implemented from the point in the Plan that has been reached.
       (6) Upon request from other functionality in the Manage Freight and Fleet Operations Functional Area revise a Freight Transport Plan that is currently being implemented from the point in the Plan that has been reached.
     links:
-      - "Aggregation «componentof» → F8.4 Manage FTEP Preparation"  # {4A7CD187-6199-43db-BDE5-6B634F49E6A2} → {BFCB99B2-2949-40c9-A40F-053438AB6BBC}
+      - "Aggregation «component of» → F8.4 Manage FTEP Preparation"  # {4A7CD187-6199-43db-BDE5-6B634F49E6A2} → {BFCB99B2-2949-40c9-A40F-053438AB6BBC}
       - "Association «IN» → mffo_collect_data_for_FTEP_preparation"  # {27FB4FE1-A989-467b-BCBE-1AF60985DC33} → {468087F9-940E-4ee6-94FA-5008AD5D19E1}
       - "Association «IN» → mffo_new_FTEP_for_store"  # {27A4BDF5-DBB9-48c6-B2BA-03B7F955E0A4} → {7BAF4AFD-E7C8-45ad-A456-F8C2EA5ED889}
       - "Association «IN» → mffo_prepared_new_FTEP"  # {5D4A0A8A-EDFE-41bf-9E2E-9BF73DEA9078} → {81340700-9655-4a8d-82CD-9D8DC1B06633}
       - "Association «IN» → mffo_request_existing_FTEP_details"  # {AFCBDC0A-5875-46e8-B987-CE5D553F6B9F} → {206DBAE1-0BEC-4709-A144-981E586A9C61}
-      - "Association «belongsto» → 9.11.1.1"  # {CA4CF2C0-422A-43f1-B27C-AB16D7877709} → {23E6AFF0-4C32-48ce-8FC8-38257BD3BF16}
-      - "Association «belongsto» → 9.11.1.2"  # {D393B59A-0F7D-4fea-956E-554368C1D400} → {50CEA6A4-DA8F-4c44-9025-0E489BDDC247}
-      - "Association «belongsto» → 9.11.1.4"  # {F08AF042-9E00-43e3-B695-FCE4A0BC871C} → {B079E354-B8F2-4b98-B097-A049412E8F2B}
-      - "Association «belongsto» → 9.11.1.5"  # {1283BE76-9256-43d8-B176-BDCEB443AB89} → {9CC2B628-F45B-4507-BC20-69B2E069C35A}
+      - "Association «belongs to» → 9.11.1.1"  # {CA4CF2C0-422A-43f1-B27C-AB16D7877709} → {23E6AFF0-4C32-48ce-8FC8-38257BD3BF16}
+      - "Association «belongs to» → 9.11.1.2"  # {D393B59A-0F7D-4fea-956E-554368C1D400} → {50CEA6A4-DA8F-4c44-9025-0E489BDDC247}
+      - "Association «belongs to» → 9.11.1.4"  # {F08AF042-9E00-43e3-B695-FCE4A0BC871C} → {B079E354-B8F2-4b98-B097-A049412E8F2B}
+      - "Association «belongs to» → 9.11.1.5"  # {1283BE76-9256-43d8-B176-BDCEB443AB89} → {9CC2B628-F45B-4507-BC20-69B2E069C35A}
   - name: "F8.4.5 Manage Freight Terminal Area Facilities Data Store"
     guid: "{0456D091-B898-4d09-9584-386EAA411963}"
     type: "Activity"
@@ -187,12 +187,12 @@ elements:
       (3) When requested by the Freight Transport Operations Manager provide details of the facilities available at one or more Freight Terminal Areas which the Manager can then include with the data objects used to prepare a Freight Transport Execution Plan.
       (4) When requested by other functionality in the Manage Freight and Fleet Operations Area provide details of the facilities available at one or more Freight Terminal Areas for use in the implementation of a Freight Transport Execution Plan.
     links:
-      - "Aggregation «componentof» → F8.4 Manage FTEP Preparation"  # {BEB4328A-CE83-4073-9B36-096D11F45B9A} → {BFCB99B2-2949-40c9-A40F-053438AB6BBC}
+      - "Aggregation «component of» → F8.4 Manage FTEP Preparation"  # {BEB4328A-CE83-4073-9B36-096D11F45B9A} → {BFCB99B2-2949-40c9-A40F-053438AB6BBC}
       - "Association «IN» → mffo_load_FTA_facilities_data"  # {9DD3BD2F-8ED3-4205-A435-DD39B0AE820B} → {B6A0211E-6866-4e8d-BE13-1E57545ABE70}
       - "Association «IN» → mffo_requested_FTA_facilities_for_FTOM"  # {0A0482F7-5E9F-431f-A821-7397944140C2} → {BC4E49D9-0BEF-4ccf-BC24-F419376D22B9}
       - "Association «IN» → tft.fta-request_FTA_facilities_information"  # {F2975E76-882D-4343-8826-D3DD3C1DC411} → {14C27B87-CCCC-4a55-86B3-3C16ABFDEACF}
-      - "Association «belongsto» → 9.11.1.4"  # {1943AA4E-5A00-4ef2-A69F-C4AF635F269F} → {B079E354-B8F2-4b98-B097-A049412E8F2B}
-      - "Association «belongsto» → 9.11.1.8"  # {71FD2E34-1275-4385-AF14-50D3045FB451} → {1AC3E21C-4311-4d0d-A127-F53D7F63F3E4}
+      - "Association «belongs to» → 9.11.1.4"  # {1943AA4E-5A00-4ef2-A69F-C4AF635F269F} → {B079E354-B8F2-4b98-B097-A049412E8F2B}
+      - "Association «belongs to» → 9.11.1.8"  # {71FD2E34-1275-4385-AF14-50D3045FB451} → {1AC3E21C-4311-4d0d-A127-F53D7F63F3E4}
   - name: "F8.5 Prepare FTEP"
     guid: "{A997A7F7-79A2-4bda-99A1-9B48DBB67F39}"
     type: "Activity"
@@ -203,7 +203,7 @@ elements:
     note: |
       This High-level Function shall enable Freight Transport Execution Plans to be prepared.  The preparation process shall take place at the direction of the Freight Transport Operations Manager and use data objects containing details of the Freight Transport Load Items to be moved, i.e. origin, destination, etc. provided by the Freight Transport User.  Data objects about the road network layout, travel conditions in it, services provided by other modes of transport and the weather shall be provided by other functionality and particular Terminators.  Once preparation of a new Freight Transport Execution Plan has been completed, it shall be sent to other functionality for storage so that it can be used at a later point in time when requested by the Freight Transport User.
     links:
-      - "Aggregation «componentof» → F8. Manage Freight and Fleet Operations"  # {DC05819B-0944-4b6f-8F69-BC2E65046320} → {0D4120EB-FF16-47a1-96E4-B7F47AA4324B}
+      - "Aggregation «component of» → F8. Manage Freight and Fleet Operations"  # {DC05819B-0944-4b6f-8F69-BC2E65046320} → {0D4120EB-FF16-47a1-96E4-B7F47AA4324B}
       - "Association «IN» → mffo.pshvs_FTEP_route_request"  # {01883B07-1D4E-4ddd-B530-7A9C19B1DFF0} → {B6BF35DE-C3A9-43f6-8AB1-58475FB66872}
       - "Association «IN» → mffo_prepared_FTEP_for_use"  # {E6BD4B58-EC3C-4df2-93A8-A1F6E28CCFA1} → {0E1233B7-8662-46e8-8EFB-0D7E851FB4C7}
       - "Association «IN» → tesp.tpfsp-request_service_availability"  # {235C09E3-C515-4f3c-801B-DDA3CA47D8CD} → {E924EE1C-E51C-48ed-B210-2991911C49BA}
@@ -227,14 +227,14 @@ elements:
       (4)The ability to manage the store of Road Network Data, including the integration of the data objects received in (1), (2) and (3) above.
       (5) The ability to respond to requests from other functionality in the system for some or all of the content of the store of Road Network Data.
     links:
-      - "Aggregation «componentof» → F8.5 Prepare FTEP"  # {6C63C79A-EA9D-4c48-A27D-5C258C5E20C6} → {A997A7F7-79A2-4bda-99A1-9B48DBB67F39}
+      - "Aggregation «component of» → F8.5 Prepare FTEP"  # {6C63C79A-EA9D-4c48-A27D-5C258C5E20C6} → {A997A7F7-79A2-4bda-99A1-9B48DBB67F39}
       - "Association «IN» → mffo_load_road_network_data"  # {EDE189E0-9B7F-460a-9651-170984E85A00} → {DB72E233-C39D-4000-84E7-21E33E3BB625}
       - "Association «IN» → mffo_requested_road_network_data"  # {AED9BAA3-E0E0-400b-B058-5E8300526530} → {9F7FDA8B-3475-48cc-809D-DEBD2052E445}
-      - "Association «belongsto» → 9.11.1.10"  # {D600E036-9E06-42b6-BD29-7EA7E49D6331} → {1DA10162-3BB7-4da4-996D-5E597BAA88A1}
-      - "Association «belongsto» → 9.11.1.12"  # {4EF34730-72F6-464c-8FCE-0AA38D57F2DA} → {A0516400-8819-48af-9928-2D1084DAE55E}
-      - "Association «belongsto» → 9.11.1.13"  # {F6955D4A-C62F-4cdd-A5B6-7E4C09C2BDE9} → {F631EED4-C8B7-4f3c-90E2-E1E78866FACE}
-      - "Association «belongsto» → 9.11.1.6"  # {699023A5-37C6-428e-8DE7-A5656731D457} → {7CEBA355-23A2-4178-BC45-ACE85F9644B0}
-      - "Association «belongsto» → 9.11.1.7"  # {85F9DEF1-F1AA-4d17-B668-067081238A97} → {E0D33EBD-6329-475c-8176-8C4F8A329BD8}
+      - "Association «belongs to» → 9.11.1.10"  # {D600E036-9E06-42b6-BD29-7EA7E49D6331} → {1DA10162-3BB7-4da4-996D-5E597BAA88A1}
+      - "Association «belongs to» → 9.11.1.12"  # {4EF34730-72F6-464c-8FCE-0AA38D57F2DA} → {A0516400-8819-48af-9928-2D1084DAE55E}
+      - "Association «belongs to» → 9.11.1.13"  # {F6955D4A-C62F-4cdd-A5B6-7E4C09C2BDE9} → {F631EED4-C8B7-4f3c-90E2-E1E78866FACE}
+      - "Association «belongs to» → 9.11.1.6"  # {699023A5-37C6-428e-8DE7-A5656731D457} → {7CEBA355-23A2-4178-BC45-ACE85F9644B0}
+      - "Association «belongs to» → 9.11.1.7"  # {85F9DEF1-F1AA-4d17-B668-067081238A97} → {E0D33EBD-6329-475c-8176-8C4F8A329BD8}
   - name: "F8.5.2 Collect FTEP Data from FTOM and MMS"
     guid: "{3A01549B-EA04-4e49-B86F-C136E05EA085}"
     type: "Activity"
@@ -250,16 +250,16 @@ elements:
       (3) If required by the data objects received in (1), request data objects containing details of services to be provided by other modes of transport and third party service providers.
       (4) The ability to combine all the data objects collected in (1), (2) and (3) above, together with data objects showing the previous performance of other modes of transport and third party service providers to create a comprehensive set of data objects from which a Freight Transport Execution Plan can be prepared by other functionality.
     links:
-      - "Aggregation «componentof» → F8.5 Prepare FTEP"  # {A79333CF-07B0-4c70-9EDC-A1154B686BEA} → {A997A7F7-79A2-4bda-99A1-9B48DBB67F39}
+      - "Aggregation «component of» → F8.5 Prepare FTEP"  # {A79333CF-07B0-4c70-9EDC-A1154B686BEA} → {A997A7F7-79A2-4bda-99A1-9B48DBB67F39}
       - "Association «IN» → mffo_data_for_FTEP_preparation"  # {917E3606-F010-412b-8FD7-A14E40659798} → {C7CE8886-2542-41fb-A7A8-41AFBD60769A}
       - "Association «IN» → mffo_request_road_network_data"  # {CBEF0253-16B4-4e2a-BC7A-AFB994538B92} → {4A052932-A67A-4023-A592-3946C452D233}
       - "Association «IN» → tesp.tpfsp-request_service_availability"  # {94390566-732E-498c-8A6C-5588F8CF0C2C} → {E924EE1C-E51C-48ed-B210-2991911C49BA}
       - "Association «IN» → tmms.omfs-request_multi-modal_service_data"  # {217FCD53-E0EC-4ac7-B060-D296F59905C4} → {EDB841BB-C140-49e8-B41A-09BE47C282D2}
-      - "Association «belongsto» → 9.11.1.1"  # {DBD9F1D0-D748-40dd-82B1-0E1A22F7CDCD} → {23E6AFF0-4C32-48ce-8FC8-38257BD3BF16}
-      - "Association «belongsto» → 9.11.1.10"  # {9BCA2DDD-041F-4e62-99DD-74F48838528E} → {1DA10162-3BB7-4da4-996D-5E597BAA88A1}
-      - "Association «belongsto» → 9.11.1.12"  # {6D2E8E65-2B68-4c91-9EC0-024FE204D606} → {A0516400-8819-48af-9928-2D1084DAE55E}
-      - "Association «belongsto» → 9.11.1.13"  # {05E7EA89-CDC3-4e3b-970B-C0FECA5524E6} → {F631EED4-C8B7-4f3c-90E2-E1E78866FACE}
-      - "Association «belongsto» → 9.11.1.2"  # {F008ED8B-08A0-41ff-B1CD-3C87506CD6EC} → {50CEA6A4-DA8F-4c44-9025-0E489BDDC247}
+      - "Association «belongs to» → 9.11.1.1"  # {DBD9F1D0-D748-40dd-82B1-0E1A22F7CDCD} → {23E6AFF0-4C32-48ce-8FC8-38257BD3BF16}
+      - "Association «belongs to» → 9.11.1.10"  # {9BCA2DDD-041F-4e62-99DD-74F48838528E} → {1DA10162-3BB7-4da4-996D-5E597BAA88A1}
+      - "Association «belongs to» → 9.11.1.12"  # {6D2E8E65-2B68-4c91-9EC0-024FE204D606} → {A0516400-8819-48af-9928-2D1084DAE55E}
+      - "Association «belongs to» → 9.11.1.13"  # {05E7EA89-CDC3-4e3b-970B-C0FECA5524E6} → {F631EED4-C8B7-4f3c-90E2-E1E78866FACE}
+      - "Association «belongs to» → 9.11.1.2"  # {F008ED8B-08A0-41ff-B1CD-3C87506CD6EC} → {50CEA6A4-DA8F-4c44-9025-0E489BDDC247}
   - name: "F8.5.3 Prepare FTEP"
     guid: "{7E0E965E-C17C-49d9-8629-C35CBB49EDE3}"
     type: "Activity"
@@ -276,15 +276,15 @@ elements:
       (4) When a complete new Freight Transport Execution Plan has been prepared, the ability to send it to other functionality for storage and subsequent implementation.
       (5) The ability to report the failure of the  Freight Transport Execution Plan preparation process so that the Freight Transport Operations Manager can take action.
     links:
-      - "Aggregation «componentof» → F8.5 Prepare FTEP"  # {A5ED93C7-C17B-4ee8-AB20-F4462D4E27DF} → {A997A7F7-79A2-4bda-99A1-9B48DBB67F39}
+      - "Aggregation «component of» → F8.5 Prepare FTEP"  # {A5ED93C7-C17B-4ee8-AB20-F4462D4E27DF} → {A997A7F7-79A2-4bda-99A1-9B48DBB67F39}
       - "Association «IN» → mffo.pshvs_FTEP_route_request"  # {4E2B1AE5-CB28-4fe4-8629-6625CE44FF24} → {B6BF35DE-C3A9-43f6-8AB1-58475FB66872}
       - "Association «IN» → mffo_prepared_FTEP_for_use"  # {DBC9B62D-FD04-45a6-93E4-06C4070877D9} → {0E1233B7-8662-46e8-8EFB-0D7E851FB4C7}
       - "Association «IN» → tft.fta-request_timeslot_booking"  # {0BF8A0C9-6081-4571-8E9C-6C1DE53A49E0} → {CEBE4D5C-641F-4204-BFD3-73F2D9944E7B}
       - "Association «IN» → tft.ftom-FTEP_preparation_failed"  # {D98BA520-2F1C-4a83-9F40-A508BF189088} → {B7615DD9-12D4-4c08-871F-2B7D1D81F495}
       - "Association «IN» → tmms.omfs-other_mode_transport_booking_request"  # {18AFB405-2BA1-4047-991D-3DB611766013} → {1ABC5462-05C2-4e8b-9865-D27F07964013}
-      - "Association «belongsto» → 9.11.1.1"  # {0FBDA215-BB8B-44da-9B56-DE32697E8A25} → {23E6AFF0-4C32-48ce-8FC8-38257BD3BF16}
-      - "Association «belongsto» → 9.11.1.2"  # {D79F5216-AA2E-4bcd-B35D-014B957A352B} → {50CEA6A4-DA8F-4c44-9025-0E489BDDC247}
-      - "Association «belongsto» → 9.11.1.4"  # {5F07ED9E-CBE4-4cb1-AFE9-CE724557D48B} → {B079E354-B8F2-4b98-B097-A049412E8F2B}
+      - "Association «belongs to» → 9.11.1.1"  # {0FBDA215-BB8B-44da-9B56-DE32697E8A25} → {23E6AFF0-4C32-48ce-8FC8-38257BD3BF16}
+      - "Association «belongs to» → 9.11.1.2"  # {D79F5216-AA2E-4bcd-B35D-014B957A352B} → {50CEA6A4-DA8F-4c44-9025-0E489BDDC247}
+      - "Association «belongs to» → 9.11.1.4"  # {5F07ED9E-CBE4-4cb1-AFE9-CE724557D48B} → {B079E354-B8F2-4b98-B097-A049412E8F2B}
   - name: "F8.6 Provide Freight Transport Service"
     guid: "{4B60AD8D-35C5-4df5-A17B-3DD9C9952F2A}"
     type: "Activity"
@@ -295,7 +295,7 @@ elements:
     note: |
       This High-level Function shall be responsible for the implementation and monitoring of Freight Transport Execution Plans.  A Plan shall only implemented at the request of the Freight Transport User, who shall be able to monitor the progress of the implementation.  It shall be possible for the functionality to implemented two or more Freight Transport Execution Plans at the same time without any interference between them.  Instructions shall be provided to the Freight Vehicle Driver about collecting the Freight Transport Load Items specified in the Plan and delivering them to a Freight Terminal Area, another mode of transport or the final destination, or any combination of these.  If a fault is detected with the Freight Vehicle involved in the implementation of the Plan, the appropriate response shall be implemented or in the absence of a pre-defined response, it shall be requested from the Freight Transport Operations Manager.  If necessary and incident shall be declared to the appropriate functionality in the Manage Traffic Functional Area.
     links:
-      - "Aggregation «componentof» → F8. Manage Freight and Fleet Operations"  # {07230D44-C844-4e44-8590-7830612980EB} → {0D4120EB-FF16-47a1-96E4-B7F47AA4324B}
+      - "Aggregation «component of» → F8. Manage Freight and Fleet Operations"  # {07230D44-C844-4e44-8590-7830612980EB} → {0D4120EB-FF16-47a1-96E4-B7F47AA4324B}
       - "Association «IN» → mffo.mt_FTEP_abnormal_load_incident"  # {7E3ECDB4-D1A9-4c12-A78B-52DCB9A7F408} → {83A025AF-486C-448f-B09E-0BA008D93551}
       - "Association «IN» → mffo.mt_declare_FTEP_implementation_incident"  # {92111EAC-F846-4e4f-BF9A-B297E145B1F8} → {06125D15-B2E7-4d3d-86F8-5FE3AAB78266}
       - "Association «IN» → mffo_FTEP_implementation_driver_record"  # {18FAC200-111F-42b7-AF87-A4AE06965826} → {B00BCF31-0C32-4a36-A82B-5EE7D26E5A92}
@@ -342,7 +342,7 @@ elements:
       (10) The ability to send records of the Freight Transport Plan implementation status to other functionality that will compare it with the actual status for reporting to the Freight Transport Operations Manager.
       (11) The ability to send records of progress with the implementation of the Freight Transport Execution Plan to other functionality that will use it to analyse the way the Plan has been implemented.
     links:
-      - "Aggregation «componentof» → F8.6 Provide Freight Transport Service"  # {09A3F4CD-D5E2-4039-9AC1-B0AC73DC22F6} → {4B60AD8D-35C5-4df5-A17B-3DD9C9952F2A}
+      - "Aggregation «component of» → F8.6 Provide Freight Transport Service"  # {09A3F4CD-D5E2-4039-9AC1-B0AC73DC22F6} → {4B60AD8D-35C5-4df5-A17B-3DD9C9952F2A}
       - "Association «IN» → mffo.mt_FTEP_abnormal_load_incident"  # {9C7670FB-6106-4529-9A68-F9F6E6BF651B} → {83A025AF-486C-448f-B09E-0BA008D93551}
       - "Association «IN» → mffo.mt_declare_FTEP_implementation_incident"  # {33065F9F-C685-4583-A6A0-E5F076640D5B} → {06125D15-B2E7-4d3d-86F8-5FE3AAB78266}
       - "Association «IN» → mffo_FTEP_implementation_record"  # {F7DB2070-DAD3-4682-B7C3-3A073CA04419} → {179C4859-CA7B-4865-AFB7-80C3027A301B}
@@ -353,10 +353,10 @@ elements:
       - "Association «IN» → mffo_other_mode_service_issues"  # {77CF84CE-AE7F-4a54-9F66-ACA06FDDCEBA} → {522AD87C-FC4F-4a1f-9AD8-27A006524367}
       - "Association «IN» → mffo_request_FTEP_details"  # {9F83A1E8-6510-4b1e-92E2-EC7466F2D9E8} → {0F023E8A-0DAC-45e6-ACB2-70457723C13F}
       - "Association «IN» → mffo_request_incident_response"  # {656C7F28-9FCD-48a1-A067-25EACE064064} → {6752DF38-A67B-40cd-A546-6ECB40E75EF4}
-      - "Association «belongsto» → 9.11.2.1"  # {0692822A-C55A-43a5-AEA2-0A8F77523E23} → {03442F02-E9E1-46bf-AAA7-936B31C1E439}
-      - "Association «belongsto» → 9.11.2.2"  # {47C140F1-5523-45f1-9998-226F0308899F} → {EFA8A173-3EF9-444c-882F-DDE1532EF800}
-      - "Association «belongsto» → 9.11.2.5"  # {BAF04B14-156D-4745-ABB9-1EAC1FFAD700} → {D211DDC7-CBB7-4d6a-8885-DEF0777E345E}
-      - "Association «belongsto» → 9.11.3.3"  # {2CB8ED4F-E4FE-46c8-8A94-4DF27502B3B5} → {894A506E-B7DE-416c-802F-22303FBF1679}
+      - "Association «belongs to» → 9.11.2.1"  # {0692822A-C55A-43a5-AEA2-0A8F77523E23} → {03442F02-E9E1-46bf-AAA7-936B31C1E439}
+      - "Association «belongs to» → 9.11.2.2"  # {47C140F1-5523-45f1-9998-226F0308899F} → {EFA8A173-3EF9-444c-882F-DDE1532EF800}
+      - "Association «belongs to» → 9.11.2.5"  # {BAF04B14-156D-4745-ABB9-1EAC1FFAD700} → {D211DDC7-CBB7-4d6a-8885-DEF0777E345E}
+      - "Association «belongs to» → 9.11.3.3"  # {2CB8ED4F-E4FE-46c8-8A94-4DF27502B3B5} → {894A506E-B7DE-416c-802F-22303FBF1679}
   - name: "F8.6.2 Monitor FTEP Implementation"
     guid: "{D320C8CB-7271-40f3-9C39-963E76B15D5B}"
     type: "Activity"
@@ -374,11 +374,11 @@ elements:
       (5) The ability to provide other functionality with the location of the Freight Vehicle for output to the Freight Transport Operations Manager and for use in reporting its status.
       (6) The ability to predict the time of arrival (PTA) of the Freight Vehicle at multi-modal interchange points and to send data objects containing these predictions to other functionality.
     links:
-      - "Aggregation «componentof» → F8.6 Provide Freight Transport Service"  # {DDDCEB3A-1278-4525-8C50-05E01DAB7C71} → {4B60AD8D-35C5-4df5-A17B-3DD9C9952F2A}
+      - "Aggregation «component of» → F8.6 Provide Freight Transport Service"  # {DDDCEB3A-1278-4525-8C50-05E01DAB7C71} → {4B60AD8D-35C5-4df5-A17B-3DD9C9952F2A}
       - "Association «IN» → mffo_FV_pta_for_other_mode"  # {2C4F6F8A-6FEA-4ca7-802E-983178A1CBA9} → {C6F45584-1539-4ffa-B1BA-72B963FA2B2F}
       - "Association «IN» → mffo_FV_road_network_location"  # {9A881236-BE62-4d8d-9FC9-B6193B8678F9} → {C093494F-87FB-45d5-9880-4FCF365EA468}
       - "Association «IN» → mffo_vehicle_location_status"  # {699539E3-A6DA-4878-AB79-77AE6B15F58A} → {12AC4612-04CC-4ccf-BC9A-0B4F21BC75ED}
-      - "Association «belongsto» → 9.11.2.2"  # {E6C7A733-D144-41e9-A1DB-38C814A07AF9} → {EFA8A173-3EF9-444c-882F-DDE1532EF800}
+      - "Association «belongs to» → 9.11.2.2"  # {E6C7A733-D144-41e9-A1DB-38C814A07AF9} → {EFA8A173-3EF9-444c-882F-DDE1532EF800}
   - name: "F8.6.3 Provide Freight Vehicle Driver Interface"
     guid: "{65F5CC11-C577-45fc-BC18-4DB4BCA41E0A}"
     type: "Activity"
@@ -396,15 +396,15 @@ elements:
       (5) The ability to enable the Freight Vehicle Driver to provide audio and/or visual inputs that are comments on how a Freight Transport Execution Plan is being or has been implemented so that they can be sent to other functionality for storage and analysis.
       (6) The ability to record the actions of the Freight Vehicle Driver, including the messages exchanged with the Freight Transport Operations Manager plus other inputs and send them to other functionality for storage and analysis.
     links:
-      - "Aggregation «componentof» → F8.6 Provide Freight Transport Service"  # {9B7CB52B-E285-474b-9541-ECF10B3D5CCF} → {4B60AD8D-35C5-4df5-A17B-3DD9C9952F2A}
+      - "Aggregation «component of» → F8.6 Provide Freight Transport Service"  # {9B7CB52B-E285-474b-9541-ECF10B3D5CCF} → {4B60AD8D-35C5-4df5-A17B-3DD9C9952F2A}
       - "Association «IN» → mffo_FTEP_implementation_driver_record"  # {5072C8A0-1D1D-4cca-81F8-2D57EE0326AB} → {B00BCF31-0C32-4a36-A82B-5EE7D26E5A92}
       - "Association «IN» → mffo_message_from_Driver"  # {B4999881-B373-435d-8811-3B2D323EEC31} → {88D636B2-14BB-4a31-BD68-4A85FA115447}
       - "Association «IN» → td.fvd-FTEP_driver_instructions"  # {DDB71ECC-2C75-49ee-A793-D3AC5B63602A} → {D80B6CAA-1D22-4113-95D4-42EE8686E2B4}
       - "Association «IN» → td.fvd-FTOM_message_for_Driver"  # {D7F3C86D-E209-4027-9EE2-801DE27224AE} → {7EBE8CC4-B05D-443e-A1A2-3D8E59FC12E0}
-      - "Association «belongsto» → 9.11.2.1"  # {5213F91F-CB57-4d10-97D7-9836CCB9270B} → {03442F02-E9E1-46bf-AAA7-936B31C1E439}
-      - "Association «belongsto» → 9.11.2.4"  # {6DC6850D-ADA0-42eb-8C69-20FBA90E96B1} → {672CE02F-7CA9-45a0-A366-EA83B2B0679C}
-      - "Association «belongsto» → 9.11.2.5"  # {BD7BB3F9-9703-4def-92CE-D353A1BD0A9E} → {D211DDC7-CBB7-4d6a-8885-DEF0777E345E}
-      - "Association «belongsto» → 9.11.3.1"  # {BE91E918-BF64-4861-905D-2D2D5B10DC31} → {94DF8049-83F2-4804-A9A1-D847F22A399D}
+      - "Association «belongs to» → 9.11.2.1"  # {5213F91F-CB57-4d10-97D7-9836CCB9270B} → {03442F02-E9E1-46bf-AAA7-936B31C1E439}
+      - "Association «belongs to» → 9.11.2.4"  # {6DC6850D-ADA0-42eb-8C69-20FBA90E96B1} → {672CE02F-7CA9-45a0-A366-EA83B2B0679C}
+      - "Association «belongs to» → 9.11.2.5"  # {BD7BB3F9-9703-4def-92CE-D353A1BD0A9E} → {D211DDC7-CBB7-4d6a-8885-DEF0777E345E}
+      - "Association «belongs to» → 9.11.3.1"  # {BE91E918-BF64-4861-905D-2D2D5B10DC31} → {94DF8049-83F2-4804-A9A1-D847F22A399D}
   - name: "F8.6.4 Provide Interface to Other Transport Modes"
     guid: "{16E599A1-12F3-4e20-80D6-9447C898EB54}"
     type: "Activity"
@@ -424,7 +424,7 @@ elements:
       (7) The ability to generate data objects containing instructions about where to pick up Freight Transport Load Items that have been delivered by other modes of transport and send them to the functionality that provides the interface with the Freight Vehicle Driver.
       (8) The ability to provide to other functionality the current status of the movement of Freight Transport Load Items by other modes of transport when provided by the multi-modal systems.
     links:
-      - "Aggregation «componentof» → F8.6 Provide Freight Transport Service"  # {E9B16546-E070-4d47-B7BD-3A0D20D2F39D} → {4B60AD8D-35C5-4df5-A17B-3DD9C9952F2A}
+      - "Aggregation «component of» → F8.6 Provide Freight Transport Service"  # {E9B16546-E070-4d47-B7BD-3A0D20D2F39D} → {4B60AD8D-35C5-4df5-A17B-3DD9C9952F2A}
       - "Association «IN» → mffo_alternative_services_response"  # {04B6BB19-A322-44d9-B867-E2B08AB4D42A} → {05277AF3-ECC6-437e-A420-045A368A818F}
       - "Association «IN» → mffo_driver_instructions_for_other_mode_transfer"  # {391C2A5D-0D00-4f47-BB80-CA10164BD481} → {D0F2F365-E90B-450e-AF5B-1492E6F6810E}
       - "Association «IN» → mffo_other_mode_current_FTLI_status"  # {DB946F54-C682-403a-B293-A5B7888FFBEF} → {8F204D96-00C3-4ac4-870E-18B20A197AF0}
@@ -446,7 +446,7 @@ elements:
       (3) The ability to receive audio and/or visual inputs from the Freight Transport Operations Manager and convert them into digital objects that can be sent to other functionality for their interpretation and use.
       (4) The ability to alert the Freight Transport Operations Manager to the output of audio and/or visual messages.
     links:
-      - "Aggregation «componentof» → F8.6 Provide Freight Transport Service"  # {641F4EF8-797D-45e5-961A-232D8779A0ED} → {4B60AD8D-35C5-4df5-A17B-3DD9C9952F2A}
+      - "Aggregation «component of» → F8.6 Provide Freight Transport Service"  # {641F4EF8-797D-45e5-961A-232D8779A0ED} → {4B60AD8D-35C5-4df5-A17B-3DD9C9952F2A}
       - "Association «IN» → mffo_FV_status_request_from_FTOM"  # {BBD2CBCA-E394-4f98-8BCC-718FB7D4C227} → {E3E5B06E-CDC4-4732-AC7E-8DACD1AB2F35}
       - "Association «IN» → mffo_message_for_Driver"  # {5345BA75-6094-4f67-8D40-1E95AE3B9391} → {AD9B78D7-292F-474c-9AC9-0E118179DEF0}
       - "Association «IN» → mffo_new_incident_response_details"  # {3DDB545F-44CE-4bf7-ABBA-EA75269560D4} → {C00D7EB8-6500-4154-B938-43045F4F459A}
@@ -462,10 +462,10 @@ elements:
       - "Association «IN» → tft.ftom-requested_FTEP_implementation_record"  # {93EE3312-A4EF-4c13-B126-57E4A1A4DBD8} → {16B03EB3-C323-4ab1-B6E2-5752C4495BCB}
       - "Association «IN» → tft.ftom-requested_FV_status"  # {48356FFA-7745-4618-92A1-66BBC38ED741} → {DF66657E-D29B-4afb-A85C-6206575221D5}
       - "Association «IN» → tft.ftom-requested_incident_responses"  # {9B77375D-6621-448f-A5E4-BF3F147B0CF6} → {A4361B0A-E98F-4a96-9491-60A689330180}
-      - "Association «belongsto» → 9.11.2.3"  # {530B3FF0-D1FD-45df-841C-3AFD432FD93A} → {D804D465-C4CF-48d6-9813-F5B48BB3ECA7}
-      - "Association «belongsto» → 9.11.2.4"  # {9FB2CE88-BC92-4b29-87F3-59BF1D796429} → {672CE02F-7CA9-45a0-A366-EA83B2B0679C}
-      - "Association «belongsto» → 9.11.2.7"  # {54705EC2-03FC-4ddd-96F0-AC357C5771E7} → {489A4FF9-CA6E-4659-88EB-8CD5284BBE75}
-      - "Association «belongsto» → 9.11.2.9"  # {8439973F-C1A0-4fc0-94A8-A71822E10BF4} → {90EF1935-D974-4740-91B6-D0994428A7A5}
+      - "Association «belongs to» → 9.11.2.3"  # {530B3FF0-D1FD-45df-841C-3AFD432FD93A} → {D804D465-C4CF-48d6-9813-F5B48BB3ECA7}
+      - "Association «belongs to» → 9.11.2.4"  # {9FB2CE88-BC92-4b29-87F3-59BF1D796429} → {672CE02F-7CA9-45a0-A366-EA83B2B0679C}
+      - "Association «belongs to» → 9.11.2.7"  # {54705EC2-03FC-4ddd-96F0-AC357C5771E7} → {489A4FF9-CA6E-4659-88EB-8CD5284BBE75}
+      - "Association «belongs to» → 9.11.2.9"  # {8439973F-C1A0-4fc0-94A8-A71822E10BF4} → {90EF1935-D974-4740-91B6-D0994428A7A5}
   - name: "F8.6.6 Manage Incident Response Data Store"
     guid: "{CC117A33-746F-435a-99FD-47AE519B1C96}"
     type: "Activity"
@@ -481,7 +481,7 @@ elements:
       (3) The ability to respond to data objects containing requests for the response to one or more particular types of incident to be retrieved from the store of Incident Response Data and sent to the functionality that made the request.
       (4) If no pre-defined response is found for the requested type of incident the ability to send data objects indicating this to the functionality that provides the interface for the Freight Transport Operations Manager.
     links:
-      - "Aggregation «componentof» → F8.6 Provide Freight Transport Service"  # {3FA6DD15-1214-45e6-B117-3A81073F7A79} → {4B60AD8D-35C5-4df5-A17B-3DD9C9952F2A}
+      - "Aggregation «component of» → F8.6 Provide Freight Transport Service"  # {3FA6DD15-1214-45e6-B117-3A81073F7A79} → {4B60AD8D-35C5-4df5-A17B-3DD9C9952F2A}
       - "Association «IN» → mffo_incident_response_details"  # {7C9E1DF1-4480-4928-8B33-3CE6BD6457DC} → {182274DC-08C8-4231-B0E4-CA72B688B1FF}
       - "Association «IN» → mffo_load_incident_data"  # {4339681B-88C6-49a4-AE0B-A562A7013081} → {95F5359B-D3E7-4357-993A-4A83E9A1701C}
       - "Association «IN» → mffo_no_incident_response"  # {E474DE42-DE00-4320-B525-0145D585DF14} → {794829DA-EDD9-4141-BC52-6A05FC14A67F}
@@ -496,7 +496,7 @@ elements:
     note: |
       This High-level Function shall collect and manage data objects from sensors and systems on the Freight Vehicle.  It shall use the collected data objects to provide information about the Freight Vehicle as it performs the actions required of it in the Freight Transport Execution Plan.  As the Freight Transport Execution Plan is implemented, the Function shall be able to provide status updates on request to the Freight Transport User and the Freight Transport Operations Manager and shall create a record of the progress of the implementation.  If the implementation does not proceed as expected then the Function shall be able to request a change in the time of the handover to another transport mode (if used) and in extreme instances that a new Freight Transport Execution Plan is prepared.
     links:
-      - "Aggregation «componentof» → F8. Manage Freight and Fleet Operations"  # {65586844-3D90-4dd7-8709-3061BF1E24CE} → {0D4120EB-FF16-47a1-96E4-B7F47AA4324B}
+      - "Aggregation «component of» → F8. Manage Freight and Fleet Operations"  # {65586844-3D90-4dd7-8709-3061BF1E24CE} → {0D4120EB-FF16-47a1-96E4-B7F47AA4324B}
       - "Association «IN» → mffo_FTEP_progress_status"  # {3318A439-04C9-4bdb-914B-0122E5F02759} → {1A9A206F-C800-4c9f-B8FC-E0AD88C03EC5}
       - "Association «IN» → mffo_FV_status_for_FTOM"  # {0AECD8EB-968C-4d08-A278-846884F526A8} → {38381EAE-EAF5-44a4-883B-EC4118AD0F74}
       - "Association «IN» → mffo_deduced_other_mode_performance"  # {89CE3EDA-24D4-4548-8FC2-6269E92EC173} → {C1D2026E-FA78-4a14-88B5-B5E076120302}
@@ -527,15 +527,15 @@ elements:
       - Freight Vehicle identity, e.g. VIN.
       (3) The ability to send the data objects created in (1) and (2) above to other functionality for storage and analysis.
     links:
-      - "Aggregation «componentof» → F8.7 Monitor Freight Vehicle during FTEP Implementation"  # {9964FB86-60D3-4732-90FD-4C339FECE3C3} → {798B4ABA-0EB3-4ba3-8C17-B07D73F56260}
+      - "Aggregation «component of» → F8.7 Monitor Freight Vehicle during FTEP Implementation"  # {9964FB86-60D3-4732-90FD-4C339FECE3C3} → {798B4ABA-0EB3-4ba3-8C17-B07D73F56260}
       - "Association «IN» → mffo_vehicle_location"  # {DBA40621-A225-4316-BE0A-EFDD313A191E} → {9E3FDC69-13F2-4e38-9B7D-B38C693EF70C}
       - "Association «IN» → mffo_vehicle_location_for_status"  # {F4F79C31-7813-46a8-9DC0-B4510905FCF0} → {2673C028-CC5E-44a8-AB01-B8650393A8A5}
       - "Association «IN» → mffo_vehicle_speed"  # {95FDAA8A-E7B6-4f8c-AC63-EF2E8AB08F2E} → {65E2FA8C-16F5-4807-AF51-9BDB552BA80F}
       - "Association «IN» → mffo_vehicle_status"  # {102819FA-14E7-4d67-8A75-9FF68F0594DB} → {F37A3B51-BF8B-45e4-9572-05D5374F8620}
-      - "Association «belongsto» → 9.11.2.8"  # {35CF4E04-2840-4f79-8FC9-BDEBEC42D055} → {5A265EB7-AED5-4dfb-ADC5-EEA18DD7ECAD}
-      - "Association «belongsto» → 9.11.2.9"  # {CCCBCD32-ECC6-40fe-BB09-2555C3C71959} → {90EF1935-D974-4740-91B6-D0994428A7A5}
-      - "Association «belongsto» → 9.11.3.2"  # {C5A9DD91-2BBC-4ad0-B2AE-21966715C67C} → {18A9EF1C-7C49-4fd7-88DA-BAD892A85955}
-      - "Association «belongsto» → 9.11.3.4"  # {0F696632-975E-4b29-ABE4-1EE7320B4C9A} → {B300863B-966B-4fbd-AC98-7D9C9426A3C8}
+      - "Association «belongs to» → 9.11.2.8"  # {35CF4E04-2840-4f79-8FC9-BDEBEC42D055} → {5A265EB7-AED5-4dfb-ADC5-EEA18DD7ECAD}
+      - "Association «belongs to» → 9.11.2.9"  # {CCCBCD32-ECC6-40fe-BB09-2555C3C71959} → {90EF1935-D974-4740-91B6-D0994428A7A5}
+      - "Association «belongs to» → 9.11.3.2"  # {C5A9DD91-2BBC-4ad0-B2AE-21966715C67C} → {18A9EF1C-7C49-4fd7-88DA-BAD892A85955}
+      - "Association «belongs to» → 9.11.3.4"  # {0F696632-975E-4b29-ABE4-1EE7320B4C9A} → {B300863B-966B-4fbd-AC98-7D9C9426A3C8}
   - name: "F8.7.2 Calculate FTEP Implementation Status"
     guid: "{351B4E2D-FC21-4b86-B2C7-FD2524C0030A}"
     type: "Activity"
@@ -552,7 +552,7 @@ elements:
       (4) As a result of the data objects received in (1) above calculate the expected arrival time (eta) at the next Freight Terminal Area identified in the Freight Transport Execution Plan and if not the same as in the Plan send data objects containing the amended eta to the Freight Terminal Area Facilities Terminator.
       (5) As a result of (4) receive data objects from the Freight Terminal Area Facilities Terminator containing its response and inform the appropriate functionality of the need to change the way that the Freight Transport Execution Plan is currently being implemented.
     links:
-      - "Aggregation «componentof» → F8.7 Monitor Freight Vehicle during FTEP Implementation"  # {0143DBF3-E74B-4b72-995D-F0D14643DB00} → {798B4ABA-0EB3-4ba3-8C17-B07D73F56260}
+      - "Aggregation «component of» → F8.7 Monitor Freight Vehicle during FTEP Implementation"  # {0143DBF3-E74B-4b72-995D-F0D14643DB00} → {798B4ABA-0EB3-4ba3-8C17-B07D73F56260}
       - "Association «IN» → mffo_FTEP_implementation_status_for_record"  # {1077A840-4DD8-4514-8AAD-4661E0E70E23} → {3B7752A7-7E91-4992-8058-C1F7202845AE}
       - "Association «IN» → mffo_FTEP_progress_status"  # {A125244E-529B-466c-8649-EC7D9E12E0EE} → {1A9A206F-C800-4c9f-B8FC-E0AD88C03EC5}
       - "Association «IN» → mffo_FV_status_for_FTOM"  # {CC95ACB9-512E-463e-B0C9-4F7AE00FE0E9} → {38381EAE-EAF5-44a4-883B-EC4118AD0F74}
@@ -560,17 +560,17 @@ elements:
       - "Association «IN» → mffo_revised_FTEP_needed"  # {31810ACB-0521-4536-B85F-3155A67ED196} → {EEF7EEDA-8C1E-4072-835C-5DE00B80B089}
       - "Association «IN» → mffo_vehicle_incident_found"  # {79BB2B36-C006-4cc7-8E68-62E366F7E721} → {ABCD4AF6-D3C7-445b-ACA2-9B43B150478B}
       - "Association «IN» → tft.fta-revise_FTEP_eta_reqiuest"  # {7BAC3857-7264-411d-8AA5-D00BD0910F5D} → {BC0B5703-5700-4d51-853D-C21FC11D9C89}
-      - "Association «belongsto» → 9.10.1.8"  # {F0056EE1-F944-4863-A648-442FA2339C68} → {1AC1B26F-D88E-4a06-AE25-31FC385A1300}
-      - "Association «belongsto» → 9.10.1.9"  # {876C523E-A525-45d0-8C31-CE7F6DBDB850} → {7842E544-8FC4-44aa-A428-B67CA265C451}
-      - "Association «belongsto» → 9.11.1.11"  # {9E59398F-50BA-4020-B3DF-E84D7EA344CB} → {99934146-04F6-40f7-A501-5F19B8E71C0D}
-      - "Association «belongsto» → 9.11.1.15"  # {F6C32C49-1469-45c0-B70F-4938CA75EED3} → {BADBBCD7-3BEF-4cc4-AC2A-3DE18E02A82C}
-      - "Association «belongsto» → 9.11.1.5"  # {F5FC0E41-1666-462d-9CDA-75643C75C8F6} → {9CC2B628-F45B-4507-BC20-69B2E069C35A}
-      - "Association «belongsto» → 9.11.2.6"  # {0B4853E7-578E-42bf-B458-E95D7678CCDB} → {358C0159-F730-4c8d-9234-1798CB43FE83}
-      - "Association «belongsto» → 9.11.2.8"  # {D3589211-E976-4a45-B009-62C6F2BDF553} → {5A265EB7-AED5-4dfb-ADC5-EEA18DD7ECAD}
-      - "Association «belongsto» → 9.11.2.9"  # {4A8BF8A5-05E5-482d-9E49-8D41C1538192} → {90EF1935-D974-4740-91B6-D0994428A7A5}
-      - "Association «belongsto» → 9.11.3.2"  # {627B91B3-602E-4abc-9066-C0A52112AFE1} → {18A9EF1C-7C49-4fd7-88DA-BAD892A85955}
-      - "Association «belongsto» → 9.11.3.3"  # {0DDB9092-0BFF-4055-B5E7-1618C307C055} → {894A506E-B7DE-416c-802F-22303FBF1679}
-      - "Association «belongsto» → 9.11.3.4"  # {E3041E75-052C-411d-A87D-2F803406193F} → {B300863B-966B-4fbd-AC98-7D9C9426A3C8}
+      - "Association «belongs to» → 9.10.1.8"  # {F0056EE1-F944-4863-A648-442FA2339C68} → {1AC1B26F-D88E-4a06-AE25-31FC385A1300}
+      - "Association «belongs to» → 9.10.1.9"  # {876C523E-A525-45d0-8C31-CE7F6DBDB850} → {7842E544-8FC4-44aa-A428-B67CA265C451}
+      - "Association «belongs to» → 9.11.1.11"  # {9E59398F-50BA-4020-B3DF-E84D7EA344CB} → {99934146-04F6-40f7-A501-5F19B8E71C0D}
+      - "Association «belongs to» → 9.11.1.15"  # {F6C32C49-1469-45c0-B70F-4938CA75EED3} → {BADBBCD7-3BEF-4cc4-AC2A-3DE18E02A82C}
+      - "Association «belongs to» → 9.11.1.5"  # {F5FC0E41-1666-462d-9CDA-75643C75C8F6} → {9CC2B628-F45B-4507-BC20-69B2E069C35A}
+      - "Association «belongs to» → 9.11.2.6"  # {0B4853E7-578E-42bf-B458-E95D7678CCDB} → {358C0159-F730-4c8d-9234-1798CB43FE83}
+      - "Association «belongs to» → 9.11.2.8"  # {D3589211-E976-4a45-B009-62C6F2BDF553} → {5A265EB7-AED5-4dfb-ADC5-EEA18DD7ECAD}
+      - "Association «belongs to» → 9.11.2.9"  # {4A8BF8A5-05E5-482d-9E49-8D41C1538192} → {90EF1935-D974-4740-91B6-D0994428A7A5}
+      - "Association «belongs to» → 9.11.3.2"  # {627B91B3-602E-4abc-9066-C0A52112AFE1} → {18A9EF1C-7C49-4fd7-88DA-BAD892A85955}
+      - "Association «belongs to» → 9.11.3.3"  # {0DDB9092-0BFF-4055-B5E7-1618C307C055} → {894A506E-B7DE-416c-802F-22303FBF1679}
+      - "Association «belongs to» → 9.11.3.4"  # {E3041E75-052C-411d-A87D-2F803406193F} → {B300863B-966B-4fbd-AC98-7D9C9426A3C8}
   - name: "F8.7.3 Evaluate FTEP Implementation"
     guid: "{F0EF1DD1-012D-4a7d-BF47-C8E4608ECCFB}"
     type: "Activity"
@@ -587,14 +587,14 @@ elements:
       (4) The ability to deduce the road network performance from the records of the implementation of one or more Freight Transport Execution Plans and to send the results to other functionality.
       (5) The ability to deduce the performance of other modes of transport from the records of the implementation of one or more Freight Transport Execution Plans and to send the results to other functionality.
     links:
-      - "Aggregation «componentof» → F8.7 Monitor Freight Vehicle during FTEP Implementation"  # {C1AEF8DE-44B0-4af0-926C-1829F40896F5} → {798B4ABA-0EB3-4ba3-8C17-B07D73F56260}
+      - "Aggregation «component of» → F8.7 Monitor Freight Vehicle during FTEP Implementation"  # {C1AEF8DE-44B0-4af0-926C-1829F40896F5} → {798B4ABA-0EB3-4ba3-8C17-B07D73F56260}
       - "Association «IN» → mffo_deduced_other_mode_performance"  # {2BB34633-4F55-43fd-9273-94391218485B} → {C1D2026E-FA78-4a14-88B5-B5E076120302}
       - "Association «IN» → mffo_deduced_road_network_performance"  # {BD13C60D-FCC9-40cc-AB96-4E5B3CA77BF8} → {6F16076D-A5E0-4087-BE05-035386DCF483}
       - "Association «IN» → mffo_load_FTEP_implementation_record"  # {3B997B34-09C4-434a-9E96-7947B1535866} → {4A9B988F-FD6D-4276-B721-FF93B44593F9}
       - "Association «IN» → mffo_requested_FTEP_implementation_record"  # {912B26BB-EB62-4125-80D4-262517CA6C49} → {B0638014-263B-4777-8627-329B9FF2B3A0}
-      - "Association «belongsto» → 9.11.1.11"  # {E0863EF2-61B2-479b-9D0F-D0AAF7C9C0F6} → {99934146-04F6-40f7-A501-5F19B8E71C0D}
-      - "Association «belongsto» → 9.11.1.13"  # {AFAF950F-4E04-45d1-8785-A29C124C3F62} → {F631EED4-C8B7-4f3c-90E2-E1E78866FACE}
-      - "Association «belongsto» → 9.11.2.3"  # {D9B628E7-9AB4-41a6-9DDD-D9FFD8DF58AB} → {D804D465-C4CF-48d6-9813-F5B48BB3ECA7}
-      - "Association «belongsto» → 9.11.2.8"  # {0EBF79AA-7ECC-4aaf-8842-B16FDB8D8336} → {5A265EB7-AED5-4dfb-ADC5-EEA18DD7ECAD}
-      - "Association «belongsto» → 9.11.3.1"  # {BFA9AE85-089E-4d6b-944B-0C0E20D048A0} → {94DF8049-83F2-4804-A9A1-D847F22A399D}
-      - "Association «belongsto» → 9.11.3.4"  # {D48E4D34-2887-4a3f-886A-01B293C399C4} → {B300863B-966B-4fbd-AC98-7D9C9426A3C8}
+      - "Association «belongs to» → 9.11.1.11"  # {E0863EF2-61B2-479b-9D0F-D0AAF7C9C0F6} → {99934146-04F6-40f7-A501-5F19B8E71C0D}
+      - "Association «belongs to» → 9.11.1.13"  # {AFAF950F-4E04-45d1-8785-A29C124C3F62} → {F631EED4-C8B7-4f3c-90E2-E1E78866FACE}
+      - "Association «belongs to» → 9.11.2.3"  # {D9B628E7-9AB4-41a6-9DDD-D9FFD8DF58AB} → {D804D465-C4CF-48d6-9813-F5B48BB3ECA7}
+      - "Association «belongs to» → 9.11.2.8"  # {0EBF79AA-7ECC-4aaf-8842-B16FDB8D8336} → {5A265EB7-AED5-4dfb-ADC5-EEA18DD7ECAD}
+      - "Association «belongs to» → 9.11.3.1"  # {BFA9AE85-089E-4d6b-944B-0C0E20D048A0} → {94DF8049-83F2-4804-A9A1-D847F22A399D}
+      - "Association «belongs to» → 9.11.3.4"  # {D48E4D34-2887-4a3f-886A-01B293C399C4} → {B300863B-966B-4fbd-AC98-7D9C9426A3C8}

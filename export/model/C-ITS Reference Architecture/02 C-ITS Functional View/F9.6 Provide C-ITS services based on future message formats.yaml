@@ -15,8 +15,8 @@ elements:
       This high level function provides C-ITS functionalities based on future message formats to be defined as standards.
       E.g. CPM - Collaborative Perception Message or others
     links:
-      - "Aggregation «componentof» → F9. Provide Support for Cooperative Systems"  # {84A0A230-388B-421b-80D8-BA39F66B3C59} → {F0D7E9A8-9F88-4e8f-AF0F-661C1990D546}
-      - "Aggregation «componentof» → F9.6.1"  # {BA8F59E4-7C0E-4164-8120-01CB6C96FC15} → {C7ABB704-36E5-491f-B2C2-22A68B596285}
+      - "Aggregation «component of» → F9. Provide Support for Cooperative Systems"  # {84A0A230-388B-421b-80D8-BA39F66B3C59} → {F0D7E9A8-9F88-4e8f-AF0F-661C1990D546}
+      - "Aggregation «component of» → F9.6.1"  # {BA8F59E4-7C0E-4164-8120-01CB6C96FC15} → {C7ABB704-36E5-491f-B2C2-22A68B596285}
   - name: "F9.6.1"
     guid: "{C7ABB704-36E5-491f-B2C2-22A68B596285}"
     type: "Activity"
