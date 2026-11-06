@@ -1,0 +1,70 @@
+package: "National Body Reference Architecture/02 NB Functional View"
+guid: "{A2CCC6DC-AA6F-43ee-963D-F21FE59D4039}"
+alias: ""
+version: "1.0"
+note: |
+  The Functional View of the National Body / Competent Authority Reference Architecture shows the main functionalities and the data flows in between.
+  The included functionalities are defined and harmonized by NAPCORE and present all necessary functionalities to fulfill the legal tasks defined by the delegated acts.
+  The functionalities can be implemented by the National Body or another Competent Authority which is competent and authorized to fulfill this task aligned with the National Body. The left and right Terminators are connecting the neighbor views.
+elements:
+  - name: ""
+    guid: "{768A73D1-CC4A-4bd5-BD74-7C35BA184B0E}"
+    type: "Text"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "Access Information"
+    guid: "{37D92C6B-5199-4a9d-8837-0740EF3B1A41}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «OUT» → National Access Point(s)"  # {A4AFE1B0-BAFB-45ea-A0CD-BF918E4B7991} → {6902FEFA-51CE-4958-A449-99F7F9CA5213}
+  - name: "Connection to organisational view and motivational layer"
+    guid: "{28178970-EA02-48a5-914E-FFE695488281}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "Connection to organisational view and motivational layer"
+    guid: "{88D8C631-7639-49f0-844E-F0DDA13CF044}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "Handling Non-Compliance"
+    guid: "{1D8C33F8-CF43-44a6-8E15-D5CC49B29943}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The details of the non-compliance process are not described in the delegated acts. It was a decision of the NAPCORE that harmonisation up to a certain degree is preferable in Europe.
+      The non-compliance process describes how the national body should react to non-compliance identified in compliance assessment or other ways.
+  - name: "National Access Point(s)"
+    guid: "{6902FEFA-51CE-4958-A449-99F7F9CA5213}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «IN» → Receive Information"  # {9ED170EE-97DA-41e0-87A4-ED5A8F2DBE91} → {A7C5E4D2-4C96-488d-9021-DE2192FDD1E3}
+  - name: "Receive Information"
+    guid: "{A7C5E4D2-4C96-488d-9021-DE2192FDD1E3}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «OUT» → Compliance Assessment"  # {995F6E18-0A9E-417a-B752-72486100F228} → {91C7B206-E453-4ab9-B0B6-D08FDE6075D8}

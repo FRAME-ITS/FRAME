@@ -1,0 +1,72 @@
+package: "Truckparking Reference Architecture (SSTP)/03 SSTP Organisational View/SSTPIS Agreements"
+guid: "{053F612E-C9F7-4710-8140-BAFB92968820}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "Park Operator NAP Profile Agreement"
+    guid: "{DE127379-85E5-4510-9AEF-59AA8AF5419E}"
+    type: "Collaboration"
+    stereotype: "FRAME_Agreement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      subject matter of the contract
+      
+      
+      	- terms and conditions of using NAP as a Content Provider
+      	- data protection: credential information
+      	- the terms and conditions of the information exchange, quality of the data
+      	- support to Content Provider
+    links:
+      - "Association → ProxyConnector"  # {D31AAC2D-049B-4740-BCFE-62DB4321C906} → {89F517D2-344B-429d-AB7C-26C922E988C9}
+  - name: "Park Operator Service Provision Agreement"
+    guid: "{7CC13E8C-99BE-46b6-9AF3-CBBE4F468C8F}"
+    type: "Collaboration"
+    stereotype: "FRAME_Agreement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      subject matter of the contract
+      
+      
+      	- the scope of the activities to extract information available at park operator systems
+      	- the necessary permissions and building the necessary infrastructure to employ and use interfaces necessary between two systems
+      	- the terms and conditions of the information exchange, quality of the data, administration and maintenance of the infrastucture
+  - name: "User Service Terms and Conditions for SSPIP"
+    guid: "{F2ED51AC-61FC-4f0c-85A4-13A9B5D11B54}"
+    type: "Collaboration"
+    stereotype: "FRAME_Agreement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      subject matter of the contract
+      
+      
+      	- services of the provider
+      	- terms and conditions of the services
+      	- support to end user
+      	- data protection: provider cannot use the information of user else then their services
+      	- consent to store information
+    links:
+      - "Association «ArchiMate_Association» → ProxyConnector"  # {BE5DF299-D4A4-4ab3-8C63-6605B4BCC644} → {B7A4DB00-E4E1-4bc8-AF46-87E91DF0E082}
+  - name: "Service Provider NAP Profile Agreement"
+    guid: "{93FAEBC4-A415-4ff5-A910-76DDAE03BBFB}"
+    type: "Collaboration"
+    stereotype: "FRAME_Agreement"
+    status: "Proposed"
+    version: "1.0"
+    order: 55
+    note: |
+      subject matter of the contract
+      
+      
+      	- terms and conditions of using NAP as a Content Consumer
+      	- data protection: credential information
+      	- the terms and conditions of the information exchange, quality of the data
+      	- support to Content Consumer
+    links:
+      - "Association → ProxyConnector"  # {F67AECE5-4534-411d-B27E-2EC952CD83CD} → {3FAADC15-8D01-4578-9F8D-DA7C64DF9872}

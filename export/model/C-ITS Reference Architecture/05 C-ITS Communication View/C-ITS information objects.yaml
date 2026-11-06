@@ -1,0 +1,161 @@
+package: "C-ITS Reference Architecture/05 C-ITS Communication View/C-ITS information objects"
+guid: "{7B5DA97E-3A63-4d4c-AF53-FE0799EBCF79}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "CAM Message"
+    guid: "{25368D50-DB2B-4ed3-987B-BA9C989B114B}"
+    type: "Object"
+    stereotype: "FRAME_Information_Object"
+    keywords: "CAM Message"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Size": "1 Byte"
+      "Source": "Standard"
+      "Structure": "Data table"
+      "Subtype": "List of formats"
+      "Type": "Data"
+      "Validity period": "insert period e.g. 1.1.2000"
+      "auditing": ""
+      "categoryValue": ""
+      "dataInOut": "None"
+      "dataObjectRef": ""
+      "dataState": ""
+      "documentation": ""
+      "isCollection": "false"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "structure": ""
+      "structureRef": ""
+    note: |
+      The CAM message format is defined in the ETSI TS 102 637-2 standard and consist´s of a header and a message body.
+    links:
+      - "Association «adheres to» → ETSI TS 102 637-2"  # {D824F9CA-3867-4e27-8C11-E896DC1C7B67} → {DB52E30C-8C88-4a2b-BA36-B15D9FB02C2E}
+      - "Association «contains» → Basic Container"  # {277170AC-3819-4de0-9B7A-769BEE0EC04E} → {8EF708C4-5616-4478-847D-19304529B92D}
+      - "Association «contains» → HF Container"  # {4BD6C37A-678D-4df4-8D85-4DA70E440CB7} → {E769249C-BEAF-433c-8171-6F576BCA5C53}
+      - "Association «contains» → ITS PDU Header"  # {089A01BB-45F4-462d-B083-F808F4311CEC} → {A0AAE980-B58E-464f-B776-CBD4EA8984AB}
+      - "Association «contains» → LF Container  - optional"  # {B3B81223-AC72-4a75-8ADC-149913D1C49B} → {78034C39-ADFE-4adc-9E1D-CA2B456110CB}
+      - "Association «contains» → Special Vehicle Container - optional"  # {49C72302-7405-4b28-BBD0-F9EF87344694} → {E51961A3-6627-45ce-9557-C41BF976DC25}
+  - name: "DENM Message"
+    guid: "{F5ABC980-47C8-42ae-AEC1-8A12A3AAF9EF}"
+    type: "Object"
+    stereotype: "FRAME_Information_Object"
+    keywords: "DENM message"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Size": "1 Byte"
+      "Source": "Standard"
+      "Structure": "Data table"
+      "Subtype": "List of formats"
+      "Type": "Data"
+      "Validity period": "insert period e.g. 1.1.2000"
+      "auditing": ""
+      "categoryValue": ""
+      "dataInOut": "None"
+      "dataObjectRef": ""
+      "dataState": ""
+      "documentation": ""
+      "isCollection": "false"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "structure": ""
+      "structureRef": ""
+    note: |
+      The ETSI TS 102 637-2 standard defines that a DENM message is composed by a header and a body containing event information.
+      For details please see related objects.
+    links:
+      - "Association «adheres to» → ETSI TS 102 637-2"  # {0A32C7A1-D306-4b7a-858F-F6E80EC2573D} → {DB52E30C-8C88-4a2b-BA36-B15D9FB02C2E}
+      - "Association «contains» → A - la Carte Container - Optional"  # {307B15DF-8A5B-4b16-9687-D3CF9E43FD5B} → {CE96A4E4-251E-471e-AAB4-1E50557E9D0A}
+      - "Association «contains» → ITS PDU Header"  # {80BA3E34-5F75-4e95-96F5-0E8843935AEB} → {264937E8-2368-46b1-B32C-18D275CB1271}
+      - "Association «contains» → Location Container - Optional"  # {802B1A49-E8D2-46d6-BC55-EE984EC4B399} → {36F5B030-8EA5-47e3-BA6C-9FCA83DFC675}
+      - "Association «contains» → Management Container"  # {E5A740E7-D258-49ae-9373-07FB2D5B62DB} → {944DBCD4-F1F7-41af-99B7-C294E4F0F1CA}
+      - "Association «contains» → Situation Container - Optional"  # {B2B478DB-2831-4e28-897E-DEC0260C68FC} → {911320AB-82C4-4d3e-8058-79C018A11AA1}
+  - name: "IVIM Message"
+    guid: "{58B0957B-E92B-4465-A244-34E57B1E6EC6}"
+    type: "Object"
+    stereotype: "FRAME_Information_Object"
+    keywords: "IVIM Message"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Size": "1 Byte"
+      "Source": "Standard"
+      "Structure": "Data table"
+      "Subtype": "List of formats"
+      "Type": "Data"
+      "Validity period": "insert period e.g. 1.1.2000"
+      "auditing": ""
+      "categoryValue": ""
+      "dataInOut": "None"
+      "dataObjectRef": ""
+      "dataState": ""
+      "documentation": ""
+      "isCollection": "false"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "structure": ""
+      "structureRef": ""
+    note: |
+      The IVI message format is standardized in ISO TS 19321, for road signs it refers to the catalogue established by ISO TS 14823.
+  - name: "MAPEM Message"
+    guid: "{10037F98-ED5C-4c7a-B3B3-F80B7A711A71}"
+    type: "Object"
+    stereotype: "FRAME_Information_Object"
+    keywords: "MAP Message"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Size": "1 Byte"
+      "Source": "Standard"
+      "Structure": "Data table"
+      "Subtype": "List of formats"
+      "Type": "Data"
+      "Validity period": "insert period e.g. 1.1.2000"
+      "auditing": ""
+      "categoryValue": ""
+      "dataInOut": "None"
+      "dataObjectRef": ""
+      "dataState": ""
+      "documentation": ""
+      "isCollection": "false"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "structure": ""
+      "structureRef": ""
+    note: |
+      The MAPEM message is the output of the Road and Lane Topology (RLT) infrastructure service which manages the generation, transmission and reception of digital topological maps. The message is defined in ETSI TS 103 301.
+  - name: "SPATEM Message"
+    guid: "{08F1F819-81D5-4986-9281-F0D02DE17306}"
+    type: "Object"
+    stereotype: "FRAME_Information_Object"
+    keywords: "SPATEM Message"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Size": "1 Byte"
+      "Source": "Standard"
+      "Structure": "Data table"
+      "Subtype": "List of formats"
+      "Type": "Data"
+      "Validity period": "insert period e.g. 1.1.2000"
+      "auditing": ""
+      "categoryValue": ""
+      "dataInOut": "None"
+      "dataObjectRef": ""
+      "dataState": ""
+      "documentation": ""
+      "isCollection": "false"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "structure": ""
+      "structureRef": ""
+    note: |
+      SPATEM is defined in Europe by the ETSI TS 103 301 which refers to the SAE J2735 data dictionary as one element.

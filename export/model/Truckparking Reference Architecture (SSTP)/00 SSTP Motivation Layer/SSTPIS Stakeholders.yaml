@@ -1,0 +1,176 @@
+package: "Truckparking Reference Architecture (SSTP)/00 SSTP Motivation Layer/SSTPIS Stakeholders"
+guid: "{BC6ACB09-D959-4c56-B293-8A7B61112D89}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "Cargo Owner"
+    guid: "{3E42FF21-7AA2-42d0-AD0E-4A5AF74ECD63}"
+    type: "Actor"
+    stereotype: "Stakeholder"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Dependency → adhering to driving hours"  # {60DE424D-8BC4-41d3-999F-5D6D311D1078} → {95734C41-1D86-4c69-9D64-308616F38E63}
+      - "Dependency → decrease crime  rates"  # {8D3ED3D8-3ACA-4781-9CA9-8D179B8ACA49} → {2706207B-8A5D-499d-AD53-AEF1705FA53A}
+      - "Dependency → eliminating faulty parking"  # {9834E865-1042-4899-ACD7-103D68C8EE9A} → {0438993A-D49A-443f-94A9-DDDCC79E7BAC}
+      - "Dependency → traffic management"  # {A8CC5B9E-7A55-452b-A8FF-002991B31F5E} → {8D169706-00F4-4dad-AD44-D170A4D33F59}
+      - "Dependency → user expects access to be free"  # {338984A4-8EDE-4367-847E-2B7772918C59} → {BD7F80A8-F0B7-4ee1-BC62-9BAEE7591C8D}
+  - name: "Dispatcher"
+    guid: "{A8C69BA1-C1F2-4840-BE94-E188D8E16277}"
+    type: "Actor"
+    stereotype: "Stakeholder"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Dependency → adhering to driving hours"  # {1554D416-3A99-4455-A9D9-780882B6ECC5} → {95734C41-1D86-4c69-9D64-308616F38E63}
+      - "Dependency → economic value"  # {4899BDEE-E9E9-41b1-B1FC-BE253B5A30B9} → {8639A6FC-BEDD-4411-8556-2C98C7210FA3}
+      - "Dependency → traffic management"  # {521989CD-631E-43ae-A46A-811B295082EC} → {8D169706-00F4-4dad-AD44-D170A4D33F59}
+      - "Dependency → transport company expects facilities to be available"  # {7350CBB9-6A36-4eb1-96DF-0F340ED5CB2F} → {8DEA5A3E-B9A3-4476-BFAB-A8ACF31CC25D}
+      - "Dependency → user expects access to be free"  # {3760FC91-BC92-42f1-8C5F-5B4E4D87A436} → {BD7F80A8-F0B7-4ee1-BC62-9BAEE7591C8D}
+  - name: "Driver"
+    guid: "{3B12D9A8-5547-4640-98B8-701F7C9DB214}"
+    type: "Actor"
+    stereotype: "Stakeholder"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Dependency → "  # {A2683DAE-36A7-4002-9A5E-1B31999911DE} → {A0F77BBB-3000-45fe-B468-5A9CB979EAA0}
+      - "Dependency → Truck Parking Vision: Increase road safety EU wide - Reduce road deaths to zero"  # {A967AC3D-428C-479b-8173-3F79116C8A58} → {3DC87C35-2FA2-4712-BA83-34F1DC4352CD}
+      - "Dependency → adhering to driving hours"  # {FED303FE-8293-454d-92F7-331EC526B1D5} → {95734C41-1D86-4c69-9D64-308616F38E63}
+      - "Dependency → better jobs"  # {0AD47829-0611-4e61-96C3-FBEC7E3BF165} → {24B99CAF-64AE-4b73-A62C-C27D53B0C5F3}
+      - "Dependency → decrease crime  rates"  # {E91A73D7-BA48-4e02-9ACC-0472E42B2045} → {2706207B-8A5D-499d-AD53-AEF1705FA53A}
+      - "Dependency → economic value"  # {3DB1B0F6-DFFC-416e-93C3-0F6FB023BD4C} → {8639A6FC-BEDD-4411-8556-2C98C7210FA3}
+      - "Dependency → eliminating faulty parking"  # {1CCB6EB7-4181-44e0-80A0-CF4212B2CE64} → {0438993A-D49A-443f-94A9-DDDCC79E7BAC}
+      - "Dependency → traffic management"  # {A90D4B82-7C7C-4ca0-89B2-CEF55D9861AA} → {8D169706-00F4-4dad-AD44-D170A4D33F59}
+      - "Dependency → transport company expects facilities to be available"  # {CCE5EDC8-475A-4cf3-9114-E167226A2FAE} → {8DEA5A3E-B9A3-4476-BFAB-A8ACF31CC25D}
+      - "Dependency → user expects access to be free"  # {116D9A39-5693-4fdc-AAAD-448B2DDFDAD3} → {BD7F80A8-F0B7-4ee1-BC62-9BAEE7591C8D}
+  - name: "European Commission"
+    guid: "{81FF44AA-B6F9-4aad-A3C7-3F35C50B5FAE}"
+    type: "Actor"
+    stereotype: "Stakeholder"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Dependency → "  # {5DAF5457-A01F-4330-8B41-BCF04EE2E7D2} → {A0F77BBB-3000-45fe-B468-5A9CB979EAA0}
+      - "Dependency → EC expects project to be completed as cheap as possible"  # {02085BC8-CF28-4f3d-895B-D470C5EE6B1B} → {1D5F1BD0-F70D-43b1-8859-902EBF49E32E}
+      - "Dependency → Truck Parking Vision: Increase road safety EU wide - Reduce road deaths to zero"  # {8994F178-26CD-41ac-A3CF-382DE4DD70F3} → {3DC87C35-2FA2-4712-BA83-34F1DC4352CD}
+      - "Dependency → adhering to driving hours"  # {63009B7F-D94A-4552-958A-4C10A7375BE0} → {95734C41-1D86-4c69-9D64-308616F38E63}
+      - "Dependency → better use of current capacity"  # {492D8FB8-7A54-4228-BC87-DFFDF2C82B55} → {A67DA457-FEF5-4a1a-87C8-9461D8BFB277}
+      - "Dependency → decrease crime  rates"  # {81DEAAA4-DCC4-437e-83AF-0A0297729330} → {2706207B-8A5D-499d-AD53-AEF1705FA53A}
+      - "Dependency → eliminating faulty parking"  # {1D91610B-6AD5-4390-AC55-DD695811C3F7} → {0438993A-D49A-443f-94A9-DDDCC79E7BAC}
+      - "Dependency → traffic management"  # {924A8EF4-D8EA-46f1-B32F-A102EF45D000} → {8D169706-00F4-4dad-AD44-D170A4D33F59}
+  - name: "Hauler"
+    guid: "{3F2873CB-DB22-4e4f-B4ED-9AFF4CFD4E75}"
+    type: "Actor"
+    stereotype: "Stakeholder"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Dependency → adhering to driving hours"  # {7BE8BCA2-0FBA-4f74-9674-E8EBA300C41C} → {95734C41-1D86-4c69-9D64-308616F38E63}
+      - "Dependency → decrease crime  rates"  # {E681892B-9936-46af-A9CD-9A9715732E23} → {2706207B-8A5D-499d-AD53-AEF1705FA53A}
+      - "Dependency → economic value"  # {0796312C-CE4D-423f-B3F6-590266810073} → {8639A6FC-BEDD-4411-8556-2C98C7210FA3}
+      - "Dependency → eliminating faulty parking"  # {12D73B1C-81DD-4ed9-804B-67AD66D8DD2C} → {0438993A-D49A-443f-94A9-DDDCC79E7BAC}
+      - "Dependency → traffic management"  # {9E1B222B-C6DA-4966-90C3-F2009A034E3F} → {8D169706-00F4-4dad-AD44-D170A4D33F59}
+      - "Dependency → transport company expects facilities to be available"  # {8B8A8F9B-6C76-4924-8F93-68F594C37A73} → {8DEA5A3E-B9A3-4476-BFAB-A8ACF31CC25D}
+      - "Dependency → user expects access to be free"  # {20D8F8B6-3A7B-420e-B36B-16E62C124B97} → {BD7F80A8-F0B7-4ee1-BC62-9BAEE7591C8D}
+  - name: "Insurance Company"
+    guid: "{C28BC506-EFEC-479f-A13D-0A622EC19E56}"
+    type: "Actor"
+    stereotype: "Stakeholder"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Dependency → adhering to driving hours"  # {5D439C0D-79E2-400b-94E6-C0D8A371D70F} → {95734C41-1D86-4c69-9D64-308616F38E63}
+      - "Dependency → decrease crime  rates"  # {26F40310-CB5E-497c-9F11-07FD8E4FA7FD} → {2706207B-8A5D-499d-AD53-AEF1705FA53A}
+      - "Dependency → eliminating faulty parking"  # {11A083CA-F23F-49c9-BF36-F49D031AEFE8} → {0438993A-D49A-443f-94A9-DDDCC79E7BAC}
+      - "Dependency → traffic management"  # {C0EBCC20-E368-48fc-A492-E89040DA3494} → {8D169706-00F4-4dad-AD44-D170A4D33F59}
+      - "Dependency → user expects access to be free"  # {399EF509-E01B-4935-9879-B415E898C0C4} → {BD7F80A8-F0B7-4ee1-BC62-9BAEE7591C8D}
+  - name: "Park Operator"
+    guid: "{D748CDA8-456F-4143-81F4-D74079659590}"
+    type: "Actor"
+    stereotype: "Stakeholder"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Dependency → "  # {130DF402-45E4-4f2d-8279-749C1EAAC6A6} → {A0F77BBB-3000-45fe-B468-5A9CB979EAA0}
+      - "Dependency → Truck Parking Vision: Increase road safety EU wide - Reduce road deaths to zero"  # {1EEFB529-05C6-4e3f-A6C3-A98E70DD17B4} → {3DC87C35-2FA2-4712-BA83-34F1DC4352CD}
+      - "Dependency → adhering to driving hours"  # {CD3265F6-4D49-46f9-A9F1-3DB0C2E7F8E2} → {95734C41-1D86-4c69-9D64-308616F38E63}
+      - "Dependency → decrease crime  rates"  # {1E1308D8-A865-461e-BA60-DEBDAB2CC597} → {2706207B-8A5D-499d-AD53-AEF1705FA53A}
+      - "Dependency → eliminating faulty parking"  # {16CE66FA-F5FE-4764-95C6-05AF5338E260} → {0438993A-D49A-443f-94A9-DDDCC79E7BAC}
+      - "Dependency → park operator expects to earn money for their services"  # {636FFB44-0BE4-49a8-BFFB-5AEA6D77EFFB} → {0D562072-01CC-4bcf-BE4D-79CF511D3411}
+      - "Dependency → traffic management"  # {6DA00356-FEE1-408b-A26E-6FF4CCE3C477} → {8D169706-00F4-4dad-AD44-D170A4D33F59}
+  - name: "Police"
+    guid: "{CFCDCB72-E313-4420-85A9-0FE321A19F04}"
+    type: "Actor"
+    stereotype: "Stakeholder"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Dependency → adhering to driving hours"  # {B23376C6-40B7-42a5-BE94-60F028C62195} → {95734C41-1D86-4c69-9D64-308616F38E63}
+      - "Dependency → decrease crime  rates"  # {A511D5F0-8FFC-4db5-A01C-AA1BB022D665} → {2706207B-8A5D-499d-AD53-AEF1705FA53A}
+      - "Dependency → eliminating faulty parking"  # {782A520B-F4C2-425c-BA28-88569B8F115F} → {0438993A-D49A-443f-94A9-DDDCC79E7BAC}
+      - "Dependency → traffic management"  # {F85D4805-1AB9-46df-92A6-12F14444F137} → {8D169706-00F4-4dad-AD44-D170A4D33F59}
+      - "Dependency → user expects access to be free"  # {87BEFEF6-EEC8-435c-B09F-F3C90BBDD6EF} → {BD7F80A8-F0B7-4ee1-BC62-9BAEE7591C8D}
+  - name: "Road Authority"
+    guid: "{E2EB923C-2E39-431c-A85A-54F8577EE10F}"
+    type: "Actor"
+    stereotype: "Stakeholder"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Dependency → adhering to driving hours"  # {9023CF93-E053-4585-8A0C-40FFB0AAE3BB} → {95734C41-1D86-4c69-9D64-308616F38E63}
+      - "Dependency → better use of current capacity"  # {3242DA12-5E81-499a-BD54-B9AB50DA5CC2} → {A67DA457-FEF5-4a1a-87C8-9461D8BFB277}
+      - "Dependency → decrease crime  rates"  # {8B24C7FA-418A-409b-8555-F9FF096C797B} → {2706207B-8A5D-499d-AD53-AEF1705FA53A}
+      - "Dependency → eliminating faulty parking"  # {A423BED2-3152-4fd5-BAC6-72D759398C83} → {0438993A-D49A-443f-94A9-DDDCC79E7BAC}
+      - "Dependency → traffic management"  # {32118E07-A65C-45bd-8E10-B37849AF0EBC} → {8D169706-00F4-4dad-AD44-D170A4D33F59}
+      - "Dependency → user expects access to be free"  # {2FE333F7-D84D-40fe-8902-035AFFA9C63A} → {BD7F80A8-F0B7-4ee1-BC62-9BAEE7591C8D}
+  - name: "Service Provider"
+    guid: "{E97F6403-7C91-455a-809A-598FAC2EC016}"
+    type: "Actor"
+    stereotype: "Stakeholder"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Dependency → "  # {65E4C623-4F8F-4da6-8383-4619EECB25A2} → {A0F77BBB-3000-45fe-B468-5A9CB979EAA0}
+      - "Dependency → Truck Parking Vision: Increase road safety EU wide - Reduce road deaths to zero"  # {7245B886-C61C-48a5-A9C6-9351B81D9300} → {3DC87C35-2FA2-4712-BA83-34F1DC4352CD}
+      - "Dependency → adhering to driving hours"  # {3508223D-129F-42f1-A601-3606DE7D0473} → {95734C41-1D86-4c69-9D64-308616F38E63}
+      - "Dependency → decrease crime  rates"  # {FDC0640A-09DC-4193-980A-289BB4110802} → {2706207B-8A5D-499d-AD53-AEF1705FA53A}
+      - "Dependency → eliminating faulty parking"  # {879D7963-D8CD-46fb-91D1-87A9290707E8} → {0438993A-D49A-443f-94A9-DDDCC79E7BAC}
+      - "Dependency → service provider expects to profit from the service provided"  # {B3706DC6-F1DA-47cd-BF21-01FE4F12C09C} → {BFD383C6-2A1D-482c-AD38-A97644D20A8F}
+      - "Dependency → traffic management"  # {A6CB0D24-2659-4e11-93F5-EFA42A5D2DFC} → {8D169706-00F4-4dad-AD44-D170A4D33F59}
+  - name: "Traffic Management Body"
+    guid: "{EEE8D21A-47DE-4fa2-BE3E-3B915A684AD6}"
+    type: "Actor"
+    stereotype: "Stakeholder"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Dependency → adhering to driving hours"  # {E2F65584-C6A5-45a6-8EBA-3A89309901AD} → {95734C41-1D86-4c69-9D64-308616F38E63}
+      - "Dependency → better use of current capacity"  # {1A7224C2-EF3B-4289-B17A-F048E9999953} → {A67DA457-FEF5-4a1a-87C8-9461D8BFB277}
+      - "Dependency → decrease crime  rates"  # {A4594B88-8211-47aa-A211-B5681E27A8D0} → {2706207B-8A5D-499d-AD53-AEF1705FA53A}
+      - "Dependency → eliminating faulty parking"  # {E6047267-F4CA-44e9-8273-00C3C64488B8} → {0438993A-D49A-443f-94A9-DDDCC79E7BAC}
+      - "Dependency → traffic management"  # {E3EFBFB0-A052-4836-932F-B77690E33638} → {8D169706-00F4-4dad-AD44-D170A4D33F59}
+      - "Dependency → user expects access to be free"  # {C7E6C51A-1D9A-49ca-ACC0-8082E782F525} → {BD7F80A8-F0B7-4ee1-BC62-9BAEE7591C8D}

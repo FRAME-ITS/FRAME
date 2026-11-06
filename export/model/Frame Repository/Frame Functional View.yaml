@@ -1,0 +1,14 @@
+package: "Frame Repository/Frame Functional View"
+guid: "{FCC177A5-78E6-4d9d-AF3E-B824A6ECAC90}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "$diagram:Data Flow Diagram for all Functional Areas (DFD0)"
+    guid: "{1A152203-7F86-497b-BE66-6EFECB3F5EC5}"
+    type: "Text"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      FrameNext : Functional Area Diagram (DFD0) - System

@@ -1,0 +1,432 @@
+package: "NAP Reference Architecture/Supplements/KPI Framework/01_KPIs"
+guid: "{29EA4196-EE1B-4913-81E4-4A2A07148536}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "KPI 1.1 Online availability"
+    guid: "{8BFE2113-E64D-4e68-8B54-D066BB7A0999}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      “On-line availability” KPI assesses whether the NAP platform is online or not. In this case, both REQ and ACC value is set to 1 to reflect that the on-line availability of a NAP constitutes a fundamental prerequisite.
+      
+      Values:
+      0: No
+      1: Yes
+      
+      Minimum acceptable value for interoperability: 1
+    links:
+      - "Association «fulfilled by» → Data Platform NAP"  # {4B6FF8A4-10A8-4154-9CF7-8F3E4A6E99CF} → {E5881292-2F25-4bc1-8840-23C9D1CC23A4}
+      - "Association «fulfilled by» → Metadata Directory NAP"  # {8A8C63AF-4ED8-4293-B5E9-C890167DD3B1} → {1B971F1C-E2FC-46e2-97A3-CCB248436727}
+  - name: "KPI 1.10 Security – providers verification"
+    guid: "{3F00CF71-2F41-413b-BAA8-CAF56CF80F39}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      “Security – providers verification” KPI assesses the extent to which the authenticity of provided data (e.g., input provided during the registration process) is verified. In case that a self-verification process is in place for data providers, this KPI takes a value equal to 1. On the other hand, when the authenticity of provided, data is doubled checked by both data providers and NAP operator, this KPI gets a value equal to 2.
+      
+      Note: This is about metadata of a data provider regarding registration process (i.e., before obtaining username and password or other identity). It’s about trust/credibility of a provider
+      
+      N/A: No data provider can use the NAP interface
+      0: No
+      1: Self-authentication of data providers (e.g., via e-mail)
+      2: Authentication of data providers is double checked, i.e., by the data provider and approved by the NAP operator
+      
+      Minimum acceptable value for interoperability: 1
+    links:
+      - "Association «fulfilled by» → User Management Module"  # {895B8C3B-11E0-4187-86ED-F05BE8F625DE} → {83B61A0E-1086-4216-B72F-38DA9E185D9B}
+  - name: "KPI 1.11 Personal data protection"
+    guid: "{98803393-08B6-41af-BF7A-64B27C0FB955}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      “Personal data protection” KPI aims to assess whether personal data is stored in a manner compliant to GDPR norms. This KPI is not addressed as affecting the minimum level of service of a NAP; however, the existence of a GDPR-compliant procedure for handling personal data is associated with an increased level of service.
+      
+      If the NAP stores personal information about registered users (consumers and/or providers), is the storage and handling of personal information compliant with GDPR?
+      
+      N/A: There is no user data stored at NAP
+      0: Non-compliance to GDPR
+      1: GDPR compliance at the platform level (i.e., “platform GDPR compliance”)
+      
+      Minimum acceptable value for interoperability: 1
+    links:
+      - "Association «fulfilled by» → User Management Module"  # {310B7CF9-87E1-4b5d-AEEB-1AF41BD552D6} → {83B61A0E-1086-4216-B72F-38DA9E185D9B}
+  - name: "KPI 1.12 Procedure for input of metadata or data to the NAP"
+    guid: "{CC4B272E-7DCA-4084-AF3B-71E934E4BF43}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      “Procedure for publication of data on the NAP” KPI assesses whether data providers need to register to add data/metadata. It gets a value equal to 0 when data or metadata is uploaded by the NAP operator, equal to 1 when data providers upload data/metadata by themselves, equal to 2 when the uploaded data has no verification process performed from the NAP side, equal to 3 when data providers are inputting data and/or metadata and content is verified manually in some random samples by the NAP operator, as well as equal to 4 when the uploaded data is verified automatically by the NAP. REQ level of service is associated with possibility on behalf of data providers to upload data/metadata by themselves with no verification from the NAP.
+      
+      In what way can data providers add data and/or metadata to the NAP?
+      
+      0: No data or metadata can be provided via the NAP online/web interface
+      1: Data resource metadata and/or providers' data is added by the NAP operator
+      2: The data providers are inputting data and/or metadata themselves, no verification process is performed from the NAP side
+      3: The data providers are inputting data and/or metadata + content of the (meta)data is verified manually in some random samples by the NAP operator (like technical or logical check of correct input type or completeness of the mandatory fields)
+      4: The data providers are inputting data and/or metadata + content of the (meta)data is verified (partially) automatically by the NAP (there is some verification process automatically running, like technical or logical check of correct input type or completeness of the mandatory fields)
+      
+      Minimum acceptable value for interoperability: 2
+    links:
+      - "Association «fulfilled by» → Data Management Application"  # {5C3A7361-389A-41b3-8F6A-7D84A5B97518} → {919C23BB-5FFF-4300-A416-F084AB9FE538}
+      - "Association «fulfilled by» → Metadata Management Module"  # {AB0B54BD-D974-4ade-A44F-98332B1E57B9} → {4C1A7740-ADB9-4654-9703-57AC92DD6D54}
+  - name: "KPI 1.13 Metadata output and access restrictions"
+    guid: "{5E6E9B2A-B90D-4b97-81D1-ECE9E45EDF5B}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      “Metadata access restrictions” KPI assesses whether NAP users/data consumers require to register to access the metadata of a NAP’s publications. The indiscriminate need of NAP users/data consumers to access any type of metadata is not addressed as a favourable condition for a NAP’s level of service, considering the imposed barrier to a NAP’s content discoverability. Therefore, it is assumed that a minimum level of service is associated with the possibility on behalf of NAP users/data consumers to freely access the metadata of publicly available publications.
+      
+      Do data consumers need to register to search through the metadata information of the NAP?
+      
+      0: No metadata is provided via the online/web NAP interface
+      1: Consumers need to register to view (search/get access to metadata) any NAP content
+      2: Consumers need to register to get access to specific metadata of any dataset
+      3: Consumers need to register to get access to specific metadata only for non-publicly available datasets
+      4: No registration necessary / consumers have full access to the metadata and the search functionalities
+      
+      Minimum acceptable value for interoperability: 3
+    links:
+      - "Association «fulfilled by» → Metadata Management Module"  # {02C6C2AB-41A9-4459-9C39-0EEC813D6C04} → {4C1A7740-ADB9-4654-9703-57AC92DD6D54}
+      - "Association «fulfilled by» → User Management Module"  # {65C918A2-D367-413c-A6EA-8D474DD17F4B} → {83B61A0E-1086-4216-B72F-38DA9E185D9B}
+  - name: "KPI 1.14 Data security and access restrictions for data uploading"
+    guid: "{28E122D6-8DA1-4746-BA9B-01CEDB73BF9C}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      “Data security and access restrictions for uploading” KPI aims to assess the availability of security mechanisms controlling and restricting the possibility of data uploading. This KPI is addressed as making sense only if a NAP complies with the concept of a data portal. Given that several access and authentication control methods exist, the value of this KPI is increased by 1 when more than one method is applied. The predetermined options include (a) the utilization of the HTTP Strict Transport Security (HSTS) mechanism that enables the interaction of a NAP’s server with other machines only through HTTPS connections, (b) the utilization of IP Address Authentication mechanism configuring the API Gateway of a NAP to allow its interaction with machines the IP address of which is included in the list of accepted IP addresses, (c) the Basic RFC 7617 Authentication mechanism which enforces the transmission of credentials (e.g., username and password) encoded according to Base64, (d) the utilization of the Digest RFC 7617 Authentication which enforces the transmission of credentials and any other requested information in an encrypted form, (e) the authentication by URL parameters enabling the provision of authentication information to a NAP in the form of query string parameters, and (f) authentication through client certificates that allow a machine to communicate with a NAP only when a client certificate (e.g., a PKCS12 file) is loaded onto that machine.
+      
+      When uploading data as a provider, are there security mechanisms in place to ensure the trust in the data or restricting the access to the NAP?
+      
+      N/A: Metadata directory case (No data can be uploaded via the NAP online/web interface)
+      0: No data can be uploaded via the NAP online/web interface in a data platform NAP type
+      0: No security or authentication mechanisms are in place in a data platform NAP type
+      0: Security and/or authentication mechanisms are in place to ensure the trust in the data or restrict the access for your NAP
+      Value+1 (for each of the following options): Which security mechanisms are in place to ensure the trust in the data or restrict the access for your NAP? You can select more options:
+      a. Transport security (https)
+      b. Authentication by IP filter (access based on IP address of the provider)
+      c. Basic authentication according to RFC 7617
+      d. Digest authentication according to RFC 7616 (https://tools.ietf.org/html/rfc7616)
+      e. Authentication by URL parameters
+      f. Authentication by client certificate (incl. EU-wide common user authentication mechanism)
+      
+      Minimum acceptable value for interoperability: 2
+    links:
+      - "Association «fulfilled by» → Data Management Application"  # {BFFA3A27-6DCB-4514-A5CB-D80062A8758A} → {919C23BB-5FFF-4300-A416-F084AB9FE538}
+      - "Association «fulfilled by» → User Management Module"  # {107A40A4-C19B-4446-B221-F94C880A16E4} → {83B61A0E-1086-4216-B72F-38DA9E185D9B}
+  - name: "KPI 1.15 Data security and access restrictions for data downloading"
+    guid: "{FF1FD326-276A-49ad-A615-783A959D7C6B}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      “Data security and access restrictions for downloading” follows the same logic as the previous one with the only difference being that data downloading is in the spotlight (instead of data uploading).
+      
+      When accessing data as a consumer, are there security mechanisms in place to ensure the trust in the data or restricting the access to the NAP or the data?
+      
+      Minimum acceptable value for interoperability: 3
+      
+      Values:
+      N/A: Metadata directory case (No data is provided via NAP online/web interface)
+      0: No data is provided via NAP online/web interface in a data platform NAP type
+      0: No security or authentication mechanisms are in place in a data platform NAP type
+      0: Security and/or authentication mechanisms are in place to ensure the trust in the data or restrict the access for the NAP
+      Value+1 (for each of the following options): Which security mechanisms are in place to ensure the trust in the data or restrict the access for your NAP? You can select more options:
+      a. Transport security (https)
+      b. Authentication by IP filter (access based on IP address of the consumer)
+      c. Basic authentication according to RFC 7617 (https://tools.ietf.org/html/rfc7617)
+      d. Digest Authentication according to RFC 7616 (https://tools.ietf.org/html/rfc7616)
+      e. Authentication by url parameters
+      f. Authentication by client certificate (private keys, certificates, incl. EU-wide common user authentication mechanism)
+      
+      Minimum acceptable value for interoperability: 2
+    links:
+      - "Association «fulfilled by» → Data Management Application"  # {12C11923-F39B-4da5-B381-F90380D5DF3C} → {919C23BB-5FFF-4300-A416-F084AB9FE538}
+      - "Association «fulfilled by» → User Management Module"  # {2A812791-E104-48ac-8F64-7726B3F550EF} → {83B61A0E-1086-4216-B72F-38DA9E185D9B}
+  - name: "KPI 1.16 Indication of data modification"
+    guid: "{0D51A185-39DD-41c0-AFC9-4FFC32EE8D97}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      Link NAR Open: Part of Meta Data Description
+      
+      “Indication of data modification” KPI assesses the extent to which the change of a dataset compared to its previous state is indicated by a NAP. Changes encompass both changes in the actual content of a dataset that is stored in a NAP (e.g., static data) and changes in its metadata. In such a case, it is assumed that a minimum level of service is associated with the support by the webserver of a NAP of either “if-modified-since” or “if-none-match” method, while an advanced level of service is associated with the support by the webserver of a NAP of both methods. The former method expresses the ability of a NAP’s webserver to specify the last time a change has been made on a provided content, while the latter expresses the ability of a NAP’s webserver to use ETag headers (the value of which supports the assessment of whether a change has been made or not) and return the changed part of the provided content.
+      
+      When accessing the data stored at NAP (snapshots / static datasets), is an indication of the change of the dataset available in comparison to previous access?
+      
+      0: No data is provided via NAP interface and no metadata is used for the information about data modification; or no change/modification information is provided
+      1: Webserver uses “Last updated time” information
+      2: Webserver uses either if-modified-since or if-none-match (etag) headers
+      3: Webserver uses both if-modified-since and if-none-match (etag) headers
+      
+      Minimum acceptable value for interoperability: 1
+  - name: "KPI 1.17 Data transfer optimization"
+    guid: "{025CAF43-3430-4650-B487-6B6AAF7E6C50}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      “Data transfer optimization” KPI assesses the extent to which a NAP can optimize data transferring by compressing the requested content. This KPI is addressed as making sense only if a NAP complies with the concept of a data portal, since a data directory is not involved at all in the data transferring process. A value equal to 0 indicates that such a functionality does not exist, while a value equal to 1 indicates that a NAP serving as a data portal can provide either compressed or uncompressed content based on a client’s request.
+      
+      
+      Can the NAP server compress the requested content to speed up the transfer?
+      
+      N/A: Metadata directory case (No data is provided via the NAP online/web interface)
+      0: No data is provided via the NAP online/web interface in a data platform NAP type or no possibility of data transfer optimization there (i.e., no reaction to a client request, data is provided in an uncompressed form)
+      0: Data is provided (un)compressed per clients' request
+      Value+1 (for each of the following options): You can select more options:
+      a. Data is (or can be) provided compressed (may include compression in Geopackage, WFS/WMS API's, TN-ITS update messages)
+      b. The user can select if the data will be provided uncompressed or compressed
+      c. Data can be provided in a differential form, i.e., new data only and/or changes to the previous state where a relevant date/time/period can be set by the user
+      
+      Minimum acceptable value for interoperability: 1
+    links:
+      - "Association «fulfilled by» → F3.6.9 Manage NAP Data Retrieval"  # {8DF4E1CA-FCA4-4366-8A69-27D85812587D} → {A3764B72-97E2-400c-81B8-C945964F9E0D}
+  - name: "KPI 1.18 API usage for data transfer"
+    guid: "{37F65E8F-2DCF-410e-BC8B-09B70FE6C162}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      “API usage for data transfer” KPI investigates whether a NAP is equipped with an Application Programming Interface (API) service that allows clients of data consumers to request and download through external code data and metadata content or other resources matching specific queries. Moreover, it investigates whether such a service allows the clients of data providers to automatically upload and import (through external coding) new data and metadata content but also update it or even delete it. In line with the previous KPI, the current one is addressed as making sense only if a NAP complies with the concept of a data portal, since a data directory is not involved at all in the data transferring process. Given that the focus of NAPs is placed (or at least should be placed) on machine-to-machine communication and data exchange supporting the operation of ITS systems, a minimum level of service is associated with the existence of an API service allowing at least the automated upload of data and metadata content.
+      Does the NAP include Application Programming Interfaces for automated data exchange?
+      
+      N/A: Metadata directory case (No data is transferred via the NAP interface)
+      0: No data is transferred via the NAP interface in a data platform NAP type
+      0: No API, just the web-based interface is used in a data platform NAP type
+      0: API is available in a data platform NAP type
+      Value+1 (for each of the following options): Which Application Programming Interfaces for automated data exchange are used for your NAP? You can select more options:
+      a. API for upload (data producers)
+      b. API for download (data consumers)
+      
+      Minimum acceptable value for interoperability: 1
+    links:
+      - "Association «fulfilled by» → F3.6.8 Manage Data Input"  # {5CA1BD49-78EC-4fd3-A434-13F9BDA3B1D7} → {5B4F357F-A164-4a3f-8909-C370F4C0615F}
+      - "Association «fulfilled by» → F3.6.9 Manage NAP Data Retrieval"  # {9F0EF45A-1C3D-4bc5-A615-5B3666CBD3FB} → {A3764B72-97E2-400c-81B8-C945964F9E0D}
+  - name: "KPI 1.2 Compatibility with web browsers"
+    guid: "{E60C5591-AB99-4a20-B975-9734FE18899F}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      “Compatibility with web browsers” KPI refers to the compatibility of NAP with different web browsers. The ACC KPI value is set to 1 indicating that a NAP platform should be operational with at least one web browser, whereas the REQ required KPI value is set to 2 to indicate an increased level of service when a NAP is operational with the most common web browsers. This KPI is closely related to the previous one, considering that its quantification makes sense only when a NAP is available online.
+      
+      0: No
+      1: Yes, with one or more specific web browsers (e.g., Firefox)
+      2: Yes, with all of the following 5 browsers: Firefox, Google Chrome, Microsoft Edge, Apple Safari and Opera
+      
+      Minimum acceptable value for interoperability: 1
+    links:
+      - "Association «fulfilled by» → Data Platform NAP"  # {1396B603-DC72-4300-9C61-6C03457F708F} → {E5881292-2F25-4bc1-8840-23C9D1CC23A4}
+      - "Association «fulfilled by» → Metadata Directory NAP"  # {10A856A0-E041-4d50-A47A-FFABA900D368} → {1B971F1C-E2FC-46e2-97A3-CCB248436727}
+  - name: "KPI 1.3 Web performance – latency"
+    guid: "{A1BA8118-FD66-4705-9494-A432A308D211}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      What is the NAP approximate webpage response/latency time duration in milliseconds during peak hours (time delay from some stimulus to work with the website to reaction, typically loading the introductory (main) web page)?
+      For the measurement, you can use the development tool in the web browser (Ctrl+Shift+I in Chrome or F12 in Firefox).
+      
+      Value 0 to infinity
+      
+      Minimum acceptable value for interoperability: 2000
+    links:
+      - "Association «fulfilled by» → Content Consumer data retrieval interface"  # {EA5899D5-E604-4f81-A494-FA7155A6BBC9} → {46EF7C20-D17A-4964-9EEC-CFC8A2161BB1}
+      - "Association «fulfilled by» → Content Consumer support interface"  # {DA1264D0-9C63-4348-8596-473269BF891B} → {9D010BE5-6592-4e26-86F6-6D16140A0A39}
+      - "Association «fulfilled by» → Content Provider Metadata repository interface"  # {F346B9C2-2F6F-407d-B833-8802F4BC2EC5} → {DAA1010E-3FD1-49b7-AC66-2080DB101A8E}
+      - "Association «fulfilled by» → Content Provider Support interface"  # {8A119336-BE19-4668-87AA-FD09184CE9A1} → {2B49F77B-92D8-4494-B75B-7482740303ED}
+      - "Association «fulfilled by» → Content Provider data provision interface"  # {0474F2A4-3FFD-42d3-9311-D6CC722D8A79} → {C03CF47C-96E7-4733-B905-CB836A908BB7}
+      - "Association «fulfilled by» → Content Provider user management interface"  # {EA6D1319-5CAF-4c43-8375-A2D3F643D771} → {D137DB55-A2D0-4a62-9A98-6144AC1C5404}
+      - "Association «fulfilled by» → Interface Content Consumer - Metadata component"  # {B86C78E3-64E4-47a3-AF34-2C4E9DED2069} → {ECF5445C-50A8-4ca3-8C86-50DB480DBD8C}
+      - "Association «fulfilled by» → user management metadata repository interface"  # {C943A5C5-49C4-466e-9ADA-40DD044DD6D8} → {572A0DDD-F3CD-426f-B920-5E8E986DFC0C}
+  - name: "KPI 1.4 Responsiveness"
+    guid: "{A619225B-8550-4dca-B6EE-0505006A4749}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      “Responsiveness” KPI examines whether a NAP’s web design is adaptable to different devices and screen sizes. There are three possible values that this KPI may take. A value equal to 0 indicates that there is no responsiveness, a value equal to 1 indicates that a NAP is responsive to different screen sizes and, lastly, a value equal to 2 indicates that a NAP is responsive to both different screen sizes and devices. The minimum level of service is associated, in this case, with the responsivity of a NAP to at least different screen sizes.
+      
+      0: No responsive web design
+      1: Responsive web design for different screen sizes on PC
+      2: Responsive web design for different screen sizes and devices
+      
+      Minimum acceptable value for interoperability: 1
+    links:
+      - "Association «fulfilled by» → Data Platform NAP"  # {36EA20EC-F99D-49c4-A93C-FF74BEDE910A} → {E5881292-2F25-4bc1-8840-23C9D1CC23A4}
+      - "Association «fulfilled by» → Metadata Directory NAP"  # {D8846E4E-BEEB-4c0d-B142-828F4679F335} → {1B971F1C-E2FC-46e2-97A3-CCB248436727}
+  - name: "KPI 1.5 Web performance – Simplicity / usability"
+    guid: "{19537BDF-1852-45b1-A148-C47A90792691}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      What is the average number of operations (e.g., key presses, mouse wheel movements, mouse/screen clicks) required to get access to metadata (without getting the data itself)?
+      The value should be relevant for getting access to “metadata language” or “metadata contact point” (if you are having both, please, use an average).
+      The value should be relevant to a skilled user, i.e., who already knows the set-up of the website (where to find the metadata).
+      The value refers to unregistered or logged-in user (the logging process is not involved in the parameter).
+      
+      Value 0 to infinity
+      
+      Minimum acceptable value for interoperability: 10
+    links:
+      - "Association «fulfilled by» → Data Platform NAP"  # {EF45F417-2FAF-43ce-A241-C70363E22BD1} → {E5881292-2F25-4bc1-8840-23C9D1CC23A4}
+      - "Association «fulfilled by» → Metadata Directory NAP"  # {F5C45B1D-8866-4c1b-AE6C-D8106300B9E2} → {1B971F1C-E2FC-46e2-97A3-CCB248436727}
+  - name: "KPI 1.6 Data visualization"
+    guid: "{029037A9-99C2-45b7-BA28-87E427702779}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      Not linked to NAR elements!!
+      
+      Does the NAP include data visualization functionalities?
+      
+      Note: The visualization can include graphs summaries of data aggregation, time series, maps with areas of service, maps with information from data (location of pitstops) etc.
+      
+      Note: Even if no data is provided via NAP interface (like in metadata directories), it is still possible to have visualization available, e.g., through WMS.
+      
+      0: No visualization of data
+      0: Visualization is available
+      Value+1 (for each of the following options): What types of data visualization functionalities are available? You can select more options:
+      	a. Data download, allowing the user to do some visualization at the clients' side
+      	b. Visualization available as images presented on the web
+      	c. Visualization available as interactive web map services
+      	d. Visualization available projecting a time-lapse video (for a selected time period)
+      
+      Minimum acceptable value for interoperability: 1
+  - name: "KPI 1.7 Web performance – Consistency and navigability"
+    guid: "{4B3700B3-CF65-470c-83D9-B0FB0A7D7E69}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      Not linked to NAR!
+      
+      Does the NAP adhere to principles of web structure, page layout and menu structure?
+      
+      Initial value 0 and then +1 for each of the following options: You can select more options:
+      a. Menus are in the same position
+      b. Use of same fonts and colours throughout the site
+      c. Availability of a search box on each page
+      d. Logo links back to the home page
+      e. Existence of a hierarchical arrangement of web subpages
+      f. Existence of a “sitemap” page easing navigation (e.g., a tree structure with links to individual pages)
+      
+      Minimum acceptable value for interoperability: 2
+  - name: "KPI 1.8 Support of commonly used languages"
+    guid: "{69E72527-738E-4f0d-AB71-879AF126CC0A}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      “Support of commonly used languages” KPI may take four possible values. A value equal to 0 indicates that a NAP supports only the national language. A value equal to 1 indicates that although a NAP supports English, some of its content (e.g., metadata of included publications) is provided only in the national language. On the other hand, a value equal to 2 indicates that a NAP fully supports the English language.
+      
+      Note: This is relevant to the webpage while this is not relevant to the metadata/data content that depend on its publisher.
+      
+      0: Supports national language only, other than EN
+      1: Supports EN but some content in national language only (other than EN)
+      2: Supports EN for platform and all content (user interface and all text content)
+      
+      Minimum acceptable value for interoperability: 1
+    links:
+      - "Association «fulfilled by» → Metadata Management Module"  # {9792F813-8145-42d2-9B99-0D150DD5D08E} → {4C1A7740-ADB9-4654-9703-57AC92DD6D54}
+      - "Association «fulfilled by» → Support (ticket) Module"  # {BD14686E-A1C2-4ffa-962A-17855E7D2CBF} → {02101F2C-788B-49ea-8C0D-AD3B498E1E53}
+  - name: "KPI 1.9 Security – Technical"
+    guid: "{F1AE9278-2AB5-4ade-9476-7518D07969C2}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      “Security – Technical” KPI addresses the existence of security features (i.e., security certificates) and the protection of personal data provided by NAP users. A value equal to 0 points out the absence of any security feature. On the other hand, a value equal to 1 indicates the existence of security certificates in specific parts of a NAP’s website, while a value equal to 2 indicates the existence of security certificates throughout the website of a NAP. In that case, a minimum level of service is assumed to be exhibited by a NAP when SSL certificates cover at least the most critical (in terms of data protection) parts of a NAP’s website.
+      
+      
+      0: Absence of security certificates
+      1: Partial existence of security certificates (e.g., in the landing page but not in the elements of the main sitemap)
+      2: Existence of security certificates in the entirety of the platform’s elements
+      
+      Minimum acceptable value for interoperability: 1
+    links:
+      - "Association «fulfilled by» → Data Management Application"  # {D7153152-891F-4d68-9D05-8C67C8C8E567} → {919C23BB-5FFF-4300-A416-F084AB9FE538}
+      - "Association «fulfilled by» → Metadata Management Module"  # {A8773D2B-A39A-4527-9BCF-6D7EF265EC17} → {4C1A7740-ADB9-4654-9703-57AC92DD6D54}

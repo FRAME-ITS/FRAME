@@ -1,0 +1,28 @@
+package: "eCall Reference Architecture/05 eCall Communication View/eCall interfaces"
+guid: "{A6A8087F-FF09-45c2-AE64-EFB9ED6C5EEB}"
+alias: ""
+version: "1.0"
+note: |
+  Defines communication interfaces used to connect components, applications or functionality and are widely based on standards. (ISO, IEEE, CEN, ETSI ...)
+elements:
+  - name: "PSAP Communication Interface"
+    guid: "{8AD07FA3-85A0-40ad-BAD8-97C5667995AE}"
+    type: "Interface"
+    stereotype: "FRAME_Interface"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Usage → PSAP eCall Modem Server"  # {9A39572F-3946-451d-9BF7-9507E3F74978} → {56CFDFDB-8969-43ad-B329-1CA7CD510A4F}
+  - name: "eCall IVS Communication Interface"
+    guid: "{E037AEE6-0F39-4472-87B0-993104DF8C65}"
+    type: "Interface"
+    stereotype: "FRAME_Interface"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Standard Reference...
+    links:
+      - "Usage → eCall Onboard Unit"  # {21A40EEC-4C51-4515-BF15-F3F2873111A3} → {3244E2A9-F15D-4568-9A9D-EBAD4BE0DD8C}

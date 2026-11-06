@@ -1,0 +1,14 @@
+package: "User Architecture Template/01 New Architecture Subset User Needs"
+guid: "{C791D0F1-1FBD-4aa9-9516-4FAFDE25756F}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: ""
+    guid: "{C51C9BA1-53FA-44fb-AB7A-0B49EF895488}"
+    type: "Text"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      ➢ Start with selecting User Needs from the "FRAME Repository"

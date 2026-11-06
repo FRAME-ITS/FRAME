@@ -1,0 +1,101 @@
+package: "eCall Reference Architecture/04 eCall Physical View/eCall Applications"
+guid: "{B7F17A83-2FF8-4ecf-91EF-413A0AA91A2F}"
+alias: ""
+version: "1.0"
+note: |
+  Defines software applications which are necessary to perform complete eCall ITS service. Applications can be linked to components or sub systems.
+elements:
+  - name: "Allocate eCall to PSAP"
+    guid: "{5050AC90-0C7B-48f2-B878-1AF265702584}"
+    type: "Object"
+    stereotype: "FRAME_Application"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "App_Environment": ""
+    note: ""
+  - name: "Contact eCall Source"
+    guid: "{78C85328-12AF-4ad4-B463-7CA76BA13CEF}"
+    type: "Object"
+    stereotype: "FRAME_Application"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "App_Environment": ""
+    note: ""
+  - name: "Create eCall Minimum Set of Data (MSD)"
+    guid: "{D2CDFC4F-4A5A-4906-9629-56F993B1EE05}"
+    type: "Object"
+    stereotype: "FRAME_Application"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "App_Environment": ""
+    note: |
+      Generating in vehicle eCall (MSD) based on triggering conditions from sensors and related dynamic information.
+      For static data use defined static information objects.
+  - name: "Perform all steps of emergency service according process definitions"
+    guid: "{9CF756D0-97AF-4106-B093-4E0DFE7D1291}"
+    type: "Object"
+    stereotype: "FRAME_Application"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "App_Environment": ""
+    note: ""
+  - name: "Receive and acknowledge eCall"
+    guid: "{09A99A14-880A-40c5-B499-1A0C61A4B32B}"
+    type: "Object"
+    stereotype: "FRAME_Application"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "App_Environment": ""
+    note: ""
+  - name: "Recieve eCall Call"
+    guid: "{2AEA5AED-AB2C-4ad1-AE38-9A5A0DFAFE7E}"
+    type: "Object"
+    stereotype: "FRAME_Application"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "App_Environment": ""
+    note: ""
+  - name: "Send out eCall"
+    guid: "{1B39E5EA-764B-4ef5-B76A-C84589AFABB9}"
+    type: "Object"
+    stereotype: "FRAME_Application"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "App_Environment": ""
+    note: ""
+  - name: "Send redirected eCall to PSAP"
+    guid: "{2954E06D-E862-4126-AF72-7DBFEDA85BB1}"
+    type: "Object"
+    stereotype: "FRAME_Application"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "App_Environment": ""
+    note: |
+      Transfer eCall to best suited national PSAP operator interface.
+  - name: "Transfer eCall Call"
+    guid: "{DA9D57B4-40D9-4313-B8A8-C84349046257}"
+    type: "Object"
+    stereotype: "FRAME_Application"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "App_Environment": ""
+    note: |
+      Receive, recognize as eCall MSD and

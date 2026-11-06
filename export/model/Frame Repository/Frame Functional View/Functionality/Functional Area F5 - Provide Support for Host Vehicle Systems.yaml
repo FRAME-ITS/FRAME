@@ -1,0 +1,1525 @@
+package: "Frame Repository/Frame Functional View/Functionality/Functional Area F5 - Provide Support for Host Vehicle Systems"
+guid: "{6C6C5EC2-933D-4593-A8EF-8A1B8A92387D}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "F5.11 Provide Driver Monitoring and eCall"
+    guid: "{1D137B7D-49D7-469b-B75F-C889DED53DC9}"
+    type: "Activity"
+    stereotype: "FRAME_High_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This High-level Function shall provide the facilities to monitor the status of the Driver and enable eCall messages to ne sent from the Host Vehicle.  The Function shall detect when the Driver is no longer alert, or has become ill, in which case it shall prompt the Driver to become more alert.  In the event that this fails, the Function shall issue an eCall automatically.  It shall also be possible for the Function to issue an eCall on request from the Driver.  No matter which way the eCall is initiated, the Function shall advise the Driver of the response.  The Function shall also record the key events of each trip and enable them to be subsequently reviewed in the event that the Vehicle is involved in an incident for which the Law Enforcement Agency has become involved.  When a green wave route is requested by a Driver, the Function shall send the request to the Provide Traveller Journey Assistance functionality for the route to be determined.  Once the route has been provided, the Function shall send it to the Manage Traffic functionality for implementation, unless it only includes one signalised road junction.  In this instance, the Function shall only request local priority at that junction.
+    links:
+      - "Aggregation «componentof» → F5. Provide Support for Host Vehicle Services"  # {8C333F73-98A7-423e-9BBB-BBF6D86A1C1C} → {F1EBADEA-D763-4ff2-9557-A98565A22658}
+      - "Association «IN» → pscs.ptja_green_wave_route_request"  # {3A8B772A-B725-4c3d-A630-894F31254A71} → {06061675-C6E8-4cee-9E7E-10C76FBA6FD0}
+      - "Association «IN» → psef_eCall_data"  # {BC999E47-6C9D-49ae-8586-ED6CB8D6D203} → {1CC7D5C6-A84C-4682-B3A5-35923A265B64}
+      - "Association «IN» → pshvs.psef_eCall_message"  # {E2473B6A-63BE-4d61-B030-402F6976DC94} → {64DC7079-F244-4eab-9759-120E446F43C7}
+      - "Association «IN» → pshvs_driver_details_for_operations"  # {7E43F4F0-0A5E-4065-8FA2-C11D23361D72} → {84869628-3077-444b-A3D3-1506E75023BB}
+      - "Association «IN» → pshvs_driver_impaired_and_eCall_information"  # {B8F09B9E-657B-4c2e-BB1D-A6F0A8290BC2} → {B21A7429-B1D4-4d90-BD49-8660F3CBFE2E}
+      - "Association «IN» → pshvs_driver_status_for_behaviour_classification"  # {D8B2DF4A-88E4-490d-855C-CA43A6C69FF0} → {A691678E-F1EA-4adc-8EFB-EE9BC1F8E8DC}
+      - "Association «IN» → td-pshvs_alert_warning"  # {5ABDD44D-7BA1-42f2-A305-451FE2EBFE4A} → {00F767DB-D04E-4ced-908A-A40077C12CE6}
+      - "Association «IN» → tlea-incident_data"  # {D339CAC1-7D74-4fd5-A906-1E46F77AEDCA} → {3C783077-EF66-42a0-98D0-26B42B2B594D}
+      - "Association «IN» → tv.hmi-eCall_response"  # {04E4F314-50EF-4aa8-A6CE-B941477F8DD4} → {760E0849-224B-4f0d-9994-692133BF73B1}
+  - name: "F5.12 Provide Vehicle Communications Interfaces"
+    guid: "{D7C917ED-CA9B-4e92-868E-80C5A2AA7BC3}"
+    type: "Activity"
+    stereotype: "FRAME_High_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This High-level Function shall enable data objects to be created from the Host Vehicle's systems interfaces, data objects created by its functionality to be made available to the Host Vehicle's systems and to enable communications between the Host Vehicle and Other Vehicles, in order to support the provision of advanced Driver assistance systems by systems in the Host Vehicle.  It shall provide functionality to enable copies of the current traffic signals to be displayed to the Host Vehicle Driver, the Host Vehicle identity (ID) to other functions, and shall inform the relevant authorities when the Host Vehicle is being used illegally.
+    links:
+      - "Aggregation «componentof» → F5. Provide Support for Host Vehicle Services"  # {2A2B790E-E833-4749-9DEB-082CF972568E} → {F1EBADEA-D763-4ff2-9557-A98565A22658}
+      - "Association «IN» → fd-request_relevant_incident_information"  # {80637F17-C6E6-4231-B79A-747D71888F31} → {D8C495BA-C66A-4941-948D-27D87F7C7CDA}
+      - "Association «IN» → flds-location_data_for_command_&_warning_outputs"  # {4FEABEAC-2B8A-40cc-81AB-3BE883B9DFB0} → {D2301F62-F92F-4c78-BAE7-8D01CC683DA1}
+      - "Association «IN» → fre-dynamic_commands_&_warnings_details"  # {32051D50-E89B-4654-896D-243D0C39C294} → {7B9C7BA0-4869-4fc9-AA6A-BAC78EF8DD14}
+      - "Association «IN» → fv.ov-emergency_brake_application"  # {ABAE006E-83F9-45fc-AAF8-17D8D92B61AE} → {E95E2355-E637-4e93-AB98-EF59E13FA784}
+      - "Association «IN» → fv.ov-ghost_vehicle_detected"  # {1D37B11B-AAEE-40a2-9174-9A098338C1DB} → {AEB54933-6ACD-43d2-9C32-E96D58958547}
+      - "Association «IN» → fv.ov-goods_being_carried"  # {C54A3062-EF3F-4a4a-B6F9-186EB11CA3C6} → {62D81E29-1486-4cbf-B380-F1D3F8366168}
+      - "Association «IN» → fv.ov-lane_use_commands"  # {343D9FC3-9FEC-4c6c-B5EC-97C1A4286984} → {C9755706-0932-4129-A787-A486F3F6BFD3}
+      - "Association «IN» → fv.ov-other_vehicle_attitude_for_host_service"  # {CADD51C7-C27E-45db-8E6B-23488FDDA0F2} → {B2573082-5D30-4463-AA84-0BE47040FD10}
+      - "Association «IN» → fv.ov-other_vehicle_location_for_host_vehicle"  # {9906CF07-C3A1-4037-A97F-1D94C5D52202} → {59E4EA88-D431-470a-AAB7-ED0FEC2E84BC}
+      - "Association «IN» → fv.ov-overtaking_vehicle_warning"  # {0145588B-E45B-4563-BE06-BB3BB4521C79} → {61582082-0E38-43ab-A99F-4A71F2431A86}
+      - "Association «IN» → fv.ov-red_light_running_warning"  # {EA5DFE75-7458-4939-84F9-108E09A27CFD} → {8E102675-2238-4b55-A75E-D613119278D9}
+      - "Association «IN» → fv.ov-road_information"  # {C3FC4412-4255-4320-82B1-79FDE51054C8} → {DD8899C0-4CB5-48da-A814-2E2DEC899C8F}
+      - "Association «IN» → fv.ov-road_surface_state"  # {E8CE42DB-F8B0-422b-9B2D-1630C05BC886} → {1E6D1853-9008-4858-9457-E9B27FCC46DF}
+      - "Association «IN» → fv.ov-safety_behaviour"  # {6C0F86D2-D5B3-4c31-979B-2F0868DA863D} → {21A0D545-35A4-40e3-BDD3-1235B0638F3E}
+      - "Association «IN» → fv.ov-traffic_queue_ahead"  # {CF1B5E81-CBB4-4a96-99C0-A9928EF28E3B} → {DC64545E-1ADE-439c-8F18-0C5EA603726A}
+      - "Association «IN» → fv.ov-visibility_data"  # {1A02E5A5-2A42-4b9d-A3E9-540F174DC345} → {F0479735-07DF-4f30-958D-7BB6FDFFC075}
+      - "Association «IN» → mt.pshvs_approaching_vehicles_urban_messages"  # {45BE29B3-666B-4108-832A-0D976C0B4C68} → {E053CAEF-4BF1-4f30-ADAB-C482DD247589}
+      - "Association «IN» → mt.pshvs_global_incident_related_warnings"  # {DB2CEFB3-5DCA-44e6-8E80-78ED87ED3B4C} → {CFC529BA-1DAA-42ee-92E6-C1BFE0215AB9}
+      - "Association «IN» → pshvs.mt_data_for_vehicles_as_incidents"  # {50E43D2F-AF2A-47f6-B73F-D32A1B36E769} → {E1BE3691-E754-4c58-8CF3-1E6080C06DA9}
+      - "Association «IN» → pshvs.mt_inter-urban_c&i_display_error"  # {B0CF45CE-5ED5-4dab-8A2F-B942E7B656EB} → {E5FFDE4B-0A12-4834-9B09-7021BB0BCD14}
+      - "Association «IN» → pshvs.mt_inter-urban_l&s_display_error"  # {18ECEA12-F626-4933-A5B1-75E4A24244A6} → {E0EFE89E-B712-489b-A2D0-6E93B5557188}
+      - "Association «IN» → pshvs.mt_other_vehicle_lane_departure_warning"  # {A98B38D5-5F2D-4ea8-AE50-F1E5606613BA} → {27CF4E54-8105-4f39-A757-4F1BE495B7AF}
+      - "Association «IN» → pshvs.mt_urban_c&i_display_error"  # {E0368439-3882-423c-A488-6EC16B028115} → {4FC6D94E-E26E-43b9-8B54-01DF148FC749}
+      - "Association «IN» → pshvs.mt_urban_l&s_display_error"  # {167B4218-574C-4df8-998B-251B95AE533F} → {F391B589-76D1-47cd-91F2-350BE9A002CB}
+      - "Association «IN» → pshvs.pepf_vehicle_ID"  # {82FEE8A0-E110-4c43-B946-E76F715D27E5} → {0DD3AACE-201A-4ab1-B698-D6245F5CDD52}
+      - "Association «IN» → pshvs.pscs_hazarduous_goods_vehicle_data_for_route"  # {999D67DD-B449-43c0-B444-42FA8937F5AD} → {9AE25689-CB48-40a5-86E4-EB9E5515C3F5}
+      - "Association «IN» → pshvs.pscs_vehicle_data_for_sensitive_areas"  # {3E0AEE7D-A445-4047-8F42-B8F78F870C4F} → {D5E14DFA-1850-4f79-9D40-D33E8DCBEB37}
+      - "Association «IN» → pshvs.psef_stolen_vehicle_notification"  # {9D84C1D2-9C82-436d-BF4A-079C4A9B1500} → {3C3AF200-C3B3-4a44-9512-FDE8582367A9}
+      - "Association «IN» → pshvs.psle_vehicle_ID"  # {CD622A7D-6948-47ef-8B41-DA53E32F531D} → {CCF1B095-0456-4528-92AC-E65806A8A0E0}
+      - "Association «IN» → pshvs_content_for_driver_output"  # {1B75A5C4-50A9-4c36-AC3B-B2E777074D94} → {88F0C485-72DC-4137-9C0A-375F83B12FA2}
+      - "Association «IN» → pshvs_data_from_other_vehicle_for_host_vehicle"  # {DEC2F823-EF07-4b7e-9FAA-485506559A15} → {DA75A6DA-686D-4308-9C19-4C41F0A681D1}
+      - "Association «IN» → pshvs_goods_being_carried_by_host_vehicle"  # {E8D4E237-1E8D-4bb8-87E4-995A29A1BE42} → {53476F03-010C-4bb7-A8E1-68149F619E9B}
+      - "Association «IN» → pshvs_instructions_&_warnings_for_other_vehicles"  # {FDC1D0E3-D86E-4366-928C-B707932AC07C} → {32137DC2-6E9D-4acd-ADA7-ADB192FCB4ED}
+      - "Association «IN» → pshvs_instructions_&_warnings_from_other_vehicles"  # {09A5E136-A67E-41d8-96E2-57584F794A74} → {496E6A8D-0B7E-42c4-9D42-8C2769ABDBE8}
+      - "Association «IN» → pshvs_local_road_surface_state_for_other_vehicle"  # {8430F206-0BCF-4680-8579-25C7A3E8515D} → {13749856-4209-44b4-A2FB-E551A0E21ACA}
+      - "Association «IN» → pshvs_local_road_surface_state_from_other_vehicle"  # {E5681D6F-27D9-47d2-98D1-38753B9F8419} → {B4C7E4B7-18B8-4a25-84A1-83DF4ECC1CAF}
+      - "Association «IN» → pshvs_local_visibility_from_other_vehicle"  # {DFE8A4DC-20DC-43f4-889D-FD864157EC2F} → {C659E3F0-0683-44ba-8AAA-2E9F5962D400}
+      - "Association «IN» → pshvs_location_from_other_vehicle"  # {D280C566-F97E-48ae-83CF-0A963BF5F78C} → {228F0A8D-636F-468b-B634-5871AB0F4F67}
+      - "Association «IN» → pshvs_output_commands_&_warnings"  # {676EDC5F-5DDE-4d5c-A578-47D0B84231FE} → {1AC40800-2DDA-436a-A078-A76E195EA653}
+      - "Association «IN» → pshvs_possible_dynamic_command_&_warning_error"  # {A08D7F2F-8090-431c-8D7A-F1BF44598426} → {86B5B16C-AC68-4317-AAD5-74F97576CFA1}
+      - "Association «IN» → pshvs_road_network_diagnostics"  # {8025EA94-3D4A-4e20-BCE0-6DA3B3211CEE} → {5DDCB336-25AC-4278-AB48-B60FAC8D1D27}
+      - "Association «IN» → pshvs_stop_stolen_vehicle"  # {D405FC68-E723-4111-A8F7-038D024BD440} → {31B0077F-9E00-4845-8DC8-FF3F24FE5840}
+      - "Association «IN» → pshvs_vehicle_data_for_determining_speed_&_headway"  # {086196AC-12C9-451b-A7F2-1BA6B2263B23} → {44DCE2B2-46A8-45bb-821E-5A672041970B}
+      - "Association «IN» → pshvs_vehicle_data_for_driver_monitoring"  # {26E4992A-E81A-4dd3-991E-47A7C1FB4E28} → {7F120155-BD4D-430b-9FA8-42D118976F24}
+      - "Association «IN» → pshvs_vehicle_data_for_trajectory"  # {1F223EA9-D83B-4273-B4C1-5B51128652E0} → {03F2BCCA-095B-4d64-8BBA-2BCAAF876114}
+      - "Association «IN» → pshvs_vehicle_data_for_trip_planning"  # {2F9C457B-5CE5-4a56-8AFA-ECBF95986F82} → {F439F5D8-0886-40e0-8EE1-057E6DD72AB3}
+      - "Association «IN» → pshvs_vehicle_speed"  # {EF40DACD-A82C-4f74-B207-15601CC86764} → {DE46DCDA-AE47-47aa-831E-C163ABA3CEAC}
+      - "Association «IN» → td-pshvs_current_commands_&_warnings"  # {D1BBC20C-E407-4b7a-9F58-6E89318E2A76} → {10ADE861-54E2-4617-BDE4-B81A48A90AC8}
+      - "Association «IN» → td-pshvs_traffic_information"  # {DBB86CFB-6444-4ab7-8262-9CEA80FA217C} → {CC8B1624-9D04-4e82-8C7D-654567E8171B}
+      - "Association «IN» → tv.ov-emergency_brake_application"  # {A56D7BDC-8D77-4d7a-91AF-1116D66C6CAE} → {39FB1F26-6691-42db-BECD-A0D97CC111A6}
+      - "Association «IN» → tv.ov-ghost_driver_warning"  # {7A03AFD1-4456-4ee2-899E-FC73C7A4E853} → {4E632048-2E10-4aae-A146-62CF462087F3}
+      - "Association «IN» → tv.ov-goods_being_carried"  # {174A6E62-E2D4-434d-A9E1-5270FD21C892} → {00F7CD7C-86E8-4f90-84A0-A4A0D28FDC1C}
+      - "Association «IN» → tv.ov-host_vehicle_attitude_for_other_vehicle"  # {B0204B0F-7ED9-496d-BFBD-4C257CB7CADC} → {F1AC41CF-CCCA-4f6a-8810-92A18F9B1840}
+      - "Association «IN» → tv.ov-host_vehicle_location_for_other_vehicle"  # {859EF418-B207-484b-9A4A-906C5007DF4A} → {BB03F067-69EE-4cca-9603-5E4CD0C93417}
+      - "Association «IN» → tv.ov-lane_use_commands"  # {4C68B058-3944-4178-97B7-C72A96EE4C66} → {71CAEDF7-F8CB-4c54-9E0E-929E2BEC5C56}
+      - "Association «IN» → tv.ov-output_data"  # {D2B37450-5730-452f-8FC2-E2D6F61520EE} → {BBE280E4-0EF3-459e-B9A1-08CA2FF8A9BC}
+      - "Association «IN» → tv.ov-overtaking_vehicle_warning"  # {7249FF92-5BF0-4ee6-A2E1-027E9F6A28E8} → {B1238858-B4A2-4116-A430-B69FCE5F86D2}
+      - "Association «IN» → tv.ov-red_light_running_warning"  # {11F26C96-61F1-403e-8AC7-0DB6A559B2AF} → {938356AE-0D75-433c-8E8F-3727386B3C1E}
+      - "Association «IN» → tv.ov-road_information"  # {0275C1B4-F93D-4551-B6CC-E8EC549D5859} → {BFDDDA3E-31A5-4550-9185-C5CC335C0DB2}
+      - "Association «IN» → tv.ov-road_surface_state"  # {A78DCDEE-4FFC-4059-96C5-FD5CA2FF5616} → {09F8B537-75BC-4c8e-8E2A-8785588CDB20}
+      - "Association «IN» → tv.ov-safety_behaviour"  # {98127137-FAE3-46c1-B271-4A345CD97E39} → {4CAC8222-1685-4c70-BF7E-EB299E0EDBFB}
+      - "Association «IN» → tv.ov-traffic_queue_ahead"  # {555C6862-0906-4115-91FF-9EBAA8D12554} → {41C13984-AA79-41ca-A2BE-605530E0394F}
+      - "Association «IN» → tv.ov-visibility_data"  # {5F6A4309-8587-4c5b-B325-ED72B656089D} → {F79BAEB2-3798-4b62-924C-169920A6F488}
+      - "Association «IN» → tv.vs-output_data"  # {8C32D711-8609-4689-84E5-247E82987B17} → {1D51AE6D-FA85-420b-B566-24DF2D388811}
+  - name: "F5.13 Provide Vehicle Data and ISA"
+    guid: "{F91C0ED5-7F89-4fd1-B561-6CE9E766291A}"
+    type: "Activity"
+    stereotype: "FRAME_High_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This High-level Function shall provide the supporting functionality for Intelligent Speed Adaptation (ISA) and provides the Vehicle's current position for other functions. It also collects and then forwards probe (or Floating Car Data) and provides speed and headway information to Drivers.
+    links:
+      - "Aggregation «componentof» → F5. Provide Support for Host Vehicle Services"  # {4F31B22C-5512-49f9-AE94-CA38A21379A6} → {F1EBADEA-D763-4ff2-9557-A98565A22658}
+      - "Association «IN» → mt.pshvs_inter-urban_fused_xfcd"  # {E305A64A-7C69-48a4-AE44-E7920A6DDF3C} → {313BF9FC-3FF9-4d41-96C6-A51E0A5D8F44}
+      - "Association «IN» → mt.pshvs_urban_fused_xfcd"  # {D9A81EA7-F85F-4109-8765-04B95284CE6E} → {6BD8427F-16B2-464c-B03A-16C429937335}
+      - "Association «IN» → pshvs.mt_errors_in_speed_display"  # {A6E7B45E-CF25-4513-A5F2-E41B17C922F5} → {6DB2CFBF-FB6C-48ef-9CDA-247A8FA6B0AF}
+      - "Association «IN» → pshvs.mt_floating_car_data"  # {362DA993-D00C-4caa-8506-FD054BF478D5} → {5D78B163-4356-4a9c-BE66-CA33BEFBA930}
+      - "Association «IN» → pshvs.mt_inter-urban_speed_being_exceeded"  # {64B61645-6C45-46c9-94D5-988FE646E7F0} → {4F9BAE5E-E047-436f-A3FE-82BD92CC4738}
+      - "Association «IN» → pshvs.mt_inter-urban_speed_display_error"  # {6B28FEAA-025F-4b02-B8BC-C9349BDA71A4} → {FDABA6F0-B98F-4a78-BD06-F7842873F64F}
+      - "Association «IN» → pshvs.mt_safety_behaviour_status_for_inter-urban"  # {4004DC41-BF25-448f-BFC1-BCE27B2350B0} → {814FF5D0-E703-46b6-9384-97CBAA7896E3}
+      - "Association «IN» → pshvs.mt_safety_behaviour_status_for_urban"  # {CA4EC422-8BED-4570-A4E5-5D53D7FB91FC} → {0FF01875-0410-4cd6-AB16-080AFB39067E}
+      - "Association «IN» → pshvs.mt_speed_display_errors"  # {8FB055D0-21E1-474b-8BF6-B769F3FCA203} → {83E6CF17-D598-48a1-9CC8-506EE75029CC}
+      - "Association «IN» → pshvs.mt_urban_speed_being_exceeded"  # {000A6D47-EF62-4a1a-996E-BC5F52C7BD2B} → {FB2FD076-CE11-48c2-B274-E413A8770D6F}
+      - "Association «IN» → pshvs.mt_urban_speed_display_error"  # {4B66BCF6-18B1-4fe0-85A1-479B3628861B} → {A772F251-2DC3-4791-A3AE-BA189A77EE40}
+      - "Association «IN» → pshvs.mt_urban_xfcd"  # {1D958CA9-AC29-4ba6-AE88-FD68ABE95E5A} → {353AA066-39D9-4bb4-ACC8-1594EC977A08}
+      - "Association «IN» → pshvs.pepf_vehicle_position"  # {3594AFF6-D9C8-44f3-A2C2-D4F48E33C594} → {966C0322-2C7B-40a0-B833-C3B47550308B}
+      - "Association «IN» → pshvs.psle_service_notification"  # {75DBA991-79A9-4540-B374-CCA9BFA303A8} → {D10A0EF8-2049-428d-9C13-5DA7A7D7371D}
+      - "Association «IN» → pshvs_ISA_acknowledgement"  # {F4406956-BCD8-41c7-BC31-C150387464D7} → {B8A5A650-7E7D-4931-A205-9E1B75510644}
+      - "Association «IN» → pshvs_current_recommended_speeds_and_headways"  # {59FB0E1F-411F-46c7-A2A4-B652DD50EE55} → {8EB08A81-B725-4d0d-94F0-32859C00B5AA}
+      - "Association «IN» → pshvs_dead_reckoning"  # {9E6E3CAB-F1BD-4d86-84FF-26E7C1069C5E} → {554B1004-8BD0-48b5-A70E-31A650F2BB73}
+      - "Association «IN» → pshvs_fused_road_and_traffic_conditions"  # {DA0AA9BB-13DF-46a2-A9BA-0A5910458E97} → {A6390C9D-99DA-4303-B881-743224D19558}
+      - "Association «IN» → pshvs_lane_command_response"  # {ACEAD00E-02CB-4c7f-B06B-EEE593A915AC} → {0F80BCA5-0156-4907-8540-CFC8F699EA26}
+      - "Association «IN» → pshvs_legal_speed_acknowledgement"  # {638F91F6-4FAF-46af-A347-2E6AADCA9291} → {8EFEF75B-32D2-4a97-96F6-0DEB4301D000}
+      - "Association «IN» → pshvs_legal_speed_for_safety_behaviour"  # {0D5B2CFB-4D06-4f59-ACB0-76794DDEF023} → {3750195E-F6ED-451e-AF31-EED180A3E919}
+      - "Association «IN» → pshvs_legal_speed_limit_for_ISA"  # {7AC8E14D-9C66-44b3-AA13-EBB2A9E670CE} → {F16575D5-5393-455d-94B5-E69226439EF2}
+      - "Association «IN» → pshvs_load_ISA_data"  # {D024AF8D-A467-4ac3-8B2A-19395359DC3E} → {4D5E6340-66BE-4932-A551-DFD201845461}
+      - "Association «IN» → pshvs_load_road_information"  # {A7D688F5-A466-4f76-AB43-621FE6D2D76E} → {960D5862-3D40-4003-BB23-0B6B4D644648}
+      - "Association «IN» → pshvs_location_for_other_vehicle"  # {92D1836E-E947-4f00-8334-8B1EAD7135D6} → {DB55A333-5336-4d02-9852-9268DEDC67B4}
+      - "Association «IN» → pshvs_read_ISA_data"  # {442A6F89-2FE0-4c61-86E1-580A421B7564} → {816C3E63-6FCD-4b75-AEAA-B56AADCC9A30}
+      - "Association «IN» → pshvs_read_road_information"  # {66321710-6F32-4d68-9A29-A1F5BAD75A79} → {73A0F09C-680D-4019-903C-9E97CBC45A9E}
+      - "Association «IN» → pshvs_road_information_for_display"  # {FD28E95B-7D77-4d0e-90EB-75388B895918} → {AA6D310E-16A1-4a01-BD95-E82DC65B16A8}
+      - "Association «IN» → pshvs_road_information_for_other_vehicle"  # {30D9B3E0-4C84-492c-9E95-3DDA77034653} → {C64C2CC8-370C-4b45-AB8E-EFDEA33C15DD}
+      - "Association «IN» → pshvs_road_information_from_other_vehicle"  # {6EC26DAF-D8B6-42ec-A6D9-4E21EEF6B63C} → {AC650B84-42E1-4449-AA37-B19FC1120024}
+      - "Association «IN» → pshvs_safety_behaviour_status_for_display"  # {152951FE-C502-4bd1-B7B2-B7EEB44F9278} → {7ED369A8-4B0F-4097-8DB5-27DC2D8AFF97}
+      - "Association «IN» → pshvs_safety_behaviour_status_for_other_vehicle"  # {8E47D8A0-E664-45ef-9358-5019B1024E6F} → {DB3BFA59-80A5-492c-9EA7-0D32071D54AB}
+      - "Association «IN» → pshvs_suggested_safe_speed_and_headway"  # {ADC797AD-30BD-45e2-AC21-156243C7EC12} → {709EC7B2-59A3-4f2c-A625-6D5FAA1319A5}
+      - "Association «IN» → pshvs_suggested_speeds_and_headways_from_ISA"  # {53948275-068C-416f-A616-1FEF1A696E72} → {803CBD3B-52B3-4d1c-9D7D-4224B6F78E13}
+      - "Association «IN» → pshvs_vehicle_and_road_information"  # {FCDB14DC-66F9-4cb5-B36B-B26790BA6ED7} → {CB426600-B141-4077-A8A0-98A5788AC277}
+      - "Association «IN» → pshvs_vehicle_location_for_safety_behaviour"  # {32BDD762-6C24-47a9-8F0F-D8F5AE93D775} → {0DFDDF33-22CE-47e3-A8BA-889A04915C44}
+      - "Association «IN» → pshvs_vehicle_position_for_road_information"  # {CA9BA27A-3953-4a9f-A919-0294DF353EBE} → {78ECCA6A-F7E1-4745-98E5-47497D567AAB}
+      - "Association «IN» → pshvs_vehicle_speed_for_safety_behaviour"  # {E9AA1FB5-725C-4d5c-B6E5-AF2E96B80A59} → {84973BF3-1CC7-4eb9-8D9E-652F8DE75F32}
+      - "Association «IN» → pshvs_xfcd_for_other_vehicle"  # {E17A941E-8635-4ae7-9F2C-DDB72BF6D3D4} → {80DA200C-54FB-433f-86A8-C3BD6F5EF536}
+      - "Association «IN» → pshvs_xfcd_from_other_vehicle"  # {FC54BB58-1FBA-4ec7-B5F6-B9DD2DFBBB27} → {0CF28BAE-1177-4eff-B009-799656CFC8B8}
+      - "Association «IN» → td-current_road_and_traffic_conditions"  # {BDFE9E63-CC05-46e2-8788-506AD4324A50} → {F57CE0F0-B32D-42ac-8D66-03F8A3373210}
+      - "Association «IN» → td-current_road_information"  # {A6A4A297-29BD-44f8-9F9E-4AF54C7A59A1} → {BC3CD2D4-7A12-49fd-9DDA-52AE8475A126}
+      - "Association «IN» → td-pshvs_current_speed_limits_and_headways"  # {34BDEA39-FFD4-4a81-9423-9298CB4AF2D5} → {0AA0A1E3-4810-4ad7-85C3-6CCF5EC45713}
+      - "Association «IN» → td-pshvs_possible_speed_indication_error"  # {489C7D95-7407-4f8d-AFE3-03E7BF9C9A8C} → {75509131-034D-4e80-BE71-DB9D4D02144F}
+      - "Association «IN» → td-pshvs_recommended_speed_or_legal_speed_limit_exceeded"  # {012F67A9-D00E-4987-A1CB-A0772AB606EC} → {56F27D17-2EF6-456f-A795-DE3EB22257BC}
+      - "Association «IN» → td-pshvs_safety_behaviour_warning"  # {0ACC6233-CC43-4200-BF1B-0B2304EAC6ED} → {9E93ACDA-8284-46ce-93E1-5B8E171E1AB4}
+      - "Association «IN» → td-pshvs_speed_&_road_information"  # {EFA1203B-CCBE-4ffa-A073-A13F3275DD45} → {F3E4EA7F-77C0-4299-A3CE-5E741F4A9533}
+  - name: "F5.14 Provide In-vehicle Trip Planning & Implementation"
+    guid: "{CD0DD7C8-43B3-4a5b-8DD2-AA6DEA02907E}"
+    type: "Activity"
+    stereotype: "FRAME_High_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This High-level Function shall enable a Driver to plan and implement a trip from the Vehicle.  It shall only be available in the Vehicle and shall not support the panning and/or implementation of trips that involve the use of other transport modes.  As part of its trip implementation facilities the Function shall enable trips to be revised and re-planned to accommodate changes in traffic conditions, including incidents that were not present when the trip was planned.
+    links:
+      - "Aggregation «componentof» → F5. Provide Support for Host Vehicle Services"  # {1B7DA0FF-B458-4794-8BCE-48ED7632E4A7} → {F1EBADEA-D763-4ff2-9557-A98565A22658}
+      - "Association «IN» → fd.fvd-rest_area_booking_needed"  # {CFAFBCBE-F3DF-40ac-BF02-EE3E4F236A7D} → {03CAC915-156C-4346-8590-70C1B2A9DBAA}
+      - "Association «IN» → fd.fvd-rest_area_details_response"  # {CBDD8443-4027-4afa-A559-9599DD26B564} → {754F56A1-BF59-4ed7-B54E-7ABEBC0398FB}
+      - "Association «IN» → fd.fvd-revised_un/loading_zone_use_request"  # {71CE8A70-E952-4e1f-B5FF-4DEA14F77853} → {86C19475-E873-45b0-922E-C3BA3B398944}
+      - "Association «IN» → fd.fvd-un/loading_zone_use_reqeust_response"  # {426A26FC-D131-481c-9A95-5719825517E9} → {A4B9D919-7CF2-4120-AB59-79129748E726}
+      - "Association «IN» → fd.fvd-un/loading_zone_use_request"  # {959BB7D4-5A4C-4a2a-B03A-FCBA63562C34} → {8AE7E844-8BC6-468b-83FE-19C5D6222E95}
+      - "Association «IN» → fd.tpd-accept_revised_vehicle_trip_plan"  # {43FB689B-768D-4508-A929-F112429B1A62} → {F23CA0C8-EA4B-435f-938C-BD4269ACD691}
+      - "Association «IN» → fd.tpd-implement_vehicle_trip_plan"  # {B616C2DB-5E30-4282-92B9-C3760A6C03D1} → {90D91877-7E7A-4f2f-9983-573998C793A5}
+      - "Association «IN» → fd.tpd-modified_vehicle_trip_plan_data"  # {F8A6EF48-009B-4c81-B069-B1E9D673558B} → {FCF9B9B1-E71B-4c84-876F-75388365A908}
+      - "Association «IN» → fd.tpd-modify_current_vehicle_trip_plan"  # {27D5D86D-0DD2-4a7e-A072-F13DC352EAAC} → {1F0FF154-A080-4bc2-BF9D-5CDAEF4ACC90}
+      - "Association «IN» → fd.tpd-revised_vehicle_trip_plan_booking_choices"  # {F3359C19-AD1C-4557-9E09-8094D902A7B0} → {C25463F9-594B-412f-9271-2CD1B1126515}
+      - "Association «IN» → fd.tpd-vehicle_trip_plan_accepted"  # {E8166916-C96A-4adc-8957-EC5A556A9006} → {9DEFB83A-2A80-4ae6-B704-6D3834912E14}
+      - "Association «IN» → fd.tpd-vehicle_trip_plan_booking_approval"  # {1759901D-1495-47f6-901A-1E9A054F5730} → {68758D90-3F21-4116-A1C2-DB5EB38437D0}
+      - "Association «IN» → fd.tpd-vehicle_trip_plan_data"  # {C467B25C-406B-44fa-BE43-E0FCDCFA3870} → {5DA099C8-9ABB-465d-A21F-A130B3AFA57F}
+      - "Association «IN» → fd.tpd-vehicle_trip_planning_payment"  # {F6A1D665-EC1F-4744-8AAA-F1488F889277} → {583F6E38-2A74-4877-A2F2-EB586809DD8B}
+      - "Association «IN» → ffc-payment_for_vehicle_trip_planning_response"  # {2EA54E1E-3742-4fab-969F-62FBBB9780B4} → {4279EF3F-EE11-4e7f-B4CE-24F4310B125B}
+      - "Association «IN» → ffc-vehicle_trip_planning_service_payment_response"  # {21329513-6404-44d4-9634-74193C618A56} → {EE157160-D50B-431d-AF2F-9E2992A7E4D1}
+      - "Association «IN» → flds-vehicle_location_for_trip_planning"  # {EF8F8CB6-602B-4fb5-921E-4F2B06B2758A} → {EA3B6F09-2B99-45e9-B10F-25BB734950D2}
+      - "Association «IN» → mt.pshvs_forecast_traffic_to_monitor_vehicle_trip"  # {6A354C9E-5C6E-4443-9A7F-DE680EEA3EE2} → {8B844E10-F4B7-424f-A28E-B81691138602}
+      - "Association «IN» → mt.pshvs_incident_data_for_vehicle_trip_monitoring"  # {70532385-3BB0-4741-8D80-16BCE5B547C3} → {7EBBEBC8-BD52-470a-9848-65D39F4FAAF7}
+      - "Association «IN» → mt.pshvs_inter-urban_network_perturbations"  # {B5B12710-4730-4390-9F9A-5D14C503A963} → {A1F9BD8F-0592-4447-99DF-4C70D5D8550C}
+      - "Association «IN» → mt.pshvs_rest_area_parking_response"  # {746BA1F9-19F0-4182-B525-1E8870E98D64} → {1D771D70-E194-4ae6-A874-B3AC397FD549}
+      - "Association «IN» → mt.pshvs_roadworks_data_to_monitor_vehicle_trips"  # {2529AB62-3104-4cd2-A867-036FF7F0A0B3} → {62DA1CCC-DC47-47ef-959A-396AD60E5AD9}
+      - "Association «IN» → mt.pshvs_urban_network_perturbations"  # {CBA42512-C950-4b5e-849B-D579257D2A2A} → {59598158-6ABD-44f9-A041-A93A377EFB9C}
+      - "Association «IN» → mt.pshvs_weather_data_for_vehicle_trip_monitoring"  # {ECC16DF0-4566-46ab-BF3D-B1AEE431A9E1} → {542DE07C-E77E-4049-9334-B2ED9FD44C45}
+      - "Association «IN» → pscs.pshvs_holding_zone_routing_information"  # {D0A3952C-7005-422c-A965-9266F2B6E120} → {F80C48D3-B4D8-4559-92FD-5E798667993A}
+      - "Association «IN» → pscs.pshvs_holding_zone_unavailable_for_new_eta"  # {4F0117E5-2648-4b2f-A71E-2A385C8802CE} → {622E58A0-EB2D-48c4-84FF-DCBBFC4F677F}
+      - "Association «IN» → pscs.pshvs_un/loading_zone_routing_information"  # {8DCBE838-8977-4e73-85AC-AA535807B19C} → {21151727-2150-48b2-B194-8478C107AC54}
+      - "Association «IN» → pshvs.mffo_FTEP_route_request_response"  # {88731821-7D7F-41b1-A4F6-E597D9AB00EE} → {8C5D1D6F-DF43-4aa8-A513-83B59DB5A81D}
+      - "Association «IN» → pshvs.mt_freight_vehicle_left_rest_area"  # {D6725266-95CC-454c-AE58-C9D90AE2EC6C} → {4FFD6923-5489-436b-B5F3-8A5D0B632C35}
+      - "Association «IN» → pshvs.mt_inter-urban_road_use_data_from_trip"  # {7ED294A4-82A5-4030-8CD6-E7664784437B} → {9573B805-0F16-4164-B752-2A2A746B0DEB}
+      - "Association «IN» → pshvs.mt_rest_area_eta"  # {E30F48D2-BAF4-4914-90D4-34EEB910A3E2} → {CC08D8B3-91E9-44a5-AA42-5493845719DB}
+      - "Association «IN» → pshvs.mt_rest_area_parking_request"  # {26AAE0B3-0958-4e12-91D5-1F6D44319A75} → {C5F05C5F-FD4B-4c58-B9CF-09A802A7433F}
+      - "Association «IN» → pshvs.mt_rest_zone_use_data"  # {A8EE6351-1C17-4d1e-AB74-80ACB71380C6} → {82A1F697-B29B-4971-B41F-58060486B6A6}
+      - "Association «IN» → pshvs.mt_road_use_data_from_trip"  # {C7698A7D-DB08-4b05-B46D-01C2A15B9029} → {68E564C7-769A-416b-9D9D-7170F1D4F28F}
+      - "Association «IN» → pshvs.mt_urban_road_use_data_from_trip"  # {59A4D25C-6292-4653-B563-ABCABA32DCDD} → {83A381BE-F7B2-4ea8-ADBA-FF8EF6A46F15}
+      - "Association «IN» → pshvs.mt_vehicle_trip_plan_o-d_data"  # {DD1E7438-DBBA-4e74-9885-EE283BF494BE} → {F3EA7248-C231-45e7-8112-FA4210238C11}
+      - "Association «IN» → pshvs.mt_vehicle_trip_plan_route_for_inter-urban"  # {1DF9DBE9-7429-4314-96B3-D74353D71939} → {D819B005-553D-49ab-9FE0-147E7E8F9AB3}
+      - "Association «IN» → pshvs.mt_vehicle_trip_plan_route_for_urban"  # {3B631FE6-0164-4898-A1E9-3DECE4B2F86E} → {FC8A26F4-90C2-4eac-9518-F0FE534DE650}
+      - "Association «IN» → pshvs.pscs_destination_for_bus_lane_use"  # {2F401532-0AC8-444d-A22B-270635ECDD78} → {13B7BCE3-3A5F-4f17-AF5E-84D40279F48A}
+      - "Association «IN» → pshvs.pscs_freight_vehicle_left_un/loading_zone"  # {12F7554D-EBEA-4fb9-8E23-C9252133118C} → {CB0E6BF1-20DE-4cd4-86D7-58E36E308DC9}
+      - "Association «IN» → pshvs.pscs_holding_zone_eta"  # {A7EF88BB-F440-46f1-8B8F-E2B12A83BE0B} → {9F747DB6-4120-452b-93DC-A8C5305C703F}
+      - "Association «IN» → pshvs.pscs_un/loading_zone_data_inputs"  # {92B01C44-25D2-4f1f-A03A-D704EDF7F368} → {F0E92709-E754-4ec7-A499-ED2259AA5C24}
+      - "Association «IN» → pshvs.pscs_un/loading_zone_use_confirmation"  # {E18E6FD0-4A20-4384-A2D5-66679CB06484} → {D21861CF-2CBA-486b-BBF0-8AA772580B0D}
+      - "Association «IN» → pshvs.ptja_revised_vehicle_trip_plan_requirements"  # {6A44FD00-A228-4af2-A464-8D780B52724D} → {D346038B-958B-4503-83A1-C4794BD77684}
+      - "Association «IN» → pshvs.ptja_vehicle_trip_plan_criteria_changes"  # {0A99A4CA-6670-4ea2-BF03-5F65D86B86FF} → {D113BF68-693A-44e9-A8C8-58809B8E1FDA}
+      - "Association «IN» → pshvs.ptja_vehicle_trip_plan_data"  # {355AD10C-EDA6-43f1-A241-7DCA1AB3F1B2} → {27F50CC9-9331-4efa-BFF1-02173DA69148}
+      - "Association «IN» → pshvs.ptja_vehicle_trip_plan_request"  # {F47FE134-8920-46ad-83B6-1F07C109AC3E} → {40B4C2B9-4E77-4617-B0D4-27A66E1564E0}
+      - "Association «IN» → pshvs_accept_revised_vehicle_trip_plan"  # {4CD04F93-581C-4adb-82EA-603D3C1B647C} → {C5589082-40E2-42d4-806D-BD942B8AA2BF}
+      - "Association «IN» → pshvs_implement_vehicle_trip_plan"  # {FDE8FFF4-90FC-4521-A88C-07D818A82FF4} → {55BFC812-06C2-4654-996B-29D79B63C77E}
+      - "Association «IN» → pshvs_reqeust_data_from_stored_vehicle_trip_plans"  # {AD5DA89A-8FBD-46f5-A8F6-BD3F4DB4290E} → {052CBAD2-3495-4d6f-9C1B-7850A0ADB1D9}
+      - "Association «IN» → pshvs_request_vehicle_trip_plan_for_implementation"  # {B09B0964-C5CD-479c-B6B6-952C540CC094} → {974BA61E-45C6-4c75-9B88-33B52BD3A69F}
+      - "Association «IN» → pshvs_requested_data_from_stored_vehicle_trip_plan"  # {DC3E2606-10CC-47f0-9BD5-A6FBD25522C0} → {B1F2CFEB-E54B-4042-8504-968C4F86288A}
+      - "Association «IN» → pshvs_revise_trip_plan_for_new_rest_areas"  # {B97811CE-C931-4d17-9196-DA840AB6DAC1} → {C0CD8B65-BB32-4c9c-B39C-85D567CE7BB5}
+      - "Association «IN» → pshvs_revise_vehicle_trip_plan_request"  # {29B839F9-A5FA-494f-80A1-9D93B71D4B2B} → {91E8B323-DCCD-4c32-B48E-88B3B15CE8FE}
+      - "Association «IN» → pshvs_revised_vehicle_trip_plan_for_driver"  # {8682EDBE-9298-4463-9615-57927C37E076} → {783DEFC0-8F03-4922-B2F8-0CABFD9C7CD5}
+      - "Association «IN» → pshvs_route_information_for_xfcd"  # {5B642543-C88D-4ff2-8672-5ECD6C4C40FD} → {E3A907F5-204A-4e29-B42C-4EFAB4F76ED3}
+      - "Association «IN» → pshvs_vehicle_departed_from_route"  # {F885B439-7968-4bfc-9504-C987243769F2} → {60850BC8-D8DF-4734-A5E3-125FCCBD3A24}
+      - "Association «IN» → pshvs_vehicle_eta_for_driver"  # {F2F640C7-303B-4401-9CD8-2F8B2BBA879B} → {34FD9C93-1D48-40af-B9C7-EC8CC59FBAA7}
+      - "Association «IN» → pshvs_vehicle_location_for_trip_plan_monitoring"  # {591768B4-B781-4b0f-8667-088FEDC91867} → {E03D6C99-6655-41f2-9D71-763ADCCCC5BC}
+      - "Association «IN» → pshvs_vehicle_trip_plan_acceptance"  # {172A7D56-3515-482b-802F-E86D113BD952} → {CE920D49-056F-4540-8216-41A196B12338}
+      - "Association «IN» → pshvs_vehicle_trip_plan_change_data_for_driver"  # {E981E97C-805C-4ae3-84D4-A23B638D51CE} → {D8BC229A-6EFE-4a2b-97DD-DC2476EBAB82}
+      - "Association «IN» → pshvs_vehicle_trip_plan_data"  # {D60CB078-D21A-40ab-AB83-F06E345EDC65} → {89B133DD-216E-44c3-B412-3B94991DCE7B}
+      - "Association «IN» → pshvs_vehicle_trip_plan_draft"  # {35DAC4B9-94DE-4e55-B5B5-D0D6884ED20B} → {8F769440-5B0E-4734-AFB5-2984C65FFAF4}
+      - "Association «IN» → pshvs_vehicle_trip_plan_for_bookings"  # {988C921D-028E-47df-B967-BB70F99CF15A} → {F91A42CD-34A5-4289-8397-3241365340F4}
+      - "Association «IN» → pshvs_vehicle_trip_plan_for_implementation"  # {2894AADB-3090-4e37-ADAC-BDDC2AA8FC7C} → {B4975F2A-36F5-488a-97F3-FDCD353AECC3}
+      - "Association «IN» → pshvs_vehicle_trip_plan_for_monitoring"  # {81B45CB4-0987-4a5e-9AC9-5608F053CEF5} → {EC13BC6E-E8B9-472a-AA27-1405A4A5E560}
+      - "Association «IN» → pshvs_vehicle_trip_plan_for_store"  # {1993757D-9722-452e-A593-D5B974707B42} → {B65678CF-374D-448a-B7BC-AF734FF75658}
+      - "Association «IN» → pshvs_vehicle_trip_plan_guidance_instructions"  # {6DB7D8E2-9F47-4b5e-9229-DB53487A7CA4} → {D496E5D5-78C9-46bb-9A48-684E810A79CE}
+      - "Association «IN» → pshvs_vehicle_trip_plan_load"  # {7A6DA7C1-F17E-4359-A09A-7CB85B194FD1} → {3FED304D-C6D6-476d-BDB0-6788EE36FC92}
+      - "Association «IN» → pshvs_vehicle_trip_plan_read"  # {24BE09B8-FA7D-45e5-8E84-85E70D889009} → {20490E1B-34B2-4dc2-ADA0-97A79853F8EC}
+      - "Association «IN» → ptja.pshvs_revised_vehicle_trip_plan_for_approval"  # {7D3A957E-0715-4d2c-94FD-D81D98001D20} → {F03F7F1B-1E61-48ce-AD2A-B428179DDF07}
+      - "Association «IN» → ptja.pshvs_vehicle_trip_plan_response"  # {B78348E5-3C1A-44a8-A13D-4DA7C4A116A5} → {3359A706-A0FF-40cb-919A-F0C206BF0C8B}
+      - "Association «IN» → td-expected_time_of_arrival"  # {7640C476-89B1-4f74-889C-D244A70E4DB5} → {E221D3DA-0F8A-4fea-B217-E69D05C14768}
+      - "Association «IN» → td-pshvs_route_guidance_instructions"  # {ABF78514-E590-4a25-9524-85A3E7D1CB0C} → {C673315E-A6B2-4f3b-8AB4-EA13E5A06170}
+      - "Association «IN» → td-pshvs_vehicle_departed_from_route"  # {9ADEE634-3A71-4d47-95EF-E0D7D9EF4213} → {AD0CC70A-9F3E-4ef5-812B-592E2682B3EC}
+      - "Association «IN» → td-pshvs_vehicle_trip_chanage_reason"  # {75B37245-07EB-44f5-A22E-4C62EEB62543} → {12B12596-36CB-43fd-A806-257B9D931752}
+      - "Association «IN» → td-pshvs_vehicle_trip_plan_outputs"  # {847ABF67-52AE-4bcb-9527-810DD9A570AE} → {C4496EE2-3F8C-4ac6-B9E2-077BD3692888}
+      - "Association «IN» → td.fvd- rest_area_booking_needed"  # {1494A697-E508-4164-97EC-6B34F9A8F65F} → {42D86BE1-5A21-4fd3-9DED-7B585DDFF8C4}
+      - "Association «IN» → td.fvd-confirm_un/loading_zone_needs"  # {12C0EC0B-B179-43e1-9125-1B6A50573AC9} → {F4763230-B01B-4683-A588-BB97C55F532B}
+      - "Association «IN» → td.fvd-fleet_operator_un/loading_zone_bookings"  # {C5604877-169A-4e16-AEE2-49B8503574AB} → {5F1F7913-954F-4150-9363-6A726CA7F138}
+      - "Association «IN» → td.fvd-holding_zone_routing_information"  # {AE5FD45C-5804-48c4-84AC-BACFE62702C1} → {2A4E07D2-1376-4644-8BCA-19CEBEE33E46}
+      - "Association «IN» → td.fvd-holding_zone_unavailable_for_new_eta"  # {4FE07095-2A59-4d1c-9535-4EEC3AFFC1D2} → {F1701303-DFF7-471a-8781-25DDCD27B046}
+      - "Association «IN» → td.fvd-rest_area_details"  # {8C30B729-E214-4a1a-848F-FCF23096A8BD} → {25CEFCA2-B6AE-46ce-9BB3-9251DD54A2B8}
+      - "Association «IN» → td.fvd-rest_area_unavailable_for_new_eta"  # {BE1AC01D-3FBA-4612-8538-233ADD88E126} → {508180DF-63D7-4a47-97B0-8F6362B4D294}
+      - "Association «IN» → td.fvd-trip_outputs"  # {4EFA30E4-5461-4ca4-8F15-C068F929DE26} → {14A475DB-47F2-46d5-AA8A-F3D6FCF906D3}
+      - "Association «IN» → td.fvd-un/loading_zone_routing_information"  # {BC181204-A39E-450b-B521-826158559A81} → {022793C8-5749-4639-8085-DA99919B2269}
+      - "Association «IN» → td.fvd-un/loading_zone_unavailable_for_new_eta"  # {3568221B-DA11-480e-8341-ADBA7F9B998C} → {1B74A241-B136-43dc-AE7B-21AC1049FCFE}
+      - "Association «IN» → td.fvd-un/loading_zone_use_response"  # {0EEFAD46-A103-4e55-B207-03BB181434A3} → {62F46F60-6D97-44cc-8BF1-271B1DFEFAC5}
+      - "Association «IN» → td.tpd-advanced_payment_for_vehicle_trip_plan"  # {8632D71A-E8A2-46a6-B132-BDE7C5F7E580} → {5D208D71-0741-4282-92D1-B063B4A2F346}
+      - "Association «IN» → td.tpd-draft_vehicle_trip_plan"  # {F5DC24A8-97DB-49e8-828F-2EBD73326FC6} → {69C8236A-20FF-4981-8015-98359F8D2847}
+      - "Association «IN» → td.tpd-modified_vehicle_trip_plan"  # {34ED2305-F652-4df1-9D86-6C574AD689D0} → {FF38AEB4-82A8-47eb-B186-7FED29FF6579}
+      - "Association «IN» → td.tpd-request_vehicle_trip_planning_payment"  # {758703E9-C89F-4a82-8454-6AB06A2DEAA8} → {5F15E229-F9AB-4bf4-9A33-EDE475832C50}
+      - "Association «IN» → td.tpd-trip_outputs"  # {9E90F436-B25F-4824-B25E-1CECAA505A01} → {E99E442C-FDFB-455b-90AC-B2AA07585A3B}
+      - "Association «IN» → td.tpd-vehicle_trip_planning_booking_mishap"  # {9CA9319C-96D2-437f-93D8-B3C8FDB3C07D} → {BE330CAA-AA24-4694-8BBD-23E2F1B952FD}
+      - "Association «IN» → tfc-request_payment_for_vehicle_trip_planning"  # {07379381-D8A0-4fc8-8059-B2B7673A3BF8} → {F08FDC34-3D8B-4ab6-8494-3EBD3B39D40C}
+      - "Association «IN» → tfc-vehicle_trip_planning_payments"  # {6605EAE9-207E-4139-9C7B-19F8EC0A525B} → {AC7F4033-B9AE-4d3b-AC3E-60D4E3CB0B21}
+      - "Association «IN» → tfc-vehicle_trip_planning_service_payment_request"  # {2D1C104F-7851-469a-89B8-50E47C1A6297} → {184113E0-72AE-4a94-BC9F-7032862D6B59}
+  - name: "F5.14.12.1 Check for Rest Area Requirement"
+    guid: "{AE25EFB0-1CCD-4d81-B2B3-71142EB5C4BC}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to check the time that it will take to complete a trip plan.
+      (2) For those trip plans for which their time to complete exceeds the maximum hours a driver may work that is allowed by the relevant European Working Time Directive(s), the ability to refer the trip plan for the inclusion of one or more stops in rest areas.
+      (3) For those trip plans for which their time to complete does not exceed the maximum hours a driver may work that is allowed by the relevant European Working Time Directive(s), the ability to refer the trip plan for checking to see if use of un/loading zones is needed.
+    links:
+      - "Aggregation «componentof» → F5.14.12 Manage Use of Rest Areas"  # {9E6E79AE-4110-45d5-AD78-CAF576E06F88} → {B09645ED-4FB1-4c86-9564-5E6C67631974}
+      - "Association «IN» → pshvs_trip_plan_with_no_truck_parking_needs"  # {67F953C8-F494-4f34-AF2D-DA359CAD2093} → {B3CCE931-ABC4-4142-983E-026FE4525C38}
+      - "Association «IN» → psvhs_trip_plan_with_rest_area_needed"  # {D8009015-5C58-454a-9000-BAA15CA76C1F} → {9D3A619A-C1D8-4a1f-A60E-5ADEFA1E792B}
+  - name: "F5.14.12.2 Find Suitable Rest Areas"
+    guid: "{82F75F74-2552-4594-8875-37A215852C9F}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to provide facilities that enable suitable rest areas to be identified along the route included in a Vehicle Trip Plan the use of which will enable Freight Vehicle Drivers to comply with the relevant European Working Time Directive(s).
+      (2) The ability to assume that these rest areas are part of what are called "service areas" managed by a Parking Operator using other functionality and shall have to be used in order that Freight Vehicle Drivers can comply with the relevant European Working Time Directive(s).
+      (3) The ability to re-send the trip plan back to the Prepare and Revise Trip Plans function for it to be updated with a revised route and ETA(s).
+    links:
+      - "Aggregation «componentof» → F5.14.12 Manage Use of Rest Areas"  # {4468170A-2BCD-4538-9D85-9B6638CAF526} → {B09645ED-4FB1-4c86-9564-5E6C67631974}
+      - "Association «IN» → pshvs.mt_rest_area_parking_request"  # {DA1FEBEC-70E5-4f4e-961F-E4977DEB7099} → {C5F05C5F-FD4B-4c58-B9CF-09A802A7433F}
+      - "Association «IN» → pshvs_make_rest_area_booking"  # {D2DB7478-E0D6-45a0-8B74-F9CA2EFC00DD} → {3F55CF81-1B79-4df8-A529-57F476ADD645}
+      - "Association «IN» → pshvs_revise_trip_plan_for_new_rest_areas"  # {E145612B-9C7D-4840-B3EC-23370822A3A4} → {C0CD8B65-BB32-4c9c-B39C-85D567CE7BB5}
+      - "Association «IN» → pshvs_trip_plan_with_un/loading_needed"  # {3A40B719-B680-4b09-A70E-19C154CBA750} → {4C806D03-E61F-4c50-B122-F1E846F68379}
+      - "Association «IN» → td.fvd- rest_area_booking_needed"  # {0CBB0105-5C09-4c52-B5DD-3818B1283B7F} → {42D86BE1-5A21-4fd3-9DED-7B585DDFF8C4}
+      - "Association «IN» → td.fvd-modify_trip_plan"  # {DAEE4311-4435-44ee-BB93-5B7F91CBF788} → {18C2CB47-9F1D-4adb-9027-178FFCD1D9BC}
+      - "Association «IN» → td.fvd-new_trip_plan_needed"  # {E9F515EC-F887-4bbf-83CB-AC08EA3EF95D} → {EFA66347-027E-436b-A5F4-A73DC499097D}
+      - "Association «IN» → td.fvd-rest_area_details"  # {473DBCAF-0664-43cb-8261-2D5C91CF5C51} → {25CEFCA2-B6AE-46ce-9BB3-9251DD54A2B8}
+  - name: "F5.14.12.3 Book Suitable Rest Areas Places"
+    guid: "{2B9F6AC3-FE93-402e-BEB0-F163F4256C7F}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to provide facilities that enable the Freight Vehicle Driver to book parking places at previously selected rest areas along the route they will follow in a Vehicle Trip Plan.
+      (2) The ability to assume that these rest areas are part of what are called "service areas" elsewhere, managed by a Parking Operator and shall have to be used in order that Freight Vehicle Drivers can comply with the relevant European Working Time Directive(s).
+      (3) The ability to enable a Freight Vehicle Driver to book a parking place in a rest area, based on the Expected Time of Arrival (ETA) according to the Vehicle Trip Plan.
+      (4) If the booking is rejected, or the ETA changes as the Vehicle Trip Plan is implemented, the ability to enable the Freight Vehicle Driver to revise the parking space booking to match the new ETA.
+    links:
+      - "Aggregation «componentof» → F5.14.12 Manage Use of Rest Areas"  # {B648E315-3765-42a3-AFDE-01C9EC677E9C} → {B09645ED-4FB1-4c86-9564-5E6C67631974}
+      - "Association «IN» → pshvs.mt_rest_area_booking_request"  # {40D6DFD3-0244-4326-A7AC-4C54AB0E175C} → {4E86770E-3C40-465d-8862-37A4115C9E48}
+      - "Association «IN» → pshvs_select_new_rest_areas"  # {89161219-118C-4400-A517-BB29262AA221} → {F9E75DBF-68C5-4612-8E1B-B7FD4A0275F6}
+      - "Association «IN» → pshvs_trip_plan_with_rest_area_bookings"  # {9BCC4410-11AE-4ace-A52E-304DBF0BA88A} → {68A18636-B4EE-4a69-B6C6-BBEFA1660370}
+      - "Association «IN» → td.fvd-rest_area_booking_response"  # {283C628B-4DE3-4814-87B9-4CA8D1C2F05D} → {34E7F98A-E857-40f4-BCCF-784126B8949E}
+      - "Association «IN» → td.fvd-rest_area_unavailable_for_new_eta"  # {E67842C9-1B04-4dc7-A7EC-A46120E0808C} → {508180DF-63D7-4a47-97B0-8F6362B4D294}
+  - name: "F5.15 Provide In-vehicle Detection and Analysis"
+    guid: "{F8617CCE-0051-448b-9A40-576C60C469AB}"
+    type: "Activity"
+    stereotype: "FRAME_High_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This High-level Function shall provide facilities that enable the Host Vehicle to detect various forms of entity that are in its immediate surroundings.  These forms of entity shall include equipped Vehicles, other road users (i.e. non-equipped Vehicles, Cyclists and Motorcyclists), Pedestrians, Atmospheric Environment, visibility, the road surface and Stationary Objects.  The functionality shall create data objects to represent these entities and combine them with data objects it collects about the way that the Host Vehicle is operating to determine any possible conflicts and/or unsafe situations.  The Driver of the Host Vehicle will be sent warnings about these by the functionality, which will also pass the data objects about the conflict and/or unsafe situations to Other Vehicles.  Some of the data objects collected, such as visibility, will be combined with the data provided by Other Vehicles to provide the Driver of the Host Vehicle with a more comprehensive picture of the area around it.
+    links:
+      - "Aggregation «componentof» → F5. Provide Support for Host Vehicle Services"  # {1B3C54A7-9750-48c7-B734-59B5C151563B} → {F1EBADEA-D763-4ff2-9557-A98565A22658}
+      - "Association → F5.15.3.1 Predict Host Vehicle Trajectory"  # {2B963DD3-C367-4105-BF7D-36166E4A6879} → {1104A701-AC9D-4027-81D9-C1D4476BC3DD}
+      - "Association → F5.15.3.2 Analyse Road Situation around Host Vehicle"  # {C574DF84-6262-435c-AF0D-8F3058FF00BF} → {0A5D11AA-6D5C-4ed1-9EE0-1157A6B90784}
+      - "Association «IN» → fae-local_vehicle_atmospheric_conditions"  # {A77EFB13-4B35-4a8f-A14E-5536C3EB8D0D} → {2CA55DA1-0A9C-45bc-BDFF-AA286AA48382}
+      - "Association «IN» → fae-local_vehicle_visibility_conditions"  # {1740F480-05CA-42d0-B67F-299AC01E677A} → {174A7C5F-8B76-4286-B9DB-CF11629E9A6B}
+      - "Association «IN» → pshvs.mt_inter-urban_low_visibility_message"  # {317552BB-6D97-4460-BC7E-B7188B14EFC5} → {469BA67D-04FE-406d-B364-781C31CBEC61}
+      - "Association «IN» → pshvs.mt_inter-urban_road_surface_state_message"  # {3B5627FE-1D54-4fca-B1C8-FC5D7B4749AC} → {D9C6E4B4-6DC6-4498-BA2C-C0C3C3901B17}
+      - "Association «IN» → pshvs.mt_inter-urban_roadside_outputs_to_driver"  # {5185A898-ED6F-4dc2-9736-6CC7917960C9} → {A6027C87-754E-4c6e-A54E-4F258F407774}
+      - "Association «IN» → pshvs.mt_inter-urban_slow_objects_message"  # {640F6EA3-B5C4-4c62-8DA6-317B96435B1F} → {54FF4AAA-05BE-46eb-BF8F-F8E197F0BE45}
+      - "Association «IN» → pshvs.mt_inter-urban_stationary_emergency_vehicle"  # {97B96621-F679-4ea2-AFC3-01D2085CE354} → {9E56AA2B-B11B-4418-A429-3CB8F24669F0}
+      - "Association «IN» → pshvs.mt_inter-urban_stationary_objects_message"  # {E132CC6A-2DCD-41c3-8F44-722BE29A259B} → {CE62FEB3-B001-4d9b-8340-2D60C0A12637}
+      - "Association «IN» → pshvs.mt_inter-urban_traffic_queue_ahead_message"  # {811C26DC-A84B-4712-922D-991140E6F9E3} → {E688277D-D941-46b7-B24D-0EB333E3AA95}
+      - "Association «IN» → pshvs.mt_inter-urban_vehicle_attitude_message"  # {43F5937D-BEA6-45f0-B71B-9E54AF2186D6} → {92C5C3DC-219D-47f6-95D4-7B32E77C7CD7}
+      - "Association «IN» → pshvs.mt_possible_conflicts_with_vehicle_movement"  # {83BA7A95-2189-4a6d-A256-1E279E9DC283} → {2F1D0855-DC4C-4754-8AE6-8A2A8F0A8C37}
+      - "Association «IN» → pshvs.mt_roadside_vehicle_lane_departure_warning"  # {7374FF24-D402-45bb-9B84-E0EBE7971F10} → {4ACCB898-9DAB-45a3-92CD-CA68690CD519}
+      - "Association «IN» → pshvs.mt_urban_low_visibility_message"  # {597DE597-F1F7-483b-9CC9-66F91C743B1B} → {D5C1D28D-05AB-4a54-9149-CEB21731DCA7}
+      - "Association «IN» → pshvs.mt_urban_road_surface_state_message"  # {48A84BFC-4609-4372-BAC3-5774F3F88D6A} → {4DE71882-ADC7-4d6e-9255-B227695C0D64}
+      - "Association «IN» → pshvs.mt_urban_roadside_outputs_to_driver"  # {949F290F-7D76-4077-9FC8-E9D2D1F75121} → {F7DAF682-200E-46b2-B785-12A10E0FCAEC}
+      - "Association «IN» → pshvs.mt_urban_slow_objects_message"  # {5FE94CC5-7B0D-4344-9DC4-B300FBD5694B} → {5D29FC3A-B794-405e-BD51-03940A4B4B1B}
+      - "Association «IN» → pshvs.mt_urban_stationary_emergency_vehicle"  # {3312C0A1-1F12-42bc-A4F1-B58D680FA084} → {3886E0F5-423B-46dc-9E2B-213233A25B71}
+      - "Association «IN» → pshvs.mt_urban_stationary_objects_message"  # {994DB6A2-CF6B-4652-829C-CC78EB3E4998} → {43A5CB6D-123E-4dcd-B99A-51DABADEB039}
+      - "Association «IN» → pshvs.mt_urban_traffic_queue_ahead_message"  # {473DB8F1-50DC-4a47-A239-AE5923858313} → {A3FC1F95-0AF0-42d7-93B7-8DF4EB7496E6}
+      - "Association «IN» → pshvs.mt_urban_vehicle_attitude_message"  # {FD6436E3-F200-4ef2-8BBD-B14ABD8F1B77} → {56A5655D-723B-43d8-9946-B294303EC4CA}
+      - "Association «IN» → pshvs_data_from_host_vehicle_for_other_vehicle"  # {572F2D1B-B745-4a8e-852D-C5D54A78A593} → {242A0126-82BD-4cd9-AA3B-1D830F2D34C0}
+      - "Association «IN» → pshvs_emergency_vehicle_stationary_ahead"  # {6D7EEF32-9324-4f20-8D66-395F7865A5F8} → {A58FAEF4-20B8-4570-B174-1C855AB7FFEB}
+      - "Association «IN» → pshvs_ghost_driver_detected_warning"  # {F4036520-0100-45fa-B0F5-E5885FF588D6} → {7EB09F20-A52B-4bd5-A946-0DA53A121014}
+      - "Association «IN» → pshvs_ghost_driver_warning_for_other_vehicle"  # {556288C7-6471-435f-9BCA-1AF56C92BFA5} → {69733983-0E01-4655-A376-4F5AD01C46CD}
+      - "Association «IN» → pshvs_ghost_driver_warning_from_other_vehicle"  # {A8B8B906-B615-44e4-A250-A2F0896D6CD2} → {394C6C27-CED4-4c3a-BAE7-EBD43B6619A9}
+      - "Association «IN» → pshvs_host_vehicle_attitude_for_orther_vehicle"  # {66E8FAF0-F3B2-40b0-8FEB-EDEE207BA502} → {61A412FE-6A85-400a-963F-FF4F120EC526}
+      - "Association «IN» → pshvs_host_vehicle_lane_departure_warning"  # {9EC34FF7-410F-4f71-A6CA-512FB3885A97} → {8C2E0517-4EA8-424b-9287-E5E1ABA91EC8}
+      - "Association «IN» → pshvs_host_vehicle_red_light_running"  # {48FD39A6-74EF-4da9-8F9F-A3CAD3F51D06} → {32EFCF40-E8D4-4e62-86C3-705C6C3F70D3}
+      - "Association «IN» → pshvs_host_vehicle_visibility_for_other_vehicle"  # {193880AC-B3FC-41bf-9CDE-125E84ADCB6A} → {0AAAFDF0-F78F-4f49-8B81-0983ED7144EB}
+      - "Association «IN» → pshvs_local_vehicle_atmospheric_data"  # {40901E38-7C18-4e0c-8E65-5995EDEB871E} → {3305357F-B743-4497-9D8E-266CE1B0491A}
+      - "Association «IN» → pshvs_local_vehicle_road_surface_conditions"  # {24B1D22D-D961-432c-BD55-F525CF046A1A} → {D31141C2-E6A7-41ef-AF17-C6FDF2EA1F9A}
+      - "Association «IN» → pshvs_local_vehicle_stationary_objects"  # {51B8277D-4FE1-4bcb-95AA-F6592968F9AF} → {5E6E94F6-0E77-4036-B641-3DF79A6CA80C}
+      - "Association «IN» → pshvs_local_vehicle_visibility_data"  # {C51F64D2-5FBE-4f48-A37F-86B38637EDA8} → {33777649-E88A-4f07-8CAD-4A42658D75AE}
+      - "Association «IN» → pshvs_location_of_other_vehicles_nearby"  # {111D61C2-C131-4f13-8B9E-5683D47D4264} → {88E719BE-338D-4a14-8ED0-09A2C531CD05}
+      - "Association «IN» → pshvs_low_visibility_warning_and_advice"  # {76FE78F1-2D5E-4587-B525-80E4E9A8B24B} → {0A14D089-2D25-42ae-8868-BA145624DE69}
+      - "Association «IN» → pshvs_nearby_vehicles_and_road_user_information"  # {2014E53C-BAE8-4e94-A60F-F3A4710E73EC} → {34C2A4FE-FC99-47c2-A42C-7F16537F9F41}
+      - "Association «IN» → pshvs_other_road_users_nearby"  # {54E4D413-40F2-46ea-AF9E-93C06B5890CA} → {1CAB6FCF-36A3-4b3f-BB39-B5282C1709EE}
+      - "Association «IN» → pshvs_other_vehicle_relative_position"  # {2881D7DB-C7EC-4af4-A001-9D023C96CA3A} → {9CADBC37-DB05-4fb2-B20A-52A9A0CDAEF1}
+      - "Association «IN» → pshvs_pedestrians_detected_nearby"  # {51A82C9A-8D84-4f78-B2D5-B6612EDE2679} → {B10B59D0-72A1-4f30-8F04-A727DB1077D2}
+      - "Association «IN» → pshvs_predicted_host_vehicle_trajectory"  # {636B0241-EC0A-4287-BBD0-A32274015C2B} → {721FF121-53BF-47fd-8665-591EE2EF086E}
+      - "Association «IN» → pshvs_red_light_running_warnng"  # {DC22D157-0A94-4562-B1BA-0184E52EF8FE} → {8D6FFA3C-60C4-4896-B8A7-BEAA20EF7816}
+      - "Association «IN» → pshvs_slippery_road_surface_warning"  # {2DC443A7-10DE-4fac-B664-A88E3299670D} → {708A0854-A80A-4a1f-9300-41BD674CBCA0}
+      - "Association «IN» → pshvs_slow_objects_warning_and_advice"  # {7DB3D6D6-5CFF-4bff-9B59-940047ECEA1E} → {FA9B342B-E61D-409f-B20A-C82DD7A2C173}
+      - "Association «IN» → pshvs_stationary_objects_warning_and_advice"  # {D62786E0-7C90-4c66-9E39-546DA750EBFA} → {0E17B9C9-48DB-4995-91EE-C93F969F94F6}
+      - "Association «IN» → pshvs_traffic_queue_ahead_for_other_vehicle"  # {8CCA2A35-0D95-4e88-92C7-D5CF99936B7E} → {A1530DCC-0DE5-4c03-B9A6-76E07A67BA73}
+      - "Association «IN» → pshvs_traffic_queue_ahead_from_other_vehicle"  # {3DA50540-405D-4c9a-9275-7F4F7526D902} → {6EFEB990-05C1-4ae4-888B-A2A9F66376C1}
+      - "Association «IN» → pshvs_traffic_queue_ahead_warning_and_advice"  # {282E21E5-9BE4-4cc8-939D-F2E37F9E83B1} → {FC90C2FC-F542-4278-900F-64DD7E4AF8D8}
+      - "Association «IN» → pshvs_traffic_signal_advisory_message"  # {D5F6D328-FC04-49f0-9EDF-DED2E7BC5007} → {9FB74C1E-6C1C-4b3b-BAA1-A741A30E5CAC}
+      - "Association «IN» → pshvs_un-safe_overtaking_manoeuvre_warning"  # {9018D4A6-D4B1-4e52-8427-BE37E7CC43ED} → {61B8080B-4968-4c5c-A55A-3B6B9C2118BA}
+      - "Association «IN» → pshvs_vehicle_behaviour_warning"  # {2AE9C758-4052-4056-8388-3643AB61F392} → {0CABCC16-10C2-4955-BC6E-EA3EAC034A9C}
+      - "Association «IN» → pshvs_vehicle_collision_warning"  # {21DED37E-DD18-4e72-9BCE-8376FDF48FEB} → {35811CB3-470E-45b8-AE0E-09E5C9E25E39}
+      - "Association «IN» → pshvs_vehicle_detected_nearby"  # {30773DAC-8CD3-4084-BD3E-5578CEC90C60} → {80685EAC-6A6F-4307-B2AD-22D8F98B2575}
+      - "Association «IN» → pshvs_vehicle_lane_departure_warning"  # {7DE2EF01-E6C3-45c5-9790-D204339F0012} → {F693AFC3-1F62-4290-9738-643ABC12D534}
+      - "Association «IN» → pshvs_vehicle_location_for_trajectory"  # {03513A29-D7D4-4e25-9280-6C4E32E29C54} → {554BE2A1-5224-4d64-8B56-ED7B0906E88A}
+      - "Association «IN» → td-ghost_driver_detected_ahead_warning"  # {5AC63A65-C554-4f0d-9740-E98EB4CF3C53} → {546656F4-CD46-41f7-96F4-57971A1D71F1}
+      - "Association «IN» → td-host_vehicle_ghost_driver_warning"  # {DF5DCF33-B093-43ec-AC67-6EA7C3CE51CB} → {E1E9EB15-A42A-46b6-921E-C243BBDED4EE}
+      - "Association «IN» → td-pshvs_host_vehicle_outputs_to_driver"  # {C03A938B-6138-4b1e-8F53-1609E32A1606} → {AC0DB61E-AEC9-4037-A5FE-3F2645BBC415}
+      - "Association «IN» → td-pshvs_low_visibility_warning_and_advice"  # {CDE12E6F-0181-4eba-8359-B8887AEC5C80} → {A3C312DA-FF20-466b-AA1B-4E424DCBE2A6}
+      - "Association «IN» → td-pshvs_nearby_other_vehicle_and_road_user_information"  # {5C74E1E6-BEEB-43ef-954A-B22644578C74} → {21B09956-C1BB-4651-AD92-ACCF04C08F1D}
+      - "Association «IN» → td-pshvs_road_curve_ahead_warning"  # {DA16747D-17F9-4592-9ADC-8EE8D689B431} → {4FE8558E-A828-4177-A817-DFD4B23D6BBA}
+      - "Association «IN» → td-pshvs_slippery_road_surface_ahead_warning"  # {09FF7974-2E9E-4332-854B-5F518DD63696} → {220157B4-2086-47aa-A28B-CF4736F6C3B1}
+      - "Association «IN» → td-pshvs_slow_moving_objects_warning_and_advice"  # {D009350A-C5CF-41e9-99CB-85E6CAF05A36} → {435C622C-1309-4a96-94C6-5311B32F8BD8}
+      - "Association «IN» → td-pshvs_stationary_emergency_vehicle_ahead_warning"  # {9951DC27-D855-4964-9E87-881C83CD6398} → {090D20DB-65FE-4c3d-B27E-3AD3D45438FB}
+      - "Association «IN» → td-pshvs_stationary_objects_warning_and_advice"  # {59F2BD41-5400-49b4-9C46-73DE987D3C7F} → {44557EA3-CC8F-42d7-ABEC-23C199D9F5D9}
+      - "Association «IN» → td-pshvs_traffic_queue_ahead_warning_and_advice"  # {9185AA71-E338-4604-B3BB-CCB368923593} → {CA60762C-D06D-4e43-80F2-B170A04A3F45}
+      - "Association «IN» → td-pshvs_traffic_signal_advisory_message"  # {EB7683AF-76AE-4942-A324-7584E9955C22} → {B5F1323A-2AD6-44a9-A030-9E39DDBD6E63}
+      - "Association «IN» → td-pshvs_vehicle_behaviour_warning"  # {C27E2FF6-FE61-42c0-9AF3-FCFA5DFA245A} → {D08CFCE7-986C-41d3-AF46-13BB1744523D}
+      - "Association «IN» → td-pshvs_vehicle_collision_warning"  # {B250D736-9219-49d4-BBAA-EDABEDD6B350} → {0363DA63-F0E9-4877-BE44-601C51F419BF}
+      - "Association «IN» → td-pshvs_vehicle_red_light_running_warning"  # {2136831C-2292-43c7-A50E-956CBFA17502} → {D9621C7B-1931-4124-9B7C-220176DA52ED}
+      - "Association «IN» → tesp.g-request_map_data_for_vehicle_sensors"  # {2AB23AFF-B38B-4484-98E1-230DCF22B423} → {3186B933-6CFF-402b-8F34-380A6C8A44BD}
+  - name: "F5.15.1 Provide Detection for the Vehicle Surroundings"
+    guid: "{63E3B0BC-06DA-4321-A618-EF67962816EA}"
+    type: "Activity"
+    stereotype: "FRAME_High_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This High-level Function provides facilities for the detection of what is happening in vicinity of the Host Vehicle.  It contains functionality that can create data objects from sensors that detect Other Vehicles, Other Road Users, Pedestrians, atmospheric conditions, visibility, road surface state and stationary objects.  The data objects produced by the detection functionality are sent to other functionality in its parent High-level Function for storage and analysis.
+    links:
+      - "Aggregation «componentof» → F5. Provide Support for Host Vehicle Services"  # {6B46CBE9-A7E9-43fa-B78F-683896B9750F} → {F1EBADEA-D763-4ff2-9557-A98565A22658}
+      - "Aggregation «componentof» → F5.15 Provide In-vehicle Detection and Analysis"  # {CB0F88DB-B182-4f8b-840D-2744271923B0} → {F8617CCE-0051-448b-9A40-576C60C469AB}
+      - "Association → F5.15.3.1 Predict Host Vehicle Trajectory"  # {4DA056B1-AFF0-4032-B359-8F62969B6110} → {1104A701-AC9D-4027-81D9-C1D4476BC3DD}
+      - "Association → F5.15.5 Collect & forward local Host Vehicle conditions"  # {B047282D-D766-40a4-82A8-5E269D0F403D} → {A4C5F193-840C-4a95-96F3-77208D9A468D}
+      - "Association «IN» → flds-vehicle_location_for_attitude"  # {AACE0898-96ED-4f34-9DD1-2D33C5BCBDA4} → {BD87374A-2ADA-4393-96CD-6AC5DF289605}
+      - "Association «IN» → pshvs_data_for_incorrect_vehicle_attitude_warnings"  # {AC0AA5FE-0B07-48a4-9815-76DB1FE02F82} → {7D52227B-C64A-4c99-8C5B-D8F8EE36C472}
+      - "Association «IN» → pshvs_local_vehicle_atmospheric_data"  # {59594826-ACAB-4f75-A3F8-237574ABFBF9} → {3305357F-B743-4497-9D8E-266CE1B0491A}
+      - "Association «IN» → pshvs_local_vehicle_road_surface_conditions"  # {FF8FBFE0-7C2D-4085-8B3E-98AB0E756244} → {D31141C2-E6A7-41ef-AF17-C6FDF2EA1F9A}
+      - "Association «IN» → pshvs_local_vehicle_stationary_objects"  # {E1CCA04C-5717-4f28-B928-E1C9056922D0} → {5E6E94F6-0E77-4036-B641-3DF79A6CA80C}
+      - "Association «IN» → pshvs_local_vehicle_visibility_data"  # {57AA0E6E-BF49-4ff4-8750-85D22558D8D1} → {33777649-E88A-4f07-8CAD-4A42658D75AE}
+      - "Association «IN» → pshvs_other_road_users_nearby"  # {ED15AD79-1B5A-43ac-85DB-D84F4CD0DAE4} → {1CAB6FCF-36A3-4b3f-BB39-B5282C1709EE}
+      - "Association «IN» → pshvs_pedestrians_detected_nearby"  # {B2B91C0D-D98F-4e15-90B2-35D3D372C263} → {B10B59D0-72A1-4f30-8F04-A727DB1077D2}
+      - "Association «IN» → pshvs_vehicle_data_for_attitude_determination"  # {DBD53017-DFBD-46ad-9DCD-295311C5B439} → {B46853A6-4302-4329-BFEC-A37CE56A74E4}
+      - "Association «IN» → pshvs_vehicle_detected_nearby"  # {07FEFC8E-C3E1-4fbe-A867-F629EBAB319F} → {80685EAC-6A6F-4307-B2AD-22D8F98B2575}
+  - name: "F5.15.1.1 Detect Other Vehicles near to Host Vehicle"
+    guid: "{6DAE5D64-1C77-4e13-BB59-D3B5C52CDFB0}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to take responsibility for processing information from sensors that detect the presence of Other Vehicles near to the Host Vehicle, i.e. the Vehicle in which it is operating.
+      (2) The ability to process the sensor data to determine if any Vehicles are present, their location relative to the Host Vehicle and to determine their types and probably trajectories.
+      (3) Once processing is complete, the ability to send the data in digital form to the Determine and store local Host Vehicle Conditions Function.
+    links:
+      - "Aggregation «component of» → F5.15.1 Provide Detection for the Vehicle Surroundings"  # {94CE0001-DA3F-4791-A331-98474425CE20} → {63E3B0BC-06DA-4321-A618-EF67962816EA}
+      - "Association «IN» → pshvs_vehicle_detected_nearby"  # {0F0C70BB-08F4-4f4f-ABF2-5105564B4B42} → {80685EAC-6A6F-4307-B2AD-22D8F98B2575}
+  - name: "F5.15.1.2 Detect Other Road Users in nearby geographic area"
+    guid: "{44CED227-A383-4108-8D98-AD781491CEE5}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to take responsibility for processing information from sensors that detect the presence of Other Road Users near to the Host Vehicle, i.e. the Vehicle in which it is operating.
+      (2) The ability to process the sensor data to determine the type of Other Road User (cyclist, motorcyclist, Vulnerable Road User (VRU), "non-equipped" Vehicle) that is nearby, their location relative to the Host Vehicle, and to determine its type and probably trajectory.
+      (3) Once processing is complete, the ability to send the data in digital form to the Determine and store local Host Vehicle Conditions Function.
+    links:
+      - "Aggregation «component of» → F5.15.1 Provide Detection for the Vehicle Surroundings"  # {ACA6D4A6-0732-4829-8299-5D6897DB4087} → {63E3B0BC-06DA-4321-A618-EF67962816EA}
+      - "Association «IN» → pshvs_other_road_users_nearby"  # {DE22F292-7698-44f2-999C-F988742F2600} → {1CAB6FCF-36A3-4b3f-BB39-B5282C1709EE}
+  - name: "F5.15.1.3 Detect Pedestrians near to Host Vehicle"
+    guid: "{9B714517-CCE2-4b9c-95E9-E4FFD13A014C}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to take responsibility for processing information from sensors that detect the presence of Pedestrians near to the Host Vehicle, i.e. the Vehicle in which it is operating.
+      (2) The ability to process the sensor data to determine the location of the Pedestrians (including Vulnerable Road Users (VRU's)) relative to the Host Vehicle and their probable trajectory.
+      (3) Once processing is complete, the ability to send the data in digital form to the Determine and store local Host Vehicle Conditions Function.
+    links:
+      - "Aggregation «component of» → F5.15.1 Provide Detection for the Vehicle Surroundings"  # {903785F2-8FC2-4d7f-9F72-D4EC089E31DF} → {63E3B0BC-06DA-4321-A618-EF67962816EA}
+      - "Association «IN» → pshvs_pedestrians_detected_nearby"  # {60916C38-DB04-4bf9-849E-A55DD6DC864C} → {B10B59D0-72A1-4f30-8F04-A727DB1077D2}
+  - name: "F5.15.1.4 Detect Atmospheric Conditions near Host Vehicle"
+    guid: "{CE67284F-08FE-4fab-8CC6-936325C903C1}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to take responsibility for processing information from sensors that detect the atmospheric conditions near to the Host Vehicle, i.e. the Vehicle in which it is operating.
+      (2) The ability to process the sensor data to determine such things as temperature, wind strength and direction (taking account of the Host Vehicle's direction of travel), the presence of rain, etc.
+      (3) Once processing is complete, the ability to send the data in digital form to the Determine and store local Host Vehicle Conditions Function.
+    links:
+      - "Aggregation «component of» → F5.15.1 Provide Detection for the Vehicle Surroundings"  # {D086A73A-CE4B-42f8-BF43-97CA0D9AF0D0} → {63E3B0BC-06DA-4321-A618-EF67962816EA}
+      - "Association «IN» → pshvs_local_vehicle_atmospheric_data"  # {3CC427E5-C570-4769-A49E-90F2D265EA4D} → {3305357F-B743-4497-9D8E-266CE1B0491A}
+  - name: "F5.15.1.5 Detect Visibility in Host Vehicle vicinity"
+    guid: "{91746B4E-ABF9-4750-A4F7-1D9AE330EDA5}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to take responsibility for processing information from sensors that detect the level of visibility in the geographic area surrounding the Host Vehicle, i.e. the Vehicle in which it is operating.
+      (2) The ability to process the sensor data to determine the level of visibility and the reason for it, e.g. fog, darkness.
+      (3) Once processing is complete, the ability to send the data in digital form to the Determine and store local Host Vehicle Conditions Function.
+    links:
+      - "Aggregation «component of» → F5.15.1 Provide Detection for the Vehicle Surroundings"  # {F2B434CB-F85F-4242-A0F2-EB90B84EB6FE} → {63E3B0BC-06DA-4321-A618-EF67962816EA}
+      - "Association «IN» → pshvs_local_vehicle_visibility_data"  # {6DA10C41-8884-499a-BADD-B53EDFF1BFDB} → {33777649-E88A-4f07-8CAD-4A42658D75AE}
+  - name: "F5.15.1.6 Detect Road Surface State in Host Vehicle vicinity"
+    guid: "{1517453F-23A7-49f7-B236-BA8496D5ADED}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to take responsibility for processing information from sensors that detect the state of the road surface near to the Host Vehicle, i.e. the Vehicle in which it is operating.
+      (2) The ability to process the sensor data to determine if road surface is good, or if not what is the problem (e.g. slippery, broken) and why (e.g. oil spill, ice, mud, worn).
+      (3) Once processing is complete, the ability to send the data in digital form to the Determine and store local Host Vehicle Conditions Function.
+    links:
+      - "Aggregation «component of» → F5.15.1 Provide Detection for the Vehicle Surroundings"  # {4B9C9FCE-40FB-45b3-A719-D3AC83F77A53} → {63E3B0BC-06DA-4321-A618-EF67962816EA}
+      - "Association «IN» → pshvs_local_vehicle_road_surface_conditions"  # {D8B4F40C-2AB8-4dce-ADA5-95F521602A77} → {D31141C2-E6A7-41ef-AF17-C6FDF2EA1F9A}
+  - name: "F5.15.1.7 Detect Stationary Objects in Host Vehicle vicinity"
+    guid: "{E350AC14-567F-465a-8AF7-2C644A7CCED1}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to take responsibility for processing information from sensors that detect the presence of Stationary Objects near to the Host Vehicle, i.e. the Vehicle in which it is operating.
+      (2) The ability to process the sensor data to determine the location of the Stationary Objects and if they are in the road carriageway that is in the forward trajectory of the Host Vehicle, or if they are in the other carriageway.
+      (3) Once processing is complete, the ability to send the data in digital form to the Determine and store local Host Vehicle Conditions Function.
+    links:
+      - "Aggregation «component of» → F5.15.1 Provide Detection for the Vehicle Surroundings"  # {637BBFC7-4E07-463d-BECC-09DF12B4C87D} → {63E3B0BC-06DA-4321-A618-EF67962816EA}
+      - "Association «IN» → pshvs_local_vehicle_stationary_objects"  # {09109B96-941C-480d-AF82-F82AE474DC3D} → {5E6E94F6-0E77-4036-B641-3DF79A6CA80C}
+  - name: "F5.15.1.8 Detect Vehicle Attitude Status"
+    guid: "{46031CA6-419E-45d7-81CB-197FEB857A02}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to continuously receive data about the current speed, trajectory and location of the Host Vehicle.
+      (2) The ability to use the Host Vehicle current speed, trajectory and location to determine if it is in the correct attitude, i.e. has not fallen over, or turned upside down, or on its side.
+      (3) The ability to send data for a warning message that the Host Vehicle is not in a proper attitude.
+    links:
+      - "Aggregation «component of» → F5.15.1 Provide Detection for the Vehicle Surroundings"  # {08BD6A5F-8A29-4af4-BBA7-8DA75BEAC306} → {63E3B0BC-06DA-4321-A618-EF67962816EA}
+      - "Association «IN» → pshvs_data_for_incorrect_vehicle_attitude_warnings"  # {B6557746-1B09-4ef2-852E-48AF29C4C08F} → {7D52227B-C64A-4c99-8C5B-D8F8EE36C472}
+  - name: "F5.15.3 Determine Host Vehicle Situation"
+    guid: "{D880D0A8-228C-4e34-8130-5ABAB4C9A865}"
+    type: "Activity"
+    stereotype: "FRAME_High_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This High-level Function shall be responsible for processing the data about the location of the Host Vehicle and its trajectory to determine if it is being driven safely and/or it will be in conflict with any other Vehicles or Other Road Users.  If the Driver of the Host Vehicle needs to take any corrective action to driver more safely and/or avoid the prospective conflict with another Vehicle or Road User, it shall be determined by the Function and sent to the Provide Vehicle Trajectory Information to Driver Function for output to the Driver.
+    links:
+      - "Aggregation «componentof» → F5. Provide Support for Host Vehicle Services"  # {129D80EF-6C91-4cf7-AE27-E503E488B5B2} → {F1EBADEA-D763-4ff2-9557-A98565A22658}
+      - "Aggregation «componentof» → F5.15 Provide In-vehicle Detection and Analysis"  # {350EFD0A-A74D-47f1-AD2A-C18F3F2F6026} → {F8617CCE-0051-448b-9A40-576C60C469AB}
+      - "Association «IN» → pshvs.mt_possible_conflicts_with_vehicle_movement"  # {C601F780-D4CD-4179-B343-84384E7DD707} → {2F1D0855-DC4C-4754-8AE6-8A2A8F0A8C37}
+      - "Association «IN» → pshvs.mt_roadside_vehicle_lane_departure_warning"  # {B790BC6D-AAEC-401f-89C4-667D57A262C3} → {4ACCB898-9DAB-45a3-92CD-CA68690CD519}
+      - "Association «IN» → pshvs_host_vehicle_ghost_driving_warning"  # {CF0D6BEC-B514-49f4-85C2-32A2EA3E0CCA} → {69CF7140-CA2F-4a68-9C0D-273D3E8C5CC7}
+      - "Association «IN» → pshvs_host_vehicle_lane_departure_warning"  # {93F11FEE-7234-46b4-B0DE-0E5206164064} → {8C2E0517-4EA8-424b-9287-E5E1ABA91EC8}
+      - "Association «IN» → pshvs_host_vehicle_red_light_running"  # {A40480D6-F999-4923-9A55-00461E11C08C} → {32EFCF40-E8D4-4e62-86C3-705C6C3F70D3}
+      - "Association «IN» → pshvs_nearby_vehicles_and_road_user_information"  # {38A96122-0249-4a1f-B944-470FCFF47F44} → {34C2A4FE-FC99-47c2-A42C-7F16537F9F41}
+      - "Association «IN» → pshvs_red_light_running_warnng"  # {CB922911-5651-4586-889D-564AD0638580} → {8D6FFA3C-60C4-4896-B8A7-BEAA20EF7816}
+      - "Association «IN» → pshvs_road_curve_ahead_warning"  # {64EFD95C-6859-44a8-821C-9F14AA0C7C87} → {9D52CC96-806A-462e-983C-907675AEB634}
+      - "Association «IN» → pshvs_traffic_signal_advisory_message"  # {2A2D0AFA-515A-472d-BEEA-EEDAB63D404D} → {9FB74C1E-6C1C-4b3b-BAA1-A741A30E5CAC}
+      - "Association «IN» → pshvs_un-safe_overtaking_manoeuvre_warning"  # {6B722408-6FFD-42ae-B086-AD0DF43B158D} → {61B8080B-4968-4c5c-A55A-3B6B9C2118BA}
+      - "Association «IN» → pshvs_un-safe_overtaking_warning_for_other_vehicle"  # {9DA6FDD9-B3E0-48a8-A1CE-77D3E1B58D1F} → {D794749F-1620-423b-A5BE-7C43041AD78F}
+      - "Association «IN» → pshvs_vehicle_behaviour_warning"  # {D8CA9714-19B9-4dae-A010-04BA7392E2C5} → {0CABCC16-10C2-4955-BC6E-EA3EAC034A9C}
+      - "Association «IN» → pshvs_vehicle_collision_warning"  # {C17E4A04-5D6D-4207-8F06-C1FCC4987D79} → {35811CB3-470E-45b8-AE0E-09E5C9E25E39}
+      - "Association «IN» → pshvs_vehicle_lane_departure_warning"  # {45B43188-9234-470b-9D4F-E351B2DF7CC5} → {F693AFC3-1F62-4290-9738-643ABC12D534}
+      - "Association «IN» → pshvs_vehicle_trajectory_for_driver_behaviour"  # {29E29099-7938-40bb-A8CE-24F52D677B9E} → {9E535160-5035-4d8f-BA52-17F74B054754}
+  - name: "F5.15.3.1 Predict Host Vehicle Trajectory"
+    guid: "{1104A701-AC9D-4027-81D9-C1D4476BC3DD}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to take responsibility for predicting the trajectory of the Host Vehicle, i.e. the Vehicle it which it is operating.
+      (2) The ability to receive data about how the Host Vehicle is moving and its current location within the carriageway and within the road network.
+      (3) From this data the ability to predict the immediate forward trajectory of the Host Vehicle, e.g. staying in lane, lane change, overtaking, turning, reversing, stopping and stationary.
+      (4) The ability to classify whether the predicted immediate forward trajectory of the Host Vehicle is safe or not.
+      (5) If the predicted immediate forward trajectory of the Host Vehicle is found to be unsafe, the ability to send a warning message to other functionality for output to the Driver of the Host Vehicle.
+      (6) The ability to also use the data it receives from traffic signals that are relevant to the future trajectory of the Host Vehicle showing when red (stop) and green (go) will be displayed to determine whether the Host Vehicle will run a red light.
+      (7) If the data received from traffic signals shows that the Host Vehicle will run a red light, the ability to send a warning to other functionality for output to its Driver and also to other functionality for transfer to Other Vehicles.
+    links:
+      - "Aggregation «component of» → F5.15.3 Determine Host Vehicle Situation"  # {FD55C65A-928B-47a8-B845-F267726A3BF2} → {D880D0A8-228C-4e34-8130-5ABAB4C9A865}
+      - "Association «IN» → pshvs.mt_roadside_vehicle_lane_departure_warning"  # {B49E4210-6095-4f3b-A587-7925B5040162} → {4ACCB898-9DAB-45a3-92CD-CA68690CD519}
+      - "Association «IN» → pshvs_host_vehicle_ghost_driving_warning"  # {E01DFD5C-03CE-4020-83F6-DAFAFEB991AD} → {69CF7140-CA2F-4a68-9C0D-273D3E8C5CC7}
+      - "Association «IN» → pshvs_host_vehicle_lane_departure_warning"  # {80E0ACB9-A55C-44b3-9F44-CD5820A5A340} → {8C2E0517-4EA8-424b-9287-E5E1ABA91EC8}
+      - "Association «IN» → pshvs_host_vehicle_red_light_running"  # {8458E7AB-DA42-4ab2-B1A2-D875D7736667} → {32EFCF40-E8D4-4e62-86C3-705C6C3F70D3}
+      - "Association «IN» → pshvs_predicted_host_vehicle_trajectory"  # {83AF6ECF-F010-4ac9-B72D-80BE26FFBC08} → {721FF121-53BF-47fd-8665-591EE2EF086E}
+      - "Association «IN» → pshvs_red_light_running_warnng"  # {7C39F969-E3D8-49e4-AAA8-0FEC72BE8BEC} → {8D6FFA3C-60C4-4896-B8A7-BEAA20EF7816}
+      - "Association «IN» → pshvs_road_curve_ahead_warning"  # {185EA708-B7F6-43ea-8BAF-78260DBA085E} → {9D52CC96-806A-462e-983C-907675AEB634}
+      - "Association «IN» → pshvs_traffic_signal_advisory_message"  # {85DF6278-6403-4e1e-B3D3-287CBBD5FE92} → {9FB74C1E-6C1C-4b3b-BAA1-A741A30E5CAC}
+      - "Association «IN» → pshvs_un-safe_overtaking_manoeuvre_warning"  # {559ADCF5-0672-4105-8C20-CFC95CD56B07} → {61B8080B-4968-4c5c-A55A-3B6B9C2118BA}
+      - "Association «IN» → pshvs_un-safe_overtaking_warning_for_other_vehicle"  # {80D0E027-EA30-4841-9102-58D4631FBA46} → {D794749F-1620-423b-A5BE-7C43041AD78F}
+      - "Association «IN» → pshvs_vehicle_lane_departure_warning"  # {65D43B03-2937-43b1-B150-7FF8E17BC4C4} → {F693AFC3-1F62-4290-9738-643ABC12D534}
+      - "Association «IN» → pshvs_vehicle_trajectory_for_driver_behaviour"  # {7A620303-A340-4abe-946B-3EE9F032E6EF} → {9E535160-5035-4d8f-BA52-17F74B054754}
+  - name: "F5.15.3.2 Analyse Road Situation around Host Vehicle"
+    guid: "{0A5D11AA-6D5C-4ed1-9EE0-1157A6B90784}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to determine the probability of a collision between the Host Vehicle (i.e. the Vehicle in which it is operating) and another Vehicle.
+      (2) The ability to use data about the location of Other Vehicles in the vicinity of the Host Vehicle and the predicted immediate forward trajectory of the Host Vehicle to determine if there is a high possibility of collisions taking place between them.
+      (3) If a high possibility exists, the ability to send a warning to the Driver, Other Vehicles and to the Incident Management functionality suggesting the possibility of an accident.
+      (4) The ability to perform this determination every time that the trajectory of the Host Vehicle or the position of Other Vehicles changes.
+    links:
+      - "Aggregation «component of» → F5.15.3 Determine Host Vehicle Situation"  # {A7CA86D7-2762-4822-8AE9-8A6109CC2D59} → {D880D0A8-228C-4e34-8130-5ABAB4C9A865}
+      - "Association «IN» → pshvs.mt_possible_conflicts_with_vehicle_movement"  # {9B490B7B-B8BF-47fd-937A-1D36B2EBC7FC} → {2F1D0855-DC4C-4754-8AE6-8A2A8F0A8C37}
+      - "Association «IN» → pshvs_nearby_vehicles_and_road_user_information"  # {23C1341C-255E-45d6-9012-5CB3185DBB97} → {34C2A4FE-FC99-47c2-A42C-7F16537F9F41}
+      - "Association «IN» → pshvs_vehicle_collision_warning"  # {E48F1C95-9B82-4fc1-9C75-8DCE23B1A004} → {35811CB3-470E-45b8-AE0E-09E5C9E25E39}
+  - name: "F5.15.3.3 Classify Host Vehicle Driver Behaviour"
+    guid: "{97FF3690-227C-480e-B516-DA3455A0603C}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to take responsibility for classifying the expected behaviour of the Host Vehicle (i.e. the Vehicle in which it is operating) according to the status of its Driver.
+      (2) The ability to receive data about the predicted immediate trajectory of the Host Vehicle from its current location within the carriageway and the road network.
+      (3) The ability to analyse the data received about the behaviour of the Driver of the Host Vehicle and use this together with the immediate trajectory to classify the future operation of the Vehicle as safe or un-safe.
+      (4) If the behaviour of the Driver is shown to be un-safe, the ability to send a warning for output to the Driver of the Host Vehicle.
+    links:
+      - "Aggregation «component of» → F5.15.3 Determine Host Vehicle Situation"  # {EDBC5015-6968-44b0-A908-63AA9891BA6F} → {D880D0A8-228C-4e34-8130-5ABAB4C9A865}
+      - "Association «IN» → pshvs_vehicle_behaviour_warning"  # {CF1E6EF6-FFB2-43de-9F7A-6254FE4A4C31} → {0CABCC16-10C2-4955-BC6E-EA3EAC034A9C}
+  - name: "F5.15.4 Provide Vehicle Trajectory Information to Driver"
+    guid: "{D6D8A90D-CBE1-4211-99AD-D96F223A0ECC}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to take responsibility for the output of particular warning messages to the Driver of the Host Vehicle, i.e. the Vehicle in which it is operating.
+      (2) A HMI through which these messages can be output to the Driver of the Host Vehicle.
+      (3) The ability for these messages to warn the Driver that the Host Vehicle is being driven in an unsafe manner, or that it is about to collide with another Vehicle that is nearby.
+      (4) The ability for the outputs of both messages to be made simultaneously and for possible corrective action to be suggested to the Driver.
+    links:
+      - "Aggregation «componentof» → F5. Provide Support for Host Vehicle Services"  # {09AA1D77-175D-4949-9AD7-EC8FAED67609} → {F1EBADEA-D763-4ff2-9557-A98565A22658}
+      - "Aggregation «componentof» → F5.15 Provide In-vehicle Detection and Analysis"  # {D80B9C60-39A4-46c2-A94A-A63CB0DEF869} → {F8617CCE-0051-448b-9A40-576C60C469AB}
+      - "Association «IN» → td-ghost_driver_detected_ahead_warning"  # {6CDEDDF3-0403-47b9-9EDD-AB4B949A7067} → {546656F4-CD46-41f7-96F4-57971A1D71F1}
+      - "Association «IN» → td-host_vehicle_ghost_driver_warning"  # {E55C4A54-0D69-4b30-8B87-1143049152E5} → {E1E9EB15-A42A-46b6-921E-C243BBDED4EE}
+      - "Association «IN» → td-pshvs_low_visibility_warning_and_advice"  # {D35D781F-4B4A-485c-BBBF-6B3DC9CFB0D9} → {A3C312DA-FF20-466b-AA1B-4E424DCBE2A6}
+      - "Association «IN» → td-pshvs_nearby_other_vehicle_and_road_user_information"  # {633C61BA-42CE-4cac-AD6E-9B243806C3C3} → {21B09956-C1BB-4651-AD92-ACCF04C08F1D}
+      - "Association «IN» → td-pshvs_road_curve_ahead_warning"  # {9A18E651-EFFF-410f-A1BA-4B352ED58CEE} → {4FE8558E-A828-4177-A817-DFD4B23D6BBA}
+      - "Association «IN» → td-pshvs_slippery_road_surface_ahead_warning"  # {4C42ED5A-6DBF-40bc-9BA8-BE0187732666} → {220157B4-2086-47aa-A28B-CF4736F6C3B1}
+      - "Association «IN» → td-pshvs_slow_moving_objects_warning_and_advice"  # {DEDD24F9-E157-4e15-9ECB-58038CAF6FBF} → {435C622C-1309-4a96-94C6-5311B32F8BD8}
+      - "Association «IN» → td-pshvs_stationary_emergency_vehicle_ahead_warning"  # {66025BD7-3DC9-4194-9A0E-7B49B991D7A6} → {090D20DB-65FE-4c3d-B27E-3AD3D45438FB}
+      - "Association «IN» → td-pshvs_stationary_objects_warning_and_advice"  # {1A1BB60B-C479-437d-94CF-1C289BE10D39} → {44557EA3-CC8F-42d7-ABEC-23C199D9F5D9}
+      - "Association «IN» → td-pshvs_traffic_queue_ahead_warning_and_advice"  # {24FE24CE-11F7-46d5-8762-2EC02DBCFBA1} → {CA60762C-D06D-4e43-80F2-B170A04A3F45}
+      - "Association «IN» → td-pshvs_traffic_signal_advisory_message"  # {C66857E1-5D14-4f2d-96DA-3704B4794B49} → {B5F1323A-2AD6-44a9-A030-9E39DDBD6E63}
+      - "Association «IN» → td-pshvs_vehicle_behaviour_warning"  # {6C31203A-AEFF-4414-9328-95E8A93F3D32} → {D08CFCE7-986C-41d3-AF46-13BB1744523D}
+      - "Association «IN» → td-pshvs_vehicle_collision_warning"  # {09DF6999-E3D5-4033-A29F-AB2D3CAEB56F} → {0363DA63-F0E9-4877-BE44-601C51F419BF}
+      - "Association «IN» → td-pshvs_vehicle_red_light_running_warning"  # {4B323913-6826-4107-A7B9-21D83CB2C3A2} → {D9621C7B-1931-4124-9B7C-220176DA52ED}
+  - name: "F5.15.5 Collect & forward local Host Vehicle conditions"
+    guid: "{A4C5F193-840C-4a95-96F3-77208D9A468D}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to take responsibility for collecting all of the data about the situation around the Host Vehicle (i.e. the Vehicle in which it is operating) produced by sensors in the Host Vehicle.
+      (2) The ability for the data about the situation around the Host Vehicle to include such things as the location and trajectories of other Vehicles, other road users, Pedestrians and Vulnerable Road Users, plus weather, road surface conditions and stationary objects that are near to the Host Vehicle.
+      (3) The ability to store the collected data locally, i.e. within itself.
+      (4) The ability to continuously update the data as it changes, even if the Host Vehicle is stationary.
+      (5) The ability to take responsibility for the addition of the actual geographic location of the Host Vehicle, to the data it has collected about the situation surrounding it.
+    links:
+      - "Aggregation «componentof» → F5. Provide Support for Host Vehicle Services"  # {5CD738F8-89BE-4eb6-960C-928664B0E34D} → {F1EBADEA-D763-4ff2-9557-A98565A22658}
+      - "Aggregation «componentof» → F5.15 Provide In-vehicle Detection and Analysis"  # {567B1DA2-78D5-4789-98FA-66744E75B432} → {F8617CCE-0051-448b-9A40-576C60C469AB}
+      - "Association «IN» → pshvs.mt_inter-urban_low_visibility_message"  # {F6D846C1-D28E-4c66-A4C2-9C047ABA1C83} → {469BA67D-04FE-406d-B364-781C31CBEC61}
+      - "Association «IN» → pshvs.mt_inter-urban_road_surface_state_message"  # {664E14CC-EBD2-424e-BB7F-9CE176C9364C} → {D9C6E4B4-6DC6-4498-BA2C-C0C3C3901B17}
+      - "Association «IN» → pshvs.mt_inter-urban_slow_objects_message"  # {68CBACE1-9DDD-41a4-98DF-0A6030B28978} → {54FF4AAA-05BE-46eb-BF8F-F8E197F0BE45}
+      - "Association «IN» → pshvs.mt_inter-urban_stationary_emergency_vehicle"  # {519A99CE-81CA-4fbf-B563-A5CCD88B8C5C} → {9E56AA2B-B11B-4418-A429-3CB8F24669F0}
+      - "Association «IN» → pshvs.mt_inter-urban_stationary_objects_message"  # {D46BED68-FB67-4e88-B551-7251EF602A86} → {CE62FEB3-B001-4d9b-8340-2D60C0A12637}
+      - "Association «IN» → pshvs.mt_inter-urban_traffic_queue_ahead_message"  # {8E94815C-1CC7-446d-B4F4-2A6869DFAFD2} → {E688277D-D941-46b7-B24D-0EB333E3AA95}
+      - "Association «IN» → pshvs.mt_inter-urban_vehicle_attitude_message"  # {DEAA26CF-F25A-4e07-B6BF-9373882E2E58} → {92C5C3DC-219D-47f6-95D4-7B32E77C7CD7}
+      - "Association «IN» → pshvs.mt_urban_low_visibility_message"  # {C30A82CD-C235-4d46-94A0-39030BAE8355} → {D5C1D28D-05AB-4a54-9149-CEB21731DCA7}
+      - "Association «IN» → pshvs.mt_urban_road_surface_state_message"  # {0A565241-235A-43e7-A004-2979115205EB} → {4DE71882-ADC7-4d6e-9255-B227695C0D64}
+      - "Association «IN» → pshvs.mt_urban_slow_objects_message"  # {D8C5338F-E1ED-4e10-88F0-3A7E80A5C532} → {5D29FC3A-B794-405e-BD51-03940A4B4B1B}
+      - "Association «IN» → pshvs.mt_urban_stationary_emergency_vehicle"  # {0B8F7B76-3A08-4788-9FFC-90B4AEBCAA8A} → {3886E0F5-423B-46dc-9E2B-213233A25B71}
+      - "Association «IN» → pshvs.mt_urban_stationary_objects_message"  # {F1DC4CCC-86F7-4d12-B01F-40CE5676F82D} → {43A5CB6D-123E-4dcd-B99A-51DABADEB039}
+      - "Association «IN» → pshvs.mt_urban_traffic_queue_ahead_message"  # {9FCA3F43-B395-4a8c-B0B7-4143129AE403} → {A3FC1F95-0AF0-42d7-93B7-8DF4EB7496E6}
+      - "Association «IN» → pshvs.mt_urban_vehicle_attitude_message"  # {8E02C29C-2406-4d4a-8AAD-E63402429036} → {56A5655D-723B-43d8-9946-B294303EC4CA}
+      - "Association «IN» → pshvs_emergency_vehicle_stationary_ahead"  # {8A5089B2-7B1D-4821-941C-8BFB9E592BA5} → {A58FAEF4-20B8-4570-B174-1C855AB7FFEB}
+      - "Association «IN» → pshvs_ghost_driver_detected_warning"  # {18CD0CA4-320D-4d40-8B43-66862153B7A7} → {7EB09F20-A52B-4bd5-A946-0DA53A121014}
+      - "Association «IN» → pshvs_ghost_driver_warning_for_other_vehicle"  # {51626A3D-0CB3-4184-A755-439832C12749} → {69733983-0E01-4655-A376-4F5AD01C46CD}
+      - "Association «IN» → pshvs_host_vehicle_attitude_for_orther_vehicle"  # {5EEE0158-BE55-4ab8-AF69-0F8EDFB5610C} → {61A412FE-6A85-400a-963F-FF4F120EC526}
+      - "Association «IN» → pshvs_host_vehicle_visibility_for_other_vehicle"  # {F0DFF05A-F6B1-413d-AC27-39AF7E066095} → {0AAAFDF0-F78F-4f49-8B81-0983ED7144EB}
+      - "Association «IN» → pshvs_local_road_surface_state_for_other_vehicle"  # {0CAC6BF4-50BE-4471-B94E-691C4FCEBAE7} → {13749856-4209-44b4-A2FB-E551A0E21ACA}
+      - "Association «IN» → pshvs_location_of_other_vehicles_nearby"  # {F23B73A8-5087-4097-86EA-A7ECBE87B7CB} → {88E719BE-338D-4a14-8ED0-09A2C531CD05}
+      - "Association «IN» → pshvs_low_visibility_warning_and_advice"  # {A771D5B2-0BDA-48c7-A194-B25D95D2AC9C} → {0A14D089-2D25-42ae-8868-BA145624DE69}
+      - "Association «IN» → pshvs_other_vehicle_relative_position"  # {EA3CD8BD-2FCA-42f0-A66C-66666A7E5E6F} → {9CADBC37-DB05-4fb2-B20A-52A9A0CDAEF1}
+      - "Association «IN» → pshvs_other_vehicle_trajectory_for_host_vehicle"  # {7CC4D811-F6CF-4967-870D-7521D36CABAE} → {EEB32B20-EB96-4872-B492-2213AD415080}
+      - "Association «IN» → pshvs_slippery_road_surface_warning"  # {1E5D132E-B0CF-49c0-BA02-0339AD41EE4C} → {708A0854-A80A-4a1f-9300-41BD674CBCA0}
+      - "Association «IN» → pshvs_slow_objects_warning_and_advice"  # {D60EC3D1-1952-4e12-A105-0D7E8F835ACC} → {FA9B342B-E61D-409f-B20A-C82DD7A2C173}
+      - "Association «IN» → pshvs_stationary_objects_warning_and_advice"  # {053F9BE3-4C46-43df-ACB3-69B6DDBAE7BB} → {0E17B9C9-48DB-4995-91EE-C93F969F94F6}
+      - "Association «IN» → pshvs_traffic_queue_ahead_for_other_vehicle"  # {9B3F8834-1804-4486-8D49-E7EDC6637F0F} → {A1530DCC-0DE5-4c03-B9A6-76E07A67BA73}
+      - "Association «IN» → pshvs_traffic_queue_ahead_warning_and_advice"  # {AF30F9B2-F98B-48cb-8FC1-8918CF77C066} → {FC90C2FC-F542-4278-900F-64DD7E4AF8D8}
+      - "Association «IN» → pshvs_vehicle_location_for_trajectory"  # {EEB8C71A-F619-41b6-81FD-312BB64F551B} → {554BE2A1-5224-4d64-8B56-ED7B0906E88A}
+      - "Association «IN» → tesp.g-request_map_data_for_vehicle_sensors"  # {46476445-9DC7-4aa8-8490-C32244ADFC84} → {3186B933-6CFF-402b-8F34-380A6C8A44BD}
+  - name: "F5.16 Provide Outputs to Host Vehicle Drivers"
+    guid: "{0AAEF8C7-9771-4c0b-8E27-5BD596BF8380}"
+    type: "Activity"
+    stereotype: "FRAME_High_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This High-level Function shall provide facilities that enable the output of messages, warnings and other information to be provided to the Driver in the Host Vehicle.  It shall output these messages in a pre-determined priority so that those with the highest priority are easily seen by the Driver and take precedence over those with lower priorities.  The Function shall also compare the content of the messages, warnings and other information with what the Driver can see being displayed by equipment outside of the Vehicle, and report any differences.
+    links:
+      - "Aggregation «componentof» → F5. Provide Support for Host Vehicle Services"  # {5220452C-97B6-46e2-981A-6F9AA2E8C281} → {F1EBADEA-D763-4ff2-9557-A98565A22658}
+      - "Association «IN» → pshvs.mt_command_display_errors"  # {3C411ACB-0F9B-4b01-8411-0C4F0B2A77F4} → {AB936C78-006C-4a76-A94A-F466311009E2}
+      - "Association «IN» → pshvs_data_for_fcd_and_road_information"  # {232D7EF6-337C-4811-B3E6-D79AB8066AEB} → {4FDC6F47-CF9E-4dfd-AE9A-16D06BA2C65E}
+      - "Association «IN» → td-pshvs_regulations_information_&_warnings_outputs"  # {A74ACB81-E2E8-447d-B54D-22156C5E258D} → {38851848-EFD5-420e-8A96-65AFDF866D34}
+  - name: "F5.16.1 Manage Communication from Vehicle to Driver"
+    guid: "{DE09B5F2-6135-412e-BF14-56D1B22FFA77}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to receive dynamic warnings and instructions about various situations and events that will affect the progress of the Vehicle through the road network.
+      (2) The ability to filter these dynamic warnings and instructions according to the current Vehicle location.
+      (3) The ability to send the filtered dynamic warnings and instructions for display to the Driver.
+      (4) The ability to process warnings that include accidents, incidents, wrong-way drivers, hazardous weather conditions, roadworks, predicted traffic conditions and congestion.
+      (5) The ability for each item of information sent for output to the Driver to be given a priority level based on such things as their relevance to the location of the Vehicle, the likelihood that the Vehicle will encounter them, and their possible effect on the safety of the Vehicle and its occupants.
+      (6) The ability to filter the warnings and instructions so that only those that are appropriate and relevant to the current location of the Vehicle are sent for output to the Driver.
+    links:
+      - "Aggregation «componentof» → F5. Provide Support for Host Vehicle Services"  # {A8797DB6-DF51-4b00-AF8C-48F0407B323E} → {F1EBADEA-D763-4ff2-9557-A98565A22658}
+      - "Aggregation «componentof» → F5.16 Provide Outputs to Host Vehicle Drivers"  # {248185C1-D285-4b33-A7FA-55E1DF04B28C} → {0AAEF8C7-9771-4c0b-8E27-5BD596BF8380}
+      - "Association «IN» → pshvs_content_for_driver_output"  # {9DB61678-F7A7-4536-8DE7-D775C1FAF8D0} → {88F0C485-72DC-4137-9C0A-375F83B12FA2}
+      - "Association «IN» → pshvs_instructions_&_warnings_for_other_vehicles"  # {375F4D1A-19FD-4a38-8275-90B9E9CA9B12} → {32137DC2-6E9D-4acd-ADA7-ADB192FCB4ED}
+      - "Association «IN» → pshvs_output_commands_&_warnings"  # {8CE236A6-6442-4994-9A3E-320067A9AF92} → {1AC40800-2DDA-436a-A078-A76E195EA653}
+  - name: "F5.16.2 Output Commands and Dynamic Warnings"
+    guid: "{FB7FD2EE-ABFD-4a0c-8EF8-A16DDAA1E280}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to receive the currently valid warnings, lane instructions and traffic regulations for the section of the road network in which the Vehicle is currently located or is about to enter.
+      (2) A HMI through which the messages to the Driver can be displayed according to the determined priority of messages.
+      (3) The ability of the HMI to use replicas of the appropriate international roadside signage (according to ISO TS14823:2008) and not "custom" versions of roadside signage in the displays to the Driver.
+      (4) The ability of the HMI to display the outputs in a way that avoids overloading or distracting the Driver with too much or irrelevant information.
+      (5) The HMI shall enable the Driver to request output of the most relevant outputs about incidents.
+      (6) The ability for the HMI to display a message to the Driver saying that a particular service is unavailable, when no data that is relevant to that service has been received for a suitable period of time.
+    links:
+      - "Aggregation «componentof» → F5. Provide Support for Host Vehicle Services"  # {5B043E98-22B9-432a-BE9B-E7668A74D0D3} → {F1EBADEA-D763-4ff2-9557-A98565A22658}
+      - "Aggregation «componentof» → F5.16 Provide Outputs to Host Vehicle Drivers"  # {BC4CF028-8DB3-4a3e-BB7D-5267AF4A1FD2} → {0AAEF8C7-9771-4c0b-8E27-5BD596BF8380}
+      - "Association «IN» → pshvs_lane_command_response"  # {45BE15F7-3B2B-4b79-ABA1-1A19AC684A22} → {0F80BCA5-0156-4907-8540-CFC8F699EA26}
+      - "Association «IN» → td-pshvs_current_commands_&_warnings"  # {45765281-0ECA-4b8c-8266-15715C97E225} → {10ADE861-54E2-4617-BDE4-B81A48A90AC8}
+      - "Association «IN» → td-pshvs_possible_command_&_warning_error"  # {77834ECE-9463-4e13-BE59-96B8FEF137D9} → {9556CFEC-A0E2-46af-87D6-9B9DBCD6B261}
+      - "Association «IN» → td-pshvs_traffic_information"  # {3D486EDA-9CD5-4288-8843-E883ED6CE48E} → {CC8B1624-9D04-4e82-8C7D-654567E8171B}
+      - "Association «IN» → td-pshvs_traffic_regulations"  # {E0E2419B-56F0-430f-83AD-95132386C477} → {6D899629-5887-44dc-81A2-F07F4A8D20AC}
+  - name: "F5.16.3 Assess Dynamic Command & Warning Indications"
+    guid: "{36B45597-0C64-4842-AB9F-2F44B1D42810}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) Use its own sensors to obtain details of the commands and warnings that are being output to Drivers from the roadside.
+      (2) Make comparisons between the details obtained in (1) and the commands and warnings that are being output to Drivers from within the Vehicle.
+      (3) If the assessment in (2) shows that there is a difference, the Function shall report this to the Provide Commands and dynamic Warnings Function so that a suitable output can be made to the Driver.
+    links:
+      - "Aggregation «componentof» → F5. Provide Support for Host Vehicle Services"  # {FE7B439B-E332-4e55-B087-8757FFCBAB3E} → {F1EBADEA-D763-4ff2-9557-A98565A22658}
+      - "Aggregation «componentof» → F5.16 Provide Outputs to Host Vehicle Drivers"  # {48DD65A7-3C7B-4701-B54D-F3575CD469BD} → {0AAEF8C7-9771-4c0b-8E27-5BD596BF8380}
+      - "Association «IN» → pshvs.mt_inter-urban_c&i_display_error"  # {588A84D2-1354-4df0-8B59-E013109FC5C9} → {E5FFDE4B-0A12-4834-9B09-7021BB0BCD14}
+      - "Association «IN» → pshvs.mt_inter-urban_l&s_display_error"  # {F9830A33-61DD-4fa0-B35F-9C67E2F63A39} → {E0EFE89E-B712-489b-A2D0-6E93B5557188}
+      - "Association «IN» → pshvs.mt_urban_c&i_display_error"  # {C89E599A-8283-4926-BD2A-E226725A6853} → {4FC6D94E-E26E-43b9-8B54-01DF148FC749}
+      - "Association «IN» → pshvs.mt_urban_l&s_display_error"  # {AEB54BDD-8C54-4928-A791-34319EFF26E7} → {F391B589-76D1-47cd-91F2-350BE9A002CB}
+      - "Association «IN» → pshvs_possible_dynamic_command_&_warning_error"  # {89AC7ED1-EADF-4250-8F8B-11190D7E0B11} → {86B5B16C-AC68-4317-AAD5-74F97576CFA1}
+  - name: "F5. Provide Support for Host Vehicle Services"
+    guid: "{F1EBADEA-D763-4ff2-9557-A98565A22658}"
+    type: "Activity"
+    stereotype: "FRAME_Functional_Area"
+    status: "Proposed"
+    version: "5.0"
+    order: 1
+    note: |
+      This Functional Area shall provide functionality that enables data objects to be collected from an interface in the Vehicle about its behaviour and external conditions, and for data objects to be provided for possible use by its management functionality.  Functionality shall also be included in this Area to enable the output within the Vehicle of traffic and travel information based on data objects provided by functionality in the Manage Traffic Functional Area.  Other functionality shall enable warning messages produced from data objects provided by functionality in other Functional Areas to be output to Drivers, for the exchange of data objects with similar functionality in other nearby Vehicles and the detection of objects in the vicinity of the Vehicle.  This Functional Area shall provide Drivers with functionality that shall enable trip planning to be done from within the Vehicle.  Data objects that have been collected from the Vehicle about its operation shall be distributed to functionality in other Functional Areas.  Interfaces shall be provided to the Provide Safety and Emergency Facilities Functional Area to enable a speedy response to eCalls that have been received from Vehicles.  Vehicle identities shall be provided by the functionality when requested by other Functional Areas.
+      
+      Mnemonic: pshvs
+    links:
+      - "Aggregation «componentof» → System"  # {5AA8CDF1-DE36-4ac1-B245-96605171BECB} → {A7365472-4893-4994-9241-EEED83ABEF7D}
+      - "Association «IN» → To External Service Provider"  # {677A15F2-6253-4e24-BCA1-1A6B5684539F} → {CB0E5267-0EB0-4bc5-979C-11C135689F57}
+      - "Association «IN» → To Other Related System"  # {1AB7835B-BA5D-42b8-99BF-C14FCEF8C2C0} → {B211B65C-3E19-4618-8019-7D7744237A96}
+      - "Association «IN» → fd-driver_vehicle_inputs"  # {5A9A0404-F9B4-4ab4-A1A3-045B25B9FD38} → {5A403F9E-E385-41fc-8939-261E085822E5}
+      - "Association «IN» → mt.pshvs_data_for_vehicle_trip_monitoring"  # {69F163A0-431E-4c6f-9175-FD8B4F8A919D} → {672409D0-9E56-4626-A077-D3BC84F51282}
+      - "Association «IN» → mt.pshvs_fused_xfcd"  # {F196E312-45AE-40ba-AF15-D214BA5A4C0A} → {1BBDC3FD-A446-4534-A2B3-94EE67C4136B}
+      - "Association «IN» → mt.pshvs_urban_host_vehicle_traffic_outputs"  # {2B6C935F-AA13-4e87-9E41-2838B9BDCC3B} → {D2AEC056-C0E1-4767-8BE2-2B572228AC18}
+      - "Association «IN» → pshvs.mffo_FTEP_route_request_response"  # {377CC380-D7D1-4c20-8532-5DFAAD1A5272} → {8C5D1D6F-DF43-4aa8-A513-83B59DB5A81D}
+      - "Association «IN» → pshvs.mt_command_display_errors"  # {8203F0A8-EF7C-4b53-8AF5-7BDFE7DCA2AD} → {AB936C78-006C-4a76-A94A-F466311009E2}
+      - "Association «IN» → pshvs.mt_data_for_traffic_management"  # {27B28F33-76D4-4d08-8D52-F79792634BBF} → {2CCAA96F-9559-4e9a-BE8A-F6FE5C91D948}
+      - "Association «IN» → pshvs.mt_errors_in_speed_display"  # {353BEB67-6453-4f07-BBDD-8A59A1176AB3} → {6DB2CFBF-FB6C-48ef-9CDA-247A8FA6B0AF}
+      - "Association «IN» → pshvs.mt_floating_car_data"  # {64AFA48F-1FC1-4f3e-9ADF-4F7682FEA714} → {5D78B163-4356-4a9c-BE66-CA33BEFBA930}
+      - "Association «IN» → pshvs.mt_inter-urban_roadside_outputs_to_driver"  # {A91A104B-0D15-4323-9E5F-8FD37AE1BE72} → {A6027C87-754E-4c6e-A54E-4F258F407774}
+      - "Association «IN» → pshvs.mt_rest_zone_use_data"  # {FEDCE3F8-19C9-4b2e-A36E-52C483903055} → {82A1F697-B29B-4971-B41F-58060486B6A6}
+      - "Association «IN» → pshvs.mt_road_use_data_from_trip"  # {2FFED6C7-170F-44d8-BA92-E52A3AC6C0DA} → {68E564C7-769A-416b-9D9D-7170F1D4F28F}
+      - "Association «IN» → pshvs.mt_roadside_display_errors"  # {49301905-9CFC-4609-BDB3-6912A2D74EB9} → {C2E72F83-8A1E-4154-9128-385F462C8EB3}
+      - "Association «IN» → pshvs.mt_urban_roadside_outputs_to_driver"  # {54E63383-5824-490f-907D-61762C146C07} → {F7DAF682-200E-46b2-B785-12A10E0FCAEC}
+      - "Association «IN» → pshvs.pscs_vehicle_data"  # {A4E5C892-4E36-4acf-AB27-E133525909C5} → {E3D85AA9-160E-4b9d-820F-E4CF0937AEB9}
+      - "Association «IN» → pshvs.psef_vehicle_data"  # {3C2E11E8-A448-48a1-AE4C-71951E51AE7B} → {B1614AB8-BD5A-49ce-B1E0-4F0DEB0B0557}
+      - "Association «IN» → pshvs.psle_service_notification"  # {4FB0D869-E28D-414a-B11B-6134F33711FA} → {D10A0EF8-2049-428d-9C13-5DA7A7D7371D}
+      - "Association «IN» → pshvs.ptja_vehicle_trip_plan_data"  # {51BCCA57-F1AD-4f93-9341-BE6460BD0355} → {27F50CC9-9331-4efa-BFF1-02173DA69148}
+      - "Association «IN» → pshvs_data_for_fcd_and_road_information"  # {3514C253-8218-46f4-AE48-CB491897B9D0} → {4FDC6F47-CF9E-4dfd-AE9A-16D06BA2C65E}
+      - "Association «IN» → pshvs_data_from_host_vehicle_for_other_vehicle"  # {0195A6D2-18DA-42e8-BF83-B9DB6CD49AD0} → {242A0126-82BD-4cd9-AA3B-1D830F2D34C0}
+      - "Association «IN» → pshvs_data_from_other_vehicle_for_host_vehicle"  # {05089947-9768-41b0-8C09-F238C669E1A2} → {DA75A6DA-686D-4308-9C19-4C41F0A681D1}
+      - "Association «IN» → pshvs_driver_impaired_and_eCall_information"  # {20281689-B2A7-4a2a-AEA2-672EF275C5D8} → {B21A7429-B1D4-4d90-BD49-8660F3CBFE2E}
+      - "Association «IN» → pshvs_vehicle_and_road_information"  # {1EB606F9-E8B7-4994-8281-39681F563B1F} → {CB426600-B141-4077-A8A0-98A5788AC277}
+      - "Association «IN» → pshvs_vehicle_data_for_driver_monitoring"  # {E42F2195-04C3-41ca-AC44-B1DF681B117A} → {7F120155-BD4D-430b-9FA8-42D118976F24}
+      - "Association «IN» → td-pshvs_outputs"  # {015722B9-1D05-40d6-962C-A74677CDC9FE} → {86B533B0-43B7-4c80-A334-FC5B753B267E}
+      - "Association «IN» → td-pshvs_regulations_information_&_warnings_outputs"  # {A6A71B81-EDC5-48f4-9CBD-6F824A73C43A} → {38851848-EFD5-420e-8A96-65AFDF866D34}
+      - "Association «IN» → td-pshvs_speed_&_road_information"  # {077FAB70-2669-4970-87AD-B799480DAB49} → {F3E4EA7F-77C0-4299-A3CE-5E741F4A9533}
+      - "Association «IN» → td-pshvs_vehicle_trip_plan_outputs"  # {A28385B2-DDCE-4106-BE6D-BD2BDD954AA7} → {C4496EE2-3F8C-4ac6-B9E2-077BD3692888}
+      - "Association «IN» → tesp-pshvs_outputs"  # {C9BC11FC-BA43-4c08-8D51-4530F686F714} → {FAA5D67D-40D6-419f-A090-C50D3A8C8251}
+      - "Association «IN» → tfc-pshvs_outputs"  # {F2AF82A5-0DE9-4ea4-A992-2594861F3D0A} → {BF66FA39-BE43-4746-8E52-29535881A903}
+      - "Association «IN» → tft-pshvs_outputs"  # {BFB17F8C-343E-403e-89EC-94F0FF7D2DFB} → {B40385D2-3DBB-4d3b-B323-A2E29D5CE5EE}
+      - "Association «IN» → tv-pshvs_outputs"  # {C1A03E70-A336-4d5f-B2FD-260EA2A793F0} → {4CAA25CF-0E04-4443-9075-D1408AB84F83}
+  - name: "F5.11.6 Provide Incident Related Data"
+    guid: "{D5C0C930-C6E3-470d-9473-BCAE949E04EF}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 1
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to provide the record of data relating to an incident to an authorised person at the Law Enforcement Agency.
+      (2) The ability to only provide this data when a request is received from that Agency.
+    links:
+      - "Aggregation «componentof» → F5.11 Provide Driver Monitoring and eCall"  # {549A50FA-C311-40ad-9898-11867C86A714} → {1D137B7D-49D7-469b-B75F-C889DED53DC9}
+      - "Association «IN» → tlea-incident_data"  # {22A8407F-E476-4369-89A5-15257F6B9AE3} → {3C783077-EF66-42a0-98D0-26B42B2B594D}
+      - "Association «OUT» → pshvs_request_tvd_incident_data"  # {E9CD0DB5-2E3A-4f7e-A360-766CA6234D2E} → {954ACE25-13AA-4698-A30B-37F453E98AF1}
+      - "Realisation → Create eCall Minimum Set of Data (MSD)"  # {F6E9F761-1733-4734-A18F-740CE9949BF2} → {D2CDFC4F-4A5A-4906-9629-56F993B1EE05}
+  - name: "F5.13.6 Determine Vehicle Position"
+    guid: "{638106FA-A290-4941-8FF6-5278BD4C9F37}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 1
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to enable the Vehicle to determine its position.
+      (2) The ability to determine the Vehicle position with the accuracy required by other functionality to provide their specific services to the Vehicle but as a minimum shall enable the Vehicle to determine its position relative to lanes in the road carriageway.
+      (3) The ability to use data from the Location Data Source, In-vehicle system and its own sensors to determine a "dead reckoning" position and for generally improving positioning accuracy and reliability.
+      (4) The ability to use map data to provide "map matching" so that the actual identity of the part of the road network in which the Vehicle is currently positioned can be determined.
+      (5) The ability to provide updated position information to other functionality as soon as a change occurs.
+    links:
+      - "Aggregation «componentof» → F5.13 Provide Vehicle Data and ISA"  # {793AB3C6-FF26-4c08-983F-DF1860C972F5} → {F91C0ED5-7F89-4fd1-B561-6CE9E766291A}
+      - "Association «IN» → pshvs.pepf_vehicle_position"  # {21E32239-C2FC-492b-8044-B5B2910C3DC1} → {966C0322-2C7B-40a0-B833-C3B47550308B}
+      - "Association «IN» → pshvs_location_for_other_vehicle"  # {6A0C9179-A288-44a6-B108-CC717B8B43F4} → {DB55A333-5336-4d02-9852-9268DEDC67B4}
+      - "Association «IN» → pshvs_vehicle_location_for_safety_behaviour"  # {4BCB3199-F037-48cc-AF42-82A7A4584626} → {0DFDDF33-22CE-47e3-A8BA-889A04915C44}
+      - "Association «IN» → pshvs_vehicle_position_for_ISA"  # {BB4A0595-AA57-4f32-A163-9B63A92AAD68} → {770B70DE-EB37-46c0-B0BC-5BEE3095345A}
+      - "Association «IN» → pshvs_vehicle_position_for_fcd"  # {A259923E-F012-4b11-ABC9-E41DDA0BDCB7} → {F2940D86-A2B1-4368-8656-0FE12C94012B}
+      - "Association «IN» → pshvs_vehicle_position_for_illegal_use"  # {B99CF1F6-348E-4ea4-B31F-02B873554F0A} → {F439350D-5D9E-4cd5-86C4-C80DC2F78930}
+      - "Association «IN» → pshvs_vehicle_position_for_road_information"  # {84832F2F-0BFB-41b3-B67C-56E93EBA476E} → {78ECCA6A-F7E1-4745-98E5-47497D567AAB}
+  - name: "F5.14.1 Provide Driver Interface for Trip Planning"
+    guid: "{31A36D82-88DF-43bb-9D3A-BF5F2B9FECEF}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 1
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) A HMI through which the Driver can create, initiate and modify Vehicle Trip Plans.
+      (2) The HMI shall enable the Driver to provide data from which new Trip Plans can be created, draft Trip Plans modified, created Trip Plans accepted and implementing Trip Plans changed.
+      (3) The HMI shall enable the Driver to initiate the implementation of a previously created Trip Plan.
+    links:
+      - "Aggregation «componentof» → F5.14 Provide In-vehicle Trip Planning & Implementation"  # {38839907-5324-4f8e-ABFE-5441B92D072A} → {CD0DD7C8-43B3-4a5b-8DD2-AA6DEA02907E}
+      - "Association «IN» → pshvs_accept_revised_vehicle_trip_plan"  # {78BA2EFF-C006-4ca5-ACEA-05CE8DA77AC2} → {C5589082-40E2-42d4-806D-BD942B8AA2BF}
+      - "Association «IN» → pshvs_implement_vehicle_trip_plan"  # {9C5EF873-C707-4394-ADDA-4193D6589CBB} → {55BFC812-06C2-4654-996B-29D79B63C77E}
+      - "Association «IN» → pshvs_vehicle_trip_plan_acceptance"  # {8AA46577-67F0-41b6-827D-8A775266307C} → {CE920D49-056F-4540-8216-41A196B12338}
+      - "Association «IN» → pshvs_vehicle_trip_plan_data"  # {77C86ADD-E531-4a55-A070-B6CB58D4C144} → {89B133DD-216E-44c3-B412-3B94991DCE7B}
+      - "Association «IN» → td.tpd-draft_vehicle_trip_plan"  # {DB335EED-EEBC-44c3-9ACA-AFB878716D89} → {69C8236A-20FF-4981-8015-98359F8D2847}
+      - "Association «IN» → td.tpd-modified_vehicle_trip_plan"  # {CE25D867-4235-443a-A60F-23893A913569} → {FF38AEB4-82A8-47eb-B186-7FED29FF6579}
+  - name: "F5.11.7 Provide In-vehicle eCall Facilities"
+    guid: "{4B6AAED4-EE90-4d5f-9C66-1D1D0C9BB919}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 2
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to provide facilities that enable an eCall message to be automatically sent to the Public Safety Answering Point (PSAP) by the Host Vehicle that has detected that it has been involved in an accident.
+      (2) The ability to include the following data objects in the eCall message: VIN, current and previous Host Vehicle locations, Host Vehicle position can be trusted, direction in which the Host Vehicle is moving, fuel type, number of occupants, some basic information on the reason for the call, e.g. it is a real call, or a test call
+      (3) The ability to check the current location of the Host Vehicle based on its own input from the Location Data Source.
+      (4) The ability to send an eCall message to the PSAP either as a result of input from a Host Vehicle occupant, or automatically by the Driver monitoring system.
+      (5) The ability for the Driver to cancel the automatic initiation of the eCall message.
+      (6) The ability to display call acknowledgement messages from the Mobile Network functionality and the PSAP to the Driver and other occupants (if any) in the Host Vehicle.
+      (7) The ability to re-send the eCall message if the Mobile Network functionality returns a "message failed" indication.
+    links:
+      - "Aggregation «componentof» → F5.11 Provide Driver Monitoring and eCall"  # {C6F827CF-CEAE-4450-AE8C-828EB144AE0F} → {1D137B7D-49D7-469b-B75F-C889DED53DC9}
+      - "Association «IN» → pshvs.psef_eCall_message"  # {C69B0C05-3F42-4ec4-9054-F45FABC479CC} → {64DC7079-F244-4eab-9759-120E446F43C7}
+      - "Association «IN» → pshvs_eCall_information"  # {286307C2-3E52-4afa-AFF0-95FC6CFE3946} → {93521C62-6983-4761-9969-98A9AB8D1C3A}
+      - "Association «IN» → tv.hmi-eCall_response"  # {C67B7C9A-B26A-40a4-85C6-5C6ACBB518E0} → {760E0849-224B-4f0d-9994-692133BF73B1}
+      - "Association «OUT» → pshvs_request_driver_condition"  # {4BA43992-D850-44fc-9A1A-862B1810DBD3} → {C35B9421-F356-4286-A24E-00F4DD6FFEA3}
+      - "Realisation → Recieve eCall Call"  # {4AC93937-AB5E-4a51-9595-24E87A6FE01F} → {2AEA5AED-AB2C-4ad1-AE38-9A5A0DFAFE7E}
+      - "Realisation → Send out eCall"  # {792C00CF-8D9C-49f7-9D06-FC891CA72CE4} → {1B39E5EA-764B-4ef5-B76A-C84589AFABB9}
+  - name: "F5.12.5 Provide Vehicle ID"
+    guid: "{A874AB33-C037-4ae5-BFBE-2B4E064AA852}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 2
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to read the Vehicle ID from the Vehicle System.
+      (2) The ability to send the Vehicle ID to other functionality when they request it.
+    links:
+      - "Aggregation «componentof» → F5.12 Provide Vehicle Communications Interfaces"  # {56392FC6-3D4F-4b05-AD2C-230825570989} → {D7C917ED-CA9B-4e92-868E-80C5A2AA7BC3}
+      - "Association «IN» → pshvs.pepf_vehicle_ID"  # {945F7476-55F1-420d-AF4D-1F7F71380414} → {0DD3AACE-201A-4ab1-B698-D6245F5CDD52}
+      - "Association «IN» → pshvs.psle_vehicle_ID"  # {0C469ACF-CC89-4470-A1D7-7DCB4313B78F} → {CCF1B095-0456-4528-92AC-E65806A8A0E0}
+      - "Association «IN» → pshvs_vehicle_ID_for_fcd"  # {BF7FA43B-68C4-46c4-8C06-E70B5B09EC37} → {60C52BF6-0A63-4f18-9E2A-5A1CBA282BD0}
+      - "Association «IN» → pshvs_vehicle_ID_for_illegal_use"  # {340E86E3-E581-43ef-BF0E-0EA082DF86F2} → {47FEA774-80F1-4c4f-9D8D-59527B578280}
+      - "Realisation → Create eCall Minimum Set of Data (MSD)"  # {A3475A70-79A2-4b11-9FD1-9E2CF5434A8D} → {D2CDFC4F-4A5A-4906-9629-56F993B1EE05}
+  - name: "F5.12.6 Detect Illegal Use"
+    guid: "{DBE38A78-F049-491c-9C62-BD149D603A5D}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 2
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to send a message to the relevant authority whenever a signal is received indicating that the Vehicle is not being used properly.
+      (2) The message shall include the Vehicle location, which shall be received from other functionality.
+    links:
+      - "Aggregation «componentof» → F5.12 Provide Vehicle Communications Interfaces"  # {E274C279-9499-4ee1-B7A6-F797982EE8D0} → {D7C917ED-CA9B-4e92-868E-80C5A2AA7BC3}
+      - "Association «IN» → pshvs.psef_stolen_vehicle_notification"  # {0BC9C1B3-336D-4523-853D-49415F9B40F5} → {3C3AF200-C3B3-4a44-9512-FDE8582367A9}
+      - "Association «IN» → pshvs_stop_stolen_vehicle"  # {EC41E261-79F7-4b23-94A5-00D08EC77BE5} → {31B0077F-9E00-4845-8DC8-FF3F24FE5840}
+  - name: "F5.14.4 Implement Vehicle Trip Plan and Track Vehicle"
+    guid: "{9779C21E-F3B1-4389-BE4B-AD3FB28B3BF6}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 2
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to follow the progress of the Driver and implement each part of the Vehicle Trip Plan that they have requested.
+      (2) The ability for a variety of tracking methods to be used to determine the actual location of the Vehicle that the Driver is using to implement the Trip Plan.
+      (3) If no suitable tracking methods are available, the ability to use a form of dead reckoning.
+      (4) As the Vehicle that the Driver is using to implement the Trip Plan moves through the road network, the ability to monitor progress against the Trip Plan and continually calculate the Estimated Time of Arrival (ETA) at the next way point, or Trip destination.
+      (5) Based on the calculated ETA the ability to request assessment of any changes to conditions in the road network.
+      (6) The ability to provide detailed route guidance which shall be sent to the Vehicle Human Machine Interface (HMI) Function for output to the Driver.
+      (7) If a revised version of the trip plan currently being implemented is received, the ability to stop that trip plan and commence implementing the revised one.
+    links:
+      - "Aggregation «componentof» → F5.14 Provide In-vehicle Trip Planning & Implementation"  # {9DFAA4BD-558E-40c8-AA6D-E41B761ADDFD} → {CD0DD7C8-43B3-4a5b-8DD2-AA6DEA02907E}
+      - "Association «IN» → pshvs.pscs_destination_for_bus_lane_use"  # {B56E77A6-7A34-42c4-9349-5E28D9CB65DC} → {13B7BCE3-3A5F-4f17-AF5E-84D40279F48A}
+      - "Association «IN» → pshvs_request_vehicle_trip_plan_for_implementation"  # {CF2B4698-4F20-4f94-836F-B9E05444F8A4} → {974BA61E-45C6-4c75-9B88-33B52BD3A69F}
+      - "Association «IN» → pshvs_vehicle_location_for_trip_plan_monitoring"  # {44379114-8400-4d4d-82E7-9AD4FB71EE69} → {E03D6C99-6655-41f2-9D71-763ADCCCC5BC}
+      - "Association «IN» → pshvs_vehicle_trip_plan_guidance_instructions"  # {4C987E31-942F-4103-8117-566B237BEACA} → {D496E5D5-78C9-46bb-9A48-684E810A79CE}
+  - name: "F5.11.8 Record Data for Operations"
+    guid: "{1B74C182-6CAD-4aad-8978-6959ACB809AA}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 3
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to record data that is related to Vehicle safety and/or for understanding accidents.
+      (2) The data shall include but not be limited to Driver status/behaviour and on vehicle status/dynamic performance from other functionality.
+      (3) The ability to receive Driver identity data from other functionality.
+      (4) The ability to collect traffic data through its own sensors.
+    links:
+      - "Aggregation «componentof» → F5.11 Provide Driver Monitoring and eCall"  # {E9B803C2-194E-44f7-8AFB-E4945FB67542} → {1D137B7D-49D7-469b-B75F-C889DED53DC9}
+      - "Association «IN» → pshvs_tvd_scenario"  # {CEF1EBC0-8931-45ca-A5E8-D5D1E4C8F51C} → {AFB09006-6EFC-422b-9465-3C5BFD3FC4AF}
+      - "Realisation → Create eCall Minimum Set of Data (MSD)"  # {5FADC97D-7EF2-4aa1-9759-B775C298A3CD} → {D2CDFC4F-4A5A-4906-9629-56F993B1EE05}
+  - name: "F5.12.7 Communicate with In-vehicle Systems"
+    guid: "{9B153E15-917E-4e7b-99C7-D2FFDA904992}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 3
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to provide an interface between the systems inside the Host Vehicle and other ITS related functionality in the Host Vehicle.
+      (2) The ability to continuously analyse the data objects available from the Vehicle Systems through a "read only" interface, so that the integrity and safety of the systems themselves and the Host Vehicle cannot be compromised.
+      (3) The ability to send the data objects available from (2) to other functionality in the Host Vehicle.
+      (4) The ability to calculate the position and trajectory of the Host Vehicle from the data objects available from (2) and send it to other functionality in the Host Vehicle.
+      (5) The ability to instantly respond when data objects are received that show the eCall activation has been automatically triggered.
+      (6) The ability for the response in (5) to cause data objects about the current status of the Host Vehicle to be sent to other functionality in the Host Vehicle so that an eCall message will be sent.
+    links:
+      - "Aggregation «componentof» → F5.12 Provide Vehicle Communications Interfaces"  # {48A3ED1A-4735-4c65-A716-5A0952276253} → {D7C917ED-CA9B-4e92-868E-80C5A2AA7BC3}
+      - "Association «IN» → pshvs.mt_data_for_vehicles_as_incidents"  # {BE930867-3609-466d-82B7-0366CEA76B64} → {E1BE3691-E754-4c58-8CF3-1E6080C06DA9}
+      - "Association «IN» → pshvs.pscs_hazarduous_goods_vehicle_data_for_route"  # {4EB43D57-4717-47f9-A13E-BAFA3CF39623} → {9AE25689-CB48-40a5-86E4-EB9E5515C3F5}
+      - "Association «IN» → pshvs.pscs_vehicle_data_for_sensitive_areas"  # {0C2D5816-D8E4-4eeb-ACCA-9F85FE022901} → {D5E14DFA-1850-4f79-9D40-D33E8DCBEB37}
+      - "Association «IN» → pshvs_current_vehicle_time_for_fcd"  # {4680AFFA-4ED2-4836-B214-ED49ADDAF49F} → {CB3157AC-9D6D-480c-A488-546E853ECEBF}
+      - "Association «IN» → pshvs_current_vehicle_time_for_operations"  # {EDB8649A-4151-4e7a-8A50-28635A7A3DB7} → {43C96A76-B186-46a3-B5CD-C03A971729DD}
+      - "Association «IN» → pshvs_data_for_eCall"  # {B8519BA2-8B62-4a66-AD5F-E0E45543289B} → {10AB5EEE-3E53-490d-9B2C-025D01C41F1D}
+      - "Association «IN» → pshvs_dead_reckoning"  # {8E86B5F3-BACE-4181-AFF9-2EFF8EE6443F} → {554B1004-8BD0-48b5-A70E-31A650F2BB73}
+      - "Association «IN» → pshvs_goods_being_carried_by_host_vehicle"  # {CE049F97-347E-4e52-8637-233C253A786A} → {53476F03-010C-4bb7-A8E1-68149F619E9B}
+      - "Association «IN» → pshvs_illegal_use"  # {F57F9EF7-EEE1-40de-A125-1A0733066C25} → {2E808A0E-29A5-4308-A4DE-34D0017228D9}
+      - "Association «IN» → pshvs_platooning_data_to_other_vehicles"  # {C259DB91-EB94-4d99-A256-FF131B568D3D} → {57595074-B62B-4196-B1FB-53F869B8A409}
+      - "Association «IN» → pshvs_status_data_for_fcd"  # {F118FF97-B9A0-47f3-874C-814F2013E365} → {D5C14F16-C8D9-45ad-B024-453014F46ACB}
+      - "Association «IN» → pshvs_status_data_to_other_vehicles"  # {D35ECCB1-7C05-4980-A75C-F931750F93BD} → {DBA8E266-0D39-45bb-8B36-2968993AE0AA}
+      - "Association «IN» → pshvs_vehicle_ID"  # {363D3CD9-B163-469b-82F4-39CEFB294393} → {23068C45-A2CC-4981-8BEB-9E4F048317EA}
+      - "Association «IN» → pshvs_vehicle_data"  # {FAB311C7-60CD-4c07-9CB0-1F1082051A7E} → {6343A795-723F-40b7-9C4B-787D0558BFC7}
+      - "Association «IN» → pshvs_vehicle_data_for_attitude_determination"  # {1EC4B365-1D0C-4f5e-8B5F-6F2F1CE0808E} → {B46853A6-4302-4329-BFEC-A37CE56A74E4}
+      - "Association «IN» → pshvs_vehicle_data_for_determining_speed_&_headway"  # {7AF21CE0-3B2A-4019-8713-00196A60DF6C} → {44DCE2B2-46A8-45bb-821E-5A672041970B}
+      - "Association «IN» → pshvs_vehicle_data_for_trajectory"  # {0D459E55-6775-45ea-9E95-59211CC56FBC} → {03F2BCCA-095B-4d64-8BBA-2BCAAF876114}
+      - "Association «IN» → pshvs_vehicle_data_for_trip_planning"  # {01073552-B432-4119-A65E-D66378157520} → {F439F5D8-0886-40e0-8EE1-057E6DD72AB3}
+      - "Association «IN» → pshvs_vehicle_speed"  # {2D099200-8EA8-4156-AC83-6F5CAF933115} → {DE46DCDA-AE47-47aa-831E-C163ABA3CEAC}
+      - "Association «IN» → pshvs_warnings_to_other_vehicles"  # {834F8E38-7B88-41ba-8B31-8380A4BE0813} → {1C849C79-8414-498f-A621-D15EC2FDFEAA}
+      - "Association «IN» → tv.vs-output_data"  # {BB04ECEE-4FE9-4f90-943B-BC7C6E6370E5} → {1D51AE6D-FA85-420b-B566-24DF2D388811}
+      - "Realisation → Create eCall Minimum Set of Data (MSD)"  # {3DAAEA87-1CF6-4b6b-A86C-18B5C714B50E} → {D2CDFC4F-4A5A-4906-9629-56F993B1EE05}
+  - name: "F5.13.7 Prepare Extended Floating Car Data"
+    guid: "{F8A8D2D4-3882-4eb5-9ACB-1D0D2F3403D0}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 3
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to use the inputs received from other functionality to produce data about the Vehicle such as its current speed, location, identity plus other information such as road and traffic states, location on a Vehicle Trip Plan, e.g. at a way point.
+      (2) The ability to send this data to the Manage Traffic and Provide Traveller Journey Assistance functionality in the System, as well as to the Monitor Vehicle Safety Behaviour Function.
+      (3) The ability to send the data to the Monitor Vehicle Safety Behaviour Function either at periodic intervals or triggered by events, depending on how often the input (raw) data changes so that Vehicles become probes within the road network.
+      (4) If data about such things as road friction, aquaplaning, Vehicle breakdown and traffic incidents are not provided by the Vehicle systems, the ability to attempt to determine them from the data that it has received.
+      (5) The ability to compose and send acknowledgement messages resulting from instructions received by Vehicles and displayed to Drivers.
+      (6) The ability to send acknowledgement messages resulting from instructions received by Vehicles and displayed to Drivers to the Law Enforcement functionality in case there is a violation is detected as a result of instructions sent to Drivers.
+    links:
+      - "Aggregation «componentof» → F5.13 Provide Vehicle Data and ISA"  # {6143A06D-B098-4889-9626-FE3CB65C9781} → {F91C0ED5-7F89-4fd1-B561-6CE9E766291A}
+      - "Association «IN» → pshvs.mt_inter-urban_floating_car_data"  # {5C7805BA-48CC-4724-861A-963D2DE7FA86} → {DBCC955C-5FC2-41c3-9783-61528E0C83BA}
+      - "Association «IN» → pshvs.mt_inter-urban_xfcd"  # {A9BFF71C-7985-4f82-877A-EC4F55D510AC} → {279EE442-330D-44fc-B519-DBA2992CD60F}
+      - "Association «IN» → pshvs.mt_urban_floating_car_data"  # {75132073-F2CD-47e6-8C4B-8A6DDDA3B29D} → {71BCD73F-E330-4306-9177-8E6A45BF6DAC}
+      - "Association «IN» → pshvs.mt_urban_xfcd"  # {1759BD21-81BB-4ec6-8233-3117F6CF7ECA} → {353AA066-39D9-4bb4-ACC8-1594EC977A08}
+      - "Association «IN» → pshvs.psle_service_notification"  # {6B800633-F6E4-4531-B3E4-8279AF1D49D6} → {D10A0EF8-2049-428d-9C13-5DA7A7D7371D}
+      - "Association «IN» → pshvs_vehicle_speed_for_safety_behaviour"  # {C759DE0C-4CD9-4552-957A-D5A246F0D779} → {84973BF3-1CC7-4eb9-8D9E-652F8DE75F32}
+      - "Association «IN» → pshvs_xfcd_for_fusing"  # {4FF1285E-A790-437c-941C-551E4DEE4C5E} → {BC7CF502-934C-460b-95F5-935ED4DD98C7}
+      - "Association «IN» → pshvs_xfcd_for_other_vehicle"  # {E477BAA0-E59B-48ca-BA48-2C3E22E7F6BB} → {80DA200C-54FB-433f-86A8-C3BD6F5EF536}
+  - name: "F5.14.5 Provide Driver Trip Guidance Interface"
+    guid: "{C71E9C53-42AF-457a-9862-830AD26EB561}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 3
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) A HMI through which driving instructions and Estimated Time of Arrival (ETA) are output to the Driver.
+      (2) The HMI shall be able to output both sets of information continuously, updating the output immediately fresh data is received.
+      (3) If no data is received from which to generate the output, the HMI shall be able to output a warning message to the Driver to indicate that there is nothing to display.
+    links:
+      - "Aggregation «componentof» → F5.14 Provide In-vehicle Trip Planning & Implementation"  # {52031A80-6E51-4919-A023-74AC351C6CA7} → {CD0DD7C8-43B3-4a5b-8DD2-AA6DEA02907E}
+      - "Association «IN» → td-expected_time_of_arrival"  # {D1BD1E59-62B8-4e4c-B2FC-21BF7707F0F7} → {E221D3DA-0F8A-4fea-B217-E69D05C14768}
+      - "Association «IN» → td-pshvs_route_guidance_instructions"  # {37D6B150-E916-4f3d-8E3B-4224DE4BD71A} → {C673315E-A6B2-4f3b-8AB4-EA13E5A06170}
+      - "Association «IN» → td-pshvs_vehicle_departed_from_route"  # {5D5E323B-54B7-474a-A97C-1330E4BA3AB5} → {AD0CC70A-9F3E-4ef5-812B-592E2682B3EC}
+      - "Association «IN» → td-pshvs_vehicle_trip_chanage_reason"  # {838B8FCB-9E91-4507-82C7-963C3751B16C} → {12B12596-36CB-43fd-A806-257B9D931752}
+  - name: "F5.11.9 Provide Driver Data Interface"
+    guid: "{BCE23CE5-153C-4d56-A887-9CD65C027936}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 4
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) A HMI through which the Driver can provide data for use in creating records about the Vehicle operation.
+      (2) The ability to send the data to the Data for Records Function for loading into the store of Operational Data.
+    links:
+      - "Aggregation «componentof» → F5.11 Provide Driver Monitoring and eCall"  # {F284391E-1DBC-46eb-80B8-FEC5D290F292} → {1D137B7D-49D7-469b-B75F-C889DED53DC9}
+      - "Association «IN» → pshvs_driver_details_for_operations"  # {30F13B11-5DD1-4744-8F09-8BF24A1B902F} → {84869628-3077-444b-A3D3-1506E75023BB}
+      - "Realisation → Send out eCall"  # {2841CA6F-1517-4254-AC3A-AF2BCCE289A5} → {1B39E5EA-764B-4ef5-B76A-C84589AFABB9}
+  - name: "F5.12.10 Provide V2V Communications"
+    guid: "{E8E97C55-06E6-47db-94E5-B2ADF82A5CD0}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 4
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability for inter-vehicle (V2V) communication including protocols for access the communication channel and for data integrity control.
+      (2) The ability to avoid false data generation and broadcasting shall be an integral part of the communication facility.
+      (3) The ability to manage the communications in a manner that does not overload the communications infrastructure.
+    links:
+      - "Aggregation «componentof» → F5.12 Provide Vehicle Communications Interfaces"  # {E4BEEB1C-A6D0-44ba-AED3-9E2BF6D3356D} → {D7C917ED-CA9B-4e92-868E-80C5A2AA7BC3}
+      - "Association «IN» → pshvs.mt_other_vehicle_lane_departure_warning"  # {6E94F27E-A635-449a-AFA8-A2344A83EBC7} → {27CF4E54-8105-4f39-A757-4F1BE495B7AF}
+      - "Association «IN» → pshvs_ghost_driver_warning_from_other_vehicle"  # {F1838890-09CE-4d4b-AFC7-C7E3F41B0F99} → {394C6C27-CED4-4c3a-BAE7-EBD43B6619A9}
+      - "Association «IN» → pshvs_instructions_&_warnings_from_other_vehicles"  # {59A4E193-6256-455e-8143-9A99CFEBA543} → {496E6A8D-0B7E-42c4-9D42-8C2769ABDBE8}
+      - "Association «IN» → pshvs_local_road_surface_state_from_other_vehicle"  # {F4EA88B2-6321-4f49-80FB-AFC40866658B} → {B4C7E4B7-18B8-4a25-84A1-83DF4ECC1CAF}
+      - "Association «IN» → pshvs_local_visibility_from_other_vehicle"  # {3FF71BA2-D796-4ebd-8F0D-EFD53E05A7FF} → {C659E3F0-0683-44ba-8AAA-2E9F5962D400}
+      - "Association «IN» → pshvs_location_from_other_vehicle"  # {A9D69A69-2E49-42f4-83FF-97E6753EF809} → {228F0A8D-636F-468b-B634-5871AB0F4F67}
+      - "Association «IN» → pshvs_platooning_data_from_other_vehicles"  # {588E6DFF-3872-4470-B902-E11E0207E9FD} → {B21F7A5C-ACDC-432b-8552-9D154323DD39}
+      - "Association «IN» → pshvs_road_information_from_other_vehicle"  # {15D67238-A690-43ec-8D3E-592719AFC62A} → {AC650B84-42E1-4449-AA37-B19FC1120024}
+      - "Association «IN» → pshvs_status_data_from_other_vehicles"  # {B99C084F-B887-473a-BB84-A7C200FABE86} → {E19504D2-E2A6-4321-A0FF-A2A48B3A3CEB}
+      - "Association «IN» → pshvs_traffic_queue_ahead_from_other_vehicle"  # {C638D581-7C59-4614-99CD-7B3B96F73FFC} → {6EFEB990-05C1-4ae4-888B-A2A9F66376C1}
+      - "Association «IN» → pshvs_warnings_from_other_vehicles"  # {2CF901DA-07AB-433a-A580-130E2D9DE2ED} → {4F9EF116-A48C-49f7-9150-9704C843BFD6}
+      - "Association «IN» → pshvs_xfcd_from_other_vehicle"  # {94D60F2A-9FFD-4560-BD64-B0669F7C4451} → {0CF28BAE-1177-4eff-B009-799656CFC8B8}
+      - "Association «IN» → tv.ov-collision_warning"  # {DBAAD189-57A9-4b67-AFFF-FD90234AC8A3} → {C7195636-FB78-4d24-BC13-D5C09D19F1FE}
+      - "Association «IN» → tv.ov-emergency_brake_application"  # {49D63F1C-94EC-4ccd-90F8-CD2156F19664} → {39FB1F26-6691-42db-BECD-A0D97CC111A6}
+      - "Association «IN» → tv.ov-ghost_driver_warning"  # {C053B702-9A83-4792-9EE3-796E0E91944B} → {4E632048-2E10-4aae-A146-62CF462087F3}
+      - "Association «IN» → tv.ov-goods_being_carried"  # {118A56C0-B778-46dc-9C10-6803CF52C81E} → {00F7CD7C-86E8-4f90-84A0-A4A0D28FDC1C}
+      - "Association «IN» → tv.ov-host_vehicle_attitude_for_other_vehicle"  # {5CE59E40-A545-4091-8936-67D428107935} → {F1AC41CF-CCCA-4f6a-8810-92A18F9B1840}
+      - "Association «IN» → tv.ov-host_vehicle_location_for_other_vehicle"  # {F9052F62-D5DD-4d52-BDD4-BF0919382921} → {BB03F067-69EE-4cca-9603-5E4CD0C93417}
+      - "Association «IN» → tv.ov-lane_changing_warning"  # {62F4FB76-15DA-4124-BF21-F5A097F5B0E0} → {253D0106-D975-4004-BF6B-E2E96C284D08}
+      - "Association «IN» → tv.ov-lane_use_commands"  # {3C6647F6-EE70-4bb6-9F93-8F09504E4D82} → {71CAEDF7-F8CB-4c54-9E0E-929E2BEC5C56}
+      - "Association «IN» → tv.ov-lights_anti-glare_request"  # {CB52ED7C-4EDC-4b3d-B495-41BABF9DA4CC} → {ABC131D1-7603-4f23-B27D-990FE2C7B30A}
+      - "Association «IN» → tv.ov-other_platooning_data"  # {52F6B29E-5677-4eda-A4E6-8ACF322FC09B} → {26653F48-B90F-420a-98A9-70024E6BA91E}
+      - "Association «IN» → tv.ov-overtaking_vehicle_warning"  # {A2DD66F8-F45D-45d7-9FC6-3A025422B298} → {B1238858-B4A2-4116-A430-B69FCE5F86D2}
+      - "Association «IN» → tv.ov-red_light_running_warning"  # {28803BAD-3434-4aef-994F-F453657CDD84} → {938356AE-0D75-433c-8E8F-3727386B3C1E}
+      - "Association «IN» → tv.ov-regulations"  # {7052A310-9D21-4566-8D91-E0C6A0620E30} → {A4ADC33C-25B4-4db7-83C7-F887D59DB977}
+      - "Association «IN» → tv.ov-road_information"  # {55171AB4-B5D8-4dc2-B3EF-324CA07785D4} → {BFDDDA3E-31A5-4550-9185-C5CC335C0DB2}
+      - "Association «IN» → tv.ov-road_surface_state"  # {8C588E0F-C123-4ac1-8030-E89503F6A9F4} → {09F8B537-75BC-4c8e-8E2A-8785588CDB20}
+      - "Association «IN» → tv.ov-safety_behaviour"  # {40643C11-2FB1-4fc7-985D-B13B62327716} → {4CAC8222-1685-4c70-BF7E-EB299E0EDBFB}
+      - "Association «IN» → tv.ov-status_data"  # {27188909-73F6-4fe0-AAAB-E92470EEA743} → {E6DCBDEA-592D-40ce-BDDC-EB749F1E0599}
+      - "Association «IN» → tv.ov-traffic_queue_ahead"  # {317FFAE7-0339-4603-A55D-2182D0270503} → {41C13984-AA79-41ca-A2BE-605530E0394F}
+      - "Association «IN» → tv.ov-visibility_data"  # {DF4E83BB-7602-4296-B909-F195D0CDA08D} → {F79BAEB2-3798-4b62-924C-169920A6F488}
+  - name: "F5.13.8 Provide Suggested Speeds and Headways for ISA"
+    guid: "{92749611-12FE-47cf-904C-706334E09A85}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 4
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to provide support for the Driver by suggesting the optimal speed and headway for the Host Vehicle in both its current and expected locations in the road network.
+      (2) In a suitably equipped Host Vehicle, the ability to enable it to automatically keep at or below the optimal speed (Intelligent Speed Adaptation - ISA) and headway.
+      (3) Once the optimal speed and headway have been determined, the ability to send them for display to the Driver, to the Other Vehicle via the Vehicle Communications Function and to the Monitor Vehicle Safety Behaviour Function.
+      (4) The ability to ensure that the optimal speed is always less than or equal to the legal speed limit and enable it to vary from one road segment to another.
+      (5) When sending the optimal speed and headway for display to the Driver, the ability to provide the reason(s) for any changes in the suggested speed and/or headway.
+    links:
+      - "Aggregation «componentof» → F5.13 Provide Vehicle Data and ISA"  # {742165E7-5308-4ae5-BAD5-A8301E636688} → {F91C0ED5-7F89-4fd1-B561-6CE9E766291A}
+      - "Association «IN» → pshvs_ISA_acknowledgement"  # {4C699184-F60F-4b08-9476-7D92FF526962} → {B8A5A650-7E7D-4931-A205-9E1B75510644}
+      - "Association «IN» → pshvs_current_recommended_speeds_and_headways"  # {922A530D-D61D-483f-984E-7FD364A3127F} → {8EB08A81-B725-4d0d-94F0-32859C00B5AA}
+      - "Association «IN» → pshvs_load_ISA_data"  # {43809BE6-8163-467c-B0CA-76B5BD6A2E85} → {4D5E6340-66BE-4932-A551-DFD201845461}
+      - "Association «IN» → pshvs_suggested_safe_speed_and_headway"  # {71192710-B687-4a51-9AD5-C15E251AFF9B} → {709EC7B2-59A3-4f2c-A625-6D5FAA1319A5}
+      - "Association «IN» → pshvs_suggested_speeds_and_headways_from_ISA"  # {EF5249F4-BE53-46b7-8AF4-5CA43A6364C8} → {803CBD3B-52B3-4d1c-9D7D-4224B6F78E13}
+  - name: "F5.13.9 Determine Applicable Road Information"
+    guid: "{012D531C-E8BB-42b0-9C9C-24C15E871CC3}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 4
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to provide support for the Driver to determine the applicable road based information that can be displayed in the Host Vehicle.
+      (2) The ability to include in the information the current legal speed limit and information about junctions that are being approached as the Host Vehicle moves through the road network.
+      (3) The ability to receive digital map data from the Geographic Information Provider including legal speed limits and road signs, which shall be loaded into the store of Road Information Data.
+      (4) The ability to use the data from the store together with the current location of the Host Vehicle in the road network to determine the current maximum legal speed for the Host Vehicle and any approaching changes in road geometry and layout for which signs are available.
+      (5) If available the ability to apply any override of the legal speed limits provided by the Manage Traffic functionality.
+      (6) The ability to send the legal or overridden speed limits to other functionality for display to the Driver and for use in monitoring the safety behaviour of the Vehicle.
+    links:
+      - "Aggregation «componentof» → F5.13 Provide Vehicle Data and ISA"  # {4EA92361-A452-49fd-A54B-12BCC5F8BAB0} → {F91C0ED5-7F89-4fd1-B561-6CE9E766291A}
+      - "Association «IN» → pshvs_legal_speed_acknowledgement"  # {0D67CCDC-3727-4039-B4F7-7AE5BE06C963} → {8EFEF75B-32D2-4a97-96F6-0DEB4301D000}
+      - "Association «IN» → pshvs_legal_speed_for_safety_behaviour"  # {0772AEDF-CFC6-4f10-92C7-0C93E214CFBC} → {3750195E-F6ED-451e-AF31-EED180A3E919}
+      - "Association «IN» → pshvs_legal_speed_limit_for_ISA"  # {B23E8C81-783E-4a9d-B6AB-B9648598AC3B} → {F16575D5-5393-455d-94B5-E69226439EF2}
+      - "Association «IN» → pshvs_load_road_information"  # {53CBD13E-3E70-46da-A505-E4324BD6AD45} → {960D5862-3D40-4003-BB23-0B6B4D644648}
+      - "Association «IN» → pshvs_road_information_for_display"  # {7D31B113-D494-43cf-9E00-B9A3C7743BDF} → {AA6D310E-16A1-4a01-BD95-E82DC65B16A8}
+      - "Association «IN» → pshvs_road_information_for_other_vehicle"  # {A751DB78-8263-4e6a-9274-1FF9D3E1EE26} → {C64C2CC8-370C-4b45-AB8E-EFDEA33C15DD}
+  - name: "F5.14.7 Manage Store of Vehicle Trip Plans"
+    guid: "{134BBE01-7F43-4f1f-8CF8-00003820AA47}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 4
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to manage the store of Vehicle Trip Plans Data.
+      (2) The ability to ensure that all data sent to the store is stored in a coherent and logical manner.
+      (3) The ability to read data from the store as and when requested.
+      (4) The ability to enable Trip Plans to be created in advance of their use and for the same Trip Plan to be used whenever the Host Vehicle is used on the same journey, even though it may be driven by a different Driver.
+      (5) The ability to carry out its activities in such a way that they do not interfere with one another and that the integrity of the data being stored and read is preserved.
+    links:
+      - "Aggregation «componentof» → F5.14 Provide In-vehicle Trip Planning & Implementation"  # {CE8AF247-17E1-4568-97B1-0F018A21761D} → {CD0DD7C8-43B3-4a5b-8DD2-AA6DEA02907E}
+      - "Association «IN» → pshvs_requested_data_from_stored_vehicle_trip_plan"  # {FEE2C065-B5C3-45b6-AAE9-F09D69BDDBC8} → {B1F2CFEB-E54B-4042-8504-968C4F86288A}
+      - "Association «IN» → pshvs_vehicle_trip_plan_for_implementation"  # {09F54A86-1CB2-4f8a-91BF-9423E9B8B345} → {B4975F2A-36F5-488a-97F3-FDCD353AECC3}
+      - "Association «IN» → pshvs_vehicle_trip_plan_for_monitoring"  # {18308C11-8B87-4bd6-81CE-F51CED2EA003} → {EC13BC6E-E8B9-472a-AA27-1405A4A5E560}
+      - "Association «IN» → pshvs_vehicle_trip_plan_load"  # {6DFE1C82-A293-4829-96F8-AA3BDAE21E76} → {3FED304D-C6D6-476d-BDB0-6788EE36FC92}
+  - name: "F5.11.10 Alert Driver to Status"
+    guid: "{84BA1E37-BBCA-44c9-BD2E-A1832A5EB291}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 5
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to enhance driver alertness using a variety of methods.
+      (2) Suggested methods shall include but not be limited to acoustical/optical warnings, haptic stimulation, or changes in ambient (on-board) conditions (e.g. temperature, smell).
+    links:
+      - "Aggregation «componentof» → F5.11 Provide Driver Monitoring and eCall"  # {15656357-B139-42ad-B57C-F401C36E95DA} → {1D137B7D-49D7-469b-B75F-C889DED53DC9}
+      - "Association «IN» → td-pshvs_alert_warning"  # {A5CFC0B0-63FD-4ac7-9266-E87C96130FBF} → {00F767DB-D04E-4ced-908A-A40077C12CE6}
+      - "Realisation → Recieve eCall Call"  # {01EF3785-E434-41e1-ABD5-173DD2D515D8} → {2AEA5AED-AB2C-4ad1-AE38-9A5A0DFAFE7E}
+  - name: "F5.12.12 Collect Road Network Information"
+    guid: "{AA6323B2-E601-4976-B0A5-369078597EC2}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 5
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to collect data from the road network in the form of guidance signals.
+      (2) The data shall be collected from the road pavement, together with an indication of their integrity, and passed on to the relevant in-Vehicle systems.
+    links:
+      - "Aggregation «componentof» → F5.12 Provide Vehicle Communications Interfaces"  # {DDF12B4A-3E29-4570-9011-8C838CB14673} → {D7C917ED-CA9B-4e92-868E-80C5A2AA7BC3}
+      - "Association «IN» → pshvs_guidance_data"  # {4B985308-AD29-43df-AC38-92C8A095BAD1} → {F2E0B488-2DAF-4f75-A9DD-749CA0781583}
+      - "Association «IN» → pshvs_road_network_diagnostics"  # {CB0785A2-4B84-4d43-A25C-76844D31FE37} → {5DDCB336-25AC-4278-AB48-B60FAC8D1D27}
+  - name: "F5.13.10 Display Current Road Information to Driver"
+    guid: "{065FC334-1C33-4fc4-A058-51E93FE08DF6}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 5
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to receive both the current recommended speeds and headways and the legal speed limits for display to the Driver of the Host Vehicle.
+      (2) A HMI that shall be able to display both speed limits, except when either there is no recommended speed limit, or it is greater than the legal speed limit.
+      (3) If there is no recommended speed limit, or it is greater that the legal speed limit, the HMI shall have the ability to display the legal speed limit with a warning that there is no recommended speed limit.
+      (4) If the speed of the Host Vehicle exceeds either the recommended speed or the legal speed limit, then the HMI shall display a warning message to the Driver.
+      (5) The HMI shall only display the headway with the recommended speed limit.
+      (6) When any changes are made to the recommended speed and headway, the HMI shall be able to provide an indication of the reason for the change.
+      (7) The HMI shall also have the ability to display a warning when the Host Vehicle is being driven in an unsafe manor, i.e. poor safety behaviour due to excessive speed, or maintaining less than the minimum headway.
+      (8) The HMI shall be able to continuously update the display to provide the Driver with the speed and headway for the Host Vehicle's current and expected locations within the road network and to show or remove any unsafe driving warnings.
+      (9) If for any reason the HMI does not receive any inputs, it shall have the ability to show a "system not working" indication.
+    links:
+      - "Aggregation «componentof» → F5.13 Provide Vehicle Data and ISA"  # {791B087A-FF0E-4743-8D5E-313CD6A8106E} → {F91C0ED5-7F89-4fd1-B561-6CE9E766291A}
+      - "Association «IN» → pshvs.mt_inter-urban_speed_being_exceeded"  # {CA695E41-FE86-4c39-B454-2A187DFD5CC6} → {4F9BAE5E-E047-436f-A3FE-82BD92CC4738}
+      - "Association «IN» → pshvs.mt_inter-urban_speed_display_error"  # {72D5FFAC-F77E-40e0-8465-E3255F9370FD} → {FDABA6F0-B98F-4a78-BD06-F7842873F64F}
+      - "Association «IN» → pshvs.mt_urban_speed_being_exceeded"  # {CE5F56CD-E504-426d-8AAE-92DFC803EF41} → {FB2FD076-CE11-48c2-B274-E413A8770D6F}
+      - "Association «IN» → pshvs.mt_urban_speed_display_error"  # {4615C446-3E3C-4e75-9AF7-63DA4C629A11} → {A772F251-2DC3-4791-A3AE-BA189A77EE40}
+      - "Association «IN» → td-current_road_and_traffic_conditions"  # {B632E342-258C-4c36-A183-6B4A8D65F4C3} → {F57CE0F0-B32D-42ac-8D66-03F8A3373210}
+      - "Association «IN» → td-current_road_information"  # {4FF7C209-3E7D-4930-8264-403CB50809A4} → {BC3CD2D4-7A12-49fd-9DDA-52AE8475A126}
+      - "Association «IN» → td-pshvs_current_speed_limits_and_headways"  # {42A5D83F-DEC3-4793-B3A6-AE85A0485216} → {0AA0A1E3-4810-4ad7-85C3-6CCF5EC45713}
+      - "Association «IN» → td-pshvs_possible_speed_indication_error"  # {94B04BD1-7FB4-4d61-A904-0CDB1C014606} → {75509131-034D-4e80-BE71-DB9D4D02144F}
+      - "Association «IN» → td-pshvs_recommended_speed_or_legal_speed_limit_exceeded"  # {0F2D2C6F-BC09-46f2-821C-7C7739214ABE} → {56F27D17-2EF6-456f-A795-DE3EB22257BC}
+      - "Association «IN» → td-pshvs_safety_behaviour_warning"  # {FF666917-F44C-4ec4-86EB-E9CABE8373BF} → {9E93ACDA-8284-46ce-93E1-5B8E171E1AB4}
+  - name: "F5.14.12 Manage Use of Rest Areas"
+    guid: "{B09645ED-4FB1-4c86-9564-5E6C67631974}"
+    type: "Activity"
+    stereotype: "FRAME_High_Level_Function"
+    status: "Proposed"
+    version: "1.0"
+    order: 5
+    note: |
+      This High-level Function shall enable a trip plan to be checked to see if total time exceeds the maximum time a Driver can work without taking a break.  If no break is needed, the trip plan will be sent to the Function that manages the use of Un/Loading Zones.  When the length of the trip plan requires a break to be taken, a suitable rest area will be found along the route specified in the trip plan.
+    links:
+      - "Aggregation «componentof» → F5.14 Provide In-vehicle Trip Planning & Implementation"  # {FC2ED783-897D-4a15-8F83-6AC1C7FF9EC0} → {CD0DD7C8-43B3-4a5b-8DD2-AA6DEA02907E}
+      - "Association «IN» → pshvs.mt_rest_area_booking_request"  # {E51C9E1B-34F1-454f-AA48-FCBD67A9DEBA} → {4E86770E-3C40-465d-8862-37A4115C9E48}
+      - "Association «IN» → pshvs.mt_rest_area_parking_request"  # {BA7529BB-C49F-4f4f-890C-45930ECC8C85} → {C5F05C5F-FD4B-4c58-B9CF-09A802A7433F}
+      - "Association «IN» → pshvs_revise_trip_plan_for_new_rest_areas"  # {811D8065-01AE-4cc7-BD62-516D6E93E084} → {C0CD8B65-BB32-4c9c-B39C-85D567CE7BB5}
+      - "Association «IN» → pshvs_trip_plan_with_no_truck_parking_needs"  # {30467312-751E-4b77-A2BD-E8DC50AB41CF} → {B3CCE931-ABC4-4142-983E-026FE4525C38}
+      - "Association «IN» → pshvs_trip_plan_with_rest_area_bookings"  # {AF744260-2F1E-4519-9992-FF4E0FC2F0E2} → {68A18636-B4EE-4a69-B6C6-BBEFA1660370}
+      - "Association «IN» → pshvs_trip_plan_with_un/loading_needed"  # {534F9CD7-48C3-4a3d-8F2A-7C8F6601C887} → {4C806D03-E61F-4c50-B122-F1E846F68379}
+      - "Association «IN» → td.fvd- rest_area_booking_needed"  # {3756C8F8-C8C6-477d-BFD5-BC921D21A579} → {42D86BE1-5A21-4fd3-9DED-7B585DDFF8C4}
+      - "Association «IN» → td.fvd-modify_trip_plan"  # {0FCE89A6-2A1C-47a7-B2EC-7C9803DD0A40} → {18C2CB47-9F1D-4adb-9027-178FFCD1D9BC}
+      - "Association «IN» → td.fvd-new_trip_plan_needed"  # {82614069-EAB2-41d5-9168-A4EFA77CB07C} → {EFA66347-027E-436b-A5F4-A73DC499097D}
+      - "Association «IN» → td.fvd-rest_area_booking_response"  # {58011C93-352F-4dac-AD02-1F173A867A75} → {34E7F98A-E857-40f4-BCCF-784126B8949E}
+      - "Association «IN» → td.fvd-rest_area_details"  # {78D5636B-1CE7-427d-8272-63AB99BE544A} → {25CEFCA2-B6AE-46ce-9BB3-9251DD54A2B8}
+      - "Association «IN» → td.fvd-rest_area_unavailable_for_new_eta"  # {1838AC43-6676-4fd8-B146-EFFD3FE311F6} → {508180DF-63D7-4a47-97B0-8F6362B4D294}
+  - name: "F5.11.11 Monitor Status of Driver"
+    guid: "{43F6095D-E2AF-4a63-AC37-91289C849A12}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 6
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to continuously monitor the status of the Driver.
+      (2) The ability to use data collected about the Driver to determine whether or not there is any impairment of the Driver due to any reason, which shall include, but not be limited to, fatigue, alcohol/drug abuse, sudden health problems, prolonged inattention, etc.
+      (3) The ability to report the results of its determinations about the status of the Driver to other functionality in the System.
+    links:
+      - "Aggregation «componentof» → F5.11 Provide Driver Monitoring and eCall"  # {718DB9DD-54DF-486a-B733-4E884A13A4BB} → {1D137B7D-49D7-469b-B75F-C889DED53DC9}
+      - "Association «IN» → pshvs_driver_failed"  # {211FF678-94F4-4484-994E-3FBE31F3640E} → {C1DC7AB0-40B6-48b6-A7B6-B1DE918833E7}
+      - "Association «IN» → pshvs_driver_impaired"  # {78CE6B6B-4042-43ff-B061-E39F5A820C4C} → {1AD88B03-BE79-4161-9932-8A9CCBDF1422}
+      - "Association «IN» → pshvs_driver_status"  # {A9D1E611-C714-467c-A010-9A2B8815DD6E} → {D6480EFD-0F30-4f99-B68F-E1D5DB2C7077}
+      - "Association «IN» → pshvs_driver_status_for_behaviour_classification"  # {BBE07804-78FA-4f24-8D0B-46B0EA60ED50} → {A691678E-F1EA-4adc-8EFB-EE9BC1F8E8DC}
+      - "Association «IN» → pshvs_driver_status_for_store"  # {96CF253D-79DA-42d1-B060-971040B0FCFE} → {FC3E5891-BCF7-4d3a-B6D8-27F18FF444F7}
+      - "Association «OUT» → pshvs_request_driver_stored_data"  # {1E0FD69B-2512-4882-BE30-B5A86F02F290} → {F80665C7-C04F-48e0-8B34-F4D01C941DCA}
+      - "Realisation → Create eCall Minimum Set of Data (MSD)"  # {FA19DBAA-4831-41f6-93CD-486FACAB1B3A} → {D2CDFC4F-4A5A-4906-9629-56F993B1EE05}
+  - name: "F5.13.11 Fuse Extended Floating Car Data"
+    guid: "{D76FA1BA-BF64-4910-8FEB-8EB084D7A447}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 6
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to collect Extended Floating Car Data (XFCD) from the host Vehicle and the Other Vehicle plus fused data from the System that it has collected from other Vehicles.
+      (2) The ability to collate and fuse all of the data that has been collected to provide a coherent and consistent view of the road and traffic situation around the host Vehicle.
+      (3) The ability to send the data that has been collated and fused to the Driver Display Function.
+    links:
+      - "Aggregation «componentof» → F5.13 Provide Vehicle Data and ISA"  # {E0B69920-24AB-4bc2-9EBA-F0E4B8DB3946} → {F91C0ED5-7F89-4fd1-B561-6CE9E766291A}
+      - "Association «IN» → pshvs_fused_road_and_traffic_conditions"  # {F280DEC9-C639-4105-9EA9-A5E8934034D8} → {A6390C9D-99DA-4303-B881-743224D19558}
+  - name: "F5.14.13 Monitor Vehicle Trip Plan"
+    guid: "{DCC203C7-2676-497a-8CD3-9E5FDF0C9A17}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 6
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to monitor the progress that the Driver is making with the Vehicle Trip Plan that is currently being implemented.
+      (2) The ability to use the current location of the Vehicle to check its progress with the Trip Plan implementation.
+      (3) If the Vehicle Trip Plan is for a Freight Vehicle, the ability to update the Estimated Time of Arrival (ETA) so that any rest area or un/loading zone bookings can be re-validated.
+      (4) When the Freight Vehicle leaves a rest area or un/loading zone, the ability to provide data showing that the parking space it has used can be booked by another Freight Vehicle.
+      (5) If the Vehicle departs from the route in the Trip Plan, the ability to send a warning for output to the Driver and to request that a new route is created starting from the current location of the Vehicle.
+      (6) The ability to continuously evaluate the data it receives about the road traffic conditions such as current and predicted traffic flows, road works, weather and incidents, plus the current Vehicle location and part of the Trip Plan that remains to be implemented, and to determine if there is any benefit in changing the current Vehicle Trip Plan.
+      (7) If the results of the evaluation show that there is some benefit to the Driver in changing the current Vehicle Trip Plan, the ability to request that this is done, send a warning message with the reason for the change for output to the Driver and continue monitoring the use of the current Trip Plan until it is replaced.
+      (8) As implementation of the Vehicle Trip Plan progresses, the ability to collect O-D and journey time data for the road network segments that are used in the trip and send them to the Inter-urban and Urban Traffic Data Collection functionality.
+      (9) The ability to send data about way points in the Trip Plan to other in-vehicle functionality for inclusion in eXtended Floating Car Data (XFCD).
+    links:
+      - "Aggregation «componentof» → F5.14 Provide In-vehicle Trip Planning & Implementation"  # {C5827FAE-6FCA-4dc8-9109-E713AB64E167} → {CD0DD7C8-43B3-4a5b-8DD2-AA6DEA02907E}
+      - "Association «IN» → pshvs.mt_freight_vehicle_left_rest_area"  # {B9F88A22-5B51-4489-91B8-9AFA83634F4E} → {4FFD6923-5489-436b-B5F3-8A5D0B632C35}
+      - "Association «IN» → pshvs.mt_inter-urban_road_use_data_from_trip"  # {94C5E0DC-F92A-4039-9B91-520CE26FC14B} → {9573B805-0F16-4164-B752-2A2A746B0DEB}
+      - "Association «IN» → pshvs.mt_rest_area_eta"  # {ECB2C740-55A0-4ef8-AAC2-FF845929A6D9} → {CC08D8B3-91E9-44a5-AA42-5493845719DB}
+      - "Association «IN» → pshvs.mt_urban_road_use_data_from_trip"  # {A2A2F859-07E2-4dd7-942E-C584A459F5EB} → {83A381BE-F7B2-4ea8-ADBA-FF8EF6A46F15}
+      - "Association «IN» → pshvs.mt_vehicle_trip_plan_o-d_data"  # {C8AE5243-DD5A-41a4-BAFE-2AA3D0AB5090} → {F3EA7248-C231-45e7-8112-FA4210238C11}
+      - "Association «IN» → pshvs.mt_vehicle_trip_plan_route_for_inter-urban"  # {2DA9B4DA-0214-46f1-B776-46080E0997F0} → {D819B005-553D-49ab-9FE0-147E7E8F9AB3}
+      - "Association «IN» → pshvs.mt_vehicle_trip_plan_route_for_urban"  # {2EC4DBF9-115C-44f4-957E-9F8DE220EEF1} → {FC8A26F4-90C2-4eac-9518-F0FE534DE650}
+      - "Association «IN» → pshvs.pscs_freight_vehicle_left_un/loading_zone"  # {C4732CC6-333A-46a8-AFB6-CD652F48FD54} → {CB0E6BF1-20DE-4cd4-86D7-58E36E308DC9}
+      - "Association «IN» → pshvs.pscs_holding_zone_eta"  # {454D9211-4A9C-4474-95FB-25206DB44BFE} → {9F747DB6-4120-452b-93DC-A8C5305C703F}
+      - "Association «IN» → pshvs.pscs_un/loading_zone_eta"  # {BE23EB5B-381B-41e9-BBBE-4DD41659ECFE} → {BBE07E17-9D20-408f-AE05-3D398EEFAF0A}
+      - "Association «IN» → pshvs.ptja_vehicle_trip_plan_criteria_changes"  # {2FD591C6-2E1D-4693-A238-EFA41964F3A5} → {D113BF68-693A-44e9-A8C8-58809B8E1FDA}
+      - "Association «IN» → pshvs_revise_vehicle_trip_plan_request"  # {64EF5DF5-99BC-4da1-A64E-33130BD2522D} → {91E8B323-DCCD-4c32-B48E-88B3B15CE8FE}
+      - "Association «IN» → pshvs_route_information_for_xfcd"  # {78CE7618-5F6C-44d4-8629-0550F6401A88} → {E3A907F5-204A-4e29-B42C-4EFAB4F76ED3}
+      - "Association «IN» → pshvs_vehicle_departed_from_route"  # {DEB41D14-1D97-4cc4-A63A-5AEBAF76140C} → {60850BC8-D8DF-4734-A5E3-125FCCBD3A24}
+      - "Association «IN» → pshvs_vehicle_eta_for_driver"  # {A48DB37E-727C-4a2c-B997-B00368D52DA7} → {34FD9C93-1D48-40af-B9C7-EC8CC59FBAA7}
+      - "Association «IN» → pshvs_vehicle_trip_plan_change_data_for_driver"  # {924CFAE2-02B2-418f-ADF2-74B271EB2974} → {D8BC229A-6EFE-4a2b-97DD-DC2476EBAB82}
+  - name: "F5.13.12 Monitor Vehicle Safety Behaviour"
+    guid: "{C9E2F886-6705-42c3-BD16-AE9948362536}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 7
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to monitor the safety behaviour of the Vehicle.
+      (2) The ability to receive data about the current location of the Vehicle, its speed and position, plus the legal and recommended speed limits for the road section that it is currently using.
+      (3) The ability to use this data to determine whether or not the Vehicle is being driven in a safe manor.
+      (4) The ability to consider unsafe behaviour to be such things as excessive speed and swerving from one lane to another.
+      (5) It is determined that the Vehicle is being driven in an unsafe manor the ability to send a warning for display to the Driver and an indication of bad safety behaviour to the functionality that collects FCD/XFCD so that this data is not used to calculate traffic conditions.
+    links:
+      - "Aggregation «componentof» → F5.13 Provide Vehicle Data and ISA"  # {60D5FA41-20D5-4a9d-A2A2-CB7F3190AF54} → {F91C0ED5-7F89-4fd1-B561-6CE9E766291A}
+      - "Association «IN» → pshvs.mt_safety_behaviour_status_for_inter-urban"  # {2122B680-E417-43e1-BD0C-BD5852DEA5BE} → {814FF5D0-E703-46b6-9384-97CBAA7896E3}
+      - "Association «IN» → pshvs.mt_safety_behaviour_status_for_urban"  # {65E1CDC8-C301-48cc-A5F6-226F1D032935} → {0FF01875-0410-4cd6-AB16-080AFB39067E}
+      - "Association «IN» → pshvs_safety_behaviour_status_for_display"  # {FC7AAF99-7CCF-48df-B644-071F851DDD3E} → {7ED369A8-4B0F-4097-8DB5-27DC2D8AFF97}
+      - "Association «IN» → pshvs_safety_behaviour_status_for_other_vehicle"  # {2E038A3E-0F16-402a-B365-2DF0BAA85F95} → {DB3BFA59-80A5-492c-9EA7-0D32071D54AB}
+  - name: "F5.14.14 Manage Driver Trip Plan Payments"
+    guid: "{6F37D516-FAEA-49e6-BB5E-20C0A5172DE1}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 7
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to take responsibility for enabling the Freight Vehicle Driver or the Freight Transport Operations Manager to make any required payments for the trip planning service and/or make any required advanced payments for services included in the accepted Vehicle Trip Plan.
+      (2) The ability to communicate directly with the Freight Vehicle Driver to obtain details of the payment mechanism that is to be used and to report on the success of failure of all of the payment transactions.
+      (3) The ability to repeat all failed transactions for a defined number of times before abandoning the payment process and providing a payment failure response to the Prepare and Revise Trip Plans function.
+    links:
+      - "Aggregation «componentof» → F5.14 Provide In-vehicle Trip Planning & Implementation"  # {C27A9187-D428-41bf-AB4A-06C00A6C32F7} → {CD0DD7C8-43B3-4a5b-8DD2-AA6DEA02907E}
+      - "Association «IN» → pshvs_trip_plan_payment_failed"  # {F8E3AC1D-7BF1-46c3-9B08-1BF1D3092C21} → {FE8936EB-0F84-4e21-97DD-A0EABD75E7C1}
+      - "Association «IN» → pshvs_trip_plan_with_parking_needs"  # {B1512942-97FC-4297-ADF5-016FE8997B5E} → {0EFB9952-5982-4b37-8BB4-4A688B38E7F7}
+      - "Association «IN» → td.tpd-advanced_payment_for_vehicle_trip_plan"  # {ECF265E7-B428-450f-A4E2-F0841BD6F36B} → {5D208D71-0741-4282-92D1-B063B4A2F346}
+      - "Association «IN» → td.tpd-request_vehicle_trip_planning_payment"  # {A45C8DEC-300E-4414-B5E3-9794EB71A9C6} → {5F15E229-F9AB-4bf4-9A33-EDE475832C50}
+      - "Association «IN» → td.tpd-vehicle_trip_planning_booking_mishap"  # {91C7E4C4-757E-421d-A680-DDA0D7672EC9} → {BE330CAA-AA24-4694-8BBD-23E2F1B952FD}
+      - "Association «IN» → tfc-request_payment_for_vehicle_trip_planning"  # {D9787947-3A23-4e42-9B00-E38540F0D2FB} → {F08FDC34-3D8B-4ab6-8494-3EBD3B39D40C}
+      - "Association «IN» → tfc-vehicle_trip_planning_service_payment_request"  # {73A10488-0613-47b2-B7BB-C0568256D9B7} → {184113E0-72AE-4a94-BC9F-7032862D6B59}
+      - "Association «IN» → tft-ftom-request_vehicle_trip_planning_payment"  # {3D10178B-50E4-4448-8203-022BD1675C37} → {653D8A02-74B6-438b-B534-5C967049E531}
+      - "Association «IN» → tft.ftom-vehicle_trip_planning_booking_mishap"  # {D2D10301-8F28-4b05-8099-4B8F92A91B2F} → {1D0560BF-82D4-499b-9926-69BDF0629BF4}
+  - name: "F5.11.13 Manage Operational Data Store"
+    guid: "{7FB2F1F0-46C6-4ca4-85A8-86F78843F985}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 8
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to manage the Operational Data Store.
+      (2) The ability to receive data objects from other functionality and load it into the Operational Data Store, adding to or replacing what it already contains.
+      (3) The ability to receive and respond to requests for data objects to be retrieved from the Operational Data Store.
+    links:
+      - "Aggregation «componentof» → F5.11 Provide Driver Monitoring and eCall"  # {14DD964E-BAE2-43ea-B45A-50A27ADF9543} → {1D137B7D-49D7-469b-B75F-C889DED53DC9}
+      - "Association «IN» → pshvs_driver_stored_data"  # {965E1B0A-E6E5-43d2-8344-5A0232F9F0FF} → {08AB7D02-44D7-4d07-841C-C0EBCC298F69}
+      - "Association «OUT» → pshvs_driver_condition"  # {5E9F8326-CEFB-4cbf-96AC-D507AF23DB87} → {BC2A08F3-DEF3-444e-9E6A-CDEE57D707C6}
+      - "Association «OUT» → pshvs_load_operational_data"  # {33375C7B-2697-4796-AC57-223005946916} → {EDB2D0D3-ECDD-4331-A890-3323055C7EED}
+      - "Association «OUT» → pshvs_tvd_incident_data"  # {A7B96742-039A-4cfb-ABB9-54AB8E585683} → {C45538C6-9376-4eb9-B65B-C98DA05D45AA}
+      - "Realisation → Create eCall Minimum Set of Data (MSD)"  # {B53472F9-4A3C-4c0b-999E-26B4657D5B37} → {D2CDFC4F-4A5A-4906-9629-56F993B1EE05}
+  - name: "F5.14.16 Manage Use of Un/loading Zones"
+    guid: "{09DA69E7-8577-40e5-8104-AEA2093B5647}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 9
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to provide facilities that enable the Driver of a Freight Vehicle to book parking places at loading or unloading zones along the route they are about to follow in a Vehicle Trip Plan.
+      (2) The ability to enable such a Driver to book a parking place in a loading or unloading zone, based on the Expected Time of Arrival (ETA) according to the Vehicle Trip Plan.
+      (3) If the booking for a parking space at a loading or unloading zone is rejected, or the ETA changes as the Vehicle Trip Plan is implemented, the ability to enable the Freight Vehicle Driver to revise the parking space booking to match the new ETA.
+      (4) When a suitable parking space is not available a loading or unloading zone, the Function shall enable the Driver to book a parking place in a holding zone, which will be used until such time as the requested parking space in a loading or unloading zone becomes available.
+      (5) When the Vehicle approaches the destination loading or unloading zone, or a holding zone, the ability for the Driver to be provided with details guidance about how to find the zone and how to manoeuvre the Freight Vehicle into the booked parking space.
+    links:
+      - "Aggregation «componentof» → F5.14 Provide In-vehicle Trip Planning & Implementation"  # {D82C0737-0BB0-42ae-8852-40D528B0C6C3} → {CD0DD7C8-43B3-4a5b-8DD2-AA6DEA02907E}
+      - "Association «IN» → pshvs.pscs_un/loading_zone_use_confirmation"  # {F643A0BB-6053-4571-924A-3B6F286AEF58} → {D21861CF-2CBA-486b-BBF0-8AA772580B0D}
+      - "Association «IN» → pshvs.pscs_un/loading_zone_use_request"  # {655A64EA-B99A-48ab-9C11-388D578057E9} → {55F8D9CB-9AE1-43c0-9159-7BD0A2F0E683}
+      - "Association «IN» → pshvs_trip_plan_with_un/loading_bookings"  # {CF79A59E-904D-44f0-949C-1C02F5A3B501} → {43A9A911-A299-44dc-8EC6-E8888D5299F0}
+      - "Association «IN» → td.fvd-confirm_un/loading_zone_needs"  # {61F02B34-9E66-45ac-8316-FC18700A192C} → {F4763230-B01B-4683-A588-BB97C55F532B}
+      - "Association «IN» → td.fvd-fleet_operator_un/loading_zone_bookings"  # {E85DD687-5EE6-4393-B6BB-8DE081FCE6AF} → {5F1F7913-954F-4150-9363-6A726CA7F138}
+      - "Association «IN» → td.fvd-holding_zone_routing_information"  # {39FF7832-EB8E-4a31-8D57-675C279A9D0D} → {2A4E07D2-1376-4644-8BCA-19CEBEE33E46}
+      - "Association «IN» → td.fvd-holding_zone_unavailable_for_new_eta"  # {29D8D679-E906-4f16-92FB-6D67F70906D8} → {F1701303-DFF7-471a-8781-25DDCD27B046}
+      - "Association «IN» → td.fvd-un/loading_zone_routing_information"  # {D7976116-2EA1-408d-B1B4-DB0C7544E7A8} → {022793C8-5749-4639-8085-DA99919B2269}
+      - "Association «IN» → td.fvd-un/loading_zone_unavailable_for_new_eta"  # {58C185A8-5949-4e67-8DC4-CC67BD02A8C1} → {1B74A241-B136-43dc-AE7B-21AC1049FCFE}
+      - "Association «IN» → td.fvd-un/loading_zone_use_response"  # {1140CCBF-FF9D-402d-85AD-3232D5156000} → {62F46F60-6D97-44cc-8BF1-271B1DFEFAC5}
+  - name: "F5.14.17 Prepare and Amend Trip Plans"
+    guid: "{635F7A9D-F419-43a6-A58C-CD756C0AA250}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 10
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to take responsibility for the management of the preparation of Vehicle Trip Plans.
+      (2) The ability to create Vehicle Trip Plans for one of three reasons:
+      - as a result of a request from a Driver (called the Trip Planning Driver) in this instance,
+      - because the implementation of a previously created Vehicle Trip Plan shows that changes are needed to provide an improved road trip experience for the Driver,
+      - as a result of a request from functionality in the Manage Freight and Fleet Operations Area, so that the Vehicle Trip Plan can form part of a Freight Transport Execution Plan.
+      (3) The ability to send its requests for Trip Plans to be created to the Trip Planning functionality within the Provide Traveller Journey Assistance Functional Area and to seek acceptance from the Driver of the resulting Trip Plans.
+      (4) If the Trip Plan was created as a result of the first data flow in (a) wben it has been accepted by the Driver, and the use of rest areas and/or unloading zones has been includedthe ability to send it to the Manage Store of Vehicle Trip Plans function so that it can be available for implementation.
+      (5) If the Trip Plan was created as result of the second data flow in (a), start its implementation so that the Driver sees no interruption to their journey.
+      (6) If the Trip Plan was created as result of the third data flow in (a), return it to the functionality in the Manage Freight and Fleet Operations Area that requested its creation.
+    links:
+      - "Aggregation «componentof» → F5.14 Provide In-vehicle Trip Planning & Implementation"  # {CA4D0AB1-F827-4ca8-ABAB-F41B7B800373} → {CD0DD7C8-43B3-4a5b-8DD2-AA6DEA02907E}
+      - "Association «IN» → pshvs.mffo_FTEP_route_request_response"  # {C030B44E-CCC9-4ef4-BCCF-CE8D0C4BC859} → {8C5D1D6F-DF43-4aa8-A513-83B59DB5A81D}
+      - "Association «IN» → pshvs.ptja_revised_vehicle_trip_plan_requirements"  # {E97425C6-6003-4a46-997A-3C5988840C03} → {D346038B-958B-4503-83A1-C4794BD77684}
+      - "Association «IN» → pshvs.ptja_vehicle_trip_plan_request"  # {FF32854D-E1A1-4ff9-8633-67A17675A792} → {40B4C2B9-4E77-4617-B0D4-27A66E1564E0}
+      - "Association «IN» → pshvs_reqeust_data_from_stored_vehicle_trip_plans"  # {A0289ECC-41D1-4604-ADC0-6D11AF87D613} → {052CBAD2-3495-4d6f-9C1B-7850A0ADB1D9}
+      - "Association «IN» → pshvs_revised_vehicle_trip_plan_for_driver"  # {B681FF81-E478-48e6-A487-C75190A6E93A} → {783DEFC0-8F03-4922-B2F8-0CABFD9C7CD5}
+      - "Association «IN» → pshvs_vehicle_trip_plan_draft"  # {E824C52A-084A-44e7-AA5B-5FC06FE71EC2} → {8F769440-5B0E-4734-AFB5-2984C65FFAF4}
+      - "Association «IN» → pshvs_vehicle_trip_plan_for_bookings"  # {9133ECA1-FE05-4b1e-92FE-86C0CBD638B3} → {F91A42CD-34A5-4289-8397-3241365340F4}
+      - "Association «IN» → pshvs_vehicle_trip_plan_for_store"  # {C4BC428C-F188-4edb-BCBF-CA28BDB84B1A} → {B65678CF-374D-448a-B7BC-AF734FF75658}
+      - "Association «belongsto» → 9.11.1.2"  # {3DE104D8-EB58-4c15-AC59-83BF85D30CF4} → {50CEA6A4-DA8F-4c44-9025-0E489BDDC247}

@@ -1,0 +1,3076 @@
+package: "Frame Repository/Frame Functional View/Data Store"
+guid: "{A01E33C2-53A3-4e80-A3F2-B1F3A556F189}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "D1.1 EP Contracts Data"
+    guid: "{F54AE576-B50B-4792-9A88-63B213FFF6D1}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "5.0"
+    order: 1
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Provide Electronic Payments Facilities Functional Area.  It shall contain information objects that provide details of the different contracts set up between the users of ITS services and the corresponding operators.
+      
+      The information object for each contract shall contain the following data objects:
+      (1) User ID (number),
+      (2) ID of organisation with which user places contract (number),
+      (3) ID's of services covered by the contract (numbers),
+      (4) Area covered (characters, e.g. nation, region, city, state, area name(s)),
+      (5) Supplementary parameters defining the service (numbers and/or characters),
+      (6) Period of validity (date strings for start and end),
+      (7) Tariffs (optional) (numbers - in currency),
+      (8) Reduction fees (optional) (numbers - in currency),
+      (9) Modes of payment (characters),
+      (10) EP account ID (optional) (numbers).
+      
+      The Data Store shall enable functions to extract information objects about contracts by specifying the user ID, operator ID, service ID.
+    links:
+      - "Association «IN» → pepf_check_user_contract"  # {6B1DFDDB-2AC6-4f1d-A085-28D57476215C} → {E14F2262-07B3-445d-8747-2B15CAF0E678}
+      - "Association «IN» → pepf_contract_LUA"  # {AF20B645-EF6F-4e94-A9CF-ACC71F97FA0F} → {56604BE3-BCBC-45cf-AF0E-5346A2D0AF22}
+      - "Association «IN» → pepf_contract_statistics"  # {21B434D8-1484-4fa3-9748-F6BCDAE5EDF0} → {B7E44DF7-8C53-48a4-A7AD-9578BEF7CCDE}
+  - name: "D1.2 User's Account Data"
+    guid: "{C2FF6DB6-D9DA-496b-8E93-524E01901881}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "5.0"
+    order: 2
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Provide Electronic Payments Facilities Functional Area.  It shall contain information objects that provide details of all the accounts used by the users (Travellers) for the electronic payment of services.
+      
+      The information objects for each account shall contain the following data objects:
+      (1) User ID (number),
+      (2) EP account ID's for each user ID (numbers - could be more than one),
+      (3) Supply for each account (characters),
+      (4) Current balance (numbers - currency),
+      (5) Brief history for each account: (characters, but including dates and transaction amounts),
+      (6) Periods of overdraft (date strings),
+      (7) Maximum overdraft reached (number - currency).
+      
+      This information objects hall be loaded, updated and retrieved by several Functions.
+    links:
+      - "Association «IN» → pepf_account_status"  # {3F78D215-0542-4262-B961-CBE25DAC29D1} → {87FD2F2B-1EF9-4974-8107-22D54797A629}
+      - "Association «IN» → pepf_account_status_for_debiting"  # {14A351C6-5C57-425c-A211-BD51CE58EBD4} → {4C24D633-698C-44e4-9036-20BD60CCD349}
+      - "Association «IN» → pepf_account_status_for_user"  # {8DC0842A-2C60-46d8-A60A-91EABE6826F4} → {2196524F-DE30-4ca7-B8E0-EC9E8F91605C}
+  - name: "D1.3 Service Information Data"
+    guid: "{58BA5FDA-4216-42f6-B567-FB02923E811E}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "5.0"
+    order: 3
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Provide Electronic Payments Facilities Functional Area.  It shall contain information objects that provide all the characteristics of the services that are available to the users (Travellers), including the nature of those services and the identities of the organisations that are providing them.
+      
+      The information objects for each service shall contain the following data objects:
+      (1) Service ID (number),
+      (2) Nature of service (characters),
+      (3) ID of organisation providing the service (number),
+      (4) Associated account, i.e. where the payment will go (characters and/or numbers),
+      (5) Location of service, i.e. where the user can use it (characters, e.g. nation, region, city, state, area),
+      (6) Types of contracts possible (characters),
+      (7) Categories of people allowed to use this service (that is to pass a contract for it, regardless of access rights which are defined by regulating bodies) (characters),
+      (8) Enforcement procedures (characters),
+      (9) Modes of booking (characters),
+      (10) Identification of tariffs (pointer to tariff data store) (numbers),
+      (11) Rules of fee apportionment if several operators provide the same service (characters),
+      (12) List of the ID's of services grouped for the apportionment (numbers).
+      
+      The information objects in the Store shall be organised so that data for each service is kept together.
+    links:
+      - "Association «IN» → pepf_current_service_information"  # {63C79BC3-49A4-4710-B470-73B0A60A5A5D} → {A316CB57-4CC7-42f1-9FBD-C81B1FE208B8}
+      - "Association «IN» → pepf_service_definition"  # {AE084F78-3C71-405b-8B70-9354A045EB78} → {9D7AC0D4-F4B8-4807-A5BA-5F773D37BF74}
+  - name: "D1.4 Transactions Data"
+    guid: "{2C4594C4-9058-4dc2-AED7-96031B3F0F90}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "5.0"
+    order: 4
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Provide Electronic Payments Facilities Functional Area.  It shall contain information objects that provide a history all the electronic financial transactions performed by the users (Travellers) regarding their use of ITS services.
+      
+      The information objects for each transaction shall contain the following data objects:
+      (1) Date of service use (date string),
+      (2) Place of service use (characters, e.g. nation, region, city, state, area names(s)),
+      (3) Service ID (number),
+      (4) Supplementary parameters defining the service (numbers and/or characters),
+      (5) Contract ID (number),
+      (6) User ID (number),
+      (7) ID of organisation with which user places contract (number),
+      (9) Date of payment (date string),
+      (10) Mode of payment (characters),
+      (11) ID of user's account used (number),
+      (12) ID of operator's account used (number),
+      (13) Incident notification (characters).
+    links:
+      - "Association «IN» → pepf_op_transaction_history"  # {7019DC42-F315-4431-864E-90A81F1DE10A} → {963AFC64-0F39-4a15-AB56-BD9924D18A9B}
+      - "Association «IN» → pepf_transaction_details_advanced_payment"  # {FA6209E0-0116-464b-A18B-20E36B8AA45C} → {148469A7-A59C-4e72-901B-9FE551B757F3}
+      - "Association «IN» → pepf_transaction_details_debit_account"  # {60E9D4F6-A74F-40aa-BCD3-54D8251D0837} → {74F0A302-B8DE-491e-A608-42AF4EE13BE3}
+      - "Association «IN» → pepf_user_last_pass"  # {502739B3-76D8-4462-B348-269E7A4371E5} → {8E8773E9-5CE1-4406-A470-855BEC8B28B0}
+      - "Association «IN» → pepf_user_transaction_history"  # {D3A409F9-6977-4a51-B3CE-B995C898DA21} → {B36451BB-B1A8-40a7-9B5A-F2C3EC045974}
+  - name: "D1.5 Tariffs Data"
+    guid: "{48167E9A-72C6-4b4e-89D8-8865B8994C9D}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "5.0"
+    order: 5
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Provide Electronic Payments Facilities Functional Area.  It shall contain information objects that provide details of the tariffs of all the services available to the user.
+      
+      The information object for each tariff shall contain the following data objects:
+      (1) Service ID (number),
+      (2) Characteristics of the precise usage done, for example, duration of service usage, location, date, etc. (characters),
+      (3) Tariff for the characteristic (numbers - in currency),
+      (4) Type of contract (characters),
+      (5) Discount rates (numbers - in currency).
+      
+      The information objects shall be organised so that tariffs for each service is kept together.  For each service there it shall be possible for there to be several characteristics and types of contract each with their own tariff.
+    links:
+      - "Association «IN» → pepf_service_tariff"  # {22CA75EE-2AB7-409b-9B80-A2CDF4F0D0C1} → {A7388E9B-C5D2-4b46-B2B4-DA3118928A8E}
+  - name: "D1.6 Incorrect Payments Data"
+    guid: "{276A254C-108E-4261-9075-B814E0FBE8B3}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "5.0"
+    order: 6
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Provide Electronic Payments Facilities Functional Area.  It shall contain information objects that provide details of the incorrect payments that have been detected and recorded plus a list of accounts from which these payments were attempted to be made, i.e. a "black list" of users.
+      
+      The incorrect payments (i.e. failure by the user to provide the correct payment that is required for the service) shall be those that have been detected through the use of services paid by electronic means.  The information objects shall contain the following data objects:
+      
+      (1) Date of incorrect payment detection (date string),
+      (2) Date of message to enforcement bodies (date string),
+      (3) Location at which the incorrect payment was made (characters and/or numbers, e.g. GPS/Galileo data),
+      (4) User ID, if identified (number),
+      (5) Service ID (number),
+      (6) What made the payment incorrect (characters - descriptive text),
+      (7) If overdraft account:
+          (7a) Account ID (number),
+          (7b) Amount of overdraft (number - in currency),
+          (7c) Access control systems breaching, ID of these systems (number),
+          (7d) Result (user blocked / user passing through) (characters).
+      
+      The "black list" of users shall identify those who have made a payment that is incorrect in some way, e.g. non-payment. Their structure within this part of the Data Store shall be as follows:
+      - User ID (number),
+      - What made the payment incorrect (characters - descriptive text)?
+      
+      Note that it shall be possible for there to be more than one incorrect payment that has been made by each user in the black list.
+    links:
+      - "Association «IN» → pepf_black_list"  # {072BB996-3CF1-40ed-A507-AFBC81C89BDD} → {E0F9D838-7D23-4c05-8B14-0FBA7F780655}
+      - "Association «IN» → pepf_incorrect_payment_history"  # {6DD4451E-4417-4e8b-A1CC-7C79981161D3} → {1101A075-B736-4f02-8004-32EFFA2BCC40}
+      - "Association «IN» → pepf_incorrect_payment_input"  # {DB2E3254-CE0D-4357-AAEC-22C08DACB2DD} → {CE0DB5F1-CF2C-49b4-BE14-2203BB1A80EA}
+  - name: "D1.7 Access Rights Data"
+    guid: "{2092EF75-61DE-403a-951F-78841947F458}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "5.0"
+    order: 7
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Provide Electronic Payments Facilities Functional Area.  It shall contain information objects that provide the access rights for all kinds of users (Including Travellers), all kinds of services, and all environment conditions.  These rights shall be for each user and shall be independent of the financial conditions of the user's account.
+      
+      The information objects for the access rights to each service shall be structured in the following way:
+      (1) Service ID (number),
+      (2) User category (characters),
+      (3) Environmental condition (characters),
+      (4) Access rights, which shall be defined as unlimited; limited to some duration, limited to some period, etc. (characters, but may include date strings).
+      
+      Note that for each service it shall be possible for there to be several user categories and environmental conditions, each with a different set of access rights.  It shall be possible for each set of access rights to consist of one or more entries.
+    links:
+      - "Association «IN» → pepf_access_criteria_read"  # {D0E9CF4A-9FC8-484f-979E-A1A58C96E684} → {A4E55468-CF57-42c1-8DE1-0A5F37D126A2}
+  - name: "D2.1 Common Emergency Data"
+    guid: "{B6688EFF-B588-4e94-B0BB-E44E66144EF8}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "5.0"
+    order: 8
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Provide Security and Emergency Facilities Functional Area.  It shall contain information objects that provide details of all the information needed to process the data that is produced when any emergency takes place.
+      
+      Each information object in the Store shall contain the following data objects:
+      (1) Road network data (data for a digital roadmap using a standard format, e.g. GDF)
+      (2) Predefined emergency route (data for a digital roadmap using a standard format, e.g. GDF)
+      (3) Reference number of emergency service to use this route (number)
+      (4) Description of emergency service to use this route (characters)
+      (5) Classes of emergency (characters)
+      (6) Rules to classify an emergency (characters)
+      (7) The related Road Systems Reference and description for each on (characters)
+      (8) Procedure to be run for each class of emergency (characters)
+      
+      It shall be possible for there to be several emergency routes and more than one emergency service that can use each route.  Each class of emergency shall be able to have several rules that enable it to be allocated to a particular incident or accident.
+    links:
+      - "Association «IN» → psef_read_common_emergency_data"  # {469140F3-7028-42a2-9F94-33720E429B2A} → {C9C7DD89-A9DD-4c3a-B698-B9280A302ED2}
+  - name: "D2.2 Incident and Emergency Data"
+    guid: "{3733B266-3D0D-4a6b-A7A0-CE8A4DD86102}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "5.0"
+    order: 9
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Provide Security and Emergency Facilities Functional Area.  It shall contain information objects that provide details of all incident/alarm notifications (including mayday calls) that have been received by the functionality in this Area.  It is in two parts; un-processed and processed emergencies.
+      
+      Each information object in the Store for un-processed emergencies shall contain the following data objects:
+      (1) Time (numbers defining hours, minutes and seconds),
+      (2) Date (date string),
+      (3) Incident location (characters and/or numbers, e.g. GPS/Galileo data),
+      (4) Type of vehicle involved in the incident (characters),
+      (5) Known status of each vehicle (characters),
+      (6) Description of cargo (if any) carried by each vehicle (characters),
+      (7) The number of people involved in the incident (number),
+      (8) Health status of each person involved in the incident (characters),
+      (() Any additional information relevant for emergency process (characters),
+      (10) Definition of originator of the incident notification (characters),
+      (11) System that was the source of the incident notification (characters.
+      
+      The data for processed emergencies held in the Store shall be structured in the following way:
+      (12) A consolidated problem description comprising:
+         (12a) Time (numbers defining hours, minutes and seconds),
+         (12b) Location (characters and/or numbers, e.g. GPS/Galileo data),
+         (12c) Type of vehicle involved in the incident (characters),
+         (12d) Known status of each vehicle (characters),
+         (12e) Description of cargo (if any) carried by each vehicle (characters),
+         (12f) The number of people involved in the incident (number),
+         (12g) Health status of each person involved in the incident (characters),
+         (12h) Any additional information relevant for emergency process (characters),
+         (12i) A list of all associated incidents (characters),
+      (13) Description of planned actions comprising:
+           (13a) The emergency services that will be involved in the action, (characters),
+           (13b) Time when action will start (numbers defining hours, minutes and seconds),
+           (13c) The number of vehicles involved (number),
+           (13d) A description of the result of each action (characters),
+           (13e) A list of progress reports for each action (characters).
+      
+      It shall be possible for there to be several vehicles involved in each incident (un-processed or processed), each with their own cargos and/or numbers of occupants.  Similarly it shall be possible for the number of people involved in the incident to be greater than the number of vehicle occupants if people outside the vehicles are involved in the incident.  It shall be possible for a vehicle to include a bicycle or a powered two wheeled (PTW) vehicle.
+    links:
+      - "Association «IN» → psef_read_emergency_data"  # {7166A4CA-C860-4c83-B2CB-80FD644B0DE3} → {B671FF18-2EDF-43d3-AE9C-8B867C0D6CA5}
+  - name: "D2.3 PSAP Operational Data"
+    guid: "{2B17BDE9-0C9F-4d89-AB56-0FFC17CA0791}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "1.0"
+    order: 10
+    note: |
+      This Data Store shall be used within the Provide Security and Emergency Facilities Functional Area.  It shall contain information objects that provide details of each Public Service Access Point (PSAP) that is able to respond to eCall messages from Vehicles.
+      
+      Each information object in the store shall contain the following data objects:
+      (1) PSAP name (character string),
+      (2) PSAP identity (number - optional),
+      (3) geographic location of the PSAP (co-ordinates),
+      (4) geographic area from which the PSAP can respond to eCall messages (co-ordinates),
+      (5) type(s) of service available from the PSAP,
+      (6) communication information for the PSAP.
+    links:
+      - "Association «IN» → psef_read_PSAP_data"  # {1134D32B-428D-4f2a-B858-8C29247C4186} → {0CD500D2-79A7-4830-B6D5-B9A6A4155A96}
+  - name: "D2.4 PSAP eCall Sessions Data"
+    guid: "{69D21B54-A429-4b1c-9215-EF4F56C831B7}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "1.0"
+    order: 11
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Provide Security and Emergency Facilities Functional Area.  It shall contain information objects that provide details of each eCall message from Vehicles that are active at any instance in time.
+      
+      Each information object in the store shall contain the following data objects for each active eCall message:
+      (1) identity (VIN) of Vehicle from which eCall message originated (character string - numbers and letters),
+      (2) communication information for the Veihcle from which the eCall message originated (character string - numbers and letters),
+      (3) time at which eCall message was received from the Vehicle (digits),
+      (4) current status of eCall message handling (number)
+      (5) name of PSAP to which eCall message was sent (character string),
+      (6) identity of PSAP to which eCall was sent (number - optional),
+      (7) communication information for the Public Safety Answering Point (PSAP) to which eCall was sent (character string - numbers and letters).
+      
+      Note that the functionality that manages this Data Store does not enable the Communications Operator or any other entity to access these information objects.  This is to protect the identity and communications information of the Vehicles from which eCall messages are being processed.
+    links:
+      - "Association «instants of» → psef_eCall_data_from_store"  # {C20DAE88-9F18-425e-8484-086DEB4E890C} → {8F7FDE8D-E199-40d5-B785-3FD0876038F6}
+  - name: "D3.10 Inter-urban Service Area Data"
+    guid: "{ACD78063-0815-45b6-BA8F-22C9D3336EAD}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "5.0"
+    order: 12
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Manage Traffic Functional Area. It shall contain information objects that provide the static data for the service areas that are accessed from the inter-urban traffic road network managed by the System.
+      
+      Each information object in the Store shall contain the following data objects:
+      (1) Service area location (characters, e.g. nation, region, city, state, area names(s), but may also include characters and/or numbers, e.g. GPS/Galileo data)
+      (2) Inter-urban road identity if known (characters and number)
+      (3) Number of entrances (number)
+      (4) Number of exits (number)
+      (5) Total number of spaces (number)
+      (6) Float to take account of vehicles searching for spaces (numbers)
+      (7) Owner/operator ID (number)
+      (8) Owner/operator contact information (characters and/or numbers)
+      (9) Charges (numbers - in currency)
+      (10) Periods when they operate (time and date string)
+      (11) Method of service area fee collection (characters)
+      (12) Hours when operator present (time and date string)
+      (13) Separate motorcycle spaces (number)
+      (14) Number of disabled spaces (number)
+      (15) Number of spaces for coach operators (number)
+      (16) Number of spaces for HGV's (number)
+      (17) Re-fuelling facility available (character indicating YES or NO)
+      (18) Includes hotel(s) with number (character indicating YES or NO plus number)
+      (19) Includes restaurant(s with number (character indicating YES or NO plus number)
+      (20) Includes shop(s) with number (character indicating YES or NO plus number)
+      (21) Display information in urban area (character indicating YES or NO)
+      (22) List of devices on which service area information is displayed with details about whether "state" or "spaces" is to be displayed (characters and/or numbers)
+      (23) Thresholds for service area status change, e.g. number of occupied spaces for "almost full" status to be achieved (characters + numbers)
+      
+      It shall be possible for the service area state calculation Function to calculate the current state of the service area using the following "live" data:
+      
+      (24) Number of vehicles entered service area (number)
+      (25) Number of vehicles that have left the service area (number)
+      (26) Service area status, e.g. "almost full", "full", "spaces" and "closed" (characters)
+      
+      It shall be possible for this data to be replicated depending on the number of entrances and exits that a service area has and how the data that they collect is to be used.  For example it shall be possible for the service area to have separate parking areas for different types of vehicle such as car, coaches and HGV's.
+    links:
+      - "Association «IN» → mt_read_service_area_data"  # {2608FFFD-045B-40bd-A78C-9F6BBE618EB3} → {1DCB3463-99F3-48e9-80BD-5F32F894B7CD}
+  - name: "D3.11 Road Traffic Prediction Data"
+    guid: "{17A7E9CF-316F-45ab-90C5-17628496FCE7}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "5.0"
+    order: 13
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used in the Manage Traffic Functional Area.  It shall contain information objects that provide various data that is to be used in modelling and simulating the traffic conditions in the road network managed by the System.
+      
+      Each information object in the Store shall contain the following data objects:
+      (1) Road network data (data for a digital roadmap using a standard format, e.g. GDF)
+      (2) Historic traffic data collected by other functionality in the System (numbers with dates)
+      (3) Recent traffic data collected by other functionality in the System (numbers with dates)
+      (4) Traffic management strategies in use when the traffic data was collected (characters and numbers)
+      (5) Processed traffic data that shows the origin and destination of traffic flows (number and digital roadmap data)
+      (6) Results from the simulation of traffic conditions in the road network managed by the System (numbers and digital roadmap data)
+      
+      The input data shall be provided by other functionality to the Manage Road Traffic Data Store Function.  It shall be possible for this data to be produced from collected data or from input provided by the Transport Planner through the Provide Traffic Simulation Operator Interface Function.
+      
+      It shall be possible for the results data identified above to show the forecast traffic conditions produced by traffic management strategies that were provided by the Transport Planner, or to be based on those used previously.  These strategies shall be stored in such a way that they can be associated with the results to which they are relevant.  It shall also be possible for car park space requirements to be included in the results.
+    links:
+      - "Association «IN» → mt_read_prediction_data"  # {57A1E4A2-A39E-4faa-92BC-50F65E9E8E18} → {1C3171BF-7189-4201-9328-86A966E5A4E5}
+  - name: "D3.12 Incident Strategies Data"
+    guid: "{0D1D4A41-99FD-4cc9-B7D1-2ADEDFE4C376}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "5.0"
+    order: 14
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used in the Manage Traffic Functional Area.  It shall contain information objects that provide details of incident strategies that have been created and used previously.
+      
+      Each information object in the Store shall contain the following data objects:
+      (1) Strategy identity (characters)
+      (2) Reason for implementing the strategy (characters)
+      (3) How the strategy was implemented, e.g. Operator, Automatically - (character);
+      (4) Implementation date (date string)
+      (5) Implementation time (numbers defining hours, minutes and seconds)
+      (6) Removal date (date string)
+      (7) Removal time (numbers defining hours, minutes and seconds)
+      (8) Part(s) of the road network covered by the strategy (data for a digital roadmap using a standard format, e.g. GDF)
+      (9) Set of actions for the urban road network traffic management functionality - optional (characters);
+      (10) Set of actions for the inter-urban road network traffic management functionality - optional (characters);
+      (11) Set of other actions - optional (characters);
+      (12) Set of text messages to be displayed to Travellers and/or Drivers, with the identities of the equipment through which the displays shall be shown (characters).
+      
+      The above shall represent the "minimum" set of information about each strategy.  It shall be possible for it to be supplemented by other sets of information such as comments from the Road Network Operator.  Some of the data items shall only be populated when the strategy is used, e.g. how the strategy was implemented, date/time of implementation/removal.
+      
+      It shall be possible for the actions to be a series of commands that can be sent directly to other Functions, such as those concerned with traffic management.  Other actions shall be able to be requests for the Road Network Operator to call one or more Emergency Services, or take other action that cannot be implemented by a specific Function.
+    links:
+      - "Association «IN» → mt_read_incident_strategies"  # {82CDF7C5-E780-4338-9C41-F5C1F9A3D294} → {ABA5C4A3-AA22-4ea4-B847-706B0F0CCB1E}
+  - name: "D3.13 Urban Traffic Data"
+    guid: "{AF21C9ED-6F13-4e8b-A45C-CA8A58A5BD0B}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "5.0"
+    order: 15
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Manage Traffic Functional Area.  It shall contain information objects that provide traffic flow and other traffic related data for the urban road network.  The data in the Store shall be divided into two parts comprising, historic and current data.
+      
+      Each information object in the Store for historic and current data shall contain the following data objects:
+      (1) Date (date string),
+      (2) Time (numbers defining hours, minutes and seconds),
+      (3) Location (characters and/or numbers, e.g. GPS/Galileo data),
+      (4) Vehicle flow (number in vehicles per hour),
+      (5) Vehicle speed (number in kph or mph),
+      (6) Vehicle headway (number in seconds),
+      (7) Road occupancy (number as a percentage),
+      (8) Queue presence (number or character indicating YES or NO),
+      (9) Vehicle count (number).
+      
+      There shall be one set of the above data for each location in the urban road network where some or all of the data shall have been obtained.  Within each set there shall be both current and historic data.
+      
+      The data in the Store for predicted data shall be structured in the following way:
+      (10) Predicted date (date string),
+      11) Predicted time (numbers defining hours, minutes and second),
+      (12) Location (characters and/or numbers, e.g. GPS/Galileo data),
+      (13) Vehicle flow (number in vehicles per hour),
+      (14) Vehicle speed (number in kph or mph),
+      (15) Vehicle headway (number in seconds),
+      (16) Road occupancy (number as a percentage).
+      
+      There shall be three sets of predicted data, comprising short, medium and long term predictions.
+      
+      It shall be possible for the following items of data to also be included in the Data Store with the data for each segment of the urban road network, if extended floating car data is available for collection:
+      
+      (17) Rain present (number or character indicating YES or NO),
+      (18) Temperature (number - in degrees Centigrade),
+      (19) Log present (number or character indicating YES or NO),
+      (20) Vehicle skidding (number or character indicating YES or NO),
+      (21) Reduced visibility (number or character indicating YES or NO).
+      
+      In addition data shall be stored about each car park, comprising the following:
+      (22) D ate (date string),
+      (23) Time (numbers defining hours, minutes and seconds),
+      (24) Car park identity (number),
+      (25) Location (characters and/or numbers, e.g. GPS/Galileo data),
+      (26)Car park status (number),
+      (27) Car park occupancy (number as a percentage of the total number of spaces),
+      (28) Number of available spaces (number).
+    links:
+      - "Association «IN» → mt_read_urban_traffic_data"  # {35F0A799-1B15-495d-BF26-C682FD3965EC} → {887C2A68-885B-4d81-B89F-174478B346C3}
+  - name: "D3.14 Inter-urban Traffic Data"
+    guid: "{2869B635-2986-4b18-8072-73487A120DDC}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "5.0"
+    order: 16
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Manage Traffic Functional Area.  It shall contain information objects that provide traffic flow data and other traffic related data for the inter-urban road network.  The data in the Store shall be divided into up to three parts comprising, current, historic and predicted data.
+      
+      Each information objects in the Store for current, historic and predicted data shall contain the following data objects:
+      (1) Date (date string),
+      (2) Time (numbers defining hours, minutes and seconds),
+      (3) Location (characters and/or numbers, e.g. GPS/Galileo data),
+      (4) Vehicle flow (number in vehicles per hour),
+      (5) Vehicle speed (number in kph or mph),
+      (6) Vehicle headway (number in seconds),
+      (7) Road occupancy (number as a percentage),
+      (8) Queue presence (number or character indicating YES or NO),
+      (9) Vehicle count (number).
+      
+      There shall be one set of the above data for each location in the inter-urban road network where some or all of the data shall have been obtained.  Within each set there shall be both current and historic data.
+      
+      The data in the Store for predicted data shall be structured in the following way:
+      (10) Predicted date (date string),
+      (11) Predicted time (numbers defining hours, minutes and seconds),
+      (12) Location (characters and/or numbers, e.g. GPS/Galileo data),
+      (13) Vehicle flow (number in vehicles per hour),
+      (14) Vehicle speed (number in kph or mph),
+      (15) Vehicle headway (number in seconds),
+      (16) Road occupancy (number as a percentage).
+      
+      There shall be three sets of predicted data, comprising short, medium and long term predictions.
+      
+      It shall be possible for the following items of data to also be included in the Data Store with the data for each segment of the urban road network, if extended floating car data is available for collection:
+      
+      (17) Rain present (number or character indicating YES or NO),
+      (18) Temperature (number - in degrees Centigrade),
+      (19) Fog present (number or character indicating YES or NO),
+      (20) Vehicle skidding (number or character indicating YES or NO),
+      (21) Reduced visibility (number or character indicating YES or NO),
+      
+      In addition data shall be stored about each service area, comprising the following:
+      (22) Date (date string),
+      (23) Time (numbers defining hours, minutes and seconds),
+      (24) Service area identity (number),
+      (25) Location (characters and/or numbers, e.g. GPS/Galileo data),
+      (24) Service area status (number),
+      (26) Service area occupancy (number as a percentage of the total number of spaces),
+      (27) Number of available spaces (number),
+      (28) Number of spaces in designated rest area for heavy goods vehicles (number).
+    links:
+      - "Association «IN» → mt_read_inter-urban_traffic_data"  # {476FE3FD-7E88-4e0e-8F08-F7E7C1B618BC} → {001C56B7-4059-4519-8757-99DCD59E2999}
+  - name: "D3.15 NAP Metadata"
+    guid: "{7A7B38A3-E097-4a2f-AEB6-7C204435B35E}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    order: 17
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Manage Traffic Functional Area.  It shall contain information objects that provide metadata about traffic, travel data and any other relevant information. The required and optional elements of metadata have been harmonised and can be found in a metadata catalogue: https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html.
+      
+      Metadata is structured in the data store to:
+      (1) describe data provider, where each data provider may list multiple of
+      (2) data sets or services and each of such can be provided by more than one way by specifying its
+      (3) distribution parameters.
+      
+      The content and the structure are governed by the mobilityDCAT-AP.
+      Further on the data store also contains:
+      (4) log of events with respect of metadata creation, update and
+      (5) quality information per data set.
+      
+      ==========
+      
+      TODO:
+      
+      - decide what detail of mobilityDCAT-AP to include
+      - IMPORTANT: investigate where to log in data and user events, where to hold information about active subscription
+      - IMPORTANT: decide how to connect metadata data base and data database
+    links:
+      - "Association «IN» → mt_read_NAP_metadata"  # {63727D36-4F65-444b-9079-E95D300982B7} → {2A5ABAB8-048B-412c-AC03-A6DBD3D5DBB3}
+  - name: "D3.17 NAP Users"
+    guid: "{DEABFE3A-CF27-4232-83E9-D03599E58AC3}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    order: 18
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Manage Traffic Functional Area.  It shall contain information objects that provide details of NAP Users, i.e. NAP Content Providers and NAP Content Consumers (for Data Platform NAP type) .  The Data Store contains private information used by NAP Users to access the NAP, to provide agreement on terms and conditions. Public metadata about traffic and travel information and other related information are stored in NAP Metadata store (D3.15).
+      
+      For Content Providers the data store contains following data objects:
+      (1) organization with name (1.1), postal address (1.2), website (1.3), agreement on licence terms (1.4), unique identifier assigned to organization (1.5), name and contact details of a responsible person to act as a contact (1.6).
+      (2) user account(s) with name (2.1), email (2.2), credentials (2.3), user type (2.4).
+      *(3) machine account with url (3.1), connection type (3.2), credentials (3.3).
+      
+      For Content Consumers the data store contains following data objects:
+      *(1) organization with name (1.1), postal address (1.2), website (1.3), agreement on licence terms (1.4), unique identifier assigned to organization (1.5), name and contact details of a responsible person to act as a contact (1.6).
+      *(2) user account(s) with name (2.1), email (2.2), credentials (2.3), user type (2.4).
+      *(3) machine account with url (3.1), connection type (3.2), credentials (3.3).
+      * Optional data object for Data Platform NAP type and even there it is optional provided the data is not openly accessible.
+      
+      Additionally, for both:
+      (4) Event information (log in, log out, change of data)
+      
+       ==========
+      
+      TODO:
+      
+      - check what is in data flows and if it is covered by the DS
+      - IMPORTANT: decide how to deal with optional nap.cc logging in.
+    links:
+      - "Association «OUT» → mt_read_NAP_user_data"  # {4A61D8D6-A5B7-4f80-A052-8890FD562FD5} → {7E763AED-E934-47b4-BF12-7ED1C864E575}
+  - name: "D3.3 Environmental Data"
+    guid: "{F242EC18-4213-4a90-B103-85AF940319C9}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "5.0"
+    order: 19
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Manage Traffic Functional Area.  It shall contain information objects that provide details about the environmental conditions within the geographic area managed by the System.  This data shall have been produced by Functions within the Area from inputs that they have received.
+      
+      Each information object in the Store shall contain the following data objects:
+      (1) Date (date string),
+      (2) Time (numbers defining hours, minutes and seconds),
+      (3) Location (characters and/or numbers, e.g. GPS/Galileo data),
+      (4) Temperature (number - in degrees Centigrade),
+      (5) Humidity (number as a percentage),
+      (6) Wind direction (up to five characters indicating compass points),
+      (7) Wind speed (number in kph or mph),
+      (8) Pollution levels (a set of numbers as percentages for different pollutants).
+      
+      The number of information objects shall be fixed by the number of times that samples are taken.  It shall be possible for the number and type of pollutants recorded to vary from one location to another and from one implementation to another.
+    links:
+      - "Association «IN» → mt_read_environmental_conditions_data"  # {CFBC1F74-8A1B-4300-A889-CFF91061DAD6} → {35F3165B-C8C7-4262-BF72-51CC6B8D8E00}
+  - name: "D3.4 Incident Data"
+    guid: "{C848ADF1-E4A6-4b83-85B2-D87FAC3FE387}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "5.0"
+    order: 20
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Manage Traffic Functional Area.  It shall contain information objects that provide the data collected about current and predicted incidents.
+      
+      Each information object in the Store shall contain the following data objects:
+      (1) Start date (date string),
+      (2) Start time (date string),
+      (3) Forecast duration (number - minutes),
+      (4) Actual duration (number - minutes),
+      (5) Incident location (characters and/or numbers, e.g. GPS/Galileo data),
+      (6) Incident type (characters),
+      (7) Incident severity (characters),
+      (8) Type and number of vehicles (characters for type(s) and numbers),
+      (9) Incident strategy used (characters),
+      (10) Emergency services vehicles used (characters for type(s) and numbers).
+      
+      The data in some of these entries shall be provided as the incident state changes, whilst in others it shall be updated as the incident impact progresses and remedial action is taken.
+    links:
+      - "Association «IN» → mt_read_incident_data"  # {D9908B62-5D7E-4d17-9697-7D92E3D9B073} → {AF0789BC-D2E4-4cc8-88E1-6A08A4FC1C09}
+  - name: "D3.5 Demand Data"
+    guid: "{537BC2C7-A3F6-43dc-BBEE-46308EC27B20}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "Unknow"
+    order: 21
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Manage Traffic Functional Area.  It shall be split into two parts, one to contain information objects that include the data collected on the use of transport modes and the other to contain information objects that provide demand management strategies.
+      
+      Each information object in the Store shall contain the following data objects:
+      (1) Date (date string),
+      (2) Time (date string),
+      (3) Transport mode (characters),
+      (4) Amount of use (numbers as a percentage).
+      
+      The number of information objects shall be fixed by the number of transport modes, the period over which they are stored
+      
+      The information objects about the demand re-balancing strategies in the Store shall include the following data objects:
+      (5) Identity (characters),
+      (6) Actions (characters).
+      
+      The number of information objects shall be fixed by the number of strategies.
+    links:
+      - "Association «IN» → mt_demand_data_read"  # {B7583C0E-C5D6-465d-B54B-5C16075ED5F2} → {B02CCCB7-BCDC-4e67-A0D2-86C59CAEC43D}
+  - name: "D3.6 Maintenance Data"
+    guid: "{A5BCB31F-CF0A-4231-9F2D-6ECF19D67EAA}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "5.0"
+    order: 22
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Manage Traffic Functional Area.  It shall contain information objects that provide records of all maintenance actions that have been carried out, plus those that are yet to be completed.
+      
+      Each information object in the Store shall contain the following data objects:
+      (1) Equipment identity (number),
+      (2) Location (characters and/or numbers, e.g. GPS/Galileo data),
+      (3) Type of equipment (characters),
+      (4) Type of fault (characters),
+      (5) Fault description (characters),
+      (6) Date reported (date string),
+      (7) Time reported (numbers defining hours, minutes and seconds),
+      (8) Date of Maintenance Company notification (date string),
+      (9) Time of Maintenance Company notification (numbers defining hours, minutes and seconds),
+      (10) Date of fault clearance notification (date string),
+      (11) Time of fault clearance notification (numbers defining hours, minutes and seconds),
+      (12) Action taken to rectify fault (characters),
+      (13) Maintenance Contractor bonus/penalties (characters and numbers - in currency).
+      
+      These information objects shall cover all types of equipment (those located at the roadside and at central locations) and also the actual road network itself.  In this case the "equipment identity" data object will contain the road name and/or number whilst the "type of equipment" data object will show the type of road.
+    links:
+      - "Association «IN» → mt_read_maintenance_data"  # {1C44F203-BBEB-4ca9-8540-A350A941F83C} → {0F96EF04-1240-4c15-B91F-67F104F3DCC4}
+  - name: "D3.7 Urban Road Static Data"
+    guid: "{ED252B88-833F-44f1-B7F4-FB192E1BD516}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "5.0"
+    order: 23
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Manage Traffic Functional Area.  It shall contain information objects that provide the static data for the urban traffic road network managed by the System.  The static data covers the actual layout and configuration of the urban road network.
+      
+      Each information object in the Store shall contain the following data objects:
+      (1) Road type (numbers and characters),
+      (2) Type of data (numbers and characters),
+      (3) Link:
+            (3a) ID (number),
+            (3b) Type (characters),
+            (3c) Start location (characters and/or numbers, e.g. GPS/Galileo data),
+            (3d) End location (characters and/or numbers, e.g. GPS/Galileo data),
+            (3e) Length (number),
+            (3f) Number of lanes/carriageways (number),
+            (3g) Lane/carriageway width(s) (number(s)),
+            (3h) Bus lane present indicator (number or character indicating YES or NO),
+            (3i) Vehicle type usage restrictions (numbers and characters),
+            (3j) Vehicle parking restrictions (numbers and characters),
+            (3k) Speed limit(s) (numbers in kph or mph),
+            (3l) Presence of other objects, e.g. tunnels/bridges (numbers and characters),
+            (3m) Obstructions, e.g. narrow road/lanes, bridges/tunnels giving low clearance, bridges with weight restrictions (characters),
+      (4) Junction:
+             (4a) ID (number),
+             (4b) Type (characters) - location (characters and/or numbers, e.g. GPS/Galileo data),
+             (4c) Equipment installed (numbers and characters):
+                    (4ca) ID (number),
+                    (4cb) Type (characters),
+                    (4cc) Configuration (phases/durations/turning movements) (numbers and characters),
+                    (4cd) Available methods of management (numbers and characters),
+                   (4ce) PT Vehicle priority available (number or character indicating YES or NO),
+                   (4cf) Non-available vehicle movements (numbers and characters),
+                   (4cg) Next up-stream junction (numbers and characters),
+                   (4ch) Next down-stream junction (numbers and characters),
+      (5) Date of last update (date string).
+      
+      These data objects shall be used by a variety of Functions to enable traffic in the urban network to be managed.  It shall also be provided to functionality in the Manage Public Transport Operations Functional Area so that its service routes and schedules can be planned.  It shall be possible for some of the data objects to also be provided to Vehicles to enable driver guidance and information to be provided.
+    links:
+      - "Association «IN» → mt_urban_static_data_read"  # {8C46EE7C-41E8-4d45-9E77-164EC641F85C} → {444D179B-6E75-4cc8-B9B7-D490D6467A97}
+  - name: "D3.8 Inter-urban Road Static Data"
+    guid: "{DD155499-347E-45f2-B8C9-FA0BFBB51622}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "5.0"
+    order: 24
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Manage Traffic Functional Area.  It shall contain information objects that provide the static data for the inter-urban traffic road network managed by the System.  The static data shall cover the actual layout and configuration of the inter-urban road network.
+      
+      Each information object in the Store shall contain the following data objects:
+      (1) Road type: (numbers and characters),
+      (2) Type of data: (numbers and characters),
+      (3) Link:
+           (3q) ID (number),
+           (3b) Type (characters),
+           (3c) Start location (characters and/or numbers, e.g. GPS/Galileo data),
+           (3d) End location (characters and/or numbers, e.g. GPS/Galileo data),
+           (3e) Length: (number),
+           (3f) Number of lanes/carriageways (number),
+           (3g) Lane/carriageway width(s) (number(s)),
+           (3h) Vehicle type usage restrictions (numbers and characters),
+           (3i) Vehicle parking restrictions (numbers and characters),
+           (3j) Vehicle speed limit(s) (number(s) in kph or mph),
+           (3k) Bus lane present indicator (number or character indicating YES or NO)
+            (3l) Presence of other objects, e.g. tunnels/bridges (numbers and characters)
+           (3m) Obstructions, e.g. narrow road/lanes, bridges/tunnels giving low clearance, bridges with weight restrictions (characters)
+      (4) Date of last update (date string).
+      
+      These data objects shall be used by a variety of functions to enable traffic in the inter-urban network to be managed.  It shall also be provided to functionality in the Manage Public Transport Operations Functional Area so that its service routes and schedules can be planned.  It shall be possible for some data objects to also be provided to Vehicles to enable driver guidance and information to be provided.
+    links:
+      - "Association «IN» → mt_inter-urban_static_data_read"  # {6B5B9756-5031-42b9-8324-3AF971A14009} → {ABBDAC25-49D7-4846-BB73-C598DDF85F47}
+  - name: "D3.9 Urban Car Park Data"
+    guid: "{551732C1-BA5C-4cc6-909F-CBBA15110EA2}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "5.0"
+    order: 25
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Manage Traffic Functional Area. It shall contain information objects that provide the static data for the car parks that are accessed from the urban traffic road network managed by the System.
+      
+      Each information object in the Store shall contain the following data objects:
+      (1) Car park location and/or name (characters),
+      (2) Number of entrances (number),
+      (3) Number of exits (number),
+      (4) Total number of spaces (number),
+      (5) Float to take account of vehicles searching for spaces (number),
+      (6) Owner/operator ID (number),
+      (7) Owner/operator contact information (characters and/or numbers (characters),
+      (8) Charges (numbers - in currency),
+      (9) Periods when they operate (time and date string),
+      (10) Method of car park fee collection (characters),
+      (11) Hours when operator present (time and date string),
+      (12) Separate cycle spaces (number),
+      (13) Separate motorcycle spaces (number),
+      (14) Number of disabled spaces (number),
+      (15) Display information in inter-urban area (character indicating YES or NO),
+      (16) List of devices on which car park information is displayed with details about whether "state" or "spaces" is to be displayed (characters and/or numbers),
+      (17) Thresholds for car park status change, e.g. number of occupied spaces for "almost full" status to be achieved (characters + numbers).
+      
+      It shall be possible for the Car Park State Calculation function to calculate the current state of the service area using the following "live" data objects:
+      
+      (18) Number of vehicles entered car park (number),
+      (19) Number of vehicles that have left the car park (number),
+      (20) Car park status, e.g. "almost full", "full", "spaces" and "closed" (characters).
+      
+      It shall be possible for these data objects to be replicated depending on the number of entrances and exits that a car park has and how the data that they collect is to be used.  For example it shall be possible for the car park area to have separate parking areas for different types of vehicle such as car, coaches and HGV's.
+    links:
+      - "Association «IN» → mt_read_car_park_data"  # {8FCB4AA0-B55C-4137-94A6-B3047FD04686} → {544C7CD5-E719-4126-BFCC-026AEED0DB8B}
+  - name: "D4.1 Real Time PT Vehicle Status Data"
+    guid: "{17936D5F-B7A0-4bfe-9D44-391C5DD79EE9}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "5.0"
+    order: 26
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Manage Public Transport Operations Functional Area.  It shall contain information objects that provide the last reported indicators of each PT Vehicle in the fleet.
+      
+      The information objects in the Store for the static data about each PT Vehicle shall contain the following data objects:
+      (1) Type (characters),
+      (2) Vehicle ID (number),
+      (3) Passenger capacity (number),
+      
+      The information objects in the Store for the real-time data about each PT Vehicle shall contain the following data objects:
+      (4) Date (date string),
+      (5) Time (numbers defining hours, minutes and seconds),
+      (6) Location (characters and/or numbers, e.g. GPS/Galileo data),
+      (7) Service ID (number),
+      (8) Real-time status indicators (numbers and/or characters),
+      (9) Alarm present (number or character indicating YES or NO),
+      (10) Number of passengers currently on-board (number),
+      (11) Passenger alarm raised (number or character indicating YES or NO),
+      (12) Passenger alarm acknowledged (number or character indicating YES or NO),
+      (13) Message sent to driver (number or character indicating YES or NO),
+      (14) Message text sent to driver (text string),
+      (15) Message received from driver (number or character indicating YES or NO),
+      (16) Message text received from driver (text string),
+      (17) Internal video from PT Vehicle (video file).
+      
+      The data objects that are not provided by the PT Vehicle shall be provided by the PT Operator.  The real-time data shall be provided by the functionality that collects and manages it.  It shall be updated every time a change occurs.
+    links:
+      - "Association «IN» → mpto_read_real_time_PT_data"  # {4864B4E1-C615-4e8b-92F9-ECD959524CDD} → {175DFD03-571F-443e-B59C-9E754C6A0267}
+  - name: "D4.2 Historical PT Vehicle Data"
+    guid: "{E1038C47-F589-4ce9-BC40-B6F08D999C5E}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "5.0"
+    order: 27
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Manage Public Transport Operations Functional Area.  It shall contain information objects that provide the historical average value indicators for Public Transport vehicles in the fleet.
+      
+      The information objects in the Store shall contain the following data objects that provide the static data about each PT Vehicle:
+      (1) Type (characters),
+      (2) Vehicle ID (number),
+      (3) Passenger capacity (number).
+      
+      The information objects in the Store shall contain the following data objects for the real-time data about each PT Vehicle:
+      (4) Date (date string),
+      (5) Time (numbers defining hours, minutes and seconds),
+      (6) Location (characters and/or numbers, e.g. GPS/Galileo data),
+      (7) Service ID (number),
+      (8) Real-time status indicators (numbers and/or characters),
+      (9) Alarm present (number or character indicating YES or NO),
+      (10) Number of passengers currently on-board (number),
+      (11) Passenger alarm raised (number or character indicating YES or NO),
+      (12) Passenger alarm acknowledged (number or character indicating YES or NO),
+      (13) Message sent to driver (number or character indicating YES or NO),
+      (14) Message text sent to driver (text string),
+      (15) Message received from driver (number or character indicating YES or NO),
+      (16) Message text received from driver (text string),
+      (17) Internal video from PT Vehicle (video file),
+      (18) Scheduling for PT services.
+      
+      It shall be possible for the data objects in each information object to be stored in such a way that they can be retrieved by route, by service, by type of PT Vehicle etc. as needed.  For each of the above categories as a minimum the stored data objects shall be archived and classified by type of day with the needed level of detail (working days, holidays, school days, off school days, rainy days, sunny days, traffic restriction days, etc.).  The level of detail shall be coherent with the detailed specification of the system: e.g. average travel time can be as detailed as calculated for every few meters of road along the route or distinguishing between characteristic stretches of road, or just between two terminals.
+      
+      The information objects in the Store shall also include the exact description of the time, place and whatever else is needed to identify the scenario to which each is expected to be applied.
+      
+      Stored data shall be constantly updated with new measurements available and previously smoothed and validated.  It shall be possible for the time slots used to store the data to vary according to the needs.
+      
+      The information objects that are archived shall also be filtered taking into account presence of exceptional events during the day and the actual operating service scheme.
+    links:
+      - "Association «IN» → mpto_read_histocial_PT_data"  # {BE239B39-8AB8-40c4-BFBC-CD5227B5160A} → {89A1BBD1-4E56-4ba6-B528-E6AA44707B5A}
+  - name: "D4.3 PT Service Plan Data"
+    guid: "{05DB0E10-A10A-44a6-8145-86713AB9944C}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "5.0"
+    order: 28
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Manage Public Transport Operations Functional Area.  It shall contain information objects that provide the complete description of the schedule PT services.
+      
+      The information objects in the Store for each service shall contain the following data objects:
+      (1) ID (number),
+      (2) Name (characters),
+      (3) Route (data for a digital roadmap using a standard format, e.g. GDF plus characters and/or numbers, e.g. GPS/Galileo data),
+      (4) Type of PT Vehicle preferred (characters),
+      (5) Type of PT Driver preferred (characters),
+      (6) Type of day on which service operates (characters),
+          (6a) Timetable (time in hours and minutes),
+          (6b) Frequency (numbers defining hours and minutes),
+      (7) Variations to the service (characters).
+      
+      A separate information object shall be provided in the Store for each type of day on which the service operates, e.g. weekday (Monday to Friday), weekend (Saturday and/or Sunday), religious holidays (including Sundays) and other public holidays.  The "variations to the service" shall be used to indicate different service operations that can be applied due to schools being on holiday, factories shut down due to holidays and other regular events that occur during specific time periods on certain types of day.
+    links:
+      - "Association «IN» → mpto_read_service_plan_data"  # {F23B453D-B6DC-4c45-BB47-0DB71C6C8F0F} → {0000BA6B-8A60-45e7-BFF0-00E891EDE0B6}
+      - "Association «IN» → mpto_service_&_scheduling_data"  # {4C60007E-210E-4409-BC7A-6936AE7F5F7B} → {E4740BC4-E5B4-4d06-BAE7-8226F5751682}
+  - name: "D4.4 PT Route Static Data"
+    guid: "{C4819B00-8707-4895-8AAA-77C7DFB7B68E}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "5.0"
+    order: 29
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Manage Public Transport Operations Functional Area.  It shall contain information objects that provide data about the inter-urban and urban road networks for use by the Manage Public Transport Area.  The data in the Store will be used to enable new or revised services and schedules to be planned.
+      
+      The information objects in the Store shall contain the following data objects:
+      (1) Road type (numbers and characters),
+      (2) Type of data (numbers and characters),
+      (3) Link:
+            (3a) Link ID (number),
+            (3b) Type (characters),
+            (3c) Start location (characters and/or numbers, e.g. GPS/Galileo data),
+            (3d) End location (characters and/or numbers, e.g. GPS/Galileo data),
+            (3e) Length (number),
+            (3f) Bus lane present indicator (number or character indicating YES or NO),
+            (3g) Vehicle type usage restrictions (numbers and characters),
+            (3h) Speed limit(s) (numbers in kph or mph),
+            (3i) Presence of other objects, e.g. tunnels/bridges (numbers and characters),
+            (3j) Obstructions, e.g. narrow road/lanes, bridges/tunnels giving low clearance, bridges with weight restrictions (characters),
+            (3k) Stop present (number or character indicating YES or NO),
+            (3l) Stop ID (numbers),
+            (3m) Stop location (characters and/or numbers, e.g. GPS/Galileo data),
+      (4) Junction:
+           (4a) Junction ID (number),
+           (4b) Type (characters),
+           (4c) Location (characters and/or numbers, e.g. GPS/Galileo data),
+           (4d) Equipment installed (numbers and characters),
+                  (4d1) Configuration (phases/durations/turning movements): (numbers and characters),
+                  (4d2) Available methods of management (numbers and characters),
+                  (4d3) Non-available vehicle movements (numbers and characters),
+                  (4d4) PT Vehicle priority available (number or character indicating YES or NO),
+                   (4d5) Next up-stream junction (numbers and characters),
+                  (4d6) Next down-stream junction (numbers and characters),
+      (5) Date of last update (date string),
+      (6) Access details, e.g. stairs, lifts, ramps, narrow doors, disabled toilets, baby changing facilities and waiting rooms (numbers and characters),
+      (7) Local special locations served by stop, e.g. tourist attraction, sports stadium, work place and entertainment venue, etc. (numbers and characters),
+      (8) Other information (characters).
+      
+      There shall be one of these Data Stores for each of the road networks within which the functionality in the Manage Public Transport Operations Functional Area is implemented.  The data objects in each of the Stores shall be provided by functionality from the Manage Traffic Functional Area.  It shall be possible for the data objects to be provided, amended and enhanced by the PT Operator if no functionality from the Manage Traffic Functional Area is available to provide them.
+    links:
+      - "Association «IN» → mpto_read_static_data"  # {FF9F8A8C-FB4A-4af9-ACDE-F14A6740E58B} → {81D36CFA-5CCB-4d5d-BFF7-737104CD57EA}
+      - "Association «IN» → mpto_route_data_for_planning_&_reports"  # {D19A150A-45FD-4194-A3F0-D8459C603662} → {2E367B41-5692-4367-A969-D87A40D8D809}
+  - name: "D4.5 PT Fare Schemes Data"
+    guid: "{F3A3B8FF-C830-4313-AB1E-D846A03C2EC6}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "5.0"
+    order: 30
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Manage Public Transport Operations Functional Area.  It shall contain information objects that provide details of the fare schemes currently being operated for PT Journeys.
+      
+      The information objects in the Store for each fare scheme shall contain the following data objects:
+      (1) Fare scheme ID (number),
+      (2) Fare scheme name (characters),
+      (3) Date when fare scheme expires (date string),
+      (4) Time(s) of day when fare scheme operates (numbers defining hours and minutes),
+      (5) Route ID(s) to which fare scheme applies (numbers),
+      (6) Type(s) of PT Passenger to which fare scheme applies (characters).
+      
+      For each type of PT Passenger, the data objects shall be included to provide following fare information:
+      (7) Range ID's of stop to which fare applies (numbers)
+      (8) Numbers ID's of stops to which fare applies (numbers)
+      
+      There shall be one information object for each fare scheme, which shall have a unique ID.  It shall be possible for there to be several fare schemes for the same route to cover different times of day, days of the week, months, years, etc.
+    links:
+      - "Association «IN» → mpto_read_fare_scheme"  # {3DBD7F68-91CC-4b3e-B0A5-807EAF9772DD} → {921FF5D3-138C-44ac-8D12-459200B9606D}
+  - name: "D4.6 Fare Card Data"
+    guid: "{B59F72E0-9806-4c50-837D-9A388901F5FD}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "5.0"
+    order: 31
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Manage Public Transport Operations Functional Area.  It shall contain information objects that provide details of the fare credit that is currently available for use by the PT Passenger.
+      
+      The information objects in the Store for each PT Passenger's fare credit shall contain the following data objects:
+      (1) Amount of credit (number)
+      (2) Date of last top up (date string)
+      (3) Date of expiry (date string)
+      
+      Each information object in this Data Store shall represent a PT "fare card" in its simplest form and is intended to be implemented that it forms part of the physical objects that go with each PT Passenger.  It is expected that either there will not be any personal identification data relating to the "owning" PT Passenger, or such data will be provided by mechanisms that are outside the scope of the functionality provided by the FRAME Architecture.
+    links:
+      - "Association «IN» → mpto_current_fare_credit"  # {4B342FBD-8220-44dd-8A75-6193DB310E83} → {D0EFC395-E635-42f9-B2CC-0A90DC2BAB62}
+      - "Association «IN» → mpto_fare_credit_balance"  # {07F393B1-6F1B-4859-9033-816417F258BF} → {F5DA4F9F-19A2-485f-83F3-09EFA936DB83}
+  - name: "D4.7 Vehicle Sharing Data"
+    guid: "{CEDAC9AB-064D-40ea-BD43-5654A23DD162}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "5.0"
+    order: 32
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Manage Public Transport Operations Functional Area.  It shall contain information objects that are used in the preparation of travel plans involving vehicle sharing.  As a minimum the information objects shall be divided into the following two parts: Vehicle Sharer registration data and travel plan data.
+      
+      The Vehicle Sharer registration information objects in the Store shall contain the following data objects:
+      (1) Vehicle Sharer ID (number),
+      (2) Registration date (date string),
+      (3) Contact details (text string),
+      (4) Origin of journey (characters and/or numbers, e.g. GPS/Galileo data),
+      (5) Destination of journey (characters and/or numbers, e.g. GPS/Galileo data),
+      (6) Own Vehicle available for sharing (number or character indicating YES or NO),
+      (7) Number of passengers to be carried in own Vehicle (number).
+      
+      The travel plan information objects in the Store shall contain the following data objects:
+      (8) Travel Plan ID (number),
+      (9) Date of creation (date string),
+      (10) Origin (characters and/or numbers, e.g. GPS/Galileo data),
+      (11) Final destination (characters and/or numbers, e.g. GPS/Galileo data),
+      (12) Identities of Vehicle Sharers involved (numbers),
+      (13) Locations at which Vehicle Sharers join/leave (characters and/or numbers, e.g. GPS/Galileo data),
+      (14) Use of PT and other non-road based travel modes (characters),
+      (14) Identities of participant Car Sharers (numbers).
+      
+      Access to the information objects in this Store shall be controlled so that it complies with the requirements of the relevant European Data Protection laws, directives and standards.
+    links:
+      - "Association «IN» → mpto_read_vehicle_sharing_data"  # {BAC8EEAA-1B16-4c1d-AA72-32FD9D2FC5DC} → {9097F51B-CE40-4883-A7F7-6FE6EC91822D}
+  - name: "D4.8 On-Demand Services Data"
+    guid: "{E3FBB23E-4602-4746-8953-F36422E8B1EC}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "5.0"
+    order: 33
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Manage Public Transport Operations Functional Area.  It shall contain information objects that are used to provide On-Demand Services and well as details of those Services that have actually been created and delivered.
+      
+      Each information object in the Store shall contain the following data objects:
+      (1) Road network data (data for a digital roadmap using a standard format, e.g. GDF)
+      (2) ID(s) of current PT services used (numbers)
+      (3) ID(s) of current PT fare schemes used (numbers)
+      (4) Information about services provided by other transport modes (characters)
+      (5) Latest and predicted traffic conditions (characters)
+      (6) Service details, comprising:
+          (6a) Service ID (number)
+          (6b) Origin (characters and/or numbers, e.g. GPS/Galileo data)
+          (6c) Destination (characters and/or numbers, e.g. GPS/Galileo data)
+          (6d) Departure date (date string)
+          (6e) Departure time (numbers defining hours and minutes)
+          (6f) Planned arrival date (date string)
+          (6g) Planned arrival time (numbers defining hours and minutes)
+          (6h) Stop ID's for pick-up (numbers)
+          (6i) Stop ID's for set down (numbers)
+          (6j) Planned time at stops (numbers defining hours and minutes)
+          (6k) Type of vehicle required (characters)
+      
+      It shall be possible for each service to be deleted once it has been delivered.
+    links:
+      - "Association «IN» → mpto_read_demand_services"  # {BC658033-FDB0-4032-B741-8EA2E38918DD} → {28A86CD9-25B2-417b-B552-94944F64A41F}
+  - name: "D4.9 On-Demand Service Performance Data"
+    guid: "{BA86F3E6-554B-4ce6-BDE7-625C16A5F5BE}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "5.0"
+    order: 34
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Manage Public Transport Operations Functional Area.  It shall contain information objects that provide a record of the delivery of On-Demand Services.  As a minimum the information objects can be divided into two parts: about the Vehicles used to provide the On-Demand Services and a record of previous services.
+      
+      Each information object about the Vehicles used to provide the On-Demand Services in the Store shall contain the following data objects:
+      (1) Time (numbers defining hours, minutes and seconds),
+      (2) Date (date string),
+      (3) Vehicle ID (number),
+      (4) Vehicle type (characters),
+      (5) Current status (characters),
+      (6) Current location (characters and/or numbers, e.g. GPS/Galileo data),
+      (7) ID of Service currently being delivered (number).
+      
+      The information objects in the Store that provide a record of previous services shall contain the following data objects:
+      (8) Service ID (number),
+      (9) Origin (characters and/or numbers, e.g. GPS/Galileo data),
+      (10) Destination (characters and/or numbers, e.g. GPS/Galileo data),
+      (11) Route (data for a digital roadmap using a standard format, e.g. GDF, plus characters and/or numbers, e.g. GPS/Galileo data),
+      (12) Date of delivery (date string),
+      (13) Time of delivery (numbers defining hours and minutes),
+      (14) Performance, e.g. stops at which on-time, early or late (text/numbers).
+      
+      It shall be possible for the Vehicle data to be accumulated for each Vehicle to provide a historic record of its use.  Also it shall be possible for the record of previous Services data to be maintained in perpetuity to provide a source of information for the On-demand Service Operator.
+    links:
+      - "Association «IN» → mpto_read_demand_service_performance"  # {461B04AF-05A9-429b-8A7F-DA4297EB23DE} → {EE6326FB-A218-49f3-9680-5F9A3CC5CF40}
+  - name: "D5.1 Operational Data"
+    guid: "{99434654-273A-4f7a-902B-79A4DB5ED9D4}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "5.0"
+    order: 35
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Provide Support for Host Vehicle Services Functional Area.  It shall contain three information objects covering the Vehicle, the Driver and the traffic conditions.
+      
+      The information objects in the Store about the Vehicle shall contain the following data objects:
+      (1) Vehicle ID (number - could be the VIN),
+      (2) Type (characters),
+      (3) Date (date string),
+      (4) Time (numbers defining hours, minutes and seconds),
+      (5) Location (characters and/or numbers, e.g. GPS/Galileo data),
+      (6) Speed (number in kph or mph),
+      (7) Acceleration (number),
+      (8) Brakes applied (number or character indicating YES or NO),
+      (9) Windscreen wipers on (number or character indicating YES or NO),
+      (10) Lights on (number or character indicating YES or NO),
+      (11) Outside temperature (number or character indicating YES or NO),
+      (12) ABS operating (number or character indicating YES or NO),
+      (13) ESP operating (number or character indicating YES or NO),
+      (14) Driver command (character),
+      (15) Date driver command input (date string),
+      (16) Time driver command input (numbers defining hours, minutes and seconds as a minimum).
+      
+      The information objects in the Store about the Vehicle shall contain the following data objects:
+      (17) Current status (characters),
+      (18) Alcohol detected (number or character indicating YES or NO).
+      
+      The information objects in the Store about the Vehicle shall contain the following data objects:
+      (19) Area in which Vehicle is operating (characters, e.g. nation, region, city, state, area names(s)),
+      (20) Road network data (data for a digital roadmap using a standard format, e.g. GDF),
+      (21) Traffic conditions:
+          (21a) Flow (number in vehicles per hour),
+          (21b) Speed (number in kph or mph),
+          (21c) Headway (number in seconds).
+      
+      It shall be possible for the above data objects to be updated in real-time as the Vehicle moves through the road network.
+    links:
+      - "Association «OUT» → pshvs_read_operational_data"  # {C467D24F-7D3B-488c-9B7A-F94BE2502743} → {184489AE-0597-41ec-9FF2-277094884491}
+  - name: "D5.2 ISA Data"
+    guid: "{C46A67B7-DD4A-4e06-82B2-8AADAFCEED93}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "5.0"
+    order: 36
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Provide Support for Host Vehicle Services Functional Area.  It shall contain information objects that provide speed limit data for a region from which, given a set of co-ordinates, the speed limit for that section of road can be identified.
+      
+      The information object in the Store shall contain the following data objects:
+      (1) Road link ID (number),
+      (2) Location (characters and/or numbers, e.g. GPS/Galileo data),
+      (3) Speed limit (number in kph or mph),
+      (4) Recommended speed (number in kph or mph),
+      (5) Weather conditions for recommended speed (characters).
+    links:
+      - "Association «IN» → pshvs_read_ISA_data"  # {A86F86FC-339B-41f8-9E3F-F506139EAC44} → {816C3E63-6FCD-4b75-AEAA-B56AADCC9A30}
+  - name: "D5.3 Road Information Data"
+    guid: "{614BDD23-AA47-4372-BEF2-BD0D5B3FFBF9}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "5.0"
+    order: 37
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Provide Support for Host Vehicle Services Functional Area.  It shall contain information objects that provide details about the road network.
+      
+      The information objects in the Store shall contain the following data object:
+      (1) Area covered (characters, e.g. nation, region, city, state, area names(s)),
+      (2) Road network data (data for a digital roadmap using a standard format, e.g. GDF),
+      (3) Link ID (number),
+      (4) Link start location (characters and/or numbers, e.g. GPS/Galileo data),
+      (5) Link end location (characters and/or numbers, e.g. GPS/Galileo data),
+      (6) Number of lanes (number),
+      (7) Speed limit (number in kph or mph),
+      (8) Road information from Other Vehicle (characters and numbers).
+      
+      It shall be possible for these data objects to be updated in real-time as the Vehicle moves through the road network, so that only the data relevant to the area around the Vehicle's current location is stored.
+    links:
+      - "Association «IN» → pshvs_read_road_information"  # {649ED736-7B55-4a53-8B21-71B700476A70} → {73A0F09C-680D-4019-903C-9E97CBC45A9E}
+  - name: "D5.4 Vehicle Trip Plans Data"
+    guid: "{D2766B6C-BE45-4f36-857D-C34AA6BA7DCA}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "5.0"
+    order: 38
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Provide In-vehicle Trip Planning High-level Function.  It shall contain information objects that are the result of the process to create a Vehicle Trip Plan.
+      
+      The information objects in the Store shall contain the following objects:
+      (1) Route ID (number),
+      (2) Route name (characters),
+      (3) Origin (characters and/or numbers, e.g. GPS/Galileo data),
+      (4) Destination (characters and/or numbers, e.g. GPS/Galileo data),
+      (5) Expected arrival time (numbers defining hours, minutes and seconds),
+      (6) Vehicle type for route (characters),
+      (7) Type of goods carried, if any (characters),
+      (8) Route (data for a digital roadmap using a standard format, e.g. GDF, plus characters and/or numbers, e.g. GPS/Galileo data),
+      (9) Rest zone:
+          (9a) Rest zone ID (number),
+          (9b) Name (characters),
+          (9c) Location (characters and/or numbers, e.g. GPS/Galileo data),
+          (9d) Booked start date (date string),
+          (9e) Booked start time (numbers defining hours, minutes and seconds),
+          (9f) Booked stay duration numbers defining hours, minutes and seconds),
+      (10) Un/loading zone:
+          (10a) Un/loading zone ID (number),
+          (10b) Name (characters),
+          (10c) Location (characters and/or numbers, e.g. GPS/Galileo data),
+          (10d) Booked start date (date string),
+          (10e) Booked start time (numbers defining hours, minutes and seconds),
+          (10f) Booked stay duration (numbers defining hours, minutes and seconds),
+      (11) Payments made:
+          (11a) What for (characters)?
+          (11b) Complete (number or character indicating YES or NO),
+      (12) Oher relevant data (characters and/or numbers).
+      
+      It shall be possible for each information object to include data objects about more than one rest area and/or un/loading zone and for payments for use to be recorded against some or all of these, plus any pre-payment of road use charges.  The data objects in this Store shall be retained for the prime purpose of supporting the Diver during the implementation of the Trip Plan.  All the factors that were considered in production of the Trip Plan are included in the data objects described above.
+    links:
+      - "Association «IN» → pshvs_vehicle_trip_plan_read"  # {EB8FE114-A3FE-41ad-BB8B-7A8CC93BA9C0} → {20490E1B-34B2-4dc2-ADA0-97A79853F8EC}
+  - name: "D6.1 General Trip Preferences (GTP) Data"
+    guid: "{BC9B87AC-9420-4d15-AF83-C5DCE76AE98E}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "5.0"
+    order: 39
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Provide Traveller Journey Assistance Functional Area (F6).  It shall contain information objects that provided the personalised data needed to support the Traveller during all of their trips.  The support is provided both during the trip planning, as well as during the trip execution.  The Store is also used to prevent cumbersome and error prone repeated input of the same information by the Traveller.  It serves as a "memory" to assist the Traveller during the entire trip, for all travel modes, during every phase of the trip.
+      
+      The information objects in the Store shall contain the following data objects:
+      (1) Traveller s ID (number),
+      (2) Traveller driver licence ID (number or characters),
+      (3) Traveller passport ID (number),
+      (4) Traveller's preferred language (characters),
+      (5) Traveller's disabilities (characters),
+      (6) Other Traveller information relevant to trip planning (characters),
+      (7) Traveller's payment information (characters and/or numbers),
+      (8) Description of cargo to be carried on trip (characters),
+      (9) Number of passengers expected in Vehicle (number),
+      (10) Prime trip planning criterion (characters),
+      (11) Default departure location (characters and/or numbers, e.g. GPS/Galileo data),
+      (12) Default destination location (characters and/or numbers, e.g. GPS/Galileo data),
+      (13) Level of detail desired of trip itinerary (characters),
+      (14) Road toll payment method (characters),
+      (15) Vehicle breakdown assistance information (characters),
+      (16) Way of communication with Traveller while on-trip (characters + numbers),
+      (17) Route guidance facilitation parameters (characters),
+      (18) Preferred travel modes and classes (characters),
+      (19) Preferred hotel(s)/chain(s) (characters),
+      (20) Preferred car rental organisation(s) (characters).
+      
+      The information object for each Traveller must be kept separate with no possibility of inadvertent access to the information object by either another Traveller, or some form of un-authorised access.
+    links:
+      - "Association «IN» → ptja_read_GTP_data"  # {9ACA09DD-C059-49cd-9D34-9C2A5FF16575} → {4072B3F5-4D6B-4f01-AE87-1ECA97EFFF83}
+  - name: "D6.2 Private Trip Plan Data"
+    guid: "{50334DB4-0A61-4ed7-887E-D3B978A1F4FE}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "Unknow"
+    order: 40
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Provide Traveller Journey Assistance Functional Area (F6).  It shall contain data that is the result of the trip planning process.  This data is retained for the prime purpose of supporting the Traveller during the trip. The most notable requirement is to react to the consequences of perturbations in the situation(s) existing during trip planning.  All the considerations that resulted in production of the trip itinerary are included in this Data Store.
+      
+      The data in the Store shall be structured in the following way:
+      (1) Traveller s ID (number),
+      (2) Traveller's preferred language (characters),
+      (3) Traveller's disabilities (characters),
+      (4) Route (data for a digital roadmap using a standard format, e.g. GDF, plus characters and/or numbers, e.g. GPS/Galileo data),
+      (5) Trip origin (characters and/or numbers, e.g. GPS/Galileo data),
+      (6) Departure date (date string),
+      (7) Departure time (numbers defining hours, minutes and seconds),
+      (8) Way point:
+          (8a) Location (characters and/or numbers, e.g. GPS/Galileo data),
+          (8b) Expected arrival date (date string),
+          (8c) Expected arrival time (numbers defining hours, minutes and seconds),
+          (8d) Car park information (characters),
+      (9) Trip destination (characters and/or numbers, e.g. GPS/Galileo data),
+      (10 Expected arrival date (date string),
+      (11) Expected arrival time (numbers defining hours, minutes and seconds),
+      (12) Car park information (characters),
+      (13) Description of cargo to be carried on trip (characters),
+      (14) Number of passengers expected in Vehicle (number),
+      (15) Hotel bookings completed (characters),
+      (16) Hotel bookings still to be made (characters),
+      (17) Car rental bookings completed (characters),
+      (18) Car rental bookings still to be made (characters),
+      (19) Other travel mode bookings completed (characters),
+      (20) Other travel mode bookings still to be made (characters),
+      (21) Vehicle breakdown assistance information (characters),
+      (22) Way of communication with Traveller while on-trip (characters + numbers),
+      (23) Route guidance facilitation parameters (characters),
+      (24) Trip skeletons (see below).
+      
+      It shall be possible for there to be none, or more than one way point, plus hotel, car rental and other travel mode bookings.
+      
+      A special feature of the data in the Store to support the Traveller shall be the "trip skeleton", which shall be available for use in two ways:
+      (a) as the start of the search for alternatives during trip planning,
+      (b) as the fixed part of the trip if the trip has to be retained for future reuse.
+      The core part of the "skeleton" shall be the origin-destination combination and a date and/or time for the start or the arrival and possibly a number of intermediate locations - see data to be stored above.  In both cases, trip preferences are part of the trip skeleton for trip planning purposes and it shall be possible to obtain these from the store of GTP data.
+      
+      The data for each Traveller must be kept separate with no possibility of inadvertent access to the data for one Traveller by either another Traveller, or some form of un-authorised access.
+    links:
+      - "Association «IN» → ptja_read_trip_plan_data"  # {0FC0FF2F-23EB-4822-9D66-5F2428211601} → {B4A6029E-BF65-4fa8-B23A-72772FFDCF91}
+  - name: "D6.3 Road Trip Planning Data"
+    guid: "{3A26109F-78F7-444a-A7B9-AD383A903734}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "5.0"
+    order: 41
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Provide Traveller Journey Assistance Functional Area (F6). It shall contain information objects that provide details about the road network and the traffic conditions within it for use in planning the Traveller's trips.
+      
+      The information objects in the Store shall contain the following data objects:
+      (1) Area covered (characters, e.g. nation, region, city, state, area names(s)),
+      (2) Road network data (data for a digital roadmap using a standard format, e.g. GDF),
+      (3) Link:
+          (3a) ID (number),
+          (3b) Current traffic flow (number in vehicles per hour),
+          (3c) Current average traffic speed (number in kph or mph),
+          (3d) Current average traffic headway (number in seconds),
+          (3e) Date for current traffic data (date string),
+          (3f) Time for current traffic data (numbers defining hours, minutes and seconds),
+          (3g) Predicted traffic flow (number in vehicles per hour),
+          (3h) Predicted average traffic speed (number in kph or mph),
+          (3i) Predicted average traffic headway (number in seconds),
+          (3j) Prediction date (date string),
+          (3k) Prediction time (numbers defining hours, minutes and seconds).
+      
+      It shall be possible for link data object to be provided and stored for every link in the road network and for the current and predicted data objects to be updated whenever new data objects are received.  Also it shall be possible for there to be several sets of predicted data objects for different date/time combinations.
+    links:
+      - "Association «IN» → ptja_read_road_trip_planning_data"  # {7CA78BF1-8098-41d0-A4C3-C59D310AAF9A} → {B0FE36E8-0CA6-4cc2-96DA-1811D347D176}
+  - name: "D6.4 PT Trip Planning Data"
+    guid: "{E6F0E9FD-CC97-480b-8985-A208FC4DB80B}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "5.0"
+    order: 42
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Provide Traveller Journey Assistance Functional Area (F6). It shall contain information objects that provide details about the services provided by the PT operations plus the fares that will be charged, and shall be for use in planning the Traveller's trips.
+      
+      The information objects in the Store for PT services shall contain the following data objects:
+      (1) ID (number),
+      (2) Name (characters),
+      (3) Route (data for a digital roadmap using a standard format, e.g. GDF plus characters and/or numbers, e.g. GPS/Galileo data,
+      (4) Type of PT Vehicle preferred (characters),
+      (5) Type of PT Driver preferred (characters),
+      (6) Type of day on which service operates (characters),
+          (6a) Timetable (time in hours and minutes),
+          (6b) Frequency (numbers defining hours and minutes),
+      (7) Variations to the service (characters).
+      
+      The information objects in the Store for PT service fares shall contain the following data objects:
+      (8) Fare scheme ID (number),
+      (9) Fare scheme name (characters),
+      (10) Date when fare scheme expires (date string),
+      (11) Time(s) of day when fare scheme operates (numbers defining hours and minutes),
+      (12) Route ID(s) to which fare scheme applies (numbers),
+      (13) Type(s) of PT Passenger to which fare scheme applies (characters).
+      
+      For each type of PT Passenger, the following data objects containing fare information shall be provided:
+      (14) Range ID's of stop to which fare applies (numbers),
+      (15) Numbers ID's of stops to which fare applies (numbers).
+      
+      The above data objects shall be provided by functionality in the Manage Public Transport Operations Functional Area and shall be updated every time a change is made.
+    links:
+      - "Association «IN» → ptja_read_PT_trip_planning_data"  # {51CEE7E2-4BA5-4b17-A242-C6764ED4A1E2} → {525B3093-7136-4e9d-9B75-9C81B3D2B700}
+  - name: "D6.5 Travel Information Data"
+    guid: "{1CF6160F-E3E6-40a7-BE83-1163A3C0D8A7}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "5.0"
+    order: 43
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Provide Traveller Journey Assistance Functional Area (F6). It shall contain information objects about travel that have been produced from data objects collected by trip planning and other functionality.
+      
+      The information objects in the Store shall contain the following data objects:
+      (1) Points of Interest (POI):
+          (1a) Location (characters and/or numbers, e.g. GPS/Galileo data),
+          (1b) Information (characters),
+      (2) Personal Services (PS):
+          (2a)  Location (characters and/or numbers, e.g. GPS/Galileo data),
+          (2b)  Information (characters),
+      (3) Other Modes:
+          (3a) Departure location (characters and/or numbers, e.g. GPS/Galileo data),
+          (3b) Arrival location (characters and/or numbers, e.g. GPS/Galileo data),
+          (3c) Service details including schedules and costs (characters and numbers, some in currency),
+      (4) Toll Information:
+          (4a) Link ID (number),
+          (4b) type of link, e.g. toll road, tunnel, bridge (characters),
+          (4c) details of charges (characters and numbers some in currency others showing time in minutes and hours),
+      (5) PT service information (see store of PT Trip Planning Data),
+      (6) Link:
+           (6a) ID (number),
+           (6b) current traffic flow (number in vehicles per hour),
+           (6c) current average traffic speed (number in kph or mph),
+           (6d) current average traffic headway (number in seconds),
+           (6e) date for current traffic data (date string),
+           (6f) time for current traffic data (numbers defining hours, minutes and seconds),
+           (6g) predicted traffic flow (number in vehicles per hour),
+           (6h) predicted average traffic speed (number in kph or mph),
+           (6i) predicted average traffic headway (number in seconds),
+           (6j) prediction date (date string),
+           (6k) prediction time (numbers defining hours, minutes and seconds).
+      
+      It shall be possible for these data objects to be updated as and when they change and for them to be used to provide information to Travellers, either on request or at the command of the Traffic and Travel Information Operator.
+    links:
+      - "Association «IN» → ptja_read_travel_information"  # {A701BC76-4873-4bea-BDFC-68147757E0B5} → {14FB4B31-7FA0-44b1-98AF-E4E25C544E90}
+  - name: "D7.1 Rules Data"
+    guid: "{43A57E5E-5072-4380-AFF2-232D8DA92361}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "5.0"
+    order: 44
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Provide Support for Law Enforcement Functional Area.  It shall contain an information objects that provide all the rules and the types of violation associated with each rule.
+      
+      Each information object in the Store shall be for one rule and contain the following data objects:
+      (1) Rule ID (number),
+      (2) Area of road network to which the rule applies (characters),
+      (3) Description of the rule (characters),
+      (4) Types of violation that can be associated with the rule (characters).
+      
+      The data objects in the Store f or each type of violation shall be structured in the following way:
+      (5) Violation ID (number),
+      (6) Violation description (characters),
+      (7) Level of seriousness (characters),
+      (8) Authority responsible for enforcement (characters),
+      (9) Enforcement procedure (characters),
+      (10) Potential sanction (characters).
+      
+      It shall be possible for these data objects to be updated every time a change is made.
+    links:
+      - "Association «IN» → psle_rules_read"  # {7E52E9BB-8710-4cb9-8409-F0F9C66FDFA5} → {9934832B-8F53-428a-9407-CF4B6F30F81C}
+  - name: "D7.2 User's Registration Data"
+    guid: "{B04BB5A2-158A-442e-A138-9773D77FAB19}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "5.0"
+    order: 45
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Provide Support for Law Enforcement Functional Area.  It shall contain an information object that provides details of registered vehicles and users.
+      
+      The information objects in the Store shall contain the following data objects:
+      (1) Vehicle ID (number),
+      (2) Vehicle type (characters),
+      (3) Vehicle owner ID (number),
+      (4) Vehicle driver ID (number),
+      (5) Vehicle operator ID (number),
+      (6) Maximum authorised weight (number in kg or lbs),
+      (7) Maximum authorised speed (number in kph or mph),
+      (8) Vehicle user ID (number),
+      (9) ID of any other vehicles used by the user (number),
+      (10) Operations allowed for the vehicle (characters),
+      (11) Start date for vehicle registration (date string),
+      (12) End date for vehicle registration (date string),
+      (13) Level of pollution produced by the vehicle (numbers as percentages for each pollutant).
+      
+      It shall be possible for the Vehicle owner, Driver, operator and user to be the same or different people and/or organisations.
+    links:
+      - "Association «IN» → psle_user_registration_data_read"  # {6091FA8B-3E42-494a-B075-AFF3582934B8} → {4A28051A-3530-4a0b-8C71-98658FE66299}
+  - name: "D7.3 Violations Data"
+    guid: "{67BE71F6-85CA-44e2-B74F-1B36B60AFB17}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "5.0"
+    order: 46
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Provide Support for Law Enforcement Functional Area. It shall contain information objects that provide details of all the violations that have been detected and reported by other functionality.  These include failure by the user to provide the correct payment that is required for the service, violations of traffic rules (e.g. speed, lane use, red-light or car park) and breaching of an access control system.  Data about the resulting prosecution is also stored.
+      
+      The information object for each violation in the Store shall contain the following data objects:
+      (1) Date of violation detection (date string),
+      (2) Date of message to enforcement bodies (date string),
+      (3) Location of violation (characters),
+      (4) User ID (number),
+      (5) Service ID (number),
+      (6) Type of violation (characters),
+      (7) If financial violation:
+          (7a) Nature (characters),
+          (7b) Account ID (number),
+          (7c) Amount of overdraft (number - in currency).
+      (8) If access control:
+          (8a) ID of these systems (number),
+          (8b) Result (user blocked / user passing through).
+      (9) If other:
+          (9a) Mage of violation (video image),
+          (9b) Involved user ID (number),
+          (9c) Involved vehicle ID (number),
+          (9d) Data according to the type of violation (number and/or characters).
+      (10) Prosecution:
+          (10a) Date prosecution file sent (date string),
+          (10b) Violation (characters),
+          (10c) Prosecution recommendation (characters).
+      
+      The data objects must be stored in such a way that the privacy if the user (offender) is maintained according to the rules set out by the European Directives and national laws concerning data privacy.
+    links:
+      - "Association «IN» → psle_read_violations_store"  # {EACBCDD0-36C6-47c1-87E0-3DCBBA92C9A6} → {4558563E-1832-41ec-9E08-B722ECCE5D39}
+  - name: "D7.4 Instruction Notifications Data"
+    guid: "{EDB6F938-F880-4212-9EC0-CF91DC087554}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "7.0.7"
+    order: 47
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Provide Support for Law Enforcement Functional Area. It shall contain information objects that provide a record of all of the instructions sent to Vehicles that were acknowledged as having been displayed to Drivers.  The record of instructions will be used to determine whether or not a detected violation is genuine, or should be ignored because the Driver was only obeying instructions sent to the Vehicle.
+      
+      The information objects in the Store shall contain the following data objects:
+      (1) Date when record created (date string),
+      (2) Time when record created (numbers defining hours, minutes and seconds),
+      (3) Vehicle ID in which the instruction was displayed (number),
+      (4) Type of instruction (characters),
+      (5) Instruction details (characters and/or numbers),
+      (6) Date at which instruction acknowledgement received (date string),
+      (7) Time at which instruction acknowledgement received (numbers defining hours, minutes and seconds),
+      (8) ID(s) road segment(s) to which the instruction applies (numbers).
+      
+      It shall be possible for these data objects to be updated every time a new command is displayed to Drivers and for it to be removed after a suitable time period has elapsed since it was cancelled or replaced.
+    links:
+      - "Association «IN» → psle_instruction_notification_read"  # {C79FC254-C5F9-4b5d-BBB9-1D7E22F46305} → {90700E0F-EF90-4502-874F-F9F3E338F5B1}
+  - name: "D8.4 FTEP Data Store"
+    guid: "{D1476B5A-CB6C-4df1-9BBB-D4B9D9157ED2}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "1.0"
+    order: 48
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall contain information objects that define each Freight Transport Execution Plan (FTEP) that is capable of being implemented by functionality in the system.  Each Freight Transport Execution Plan shall consist of one information object which shall comprise, but not be limited to, the following data objects:
+      (1) FTEP identity (number),
+      (2) date FTEP was originally created (number),
+      (3) time FTEP was originally created (number),
+      (4) number of modifications since first creation (number),
+      (5) for each modification:
+             (a) date FTEP was modified (number),
+             (b) time FTEP was modified (number),
+             (c) description of modification (characters),
+      (6) number of Freight Transport Load Items (FTLI's) to be moved by this FTEP (number),
+      (7) for each FTLI:
+             (a) location of origin (number),
+             (b) date to be collected (number),
+             (c) time to be collected (number),
+             (d) description of FTLI, e.g. liquid in its own container, liquid requiring a container, powder and hazardous designation (characters),
+             (e) size of FTLI, l, w, h (numbers),
+             (f) is FTLI to be considered an abnormal load (y/n),
+             (g) location of destination (number),
+             (h) expected date to be delivered to destination (number),
+             (i) expected time to be delivered to destination (number),
+             (j) location(s) of way point(s) on road based route to be followed (numbers),
+             (k) other modes of transport to be used - blank if not required (characters),
+             (l) location of Freight Terminal Area (FTA)  at which FTLI must be delivered from which it will be taken forward by other mode of transport (number),
+             (m) expected date of delivery to FTA (number),
+             (n) expected time of  delivery FTA (number),
+             (o) location of FTA from which FTLI must be collected having been delivered by other mode of transport (number),
+             (p) expected date of collection from FTA (number),
+             (q) expected time of collection from FTA (number),
+             (r) location(s) of way point(s) on road based route to be followed from FTA to destination (numbers)
+             (s) any other special requirements (characters).
+      (8) number of Freight Vehicles required to carry the FTLI(s) (number),
+      (9) type(s) of Freight Vehicle required to carry the FTLI(s) (characters),
+      (10) details of any relevant traffic management policies that apply to this FTEP (characters).
+    links:
+      - "Association «IN» → mffo_read_FTEP_data"  # {106163AC-C9A6-4204-B2CE-29796281F938} → {2080FEBD-8200-4a2b-8972-7A42319B4304}
+  - name: "D8.5 FTEP Preparation Data Store"
+    guid: "{7FDAD357-C585-4916-BD89-AEAFF5872783}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "1.0"
+    order: 49
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall contain information objects that are produced from inputs provided by the Freight Transport User to the Freight Transport Operations Manager, who may also provide inputs.  The data objects for each Freight Transport Execution Plan shall consist of, but not be limited to, the following:
+      (1) Freight Transport User identity (number),
+      (2) number of Freight Transport Load Items (FTLI's) to be moved by this FTEP (number),
+      (3) for each FTLI:
+             (a) location of origin (number),
+             (b) date to be collected (number),
+             (c) time to be collected (number),
+             (d) description of FTLI, e.g. liquid in its own container, liquid requiring a container, powder and hazardous designation (characters),
+             (e) size of FTLI, l, w, h (numbers),
+             (f) is FTLI to be considered an abnormal load (y/n),
+             (g) location of destination (number),
+             (h) required date to be delivered to destination (number),
+             (i) required time to be delivered to destination (number),
+             (j) use of other modes of transport permitted (yes/no),
+             (k) any other special requirements (characters).
+    links:
+      - "Association «IN» → mffo_read_FTEP_preparation_data"  # {AF106684-60C2-4707-A5D2-D963EBA0D619} → {03155670-51E8-4b25-8556-81D523BF8A6C}
+  - name: "D8.6 Road Network Data Store"
+    guid: "{D95C097E-4EB0-48f2-8D3F-BB15F4CDBE90}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "1.0"
+    order: 50
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall contain information objects that provide details of the design, layout and physical characteristics of the road network in which the system has to operate.  The static data covers the actual layout and configuration of the urban road network.  Each information object in the Store shall comprise, but bot be limited to, the following data objects:
+      (1) Road type (numbers and characters),
+      (2) Type of data (numbers and characters),
+      (3) Link:
+            (3a) ID (number),
+            (3b) Type (characters),
+            (3c) Start location (characters and/or numbers, e.g. GNSS data),
+            (3d) End location (characters and/or numbers, e.g. GNSS data),
+            (3e) Length (number),
+            (3f) Number of lanes/carriageways (number),
+            (3g) Lane/carriageway width(s) (number(s)),
+            (3h) Vehicle type usage restrictions (numbers and characters),
+            (3i) Vehicle parking restrictions (numbers and characters),
+            (3j) Speed limit(s) (numbers in kph or mph),
+            (3k) Presence of other objects, e.g. tunnels/bridges (numbers and characters),
+            (3m) Obstructions, e.g. narrow road/lanes, bridges/tunnels giving low clearance, bridges with weight restrictions (characters),
+      (4) Junction:
+             (4a) ID (number),
+             (4b) Type (characters) - location (characters and/or numbers, e.g. GNSS data),
+             (4c) Equipment installed (numbers and characters):
+                    (4ca) ID (number),
+                    (4cb) Type (characters),
+                    (4cc) Configuration (phases/durations/turning movements) (numbers and characters),
+                    (4cd) Available methods of management (numbers and characters),
+                    (4ce) Non-available vehicle movements (numbers and characters),
+                   (4cf) Next up-stream junction (numbers and characters),
+                   (4cg) Next down-stream junction (numbers and characters),
+      (5) Date of last update (date string).
+      
+      These data objects shall be used by a variety of Functions to enable traffic in the urban network to be managed.  It shall also be provided to functionality in the Manage Public Transport Operations Functional Area so that its service routes and schedules can be planned.  It shall be possible for some of the data objects to also be provided to Vehicles to enable driver guidance and information to be provided.
+    links:
+      - "Association «IN» → mffo_read_road_network_data"  # {32D3D0EB-BAA9-4e64-BE7D-91FEDE590E57} → {90E992E5-B702-4bb0-93E3-0AA5027CECD1}
+  - name: "D8.7 Incident Response Data Store"
+    guid: "{4DB781A8-E622-46df-A30D-16413EB5185A}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "1.0"
+    order: 51
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall contain information objects that contain the predefined responses to incidents.  These responses shall have been created by the Freight Transport Operations Manager.  There shall be one information object for each incident response and each information object consists of, but is not limited to, the following data objects:
+      (1) incident response number (number),
+      (2) date of creation (number),
+      (3) time of creation (number),
+      (4) creator identity or name (characters),
+      (5) number of times used (number),
+      (6) data last modified (number),
+      (7) time last modified (number),
+      (8) modifier identity of name (characters),
+      (9) type of incident covered by the response (characters),
+      (10) generic location description, e.g. on the road, in a parking area, or at a Freight Terminal Area (characters),
+      (11) type of Freight Transport Load Item(s) likely to be affected (characters),
+      (12) possible effects on Freight Transport Load Items (characters),
+      (13) required response(s) (characters).
+      Note tha the required response can include informing the incident management functionality in the Manage Traffic Functional Area (F3).
+    links:
+      - "Association «IN» → mffo_read_incident_data"  # {2A8E83A9-FCFF-42e5-9A8E-203FC914247F} → {E22B82BC-4B7F-4994-9F61-353349A8B94D}
+  - name: "D8.8 Freight Terminal Area Data Store"
+    guid: "{4BA7B0C9-1355-430d-BCDC-21F55DB63E82}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "1.0"
+    order: 52
+    note: |
+      This Data Store shall contain information objects that provide details of the facilities available at Freight Terminal Areas.  Each Freight Terminal Area shall have its own set of information objects, each of which shall describe one facility and contain, but not be limited to, the following data objects:
+      (1) Freight Terminal Area (FTA) identity (number),
+      (2) FTA location co-ordinates (number),
+      (3) date of creation of facility description (number).
+      (4) time of creation of facility description (number),
+      (5) description of the FTA facility (characters),
+      (6) description of access to the FTA facility (characters),
+      (7) any restrictions on access to the FTA facility (characters).
+    links:
+      - "Association «IN» → mffo_read_FTA_facilities_data"  # {D4A16F4F-BC10-400b-9BE2-7539A97B291B} → {07416AAC-243A-4c63-8B1D-B7C150E455A3}
+  - name: "D8.9 FTEP Implementation Record Data Store"
+    guid: "{A886C1CB-2FF3-400f-9EAB-B92E4E47E15B}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "1.0"
+    order: 53
+    note: |
+      This Data Store shall contain information objects that provide records of the way that each Freight Transport Execution Plan (FTEP) has been implemented.  There shall be one information object for each implementation of each FTEP, thus there will be a record of each implementation of each FTEP.  Each information object shall consist of the following data objects:
+      (1) FTEP identity (number),
+      (2) date FTEP implemented (number).
+      (3) time FTEP implemented (number),
+      (4) number of Freight Transport Load Item(s) (FTLI(s)) moved (number, must be 1 or more),
+      (5) date of FTLI pick-up (number),
+      (6) time of FTLI pick-up (number),
+      (7) was pick-up on time (yes/no)?
+      (8) if no, what was the reason for the delay (characters)?
+      (9) date of FTLI delivery to requested destination (number),
+      (10) time of FTLI delivery to requested destination (number),
+      (11) was delivery on time (yes/no)?
+      (12) if no, what was the reason for the delay (characters)?
+      (13) where other modes of transport used (yes/no)?
+      (14) if yes, were these the expected modes (yes/no)?
+      (15) if no, what was the reason for the use of different other mode(s) of transport (characters)?
+      (16) did the FTEP have to be modified (yes/no)?
+      (17) if no, what was the reason for the modification (characters)?
+      (18) were the traffic conditions on the road network as expected (yes/no)?
+      (19) if no, what was different about the traffic conditions (characters)?
+      (20) post implementation comments from the Freight Vehicle Driver (characters).
+    links:
+      - "Association «IN» → mffo_read_FTEP_implementation_record"  # {AF31A374-08A0-45c0-8A48-6858AE71E581} → {2B1A819E-E6DD-48fe-9481-6E520C3D1E54}
+  - name: "D8.10 Freight Vehicle Capabilities Data Store"
+    guid: "{27166ADF-D37E-4863-886F-EC1A801705F9}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "1.0"
+    order: 54
+    note: |
+      This Data Store shall contain information objects that provide details of the capabilities of the various Freight Vehicles that are available for use by the Freight Transport Operations Manager in the implementation of Freight Transport Execution Plans.  There shall be one information object for each Freight Vehicle and this information object shall comprise but not be limited to the following data objects:
+      (1) vehicle identity - VIN (number),
+      (2) type of vehicle, e.g. truck, tractor, trailer (characters),
+      (3) carrying capacity - kg (number),
+      (4) gross vehicle weight - kg (number),
+      (5) loaded vehicle dimensions - length, height, width - cm (numbers),
+      (6) on-board lifting unit available (yes/no)?
+      (7) if yes, maximum load - kg (number).
+      (8) type of load carried - packages, container, liquids, powders (characters),
+      (9) if container, full size or half size (characters)?
+      (10) currently available (yes/no)?
+      (11) if no, when expected to be available (number),
+      (12) type of fuel - petrol/diesel/electric/hybrid (characters).
+    links:
+      - "Association «IN» → mffo_read_Freight_Vehicle_capabilities"  # {797BCE88-126D-499d-9EBC-5398061E9B4E} → {4F90CDA4-1B5B-4b63-B015-02F3ABFA9D39}
+  - name: "D9.1 Bus Lane Data"
+    guid: "{81CCEC70-F65C-4ad9-B59F-5DA36B1CC1A6}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "5.0"
+    order: 55
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Provide Support for Cooperative Systems Functional Area.  It shall contain information objects about the links within the road network and use of any Bus Lanes that they contain by non-PT Vehicles.
+      
+      The information objects in the Store shall contain the following data objects:
+      (1) Link ID (number),
+      (2) Link start location (characters and/or numbers, e.g. GPS/Galileo data),
+      (3) Link end location (characters and/or numbers, e.g. GPS/Galileo data),
+      (4) Bus Lane present for link (number or character indicating YES or NO),
+      (5) Bus Lane available for use by other Vehicles (number or character indicating YES or NO),
+      (6) Historic traffic flow for road link (number in vehicles per hour),
+      (7) Current traffic flow for road link (number in vehicles per hour),
+      (8) PT Vehicle use statistics for Bus Lane (numbers),
+      (9) Other Vehicle use of Bus Lane statistics:
+          (9a) Date (date string),
+          (9b) Time (numbers defining hours, minutes and seconds),
+          (9c) Licence ID (number),
+          (9d) Bus Lane ID(s) for which use authorised (numbers),
+          (9e) Duration of licence (numbers defining hours, minutes and seconds),
+          (9f) Licence suspended (number or character indicating YES or NO),
+          (9g) Licence suspension reason(s) (characters),
+      (10) ID of Bus Lane use requests from other Vehicles refused (number),
+      (11) Unauthorised Vehicles in Bus Lanes:
+          (11a) Date (date string),
+          (11b) Time (numbers defining hours, minutes and seconds),
+          (11c) Vehicle ID (number),
+          (11d) Vehicle type (characters),
+          (11e) Vehicle details (image),
+          (11f) Bus Lane ID (number).
+    links:
+      - "Association «IN» → pscs_read_bus_lane_data"  # {082FC54C-A04B-4db1-AE2C-D3D9088B46F8} → {DA8DF15B-4A47-4500-819B-D4621A1047D4}
+      - "Association «IN» → pscs_static_bus_lane_data"  # {5FC8F364-2132-40b8-AF21-B851416B2E70} → {04561F64-4D83-4497-AF98-E633E9A4961F}
+  - name: "D9.2 Sensitive Area Monitoring Data"
+    guid: "{CEC45C4C-2143-41db-8F98-3CC1A4730B1F}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "5.0"
+    order: 56
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Provide Support for Cooperative Systems Functional Area.  It shall contain information objects that provide records of the Vehicles that have entered a "sensitive area" in the road network.
+      
+      The information objects in the Store shall contain the following data objects:
+      (1) Date (date string),
+      (2) Time (numbers defining hours, minutes and seconds),
+      (3) Area location (characters, e.g. nation, region, city, state, area names),
+      (4) Access criteria (characters),
+      (5) Vehicle ID (number),
+      (6) Vehicle type (characters),
+      (7) Hazardous goods on board (characters),
+      (8) Entry point (characters and/or numbers, e.g. GPS/Galileo data),
+      (9) Exit point (characters and/or numbers, e.g. GPS/Galileo data).
+    links:
+      - "Association «IN» → pscs_read_sensitive_area_data"  # {F87A756E-5674-4ab1-A964-A62AA2266F8B} → {C0DE5176-0ACE-4204-93D3-771ACBE6014A}
+  - name: "D9.3 Hazardous Goods Vehicle Routes Data"
+    guid: "{96DF8426-6173-4bcb-B2F4-7E577ACDB43F}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "5.0"
+    order: 57
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Provide Support for Cooperative Systems Functional Area.  It shall contain information objects that are used to manage the use of the road network by Vehicles that are carrying Hazardous Goods.  There shall be two types of information objects: those for Hazardous Goods Vehicle criteria and those for Hazardous Goods Vehicle routes.
+      
+      The information objects in the Store for Hazardous Goods Vehicle Criteria shall contain the following data objects:
+      (1) Type of hazardous goods (characters),
+      (2) Areas to be avoided (characters, e.g. nation, region, city, state, historic sites, business districts, areas of outstanding natural beauty, areas protected for environmental reasons (names(s)),
+      (3) Particular roads or road types that either must, or must not be used:
+          (3a) Link ID (number),
+          (3b) Road name (characters),
+          (3c) To be used (number or character indicating YES or NO),
+          (3d) To be avoided (number or character indicating YES or NO),
+      (4) Bridges and tunnels that must be either avoided or used:
+          (4a) Bridge/tunnel ID (number),
+          (4b) Bridge/tunnel name (characters),
+          (4c) To be used (number or character indicating YES or NO),
+          (4d) To be avoided (number or character indicating YES or NO),
+      (5) The use or avoidance of particular service areas or rest zones within service areas:
+          (5a) Service/rest area ID (number),
+          (5b) Service/rest area name (characters),
+          (5c) To be used (number or character indicating YES or NO),
+          (5d) To be avoided (number or character indicating YES or NO),
+      (6) The use or avoidance of car parks:
+          (6a) Car park ID (number),
+          (6b) Car park name (characters),
+          (6c) To be used (number or character indicating YES or NO),
+          (6d) To be avoided (number or character indicating YES or NO),
+      (7) When Vehicles carrying Hazardous Goods are allowed to travel:
+          (7a) Cate (date string),
+          (7b) Start time (numbers defining hours, minutes and seconds),
+          (7c) End time (numbers defining hours, minutes and seconds).
+      
+      The information objects in the Store for Hazardous Goods Vehicle routes shall contain the following data objects:
+      (8) Identifier (characters),
+      (9) Type of hazardous goods (characters),
+      (10) Vehicle type (characters),
+      (11) Route (data for a digital roadmap using a standard format, e.g. GDF, plus characters and/or numbers, e.g. GPS/Galileo data),
+      (12) Date last used (date string),
+      (13) Time last used (numbers defining hours, minutes and seconds),
+      (14) Currently in use (number or character indicating YES or NO).
+    links:
+      - "Association «IN» → pscs_hazardous_routes_data_read"  # {B86C6E7E-9B9C-48d1-B3EA-3D82E6B41D1E} → {C5C16415-F3EA-4aa6-9658-867844784111}
+  - name: "D9.4 Loading or Unloading Zone Use Data"
+    guid: "{849101E1-FF2E-4869-BD76-F3C8C58B68D8}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "5.0"
+    order: 58
+    tags:
+      "DataStore_SecurityLevel": "None"
+      "Defined level of archive parameters": ""
+      "Maximum acceptable request times per application and/or service": "1000"
+      "Number of Users supported": "1"
+      "Other specific requirements of DataStores e.g. MTBF": ""
+      "Physical Capacity": "1 Byte"
+      "Planned Service level per application and partner": "None"
+      "Planned backup and mirroring procedures": ""
+      "Planned data storage duration over time": "1 Year"
+      "Planned numbers of applications on the data storage or processing unit": ""
+      "Planned numbers of partners or system modules operationg in parallel in shared data storages": ""
+      "auditing": ""
+      "capacity": ""
+      "categoryValue": ""
+      "dataState": ""
+      "dataStoreRef": ""
+      "documentation": ""
+      "isUnlimited": "false"
+      "itemKind": "Information"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "transaction numbers over time": "10"
+    note: |
+      This Data Store shall be used within the Provide Support for Cooperative Systems Functional Area.  It shall contain information objects that provide details about the use and characteristics of loading and unloading zones plus holding zones that are used by Freight Vehicles to pick-up and deliver goods.  The information objects for each zone shall be in two forms: static data and dynamic data
+      
+      The information object in the Store containing static data about each zone shall contain the following data objects:
+      (1) Zone location (characters and/or numbers, e.g. GPS/Galileo data),
+      (2) Zone size (number),
+      (3) Type of goods that the zone can accommodate (characters),
+      (4) Restrictions on use of the zone (characters),
+      (5) Type(s) of Vehicle that the zone will accommodate (characters),
+      (6) Number(s) of Vehicles of different types that can be accommodated (number),
+      (7) Road network in and around zone (data for a digital roadmap using a standard format, e.g. GDF),
+      (8) Zone entry point (characters and/or numbers, e.g. GPS/Galileo data),
+      (9) Zone exit point (characters and/or numbers, e.g. GPS/Galileo data).
+      
+      This information object shall be repeated for each zone of each type.
+      
+      The information object in the Store containing dynamic data about each zone shall contain the following data objects:
+      (10) Date when zone is booked (date string),
+      (11) Time when zone is booked (numbers defining hours, minutes and seconds),
+      (12) Number of Vehicles that have booked a place for date/time (number),
+      (13) The ID of each Vehicle for each booking (number),
+      (14) Expected duration of stay for each booked Vehicle (numbers defining hours, minutes and seconds),
+      (15) The ID of the Vehicle currently occupying the zone (number).
+      
+      It shall be possible for the information objects containing dynamic data to be repeated for each booking of each type of zone and to be updated as soon as the data changes.
+    links:
+      - "Association «IN» → pscs_read_zone_use_data"  # {DF7C7B83-0255-4613-B3A7-3B4412EB8E8B} → {C7901726-4076-4dd8-9A60-EAE0220C2EEF}

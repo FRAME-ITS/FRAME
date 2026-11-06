@@ -1,0 +1,95 @@
+package: "Truckparking Reference Architecture (SSTP)"
+elements:
+  - name: ""
+    guid: "{1320AAC6-8CEF-4cf4-980C-9DFB256ED4E7}"
+    type: "Text"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Welcome to the Landing Page of National Body Reference Architecture.
+      
+      The Architecture will show common functionalities and processes of National Bodies in Europe.
+      
+      The Architecture will be developed within the ongoing project NAPCORE (https://napcore.eu)
+      
+      If issues, problems or mistakes are found, please report it under:
+      https://github.com/NAPCORE/NB-Reference-Architecture
+  - name: ""
+    guid: "{39B059ED-E746-444e-8C5A-45F7F18C7198}"
+    type: "Text"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      National Access Point Reference Architecture by NAPCORE
+  - name: ""
+    guid: "{3B17732D-2526-4b0e-9C21-59432C32DEFF}"
+    type: "Text"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Comming Soon 2023-2024
+  - name: ""
+    guid: "{55B49DD1-87EF-41e4-8AFE-5BC32A9FF1F6}"
+    type: "Text"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      TBD: Introductory text to NAP
+  - name: ""
+    guid: "{5BE9E29A-DB60-489f-B11D-D89BA7D17A1B}"
+    type: "Text"
+    stereotype: "NavigationCell"
+    alias: "00 Truck Parking Motivational Layer"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "$diagram://{12E92530-6538-403b-97E5-4FF162F9EB62}"
+    guid: "{FE8F8572-0AAD-459b-A6BE-2E4CEC76238D}"
+    type: "Text"
+    stereotype: "NavigationCell"
+    alias: "03 Truck Parking Organisational View"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "$diagram://{32EB15A7-8B4A-4ee8-8DE2-16F8A867EC4C}"
+    guid: "{3EE0E3AE-FE45-43f2-8C37-E02DCBB763CF}"
+    type: "Text"
+    stereotype: "NavigationCell"
+    alias: "04 Truck Parking Physical View"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "$diagram://{512E71B8-3A6B-4400-83EE-CA4CB2370984}"
+    guid: "{59F87D86-6F51-414e-8920-AFB0B2136C0C}"
+    type: "Text"
+    stereotype: "NavigationCell"
+    alias: "01 Truck Parking User Needs"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "$diagram://{DDA7865E-DB62-4b89-A4D7-1B0E819F7D7E}"
+    guid: "{020975C8-A1A5-42d0-BBFC-0451C840A7DE}"
+    type: "Text"
+    stereotype: "NavigationCell"
+    alias: "02 Truck Parking Functional View"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "$diagram://{E306C7C4-399B-48c8-9871-5BD256E73912}"
+    guid: "{2EB56E98-FF2D-4b3d-AF7A-4AC4717A39BD}"
+    type: "Text"
+    stereotype: "NavigationCell"
+    alias: "05 Truck Parking Communication View"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""

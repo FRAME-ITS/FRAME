@@ -1,0 +1,107 @@
+package: "C-ITS Reference Architecture/Supplements/Connection Diagrams/C-ITS Information Objects"
+guid: "{B4460B17-90FA-4d76-AEE8-0BEF5FDF0E14}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "IVIM Message"
+    guid: "{4F905CB5-1B96-45c4-887F-4637B88658E6}"
+    type: "Object"
+    stereotype: "FRAME_Information_Object"
+    keywords: "IVI Message"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Size": "1 Byte"
+      "Source": "Standard"
+      "Structure": "Data table"
+      "Subtype": "List of formats"
+      "Type": "Data"
+      "Validity period": "insert period e.g. 1.1.2000"
+      "auditing": ""
+      "categoryValue": ""
+      "dataInOut": "None"
+      "dataObjectRef": ""
+      "dataState": ""
+      "documentation": ""
+      "isCollection": "false"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "structure": ""
+      "structureRef": ""
+    note: |
+      IVI Message as defined in the following standards:
+      
+      - ETSI TS 103 301 ITS Vehicular Communications: Basic Set of Applications; Facilities layer protocols and communication requirements for infrastructure services, v1.2.1 (2018-8)
+      - CEN ISO/TS 19321, Intelligent transport systems — Cooperative ITS — Dictionary of in-vehicle information (IVI) data structures, April 2015
+    links:
+      - "Association «adheres to» → CEN ISO/TS 19321"  # {57E77A9C-2EEF-40db-A982-F17C95C13027} → {C2E2BDDB-2B9A-4970-9592-87E5481E4DC5}
+      - "Association «adheres to» → ETSI TS 103 301 ITS Vehicular Communications"  # {B32ABC9C-A96E-4fd6-87DA-251A94E3A79B} → {DA3A17C3-009E-46a8-ADDE-3F4B140B2906}
+      - "Association «adheres to» → ISO TS 14823"  # {9157009C-F2C9-47ad-8819-A62B56AD1BE1} → {8F3B5E94-70E4-4850-8DB9-B9BE9E9CF276}
+      - "Association «contains» → Application Container (General IVI Container)"  # {41B54825-C70D-468f-B1DE-D579162F0CBF} → {02BFC7AE-024A-4347-AA59-219020EA9C5A}
+      - "Association «contains» → IVI Management Container"  # {3A316E8C-FCFE-4349-ADCB-78CA957B61D1} → {BA46FAE1-39A1-417a-83DD-1829CC2CB34C}
+      - "Association «contains» → Location Container"  # {2B115A89-C058-40b6-B5BB-741C5A68F53C} → {D76B64C8-A68E-4ff1-B081-12CF567E7B8A}
+  - name: "SPATEM/ MAPEM Message"
+    guid: "{052B1070-5A26-4822-985A-58B5A95871EE}"
+    type: "Object"
+    stereotype: "FRAME_Information_Object"
+    keywords: "SPATeM/MAPEM"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Size": "1 Byte"
+      "Source": "Standard"
+      "Structure": "Data table"
+      "Subtype": "List of formats"
+      "Type": "Data"
+      "Validity period": "insert period e.g. 1.1.2000"
+      "auditing": ""
+      "categoryValue": ""
+      "dataInOut": "None"
+      "dataObjectRef": ""
+      "dataState": ""
+      "documentation": ""
+      "isCollection": "false"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "structure": ""
+      "structureRef": ""
+    note: |
+      The SPATEM/MAPEM message formats are linked between them and are often defined for intersections.
+      The MAPEM message is the result of the Road and Lane Topology (RLT) infrastructure service which manages the generation, transmission and reception of a digital topological map. This service along with its operational parameters is defined in ETSI TS 103 301 which refers to the SAEJ2735 data dictionary.
+      The MAPEM message structure consists of an ITS PDU header and MapData container at the top level, and defines mainly the static elements of a part of the road infrastructure, the SPATEM message defines the dynamic ones and has a hierarchical structure in five layers.
+    links:
+      - "Association «adheres to» → ETSI TS 103 301"  # {B6C2614A-CC94-4987-BDF5-82E22102D382} → {FE0A2EEF-73F9-4035-9267-EF083CDA9798}
+      - "Association «adheres to» → SAEJ2735 data dictionary"  # {B8532EE2-A1D1-4265-BEF9-2060FD80EE66} → {900C8D26-22E6-48a8-8779-F1E8342ACB53}
+      - "Association «contains» → ITS PDU Header"  # {21D51B33-E2B0-4c51-A237-6E3830758F2B} → {A9535EC6-0E64-4da1-90A4-1DD40C4347E2}
+      - "Association «contains» → SPAT Intersection Contents"  # {7336B811-50B4-4e55-BF28-21AA05F59617} → {98CFAFD3-D029-4191-B584-A258AC09FB12}
+  - name: "Signal States"
+    guid: "{5479FC48-0ED7-4189-AE15-F26D6D91757D}"
+    type: "Object"
+    stereotype: "FRAME_Information_Object"
+    keywords: "SPAT"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Size": "1 Byte"
+      "Source": "Standard"
+      "Structure": "Data table"
+      "Subtype": "List of formats"
+      "Type": "Data"
+      "Validity period": "insert period e.g. 1.1.2000"
+      "auditing": ""
+      "categoryValue": ""
+      "dataInOut": "None"
+      "dataObjectRef": ""
+      "dataState": ""
+      "documentation": ""
+      "isCollection": "false"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "structure": ""
+      "structureRef": ""
+    note: |
+      Contains the signal states for the various signal groups on the intersection.

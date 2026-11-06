@@ -1,0 +1,358 @@
+package: "National Body Reference Architecture/02 NB Functional View/LL DataFlows"
+guid: "{08776BAB-E60F-47ef-9174-081FE64F6D71}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "Information"
+    guid: "{795AD710-6C2B-413d-82BC-EEAFA1766EDB}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Data and/or Service provider provide information about the organization, data and services, status of self declaration and some more.
+    links:
+      - "Association «OUT» → Provide NB support"  # {359EF9ED-ACC0-4b65-86B7-C39E888DD608} → {3577F755-7777-4b9e-AAF8-F0A7532ACE4A}
+  - name: "Information about SD obligation"
+    guid: "{7BA75E54-A1DD-420f-B358-F2B59B2985F5}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The National Body / Competent Authority should provide information on deadlines, processes and other obligations with regards to self-declarations
+    links:
+      - "Association «OUT» → Data- and/or Service provider(s)"  # {236A18F3-293F-408e-98E6-E33A71A89A6C} → {4BBDECD9-7CB6-4269-9AA6-DE1A948C9995}
+  - name: "Information about status"
+    guid: "{601B22D4-F573-4e35-A0DC-8F110BD53E3E}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The confirmation letter (template to be agreed within NAPCORE) proving, that all documents for Compliance
+      Assessment received from respondent have been checked and registered in the system should be send to respondent by e-mail.
+    links:
+      - "Association «OUT» → Data- and/or Service provider(s)"  # {EC5A8BB3-207E-4574-A069-12A5F2BDE683} → {4BBDECD9-7CB6-4269-9AA6-DE1A948C9995}
+  - name: "Provide Information"
+    guid: "{FE7E453C-D410-48c5-941E-318C5EA83B2F}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «OUT» → Member States"  # {6E8BFC7F-E4FF-40e0-B2BC-96D44671562C} → {E2280DC8-3870-4bca-B9D9-0B0F048FF2BE}
+  - name: "Provide Relevant Information"
+    guid: "{1F4A95C9-FA17-476b-9132-B64B2502702F}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «OUT» → Compliance Assessment"  # {114EFC47-6986-4b7b-ADB5-25410CA91468} → {91C7B206-E453-4ab9-B0B6-D08FDE6075D8}
+  - name: "Provide general Information"
+    guid: "{6442F7CD-399A-445c-B5F5-DDF9E7793EEF}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «OUT» → general Public"  # {6599A64F-26D5-43c6-90E0-BF8306A36487} → {DEC15748-EB48-4dce-BABA-FDB1698EC9A9}
+  - name: "Provides Self declaration form"
+    guid: "{E0D893E9-3F96-49c4-9FBF-48591C8B77A4}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «OUT» → Receive Self-Declaration"  # {79213E72-D42E-40ed-9ACB-3FD47476876B} → {F49ACE9E-16BD-430e-AAFF-5A858FC334B9}
+  - name: "Provision of Information"
+    guid: "{355BC2B3-2112-47fb-8CE0-D3677715B5D8}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «OUT» → Manage Stakeholder List"  # {FB7D1470-216E-45c6-98AE-FC77ACF17500} → {35C53FD1-0C8A-49dc-85AE-E2D72F886A54}
+  - name: "Request Data"
+    guid: "{A0A7EF5B-0F75-48ac-9FD3-C6DB2915A800}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «OUT» → Manage Stakeholder List"  # {7F8F97D3-ED3F-4b1f-A063-412780499212} → {35C53FD1-0C8A-49dc-85AE-E2D72F886A54}
+      - "Association «OUT» → Validation of Completness"  # {42E9681E-2B5A-49b6-913B-8BAF36E9ACD6} → {3D931997-C649-47cd-B6F6-261C8137D773}
+  - name: "Request Self Declaration"
+    guid: "{B7AFE5CB-2A70-48ce-9ACC-91B5CA776A2B}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «OUT» → Compliance Assessment"  # {1375CAC1-0383-43b4-B3E7-716C014E6BA3} → {91C7B206-E453-4ab9-B0B6-D08FDE6075D8}
+  - name: "Request Self Declaration"
+    guid: "{E7A8112B-9F75-4601-B108-9964DC50FED0}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «OUT» → Reporting of self declaration and compliance assessment results"  # {61C8A8A4-DFF7-480c-8322-27B18C8EAEBA} → {395DED00-A80C-418c-A674-B65B7434A6E0}
+  - name: "Request Status of SD"
+    guid: "{CB5D3CF4-3486-4ced-AFF0-E84DF5C64C48}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «OUT» → Reporting of self declaration and compliance assessment results"  # {3916ACDA-8E83-4b34-BCC0-7C90FBEC6371} → {395DED00-A80C-418c-A674-B65B7434A6E0}
+  - name: "Request for providing Information"
+    guid: "{04FE4FC1-5A04-424c-8D06-96D805AA1556}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «OUT» → Data- and/or Service provider(s)"  # {A5117D97-7762-4e1a-B643-6F5A0C9F6D18} → {4BBDECD9-7CB6-4269-9AA6-DE1A948C9995}
+  - name: "Request general Information"
+    guid: "{2D8D8356-1D5E-42b7-B9BB-BCDFD97F2C95}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «OUT» → Provide NB support"  # {B58C8B05-BF0C-4226-8F45-2476B00FFC91} → {3577F755-7777-4b9e-AAF8-F0A7532ACE4A}
+  - name: "Request relevant SD information"
+    guid: "{05F09947-F13A-4ae9-B944-9672D5872516}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «OUT» → Management of Self Declaration"  # {DE78990C-9131-4662-92A3-49EFA2BCB7F8} → {12F2142B-1179-455b-9F44-335FE9CBB4D2}
+  - name: "Request stakeholder"
+    guid: "{71D1CB99-EEFE-42b2-9884-A46F29131B61}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «OUT» → Reporting of self declaration and compliance assessment results"  # {EF3A5232-DB58-4c44-AD75-899273D24691} → {395DED00-A80C-418c-A674-B65B7434A6E0}
+  - name: "SD Details"
+    guid: "{6F33D268-087B-4626-946B-36BE3CE60116}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «OUT» → Validation of Completness"  # {DBA63A8B-BAD0-4791-8622-62845E58BB78} → {3D931997-C649-47cd-B6F6-261C8137D773}
+  - name: "Send Report"
+    guid: "{616DB36E-4251-4b12-BD54-58105CB20637}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Information about received, reviewed, performed random inspections and actions taken for improvement of data quality.
+    links:
+      - "Association «OUT» → Member States"  # {05D00B1E-B8DD-4008-A8CD-9196C30EED70} → {E2280DC8-3870-4bca-B9D9-0B0F048FF2BE}
+  - name: "Status Details SD"
+    guid: "{89A547AC-1519-4a98-8C0B-35A678FA7586}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «OUT» → Compliance Assessment"  # {D651B833-41A7-40c5-8E4B-8B93F4935272} → {91C7B206-E453-4ab9-B0B6-D08FDE6075D8}
+  - name: "Status Update"
+    guid: "{28B4DEC2-D621-4b4e-AF18-B8E34B28E0A2}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «OUT» → Self Declaration Journal"  # {8DE8E689-5FC7-4726-9307-6855FEED8A40} → {4EA8D521-CA96-4ea3-90A3-D303CC0AACA8}
+  - name: "Status of CA"
+    guid: "{863DE7F6-BB4C-4bf5-A4F1-2351D0273C65}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «OUT» → Data- and/or Service provider(s)"  # {05EDCB6D-3A69-42a6-8FAC-F25F87DC9A6A} → {4BBDECD9-7CB6-4269-9AA6-DE1A948C9995}
+  - name: "Status of SD"
+    guid: "{17E98F9A-7E4B-4e4c-9D4E-61F335A5A284}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «OUT» → Management of Self Declaration"  # {403D41E3-1738-49b0-8D8C-9E66C894A222} → {12F2142B-1179-455b-9F44-335FE9CBB4D2}
+  - name: "Status of request"
+    guid: "{4A25B12D-81DB-4e1a-9F7A-61545373A048}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «OUT» → Data- and/or Service provider(s)"  # {C9DE39C1-9C7E-4dcb-9A9B-404D0B563379} → {4BBDECD9-7CB6-4269-9AA6-DE1A948C9995}
+  - name: "Status of requested SD"
+    guid: "{524E697F-9C46-42bb-B366-74B380D7F591}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «OUT» → Management of Self Declaration"  # {B3072EDB-C5A8-44a2-9DE4-7DE270F0968A} → {12F2142B-1179-455b-9F44-335FE9CBB4D2}
+  - name: "Store CA result"
+    guid: "{9105DF71-6B49-44e7-B2E3-4EFC9779D6BB}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «OUT» → Results Compliance Assessment Store"  # {21A2E5E0-DCDE-42f0-B57F-440C213D232D} → {D2A4C9B8-BDD7-427c-81A6-1411C0F7B280}
+  - name: "Store Self Declaration"
+    guid: "{648DBA1F-EA00-43e6-B28A-C5E117297931}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Store initial proofed Self Declaration
+    links:
+      - "Association «OUT» → Management of Self Declaration"  # {093F4208-87E4-4e1c-81E2-72635EADDCE0} → {12F2142B-1179-455b-9F44-335FE9CBB4D2}
+  - name: "Store Stakeholder Information"
+    guid: "{D58832E7-6942-4a0f-A4C3-89BC3C2C25B5}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The National Body has to be able to receive, process and store stakeholder information from different sources.
+    links:
+      - "Association «OUT» → Stakeholder List"  # {A25E2473-4B51-413b-A684-5F47AEE16745} → {28C2E2B1-65B4-47fd-8903-FE3449030F55}
+  - name: "Store registered SD in Storage"
+    guid: "{A4486CEE-A577-4037-BEAA-01463BFDDF78}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «OUT» → Self Declarations"  # {EAA119EC-7D18-4307-97C8-24F25D80DF22} → {3D7503E7-23C4-4846-A45A-D63C8A3B4CC5}
+  - name: "Stores changed Self Declaration"
+    guid: "{AAD2DC61-766E-46de-B2D7-C07D8651F447}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «OUT» → Self Declarations"  # {15EB8EA2-93EF-461e-8266-047693F1C4D4} → {3D7503E7-23C4-4846-A45A-D63C8A3B4CC5}
+  - name: "Update Journal Information"
+    guid: "{0CDB1EF8-4915-400e-8562-F5460060C37F}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Update Self-declaration Journal by creating a new entry if the Self-declaration, Stakeholder or other related information changed.
+      Register documents received from respondents.
+      Requirements: All documents received from respondents reviewed (for completeness) and registered in the system. In case of discrepancies the request should be sent to respondents.
+    links:
+      - "Association «OUT» → Self Declaration Journal"  # {21073372-4440-4a5a-AA2A-1D7148917975} → {4EA8D521-CA96-4ea3-90A3-D303CC0AACA8}
+  - name: "Validation Results"
+    guid: "{950BA35B-7663-4e1f-91FC-5EA5A52C2934}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «OUT» → Receive Self-Declaration"  # {69C34CAA-276A-41db-9FD8-CB68D3702C00} → {F49ACE9E-16BD-430e-AAFF-5A858FC334B9}
+  - name: "general requests"
+    guid: "{867F3DE7-6F39-43bf-A1C0-A31185A4482C}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «OUT» → Manage Requests"  # {980EA42F-BB9A-4d2c-82AC-E661BEFA9D31} → {45963755-0898-4846-8129-F2724C86B673}
+  - name: "receivs relevant SD information"
+    guid: "{2EA36102-8FB4-41e5-8384-277130A0855B}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «OUT» → Manage Requests"  # {378EFCC5-381E-40ef-A63D-67E671B99348} → {45963755-0898-4846-8129-F2724C86B673}
+  - name: "status of CA"
+    guid: "{89C549FA-9351-4a9f-B8CB-02E00D983144}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «OUT» → Compliance Assessment"  # {5E0F5E97-682E-41bd-A567-1D11FB6FF795} → {91C7B206-E453-4ab9-B0B6-D08FDE6075D8}
+      - "Association «OUT» → Results Compliance Assessment Store"  # {57798E39-825F-4e49-9FF5-47FC5FAE9953} → {D2A4C9B8-BDD7-427c-81A6-1411C0F7B280}

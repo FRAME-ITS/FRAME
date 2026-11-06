@@ -1,0 +1,41 @@
+package: "National Body Reference Architecture/02 NB Functional View/Information Objects"
+guid: "{879D67AB-7CEB-4962-8331-7D046F2EB2B4}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "Self Declaration status"
+    guid: "{E20F665C-1292-4b0b-98FA-C4339CC86620}"
+    type: "Object"
+    stereotype: "FRAME_Information_Object"
+    keywords: "Self Declaration, National Body Process, Journal, Status"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Size": "1 Byte"
+      "Source": "Standard"
+      "Structure": "Data table"
+      "Subtype": "List of formats"
+      "Type": "Data"
+      "Validity period": "insert period e.g. 1.1.2000"
+      "auditing": ""
+      "categoryValue": ""
+      "dataInOut": "None"
+      "dataObjectRef": ""
+      "dataState": ""
+      "documentation": ""
+      "isCollection": "false"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "structure": ""
+      "structureRef": ""
+    note: |
+      The Self Declaration status should include following information:
+      -) UID (unique identifier for self declaration)
+      -) Version number
+      -) Stakeholder name
+      -) date of status change
+      -) information about what changed
+    links:
+      - "Association «stored in» → Self Declaration Journal"  # {C57E2353-78D4-478c-8DAB-B10DC43FB2B1} → {4EA8D521-CA96-4ea3-90A3-D303CC0AACA8}

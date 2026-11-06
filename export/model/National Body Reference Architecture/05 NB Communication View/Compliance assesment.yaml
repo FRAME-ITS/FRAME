@@ -1,0 +1,38 @@
+package: "National Body Reference Architecture/05 NB Communication View/Compliance assesment"
+guid: "{C4D62817-B564-4fbd-BD40-E5AAAABB07FC}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: ""
+    guid: "{32522428-36C3-4e99-971C-5375A3EADE17}"
+    type: "Note"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      https://www.finlex.fi/fi/laki/kaannokset/2003/en20030434_20150893.pdf
+  - name: ""
+    guid: "{471B1D1F-484D-440f-8DE4-7B49770779F3}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: ""
+    guid: "{D6E0F971-086C-424b-ACEA-88D9656DD99A}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "NB indicates non-compliance"
+    guid: "{1235A3AD-9772-47a0-A8E7-96CD366C65C9}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Dependency → Identify non-compliance to individual articles of"  # {78E7A331-F047-43a4-879D-2F32E3F36069} → {0B142C7E-8FB3-4b74-B4FA-E7FE2D238380}

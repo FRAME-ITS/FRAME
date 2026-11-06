@@ -1,0 +1,51 @@
+package: "C-ITS Reference Architecture/00 C-ITS Motivation Layer/Stakeholder EU Citizen"
+guid: "{E4636BA1-D8BB-41c6-80AC-A98EB361DAAC}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "C-ITS - Business expectations of actors involved in the C-ITS-Service"
+    guid: "{77E28A5F-3DEC-4ecb-8FC1-648789DD0CB8}"
+    type: "Artifact"
+    stereotype: "FRAME_Business_Expectation"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Road operators and public authorities
+      
+      	- reach out to travellers fastest with high quality and targeted traffic information to enhance road safety
+      	- Reduce the speed variations in traffic flows and the emissions
+      	- inform all travellers on the network about traffic events ahead on their way, to enable adaptation of the driving behaviour and hereby reduce the number of traffic interruptions
+      	- enhance driving time reliability and comfort for travellers
+      
+      
+      Vehicle manufacturers
+      
+      	- Provide drivers the best traffic information available in a customer friendly way
+      	- Enhance road safety by warning directly V2V of imminent and nearby events, with impact on safety
+      
+      Reduce energy consumption and driving emissions by enhancing attentive driving
+    links:
+      - "Association → C-ITS Enhancing road safety"  # {B67BFE0A-79D4-404e-B6AC-D2C72B116E53} → {6659C076-2560-445f-862A-8829F47486E0}
+  - name: "EU Citizen in one of the member states"
+    guid: "{E8695FF6-1351-4508-97CF-980CF0604B41}"
+    type: "Actor"
+    stereotype: "FRAME_Stakeholder"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      European citizen travelling in vehicles or as mobile traveller in various transport environments and modes.
+    links:
+      - "Association «fulfilled by» → Fullfillment of C-ITS related standards"  # {A0F0DD25-F960-462f-AC73-4F04A6087827} → {AFF20E0F-FAF3-40e4-9BEB-CE9311A11A56}
+      - "Association «has» → Get relevant traffic information fast and efficiently"  # {B3CF41BF-49B2-4500-BFE7-405CD213FA0F} → {33E20BA8-CBE2-448f-ADCE-8540FE27BF44}
+  - name: "Get relevant traffic information fast and efficiently"
+    guid: "{33E20BA8-CBE2-448f-ADCE-8540FE27BF44}"
+    type: "Artifact"
+    stereotype: "FRAME_Desired_Architecture_Goals"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      All traffic information for my ways ahead should be provided fast and efficiently in order to prevent road accidents and crashes on all modes of transport.

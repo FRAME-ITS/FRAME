@@ -1,0 +1,64 @@
+package: "C-ITS Reference Architecture/01 C-ITS User Needs/User needs topic 3 - CAM Message"
+guid: "{E4AA33DA-79BB-4e2a-ACA4-0EEA1C8EFB7A}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "C-ITS_Service_Process based on CAM"
+    guid: "{C251FAD1-FA0B-4d9e-9FCF-7005B804E1AF}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      C-ITS Services based on CAM basic message standards, and specifications of roadside communication profile and vehicle BSP - Basic System Profile.
+    links:
+      - "Association «adheres to» → FRAME_Specification C-Roads Basic Interface"  # {489508A1-140D-46b3-86C9-136F70D22C76} → {C81439A3-422D-4047-A3B9-0356C7509D7A}
+      - "Association «adheres to» → FRAME_Specification C2C CC Basic System Profile"  # {DECB4E95-0FB0-42a0-BC9C-3726144729E8} → {3DACFB0E-CADC-4ebc-9731-A007BD2AAC46}
+      - "Association «served by» → F9.1.1"  # {D1465EFB-AAE3-4a59-B979-749A6E60AA47} → {1FC1BA14-3557-4877-ADD8-B44061E61909}
+      - "Association «served by» → F9.1.2"  # {22195067-F8D2-409c-897A-AC7FE144C6BD} → {2E6AB6C1-8DEB-4cab-BD3C-1DAD8AA295E1}
+      - "Association «served by» → F9.1.3"  # {7B0E4E5F-316F-493b-BC5E-9F6837BF5288} → {090C96DD-B4DE-4899-B67D-31FAD1B7A1AF}
+      - "Association «served by» → F9.1.4"  # {B105A85C-13BB-43f2-A8C5-B77B3FD01854} → {A58CA23B-0C02-4b84-A860-003644D94BB7}
+      - "Association «served by» → F9.1.5"  # {86B68F13-3FF4-48f8-B4E6-943FEE3D1D09} → {FA6D29C1-B909-4289-9E4C-9CA9933663B7}
+      - "Association «served by» → F9.1.6"  # {A566BB1C-BEEB-4602-AB70-76DFDB693760} → {9C8A68C2-444C-4e37-B712-3FA08A447528}
+      - "Association «served by» → F9.1.7"  # {F4F1CDD5-F1B8-4e51-827C-4059BF4C8F78} → {840CD5EB-B0C5-4fb8-AF12-22818D228E5F}
+  - name: "FRAME_User_Need_Topic3 CAM Messages"
+    guid: "{C56A9710-EDCF-4768-8784-867E07406042}"
+    type: "Requirement"
+    stereotype: "FRAME_User_Need_Topic"
+    keywords: "CAM"
+    status: "Proposed"
+    version: "1.0"
+    order: 13
+    note: |
+      User Need Topics are defined as follows:
+      1 - C-ITS SYSTEM related
+      2 - DENM related
+      3 - CAM related
+      4 - IVIM related
+      5 - SPAT/MAP related
+      6 -for future messages to be defined
+    links:
+      - "Abstraction → 11.1.3.1"  # {A8602E6C-BD5B-4a45-B96A-7F65E6B7EFB4} → {F124163A-04C8-4b17-A9C1-05025EAD440C}
+      - "Abstraction → 11.1.3.2"  # {5E0636BE-2E80-4659-9F12-28E6C56C5F27} → {327661E8-A79C-4b23-A437-841A9A93FEFF}
+  - name: "11.1.3.1"
+    guid: "{F124163A-04C8-4b17-A9C1-05025EAD440C}"
+    type: "Requirement"
+    stereotype: "FRAME_User_Need"
+    keywords: "CAM"
+    status: "Proposed"
+    version: "1.0"
+    order: 14
+    note: |
+      The System shall process vehicle data from CAM messages in regular and event based operations.
+  - name: "11.1.3.2"
+    guid: "{327661E8-A79C-4b23-A437-841A9A93FEFF}"
+    type: "Requirement"
+    stereotype: "FRAME_User_Need"
+    keywords: "CAM"
+    status: "Proposed"
+    version: "1.0"
+    order: 59
+    note: |
+      Vehicles shall be able to lower the Rx transmission power if passing a tolling area on a motorway.

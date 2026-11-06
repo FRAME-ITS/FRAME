@@ -1,0 +1,88 @@
+package: "C-ITS Reference Architecture/Supplements/Connection Diagrams/Standards and specifications"
+guid: "{D720EC74-29FF-4fde-89F5-10CEAD585E15}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "C-ITS Communication profile"
+    guid: "{44529316-3EEE-442e-BF73-224DC52C9BDC}"
+    type: "DeploymentSpecification"
+    stereotype: "FRAME_Specification"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      insert link to C-Roads Release . . or to standards and specifications in supplements
+  - name: "CEN ISO/TS 19321"
+    guid: "{C2E2BDDB-2B9A-4970-9592-87E5481E4DC5}"
+    type: "DeploymentSpecification"
+    stereotype: "FRAME_Specification"
+    keywords: "IVI Message"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      - CEN ISO/TS 19321, Intelligent transport systems — Cooperative ITS — Dictionary of in-vehicle information (IVI) data structures
+  - name: "ETSI TS 102 637-2"
+    guid: "{DB52E30C-8C88-4a2b-BA36-B15D9FB02C2E}"
+    type: "DeploymentSpecification"
+    stereotype: "FRAME_Specification"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The basic standards for the communication in the C-ITS domain are:
+      - ETSI EN 302 665 ITS Communication Architecture, v1.1.1 (2010-09)
+      - ETSI EN 302 637-2 Intelligent Transport Systems (ITS); Vehicular Communications; Basic Set of Applications; Part 2: Specification of Cooperative Awareness Basic Service, V1.4.1 (2019-4)
+  - name: "ETSI TS 103 301"
+    guid: "{FE0A2EEF-73F9-4035-9267-EF083CDA9798}"
+    type: "DeploymentSpecification"
+    stereotype: "FRAME_Specification"
+    keywords: "SPAT/MAP"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The SPATEM/MAPEM message formats are linked between them and are often defined for intersections.
+      
+      The MAPEM message is the result of the Road and Lane Topology (RLT) infrastructure service which manages the generation, transmission and reception of a digital topological map. This service along with its operational parameters is defined in ETSI TS 103 301 which refers to the SAEJ2735 data dictionary.
+  - name: "ETSI TS 103 301 ITS Vehicular Communications"
+    guid: "{DA3A17C3-009E-46a8-ADDE-3F4B140B2906}"
+    type: "DeploymentSpecification"
+    stereotype: "FRAME_Specification"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      ETSI TS 103 301 ITS Vehicular Communications: Basic Set of Applications
+  - name: "ISO TS 14823"
+    guid: "{8F3B5E94-70E4-4850-8DB9-B9BE9E9CF276}"
+    type: "DeploymentSpecification"
+    stereotype: "FRAME_Specification"
+    keywords: "IVI Message"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      ISO TS 14823, - Traffic and travel information — Messages via media independent stationary dissemination systems —Graphic data dictionary for pre-trip and in-trip information dissemination systems
+  - name: "ITS Station reference archtecture, ETSI EN 302 665, V1.1.1"
+    guid: "{9A07E1AC-EB22-4c4a-BFD2-1ACB61E752FF}"
+    type: "DeploymentSpecification"
+    stereotype: "FRAME_Specification"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      - ETSI EN 302 665 ITS Communication Architecture, v1.1.1 (2010-09)
+      
+      4.4 ITS station reference architecture
+  - name: "SAEJ2735 data dictionary"
+    guid: "{900C8D26-22E6-48a8-8779-F1E8342ACB53}"
+    type: "DeploymentSpecification"
+    stereotype: "FRAME_Specification"
+    keywords: "SPAT"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Defines the content of the SPAT message

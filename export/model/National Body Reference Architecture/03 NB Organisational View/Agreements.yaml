@@ -1,0 +1,53 @@
+package: "National Body Reference Architecture/03 NB Organisational View/Agreements"
+guid: "{7548A7CA-47C0-40e6-8EA8-DE18501B7B12}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "Delegated Reguation"
+    guid: "{18BED502-4259-4737-9DD1-6B52EBF5BA0F}"
+    type: "Collaboration"
+    stereotype: "FRAME_Agreement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The delegated regulation applicable to data sets or service publications may consist of one or more initial legal acts published in the Official Journal of the European Union. If the delegated regulation consists of more than one legal act, the complete text of the delegated regulation is available as a consolidated version on the EUR-Lex website.
+    links:
+      - "Association → ITS directive 2010/EU/40"  # {752FCDDB-9D1A-450a-BAF5-3BE27D98A99F} → {838FF400-30C2-465b-A815-907FD87D213B}
+      - "Association → Template for EU reporting"  # {6D7746D1-6812-425d-8D0A-73DADA490FA8} → {931FCB16-30EE-46d1-A710-1551EE357C47}
+      - "Association «adheres to» → European Commision"  # {E4C3597D-44EA-430d-B102-91408E7CE724} → {1EC60CD8-B204-450d-9238-47BEC17A4785}
+  - name: "National Law or Contract MS - NAP"
+    guid: "{9A594D51-2CA2-4048-B043-981F4DF70F2D}"
+    type: "Collaboration"
+    stereotype: "FRAME_Agreement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «adheres to» → Member State"  # {D8CBE71D-1200-4e63-8CAB-7E36429C1D83} → {06C05CA6-B06C-4ca9-AE2B-B93C77D2BECA}
+  - name: "National Law or Contract MS - NB"
+    guid: "{0BDE8A5E-CC0E-4fa9-89DD-1DCD42A5AA0B}"
+    type: "Collaboration"
+    stereotype: "FRAME_Agreement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Member State shall designate an impartial and independent NB/CA and make sure that this NB/CA is properly authorised, according to national regulations, to receive and process self-declarations.
+    links:
+      - "Association «adheres to» → Member State"  # {9DBCE9C0-5D00-4d58-9470-C8AEC4F18E0E} → {06C05CA6-B06C-4ca9-AE2B-B93C77D2BECA}
+      - "Usage → Template for national reporting"  # {C614E568-631C-45f3-9D1B-FFBC3D7E6930} → {82FF01BC-5818-40e7-A1AC-5BA1B47FA5DF}
+  - name: "Self Declaration"
+    guid: "{EB8F2E83-0D00-458a-8C55-0EB4EC40B71C}"
+    type: "Collaboration"
+    stereotype: "FRAME_Agreement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association → Template for Self Declaration"  # {B412C04D-A75D-44ed-9F1B-E143612EDC7F} → {7D17E92C-40B9-4747-8B9D-5D52B942D18F}
+      - "Association «adheres to» → Data or Service Provider"  # {DF960F1A-E6C7-4f5f-8E28-7FEDC920B026} → {2EE5FD1F-AC4F-40b2-9C2B-52A2CE6A979C}
+      - "Association «adheres to» → National Body / Competent Authority"  # {DA7A9FC1-AB99-4413-A33A-8D890B5A523C} → {DB0FFB19-1B79-4dbd-9F2B-5B224D345C66}

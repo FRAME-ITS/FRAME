@@ -1,0 +1,99 @@
+package: "European Intelligent Transport Systems Framework Architecture"
+elements:
+  - name: ""
+    guid: "{96A5C562-B411-4e83-A19B-2015F26AF312}"
+    type: "Text"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Welcome to the European Intelligent Transport Systems Framework Architecture V5
+  - name: ""
+    guid: "{F0BBF854-2226-4f27-8614-E3E8B5477B33}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "C-ITS Reference Architecture : 00_C-ITS Landing Page"
+    guid: "{42B50F1C-A0BF-494c-BD3D-FA15CA5D549B}"
+    type: "Text"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      C-ITS Reference Architecture : 00_C-ITS Landing Page
+  - name: "FRAME_Metamodel : FRAME_Metamodel"
+    guid: "{F2B56DE6-46AC-4f11-9590-147AA7DD6AFB}"
+    type: "Text"
+    alias: "FRAME Meta Model"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      FRAME_Metamodel : FRAME_Metamodel
+  - name: "Frame Repository : Frame Repository"
+    guid: "{925442EF-8160-454c-8736-DDA7B53B419D}"
+    type: "Text"
+    alias: "FRAME Repository"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Frame Repository : Frame Repository
+  - name: "NAP Reference Architecture : 00 NAP Landing Page"
+    guid: "{138934BF-9939-4ad3-94AB-F9D166629FF9}"
+    type: "Text"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      NAP Reference Architecture : 00 NAP Landing Page
+  - name: "Truckparking Reference Architecture : 00_Truckparking Landing Page"
+    guid: "{35D00697-D6C4-4223-AA92-4047D1F1CEC1}"
+    type: "Text"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Truckparking Reference Architecture : 00_Truckparking Landing Page
+  - name: "User Architecture Template :National Body Landing Page"
+    guid: "{A1E87C79-C698-4922-AE2E-CDB567CBAE95}"
+    type: "Text"
+    alias: "Create Your Own Architecture"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      User Architecture Template :National Body Landing Page
+  - name: "eCall Reference Architecture : 00 eCall Landing Page"
+    guid: "{D43144A5-2BDF-4d61-8B1B-9E56D86D57DC}"
+    type: "Text"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      eCall Reference Architecture : 00 eCall Landing Page
+  - name: "https://ec.europa.eu/info/index_en"
+    guid: "{E83D68CE-DF10-4612-B117-D7D29BFB81FF}"
+    type: "Text"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "https://frame-online.eu/frame-architecture/glossary-acronyms"
+    guid: "{9CA5AD67-CDE7-4b53-BB7F-6D66062A7649}"
+    type: "Text"
+    alias: "Glossary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "https://frame-online.eu/frame-architecture/the-selection-tool"
+    guid: "{3A4668AC-D0CE-431c-B99F-E5067FEC328C}"
+    type: "Text"
+    alias: "Online Documentation"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""

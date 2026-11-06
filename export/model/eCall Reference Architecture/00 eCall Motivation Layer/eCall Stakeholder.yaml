@@ -1,0 +1,53 @@
+package: "eCall Reference Architecture/00 eCall Motivation Layer/eCall Stakeholder"
+guid: "{EE8D468E-23BC-4cff-AF76-60E89CE99515}"
+alias: ""
+version: "1.0"
+note: |
+  Short description (Characteristic features of the ITS service category or ITS service) 	If a vehicle (with an eCall unit on-board) has an accident, in vehicle sensors generate an automated eCall (with the so called MSD - Minimum Set of Data for vehicles) at the EU wide number 112. This call is directed with highest priorities through all Mobile Telecom Networks to the nearest PSAP - Public Service Answering Point and a fast intervention of medical services to the vehicle accident is organised.
+  
+  Field of application (Motorway, federal highways, urban environment....)
+  	All road transport networks.
+  
+  Vision (long-term objective pursued with the ITS service category or ITS service) 	Serve travellers which have a road accident in the best/ fastest way, and keep traffic disturbances and queues resulting from accidents at a minimum possible.
+  
+  Qualitative ITS Goals (qualitative ITS benefit or qualitative ITS effect ) 	Reduce the time to reach the travellers involved in an accident. (Some countries and cities have specific public service targets with thiss as KPI e.g. less than 20 minutes on average to reach persons involved in emergencies after a call.
+  
+  Qualitative assessment of the barriers and reservations to implementation (Qualitative assessment of the complexity of the implementation (technological, functional, organizational, regulatory), the implementation period and rough estimate of the implementation costs)
+  
+  The main barriers are organisational, technology and functions of the service are well defined for different vehicle types and mobile networks.
+  
+  eCall service in Europe to all customers without restrictions of SIM cards, contracts, vehicle ownership etc.. is a complex organisational matter. This includes:
+  
+  - Vehicle units that generate the emergency call (including the complete MSD) to one single number in Europe 112 in all countries
+  
+  - Mobile Network Operators that attribute the highest priority to eCall data (MSD set) routing in their networks
+  
+  - PSAP - Public Service Answering Points that are certified according to an agreed process scheme and based on the MSD decoding attribute the eCall to the nearest medical service (and possibly the police) at hand and dispatch it accordingly.
+  
+  Regulatory barriers have been solved and the EU MS agreed to mandatory introduction of eCall service in all new vehicles by march 2018 and in all MS by october 2017. Telecom Network regulations w.r.t emergency services are in place.
+  
+  Functional and technological aspects (short description of functionality and technology of the implementation)
+  
+  Funtions of the emergency call - eCall:
+  - Based on sensor inputs the vehicle unit generates the vehicle specific MSD and sends of the Ecall to a single EU wide number
+  - The Mobile Network operator of the "accident area" recognises the eCall and routes the call to the PSAP with the highest data priority
+  - The PSAP handles the eCall, analyses the vehicle MSD, including the exact location of the vehicle and driving direction, etc.. and dispatches the emergency service to the accident location.
+  - emergency services reach the accident location and can support all passengers involved efficiently.
+  
+  Service constraints and limitations (short description of possible limitations or restrictions for the defined ITS service)
+  - Positioning accuracy of the accident location can be limited, and therefore the MSD not precise
+  - Mobile network coverage can be restricted or limited, depending from the accident location
+elements:
+  - name: "European Commision"
+    guid: "{9BEA7529-D694-46c4-AAD8-35089BA77C3C}"
+    type: "Actor"
+    stereotype: "Stakeholder"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The European Parliament published the regulation (EU) 2015/758 concerning type-approval requirements for the deployment of the eCall in-vehicle system based on the 112 service and amending Directive 2007/46/EC on 29th April 2015.
+    links:
+      - "Abstraction → Reduce the number of fatalities"  # {721A6D7F-EA49-46c1-B012-8E6F21D24D96} → {34F630AB-610D-40f1-8E8C-723F230EC060}
+      - "Abstraction → Savings for Society"  # {09DBD58F-BC86-4b95-9900-B93E5FFDF03A} → {858ED6C3-0AA8-4715-B889-F4CC54246226}
+      - "Association «defines» → eCall Vision"  # {739A7955-F25B-4b15-9BD4-8E0DBD1D79BF} → {7EF14ABB-8BB1-457c-AA34-2C2E87E4192A}

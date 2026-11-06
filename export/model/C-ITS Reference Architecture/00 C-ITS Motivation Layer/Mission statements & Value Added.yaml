@@ -1,0 +1,436 @@
+package: "C-ITS Reference Architecture/00 C-ITS Motivation Layer/Mission statements & Value Added"
+guid: "{47DED474-E6F0-4937-92D5-D5E10AC24FDA}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "C-ITS Attentive Driving"
+    guid: "{B0F93D95-F910-465c-A337-AEACA06E8DDC}"
+    type: "Class"
+    stereotype: "FRAME_Mission_Statement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The system shall have the primary expected impact of more attentive driving while approaching and passing a work zone or road operator vehicles in operation.
+    links:
+      - "Association «defines» → C-ITS_Services day one"  # {AFED5166-085A-454e-ADEA-75C9AA4C9D67} → {76D644F1-2C02-44c8-8E75-93CBE23BBEC2}
+  - name: "C-ITS Attentive driving"
+    guid: "{EFE036AD-9B4E-4404-B3ED-D3AA2747C818}"
+    type: "Class"
+    stereotype: "FRAME_Mission_Statement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The system shall have the primary expected impact of more attentive driving while approaching and passing a work zone or road operator vehicles in operation.
+    links:
+      - "Association «defines» → C-ITS_Services day one"  # {2FEF9D3C-8C51-45d0-B143-8F29D04ED2BF} → {76D644F1-2C02-44c8-8E75-93CBE23BBEC2}
+  - name: "C-ITS Collisions Reduction"
+    guid: "{F5FA78FF-41BF-4d82-8B1A-1D3BC2B6D90C}"
+    type: "Class"
+    stereotype: "FRAME_Mission_Statement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      For DENM based use cases of RWW the system shall reduce the number of collisions with road vehicle safety-objects and road operator vehicles near road works.
+    links:
+      - "Association «defines» → C-ITS_Services day one"  # {9CCDC226-785D-42ad-8F09-1ED02B78C3B6} → {76D644F1-2C02-44c8-8E75-93CBE23BBEC2}
+  - name: "C-ITS Dangerous Events Reduction"
+    guid: "{2127AD98-0D2B-4fc7-B007-21E77EC56EA6}"
+    type: "Class"
+    stereotype: "FRAME_Mission_Statement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The system shall support improved traffic management due to less traffic relevant events on the road
+    links:
+      - "Association «defines» → C-ITS_Services day one"  # {1F028F94-5E08-45e7-ADF7-F97C6C0215B2} → {76D644F1-2C02-44c8-8E75-93CBE23BBEC2}
+  - name: "C-ITS Enhancing road safety"
+    guid: "{6659C076-2560-445f-862A-8829F47486E0}"
+    type: "Class"
+    stereotype: "FRAME_Mission_Statement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The C-ITS  system shall prevent that this may lead to unsafe situations and sometimes even accidents, which involve both road users and workers at road sites.
+    links:
+      - "Association «defines» → C-ITS_Services day one"  # {6032A48F-1AE1-42ca-90C8-B07B4278F0A6} → {76D644F1-2C02-44c8-8E75-93CBE23BBEC2}
+      - "Association «defines» → eCall_ITS_Service"  # {6680569B-410B-4bf8-BDD4-D00D152E7B09} → {654604A4-BE3A-422d-8705-DA008C3D7942}
+  - name: "C-ITS Network Traffic Management"
+    guid: "{DC29BA43-C704-4d2d-B298-66529C5E6B87}"
+    type: "Class"
+    stereotype: "FRAME_Mission_Statement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      For IVI based use cases the system shall permit greater traffic management control (e.g., regulation, smart routing, etc.), because information can potentially be transmitted on the scale of the complete network.
+    links:
+      - "Association «defines» → C-ITS_Services day one"  # {35D98792-157A-4ae6-A4EA-C9582FAB53AC} → {76D644F1-2C02-44c8-8E75-93CBE23BBEC2}
+  - name: "C-ITS Service provider and high information quality"
+    guid: "{0886BE5F-2EBC-492a-B15F-B0B3150CADD1}"
+    type: "Artifact"
+    stereotype: "FRAME_Desired_Architecture_Goals"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Use C-ITS messages to inform customers on the networks in advance of dangerous traffic situations and provide high quality information service.
+  - name: "C-ITS adaptation of drving behaviour"
+    guid: "{7AE49E04-5050-4fa5-A7A8-D246E54E5BB2}"
+    type: "Class"
+    stereotype: "FRAME_Mission_Statement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The system shall enable that the road user adapt their driving behaviour compliant to the applicable driving regulations, warnings, information, advice or guidance provided.
+    links:
+      - "Association «defines» → C-ITS_Services day one"  # {4C5CDF8D-37E9-4633-AC1B-26B5EF2DD123} → {76D644F1-2C02-44c8-8E75-93CBE23BBEC2}
+  - name: "C-ITS and impact on driving behaviour"
+    guid: "{55DD7B71-CA48-40d7-AD3A-A9D65A7116FC}"
+    type: "Class"
+    stereotype: "FRAME_Mission_Statement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The system shall enhance the desired behaviour: Increased vigilance, Adaptation of the speed, Change of lanes (if needed)
+    links:
+      - "Association «defines» → C-ITS_Services day one"  # {DB267382-809F-4415-8629-3A4F0A4DF815} → {76D644F1-2C02-44c8-8E75-93CBE23BBEC2}
+  - name: "C-ITS authentic information to user"
+    guid: "{252E4DEB-135E-4e0b-8B77-49DABCE52A56}"
+    type: "Class"
+    stereotype: "FRAME_Mission_Statement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The System shall support that the Road operator is the origin of the information of the message. The road user approaching the area of the traffic event is the end-user of this service (receives the information/message).
+    links:
+      - "Association «defines» → C-ITS_Services day one"  # {CE6F4330-9F74-4a4f-A5C9-9527F8F7DFE3} → {76D644F1-2C02-44c8-8E75-93CBE23BBEC2}
+  - name: "C-ITS compliance targets"
+    guid: "{B2646C0E-E6B8-466b-9799-4925E3F90BAC}"
+    type: "Class"
+    stereotype: "FRAME_Mission_Statement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      For IVI based use cases the system shall provide convenience for road users, resulting in better compliance to regulatory signs speed limits, improved safety and potential environmental benefits.
+    links:
+      - "Association «defines» → C-ITS_Services day one"  # {2E99E342-4384-49d8-94EA-C29649BA3D48} → {76D644F1-2C02-44c8-8E75-93CBE23BBEC2}
+  - name: "C-ITS reduces the number of traffic deaths on the road"
+    guid: "{56820047-0844-473d-ACBE-9E3AAA85B01B}"
+    type: "Class"
+    stereotype: "Mission_Statement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      - I2V and V2V data communication based on open standards and interoperable service definitions for all stakeholders involved reduces the fatalities on European Roads and needs to be implemented now!
+    links:
+      - "Association «defines» → eCall_ITS_Service"  # {8D29F658-E8CD-4cf9-BAEE-AF7EBA1DB30B} → {654604A4-BE3A-422d-8705-DA008C3D7942}
+      - "Usage → C-ITS_Services day one"  # {F2F75E96-9475-4ffc-91A2-27C3A1E1122C} → {76D644F1-2C02-44c8-8E75-93CBE23BBEC2}
+  - name: "C-ITS signage information via IVI"
+    guid: "{8E85EAA6-666B-4438-BCB0-13D30D64BBA9}"
+    type: "Class"
+    stereotype: "FRAME_Mission_Statement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      For IVI based use cases the system shall improve traffic safety by using additional means and communication channels to inform drivers about traffic regulations and traffic advice otherwise provided via conventional signage.
+    links:
+      - "Association «defines» → C-ITS_Services day one"  # {66FFC3A7-07EF-47c5-96E6-CA5F9F0BA380} → {76D644F1-2C02-44c8-8E75-93CBE23BBEC2}
+  - name: "C-ITS_Service_Added_Communication interfaces"
+    guid: "{07879626-EECD-4c0f-8D01-6E0E6C6DC547}"
+    type: "Class"
+    stereotype: "FRAME_ITS_Service_Added_Value"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "ITS Added Value Type": ""
+    note: |
+      Personal C-ITS stations are implemented on standard communication interfaces and messages and able to be extended in the future.
+    links:
+      - "Association «defines» → C-ITS Service provider"  # {885BC552-6A51-4aa1-A935-9C6B122685DC} → {3013F2AA-5BC3-4d57-8AFA-790BBA733C21}
+      - "Association «defines» → EU Citizen in one of the member states"  # {251C1B1D-F512-4dee-B432-6AB3E510DDA1} → {E8695FF6-1351-4508-97CF-980CF0604B41}
+  - name: "C-ITS_Service_Added_Security"
+    guid: "{1FEF62FC-5779-4e44-946F-F988E52BD5D6}"
+    type: "Class"
+    stereotype: "FRAME_ITS_Service_Added_Value"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "ITS Added Value Type": ""
+    note: |
+      Public authorities enhance the security of data transmission to mobile travellers and monitor the quality of the provided information services.
+    links:
+      - "Association «defines» → EU Member states, public authorities"  # {115C7383-A6E5-4941-8079-62B589921561} → {07E0D60C-2D04-4079-A5AF-99126D64B7DF}
+  - name: "C-ITS_Service_Added_Value - compatibility with tolling"
+    guid: "{8108435A-4120-4c5d-91F9-0482B6E69237}"
+    type: "Class"
+    stereotype: "FRAME_ITS_Service_Added_Value"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "ITS Added Value Type": ""
+    note: |
+      Because C-ITS is based on standards, the compliance with existing tolling systems on European motorway networks has been demonstrated.
+    links:
+      - "Association «defines» → Motorway operators and city public authorities"  # {F6844E8A-7EFB-4859-9C11-6737652CC66B} → {2E3B8D29-8DDA-48a6-AA48-C0060AEC0A2D}
+  - name: "C-ITS_Service_Added_Value - direct V2V"
+    guid: "{C7ECEC0B-2AB2-41c1-B66E-4DCF218E4A14}"
+    type: "Class"
+    stereotype: "FRAME_ITS_Service_Added_Value"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "ITS Added Value Type": ""
+    note: |
+      Because of C-ITS based on standards and open communication profiles the direct data communication with all vehicles in the vicinity is possible.
+    links:
+      - "Association «defines» → Vehicle Manufacturors - OEM´s"  # {4F5B487C-A9D0-455b-85DF-3E2880253541} → {ED38DEDB-53CC-42c9-9686-EF58A2EB5744}
+  - name: "C-ITS_Service_Added_Value - trusted data communication"
+    guid: "{D8706C62-D2BC-49e2-A3DF-8171B3CE7E96}"
+    type: "Class"
+    stereotype: "FRAME_ITS_Service_Added_Value"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "ITS Added Value Type": ""
+    note: |
+      C-ITS stations linked to the EU common trust domain and able to communicate data V2I and V2V in a trustful C-ITS environment
+    links:
+      - "Association «defines» → Motorway operators and city public authorities"  # {F6771D5B-62E7-438e-8D10-7BE33D7999FC} → {2E3B8D29-8DDA-48a6-AA48-C0060AEC0A2D}
+      - "Association «defines» → Vehicle Manufacturors - OEM´s"  # {27C0986B-657A-4d81-8377-A8C2FDA823D4} → {ED38DEDB-53CC-42c9-9686-EF58A2EB5744}
+  - name: "C-ITS_Service_Added_Value, standard based station"
+    guid: "{A1AECE81-0004-4e6a-9B12-604BC596A41E}"
+    type: "Class"
+    stereotype: "FRAME_ITS_Service_Added_Value"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "ITS Added Value Type": ""
+    note: |
+      C-ITS stations based on standards and communication profiles and therefore able to communicate V2I and V2V with all C-ITS actors in the network.
+    links:
+      - "Association «defines» → Motorway operators and city public authorities"  # {EC8952B9-A9AB-4f83-9083-61089F74685D} → {2E3B8D29-8DDA-48a6-AA48-C0060AEC0A2D}
+      - "Association «defines» → Vehicle Manufacturors - OEM´s"  # {7EE43A65-128B-4d58-90DC-523835702104} → {ED38DEDB-53CC-42c9-9686-EF58A2EB5744}
+  - name: "C-ITS_Service_Added_communication interface"
+    guid: "{79B7A2D8-2EFA-4b87-B69C-06894BEE1DE8}"
+    type: "Class"
+    stereotype: "FRAME_ITS_Service_Added_Value"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "ITS Added Value Type": ""
+    note: |
+      Vehicle C-ITS stations implemented on standard communication interfaces and messages and able to be extended in the future.
+    links:
+      - "Association «defines» → Motorway operators and city public authorities"  # {F9CF8B7D-821B-4db5-9959-4265B24201DB} → {2E3B8D29-8DDA-48a6-AA48-C0060AEC0A2D}
+      - "Association «defines» → Vehicle Manufacturors - OEM´s"  # {9A56A5C6-9F11-4807-89E9-E5FF2E8B3326} → {ED38DEDB-53CC-42c9-9686-EF58A2EB5744}
+  - name: "C-ITS_Service_Added_road safety messages"
+    guid: "{431792B4-93EC-49e7-952B-D4BFD69D156F}"
+    type: "Class"
+    stereotype: "FRAME_ITS_Service_Added_Value"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "ITS Added Value Type": ""
+    note: |
+      Public authorities enhance the access and distribution reach of C-ITS messages to travelers and hereby support road safety goals.
+    links:
+      - "Association «defines» → EU Member states, public authorities"  # {6065AA7B-F81A-4e8a-86A0-C2E27AAD955B} → {07E0D60C-2D04-4079-A5AF-99126D64B7DF}
+  - name: "C-ITS_personal node or station - standard based"
+    guid: "{7DF7DDFD-DD79-4575-8B75-6F6FF5B63AB8}"
+    type: "Class"
+    stereotype: "FRAME_ITS_Service_Added_Value"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "ITS Added Value Type": ""
+    note: |
+      The personal C-ITS node is based on a set of standards and can therefore communicate with all C-ITS actors in a trusted and secure way.
+    links:
+      - "Association «defines» → C-ITS Service provider"  # {595126AD-DF1F-4c44-8AB8-01D12E5B6018} → {3013F2AA-5BC3-4d57-8AFA-790BBA733C21}
+      - "Association «defines» → EU Citizen in one of the member states"  # {62883B3B-4EFE-4519-B696-91C5F271DEA2} → {E8695FF6-1351-4508-97CF-980CF0604B41}
+  - name: "Centralized per region"
+    guid: "{DC995978-83B4-4e3b-AF3D-666194CA6995}"
+    type: "Class"
+    stereotype: "ITS_Service_Added_Value"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "ITS Added Value Type": ""
+    note: ""
+    links:
+      - "Association «defines» → eCall PSAP Operator"  # {7D11C368-8638-4345-BA0C-DDD0F756D858} → {6C6C2F43-F7FF-479b-A712-DD7400ABAC61}
+  - name: "EU Member state or public authority"
+    guid: "{8B01D081-A345-4955-9BC3-6D3A833F19AD}"
+    type: "Artifact"
+    stereotype: "FRAME_Desired_Architecture_Goals"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Distribute C-ITS messages fast and efficiently in order to reach as many mobile travellers as possible and enhance road safety.
+  - name: "Efficient support of passengers"
+    guid: "{5D439C04-1095-4591-9340-70676BA84D61}"
+    type: "Class"
+    stereotype: "ITS_Service_Added_Value"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "ITS Added Value Type": ""
+    note: ""
+    links:
+      - "Association «defines» → eCall In Vehicle System"  # {9F1ACE6D-1D0B-4c81-ACEF-15C91D7EAAED} → {6BD43EDE-C6BB-4b9a-9F42-5E58564320F4}
+  - name: "Enhance Road Safety Now"
+    guid: "{09567610-25BE-4c82-AE9F-B908DFB23C70}"
+    type: "Artifact"
+    stereotype: "FRAME_Desired_Architecture_Goals"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      By deploying C-ITS Services on European Roads road safety is enhanced
+  - name: "Establishing standardized emercency channel"
+    guid: "{37D10EDF-9ACD-405b-90C0-D830D738D526}"
+    type: "Class"
+    stereotype: "ITS_Service_Added_Value"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "ITS Added Value Type": ""
+    note: ""
+    links:
+      - "Association «defines» → eCall transaction"  # {C5FE924E-37A4-4bb0-850F-30E914A7F98B} → {67CE4961-3F29-4c10-8D52-C5CBEC5BC70D}
+  - name: "FRAME_ITS_Service_Added_Value2"
+    guid: "{9DD61CDC-947F-4d7f-901B-F03AE2F6C38D}"
+    type: "Class"
+    stereotype: "FRAME_ITS_Service_Added_Value"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "ITS Added Value Type": ""
+    note: ""
+  - name: "FRAME_ITS_Service_Added_Value3"
+    guid: "{BA87A2E6-4156-4cab-B44E-6E4D46F626C5}"
+    type: "Class"
+    stereotype: "FRAME_ITS_Service_Added_Value"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "ITS Added Value Type": ""
+    note: ""
+  - name: "Public authority organized"
+    guid: "{98CD9433-A02D-4e3c-8730-FB31D562CFBE}"
+    type: "Class"
+    stereotype: "ITS_Service_Added_Value"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "ITS Added Value Type": ""
+    note: ""
+    links:
+      - "Association «defines» → eCall PSAP Operator"  # {ACDF2949-27D3-419d-A290-6F0A7167C217} → {6C6C2F43-F7FF-479b-A712-DD7400ABAC61}
+  - name: "Reduce the reaction times"
+    guid: "{34780A08-AA74-49f2-9EA4-D55EF2FAE422}"
+    type: "Class"
+    stereotype: "FRAME_ITS_Service_Added_Value"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "ITS Added Value Type": ""
+    note: |
+      Reduce the reaction times of road accidents in general in Europe for fast medical response and the overall reduction of road deaths.
+  - name: "Reduction of emergency numbers"
+    guid: "{8E299A55-4F17-4cb0-9E03-D3B8EA8E066F}"
+    type: "Class"
+    stereotype: "ITS_Service_Added_Value"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "ITS Added Value Type": ""
+    note: ""
+    links:
+      - "Association «defines» → eCall transaction"  # {503CDF37-C975-4004-AEE6-753A34EDCA9D} → {67CE4961-3F29-4c10-8D52-C5CBEC5BC70D}
+  - name: "Secure and reliable data communication infrastructure for Europe"
+    guid: "{75335A61-BA26-4372-80C5-8FAF2B1B8BB1}"
+    type: "Artifact"
+    stereotype: "FRAME_Desired_Architecture_Goals"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      By the setup and start of a PKI system for all C-ITS users in one EU trust domain, data communication becomes secure and trusted by all stakeholders and users.
+      For details please see at: https://cpoc.jrc.ec.europa.eu/ECTL.html
+      This is the basis for C-ITS services now and can be extended to CCAM in the future.
+  - name: "Standardized Messsage Protocol"
+    guid: "{91693438-EDE0-4e54-967D-A108BD480768}"
+    type: "Class"
+    stereotype: "ITS_Service_Added_Value"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "ITS Added Value Type": ""
+    note: ""
+    links:
+      - "Association «defines» → eCall transaction"  # {64B4C2EC-8DE9-4da4-99B8-69C106A43DD2} → {67CE4961-3F29-4c10-8D52-C5CBEC5BC70D}
+  - name: "Use C-ITS stations to communicate fast and efficiently"
+    guid: "{952ECBC6-D7FE-4378-A24A-F7BA1B0798B1}"
+    type: "Artifact"
+    stereotype: "FRAME_Desired_Architecture_Goals"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Provide correct and complete C-ITS messages to mobile travellers on my road network.
+  - name: "ensure that personal data are protected against misuse"
+    guid: "{6DD77BEA-3E65-4aa2-A4AA-07FA3581A921}"
+    type: "Artifact"
+    stereotype: "FRAME_Desired_Architecture_Goals"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The PSAPs, including eCall PSAPs, shall be regarded as data controllers within the meaning of Article 2(d) of Directive 95/46/EC. Where the eCall data is to be sent to other emergency control centres or service partners pursuant to Article 3(5), the latter shall also be considered as data controllers. Member States shall ensure that the processing of personal data in the context of the handling of the eCalls by the PSAPs, the emergency services and service partners is carried out in accordance with Directives 95/46/EC and 2002/58/EC, and that this compliance is demonstrated to the national data protection authorities.
+      
+      In particular, Member States shall ensure that personal data are protected against misuse, including unlawful access, alteration or loss, and that protocols concerning personal data storage, retention duration, processing and protection are established at the appropriate level and properly observed.
+  - name: "standardized interface"
+    guid: "{E3051F95-B3CD-4334-BCE9-E5650F2998D1}"
+    type: "Class"
+    stereotype: "ITS_Service_Added_Value"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "ITS Added Value Type": ""
+    note: |
+      identical onboard system independent on vehicle brand
+    links:
+      - "Association «defines» → eCall In Vehicle System"  # {7ED1E0CA-C998-45af-8740-EBA889F23F6D} → {6BD43EDE-C6BB-4b9a-9F42-5E58564320F4}

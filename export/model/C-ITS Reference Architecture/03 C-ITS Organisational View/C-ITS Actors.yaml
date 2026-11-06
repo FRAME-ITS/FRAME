@@ -1,0 +1,57 @@
+package: "C-ITS Reference Architecture/03 C-ITS Organisational View/C-ITS Actors"
+guid: "{0C68EC14-D6C8-4527-8BB0-E007B6C8DFCA}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "Road Operator/ City Public authorities and C-ITS station operator"
+    guid: "{38C7B456-75DD-4962-BE8E-344206811EB6}"
+    type: "Actor"
+    stereotype: "FRAME_Actor"
+    status: "Proposed"
+    version: "1.0"
+    order: 1
+    note: |
+      Road operators and or City Public Authorties which decided to invest in C-ITS as one direct information channel to mobile travellers to nehance road safety setup and operate C-ITS Stations of the following types:
+      - Central C-ITS stations
+      - Roadside C-ITS stations
+      - Mobile C-ITS stations and possibly others
+      
+      following the latest C-Roads specifications for harmonized day one C-ITS Services in Europe.
+    links:
+      - "Abstraction «is Type of» → Motorway operators and city public authorities"  # {ED21AAE7-42F5-40bc-8DA9-BAAE18097882} → {2E3B8D29-8DDA-48a6-AA48-C0060AEC0A2D}
+  - name: "OEM and mobile C-ITS stations operator"
+    guid: "{0B92BE20-A211-4709-8222-8B3CAEAF3DFC}"
+    type: "Actor"
+    stereotype: "FRAME_Actor"
+    status: "Proposed"
+    version: "1.0"
+    order: 2
+    note: |
+      OEM with active C-ITS stations in his regular vehicle models on the market and consistent with C2C CC BSP latest version.
+      
+      If this actor has also the role of "security provider" in the EU CCMS for his mobile C-ITS stations, these roles should be generated additionally.
+    links:
+      - "Abstraction «is Type of» → Vehicle Manufacturors - OEM´s"  # {B64495B1-E1EB-4924-8235-0116F58188C5} → {ED38DEDB-53CC-42c9-9686-EF58A2EB5744}
+  - name: "3rd party service provider"
+    guid: "{CB3A280B-2F50-4a35-9603-8BD95D127A4F}"
+    type: "Actor"
+    stereotype: "FRAME_Actor"
+    status: "Proposed"
+    version: "1.0"
+    order: 3
+    note: |
+      This actor can be a C-ITS station operator, a security service provider, a communication service provider or cover another role in the C-ITS context . . .
+    links:
+      - "Abstraction «is Type of» → C-ITS Service provider"  # {BB12416C-4854-477a-862C-F0A5C5AC8F96} → {3013F2AA-5BC3-4d57-8AFA-790BBA733C21}
+  - name: "EU Citizen"
+    guid: "{5584CEC2-2AC4-4b1e-AC7A-65E352398E8C}"
+    type: "Actor"
+    stereotype: "FRAME_Actor"
+    status: "Proposed"
+    version: "1.0"
+    order: 4
+    note: |
+      EU Citizen in one of the member states, and most probably mobile in all modes of transport and in more than member state in different transport environments.
+    links:
+      - "Abstraction «is Type of» → EU Citizen in one of the member states"  # {A4555F37-1A9D-4a04-BD72-18DD12FD3D70} → {E8695FF6-1351-4508-97CF-980CF0604B41}

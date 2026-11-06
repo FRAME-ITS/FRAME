@@ -1,0 +1,54 @@
+package: "Truckparking Reference Architecture (SSTP)/02 SSTP Functional View"
+guid: "{AB273DFC-CEF7-434e-A058-D59462AE3A8B}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: ""
+    guid: "{A9398F3A-D656-4ef9-ACBE-19BBA1975288}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "Information Service"
+    guid: "{4E2FCC27-369E-40b8-BD84-07B3967CA13E}"
+    type: "Activity"
+    stereotype: "FRAME_High_Level_Function"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «IN» → fSSPS-tNAP"  # {718FF07C-E516-4595-A81E-62FE13C66AF4} → {BB5DAB8B-D77C-478d-A35B-5D2F5EEA5822}
+      - "Association «IN» → fSSTIS-td"  # {700793A1-2C82-4613-9D0D-D259E67A60FE} → {35D2614C-D570-42a4-9F7E-7D61EB239ADB}
+      - "Association «IN» → pshvs.mt_rest_area_parking_request"  # {019B2CB2-EBC5-4e20-8FEB-11FD30DA69D6} → {C5F05C5F-FD4B-4c58-B9CF-09A802A7433F}
+  - name: "NAP"
+    guid: "{51D57A0F-2C2F-443f-9B12-4BB129325648}"
+    type: "Activity"
+    stereotype: "FRAME_High_Level_Function"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The functionality necessary for the Truck Parking information to be available in NAP is directly borrowed from the NAP Reference Architecture
+    links:
+      - "Association «IN» → fNAP-tSSPIS"  # {F5E35DE5-3C1C-46ad-A9BF-88B773BB5B4B} → {6240ECF3-E711-4dc1-9E26-5479DFBF3481}
+      - "Association «IN» → tnap.cp-metadata_&_success_report"  # {DC9DB289-52B0-44c8-8C08-FD8BCAECBA8C} → {B3154461-F9DC-4afd-8D5F-F44985AF55EC}
+      - "Association «IN» → tnap.cp-registration_response"  # {C806A5DE-C2F8-4019-93C9-1BF7AAE9954C} → {43BA5834-14FF-41d8-89AB-BD55A7C65F2E}
+      - "Association «IN» → to.po-fNAP"  # {D940033D-7755-4674-B7BB-B517EFC323BE} → {86449B9F-A106-4d81-A124-0D356CE690ED}
+  - name: "Parking Area Management"
+    guid: "{8DE27522-3716-477e-B08C-3BAAC7A52E94}"
+    type: "Activity"
+    stereotype: "FRAME_High_Level_Function"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Functionality of a parking are management system which takes the static data as input from the parking area operator and also calculates the status and occupancy. The part of FRAME Functional View describing a Parking Area Monitoring system is used in this case as an example. Since the related ITS Directive do not mandate how the information should be gathered from the vehicles in the parking area, this functionality can be replaced, if a Member State or an parking area manager would like to extract this information in another way. In such cases the preferred service will have to provide the same information to the rest of the functional ecosystem.
+    links:
+      - "Association «IN» → mt.pshvs_rest_area_parking_response"  # {F319C227-AADE-46e2-A9FF-37C214F1EC55} → {1D771D70-E194-4ae6-A874-B3AC397FD549}
+      - "Association «IN» → to.po-fPAM"  # {F89FCB72-78C3-46ea-A1C7-EC1476CACC04} → {C68B7F62-97F0-47c6-986B-839ED5F9BBC5}
+      - "Association «IN» → to.po-service_area_current_data"  # {BD30DEEC-8B7E-4788-B354-AA7C61B8A724} → {A0366A1E-083F-4d37-BDB1-7DCD74F5E7F9}
+      - "Association «IN» → to.po-service_area_static_data"  # {903A9433-A98A-41a8-9579-D5E154A9B4AC} → {20D7E27B-CC06-4f7b-B9C3-27BDFC5486E1}
+      - "Association «IN» → to.po-service_area_status_overrride_response"  # {6844DC9B-CBAD-452e-9498-AE7B10F70FFC} → {FF833A32-FCE5-48c1-B058-1435285D3146}

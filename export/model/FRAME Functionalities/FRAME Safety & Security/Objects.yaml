@@ -1,0 +1,393 @@
+package: "FRAME Functionalities/FRAME Safety & Security/Objects"
+guid: "{C2BE50D1-293C-4c77-921D-184A0B5FB7B8}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "Actuator(s)"
+    guid: "{A1289906-67D2-4f21-9481-7F7CF2223404}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      This refers to the part of the system under investigation that transmits data/information to the world outside the system under consideration: e.g.
+      
+      Screen
+      Speaker
+      Actuator
+      Visual Display (including lights)
+    links:
+      - "InformationFlow → Nucleus of the system under investigation"  # {AB0E815B-22D0-4cd5-B1E3-2DAF943078C0} → {FE2B2B6C-F3D2-4f3f-B23C-58CD9EA491E4}
+  - name: "Data"
+    guid: "{15D55883-BF78-4c55-B63F-39317A5828FF}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "Detailed Safety Analysis - DSA"
+    guid: "{C427A7CE-4B02-4df1-B64F-BB3041F3AD77}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The purpose of the Detailed Safety Analysis (DSA) process is to analyse in detail the system requirements, and the architecture, in relation to the safety objectives and the safety requirements identified during the PSA.
+      DSA is a recursive process, performed in parallel with the system design and ends once there is a sufficient level of confidence that design measures exist to make the system acceptable. The level of confidence required should also be commensurate with the Safety Integrity Level (SIL) required of the system, and may require liaison with an independent assessor.
+      
+      It is particularly important to ensure that:
+      
+      	- The results of the PSA are still valid, and their corresponding Safety Requirements have been implemented correctly;
+      	- No further safety issues have emerged due to the design decisions that have been chosen.
+      
+      
+      The following techniques are the fundamental activities of a DSA process:
+      
+      	- A Failure Mode and Effects Analysis (FMEA) to identify the low level hazards.
+      	- A Fault Tree Analysis (FT A) on each of the low level hazards identified.
+      	- Conclusions and recommendations.
+      
+      
+      The process steps are iterated to greater levels of system decomposition until all the safety implications have been fully analysed.
+  - name: "FRAME_Low_Level_Data_Flow1"
+    guid: "{CE92F8AA-DC6A-443b-8C39-DEEB7DFEE6F6}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "FRAME_Physical_Data_Flow1"
+    guid: "{1F29A22A-2B90-4503-A272-7EB098402DB4}"
+    type: "Interface"
+    stereotype: "FRAME_Physical_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "FRAME_Physical_Data_Flow2"
+    guid: "{0189886F-5C94-4145-8464-D8CC498E4D4B}"
+    type: "Interface"
+    stereotype: "FRAME_Physical_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "HMI(s)"
+    guid: "{23A96967-98AC-44bd-A8B7-332B38E4CD63}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      This is any any device that provides data/information in a direct human readable/comprehensible form (e.g. via sound and/or sight and/or touch)
+    links:
+      - "Abstraction → Safety Integrity Levels (SILs)"  # {CAD3D5AF-2DDD-4e25-9B1D-D3CE941235C3} → {736DFF9A-1BD4-480f-BD99-39ABACC1BA6A}
+      - "Association → Preliminary Safety Analysis - PSA"  # {31C540B2-E17F-4323-958A-AA1E747163FD} → {57750890-422E-49f8-AB2D-6195E6B20004}
+  - name: "High Level Safety Requirements"
+    guid: "{6E361738-A026-45eb-B526-8920020A7BA3}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The result of a Preliminary Safety Analysis (PSA) will, in general, be a set of additional functional, and non-functional (e.g. quality) requirements that should be added to the system specification in order to mitigate the safety issues that have been identified.
+      
+      The manner/detail in which they are specified will mainly depend on the detail with which the proposed system has been specified so far.
+      
+      Safety Functional Requirements - these are functions that must be carried out by the safety-related system should a hazardous failure occur in the technical process, or in the safety-related system itself. They may also prevent systemic faults violating the safety of the system.
+      Safety Integrity Requirements - These are measures to ensure that all the safety functions are performed with sufficient reliability. They are divided into:
+      Measures to avoid faults
+      
+      	- Quality - working to a relevant Quality Plan
+      	- Reliability - using components with a known failure rate
+      	- Analysis - the higher the Safety Integrity Level (SIL) the closer to a proof of correctness under all conditions one has to get.
+      	- Test - although testing cannot normally demonstrate the absence of faults,it will provide confidence that the system performs correctly.
+      
+      Measures to control faults
+      
+      	- Redundancy - the normal technique to control random faults.
+      	- Diversity - identical systems may contain the same systemic fault. The use of a channel with different design can alleviate this problem (but be careful what is being claimed).
+      	- Self Test - a safety-related system should run a set of self-test routines on a regular basis.
+      	- Monitoring - a continuous set of self-tests.
+    links:
+      - "InformationFlow → Preliminary Safety Analysis - PSA"  # {34C13AB2-796D-4efe-91B5-7ECB335D310B} → {57750890-422E-49f8-AB2D-6195E6B20004}
+  - name: "Interfaces to other ITS"
+    guid: "{1971EE1A-4FAD-4874-B193-99C971D45503}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      These are interfaces to other ITS that will work with the system under consideration, but are not part of this system.
+      
+      The reason why they are considered to be external to the system under consideration can vary from the fact they belong to another organisation (or person), to the need to split a complex system into a number of simpler sections for ease of analysis, or construction.
+    links:
+      - "InformationFlow → Nucleus of the system under investigation"  # {DBBD9E47-0190-419c-BB35-288B948FE5CC} → {FE2B2B6C-F3D2-4f3f-B23C-58CD9EA491E4}
+  - name: "Interfaces to other ITS"
+    guid: "{D5EAA80A-5D9A-42f3-BEF7-A79920650C85}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      These are interfaces to other ITS that will work with the system under consideration, but are not part of this system.
+      
+      The reason why they are considered to be external to the system under consideration can vary from the fact they belong to another organisation (or person), to the need to split a complex system into a number of simpler sections for ease of analysis, or construction.
+    links:
+      - "InformationFlow → Nucleus of the system under investigation"  # {CACA3894-1217-4d24-8E85-F416826E0C57} → {FE2B2B6C-F3D2-4f3f-B23C-58CD9EA491E4}
+  - name: "Nucleus of the system under investigation"
+    guid: "{FE2B2B6C-F3D2-4f3f-B23C-58CD9EA491E4}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The Nucleus contains ALL the functionality of the system except that associated with the sensors and actuators that receive data/commands from the input Terminator(s), and the sensors and actuators that provided data/commands to the output Terminator(s).
+    links:
+      - "Abstraction → HMI(s)"  # {276AA541-B730-4e08-885A-69A4011F3633} → {23A96967-98AC-44bd-A8B7-332B38E4CD63}
+      - "Association → Preliminary Safety Analysis - PSA"  # {4DED5F25-4918-4f2b-B8D0-7A5457144A15} → {57750890-422E-49f8-AB2D-6195E6B20004}
+  - name: "PASSPORT Diagram"
+    guid: "{9470B304-B407-4ad7-BA2F-361E955649B3}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      A PASSPORT diagram is a convenient way of describing a (complex) ITS in a 'simple' manner and that highlights the principal components whose failure to function correctly could create a safety hazard. SInce it can be created without knowing the details of the intended design (or its Architecture) it can be created very early in the lifecycle, and the results of the Preliminary Safety Analysis can then be used to influence the remainder of the system lifecycle.
+      
+      See "Create PASSPORT Diagram"
+  - name: "Preliminary Safety Analysis - PSA"
+    guid: "{57750890-422E-49f8-AB2D-6195E6B20004}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Once a model of the proposed ITS has been created the process of performing a Preliminary Safety Analysis (PSA) can begin. See also the PASSPORT report on PSA (see 'Intro to Safety & Security' for the full reference).
+      
+      The primary purpose of the PSA is to identify whether the proposed ITS has any safety-related aspects to it, and if so to identify the high level safety requirements, and the preliminary Safety Integrity Levels (SILs), associated with them. The PSA is performed very early in the development lifecycle, and does not require too many details of the proposed design to be known. At this point the environment, boundary, operating goals, overall structure and functionality are known, but the details of its design may still to be determined.
+      
+      Inputs to the PSA Process should include:
+      
+      	- the overall system requirements and operating environment of the proposed ITS.
+      	- guidelines for performing a PSA;
+      	- the overall safety requirements of the proposed ITS;
+      
+      
+      The PSA Process should include:
+      
+      	- A high level system description (Create PASSPORT Diagram);
+      	- A "what if?" analysis on the PASSPORT Diagram to identify the high level hazard(s) - see also Appendix D of the PASSPORT Report;
+      	- A "what causes?" analysis for each of the hazards identified (see also HAZOP and EMC below);
+      	- Production of conclusions and recommendations.
+      
+      Outputs from the PSA Process should include:
+      
+      	- A PASSPORT Diagram showing the proposed ITS in its environment;
+      	- The overall safety objective(s) of the proposed ITS;
+      	- The failure modes of system elements, and their relative importance;
+      	- The High Level Safety Requirements;
+      	- The preliminary allocation of SIL(s) - see also Appendix B of the PASSPORT Report.
+      
+      
+      Hazard and Operability Analysis (HAZOP)
+      A possible approach to the 'What If?' analysis, which can be more relevant to some proposed (parts of) ITS is (a modified) use of the HAZOP Guide Words on the basic functionality and the flow of data, as follows:
+      
+      
+      	- NO/NOT - Complete negation of the design intent
+      	- MORE - Quantitative increase
+      	- LESS - Quantitative decrease
+      	- AS WELL AS - Qualitative modification/increase
+      	- PART OF - Qualitative modification/decrease
+      	- REVERSE - Logical opposite of the design intent
+      	- OTHER THAN / INSTEAD - Complete substitution
+      	- EARLY - Relative to clock time
+      	- LATE - Relative to clock time
+      	- BEFORE - Relating to order or sequence
+      	- AFTER - Relating to order or sequence
+      
+      
+      Electromagnetic Compatibility (EMC)
+      This relates to the ability of one electrical system to interfere (through electromagnetic induction) with another electrical system.  This interference can originate from either within the vehicle (e.g. spark plugs), or from an electrical installation outside the vehicle, e.g. a local electric power distribution transformer.  Whilst all vehicles have to pass an established EMC process which is derived from the requirements of the Type Approval process, this does not necessarily apply to any ITS that is sited either within, or outside the vehicle.  It should be noted that an EMC fault is likely to result in a non-functioning, rather than a mal-functioning, system.
+    links:
+      - "InformationFlow → System Description"  # {4AFE8125-871A-4b1a-BE34-9636CA348476} → {216F99D8-C616-4cf9-A4A7-C2D63F009559}
+      - "Realisation → Terminator(s)"  # {BCCFE6E8-C7AF-43d8-A3A1-50B4D527708A} → {703E1B94-C028-4c19-9365-62988C968ADD}
+      - "Usage → PASSPORT Diagram"  # {1FFD51A8-4F2A-4a2c-BDD1-B6B21830B853} → {9470B304-B407-4ad7-BA2F-361E955649B3}
+  - name: "Prospective System Safety Analysis - PSSA"
+    guid: "{4B920452-E358-466b-AA1F-5FFE52C04898}"
+    type: "Activity"
+    stereotype: "FRAME_High_Level_Function"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "Safety Experts"
+    guid: "{2F7516BA-BA54-42e3-B673-3710512DC354}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "Safety Experts"
+    guid: "{B529BF0E-8890-484f-9BE2-FDA0D928BD99}"
+    type: "Object"
+    stereotype: "FRAME_Role"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Key Issue": ""
+      "Role Part Of Value Chain": ""
+      "Role Value": ""
+      "Role View": ""
+    note: |
+      It is STRONGLY advised that those who are familiar with ITS safety issues should be included in the team that performs a Preliminary Safety Analysis.
+      
+      A safety hazard is defined as being a physical situation with a potential for human injury. However, whilst this definition only refers to injury to humans, it is wise to consider possible injury to property, fauna, flora, atmosphere, etc. as well. Certain safety hazards are obvious, for example a green light conflict for traffic signals, but others are less obvious and are often concerned with the reason as to how an accident, or conflict situation, can come into existence. Past experience has led to ITS safety being considered under the three headings of
+      
+      	- Functional System Safety
+      	- Human-Machine Interaction
+      	- Traffic Safety
+      
+      though there is a growing recognition that ITS is merging the boundaries between them.
+      
+      Functional System Safety
+      Function System Safety is primarily concerned with the analysis of the reliability of the piece, or pieces, of hardware and/or software. This analysis should identify the aspects of design, operation or failure of the system that may generate malfunctions and lead to dangerous and/or unanticipated modes. In the context of ITS in general, a system may consist of many items of equipment which may be interacting, and this interaction is one of the targets of the analysis.
+      Human-Machine Interaction (HMI)
+      HMI is concerned with how a human user interacts with a system via an interface. The targets of analysis are normally the visual, auditory and tactile interfaces within the vehicle, at the roadside and in the control room, and their ability to be used effectively and safely. As user interactions with a system may be prolonged, complex issues such as menu design and user under/overload are also assessed to identify potential conflicts between the system design and the behaviour of the user.
+      Traffic Safety
+      Traffic Safety is concerned with the safe operation of the traffic system as a whole. It covers the outcome of Functional System Safety and most, but not all, HMI problems for the system and the user, and the malfunctions that may lead to accidents. It also covers the ways in which a system might affect road user behaviour so as to alter the interaction between the driver, the vehicle, the road infrastructure and other road users (including vulnerable road users such as pedestrians and cyclists) such that they no longer use road transport in a safe manner.
+      
+      Example - a junction controlled by traffic signals
+      
+      	- The equipment in general, and the correct operation at all times of the controller, should be managed by an expert in Functional System Safety.
+      	- The size, luminosity, location etc. of the signals heads so that they will always be interpreted correctly by the drivers should be managed by an expert in HMI.
+      	- The layout of the junction, and the timing of the signals, in order to create a naturally safe driving scenario, together with any special arrangements for particular classes of vehicle, e.g. regular HGV traffic carrying hazardous goods, should be managed by an expert in Traffic Safety.
+      
+      
+      (See 'Intro to Safety & Security' for a reference to the original UTMC22 document that describes these issues in detail)
+    links:
+      - "Realisation → Preliminary Safety Analysis - PSA"  # {B69CDDF1-93C8-4dcf-A423-BA5EE18A0919} → {57750890-422E-49f8-AB2D-6195E6B20004}
+  - name: "Safety Integrity Levels (SILs)"
+    guid: "{736DFF9A-1BD4-480f-BD99-39ABACC1BA6A}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    keywords: "Safety Integrity Levels"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The degree of care that should be taken to implement each of the safety requirements will depend on the importance of each hazard associated with that hazard. The concept of a Safety Integrity Level (SIL) arises naturally from the fact that some activities are perceived as being more hazardous than others. Their use is desirable because the development costs associated with high integrity levels can be very great. A balance must therefore be struck between using too low a level, which will increase risk, and using too high a level, which will result in unnecessary costs.
+      
+      Whilst a number of Standards specify the consequences on the development of a system once a SIL has been assigned to a (sub-)system, there is less advice available on how to do that assignment. The most relevant to ITS is:
+      
+      MISRA, Guidelines for Safety Analysis of Vehicle Based Programmable Systems, 2007 available from www.misra.org.uk
+      
+      There are two Standards that may be relevant to the development of an ITS according to an assigned SIL, but their use should be confirmed with the appropriate regulator. They are:
+      
+      IEC 61508 - Functional Safety of Electrical / Electronic Programmable Electronic Safety-related Systems
+      
+      ISO 26262 - Road Vehicles - Functional Safety
+    links:
+      - "InformationFlow → Preliminary Safety Analysis - PSA"  # {1F57BF59-8CA4-4811-B65F-D5A089009975} → {57750890-422E-49f8-AB2D-6195E6B20004}
+  - name: "Sensor(s)"
+    guid: "{44CD709E-8E7A-4495-B995-7A2659FBC6D8}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      This refers to the part of the system under investigation that receives data/information from the world outside the system under consideration: e.g.
+      
+      Keyboard and mouse
+      Button
+      Electromagnetic wave receiver
+      Card reader
+      Camera
+    links:
+      - "Abstraction → Nucleus of the system under investigation"  # {82C362A1-4E05-4767-BF06-FA39E7585BD7} → {FE2B2B6C-F3D2-4f3f-B23C-58CD9EA491E4}
+  - name: "System Description"
+    guid: "{216F99D8-C616-4cf9-A4A7-C2D63F009559}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      For a Preliminary Safety Analysis it is not necessary to have a detailed design of the proposed system. Indeed is can be, and has been, used to gain an understanding of how a novel ITS, with a high-level 'wish list' of specifications, should actually be developed
+      
+      See also "Create PASSPORT Diagram"
+    links:
+      - "Abstraction → HMI(s)"  # {CB91B514-979D-4d48-85AA-40BCBF44A366} → {23A96967-98AC-44bd-A8B7-332B38E4CD63}
+      - "InformationFlow → PASSPORT Diagram"  # {697273AB-E3D9-4ea7-975C-D4638D0D19B1} → {9470B304-B407-4ad7-BA2F-361E955649B3}
+  - name: "System Experts"
+    guid: "{0EB07407-1044-45dd-8EAB-DFC55302A780}"
+    type: "Object"
+    stereotype: "FRAME_Role"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Key Issue": ""
+      "Role Part Of Value Chain": ""
+      "Role Value": ""
+      "Role View": ""
+    note: |
+      ITS Engineers who are familiar with the proposed system.
+    links:
+      - "Realisation → Preliminary Safety Analysis - PSA"  # {24BFC126-22ED-43d7-B13E-03540728FA42} → {57750890-422E-49f8-AB2D-6195E6B20004}
+  - name: "System under investigation"
+    guid: "{E207E40E-A55F-4602-830C-9F8F15CB9DA4}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      At this stage the system under Investigation is specified in as much detail as is necessary (before or after its system architecture has been created).
+      
+      For a novel system the whole Preliminary Safety Analysis process can be a useful exercise to gather ideas as to how a system concept might actually be implemented (without spending too much money!).
+      
+      If a system architecture does already exist, then it will be much easier for the remainder of the Safety Analysis if it is only described in terms of its core function(s), inputs and outputs.
+    links:
+      - "Abstraction → Terminator(s)"  # {5060FFE5-4F52-412e-AEF2-987F5746194F} → {703E1B94-C028-4c19-9365-62988C968ADD}
+      - "Realisation → Nucleus of the system under investigation"  # {A8FC5EB8-2E15-4c92-A0FF-EC773E2955EA} → {FE2B2B6C-F3D2-4f3f-B23C-58CD9EA491E4}
+  - name: "Terminator(s)"
+    guid: "{210F288D-A50D-4bac-8611-728391F59371}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      One or more external entities that provide data/commands to the system under investigation.
+      
+      See "PASSPORT Diagram" for details of how they should be used in a Preliminary Safety Analysis.
+    links:
+      - "Abstraction → System under investigation"  # {1F767C33-66F9-44dc-8E0B-BD8BB7DF923B} → {E207E40E-A55F-4602-830C-9F8F15CB9DA4}
+      - "Association → Preliminary Safety Analysis - PSA"  # {FCA5E6ED-023B-4bc4-B35E-E8702BF0C98F} → {57750890-422E-49f8-AB2D-6195E6B20004}
+  - name: "Terminator(s)"
+    guid: "{703E1B94-C028-4c19-9365-62988C968ADD}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      One or more external entities that receive data/commands from the system under investigation.
+      
+      See "PASSPORT Diagram" for details of how they should be used in a Preliminary Safety Analysis.

@@ -1,0 +1,79 @@
+package: "Frame Repository/Frame Functional View/System"
+guid: "{EC53E4D3-AC1F-4659-8CF3-31B49D9EABF0}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: ""
+    guid: "{4B4BD96E-3693-462e-A2E2-135E8B85A555}"
+    type: "Text"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      This is the representation of the FRAME functionality that appears as the central "box"  in the Context Diagram.  Clicking on the System "box" will open Data Flow Diagram 0 (DFD) which is the highest level of Data Flow Diagram.  Alternatively click on the item below and this will take you to DFD0.
+      DFD0 contains all of the Functional Areas, the data flows that link them together and the data flows that link the Functional Areas to the Terminators in the Context Diagram.  It provides the starting point for any exploration of the FRAME Functional View.
+  - name: ""
+    guid: "{6AA793E8-5086-4108-A06D-1EC500FF65D6}"
+    type: "Text"
+    stereotype: "NavigationCell"
+    alias: "Data Flow Diagram for all Functional Areas (DFD0)"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "System"
+    guid: "{A7365472-4893-4994-9241-EEED83ABEF7D}"
+    type: "Component"
+    stereotype: "FRAME_System"
+    status: "Proposed"
+    version: "4.5"
+    order: 0
+    note: |
+      This is the representation of the FRAME functionality that appears as the central "box"  in the Context Diagram.  Clicking on the System "box" will open Data Flow Diagram 0 (DFD) which is the highest level of Data Flow Diagram.
+      DFD0 contains all of the Functional Areas, the data flows that link them together and the data flows that link the Functional Areas to the Terminators in the Context Diagram.
+    links:
+      - "Association «IN» → From Roadside Equipment"  # {72D61AD7-DFBF-4e2d-8628-1A1E7CE4F857} → {D148A16C-9F49-4ed5-AD94-FCD392FADE20}
+      - "Association «IN» → From Vehicle Environment"  # {88E87AC0-0226-4ca9-8DC6-3F08A6E74B90} → {E7253BCA-AF66-45b9-80CB-45A8C381F66C}
+      - "Association «IN» → To Bridge/Tunnel Infrastructure"  # {7E9B9EA8-7913-4dec-B3AC-20A57FE632CB} → {4072F7F8-197D-4201-B84E-80BB24E86A18}
+      - "Association «IN» → To Driver"  # {BDEC8A7D-F824-4bb2-B576-9F00A1E9D12C} → {472644A4-6574-4767-AE95-03D0B46817DF}
+      - "Association «IN» → To Emergency Systems"  # {1824A5AA-0D41-4e9a-BD20-A0A9623E158E} → {05F30FC0-7367-42b3-A3F3-AB034D6F0F87}
+      - "Association «IN» → To External Service Provider"  # {48AC5EE2-7E0E-4012-BA89-BD64F15AA428} → {CB0E5267-0EB0-4bc5-979C-11C135689F57}
+      - "Association «IN» → To Financial Clearinghouse"  # {043A1E19-0F9C-4601-8CAC-22B28B5B5602} → {7A31E11B-5873-4f62-92E7-1CF5FFB07158}
+      - "Association «IN» → To Freight Transport"  # {AAA8D859-0AFE-4092-99CF-8996908F5A01} → {4F9A3D23-1859-47d1-94F5-E630A7DE6D47}
+      - "Association «IN» → To Law Enforcement Agency"  # {24BA5A76-D549-47df-9FFD-30D248C3C0F3} → {51620931-5B5E-442a-B721-2BD49EA9ACDA}
+      - "Association «IN» → To Maintenance Organisation"  # {CBFA2E49-A2EC-4d33-95C7-774363B910EB} → {8572AE13-B6F9-4e6b-8D05-7B93E36A105C}
+      - "Association «IN» → To Multi-Modal System"  # {F934D259-B738-4a52-92FB-CF226C4FC176} → {B5C9D8C7-873B-40b6-A991-CC0A7C4FD415}
+      - "Association «IN» → To Operator"  # {07854FD9-357B-4f1e-BCEF-85B959EBCE4C} → {BED224D6-0F6C-4a10-9057-54D9140F33F4}
+      - "Association «IN» → To Other Related System"  # {E8FCF927-36B8-4a08-BF5C-6A331852FF2C} → {B211B65C-3E19-4618-8019-7D7744237A96}
+      - "Association «IN» → To Transport Planner"  # {15BA563C-98B6-49fe-8442-96124DAB6DE4} → {64FFD483-65A3-4139-9DF8-1BAFCFFF8D81}
+      - "Association «IN» → To Traveller"  # {E245F5FD-DB58-4856-BF01-B5AA1CE545FD} → {0F2BCEB7-7EEB-46f9-B031-5D3328B73E67}
+      - "Association «IN» → To Vehicle"  # {885F8A8C-B342-4bef-B56B-501FADE5BD34} → {828BFFF3-1682-42c8-8612-1A480D1D419D}
+      - "Association «IN» → fesp-pshvs_inputs"  # {701762DE-C3E7-4fed-BF10-6CEC354410C1} → {2B80B2E4-62C6-4d26-96FD-9F21509F51C1}
+      - "Association «IN» → ffc-mpto_inputs"  # {61803117-35FB-43a6-80D7-BACE95363CD3} → {988E8387-CBBF-4afc-9A20-4C369404CEDC}
+      - "Association «IN» → flds-mpto_inputs"  # {6C8CB422-686D-4ce8-81C3-775ED7716C8C} → {151721E9-8A20-4e19-BFD5-F417C3B4271B}
+      - "Association «IN» → flds-mt_inputs"  # {8630E900-D5B3-4c54-B0DC-8F78B9B6B307} → {3C97B045-1854-4a11-82CC-CEF7C4CCB03D}
+      - "Association «IN» → flds-ptja_inputs"  # {3C07245C-DB4B-4ecc-B372-29983CA17F95} → {5144AF52-3E0A-412d-B3CA-B33E2B0707BE}
+      - "Association «IN» → fors-ptja_inputs"  # {5BCF2CAD-FE3B-4b9b-81CF-E07889AD4DF5} → {948FBB76-0F1E-4e2e-B9A3-EBEB38E349C2}
+      - "Association «IN» → fws-mt_inputs"  # {6EEF458F-4E5D-4cc7-8076-FA62563A1A9F} → {1BC755AB-FD44-43f9-A559-3B173F9FF289}
+      - "Association «IN» → fws-pshvs_inputs"  # {5DB4232F-E92A-4d78-ACCB-D29AEBD276DE} → {04D3BB54-483C-4e0a-AB74-E50BEFB9BB6F}
+      - "Association «IN» → mpto.pscs_data_for_coop_sys"  # {2A353844-02DD-43a8-8B75-854AADB151A2} → {FAC8BE68-2AD5-4c18-959F-1C394A0F2E59}
+      - "Association «IN» → mpto.psef_alarm_inputs"  # {201C99EA-4CFE-431b-92C7-44F76F57FBE4} → {450915D2-CDB9-4277-98EF-D3F8E439A2FA}
+      - "Association «IN» → mt.pscs_data_for_coop_sys"  # {7B1FECC3-7E22-41a8-A7FE-99407AA6D22B} → {28C72908-5B5B-4159-B252-C4528284FE2B}
+      - "Association «IN» → mt.pshvs_vehicle_data"  # {7998818E-0705-4b13-88DD-7DD59384288A} → {2E921505-D8E1-4459-A714-0B978E0DAF46}
+      - "Association «IN» → mt.ptja_data_transfer"  # {3B98D3EE-2DB2-493d-AAA6-A5A849ED08A4} → {FE02929D-CECA-4de1-98D6-510BD23EF7B6}
+      - "Association «IN» → pscs.ptja_route_requests"  # {406991B3-8D4B-48c4-9E6D-5F977357407D} → {B836DE84-2990-4f54-BCC2-A5E1C1EDE735}
+      - "Association «IN» → psef.pshvs_vehicle_data"  # {A1D63502-F3AD-4d11-A456-37EFC87A8610} → {F3228A49-E421-400a-92FC-477724EF38E9}
+      - "Association «IN» → pshvs.mt_data_for_traffic_management"  # {EC94AF86-0294-47a3-9833-E24941E0DB3A} → {2CCAA96F-9559-4e9a-BE8A-F6FE5C91D948}
+      - "Association «IN» → pshvs.pscs_vehicle_data"  # {740ABCDE-84C2-4791-9250-60026F0328D2} → {E3D85AA9-160E-4b9d-820F-E4CF0937AEB9}
+      - "Association «IN» → pshvs.ptja_vehicle_trip_plan_data"  # {275FDC70-809E-4a99-A701-E827B3746562} → {27F50CC9-9331-4efa-BFF1-02173DA69148}
+      - "Association «IN» → ptja.mt_traffic_data"  # {BFB95DFD-A55A-48ed-88AE-1BDAA7A2A1D4} → {FDFDDF39-3470-4801-BDDE-D1149EA99E1E}
+      - "Association «IN» → ptja.pshvs_vehicle_trip_plan_responses"  # {BF72DCE1-7B3E-4736-81E3-FBF95C2F46BC} → {C1C15386-FFCB-43d4-8A17-C0CD316D64CA}
+      - "Association «IN» → td-mt_outputs"  # {12CCE825-875F-458d-B938-065F005C29A0} → {FE3F5EAE-AAC6-403e-907C-D3298F527B3B}
+      - "Association «IN» → tesp-pshvs_outputs"  # {5542D867-6505-4701-AD3A-3F92E514C4B8} → {FAA5D67D-40D6-419f-A090-C50D3A8C8251}
+      - "Association «IN» → tfc-mpto-outputs"  # {085851AC-4378-4c56-BD0B-FDEA03D198D0} → {0A3E5645-6171-4a31-8181-9AA06AB5FD19}
+      - "Association «IN» → tfc-mt_outputs"  # {ED6AE333-B0BE-49e8-85D7-A2378D82AD20} → {4FDF25D6-D660-4be3-A637-B8E254C746D0}
+      - "Association «IN» → tfc-pepf_outputs"  # {15D0D12D-7788-4561-BCF1-369B75BE4F9C} → {D0ADC429-0B3D-464c-BF04-B74E7BECB1CF}
+      - "Association «IN» → tors-ptja_outputs"  # {FEBAE804-15E7-4b26-BFD1-1D18AB373329} → {0A8D45D9-F5AA-4799-BB6B-C7D467D779FA}
+      - "Association «IN» → tt-mt_outputs"  # {B2CAD178-901D-4f84-97B8-FFA9637567E1} → {4D113F3A-13E5-4906-8871-F24B8E27D0E1}
+      - "Association «OUT» → To NAP Actors"  # {79B37E50-F188-4c3a-92A6-8B04CF8640D1} → {80D9E677-C285-4d45-9344-044E34B0EF83}

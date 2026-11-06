@@ -1,0 +1,158 @@
+package: "NAP Reference Architecture/Supplements/KPI Framework/07_KPIs"
+guid: "{8B395F9F-63DD-4cd0-8D9C-EFD25586E361}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "KPI 7.1 Data reuse – NAP"
+    guid: "{D72070D6-9ECF-411a-8281-534019823FD6}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      Link to NAR: ???
+      
+      “Data reuse – NAP” KPI assesses, from the perspective of a NAP operator, whether a NAP operator provides descriptive/detailed information about the terms and conditions for data reuse (or not). A value equal to 0 points out an absence of such a provision, a value equal to 1 indicates that there is a descriptive provision, while a value equal to 2 indicates that there is a detailed provision through sample contracts or standardized data licensing frameworks. It is assumed that a NAP should at least provide descriptive information about the terms and conditions for data reuse.
+      
+      Does the NAP provide Terms and Conditions for reuse of metadata, data and other relevant information displayed at the NAP?
+      
+      0: No
+      1: Descriptive (brief text description)
+      2: Detailed (where necessary – terms and conditions and/or standardized licenses framework)
+      
+      
+      Minimum acceptable value for interoperability: 1
+  - name: "KPI 7.2 Data reuse – data provider"
+    guid: "{8A1CF06F-F5C9-4f65-B5F6-84DA47139132}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      Link to NAR: ???
+      
+      “Data reuse – data provider” KPI assesses, from the perspective of data provider, whether a data provider provides descriptive/detailed information about the terms and conditions for data reuse (or not). A value equal to 0 points out an absence of such a provision, a value equal to 1 indicates that there is a descriptive provision, while a value equal to 2 indicates that there is a detailed provision through sample contracts or standardized data licensing frameworks. It is assumed that a NAP should at least provide descriptive information about the terms and conditions for data reuse.
+      
+      Is it possible for the NAP to provide “Terms and Conditions” for reuse of data published by the data provider at the NAP?
+      
+      0: No
+      1: Descriptive (brief text description)
+      2: Detailed (where necessary – full sample contract conditions and/or standardized licenses framework)
+      
+      
+      Minimum acceptable value for interoperability: 2
+  - name: "KPI 7.3 Operational procedure information"
+    guid: "{16AB0A17-9AC4-4aec-9EAA-7EA1F349055C}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      Link to NAR: ???
+      
+      “Operational procedure information” KPI assesses whether a NAP includes guidelines about the operational procedures that need to be followed for becoming a data provider of a NAP or, in general, who is responsible for doing what. In this case, the ACC value is set to 1 reflecting that NAPs shall provide such guidelines.
+      
+      Does the NAP provide operational procedure information, i.e., information about the processes in the NAP, e.g., how a potential data provider/consumer becomes accredited, how the data is provided, what is a contact point where to discuss the technical issues etc.?
+      
+      0: No
+      1: Yes
+      
+      Minimum acceptable value for interoperability: 1
+  - name: "KPI 7.4 Dataset indicators"
+    guid: "{78665FD8-6086-4226-8ABE-C8E96A54FE8C}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      “Dataset indicators” KPI examines whether a NAP provides information about the compliance of its datasets with the requirements set by the Delegated Regulations supplementing the ITS Directive (e.g., regarding the quality, accessibility, exchange timeframe, re-use, and update of the provided data). A value equal to 1 indicates that a NAP provides information about whether a self-declaration form has been submitted by the provider of a dataset, while a value equal to 2 indicates that a NAP provides information about the results of the compliance assessment process (if any). However, this KPI is assumed as not relating to the minimum acceptable level of service of a NAP.
+      
+      Does the NAP provide information about the compliance of its datasets with the requirements set by the Delegated Regulations supplementing the ITS Directive (e.g., regarding the quality, accessibility, exchange timeframe, re-use, and update of the provided data)
+      
+      0: No
+      1: Provision of information about whether a self-declaration has been provided
+      2: Provision of information about whether a positive compliance assessment has been executed
+      
+      
+      Minimum acceptable value for interoperability: 1
+    links:
+      - "Association «fulfilled by» → Metadata Management Module"  # {2D8B5271-7A4E-4d2a-AE8E-7F65413CF257} → {4C1A7740-ADB9-4654-9703-57AC92DD6D54}
+      - "Association «fulfilled by» → Metadata Management Module"  # {496E8DE2-AFA7-4b8e-982D-1EC6DA3B348C} → {4C1A7740-ADB9-4654-9703-57AC92DD6D54}
+  - name: "KPI 7.5 Compliance assessment"
+    guid: "{CD0A503A-335F-4864-8536-9F4576474961}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      Link to NAR: Not defined yet in WG5
+      
+      “Compliance assessment” KPI assesses whether a NAP facilitates the procedure of compliance assessment by providing self-declaration templates or by enabling data providers to submit self-declarations (to National Bodies). In the first case, the KPI is equal to 1, whereas in the second one the KPI is equal to 2. This KPI is once again assumed as not relating to the minimum acceptable level of service of a NAP.
+      
+      Does the NAP facilitate the procedure of compliance assessment by providing self-declaration templates or by enabling data providers to submit self-declarations to the NAP. ?
+      
+      0: No
+      1: NAP provides self-declaration forms/templates without any additional involvement in process.
+      2: NAP facilitates the submission of self-declarations  , in addition to providing the templates.
+      
+      
+      Minimum acceptable value for interoperability: 1
+  - name: "KPI 7.6 Association of published datasets with Delegated Regulations"
+    guid: "{747DB3C3-C956-4030-9637-30756698054B}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      “Association of published datasets with Delegated Regulations” KPI assesses whether the metadata provided by a NAP can indicate the relevance of its datasets with the Delegated Regulations supplementing the ITS Directive. Both ACC and REQ value is set to 1, reflecting that such an association is necessary.
+      
+      Are datasets published associated with Delegated Regulations supplementing the ITS Directive?
+      
+      0: No
+      1: Yes
+      
+      
+      Minimum acceptable value for interoperability: 1
+  - name: "KPI 7.7 Quality indicators for datasets"
+    guid: "{C344E742-01BB-4f58-B613-19C5B75E57B6}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      “Quality indicators for datasets” KPI assesses the extent to which a NAP provides insight into the quality of the provided data/metadata. There are four possible values that this KPI may take. A value equal to 1 indicates that a NAP includes a description of the quality of the provided metadata (e.g., based on a pre-established metadata quality assessment scheme). A value equal to 2 indicates that a NAP provides a description of general quality definitions to support its users to self-assess the quality of utilized data or high-level quality assessment statements in the metadata of hosted publications. On the other hand, a value equal to 3 indicates that a more detailed data quality description is provided in the metadata of hosted publications; however, provided details and values do not cover the entirety of quality fields that may relate to the nature of exchanged data. Finally, a value equal to 4 indicates that there is a solid description of all fields. It is assumed that a NAP shall at least provide metadata quality descriptions for achieving a minimum acceptable level of service.
+      
+      Does the NAP provide information or descriptions for data quality?
+      
+      0: No
+      1: Yes, a metadata field where the data provider can describe the quality of the dataset.
+      2: Yes, description of general quality definitions
+      3: Yes, description of some of datasets (fields) quality
+      4: Yes, description of all datasets (fields) quality
+      
+      
+      Minimum acceptable value for interoperability: 1
+    links:
+      - "Association «fulfilled by» → Metadata Management Module"  # {54FAA45A-093D-4575-9FAB-403838C81461} → {4C1A7740-ADB9-4654-9703-57AC92DD6D54}

@@ -1,0 +1,16 @@
+package: "C-ITS Reference Architecture/02 C-ITS Functional View/F9.4 Provide Hazardous Goods Management"
+guid: "{13C85FC7-5851-4ff2-A155-81518F052337}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "F9.4 Provide Hazardous Goods Management"
+    guid: "{EAFB823A-1B9A-4a92-B32F-764139615027}"
+    type: "Activity"
+    stereotype: "FRAME_High_Level_Function"
+    keywords: "functions"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      This High Level Function is related to Dangerous Goods Transport.

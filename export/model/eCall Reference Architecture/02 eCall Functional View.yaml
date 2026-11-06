@@ -1,0 +1,46 @@
+package: "eCall Reference Architecture/02 eCall Functional View"
+guid: "{00277B05-7E8D-4c7e-B886-1157A90131F6}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: ""
+    guid: "{7392A2F8-3FCB-47c4-A7F3-BA4B1D50A314}"
+    type: "Note"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Terminator - manually triggert = Subterminator vom Driver
+      Terminator - Emergency Management System: Note change to represent eCall as well
+      Terminator - Communications Operator not needed today--> could be delete
+      Subterminator Connectors Stereotype/Toolbox
+  - name: ""
+    guid: "{ED533B69-393C-4679-A3D4-550CD381AD51}"
+    type: "Note"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      http://tool.uml.com.cn/ToolsEA/UserGuide/guidebooks/tech_ea_functional_decomposition.html
+  - name: "MNO - Mobile Network Operator functionality"
+    guid: "{C5F0479A-207E-4fff-AD4A-A72D85C6703F}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "PSAP - Public Service Answering Point (Emergency Services)"
+    guid: "{02AAE7D3-F7BF-4a63-A9F7-67F29A124477}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "eCall in vehicle functionality"
+    guid: "{C801C2CE-E665-4d94-884C-81B5741C25FC}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""

@@ -1,0 +1,19 @@
+package: "C-ITS Reference Architecture/01 C-ITS User Needs/User Need Group"
+guid: "{F5DA3424-AFDA-49ef-92F1-3612CA6B6CF1}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "11 C-ITS"
+    guid: "{78549CD5-26C5-43eb-B47E-C548DEDE3D25}"
+    type: "Requirement"
+    stereotype: "FRAME_User_Need"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      This group contains C-ITS relevant activities based on the different message types.
+    links:
+      - "Abstraction → FRAME_User_Need Service 1 Road Safety"  # {BD5D2DDA-0EF8-4c00-AF15-A950ECE15C83} → {69944F3C-73E2-45d1-981D-B164A2E0D7BA}
+      - "Abstraction → FRAME_User_Need_Service 2 Traffic Efficiency"  # {6F224C51-B1CF-4675-B3A2-562EF37B7C10} → {480CC652-2B60-4e73-A110-454CC58841CD}
+      - "Abstraction → FRAME_User_Need_Service 3 Driving Comfort"  # {BB88CED3-4C07-40c0-BD66-58C78D6A1581} → {10E16CB6-028A-4e5c-9528-B7DFC84CB6BE}

@@ -1,0 +1,59 @@
+package: "Truckparking Reference Architecture (SSTP)/05 SSTP Communication View/SSTPIS Interfaes"
+guid: "{250BE569-89C5-4609-AD44-AF2173467433}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "NAP Content Consumer Interface"
+    guid: "{20BD348A-7AAF-4123-9F93-A1112E750F64}"
+    type: "Interface"
+    stereotype: "FRAME_Interface"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «use» → Dnamic Information"  # {FFE933D8-E0B7-4a25-A30A-64FFFEF4730E} → {F9C16C0D-FE1B-42d8-A1BB-3C076CDE50C1}
+  - name: "NAP Content Provider Interface"
+    guid: "{3B50B232-DAE0-40af-8FF0-FDCE34205EBE}"
+    type: "Interface"
+    stereotype: "FRAME_Interface"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «use» → Dnamic Information"  # {8DA85C2E-D5A3-44be-95CD-9AB6C9C70281} → {F9C16C0D-FE1B-42d8-A1BB-3C076CDE50C1}
+      - "Association «use» → Static Information"  # {B67F45AD-9292-48d7-AA9D-D6A4F6D4A08A} → {B9767457-F14C-490b-8EE0-F8E0956A78E8}
+  - name: "Park Area Equipment - Park Operator Interface"
+    guid: "{86396C30-47CC-480e-A8D1-D07BE1ACE308}"
+    type: "Interface"
+    stereotype: "FRAME_Interface"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «use» → Dnamic Information"  # {103FEA21-8C7A-4b51-8143-03A7BB5AA25D} → {F9C16C0D-FE1B-42d8-A1BB-3C076CDE50C1}
+  - name: "Parking Area - Sevice Provider Interface"
+    guid: "{245C2C82-B2DC-4296-9883-5C3056A9E479}"
+    type: "Interface"
+    stereotype: "FRAME_Interface"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «use» → Dnamic Information"  # {E77C17F2-D3D1-430c-8019-B7A85C4E159F} → {F9C16C0D-FE1B-42d8-A1BB-3C076CDE50C1}
+      - "Association «use» → Static Information"  # {20847043-67A0-466d-828C-1295F5E6D1BF} → {B9767457-F14C-490b-8EE0-F8E0956A78E8}
+  - name: "Service Provider - Personal Device Interface"
+    guid: "{4F2B4690-DEA5-4f66-A37E-EBD2E0ECDE30}"
+    type: "Interface"
+    stereotype: "FRAME_Interface"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «use» → Dnamic Information"  # {22C86F85-7073-4544-AC57-6C9EA72C2716} → {F9C16C0D-FE1B-42d8-A1BB-3C076CDE50C1}
+      - "Association «use» → Static Information"  # {FA66058D-2C7A-433a-8230-2DD00F9963E6} → {B9767457-F14C-490b-8EE0-F8E0956A78E8}

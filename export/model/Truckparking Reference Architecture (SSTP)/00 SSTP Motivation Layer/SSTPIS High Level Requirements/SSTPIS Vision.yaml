@@ -1,0 +1,18 @@
+package: "Truckparking Reference Architecture (SSTP)/00 SSTP Motivation Layer/SSTPIS High Level Requirements/SSTPIS Vision"
+guid: "{AF36BE0D-1520-4866-8163-A34AC26ACE8F}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "Truck Parking Vision: Increase road safety EU wide - Reduce road deaths to zero"
+    guid: "{3DC87C35-2FA2-4712-BA83-34F1DC4352CD}"
+    type: "Class"
+    stereotype: "FRAME_ITS_Vision"
+    status: "Proposed"
+    version: "1.0"
+    order: 3
+    note: |
+      Increase road safety EU wide - Reduce road deaths to zero
+    links:
+      - "Association → Trans-European Transport Network (TEN-T)"  # {8FC76037-3C98-491b-A847-007B0CB9AE3B} → {34516717-0650-478f-BFBF-E2DF7ECED973}
+      - "Association «associate» → To provide accurate information related to truck parking areas"  # {EAA62FE9-0FCF-48ca-BA53-B4B9D7681A76} → {D5A1FCD6-01F8-4e2f-AE80-0BE2E2880B4F}

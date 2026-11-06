@@ -1,0 +1,189 @@
+package: "NAP Reference Architecture/Supplements/KPI Framework/02_KPIs"
+guid: "{28D604A4-D281-4348-96DA-5456D3910514}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "KPI 2.1 Support to users to register or add data/metadata"
+    guid: "{57015FD8-66C2-45e3-8AB9-93A0EAFB1656}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      “Support to users to register and add data/metadata” KPI assesses whether a NAP provides information to support NAP users to register and (more importantly) to add data, metadata, or both (depending on the type of NAP under evaluation). It is assumed that a NAP shall at minimum provide downloadable support information in the local language. This condition is indicated by a value equal to 1. The value of this KPI is increased by 1, when such information is also available in the English language, when additional support can be provided via contact form and/or e-mail, and, finally, when additional support can be provided directly via telephone.
+      
+      Is support to users to register and add data/metadata available?
+      
+      0: No support or telephone number only is available
+      0.5: Instructions or support information is available on the site but not in English
+      1: Instructions or support information is available in English
+      Value+1 (for the following option):Is there other type of support to register and add data/metadata?:
+      
+      a. Via contact form and/or E-mail
+      
+      Minimum acceptable value for interoperability: 2
+    links:
+      - "Association «fulfilled by» → Support (ticket) Module"  # {C3B90379-7686-4eb8-8C7C-3B8F64F19B12} → {02101F2C-788B-49ea-8C0D-AD3B498E1E53}
+  - name: "KPI 2.2 Related services monitoring functionality"
+    guid: "{57A18050-B4C1-42f9-881F-A8C6AE3EAF1A}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      Link to NAR: ???
+      
+      “Related projects monitoring service” KPI assesses whether there is an implemented service that monitors the external relations of a NAP to indicate its influence on the development and operation of ITS services. This KPI is addressed as complementary and, thus, not associated with any level of service, given that the implementation of such a service cannot be strictly addressed as a NAP’s functional prerequisite.
+      
+      Is there a monitoring functionality to track the use of the data available at the NAP?
+      
+      For example, the possibility for data users to provide feedback information on which applications they are using the data. This could also be done by a (periodical) questionnaire or other monitoring / tracking method.
+      0: No
+      1: Yes
+      
+      Minimum acceptable value for interoperability: 1
+  - name: "KPI 2.3 Related services built on the data offered at the NAP"
+    guid: "{010C9F9B-1F46-41df-9ECF-6AD6D4E9AD39}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      Link to NAR: ???
+      
+      
+      “Related projects built on the NAP data” KPI is aims to assess how many external projects, platforms, or websites are based and benefited from NAP published in/accommodate through NAPs (irrespective of the utilized monitoring method). It is assumed that at least one project should be based on NAP data for achieving a minimum acceptable level of service.
+      How many related services (applications, websites, end-user information services, etc.), were built, according to your best knowledge, using data offered by NAP within the last calendar year?
+      
+      N/A: The information is not monitored (KPI 2.2 is zero)
+      Value 0 to infinity
+      
+      Minimum acceptable value for interoperability: 1
+  - name: "KPI 2.4 NAP promotion – number of channels"
+    guid: "{1942245D-8D8A-425c-8364-D8364B8407EA}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      Not connected to NAR
+      
+      “NAP promotion – number of channels” KPI records the number of different official channels, such as conferences, webinars, and social networking, that are used by the NAP operator or national body within the last calendar year for promoting NAP. It is assumed that at least three different channels shall be utilized for achieving a minimum acceptable level of service.
+      
+      Were official channels used to regularly promote the NAP within the last calendar year?
+      For instance, conferences, webinars, social networks, homepage, printed media, flyers, etc.
+      If Yes: How many promotional channels were used regularly within the last calendar year?
+      
+      0: No
+      Value 1 to infinity: Yes
+      
+      
+      Minimum acceptable value for interoperability: 3
+  - name: "KPI 2.5 NAP promotion – number of publications"
+    guid: "{19B43C9A-3E39-4803-B4E6-522EDE72F449}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      Not connected to NAR
+      
+      “NAP promotion – number of publications” KPI records the number of publications made by the NAP operator or national body within the last calendar year. It is assumed that at least three publications shall be made for achieving a minimum acceptable level of service.
+      
+      How many publications were made by the NAP operator and/or national body within the last calendar year using the channels mentioned in KPI 2.4?
+      
+      Publications mean: number of conference papers with NAP as main subject + webinars with NAP as main subject + social media posts with NAP as main subject + printed publications with NAP has main subject
+      
+      Value 0 to infinity
+      
+      
+      Minimum acceptable value for interoperability: 3
+  - name: "KPI 2.6 Contact means"
+    guid: "{B16F5B80-17AC-48ed-9C43-CADE9CDCF62A}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      “Contact means” KPI aims to assess whether a NAP provides contact information of the NAP operator and ideally data providers to data consumers. The possible values of this KPI range from 0 to 4 with a value equal to 0 indicating that there are no provided contact means, a value equal to 1 indicating that the contact details of a NAP operator are published through the NAP web page, a value equal to 2 indicating that both contact details of a NAP operator and some data providers are made available through the NAP web page, a value equal to 3 indicating that contact details of a NAP operator and all data providers are published, and, lastly, a value equal to 4 indicating that more than one contact means is provided to data consumers. It is assumed that a NAP shall at least provide contact information of the NAP operator and all data providers for achieving a minimum acceptable level of service.
+      
+      Have contact means (ways to get in contact with NAP or data providers ) been provided on the NAP website?
+      
+      0: No contact is available
+      1: Contact details of NAP operator are published
+      2: Contact details of NAP operator and some data providers are published
+      3: Contact details of NAP operator and all data providers are published
+      4: More than one contact means is provided
+      
+      Minimum acceptable value for interoperability: 3
+  - name: "KPI 2.7 Mass notifications – data providers"
+    guid: "{1F17B282-6DF7-4368-8BF9-EB565BA7D4D5}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      Link to NAP: Functionality missing
+      
+      “Mass notifications – data providers” and “Mass notification – data consumers” KPIs assess whether a NAP can massively notify registered data providers and data consumers, respectively, about the latest updates and changes. Its value ranges from 0 to 3. A value equal to 0 expresses that no mass notification functionality or procedure is in place. A value equal to 1 expresses mass notifications encompassing only legal updates (e.g., changes in terms and conditions of data reuse). A value equal to 2, on the other hand, indicates that mass notifications encompassing both legal and content updates (e.g., new datasets or substantial changes in already published datasets). Finally, a value equal to 3 indicates that mass notifications are tailored to the needs of data providers and consumers, respectively. It is assumed that this KPI does not relate to the minimum acceptable level of service of a NAP but expresses an advanced level of service when notifications encompass both legal and content updates.
+      
+      Are mass notifications available on the NAP website for the registered data providers?
+      Mass notification means: ability to deliver a message or information to all data providers.
+      Example of a Mass notification could be: “Inform all data providers that the use of Mobility DCAT-AP is mandatory from 2025.”
+      
+      N/A: No data providers accounts / no registrations
+      0: Mass notifications are not available to registered providers
+      1: Mass notifications are possible only for legal (T&C) updates
+      2: Mass notifications are possible for legal and content updates or news
+      3: Mass notifications are tailored according to the data provider's needs
+      4: Mass notifications are available on the NAP website to the registered data providers
+      
+      Minimum acceptable value for interoperability: 1
+  - name: "KPI 2.8 Mass notifications – data consumers"
+    guid: "{6069CE61-FD93-4212-A7EC-BA701EBE8A7E}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      Link to NAP: Functionality missing
+      
+      “Mass notifications – data providers” and “Mass notification – data consumers” KPIs assess whether a NAP can massively notify registered data providers and data consumers, respectively, about the latest updates and changes. Its value ranges from 0 to 3. A value equal to 0 expresses that no mass notification functionality or procedure is in place. A value equal to 1 expresses mass notifications encompassing only legal updates (e.g., changes in terms and conditions of data reuse). A value equal to 2, on the other hand, indicates that mass notifications encompassing both legal and content updates (e.g., new datasets or substantial changes in already published datasets). Finally, a value equal to 3 indicates that mass notifications are tailored to the needs of data providers and consumers, respectively. It is assumed that this KPI does not relate to the minimum acceptable level of service of a NAP but expresses an advanced level of service when notifications encompass both legal and content updates.
+      
+      Are mass notifications available on the NAP website for the registered data consumers?
+      Mass notification means: ability to deliver a message or information to all data consumers.
+      Example of a Mass notification could be: “Inform all data consumers that the use of Mobility DCAT-AP is mandatory from 2025.”
+      
+      N/A: No data consumers user accounts / no registrations
+      0: Mass notifications are not available to registered users
+      1: Mass notifications are possible only for legal (T&C) updates
+      2: Mass notifications are possible for legal and content updates, news
+      3: Mass notifications are tailored according to the data consumer's needs
+      4: Mass notifications are available on the NAP website to the registered data consumers
+      
+      Minimum acceptable value for interoperability: 1

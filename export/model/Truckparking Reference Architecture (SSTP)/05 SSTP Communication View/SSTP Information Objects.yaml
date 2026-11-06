@@ -1,0 +1,122 @@
+package: "Truckparking Reference Architecture (SSTP)/05 SSTP Communication View/SSTP Information Objects"
+guid: "{DB7AFC84-769F-414b-A1E2-91D2DC40073A}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "Dnamic Information"
+    guid: "{F9C16C0D-FE1B-42d8-A1BB-3C076CDE50C1}"
+    type: "Object"
+    stereotype: "FRAME_Information_Object"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Size": "1 Byte"
+      "Source": "Standard"
+      "Structure": "Data table"
+      "Subtype": "List of formats"
+      "Type": "Data"
+      "Validity period": "insert period e.g. 1.1.2000"
+      "auditing": ""
+      "categoryValue": ""
+      "dataInOut": "None"
+      "dataObjectRef": ""
+      "dataState": ""
+      "documentation": ""
+      "isCollection": "false"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "structure": ""
+      "structureRef": ""
+    note: |
+      Dynamic data on availability of parking places including whether a parking is: full, closed or number of free places which are available.
+  - name: "Static Information"
+    guid: "{B9767457-F14C-490b-8EE0-F8E0956A78E8}"
+    type: "Object"
+    stereotype: "FRAME_Information_Object"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Size": "1 Byte"
+      "Source": "Standard"
+      "Structure": "Data table"
+      "Subtype": "List of formats"
+      "Type": "Data"
+      "Validity period": "insert period e.g. 1.1.2000"
+      "auditing": ""
+      "categoryValue": ""
+      "dataInOut": "None"
+      "dataObjectRef": ""
+      "dataState": ""
+      "documentation": ""
+      "isCollection": "false"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "structure": ""
+      "structureRef": ""
+    note: |
+      The data to be collected shall be the following:
+      
+      1.
+      
+      Static data related to the parking areas, including (where applicable)
+      
+      —
+      
+      Identification information of parking area (name and address of the truck parking area (limited to 200 characters))
+      
+      —
+      
+      Location information of the entry point in the parking area (latitude/longitude) (20 + 20 characters)
+      
+      —
+      
+      Primary road identifier1/direction (20 characters/20 characters), and Primary road identifier2/direction (20 characters/20 characters) if same parking accessible from two different roads
+      
+      —
+      
+      If needed, the indication of the Exit to be taken (limited to 100 characters)/Distance from primary road (integer 3) km or miles
+      
+      —
+      
+      Total number of free parking places for trucks (integer 3)
+      
+      —
+      
+      Price and currency of parking places (300 characters)
+      
+      2.
+      
+      Information on safety and equipment of the parking area
+      
+      —
+      
+      Description of security, safety and service equipment of the parking including national classification if one is applied (500 characters)
+      
+      —
+      
+      Number of parking places for refrigerated goods vehicles (numerical 4 digits)
+      
+      —
+      
+      Information on specific equipment or services for specific goods vehicles and other (300 characters)
+      
+      Contact information of the parking operator:
+      
+      —
+      
+      Name and surname (up to 100 characters)
+      
+      —
+      
+      Telephone number (up to 20 characters)
+      
+      —
+      
+      E-mail address (up to 50 characters)
+      
+      —
+      
+      Consent of the operator to make his contact information public (Yes/No)

@@ -1,0 +1,13 @@
+package: "Truckparking Reference Architecture (SSTP)/04 SSTP Physical View"
+guid: "{61F57AD5-608D-49f6-8778-D593432158DA}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: ""
+    guid: "{C9D0C3B3-5563-4459-8184-9BAC349F2BE4}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""

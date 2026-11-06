@@ -1,0 +1,69 @@
+package: "Frame Repository"
+elements:
+  - name: ""
+    guid: "{A9345D01-CE68-4a8d-8679-DD3E4479464F}"
+    type: "Text"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      FRAME User Needs: the comprehensive set of User Needs that  provide a systematic starting point to any ITS implementation. It is split up into User Need Groups, which contains several Services, e.g. Traffic Management (User Need Group 7), or Travel Information (User Need Group 6). Within each Group there are Topics that are aspects of each Group and within each Group are Services, which may be described by one of more User Needs.  The User Needs are mapped to Low Level Functions in the FRAME Functional View. By selecting the set of User Needs that describes desired services the end user will be selecting the set of Low Level Functions that would be the starting point to build the Functional View of their desired system(s).
+  - name: ""
+    guid: "{B2AC938E-83A3-4785-BC66-1C06B2BF84CE}"
+    type: "Text"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Description:
+  - name: ""
+    guid: "{E1F81CF4-623F-4ae4-AC77-C3E06DD43767}"
+    type: "Text"
+    stereotype: "NavigationCell"
+    alias: "FRAME Functional View"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "$search://Name=FRAME User Needs;Term=;"
+    guid: "{4C41E30B-F803-461e-ADFC-59F85A7F8D5F}"
+    type: "Text"
+    alias: "FRAME User Need Search"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "FRAME User Needs"
+    guid: "{8F6FACB5-CD45-4e17-94AC-FE41FCB588E1}"
+    type: "Text"
+    stereotype: "NavigationCell"
+    alias: "FRAME User Needs"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      FRAME User Needs
+  - name: "Text"
+    guid: "{7AD8EC19-7772-4f0b-B7F4-FFC7FC107303}"
+    type: "Text"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      FRAME Functional View: provides a comprehensive set of functionality that fulfils the requirements specified in the User Needs.  It is split up into Functional Areas, each of which contains functionality that supports particular types of ITS Services, e.g. Traffic Management (Functional Area F3), or Traveller Information (Functional Area F6).  The functionality is structured hierarchically within each Functional Area to make it easier to understand and to enable one part of the functionality to be modified without necessarily affecting all the other functionality in a Functional Area.  In some instances the functionality has been structure in a way that makes it easier to select particular parts for particular ITS Service implementation.
+  - name: "Text"
+    guid: "{8F702DD4-6083-411b-8AE9-E43B0E957954}"
+    type: "Text"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Welcome to the FRAME Repository
+  - name: "Text"
+    guid: "{D02652D0-2029-4a56-ACD0-AF8C4CF73243}"
+    type: "Text"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Description:

@@ -1,0 +1,14 @@
+package: "FRAME Functionalities/FRAME Consitency Checks"
+guid: "{A7EE3DA8-C04F-4539-83DA-FAAF99DD2F78}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: ""
+    guid: "{1A7ACEA7-9C2A-495c-95DC-1A882390E19A}"
+    type: "Text"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The purpose of this Name format script is to identify and correct the improper format of element names and also to identify and correct the duplicate element name.

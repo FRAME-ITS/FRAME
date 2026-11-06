@@ -1,0 +1,235 @@
+package: "Test Package"
+elements:
+  - name: "FRAME_Actor1"
+    guid: "{EB5C7450-8E09-4ca8-A83A-D20D0924A18D}"
+    type: "Actor"
+    stereotype: "FRAME_Actor"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Abstraction «is Type of» → FRAME_Terminator1"  # {A785C70F-4E89-456f-BB3D-07C01F8A75CB} → {D991956C-2E7C-48e6-94A4-D8DFB72EA682}
+  - name: "FRAME_Agreement1"
+    guid: "{36C7F26D-5FEC-4d3b-B4C0-311A760F5625}"
+    type: "Collaboration"
+    stereotype: "FRAME_Agreement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «adheres to» → FRAME_Role1"  # {E252FABC-6B73-46ed-87CA-3115FB2AA819} → {390C99C0-210E-4057-8A50-F2867029AC3C}
+  - name: "FRAME_Application1"
+    guid: "{0666C600-2186-4e2a-B67C-AF1EF4FAE31A}"
+    type: "Object"
+    stereotype: "FRAME_Application"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "App_Environment": ""
+    note: ""
+    links:
+      - "Usage → FRAME_Physical_Data_Flow1"  # {834294A6-9740-4b1f-BF1E-2175FE4497A9} → {0D79CCAF-84A4-4c22-83F9-06149CED74C7}
+  - name: "FRAME_Component1"
+    guid: "{5EF27CEA-0468-4d61-8250-D41338EE6D71}"
+    type: "Component"
+    stereotype: "FRAME_Component"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "LocationDescription": ""
+      "Standrdization": ""
+    note: ""
+  - name: "FRAME_Data_Object1"
+    guid: "{FABF89F2-A405-4c7e-91DA-527193E2EF42}"
+    type: "Object"
+    stereotype: "FRAME_Data_Object"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "FRAME_Datastore1"
+    guid: "{C7A4EDA7-40D9-417f-B85C-603990115485}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Abstraction «is Type of» → FRAME_Component1"  # {AB9CC1FE-1FDC-42a7-B4FC-7C2B70C912C0} → {5EF27CEA-0468-4d61-8250-D41338EE6D71}
+      - "Association «IN» → FRAME_Low_Level_Data_Flow1"  # {78ACADC5-3442-4eab-8D99-B65F2AEC0DC6} → {9E051386-86B7-4564-83D9-9F4B79A05820}
+  - name: "FRAME_High_Level_Data_Flow1"
+    guid: "{961AF323-5A95-4363-9F61-851AAEFBDA9F}"
+    type: "Interface"
+    stereotype: "FRAME_High_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Aggregation «component of» → FRAME_High_Level_Data_Flow1"  # {0CFE7449-03E4-4336-B3CF-20FAEDDEFA65} → {961AF323-5A95-4363-9F61-851AAEFBDA9F}
+      - "Association «OUT» → FRAME_Terminator1"  # {8AAD849C-650C-4555-A7C2-DC2E06274432} → {D991956C-2E7C-48e6-94A4-D8DFB72EA682}
+  - name: "FRAME_ITS_Service1"
+    guid: "{8FB5E9DA-4F1C-43d6-A3DE-2010F5DF4D23}"
+    type: "Class"
+    stereotype: "FRAME_ITS_Service"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Field of Application": ""
+    note: ""
+    links:
+      - "Abstraction → FRAME_Role1"  # {3A5FCC13-EB51-48bb-A9EC-DCE067EA7625} → {390C99C0-210E-4057-8A50-F2867029AC3C}
+      - "Association «defines» → ITS_Business_Process1"  # {B816ED8A-B5EA-44cd-96D9-7360886FA993} → {F841202B-B1CD-4e38-A1D4-CE53FEBF019F}
+  - name: "FRAME_ITS_Service_Process1"
+    guid: "{D36915A1-28D0-4a6b-BEE4-B5178CBC7ABE}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «defines» → FRAME_Role1"  # {D544D65A-75CD-44be-AEB0-01AB28895697} → {390C99C0-210E-4057-8A50-F2867029AC3C}
+  - name: "FRAME_ITS_Service_Process2"
+    guid: "{9003B875-05DA-4a13-BAAD-74A570BAFDDB}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «served by» → FRAME_Low_Level_Function1"  # {8ACF7328-87A4-4597-9734-2C0C93965B74} → {FC341B5A-C143-4a48-9CE2-9E872E4AC47E}
+  - name: "FRAME_Information_Object1"
+    guid: "{493843DB-6174-41e2-8C44-EC06981AFB7D}"
+    type: "Object"
+    stereotype: "FRAME_Information_Object"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Size": "1 Byte"
+      "Source": "Standard"
+      "Structure": "Data table"
+      "Subtype": "List of formats"
+      "Type": "Data"
+      "Validity period": "insert period e.g. 1.1.2000"
+      "auditing": ""
+      "categoryValue": ""
+      "dataInOut": "None"
+      "dataObjectRef": ""
+      "dataState": ""
+      "documentation": ""
+      "isCollection": "false"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "structure": ""
+      "structureRef": ""
+    note: ""
+  - name: "FRAME_Interface1"
+    guid: "{F972DE60-9A16-4a5e-9083-911A6DB63FA0}"
+    type: "Interface"
+    stereotype: "FRAME_Interface"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «use» → FRAME_Information_Object1"  # {E0599893-CE43-42f7-979D-DCDDB68E98F3} → {493843DB-6174-41e2-8C44-EC06981AFB7D}
+  - name: "FRAME_Low_Level_Data_Flow1"
+    guid: "{9E051386-86B7-4564-83D9-9F4B79A05820}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Aggregation «component of» → FRAME_High_Level_Data_Flow1"  # {8FB540B3-75E1-496c-8F18-74EEF2BF369E} → {961AF323-5A95-4363-9F61-851AAEFBDA9F}
+      - "Association «OUT» → FRAME_Low_Level_Function1"  # {2AD01AB8-92DD-4426-81D1-93F8D6937684} → {FC341B5A-C143-4a48-9CE2-9E872E4AC47E}
+      - "Association «OUT» → FRAME_Terminator1"  # {C1D17838-1AFD-4d1c-8F64-D7C2FB91FAF7} → {D991956C-2E7C-48e6-94A4-D8DFB72EA682}
+      - "Association «contains» → FRAME_Data_Object1"  # {F7DCD13D-9229-4920-A412-81D938147F7A} → {FABF89F2-A405-4c7e-91DA-527193E2EF42}
+  - name: "FRAME_Low_Level_Function1"
+    guid: "{FC341B5A-C143-4a48-9CE2-9E872E4AC47E}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «IN» → FRAME_Low_Level_Data_Flow1"  # {05472B92-7594-435b-B746-930682D4033D} → {9E051386-86B7-4564-83D9-9F4B79A05820}
+  - name: "FRAME_Organisation1"
+    guid: "{A7928193-447B-4c2e-8B3C-FC3B60DA2950}"
+    type: "Entity"
+    stereotype: "FRAME_Organisation"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «has» → ITS_Business_Process1"  # {BB71B394-499C-4447-9C02-7E3085A95596} → {F841202B-B1CD-4e38-A1D4-CE53FEBF019F}
+  - name: "FRAME_Physical_Data_Flow1"
+    guid: "{0D79CCAF-84A4-4c22-83F9-06149CED74C7}"
+    type: "Interface"
+    stereotype: "FRAME_Physical_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «contains» → FRAME_Information_Object1"  # {782A7850-A9DA-4014-858D-37C6B214A009} → {493843DB-6174-41e2-8C44-EC06981AFB7D}
+  - name: "FRAME_Role1"
+    guid: "{390C99C0-210E-4057-8A50-F2867029AC3C}"
+    type: "Object"
+    stereotype: "FRAME_Role"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Key Issue": ""
+      "Role Part Of Value Chain": ""
+      "Role Value": ""
+      "Role View": ""
+    note: ""
+    links:
+      - "Association «accepted by» → FRAME_Agreement1"  # {4478F62A-2E9B-4325-B85D-E8E85D8E1F90} → {36C7F26D-5FEC-4d3b-B4C0-311A760F5625}
+      - "Association «defines» → FRAME_Actor1"  # {8648CA87-276F-40b2-AA14-50C3C3948307} → {EB5C7450-8E09-4ca8-A83A-D20D0924A18D}
+      - "Association «defines» → FRAME_Organisation1"  # {62E55735-DF23-4df0-8067-B58DF9BC1C46} → {A7928193-447B-4c2e-8B3C-FC3B60DA2950}
+  - name: "FRAME_Terminator1"
+    guid: "{D991956C-2E7C-48e6-94A4-D8DFB72EA682}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Abstraction «is Type of» → FRAME_Terminator1"  # {58855110-EB55-4e1b-8273-4EB04200B8A8} → {D991956C-2E7C-48e6-94A4-D8DFB72EA682}
+      - "Association «IN» → FRAME_High_Level_Data_Flow1"  # {667724D9-81F8-4fe2-B319-AABDC9CD1C20} → {961AF323-5A95-4363-9F61-851AAEFBDA9F}
+      - "Association «IN» → FRAME_Low_Level_Data_Flow1"  # {291CF2AA-98F2-4b09-96AB-940070E6139E} → {9E051386-86B7-4564-83D9-9F4B79A05820}
+      - "Usage → FRAME_Application1"  # {2E53C4E9-8432-41d5-AF12-5582550ED7EC} → {0666C600-2186-4e2a-B67C-AF1EF4FAE31A}
+  - name: "FRAME_User_Need1"
+    guid: "{98BFF12E-F196-4cbe-B142-CB65883B6C96}"
+    type: "Requirement"
+    stereotype: "FRAME_User_Need"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «served by» → FRAME_Low_Level_Function1"  # {97F606E4-CA29-442e-A74F-EAE17132085C} → {FC341B5A-C143-4a48-9CE2-9E872E4AC47E}
+  - name: "ITS_Business_Process1"
+    guid: "{F841202B-B1CD-4e38-A1D4-CE53FEBF019F}"
+    type: "Class"
+    stereotype: "FRAME_ITS_Business_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""

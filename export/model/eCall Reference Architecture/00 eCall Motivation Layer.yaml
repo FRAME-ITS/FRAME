@@ -1,0 +1,33 @@
+package: "eCall Reference Architecture/00 eCall Motivation Layer"
+guid: "{E32661FE-1BBB-44b4-8C26-936D7293F8D5}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "‘in-vehicle equipment"
+    guid: "{63463E17-16BA-42a2-831C-8FDB828810B9}"
+    type: "Object"
+    stereotype: "FRAME_Information_Object"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Size": "1 Byte"
+      "Source": "Standard"
+      "Structure": "Data table"
+      "Subtype": "List of formats"
+      "Type": "Data"
+      "Validity period": "insert period e.g. 1.1.2000"
+      "auditing": ""
+      "categoryValue": ""
+      "dataInOut": "Input"
+      "dataObjectRef": ""
+      "dataState": ""
+      "documentation": ""
+      "isCollection": "false"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "structure": ""
+      "structureRef": ""
+    note: |
+      ‘in-vehicle equipment’ means equipment within the vehicle that provides or has access to the in-vehicle data required to perform the eCall transaction via a public mobile wireless communications network;

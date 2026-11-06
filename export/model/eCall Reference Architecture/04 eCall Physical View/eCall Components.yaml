@@ -1,0 +1,111 @@
+package: "eCall Reference Architecture/04 eCall Physical View/eCall Components"
+guid: "{8C616A7D-B1A7-40ed-9A30-ADDAE1F9090D}"
+alias: ""
+version: "1.0"
+note: |
+  eCall Components discribes all subsystems, hardware and software
+elements:
+  - name: "In Vehicle Data"
+    guid: "{271EEC8E-0939-493f-9C03-E04EA8015B18}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Usage → Vehicle Environment"  # {247FEE23-07BE-4a89-AF45-B78E02D6D76A} → {934987E7-82A3-48fb-A8DA-EDB2F5D850E7}
+  - name: "MNO - Core Network Unit"
+    guid: "{9917EC6A-D950-4ece-8EBF-98402D736795}"
+    type: "Component"
+    stereotype: "Component"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "LocationDescription": ""
+      "Standrdization": ""
+    note: ""
+    links:
+      - "Usage → eCall Acknowleg"  # {0F18BF0B-C05A-494f-9F04-B12C62D613B2} → {732A3A3D-3CBF-46ce-B423-5E37A7178F8F}
+      - "Usage → eCall MSD"  # {B851AADB-9011-4575-93B5-0D061AB8F398} → {A1CFA1A2-AFC7-4848-B368-634C9C2D1590}
+      - "Usage → eCall secured Voice Channel"  # {3666CCFB-390B-4666-92D6-7388DA895E4D} → {70BC610C-D747-478b-8EF1-88FF5CD2639D}
+      - "Usage → redirected eCall MSD"  # {247952A3-45FF-43ff-BFF7-4D9ACB269280} → {E34C9682-9FF3-4339-8DF1-ADCB2DF05B13}
+  - name: "PSAP - eCall Mamagement Application"
+    guid: "{75F571AB-C929-4046-9AA8-C4BB9C9F7D68}"
+    type: "Class"
+    stereotype: "HighLevelFunction"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "LLF Description": ""
+    note: ""
+  - name: "PSAP eCall Modem Server"
+    guid: "{56CFDFDB-8969-43ad-B329-1CA7CD510A4F}"
+    type: "Component"
+    stereotype: "Component"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "LocationDescription": ""
+      "Standrdization": ""
+    note: |
+      Public Service Answering Point
+    links:
+      - "Association → eCall secured Voice Channel"  # {520F83CD-C1FB-47fe-B8D9-F3C0759A6488} → {70BC610C-D747-478b-8EF1-88FF5CD2639D}
+  - name: "PSAP eCall Router"
+    guid: "{EC7D8FCD-EA59-4507-B0CD-31F4B8D47D38}"
+    type: "Component"
+    stereotype: "Component"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "LocationDescription": ""
+      "Standrdization": ""
+    note: ""
+    links:
+      - "Usage → eCall Acknowleg"  # {B3CC8A4C-44B3-4683-BDA5-CD23837E5646} → {732A3A3D-3CBF-46ce-B423-5E37A7178F8F}
+      - "Usage → redirected eCall MSD"  # {5A15A062-34D2-45dd-8716-EB1237D840E6} → {E34C9682-9FF3-4339-8DF1-ADCB2DF05B13}
+  - name: "Public Land Mobile Network"
+    guid: "{B5308147-42F5-4b91-817C-2BBAFA39A178}"
+    type: "Component"
+    stereotype: "Component"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "LocationDescription": ""
+      "Standrdization": ""
+    note: |
+      PLMN - Public Land Mobile Network
+    links:
+      - "Usage → PSAP Communication Interface"  # {42A5A878-B5F6-4e8b-9C2D-C4B6087EA241} → {8AD07FA3-85A0-40ad-BAD8-97C5667995AE}
+      - "Usage → eCall IVS Communication Interface"  # {035EA3B4-149B-4a7f-B5ED-54CD2B80A323} → {E037AEE6-0F39-4472-87B0-993104DF8C65}
+  - name: "eCall Onboard Unit"
+    guid: "{3244E2A9-F15D-4568-9A9D-EBAD4BE0DD8C}"
+    type: "Component"
+    stereotype: "Component"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "LocationDescription": ""
+      "Standrdization": ""
+    note: |
+      The eCall onboard unit is the integrated car part, which uses the car data to detect emergencies and trigger an eCall. It includes the handling of the communication with the PSAP.
+    links:
+      - "Usage → eCall MSD"  # {9A359DF6-99AD-4e69-BEFD-00FEC7B921A5} → {A1CFA1A2-AFC7-4848-B368-634C9C2D1590}
+      - "Usage → eCall secured Voice Channel"  # {FB08320A-A367-4686-96B5-54AD70D48BC1} → {70BC610C-D747-478b-8EF1-88FF5CD2639D}
+  - name: "eCall Service Application"
+    guid: "{4634AF0A-3C6B-4c69-9312-275A1639A828}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "App_Environment": ""
+    note: ""

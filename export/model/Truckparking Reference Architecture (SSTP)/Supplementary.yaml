@@ -1,0 +1,42 @@
+package: "Truckparking Reference Architecture (SSTP)/Supplementary"
+guid: "{2CACCCDC-62C5-4a11-8A4B-4FC0D396C784}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: ""
+    guid: "{972E3D1F-B64B-4937-B0FD-8B12E5DB1224}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Dependency → the system has to be able to provide static information about the rest areas"  # {39AE2EA6-FC03-419a-AB83-BFB039394842} → {504DA94A-B586-4f07-A38E-062DE15D83E9}
+  - name: ""
+    guid: "{9776979A-D179-4907-BE96-E99223D92E41}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Dependency → the information about rest areas should be accessible through a national / international access point"  # {4CB7DDA9-76C8-4793-B854-EAE7512618D5} → {17869CC2-D92D-434d-9447-2E985315D699}
+  - name: ""
+    guid: "{CB1AD59E-35CF-4979-9EA7-2ABCF588A2EA}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Dependency → the system has to be able to provide dynamic information about the priority rest areas"  # {8E70A12C-F0B5-4407-A29A-215F20F6E864} → {10152F85-8201-4766-90F2-744F74214129}
+  - name: ""
+    guid: "{E1D1F3D5-B9C0-47a1-9839-CD4798C61009}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Dependency → driver shall be able to make a trip plan prior to journey and see rest areas along their route"  # {2740147B-8525-45ec-A23B-09F1AF6F19B1} → {2A715C1F-872B-4045-8DC5-7501947829AC}

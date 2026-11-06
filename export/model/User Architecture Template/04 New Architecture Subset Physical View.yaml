@@ -1,0 +1,14 @@
+package: "User Architecture Template/04 New Architecture Subset Physical View"
+guid: "{33A1FF40-4313-4041-975C-F208C32F949E}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: ""
+    guid: "{7419B1FA-17E4-4c21-8E2B-581ECC3507A3}"
+    type: "Text"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      ➢ Start with building the Physical View by creating "Components" from the FRAME Toolbox

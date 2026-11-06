@@ -1,0 +1,13 @@
+package: "eCall Reference Architecture/03 eCall Organisational View"
+guid: "{B7F3D503-737D-4115-BF0C-D058C08770D3}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "eCall System Boundary"
+    guid: "{FB5AF7B5-235D-4dda-B6D5-AF3AFD76DE16}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""

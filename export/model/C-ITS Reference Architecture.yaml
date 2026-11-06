@@ -1,0 +1,26 @@
+package: "C-ITS Reference Architecture"
+elements:
+  - name: ""
+    guid: "{E5A9E925-E905-4be9-A422-6D36EDA68998}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "Text"
+    guid: "{60418A69-2090-4900-BF6A-D5F13105539E}"
+    type: "Text"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      A first view of the C-ITS station - which is defined in ETSI EN302 665
+      and used as core element in the central, roadside, vehicle and mobile stations in C-ITS is depicted here.
+  - name: "Text"
+    guid: "{E7268BDB-C841-4f7f-A6D8-C482F169A95F}"
+    type: "Text"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      C-ITS Reference Architecture V1.0

@@ -1,0 +1,174 @@
+package: "C-ITS Reference Architecture/01 C-ITS User Needs/User needs topic 2 - DENM Message"
+guid: "{EEBDB9F1-FB46-4c16-A43D-38D334942757}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "C-ITS_Service_Process based on DENM"
+    guid: "{13434962-74A0-48e7-95B1-5857FBD29BE5}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      C-ITS Services based on DENM basic message standards, and specifications of roadside communication profile and vehicle BSP - Basic System Profile
+    links:
+      - "Association «adheres to» → FRAME_Specification C-Roads Basic Interface"  # {09C2867B-2EAD-4140-B20B-5B42973D49E7} → {C81439A3-422D-4047-A3B9-0356C7509D7A}
+      - "Association «adheres to» → FRAME_Specification C2C CC Basic System Profile"  # {F18ACBBC-C90C-451e-BB28-8DBA2A5086C4} → {3DACFB0E-CADC-4ebc-9731-A007BD2AAC46}
+      - "Association «served by» → F9.3.1"  # {C46D0C79-8213-4f7c-9DC1-AA535C91AD3E} → {426EB23D-5A11-4a41-B0F1-DC074F7A8F66}
+      - "Association «served by» → F9.3.10"  # {BCB4C758-70DC-4b58-9FF9-B31ADB299CE7} → {CBC47407-8DA7-4361-B854-B957B24E3E06}
+      - "Association «served by» → F9.3.11"  # {A1F9CAB2-F667-4413-B72A-86EA084034C9} → {674B9301-BA0A-4918-AC89-FC60F4C85575}
+      - "Association «served by» → F9.3.12"  # {1D5B56D5-23F9-4868-B659-62CF21F53DB8} → {FA67C3CD-B926-4517-A44A-B06CC02DC604}
+      - "Association «served by» → F9.3.13"  # {B20E7EAD-D69F-47e6-AEF8-DEF3DA166E78} → {8833A6EE-C19D-4c1f-8BFE-172D44150651}
+      - "Association «served by» → F9.3.14"  # {4336B40C-41F0-4bc8-A9E4-0CF3CA7E6077} → {F59058D3-E60B-4ed0-BC45-E322229ED55B}
+      - "Association «served by» → F9.3.15"  # {A36DAC3B-C783-41fb-B54E-B33BE96638B7} → {6CD6F00D-A573-459a-84C7-8DA6DE1875FF}
+      - "Association «served by» → F9.3.2"  # {0F888CD0-6174-463b-B738-97E22CDE7917} → {AD178D7C-FCDD-46ae-A5EA-B452D6CF95C6}
+      - "Association «served by» → F9.3.3"  # {B0702115-9923-4565-92FC-FBEA44F5AE0A} → {68E5E5E3-4B48-458c-AB12-15AC94DFCFC7}
+      - "Association «served by» → F9.3.4"  # {99C6F424-8116-4e66-A473-0A2456EB8108} → {E2D0022E-A1CE-4a37-9BE5-E15E3C050CD9}
+      - "Association «served by» → F9.3.5"  # {A911F28C-8DAD-40af-AEEA-39AF413BD4FA} → {EC4D1324-FFBE-47f8-97EA-D9D47946FC4F}
+      - "Association «served by» → F9.3.6"  # {C75FD18E-8734-48d8-B66F-55840D752915} → {69EABC8B-51F2-455b-BAD7-69E37E73053E}
+      - "Association «served by» → F9.3.7"  # {94CD5AE9-F9F4-4eff-A1F7-6800B79B5377} → {C9DDA2C9-1966-4754-B5BE-F6ED8C66DB89}
+      - "Association «served by» → F9.3.8"  # {808856C7-300D-4c3b-9EE9-8CEAD2E12537} → {15447CFA-1FAE-45d7-8ECC-26CBBD75B67E}
+      - "Association «served by» → F9.3.9"  # {6CD73C82-96DA-4666-9256-DC934FB92A35} → {E659B303-DD48-4706-980D-5B6ED7362F06}
+  - name: "FRAME_User_Need_Topic2 DENM Messages"
+    guid: "{1587EDF5-B476-4260-9601-37050417B274}"
+    type: "Requirement"
+    stereotype: "FRAME_User_Need_Topic"
+    keywords: "DENM"
+    status: "Proposed"
+    version: "1.0"
+    order: 1
+    note: |
+      User Need Topics are defined as follows:
+      1 - C-ITS SYSTEM related
+      2 - DENM related
+      3 - CAM related
+      4 - IVIM related
+      5 - SPAT/MAP related
+      6 -for future messages to be defined
+    links:
+      - "Abstraction → 11.1.2.1"  # {79E8EA6B-1D8A-42e0-A02D-5B067278DAFB} → {E7DEED82-A5C1-4893-9C19-57850FD37F02}
+      - "Abstraction → 11.1.2.1"  # {957EF3BD-B1D7-4ed6-A14D-B3DADB3029FD} → {E7DEED82-A5C1-4893-9C19-57850FD37F02}
+      - "Abstraction → 11.1.2.10"  # {29F4377E-2E62-425e-A2AB-29031A755ADD} → {FE2AEAA8-D6FD-4e83-BD90-F8734D28393C}
+      - "Abstraction → 11.1.2.11"  # {7DA6493B-B12E-4305-8E05-3A6C45AC9936} → {1466AFAE-1EDF-4934-91D5-A0A822B57402}
+      - "Abstraction → 11.1.2.2"  # {B76317A5-17CB-4ee6-8E76-10A32F574669} → {ECBE2EB5-0BC8-4414-A2A8-ED70C75AC56A}
+      - "Abstraction → 11.1.2.3"  # {19E66973-3305-4390-97DB-C5CA68A72952} → {F83CC4AC-FBB2-428b-B7DE-D733F23713AE}
+      - "Abstraction → 11.1.2.4"  # {5B641E26-1CE3-4f62-B0BE-E21980301742} → {10B39FFC-D82F-4ce9-B8FE-0CC57DC0F250}
+      - "Abstraction → 11.1.2.5"  # {2C6E1510-9038-42bd-9CCD-BA990F54F3BF} → {A3B828A5-AB0A-46ae-B81B-D13AF78204E3}
+      - "Abstraction → 11.1.2.6"  # {9220F914-4267-4588-981D-E7283DA7BFC4} → {2363668B-9537-4a53-99DE-58596F53F705}
+      - "Abstraction → 11.1.2.7"  # {72E2F6F3-C8FB-42ac-A37D-6770AEF7DD78} → {4B6D14AF-63AB-49fb-8C5E-58FCF8E79CFF}
+      - "Abstraction → 11.1.2.8"  # {E95D2BEC-CEDE-407f-9EE7-18A6BA441762} → {3EB194FA-6F40-4129-B783-9759C359E752}
+      - "Abstraction → 11.1.2.9"  # {1F9D2ACA-5383-4274-9176-B8A8AFA87EC9} → {9BDD1FB0-FAD1-4afb-AAB1-42F6C1B6E6ED}
+  - name: "11.1.2.1"
+    guid: "{E7DEED82-A5C1-4893-9C19-57850FD37F02}"
+    type: "Requirement"
+    stereotype: "FRAME_User_Need"
+    keywords: "DENM"
+    status: "Proposed"
+    version: "1.0"
+    order: 2
+    note: |
+      The system shall prevent that the attention of the driver can fade with regular or longer road works.
+  - name: "11.1.2.2"
+    guid: "{ECBE2EB5-0BC8-4414-A2A8-ED70C75AC56A}"
+    type: "Requirement"
+    stereotype: "FRAME_User_Need"
+    keywords: "DENM"
+    status: "Proposed"
+    version: "1.0"
+    order: 3
+    note: |
+      For DENM based use cases involving road operator vehicles the System shall support the safety of the involved road operators and road users. (The road operator vehicles may be salting, ploughing, bypassing towards incidents, protecting an accident zone, or recover a vehicle )
+  - name: "11.1.2.3"
+    guid: "{F83CC4AC-FBB2-428b-B7DE-D733F23713AE}"
+    type: "Requirement"
+    stereotype: "FRAME_User_Need"
+    keywords: "DENM"
+    status: "Proposed"
+    version: "1.0"
+    order: 4
+    note: |
+      The system shall enhance more attentive and adjusted driving while approaching and passing a work zone or road operator vehicles in operation by providing in-car information and warnings about road works, changes to the road layout and applicable driving regulations.
+  - name: "11.1.2.4"
+    guid: "{10B39FFC-D82F-4ce9-B8FE-0CC57DC0F250}"
+    type: "Requirement"
+    stereotype: "FRAME_User_Need"
+    keywords: "DENM"
+    status: "Proposed"
+    version: "1.0"
+    order: 5
+    note: |
+      For DENM based use cases of RWW the system shall inform the road user when approaching a work zone and will simultaneously provide information on the changes in the road layout for better traffic flow and less accidents.
+  - name: "11.1.2.5"
+    guid: "{A3B828A5-AB0A-46ae-B81B-D13AF78204E3}"
+    type: "Requirement"
+    stereotype: "FRAME_User_Need"
+    keywords: "DENM"
+    status: "Proposed"
+    version: "1.0"
+    order: 6
+    note: |
+      The system shall be able to inform  road users about the closure of lane(s) (without the closure of the entire road).
+  - name: "11.1.2.6"
+    guid: "{2363668B-9537-4a53-99DE-58596F53F705}"
+    type: "Requirement"
+    stereotype: "FRAME_User_Need"
+    keywords: "DENM"
+    status: "Proposed"
+    version: "1.0"
+    order: 7
+    note: |
+      The system shall reduce the risk and number of accidents and dangerous situations for road users and workers at RWW sites.
+  - name: "11.1.2.7"
+    guid: "{4B6D14AF-63AB-49fb-8C5E-58FCF8E79CFF}"
+    type: "Requirement"
+    stereotype: "FRAME_User_Need"
+    keywords: "DENM"
+    status: "Proposed"
+    version: "1.0"
+    order: 8
+    note: |
+      The System shall be applied to Road works equipped with warning beacons / temporary road signs / illuminated lights arrows, on a road with separate carriageways or on a dual carriageway.
+  - name: "11.1.2.8"
+    guid: "{3EB194FA-6F40-4129-B783-9759C359E752}"
+    type: "Requirement"
+    stereotype: "FRAME_User_Need"
+    keywords: "DENM"
+    status: "Proposed"
+    version: "1.0"
+    order: 9
+    note: |
+      For DENM based use cases of RWW the system shall support the use case scenarios:
+      1.Static planned road works (TOC Triggered):
+      2.Stand-Alone Mode:
+      3.Augmented (Stand-alone then TOC Triggered):
+  - name: "11.1.2.9"
+    guid: "{9BDD1FB0-FAD1-4afb-AAB1-42F6C1B6E6ED}"
+    type: "Requirement"
+    stereotype: "FRAME_User_Need"
+    keywords: "DENM"
+    status: "Proposed"
+    version: "1.0"
+    order: 10
+    note: |
+      The system shall be able to interact with other copies of the same traffic event message and provide consistent information about the same road works event.
+  - name: "11.1.2.10"
+    guid: "{FE2AEAA8-D6FD-4e83-BD90-F8734D28393C}"
+    type: "Requirement"
+    stereotype: "FRAME_User_Need"
+    status: "Proposed"
+    version: "1.0"
+    order: 11
+    note: |
+      For DENM based use cases of RWW the system shall enable the Traffic Manager to send applicable and valid traffic messages for all types  of roads and to all relevant vehicles.
+  - name: "11.1.2.11"
+    guid: "{1466AFAE-1EDF-4934-91D5-A0A822B57402}"
+    type: "Requirement"
+    stereotype: "FRAME_User_Need"
+    keywords: "DENM"
+    status: "Proposed"
+    version: "1.0"
+    order: 58
+    note: |
+      The system shall inform the road user about a risk of discomfort on the road (slowing down, manoeuvring)

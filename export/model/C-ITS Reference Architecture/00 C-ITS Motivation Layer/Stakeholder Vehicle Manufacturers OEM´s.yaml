@@ -1,0 +1,42 @@
+package: "C-ITS Reference Architecture/00 C-ITS Motivation Layer/Stakeholder Vehicle Manufacturers OEM´s"
+guid: "{64F0D44D-2880-49e7-98B5-7D29320D4B1E}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "C-ITS in vehicle C-ITS node or station"
+    guid: "{690E611B-6935-49a1-AC73-75D8F0F7AB80}"
+    type: "Actor"
+    stereotype: "FRAME_Actor"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      In vehicle node of the C-ITS network, can be implemented via short range and long range communication interfaces.
+    links:
+      - "Abstraction → Provide precise and targeted traffic information to drivers"  # {90C8A4EC-9AB0-4387-AACB-F7DA7600EF62} → {2005753F-B9A4-4606-B44D-993B6855C04B}
+      - "Abstraction → Vehicle Manufacturors - OEM´s"  # {8817BDC5-FDD1-42f1-87BE-443C15BF6919} → {ED38DEDB-53CC-42c9-9686-EF58A2EB5744}
+      - "Realisation → Policy Authority"  # {6806AA2E-19A7-4186-A40D-640247C529B2} → {43FC96D4-0EC2-4547-AF9E-35CF41527D97}
+  - name: "Provide precise and targeted traffic information to drivers"
+    guid: "{2005753F-B9A4-4606-B44D-993B6855C04B}"
+    type: "Artifact"
+    stereotype: "FRAME_Desired_Architecture_Goals"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Use C-ITS messages to inform drivers on the networks in advance of dangerous traffic situations.
+  - name: "Vehicle Manufacturors - OEM´s"
+    guid: "{ED38DEDB-53CC-42c9-9686-EF58A2EB5744}"
+    type: "Actor"
+    stereotype: "FRAME_Stakeholder"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Members of the C2C CC implementing C-ITS services, in their vehicles, based on the latest BSP - Basic System Profile,
+      for details see at: https://www.car-2-car.org/documents/basic-system-profile/
+    links:
+      - "Association «defines» → eCall Vision"  # {13ADD8CB-D5F9-45da-BA91-C38C19460B07} → {7EF14ABB-8BB1-457c-AA34-2C2E87E4192A}
+      - "Association «fulfilled by» → Fullfillment of C-ITS related standards"  # {A0CB263A-AE6C-4a05-8A34-6DBC870A25A6} → {AFF20E0F-FAF3-40e4-9BEB-CE9311A11A56}
+      - "Association «has» → Provide precise and targeted traffic information to drivers"  # {CAFDB5F9-CC2A-4d9c-A75F-A2BA40B4C352} → {2005753F-B9A4-4606-B44D-993B6855C04B}

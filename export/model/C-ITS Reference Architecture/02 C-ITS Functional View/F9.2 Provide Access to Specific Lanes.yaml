@@ -1,0 +1,16 @@
+package: "C-ITS Reference Architecture/02 C-ITS Functional View/F9.2 Provide Access to Specific Lanes"
+guid: "{8BF94E8B-2399-4482-BEDA-6F6E7DAB566F}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "F9.2 Provide Access to Specific Lanes"
+    guid: "{FC09C0FD-642C-4559-A5A3-5A352589F9F1}"
+    type: "Activity"
+    stereotype: "FRAME_High_Level_Function"
+    keywords: "Functions"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      This High Level Function is related to specific lanes and their use based on vehicle parameters, e.g. vehicle categories, vehicle emissions standards, vehicles passenger Nr. status, ...

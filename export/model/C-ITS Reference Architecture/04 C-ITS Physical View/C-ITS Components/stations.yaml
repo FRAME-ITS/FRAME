@@ -1,0 +1,172 @@
+package: "C-ITS Reference Architecture/04 C-ITS Physical View/C-ITS Components/ stations"
+guid: "{035DCBFC-2D7F-4d72-A370-88425DDB0F3E}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "C-ITS Central Station (1 of many)"
+    guid: "{AE369DF3-E879-4fb6-9EDC-AF4CB1DC3110}"
+    type: "Component"
+    stereotype: "FRAME_Component"
+    keywords: "C-ITS station"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "LocationDescription": ""
+      "Standrdization": ""
+    note: |
+      C-ITS station in the TMC generating the basic C-ITS messages for all day one C-ITS applications
+      
+      functionality needed here:
+      
+      logic for message distribution
+    links:
+      - "Association «adheres to» → ITS Station reference archtecture, ETSI EN 302 665, V1.1.1"  # {5B157940-F2BC-4dc3-B45B-2993C8A47283} → {9A07E1AC-EB22-4c4a-BFD2-1ACB61E752FF}
+      - "Realisation → C-ITS_Data_Interface1"  # {2E18970D-794D-47f6-897C-5EB565AD32B6} → {69F43A29-1092-4f1a-97D5-D4A55059A8E1}
+      - "Usage → BI  - Basic Interface specification"  # {BA9D4637-70C4-4e39-90E0-6978D21204BE} → {88F19296-B6FB-42a8-8E42-0F6E3B071E66}
+      - "Usage → C-ITS Message Broker (1 of many)"  # {8C518826-89B0-4773-9D1C-F1198143B3F7} → {401988AF-A65A-4869-B1B9-AAD905166825}
+      - "Usage → C-ITS Roadside Station (1 of many)"  # {754E2CA3-DCE7-4734-8554-D0D92096D667} → {9A324D4E-58E2-444d-9E05-C572271259F5}
+      - "Usage → FRAME_Physical_Data_Flow4"  # {0C818ED6-4CCF-4f27-9511-7876AAAD2807} → {BA9666D8-2AB1-4708-ADD8-3BFB462F6B66}
+      - "Usage → Mobile C-ITS Station (1 of many)"  # {D4700C7D-3868-4aef-8F35-973070569622} → {98B79CD4-C68B-45c5-B351-175DA81F1322}
+  - name: "C-ITS Message Broker (1 of many)"
+    guid: "{401988AF-A65A-4869-B1B9-AAD905166825}"
+    type: "Component"
+    stereotype: "FRAME_Component"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "LocationDescription": ""
+      "Standrdization": ""
+    note: |
+      This is an AMQP based Message Broker, according to the BI Specification in the latest version. (currently 2.0)
+    links:
+      - "Association «adheres to» → C-ITS Communication profile"  # {32B61619-AB98-4b86-A19C-23850AE26FF2} → {44529316-3EEE-442e-BF73-224DC52C9BDC}
+      - "Usage → BI  - Basic Interface specification"  # {6C2261E7-7643-445f-8375-708DA41B4DB2} → {88F19296-B6FB-42a8-8E42-0F6E3B071E66}
+      - "Usage → I2V - V2I Interface"  # {A011056A-870F-4ee3-9129-59DA1795785C} → {78A4A59A-331A-4ca2-82C3-F9CEC659C003}
+  - name: "C-ITS Message Broker 2 (1 of many)"
+    guid: "{E4D4E361-B2A7-4a95-8161-EFA89B9FB9CE}"
+    type: "Component"
+    stereotype: "FRAME_Component"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "LocationDescription": ""
+      "Standrdization": ""
+    note: |
+      This is an AMQP based Message Broker, according to the BI Specification in the latest version. (currently 2.0)
+    links:
+      - "Usage → I2V - V2I Interface"  # {104F5D2B-BCF1-47e6-B1AC-50F53B730976} → {78A4A59A-331A-4ca2-82C3-F9CEC659C003}
+  - name: "C-ITS Message Client (1 of many)"
+    guid: "{04B4C018-1480-497d-A582-626E4AC39CD0}"
+    type: "Component"
+    stereotype: "FRAME_Component"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "LocationDescription": ""
+      "Standrdization": ""
+    note: |
+      This is an AMQP based Message Client, according to the BI Specification in the latest version. (currently 2.0)
+    links:
+      - "Usage → C-ITS Message Broker (1 of many)"  # {FB61868B-096A-4ce8-9361-18D1F353A397} → {401988AF-A65A-4869-B1B9-AAD905166825}
+      - "Usage → C-ITS Mobile Station (1 of many)"  # {ED4B6CC2-8682-47d8-A385-244133D158EF} → {9935DD79-BBF5-4a88-B2D9-C69C43E4D5C1}
+      - "Usage → FRAME_Physical_Data_Flow5"  # {71E4EA15-6B9E-4219-A925-27A598FFCEA3} → {B15DEDC4-E1DA-4326-BE19-6EAF316FBCAA}
+      - "Usage → I2V - V2I Interface"  # {2CE748B3-EE92-432d-8097-47F036BE9D66} → {78A4A59A-331A-4ca2-82C3-F9CEC659C003}
+  - name: "C-ITS Mobile Station (1 of many)"
+    guid: "{9935DD79-BBF5-4a88-B2D9-C69C43E4D5C1}"
+    type: "Component"
+    stereotype: "FRAME_Component"
+    keywords: "C-ITS Station"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "LocationDescription": ""
+      "Standrdization": ""
+    note: |
+      C-ITS Mobile Station able to send / receive and process all C-ITS Message types necessary for day one C-ITS applications.
+    links:
+      - "Association «adheres to» → ITS Station reference archtecture, ETSI EN 302 665, V1.1.1"  # {1A49C67E-4241-4e3c-B756-35FBE50437C7} → {9A07E1AC-EB22-4c4a-BFD2-1ACB61E752FF}
+  - name: "C-ITS Roadside Station (1 of many)"
+    guid: "{9A324D4E-58E2-444d-9E05-C572271259F5}"
+    type: "Component"
+    stereotype: "FRAME_Component"
+    keywords: "C-ITS Station"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "LocationDescription": ""
+      "Standrdization": ""
+    note: |
+      C-ITS Roadside station able to send all C-ITS Message types needed to serve all day one C-ITS applications, and to receive all C-ITS message types in the communication range.
+    links:
+      - "Association «adheres to» → ITS Station reference archtecture, ETSI EN 302 665, V1.1.1"  # {3E94DA25-D085-4f4e-9E5D-E9C915AE47FC} → {9A07E1AC-EB22-4c4a-BFD2-1ACB61E752FF}
+      - "Usage → C-ITS Vehicle Station (1 of many)"  # {02A3A4D9-5B37-4482-9FC7-9EB3CF219A64} → {7F84A398-1885-4e5e-9E0C-6E497C2EBBDF}
+      - "Usage → I2V - V2I Interface"  # {3282AE68-A171-4bc7-8601-41B5DB5164D1} → {CC29E521-3562-43ca-A32B-59024B2903C4}
+  - name: "C-ITS Vehicle Station (1 of many)"
+    guid: "{7F84A398-1885-4e5e-9E0C-6E497C2EBBDF}"
+    type: "Component"
+    stereotype: "FRAME_Component"
+    keywords: "C-ITS Station"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "LocationDescription": ""
+      "Standrdization": ""
+    note: |
+      C-ITS Vehicle station defined in the latest version of the C2C BSP, currently v1.5 able to send / receive all C-ITS Message types for day one C-ITS applications.
+    links:
+      - "Association «adheres to» → ITS Station reference archtecture, ETSI EN 302 665, V1.1.1"  # {83969128-44FE-4963-880B-E37AA87B16EB} → {9A07E1AC-EB22-4c4a-BFD2-1ACB61E752FF}
+      - "Usage → C-ITS Mobile Station (1 of many)"  # {B498BB49-061D-4878-B997-77466FFF26BE} → {9935DD79-BBF5-4a88-B2D9-C69C43E4D5C1}
+      - "Usage → I2V - V2I Interface"  # {60DB29A7-1FFC-436f-B0D4-AEBE7FE34050} → {CC29E521-3562-43ca-A32B-59024B2903C4}
+  - name: "FRAME_Component1"
+    guid: "{4381C859-E34B-458d-BCD5-74AC251B68D0}"
+    type: "Component"
+    stereotype: "FRAME_Component"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "LocationDescription": ""
+      "Standrdization": ""
+    note: ""
+  - name: "Mobile C-ITS Station (1 of many)"
+    guid: "{98B79CD4-C68B-45c5-B351-175DA81F1322}"
+    type: "Component"
+    stereotype: "FRAME_Component"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "LocationDescription": ""
+      "Standrdization": ""
+    note: |
+      C-ITS Stations included in roadworks trailers with VMS for communicating C-ITS message and signs
+    links:
+      - "Association «adheres to» → ITS Station reference archtecture, ETSI EN 302 665, V1.1.1"  # {9590BAD6-5476-4d6b-9A63-475B971811D2} → {9A07E1AC-EB22-4c4a-BFD2-1ACB61E752FF}
+      - "Usage → C-ITS Vehicle Station (1 of many)"  # {6CAB0874-3835-48af-9AF3-96130CCED196} → {7F84A398-1885-4e5e-9E0C-6E497C2EBBDF}
+  - name: "TMC - component"
+    guid: "{2343B72F-4A73-49c1-A012-8F9501B667AF}"
+    type: "Component"
+    stereotype: "FRAME_Component"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "LocationDescription": ""
+      "Standrdization": ""
+    note: |
+      Gathering Data,
+      Processing data
+      Sending data in DATEX II Formats . .
+      Funtion: Data needs to be formatted using data formats according to DATEX II standards
+      
+      Functions TM would be linked to this component.
+    links:
+      - "Realisation → C-ITS Central Station (1 of many)"  # {5D213F7B-1718-4dd5-93B0-244ECDD21DA7} → {AE369DF3-E879-4fb6-9EDC-AF4CB1DC3110}

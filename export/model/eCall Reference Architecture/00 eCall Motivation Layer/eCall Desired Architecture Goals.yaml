@@ -1,0 +1,61 @@
+package: "eCall Reference Architecture/00 eCall Motivation Layer/eCall Desired Architecture Goals"
+guid: "{3C73FE4E-DAC6-4349-84B9-A598E29E0F59}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "Desired_Architecture_Goals2"
+    guid: "{0F7E4E12-F2CB-44d4-8962-C63B689F0E6F}"
+    type: "Artifact"
+    stereotype: "Desired_Architecture_Goals"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "Reduce the number of fatalities"
+    guid: "{34F630AB-610D-40f1-8E8C-723F230EC060}"
+    type: "Artifact"
+    stereotype: "Desired_Architecture_Goals"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      It is expected that, by reducing the response time of the emergency services, the interoperable EU-wide eCall will reduce the number of fatalities in the Union as well as the severity of injuries caused by road accidents.
+  - name: "Savings for Society"
+    guid: "{858ED6C3-0AA8-4715-B889-F4CC54246226}"
+    type: "Artifact"
+    stereotype: "Desired_Architecture_Goals"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The interoperable EU-wide eCall is also expected to bring savings to society by improving incident management and by reducing road congestion and secondary accidents.
+  - name: "Working document on data protection and privacy implications in eCall initiative"
+    guid: "{BEF04FC0-F222-4887-8DF7-EE4DF627B208}"
+    type: "Artifact"
+    stereotype: "FRAME_Desired_Architecture_Goals"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Without prejudice to Directive 95/46/EC, Member States shall take into account, when deploying the eCall PSAPs infrastructure, the ‘Working document on data protection and privacy implications in eCall initiative’ adopted by the Article 29 Working Party on 26 September 2006 (1609/06/EN — WP 125).
+  - name: "common technical solutions and practices for the provision of emergency call service"
+    guid: "{CEE4B317-9A0B-4bfb-B8BB-59CD62826F24}"
+    type: "Artifact"
+    stereotype: "FRAME_Desired_Architecture_Goals"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      It is important that all Member States should develop common technical solutions and practices for the provision of emergency call services. The development of common technical solutions should be pursued in particular through the European standardisation organisations, in order to facilitate the introduction of the eCall service, ensure the interoperability and continuity of the service throughout the Union, and reduce the costs of implementation for the Union as a whole.
+  - name: "ensure that personal data are protected against misuse"
+    guid: "{980598AE-9786-4caf-919D-C4859E02A826}"
+    type: "Artifact"
+    stereotype: "FRAME_Desired_Architecture_Goals"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The PSAPs, including eCall PSAPs, shall be regarded as data controllers within the meaning of Article 2(d) of Directive 95/46/EC. Where the eCall data is to be sent to other emergency control centres or service partners pursuant to Article 3(5), the latter shall also be considered as data controllers. Member States shall ensure that the processing of personal data in the context of the handling of the eCalls by the PSAPs, the emergency services and service partners is carried out in accordance with Directives 95/46/EC and 2002/58/EC, and that this compliance is demonstrated to the national data protection authorities.
+      
+      In particular, Member States shall ensure that personal data are protected against misuse, including unlawful access, alteration or loss, and that protocols concerning personal data storage, retention duration, processing and protection are established at the appropriate level and properly observed.

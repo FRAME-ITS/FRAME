@@ -1,0 +1,46 @@
+package: "C-ITS Reference Architecture/00 C-ITS Motivation Layer/Stakeholders Policy Authorities"
+guid: "{92EBF26A-B10F-4b15-8AB3-FA3AFCC53063}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "C-ITS security provider - EU CCMS Operator"
+    guid: "{DB13544A-5F4F-435b-ADDC-EAA99982408D}"
+    type: "Actor"
+    stereotype: "FRAME_Actor"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      By providing the central elements of the EU CCMS System, the secure operations of C-ITS systems in Europe are supported.
+    links:
+      - "Abstraction «is Type of» → European Commision"  # {ED145BA9-E8CD-4546-A504-6D156B006D3A} → {B9CE1396-B9B1-4962-91B3-E8C98AFCCA1D}
+      - "Realisation → Policy Authority"  # {A22EBBA2-0DC3-4e81-ABC1-A227A261F705} → {43FC96D4-0EC2-4547-AF9E-35CF41527D97}
+      - "Realisation → Secure and reliable data communication infrastructure for Europe"  # {A99E4121-8BD4-4e4d-9C9B-1DED565989DB} → {75335A61-BA26-4372-80C5-8FAF2B1B8BB1}
+  - name: "EU Member states, public authorities"
+    guid: "{07E0D60C-2D04-4079-A5AF-99126D64B7DF}"
+    type: "Actor"
+    stereotype: "FRAME_Stakeholder"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      EU Member states interested in C-ITS services and enhanced road safety, but also in the aspects of digitalisation in transport.
+    links:
+      - "Association «defines» → eCall Vision"  # {6F384382-53BE-444e-B2CE-B8E7884A7317} → {7EF14ABB-8BB1-457c-AA34-2C2E87E4192A}
+      - "Association «fulfilled by» → Fullfillment of C-ITS related standards"  # {FA1C8310-01E2-404c-B4B7-7CF08023A6EF} → {AFF20E0F-FAF3-40e4-9BEB-CE9311A11A56}
+      - "Association «has» → EU Member state or public authority"  # {22F86612-6392-4c77-A5F5-FE8CC31065E7} → {8B01D081-A345-4955-9BC3-6D3A833F19AD}
+  - name: "European Commision"
+    guid: "{B9CE1396-B9B1-4962-91B3-E8C98AFCCA1D}"
+    type: "Actor"
+    stereotype: "FRAME_Stakeholder"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      In the Commission communication,  A European strategy on Cooperative Intelligent Transport Systems, a milestone towards cooperative, connected and automated mobility, COM(2016) 766 final Brussels, 30.11.2016, therefore adopted the necessary specifications in this field.
+    links:
+      - "Abstraction → Reduce the number of fatalities"  # {8DCCDC7C-5B5F-4b6f-85DA-84201FDF3C0C} → {34F630AB-610D-40f1-8E8C-723F230EC060}
+      - "Association «defines» → eCall Vision"  # {56A92E8C-964A-4c9b-84B6-A922F9F0FD41} → {7EF14ABB-8BB1-457c-AA34-2C2E87E4192A}
+      - "Association «has» → Enhance Road Safety Now"  # {F3D39101-EFB6-45f0-875C-C6EA3A4A71D8} → {09567610-25BE-4c82-AE9F-B908DFB23C70}
+      - "Association «has» → Secure and reliable data communication infrastructure for Europe"  # {FDE1C6DC-7D23-41d0-B059-6592033BC480} → {75335A61-BA26-4372-80C5-8FAF2B1B8BB1}

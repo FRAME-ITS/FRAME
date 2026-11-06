@@ -1,0 +1,1854 @@
+package: "Frame Repository/Frame Functional View/Terminators & Terminator Diagrams/Terminators"
+guid: "{8A6CC276-B3DE-47f8-A7F9-1D52B52B3365}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "Bookable Service Provider"
+    guid: "{B20814C3-91DB-43f3-9F58-BCBE50FB1ABD}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the External Service Provider Terminator and shall represent a form of External Service Provider that provides information about services such as accommodation, leisure and sports events for which a booking is needed for attendance.  Functionality in the system shall be able to send this Terminator data objects that request particular information be provided.  The data objects received in response by the functionality shall be used in the provision of ITS Services.  Any booking and/or payment for services about which information has been provided are expected to be carried out by functionality not included within the system.
+      
+      Mnemonic: esp.bsp
+    links:
+      - "Aggregation «component of» → External Service Provider"  # {3796D12A-BCA9-4158-9478-9E85EBFC67DE} → {73960376-E008-4811-B5BB-B58A1E143730}
+      - "Association «IN» → fesp.bsp-bookable_service_information"  # {0629471A-F823-48be-8BEA-C6F55FB41537} → {EE9123A0-6E79-4686-B6D2-0931651A7677}
+  - name: "Bridge Operator"
+    guid: "{A97F4F7D-0727-40a6-BB92-CDAC21D9D2D2}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Operator Terminator and shall represent a human entity that is responsible for the management of road bridge(s) that form part of the road network managed by functionality in the system.  It is expected that this Terminator shall provide inputs from which data objects can be created by system functionality to represent commands, data and requests for use by functionality in the system. Each Terminator shall also be capable of translating into human readable form data objects output from the functionality in the system.  The functionality in the system must also be able to communicate with more than one human entity that is a Bridge Operator and for each Bridge Operator to belong to one or separate organisations.
+      
+      Mnemonic: o.bo
+    links:
+      - "Aggregation «component of» → Operator"  # {9F3F4B69-7090-40c3-8405-188028DDBFF6} → {102BBDF5-FF2D-4077-AD52-BEE0EA237E1C}
+      - "Association «IN» → fo.bo-bridge_action_definitions"  # {B22C1265-AB07-4f2a-A966-21B36819A046} → {C12526B2-F232-4097-B90A-0BEC15CA17DB}
+      - "Association «IN» → fo.bo-bridge_operator_inputs"  # {B5ADEAE6-287A-4a00-9D4E-8A0D6648EF68} → {55A37B65-72AD-4900-ADC8-EC9ED64D3A30}
+      - "Association «IN» → fo.bo-weather_condition_action_request_response"  # {2F3A23F8-61FA-4212-B602-8C0D50C7523C} → {4C0565B4-917B-47fc-AE29-44BF6BBE712C}
+  - name: "Bridge Structures"
+    guid: "{6CA6C058-CE68-4263-8055-3A8779F0C1F9}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Bridge / Tunnel Infrastructure Terminator and shall represent the output provided by sensors that can detect changes in the structure of a bridge or external systems able to provide the same or similar outputs.  These outputs shall be analysed by functionality in the system to create data objects that enable changes in the status of the bridge to be monitored.  In particular if that status reaches a point where it becomes dangerous for vehicles, pedestrians and cyclists to continue to use the bridge the appropriate action can be taken by functionality in the system.  The functionality in the system must also be able to communicate with more than one sensor and/or external system.
+      
+      Mnemonic: bti.bs
+    links:
+      - "Aggregation «component of» → Bridge/Tunnel Infrastructure"  # {D63FF626-0273-408a-BFBA-3DE5BF17F91A} → {238D1096-B655-4900-BF9D-2B03E46D0D25}
+      - "Association «IN» → fbti.bs-current_status"  # {2FE01CB6-3278-4cac-AD2E-679AFC0DB652} → {970D54CE-9651-48fe-B1C4-35823807896F}
+  - name: "Broadcaster"
+    guid: "{4FA5F25A-9124-4023-A0AC-A2454FC4E666}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the External Service Provider Terminator and shall represent a form of External Service Provider that provides information about services such as accommodation, leisure and sports events for which a booking is needed for attendance.  Functionality in the system shall be able to send this Terminator data objects that request particular information be provided.  The data objects received in response by the functionality shall be used in the provision of ITS Services.  Any booking and/or payment for services about which information has been provided are expected to be carried out by functionality not included within the system.
+      
+      Mnemonic: esp.b
+    links:
+      - "Aggregation «component of» → External Service Provider"  # {63F77AC3-29D4-48f4-ABFD-4912BBD4F6AF} → {73960376-E008-4811-B5BB-B58A1E143730}
+      - "Association «IN» → fesp.b-incident_information_requests"  # {210AC998-53A1-4c3b-B9FB-6795082AFC40} → {C8CD6D82-91AE-48bb-AF65-A700EF6D9FE2}
+      - "Association «IN» → fesp.b-inter-urban_traffic_information_request"  # {96ECF710-6BDD-4530-883F-B7367EEF608E} → {49D931D3-F40D-4137-8235-4629BDBB2DC9}
+      - "Association «IN» → fesp.b-request_current_incident_strategies"  # {B88275BC-E293-47d0-A00F-E9B3F93BAF3F} → {ADDFBD50-4C34-4cbb-BBA1-0A8A1F48D873}
+      - "Association «IN» → fesp.b-request_incident_data"  # {29C7EAB9-E6CF-4cf0-B1E5-58426E98E1FF} → {BB19E8A9-CFC0-4e28-A256-ADB7A19A10B2}
+      - "Association «IN» → fesp.b-urban_traffic_information_request"  # {57B5CB28-00DF-4dc2-B687-8A42B4F33E95} → {A0B26CEF-9B61-4281-9F82-045A68BCBB27}
+  - name: "Communications Operator"
+    guid: "{8C77C811-FB6A-47f1-9CF1-5F59AEDC881D}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Operator Terminator and shall represent a human entity that provides and reviews information objects containing communication details for each Public Safety Access Point (PSAP) provider.  The human entity shall be an employee of a Communications Network Provider that is involved in any ITS Service implementation.  It is expected that the Terminator shall provide inputs from which data objects can be created by functionality in the system to represent commands, data and requests, for use in the system.  Each Terminator shall also be capable of translating into human readable form data objects output from the functionality in the system.  The functionality in the system must be able to communicate with more than one human entity that is a Communications Operator, each of which may belong to the same organisation, or to different Communications Network Providers.
+      
+      Mnemonic: o.co
+    links:
+      - "Aggregation «component of» → Operator"  # {464EB324-D34E-47b4-81FC-586056309C22} → {102BBDF5-FF2D-4077-AD52-BEE0EA237E1C}
+      - "Association → Public Land Mobile Network"  # {8A24C1B0-0640-4773-95C9-703FAFF8D096} → {B5308147-42F5-4b91-817C-2BBAFA39A178}
+      - "Association «IN» → fo.co-PSAP_data_inputs"  # {1F11C970-2DEC-402d-8890-C99C41D0E44B} → {19BF87B2-DEE8-460b-84A9-C991320AEB62}
+      - "Association «IN» → fo.co-PSAP_data_update"  # {9C0F10F8-D40C-4c83-B08A-DBA331558783} → {A1581061-0EFC-4e20-B411-D4AA992521A8}
+      - "Association «IN» → fo.co-request_PSAP_data_output"  # {485A68BB-D967-48d8-88BB-DF3C8236526D} → {7127B5D7-8ECF-4fb6-B064-D872B5FF2425}
+  - name: "Cyclist"
+    guid: "{24E1AB68-5084-447c-9BF3-1957840F0FA8}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Traveller Terminator and shall represent a human entity that is using the functionality in the system to help them travel through the road network using a bicycle, tricycle, scooter or similar mode of transport.  It is expected that the Terminator shall provide inputs from which data objects shall be generated by functionality in the system to represent requests and data for use by in the system.  The Terminator shall also be expected to be capable of translating into human readable form data objects output from the functionality in the system and responding to that output if required.
+      
+      Mnemonic: t.c
+    links:
+      - "Aggregation «component of» → Traveller"  # {6DCC6D3C-5960-480c-AC31-4C56E27818FD} → {5F83A087-8531-4855-A274-F88A8ACBBAF0}
+  - name: "Driver and Vehicle Information Provider"
+    guid: "{AA6E7062-3E5F-4b53-BD48-A6831CEEF612}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the External Service Provider Terminator and shall represent an organisation that manages information about Drivers and Vehicles.  It shall provide data objects containing Vehicle identification to assist the functionality that checks raw Floating Card Data (FCD).  The Terminator shall also provide data objects containing Driver and Vehicle identification to assist the functionality that provides incident responses in response to a request from that functionality.  All data objects provided by this Terminator must comply with the requirements of the General Data Protection Regulation (GDPR - EU2016/679 and any subsequent amendments).
+      
+      Mnemonic: esp.dvip
+    links:
+      - "Aggregation «component of» → External Service Provider"  # {818FB35C-CA8D-429a-BCE5-316A42487CBE} → {73960376-E008-4811-B5BB-B58A1E143730}
+      - "Association «IN» → fesp.dvip-identification_response"  # {C659AE65-8721-43f9-99BA-2F46B7138D9E} → {98F80403-7FE8-428f-B06C-DAB718EE8925}
+      - "Association «IN» → fesp.dvip-vehicle_data_for_inter-urban_fcd_check"  # {597D5678-59D6-4c73-88B1-E3997105B306} → {0BF0E1FF-BE9F-4c18-A8B7-82258F285024}
+      - "Association «IN» → fesp.dvip-vehicle_data_for_urban_fcd_check"  # {892B71BB-59FE-4ed9-AE18-1C2D803308D4} → {E316E842-0D05-4006-8406-DAB3E33E60A0}
+  - name: "Electronic Payments Operator"
+    guid: "{A60770F0-1F7F-4c56-A139-AC2AC816D446}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Operator Terminator and shall represent the human entity that uses the functionality in the system to manage the operation of the electronic payment facility provided by the system.  It is expected that the Terminator shall provide inputs from which data objects can be created by system functionality to represent commands, data and requests for use in the system and be capable of translating into human readable form data objects output from the functionality in the system.  The functionality in the system must also be able to communicate with more than one human entity that is an Electronic Payments Operator, each of which may belong to the same organisation, or to different organisations and may be responsible for one or more electronic payment systems.
+      
+      Mnemonic: o.epo
+    links:
+      - "Aggregation «component of» → Operator"  # {4075C7BF-69C6-43d6-8E15-173B3F95174B} → {102BBDF5-FF2D-4077-AD52-BEE0EA237E1C}
+      - "Association «IN» → fo.epo-access_criteria"  # {01D9EE76-9297-4fb9-93F2-24398BA73C29} → {BE42CC8A-532C-4c43-BF95-E33724AD7BBB}
+      - "Association «IN» → fo.epo-contract_statistics_request"  # {7BD7227E-369D-4908-A6C5-B387184E4B53} → {A636ECEE-EEBF-4fdd-AE22-633665C2CCFF}
+      - "Association «IN» → fo.epo-pepf_services_available"  # {26993CFB-0BD7-4151-9027-BEC0B2AC127C} → {6E9C4C93-93D6-4743-A149-C36848DAE64D}
+      - "Association «IN» → fo.epo-pepf_trans_info_request"  # {487FD91A-A8A4-4ade-B2CF-1375B8AED6B7} → {FE14F979-58AC-430b-9548-5BDF03DDD79E}
+      - "Association «IN» → fo.epo-tariff_grids"  # {7F2A53FB-C2F7-4711-B783-FA246E19798D} → {BB1C4A32-B93F-4240-B971-C7FD742F0322}
+  - name: "Emergency Management System"
+    guid: "{D587C88C-5E83-4466-8537-3E05E9260E50}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Other Related System Terminator and shall represent another instance of the functionality in the system that manages the responses to incidents.  It shall enable the same data objects to be sent to and received from other instances of the incident management functionality.  These other instances may belong to another organisation operating in the same geographic area, or to an organisation that manages accident responses in a different geographic area.  It shall be possible for the data objects to be sent and received on request, at regular intervals, or because the sending functionality has made changes.
+      
+      Mnemonic: ors.ems
+    links:
+      - "Aggregation «component of» → Other Related System"  # {C7FF1EA2-065B-43c2-84D0-C04FA7B96F63} → {AB919AF2-B1C5-45bf-8731-FB6EC44C2A2E}
+      - "Association → PSAP eCall Modem Server"  # {2C2CAF87-3511-40d9-9844-F66CF0041082} → {56CFDFDB-8969-43ad-B329-1CA7CD510A4F}
+      - "Association «IN» → fors.ems-emergency_or_incident_notification"  # {62B0841F-D174-42ee-A680-7DF879A1C434} → {6DCFCB68-85A7-48f5-9032-00D6182F1FE1}
+      - "Usage → PSAP eCall Router"  # {4880570B-6828-4803-B504-75BBB72B72D1} → {EC7D8FCD-EA59-4507-B0CD-31F4B8D47D38}
+  - name: "Emergency Operator"
+    guid: "{EE00C1D0-4A96-4dc3-BF48-285261D9BB4D}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Operator Terminator and shall represent a human entity that uses the facilities of the system to manage the way that the functionality in the system helps the Emergency Services to respond to incidents.  It is expected that the Terminator shall provide inputs from which data objects can be created by system functionality to represent commands, data and requests for use in the system and be capable of translating into human readable form data objects output from the functionality in the system.  The functionality in the system must also be able to communicate with more than one human entity that is an Emergency Operator, each of which may belong to the same Emergency Service, or to different Emergency Services.
+      
+      Mnemonic: o.eo
+    links:
+      - "Aggregation «component of» → Operator"  # {746C6B00-4F21-4b58-B521-568193E21EF3} → {102BBDF5-FF2D-4077-AD52-BEE0EA237E1C}
+      - "Association → PSAP eCall Modem Server"  # {2E4DE6F0-F99E-4ae8-9450-283CE40ACFF2} → {56CFDFDB-8969-43ad-B329-1CA7CD510A4F}
+      - "Association «IN» → fo.eo-commands"  # {8F0FCC2E-2C20-4462-93C1-541528F432FA} → {3DB32641-035B-4f7d-A288-B42C7B468D4A}
+      - "Association «IN» → fo.eo-request_statistical_report"  # {25E2E980-FABE-43cb-A3E4-75707CC39FC1} → {C038884C-94E6-4b33-AA11-C411F44B9BB8}
+      - "Association «IN» → fo.eo-stop_stolen_vehicle"  # {524FF772-F3FF-402a-9C49-5775CB448EB6} → {D258083B-E1A4-4ba4-8D14-5499F95C554C}
+  - name: "Emergency Vehicle Driver"
+    guid: "{CC5B9241-B7FD-45d2-8FB0-9077A71C29FE}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      This Terminator is part of the Driver Terminator and shall represent a human entity that drives a vehicle belonging to one of the Emergency Services, i.e. an Emergency Services Vehicle.  It is expected that the Terminator shall provide inputs from which data objects can be created by system functionality to represent requests and data for use in the system and be capable of translating into human readable form data objects output from the functionality in the system.  The Vehicle type is defined in the description of the Emergency Vehicle Terminator.  The functionality in the system must also be able to communicate with more than one human entity that is an Emergency Vehicle Driver, each of which may belong to the same Emergency Service, or to different Emergency Services.
+      
+      Mnemonic: d.evd
+    links:
+      - "Aggregation «component of» → Driver"  # {A8847E92-7AD5-4583-A7C1-AB06B6794CA5} → {0C560BF0-702E-48c1-B7F0-69F55BF03556}
+      - "Association «IN» → fd.evd-command_inputs"  # {95A00FDE-29B4-49f4-9F4B-1D8CA263250C} → {C799F5F7-FBCB-4a13-8FE2-1E5FAE6DCB1A}
+      - "Association «IN» → fd.evd-deploy_virtual_cones"  # {24C8285B-83FF-4ba8-A3C3-20AE440AC684} → {BE4E25D8-5FFD-4dab-8C51-5755D0B6F050}
+      - "Association «IN» → fd.evd-green_wave_request"  # {25F7F52C-5A04-468b-9343-D4658B0823E2} → {16EE5446-20CB-4e77-B3A8-AF4FDA16C74A}
+      - "Association «IN» → fd.evd-individual_emergency_progress_report"  # {7F17F9AE-AB1E-4b02-B915-B4899A4CA19E} → {7A3C6F89-518A-4d1e-A627-A966FF24B8AE}
+  - name: "Environmental Traffic Management System"
+    guid: "{4161C8A8-655A-407a-B22F-A02DCF9CB7AB}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Other Related System Terminator and shall represent another instance of the functionality in the system that manages the interaction between the environment and the traffic using the road network.  It shall enable the same data objects to be sent to and received from other instances of the environmental management functionality.  These other instances may belong to another organisation operating in the same geographic area, or to an organisation that manages the interaction between the environment and the traffic using the road network in a different geographic area.  It shall be possible for the data objects to be sent and received on request, at regular intervals, or because the sending functionality has made changes.
+      
+      Mnemonic: ors.etms
+    links:
+      - "Aggregation «component of» → Other Related System"  # {ABEF60C2-DCA2-4341-AD76-9946EE8E1787} → {AB919AF2-B1C5-45bf-8731-FB6EC44C2A2E}
+      - "Association «IN» → fors.etms-environmental_data_updates"  # {C779178D-546C-4d16-ACB1-F28D495C0CAA} → {03327867-84D1-4aa1-B6E7-766445F5AF1C}
+  - name: "Freight Terminal Area"
+    guid: "{4635FD01-0425-4d5c-953B-2C06153158FB}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      This Terminator is part of the Freight Transport Terminator and shall represent the systems that provide the facilities which are available at a Freight Terminal Area.  It shall be possible to book the use of these facilities for use by one or more of the Freight Transport Load Items being moved through the implementation of a Freight Transport Execution Plan.  These facilities shall comprise, but not be limited to, the ability to store Freight Transport Load Items either to await collection by another mode of transport, or for collection by a Freight Vehicle for a road based movement.
+      
+      Mnemonic: ft.fta
+    links:
+      - "Aggregation «component of» → Freight Transport"  # {14B685B5-5950-49c7-8935-55C3745C65C5} → {662CD0E2-2FF1-4cc1-9FAC-D2280761477E}
+  - name: "Freight Transport Operations Manager"
+    guid: "{C7318974-F99A-4b00-B67C-EAD17D30AE73}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      This Terminator is part of the Freight Transport Terminator and shall represent a human entity that manages and represents the Freight Transport Service Provider.  It shall be possible for this Terminator to negotiate contracts to provide freight transport in response to requests from the Freight Transport User, who is the customer.  The provision of the freight transport shall be manifest through a Freight Transport Execution Plan, which is prepared by the system in response to a request from the Freight Transport Operations Manager to fulfil the demands of the Freight Transport User.  The preparation process shall be managed by the Freight Transport Operations Manager and once created the Freight Transport Execution Plan must be approved by the Freight Transport User before being implemented.  The implementation of the Freight Transport Execution Plan shall be managed and monitored by the Freight Transport Operations Manager, who if necessary shall be able to modify a Plan during its implementation.
+      
+      Mnemonic: ft.ftom
+    links:
+      - "Aggregation «component of» → Freight Transport"  # {419A6E3C-2C01-4577-96AB-87F5190440A4} → {662CD0E2-2FF1-4cc1-9FAC-D2280761477E}
+  - name: "Freight Transport User"
+    guid: "{5F15D024-DF71-46ba-B5E3-D62C2AFD543C}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      This Terminator is part of the Freight Transport Terminator and shall represent a human entity that wishes to transport one or more items of freight (called Freight Transport Load Items) using the available Freight Transport Services.  It shall be possible for the Freight Transport User to request the Freight Transport Operations Manager to prepare a Freight Transport Execution Plan the implementation of which shall enable the Freight Transport Load Items to be moved from one location to another as specified by the Freight Transport User.  When a Freight Transport Execution Plan has been prepared, the Freight Transport User shall have to approve the content of the Plan before it can be implemented by the system.  The Freight Transport User is able to request updates about the progress with the implementation of the Freight Transport Execution Plan.
+      
+      Mnemonic: ft.ftu
+    links:
+      - "Aggregation «component of» → Freight Transport"  # {B0E4098E-B109-4a05-AE18-37089E3B70C1} → {662CD0E2-2FF1-4cc1-9FAC-D2280761477E}
+      - "Association «IN» → fft.ftu-new_FTEP_request"  # {F27FE243-F857-4bc4-A22A-964761F68DDF} → {997ED10C-2392-4730-BBB0-B278557831D1}
+      - "Association «IN» → fft.ftu-request_FTEP_data"  # {7DA18E26-1CD3-4e89-9B26-63B51D4011FE} → {80CC94D5-A9D6-4fc4-BE29-FE10373587F9}
+  - name: "Freight Vehicle"
+    guid: "{F67CE7E2-605C-40db-92D7-7BDD6C6D69D3}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Vehicle Terminator and shall represent a Vehicle that is designed and licensed for the purpose of carrying freight of any kind.  This type of Vehicle shall include those with and without trailers or "swap bodies", but not include light vans as these are classed as ordinary vehicles.  It is expected that this Terminator shall provide data objects to the functionality in the system either directly through an interface or through sensors, and these data objects shall be used to assist in providing the ITS Services.
+      
+      Mnemonic: v.fv
+    links:
+      - "Aggregation «component of» → Vehicle"  # {BF85EA44-00F7-4a0a-86DD-55C0AD0B863C} → {9021465A-4479-4fa8-B8DB-3481C001B9C3}
+      - "Association «IN» → fv.fv-freight_vehicle_identity_for_holding_zone"  # {342309C7-8D4F-4b12-A55D-C5FC624835A4} → {55C764D7-1CED-47e3-994A-A639B9799E2B}
+      - "Association «IN» → fv.fv-freight_vehicle_identity_for_rest_area"  # {DB9EC3F3-E033-41fa-85F1-83CD760F34C1} → {F88C343D-8C4C-4cc3-8594-5B48B5AE42DF}
+      - "Association «IN» → fv.fv-freight_vehicle_identity_for_un/loading_zone"  # {422F3633-D974-472c-9A48-54F37081A85D} → {5FC8DCE7-9265-4b13-A629-568A3C30962D}
+      - "Association «IN» → fv.fv-freight_vehicle_identity_for_zones"  # {838608BA-8BED-4242-A5AB-1D7FC5BBFA74} → {04DB6216-DC2F-4b36-81B5-1D9A77740148}
+  - name: "Freight Vehicle Driver"
+    guid: "{71267B83-6800-4c60-A363-E6EE63077E66}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Driver Terminator and shall represent a human entity that drives a vehicle which is designed and licensed for the purpose of carrying freight of any kind.  It is expected that the Terminator shall provide inputs from which data objects can be created by system functionality to represent requests and data for use in the system and be capable of translating into human readable form data objects output from the functionality from within the system.  The Vehicle type for this Driver is defined in the description of the Freight Vehicle Terminator.  The functionality in the system must also be able to communicate with more than one human entity that is a Freight Vehicle Driver.
+      
+      Mnemonic: d.fvd
+    links:
+      - "Aggregation «component of» → Driver"  # {B49E156D-69D8-4a34-8AAF-29F956B42874} → {0C560BF0-702E-48c1-B7F0-69F55BF03556}
+      - "Association «IN» → fd.fvd-find_new_rest_area_booking"  # {460F99F8-A1B7-4e36-BC8D-4409E7153098} → {58307648-B377-403d-84B3-97C5522AC5FE}
+      - "Association «IN» → fd.fvd-rest_area_booking_needed"  # {07A7F87B-72A3-4eb8-A673-EBFDF50BCD0A} → {03CAC915-156C-4346-8590-70C1B2A9DBAA}
+      - "Association «IN» → fd.fvd-rest_area_booking_request_response"  # {4E6C9720-1A48-4469-A471-5D77F0DDA0F1} → {9D1D6037-50A2-42ed-96E5-789D062A8397}
+      - "Association «IN» → fd.fvd-rest_area_details_response"  # {485C5C6C-BB58-4626-A994-95247F58405C} → {754F56A1-BF59-4ed7-B54E-7ABEBC0398FB}
+      - "Association «IN» → fd.fvd-revised_un/loading_zone_use_request"  # {DE7C854A-98AA-4ce9-B43A-0D9D3CF61AD8} → {86C19475-E873-45b0-922E-C3BA3B398944}
+      - "Association «IN» → fd.fvd-trip_inputs"  # {CE3EF93E-1022-4b74-AA7D-2FD0B4EF9CD7} → {06C5B903-C382-48f0-9AE1-D903D167A332}
+      - "Association «IN» → fd.fvd-un/loading_zone_use_reqeust_response"  # {4F82D653-3B98-4bd5-B983-F25A2B28E051} → {A4B9D919-7CF2-4120-AB59-79129748E726}
+      - "Association «IN» → fd.fvd-un/loading_zone_use_request"  # {3DC4AFAB-11B5-4657-ABC6-D00702A56D9A} → {8AE7E844-8BC6-468b-83FE-19C5D6222E95}
+      - "Usage → SSTPIS End User Application"  # {10C0A691-DE1E-4fd9-A91A-918E1D0A78D7} → {DC5A7FF3-1BC8-4d67-A0C5-64B5CA5C2C21}
+  - name: "General Information Provider"
+    guid: "{A03C343B-86AC-4554-A264-552D9900AA56}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the External Service Provider Terminator and shall represent an organisation that provides information about places that offer Personal Services (PS) such as garages, shops, banks, post offices, etc. and Places of Interest (POI), such as tourist sites, town and city plans, etc.  It shall be possible for functionality in the system to send this Terminator data objects containing requests for details of PS or POI. The Terminator shall be expected to respond with data objects that contain the requested details for use by the functionality that made the request.
+      
+      Mnemonic: esp.gip
+    links:
+      - "Aggregation «component of» → External Service Provider"  # {E8B87B36-5C8A-44f3-862B-8782F5249927} → {73960376-E008-4811-B5BB-B58A1E143730}
+      - "Association «IN» → fesp.gip-poi_information"  # {E520CA33-5860-41c1-ACBB-1A0168887E68} → {29B4C30E-EC0B-4bdb-9594-A7811B11DE8C}
+      - "Association «IN» → fesp.gip-ps_information"  # {A808ED04-C22A-4d81-B42B-36F6EE647E65} → {19914E0F-1A6C-4231-B7A0-280CCE9C0B20}
+  - name: "Geographic Information Provider"
+    guid: "{35686FDB-AF89-41d3-B16B-2506BC4F27E1}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the External Service Provider Terminator and shall represent an organisation that provides digital map data for use by functionality in the systems.  It shall be expected that this Terminator shall automatically send data objects containing digital map data when that data changes to functionality in various part of the system.  This Terminator shall also be expected to receive data objects containing requests for digital map data or details of the changes that need to be made to the existing digital map data.
+      
+      Mnemonic: esp.g
+    links:
+      - "Aggregation «component of» → External Service Provider"  # {697B1EF5-98E2-4b4d-A458-FF1964B1A734} → {73960376-E008-4811-B5BB-B58A1E143730}
+      - "Association «IN» → fesp.g-ISA_information"  # {7F94AC8F-2904-4639-ABCD-9E4439510D25} → {7E10DB24-1695-450c-B8A9-5181CE375981}
+      - "Association «IN» → fesp.g-digital_map_data_for_emergency_vehicle"  # {EED4C31D-126F-4944-AAA4-8954CF2B9446} → {09864EC8-2CD8-4f9d-B575-A94EBFEE3A3F}
+      - "Association «IN» → fesp.g-inter-urban_static_road_data"  # {FE2AEA15-FF62-4959-9444-8B2A11D1EAF8} → {C8F279C6-A74A-48be-B0C0-0EC3EC85F967}
+      - "Association «IN» → fesp.g-map_data_for_PT_vehicle_position"  # {94FCF8D0-E4E5-4b0f-BFBE-930CDB5B4361} → {CECDFC89-2038-4f5d-ABCE-4221EA36C7BA}
+      - "Association «IN» → fesp.g-map_data_for_bus_lane_use"  # {CFA63C84-B90D-463b-BC34-F5C4DC6F0EB7} → {F2255894-21E3-40bc-8E3A-3EA4400B8814}
+      - "Association «IN» → fesp.g-map_data_for_managing_sensitive_area_access"  # {BC6AEFFD-2DC6-4d42-A3DF-21D4E744195D} → {1B3034CE-7CFD-4a33-98E0-3F98DA587D15}
+      - "Association «IN» → fesp.g-map_data_for_travel_information"  # {9A9C3F9C-1B6A-448a-8CDF-CD108F9CF805} → {38DC5897-4C88-4f47-BF1E-7C2F49ECCB80}
+      - "Association «IN» → fesp.g-map_data_for_vehicle_sensor_data"  # {14263237-A732-42d5-B270-B6A222DCEA27} → {B6EDCF6A-42AC-4ac0-993D-DFE70DA753C7}
+      - "Association «IN» → fesp.g-map_update"  # {4B82C4F0-2891-4707-A4B4-C35001F51043} → {DA82E51A-CE7F-459a-A087-37CAD3589EB7}
+      - "Association «IN» → fesp.g-static_road_information"  # {5BD7ED62-25D1-4bc5-85DD-AAA195DC977E} → {8159610C-FBA8-48fe-AD84-70AA238EB450}
+      - "Association «IN» → fesp.g-trip_plan_implementation_map_data"  # {27845752-23D8-4ba8-9378-2A1607AE0FA7} → {DB9CE253-AB12-4bdf-97B7-82EEFB3A00E0}
+      - "Association «IN» → fesp.g-urban_static_road_data"  # {25738ED2-EF80-4792-A9D6-6884F317E557} → {5DBEC8BB-CDB9-4871-B3FE-3BB62CB2CEDE}
+      - "Association «IN» → fesp.g-vehicle_trip_plan_implementation_map_data"  # {8964AB4C-1DCC-4590-ACDA-BBF678E5151B} → {C54048CD-F51D-43d3-BFB0-B258D8876ED8}
+  - name: "Hazardous Goods Vehicle Driver"
+    guid: "{66444DF9-66BA-45a2-B244-CFE4848E2FBA}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Driver Terminator and shall represent a human entity that drives a vehicle that is carrying hazardous goods, i.e. a Hazardous Goods Vehicle.  It shall be expected that the Terminator shall provide inputs from which data objects can be created by system functionality to represent requests and data for use in the system and be capable of translating into human readable form data objects output from the functionality in the system.  The vehicle type for this Driver is defined in the description of the Hazardous Goods Vehicle Terminator.  The functionality in the system must also be able to communicate with more than one human entity that drives vehicles carrying hazardous goods, each of which may belong to the same organisation, or to different organisations.
+      
+      Mnemonic: d.hgvd
+    links:
+      - "Aggregation «component of» → Driver"  # {22E2B9E5-16BF-4cbb-8978-F6F36C6AC136} → {0C560BF0-702E-48c1-B7F0-69F55BF03556}
+      - "Association «IN» → fd.hgvd-implement_route"  # {AE7BC285-9A5D-46d8-BB7C-F194986C17B1} → {C29AA9E2-0948-4c82-97FB-E00957131F28}
+      - "Association «IN» → fd.hgvd-redetermine_route_request"  # {07893C19-EFB9-4780-84AB-C10DB44DA14B} → {7FB7EAAC-7CF4-4b7a-A9EC-2C8638E504BA}
+      - "Association «IN» → fd.hgvd-route_request_details"  # {FDFF82B4-A9E5-4fe1-A2C9-856571128EDE} → {808DD15D-CC02-444f-9C52-09C223040C05}
+      - "Association «IN» → fd.hgvd-vehicle_route_inputs"  # {C7F8CC82-AFCE-43b6-ACB7-758DD9526C9C} → {A8D1A82D-3FE9-44f1-8246-62AEC593A55E}
+  - name: "Hazardous Goods Vehicle Route Monitoring"
+    guid: "{A528ED4C-30BF-4397-84DC-E6ADEA848E4B}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Other Related System Terminator and shall represent another instance of the functionality in the system that manages the routes through the road network used by Hazardous Goods Vehicles.  It shall enable the same data objects to be sent to and received from other instances of the route management functionality. These other instances may belong to another organisation operating in the same geographic area, or to an organisation that manages the routes for Hazardous Goods Vehicles through the road network in a different geographic area.  It shall be possible for the data objects to be sent and received on request, at regular intervals, or because the sending functionality has made changes.
+      
+      Mnemonic: ors.hgvm
+    links:
+      - "Aggregation «component of» → Other Related System"  # {E17C6F0F-65BA-41ff-9F38-259CADEE8250} → {AB919AF2-B1C5-45bf-8731-FB6EC44C2A2E}
+      - "Association «IN» → fors.hgvm-hazardous_goods_vehicle_route_details"  # {1F056082-EFF3-4888-8166-4067F185C68C} → {700737C5-8249-406f-B210-6AFEB48D82C1}
+  - name: "Human Machine Interface"
+    guid: "{2AC0E624-0294-4cdb-A41E-985793E7B3B6}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Vehicle Terminator and shall represent devices within the Vehicle that shall interact directly with the Driver or other occupants to enable the eCall ITS Service to be used and to providing traffic information in the Vehicle.  It is expected that this Terminator shall provide data objects to the functionality in the system either directly through an interface or through sensors, and these data objects shall be used to provide the eCall Service.
+      
+      Mnemonic: v.hmi
+    links:
+      - "Aggregation «component of» → Vehicle"  # {9A9A93EF-C212-4e68-9754-67C21522C15E} → {9021465A-4479-4fa8-B8DB-3481C001B9C3}
+      - "Association «IN» → fv.hmi-initiate_eCall"  # {DBA529DA-4186-44ac-8A60-24FB515E06B1} → {13FBAB78-2BDD-4e79-BB22-2F578B56ADA4}
+  - name: "Incident Traffic Management System"
+    guid: "{BE6EF50C-DAB2-4d43-B95C-DA08388FE859}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Other Related System Terminator and shall represent another instance of the functionality in the system that manages the responses to incidents.  It shall enable the same data objects to be sent to and received from other instances of the response to incident management functionality.  These other instances may belong to another organisation operating in the same geographic area, or to an organisation that manages responses to incidents in a different geographic area.  It shall be possible for the data objects to be sent and received on request, at regular intervals, or because the sending functionality has made changes.
+      
+      Mnemonic: ors.itms
+    links:
+      - "Aggregation «component of» → Other Related System"  # {5344E096-DCEE-41c1-8974-453C9B0557A7} → {AB919AF2-B1C5-45bf-8731-FB6EC44C2A2E}
+      - "Association «IN» → fors.itms-incident_strategy"  # {1C698AF0-D7F5-414e-BC16-AE312887B257} → {F161F439-8FE8-448d-BA68-8C937F1D22E6}
+  - name: "Inter-urban Traffic Management System"
+    guid: "{E70B933D-261A-46a7-B053-C6AA45895189}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Other Related System Terminator and shall represent another instance of the functionality in the system that manages traffic using the inter-urban road network.  It shall enable the same data objects to be sent to and received from other instances of the inter-urban traffic management functionality.  These other instances may belong to another organisation operating in the same geographic area, or to an organisation that manages inter-urban traffic in a different geographic area.  It shall be possible for the data objects to be sent and received on request, at regular intervals, or because the sending functionality has made changes.
+      
+      Mnemonic: ors.iutms
+    links:
+      - "Aggregation «component of» → Other Related System"  # {ECB8269C-E218-45d5-BAF6-28F410BFDF85} → {AB919AF2-B1C5-45bf-8731-FB6EC44C2A2E}
+      - "Association «IN» → fors.iutms-inter-urban_data_transfer"  # {77FF0058-0EEB-473e-91D4-31F0F0A9AA4A} → {B51F0DA2-49B9-45d2-B413-CED4BE4425E6}
+      - "Association «IN» → fors.iutms-inter-urban_data_updates"  # {58545A16-14DD-42a6-99D3-7ACB17FC8BCA} → {5F182CBA-3DD8-4581-8431-D4FA1107258B}
+      - "Association «IN» → fors.iutms-inter-urban_traffic_management_strategy"  # {8DDA7A8B-58B9-4db8-B927-93973E2DDC1E} → {F9DA96D4-B1A7-4c45-8F6B-F61BC1E52262}
+  - name: "Mobile Communications Provider"
+    guid: "{69868245-7A14-4aa2-96A5-038BE52B3AE7}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the External Service Provider Terminator and shall represent an organisation that operates mobile communications networks which has agreed to extract location data from the mobile devices belonging to its users.  The input shall be in the form of data objects containing the locations at which the mobile devices were used, from which travel times between these locations can be determined.  It is assumed that the data objects that this Terminator provides shall comply with the General Data Protection Regulations (GDPR EU2016/679 and any subsequent amendments).  The functionality in the system must also be able to communicate with more than organisation that operates mobile communications networks.
+      
+      Mnemonic: esp.mcp
+    links:
+      - "Aggregation «component of» → External Service Provider"  # {48F9F12E-B010-42b9-A187-3290E26596C5} → {73960376-E008-4811-B5BB-B58A1E143730}
+      - "Association «IN» → fesp.mcp-inter-urban_network_journey_time_data"  # {8B23332B-84AE-4ec5-9182-63A5A3139E81} → {F6596129-E1B2-486f-9016-6C9816130F09}
+      - "Association «IN» → fesp.mcp-urban_network_journey_time_data"  # {46DB8BC9-9604-480b-8A4F-8AB754369EB7} → {B7744E7A-0962-4c93-B9DB-A2CC49C9FC6B}
+  - name: "Multi-Modal Crossing"
+    guid: "{C60F1898-547F-4907-A202-E926483BB388}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Multi-modal System Terminator and shall represent the systems that manage the operation of the equipment used to segregate users of road based transportation and those using other modes of transport, e.g. road/rail crossings and road bridges over canals.  It shall be possible for the functionality in the system to send data objects to this Terminator requesting that the operation of a crossing be held in a position where it favours road traffic, e.g. to permit the passage of an Emergency Vehicle or to indicate that the crossing is to close for use by road based transport and pedestrians.  The Terminator shall be expected to respond to such a request with data objects that indicate its acceptance or rejection.
+      
+      Mnemonic: mms.mmc
+    links:
+      - "Aggregation «component of» → Multi-Modal System"  # {2B4EAB16-C83E-4ae3-9BB1-04B4EC2A18BE} → {05CAA29F-450A-4dcf-8141-059421D3CB54}
+  - name: "Multi-Modal Management System"
+    guid: "{88920892-1042-40fc-B5DF-DC0302342F39}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Multi-modal System Terminator and shall represent the systems that manage the operation of other (non-road based) modes of transport, such as railways, canals, ferry services and airlines.  It shall be possible for the functionality in the system to send data objects to this Terminator requesting either information about the services that are available either now or in the future, or the current status of the services.  The Terminator is expected to respond with data objects containing the requested information for use by functionality in the system.
+      
+      Mnemonic: mms.mmms
+    links:
+      - "Aggregation «component of» → Multi-Modal System"  # {836B2397-E997-47c5-B0F1-C00DB67CC7CC} → {05CAA29F-450A-4dcf-8141-059421D3CB54}
+  - name: "Multi-Modal Travel Information Provider"
+    guid: "{1983F168-0E27-441e-A938-F0382E34C73D}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the External Service Provider Terminator and shall represent an organisation that provides travel information for non-road transport modes (rail, waterborne and air), including details of multi-modal exchange facilities.  It is expected that this Terminator shall be able to receive data objects containing requests from functionality in the system to provide travel information for non-road transport modes and for the requesting functionality to be able to receive and process the data objects the Terminator sends in reply.
+      
+      Mnemonic: esp.mmtip
+    links:
+      - "Aggregation «component of» → External Service Provider"  # {DAF83091-FB65-4b75-B605-AD131FFFD422} → {73960376-E008-4811-B5BB-B58A1E143730}
+      - "Association «IN» → fesp.mmtip-requested_travel_information"  # {72F439EF-A72B-458f-BFF7-3A8CE538A3B6} → {7FD0BA62-D9FA-492d-A732-DD0CAD725DD9}
+  - name: "NAP Content Consumer"
+    guid: "{A8478CF0-37A0-4638-BECC-CBB89B7519C6}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    order: 0
+    note: |
+      The generic terminator role of the NAP Content Consumer represents any interested entity in traffic and transport data. The Content Consumer can find available data via the NAP. Therefore, Function F3.6.4 Provide Access for NAP Meta-Data Retrieval offers an interface (typically a graphical user interface freely accessible via the Internet) to search the meta-data in D3.15 NAP Meta-Data
+      
+      Key issue: Request high-quality services; provide feedback about relevant content
+      Area of responsibility: Be compliant with the agreement with the NAP content provider
+      Tasks: Receive content
+      Mnemonic: nap.cc
+    links:
+      - "Aggregation «component of» → NAP Actors"  # {64796CDC-48E2-4c02-A3BC-1423EE8551B1} → {FAF5089D-CEC9-4fac-A49D-D18F6E0ADC95}
+      - "Association «IN» → fnap.cc-metadata_search_request"  # {8514D373-6020-4a9f-B727-956CBD5E0380} → {DCE578B8-265B-47f6-906D-8C4E9593F623}
+      - "Association «IN» → fnap.cc-registration_request"  # {B8B2A2CD-EE11-4103-BADA-CF667113F6AE} → {7777AD14-8D53-466c-9949-22CFAB635676}
+      - "Association «IN» → fnap.cc-support_request"  # {A5CCD342-6423-4fcd-A78D-220628545BFD} → {16D06C97-2C77-4307-B304-766A1D613BE8}
+      - "Association «OUT» → fnap.cc-data_request"  # {8FAE295E-9A6E-402a-BCCC-A815BC962D13} → {AFB3FDE3-5682-463a-A966-CEF77741C6A9}
+      - "Dependency → Privacy agreement (CC to NO) and general terms and conditions"  # {E6FCAE5B-DF1A-49ac-8121-AB2C9E919413} → {AF555DF2-4535-42f6-993A-5BE72947BD12}
+      - "Usage → Service Provider NAP Application"  # {38DCE31A-0723-4c1b-8449-FC2D191E6FBF} → {B65CA88A-A210-4128-A40B-FAEAB0476D73}
+  - name: "NAP Content Provider"
+    guid: "{48698837-F8BB-4dca-BBDB-736CF23C778C}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    order: 0
+    note: |
+      The generic terminator role of the NAP Content Provider represents any provider of traffic and transport data.
+      The NAP Content Provider describes traffic and transport data with meta-data on the NAP (to be stored in D3.15 NAP Meta-Data). Information about the Content Provider, such as contact details, shall be kept in D3.17 NAP Content Providers.
+      Content Providers are public and private road operators, road authorities, service providers, transport authorities, transport operators, infrastructure managers, and transport on-demand service providers. The obligations to make traffic and transport data accessible via the NAP mainly depend on the type of data according to the ITS Directive and its respective delegated regulations (see Content Provider Actor)
+      
+      Key issue: Provide and publish content (which the content provider has the legal rights to publish); collect content
+      Area of responsibility: Provide timely and accurate traffic and transport data
+      Tasks: Provide content relevant to the ITS domain and according to contracts with the NAP and content consumers
+      Mnemonic: nap.cp
+    links:
+      - "Aggregation «component of» → NAP Actors"  # {94807A04-4070-4301-9714-33F0C29F6384} → {FAF5089D-CEC9-4fac-A49D-D18F6E0ADC95}
+      - "Association «IN» → fnap.cp-metadata_&_authorisation_credentials"  # {8B618D2B-3C13-40d6-8EF8-2F96E80963F0} → {00BDD6C9-80B2-4dee-90C4-810AB30E51F8}
+      - "Association «IN» → fnap.cp-support_request"  # {12656EAF-E4E6-4836-98E0-BB70CF903760} → {D597AA27-D232-49ad-8A7F-D4F246F9E217}
+      - "Usage → NAP Content Provider Application"  # {51783470-D8DC-4747-9249-ECC3EC6FDC2B} → {9D9DEAFB-7B63-41bb-B460-EDEF2367FB6C}
+  - name: "On-Demand Service Driver"
+    guid: "{8AC023DF-2714-4e31-AD8E-D87E25E772EE}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      This Terminator is part of the Driver Terminator and shall represent a human entity that drives Vehicles used to provide On-Demand Services for Travellers.  It is expected that the Terminator shall provide inputs from which data objects can be created by system functionality to represent requests and data for use in the system and be capable of translating into human readable form of data objects output from the functionality in the system.  The vehicle type for this Driver is defined in the description of the On-Demand Service Vehicle Terminator.  The functionality in the system must also be able to communicate with more than one human entity that is an On-Demand Service Driver, each of which may belong to the same organisation, or to different organisations that operate On-Demand Services.
+      
+      Mnemonic: d.odsd
+    links:
+      - "Aggregation «component of» → Driver"  # {47B6A068-37BC-43ca-B1B6-4CB8CD03E5F6} → {0C560BF0-702E-48c1-B7F0-69F55BF03556}
+      - "Association «IN» → fd.odsd-driver_inputs"  # {DFC4DB62-1E67-40c4-A8BE-2B82B838F95B} → {615B7D23-90DB-41a3-B8A4-FFF1B74BDE88}
+      - "Association «IN» → fd.odsd-instruction_acknowledgement"  # {F262AAE6-3437-4954-A0F1-758DFB36C301} → {E4BF54D2-6F45-4745-8C83-46EB9DFE5272}
+      - "Association «IN» → fd.odsd-message_from_vehicle"  # {F902DBF7-89FB-4d3c-8B42-79E5299CC0D4} → {3775AD22-B463-4bf5-91FE-93E59F0E5B29}
+  - name: "On-Demand Service Operator"
+    guid: "{4FCF4625-CFDC-4cef-8673-D59EC48DED80}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Operator Terminator and shall represent a human entity that manages the operation of On-Demand Transport Services that an organisation makes available for Travellers to use.  It is expected that the Terminator shall provide inputs from which data objects can be created by system functionality to represent commands, data and requests for use in the system and be capable of translating into human readable form data objects output from the functionality in the system.  The functionality in the system must also be able to communicate with more than one human entity that is an On-Demand Service Operator, each of which may belong to the same organisation, or to different organisations.
+      
+      Mnemonic: o.odso
+    links:
+      - "Aggregation «component of» → Operator"  # {039B7469-7867-4aa7-9D44-769B10A7D02F} → {102BBDF5-FF2D-4077-AD52-BEE0EA237E1C}
+      - "Association «IN» → fo.odso-operator_inputs"  # {59D09D5E-06B3-45f0-827A-E4E36FE31717} → {708E369C-7F2E-4e79-8F2D-A969CC898710}
+      - "Association «IN» → fo.odso-provide_message_for_driver"  # {95FE5E57-6277-430e-A13D-0D0C99DD5B46} → {88051A11-373D-40b1-94FB-67E73D58A309}
+      - "Association «IN» → fo.odso-provide_road_network_data"  # {F4D24B45-8269-41e6-BFF1-A5ECEEB736BB} → {57E11186-3709-487e-ADF0-0C9378D58E8A}
+      - "Association «IN» → fo.odso-request_current_service_criteria"  # {9DA5B519-23BE-47c1-BB70-4905F1D06CA3} → {CDDA66E5-BB18-405c-9550-EAF810E5BB17}
+      - "Association «IN» → fo.odso-request_service_performance"  # {DDD1AE73-A448-4c61-B6AB-E41A846C7FDF} → {8828D96B-8AB5-4551-8CA1-1D318915B4A6}
+      - "Association «IN» → fo.odso-update_current_service_criteria"  # {6A9B2FA0-535D-4936-ADE6-4159F1B9DF34} → {4C9293D0-8F70-4645-A381-D34CB515ADA2}
+  - name: "On-Demand Service Passenger"
+    guid: "{8C5A6C11-DCFF-4c8e-9A12-3F88DEBFA62E}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Traveller Terminator and shall represent a human entity that is using the functionality in the system to help them complete some or their entire trip using an On-Demand Service Vehicle, e.g. a “van based” vehicle that does not use a fixed route and can only carry a small number of passengers.  It is expected that the Terminator shall provide inputs from which data objects can be generated by functionality in the system to represent requests and data for use by in the system.  The Terminator is also expected to be capable of translating into human readable form data objects output from the functionality in the system and responding to that output if required.
+      .
+      Mnemonic: t.odsp
+    links:
+      - "Aggregation «component of» → Traveller"  # {748B0A51-51B0-4970-9C98-3889CC92E1A2} → {5F83A087-8531-4855-A274-F88A8ACBBAF0}
+  - name: "On-Demand Service Vehicle"
+    guid: "{EF0D592A-F90F-4a3b-A9C0-AE3EFB16DDC6}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Vehicle Terminator and shall represent a Vehicle that delivers personal transport services on-demand.  Usually the Vehicle shall be licensed to carry a small number of passengers as this type of service is not expected to attract a large number of passengers due to its non-scheduled operation and, possibly, variable routes.  It is expected that this Terminator shall provide data objects to the functionality in the system either directly through an interface or through sensors, and these shall be used to assist the provision of On-Demand PT services.  The functionality in the system must also be able to communicate with more than one On-Demand Service Vehicle, each of which may belong to the same organisation, or to different organisations.
+      
+      Mnemonic: v.odsv
+    links:
+      - "Aggregation «component of» → Vehicle"  # {DC589D53-AE29-46a0-8251-B3D72CCD7535} → {9021465A-4479-4fa8-B8DB-3481C001B9C3}
+      - "Association «IN» → fv.odsv-passenger_numbers"  # {6BC879AF-914E-477f-B1F2-7132DDBD6A55} → {11C18F29-E30B-4c1e-A2A9-0A7B47C69135}
+      - "Association «IN» → fv.odsv-status"  # {24A05EEA-6E15-45df-89E7-F96450A875C6} → {6DCBF601-19A4-4609-8AB1-FAE24F56D9B9}
+      - "Association «IN» → fv.odsv-vehicle_inputs"  # {0D1035E1-4D0E-49bd-9702-73D2AB3AF43A} → {041F9B20-3F01-497a-B227-98664D2E174B}
+  - name: "Other Mode Freight System"
+    guid: "{5A2B2FD2-B6B3-4cb8-BACA-776C6BF6141E}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Multi-modal System Terminator and shall represent a system that is responsible for the conveyance of freight using modes of transport other than road, e.g. water, air, and rail.  It shall be possible for functionality in the system to exchange data objects with these systems to enable the synchronisation of the use of the different transport modes in order to maximise the efficiency of freight transport, e.g. to reduce the waiting time at modal interchanges.
+      
+      Mnemonic: mms.omfs
+    links:
+      - "Aggregation «component of» → Multi-Modal System"  # {B6895C63-37F2-44c7-ABDA-A34BB172034D} → {05CAA29F-450A-4dcf-8141-059421D3CB54}
+  - name: "Other Navigation Device"
+    guid: "{17537713-F8DB-4887-A365-01FB61FCE772}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator within the Other Related System Terminator and shall represent another instance of the functionality in the system that provides navigation for trip implementation.  It shall enable the same data objects to be sent to and received from other instances of the navigation functionality.  These other instances may belong to another Traveller in the same geographic area, or to a Traveller navigating through a trip plan in a different geographic area.  It shall be possible for the data objects to be sent and received on request, at regular intervals, or because the sending functionality has made changes.
+      
+      Mnemonic: ors.ond
+    links:
+      - "Aggregation «component of» → Other Related System"  # {E4EC6D15-DC2D-4660-A5DC-728974F04F63} → {AB919AF2-B1C5-45bf-8731-FB6EC44C2A2E}
+      - "Association «IN» → fors.ond-traffic_data"  # {32E5E774-5896-4353-B5E1-D54DCC3AD112} → {DCA3925A-C33B-4d17-A050-C4C26BC40C2D}
+  - name: "Other Nearby Vehicles"
+    guid: "{1ECDD44D-4BCC-4615-8057-7C09D644E611}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Vehicle Environment Terminator and shall represent the manifestation of other Vehicles in the immediate geographic area that surrounds the Host Vehicle.  The functionality in the system shall identify the Vehicle in which is it operating as the Host Vehicle.  It is expected that this Terminator shall provide manifestations of other Vehicles in such a way that they can be detected by sensors which shall create data objects for use by the functionality in the system to assist the Vehicle to navigate through the road network.
+      
+      Mnemonic: ve.onv
+    links:
+      - "Aggregation «component of» → Vehicle Environment"  # {2BFA74FD-9C6B-44dc-BF1E-EEEA4A9B8272} → {934987E7-82A3-48fb-A8DA-EDB2F5D850E7}
+      - "Association «IN» → fve.onv-vehicle_presence_indication"  # {AFCF02BD-39D7-4a03-831B-18C0949C3E7B} → {1666BA9A-96A5-4a20-8A40-318CE49FB6C2}
+  - name: "Other Road Users"
+    guid: "{DC6676BE-0601-4838-A7E5-FB4FD9F0586B}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Vehicle Environment Terminator and shall represent the manifestation of other road users.  These objects may be other Vehicles, motor-cyclists, cyclists, animals, pedestrians, Vulnerable Road Users (VRU's), etc. that are in the roadway in the immediate geographic area surrounding the Vehicle.  It is expected that this Terminator shall provide manifestations of other road users in such a way that they can be detected by sensors which shall create data objects for use by the functionality in the system to enable the Vehicle navigate through the road network.  The functionality in the system shall identify the Vehicle in which is it operating as the Host Vehicle.
+      
+      Mnemonic: ve.oru
+    links:
+      - "Aggregation «component of» → Vehicle Environment"  # {52F510DF-3DA6-4902-8C66-6EEF9343CC2C} → {934987E7-82A3-48fb-A8DA-EDB2F5D850E7}
+      - "Association «IN» → fve.oru-presence_indication"  # {04EF8CDD-E6F0-478a-83D9-790002F28851} → {ABDB8103-2C63-44aa-ADF4-AC4219073F7C}
+  - name: "Other Vehicle"
+    guid: "{5DE193C4-33D4-4afc-AA13-94B38C6126B3}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Vehicle Terminator and shall represent the Other Vehicle.  It shall be part of the normal traffic flow, but may or may not be travelling in the same direction and/or on the same carriageway as the Host Vehicle, or part of the same platoon as the Host Vehicle.  The functionality in the system identifies the Vehicle in which is it operating as the Host Vehicle.  It is expected that this Terminator shall provide data objects to the functionality in the system either directly through an interface or through sensors, and these data objects shall be used to assist in providing the ITS Services.  In addition, the Terminator shall be sent data objects through an interface by functionality in the system that requests the systems in the Host Vehicle to take some action.  Note that this shall be a "request" and not a command, as it shall not be possible for the Host Vehicle to be controlled by the functionality in the system.
+      
+      Mnemonic: v.ov
+    links:
+      - "Aggregation «component of» → Vehicle"  # {14E03607-DFFF-4101-8A91-5DF3EAB0E050} → {9021465A-4479-4fa8-B8DB-3481C001B9C3}
+      - "Association «IN» → fv.ov-collision_warning"  # {BD869E8B-E263-4b0a-B1F7-5F4E3CDB4D0C} → {553693D9-EEA4-46ce-84B2-1A23F65CF017}
+      - "Association «IN» → fv.ov-emergency_brake_application"  # {7C95153E-D0AE-4100-B9DB-886FAE1465E5} → {E95E2355-E637-4e93-AB98-EF59E13FA784}
+      - "Association «IN» → fv.ov-ghost_vehicle_detected"  # {05BADAFD-1128-491b-9F58-7A1F89B03B48} → {AEB54933-6ACD-43d2-9C32-E96D58958547}
+      - "Association «IN» → fv.ov-goods_being_carried"  # {E0FA82F5-A580-45d6-85E8-92748CD33389} → {62D81E29-1486-4cbf-B380-F1D3F8366168}
+      - "Association «IN» → fv.ov-input_data"  # {1734C512-3FF9-4c28-9D2C-4FD6060684A2} → {40A3192D-C5FB-42b9-AEC2-2904556BF74D}
+      - "Association «IN» → fv.ov-lane_changing_warning"  # {77E03CCF-D6CE-4624-94FE-AD0D6A5E0F39} → {00FF7411-7DB5-41c0-A12A-BB414D28D80E}
+      - "Association «IN» → fv.ov-lane_use_commands"  # {71DB5A57-2C5D-4e77-899A-7049EB20C25D} → {C9755706-0932-4129-A787-A486F3F6BFD3}
+      - "Association «IN» → fv.ov-lights_anti-glare_request"  # {FC11FD6A-9C32-4d72-B043-DCF4EFCAB27C} → {59F93D29-3743-471f-985E-440670AB7EA8}
+      - "Association «IN» → fv.ov-other_platooning_data"  # {D52C0D2B-EA47-4a25-AE3E-A86A7C77D669} → {BD8AF918-FED7-452c-B96B-9FE5D3D4342F}
+      - "Association «IN» → fv.ov-other_vehicle_attitude_for_host_service"  # {7754D7E2-47E2-4713-85D8-6E2B1F55CFB7} → {B2573082-5D30-4463-AA84-0BE47040FD10}
+      - "Association «IN» → fv.ov-other_vehicle_location_for_host_vehicle"  # {426160E5-6531-4aa2-9931-356E9457F9D8} → {59E4EA88-D431-470a-AAB7-ED0FEC2E84BC}
+      - "Association «IN» → fv.ov-overtaking_vehicle_warning"  # {959E2EEF-4263-4beb-A3F0-EBDD90E96837} → {61582082-0E38-43ab-A99F-4A71F2431A86}
+      - "Association «IN» → fv.ov-red_light_running_warning"  # {E95F55D8-B3BC-42f5-865F-506B5B01757E} → {8E102675-2238-4b55-A75E-D613119278D9}
+      - "Association «IN» → fv.ov-regulations"  # {81A7B509-6346-4fa5-92F8-69726551B7F0} → {CE6BB957-A6C1-4edf-9CEE-CCE6A89AA33F}
+      - "Association «IN» → fv.ov-road_information"  # {89BDF1DA-21EE-4df4-99E0-04AF9C35AACB} → {DD8899C0-4CB5-48da-A814-2E2DEC899C8F}
+      - "Association «IN» → fv.ov-road_surface_state"  # {F3CDB401-73F6-4be3-93F5-A74ABE40D407} → {1E6D1853-9008-4858-9457-E9B27FCC46DF}
+      - "Association «IN» → fv.ov-safety_behaviour"  # {64823521-3A66-4a9b-845D-43C0DEA29B59} → {21A0D545-35A4-40e3-BDD3-1235B0638F3E}
+      - "Association «IN» → fv.ov-status_data"  # {B6722419-1387-4fce-91C3-0416917BF8D1} → {ACF67ED4-D4AB-408f-92BF-14EE0EFFB031}
+      - "Association «IN» → fv.ov-traffic_queue_ahead"  # {D0541100-2C64-4af7-8640-A414556B6EAF} → {DC64545E-1ADE-439c-8F18-0C5EA603726A}
+      - "Association «IN» → fv.ov-visibility_data"  # {46987D71-E123-42d1-A344-AECD958BF552} → {F0479735-07DF-4f30-958D-7BB6FDFFC075}
+  - name: "Parking Operator"
+    guid: "{1839AD47-F336-4a43-AF40-5A0A45E882C1}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Operator Terminator and shall represent a human entity that uses the functionality in the system to manage the operation and use of car parks for the organisation that owns and/or operates car park(s).  It is expected that the Terminator shall provide inputs from which data objects can be created by system functionality to represent commands, data and requests for use in the system and be capable of translating into human readable form data objects output from the functionality in the system.  The functionality in the system must be able to communicate with more than one human entity that is a Parking Operator, each of which may belong to the same car park owning/operating organisation, or to different organisations.
+      
+      Mnemonic: o.po
+    links:
+      - "Aggregation «component of» → Operator"  # {4B8387A0-4B7E-4493-84FE-46AA84F109B7} → {102BBDF5-FF2D-4077-AD52-BEE0EA237E1C}
+      - "Association «IN» → fo.po-carpark_current_data_request"  # {6233E285-5236-4ce3-8C9D-944842E12334} → {6B286CD5-82EE-4203-AE5A-1496D05C0101}
+      - "Association «IN» → fo.po-carpark_output_settings"  # {0D7086FE-2FFF-4f31-8F15-1C014E26A826} → {090552F6-FCBF-4571-AA5D-07ABBECD6D0C}
+      - "Association «IN» → fo.po-carpark_payment_record_request"  # {42F0AFD8-6E49-47af-948F-0DD97F62394C} → {415A8C0B-565E-4c81-9725-C6390C000876}
+      - "Association «IN» → fo.po-carpark_static_data_inputs"  # {9BF4A090-596E-4a28-B4BC-6DC72D60DBD4} → {47842C7D-DB33-4054-8238-8844BF8EDAD4}
+      - "Association «IN» → fo.po-carpark_static_data_request"  # {E782C4C7-1D7E-4720-9170-6F8FDDEBE0A8} → {80AC9FF8-C9FB-4701-89E3-36AC7B4703AC}
+      - "Association «IN» → fo.po-carpark_status_override"  # {6BBE804B-E4F9-4b6e-894D-301472AD2CE3} → {051086C9-F40C-4c12-A96A-64747C2D3C4F}
+      - "Association «IN» → fo.po-inter-urban_inputs"  # {CF92DD5D-D224-430f-A3F4-DDFEDB9567EB} → {50FC7D7C-A8BC-4ffe-89F6-0FCBE87629E2}
+      - "Association «IN» → fo.po-rest_area_booking_response"  # {3CD80E08-CAB8-4b95-80EB-15459CD0F730} → {544C49F5-FB79-43a6-A4DB-2E881964254B}
+      - "Association «IN» → fo.po-service_area_current_data_request"  # {36DD733E-8EF6-4701-A7AE-2BAAF7DC63DE} → {E9629A2E-7E74-4f25-BF42-045C5744CD56}
+      - "Association «IN» → fo.po-service_area_driver_output_settings"  # {DAB94BB9-7E21-41dc-BFB8-2D0BDC5CB00A} → {E58F7816-23F8-4e8f-8F41-DE4E3AC786DD}
+      - "Association «IN» → fo.po-service_area_static_data_inputs"  # {C5EB6F13-4148-4bf5-B3FE-40C83C0C08B3} → {7E2329FA-1511-42b0-9047-EE91BFA99BB1}
+      - "Association «IN» → fo.po-service_area_static_data_request"  # {BC1FEE3D-B2EA-49ae-95AF-792545F30F6F} → {3BBA0027-93DE-4a51-A1DC-E9D87408C065}
+      - "Association «IN» → fo.po-service_area_status_override"  # {E3BDC8FB-9BFB-4f98-9D6A-019C5F47D0DC} → {C736AF5C-16BB-4f07-B52A-D2C76FD4F89D}
+      - "Association «IN» → fo.po-tNAP"  # {267BE1B0-A68A-494a-AE82-A4E5F0B41486} → {A4951824-CCD7-40e8-8FB8-C62DDBD17C63}
+      - "Association «IN» → fo.po-tPAM"  # {D26FD7BF-6B29-4df3-9915-5562AB569F25} → {B759FD5B-F946-41ad-9BC7-14BD382D26E1}
+      - "Association «IN» → fo.po-urban_inputs"  # {D23E87A3-6CE0-4e9e-8F22-2D86CF37F2C2} → {A04E68AA-E207-4332-BB7D-95077557ADD5}
+      - "Usage → Park Operator Application"  # {0184F10F-7157-4953-BC44-9FC5488F6C45} → {61B85395-4759-4f77-83E2-C9E902E8C2B4}
+      - "Usage «Instantiate» → NAP Content Provider"  # {E6FD404D-E1B5-43d7-BD72-11B0DEAA5662} → {48698837-F8BB-4dca-BBDB-736CF23C778C}
+  - name: "Pedestrian"
+    guid: "{B483AF3E-A4D3-4a44-97EB-2BC267A2D817}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Traveller Terminator and shall represent a human entity that is using the functionality in the system to move on foot (walking) through the parts of the road network that are available for use by Pedestrians.  It is expected that the Terminator shall provide inputs from which data objects can be generated by functionality in the system to represent requests and data for use by the system.  The Terminator is also expected to be capable of translating into human readable form data objects output from the functionality in the system and responding to that output if required.
+      
+      Mnemonic: t.p
+    links:
+      - "Aggregation «component of» → Traveller"  # {0C90398F-7B3E-4a32-9BEC-6B7F9D7C86E9} → {5F83A087-8531-4855-A274-F88A8ACBBAF0}
+      - "Association «IN» → ft.p-emergency_call"  # {784077E2-A846-4819-A773-A4588F979F05} → {946E76D4-88D6-4a12-A89E-A5BF100099D3}
+      - "Association «IN» → ft.p-presence_indication"  # {C6EBF05A-07C8-4754-84EE-82A9FBF9E2FA} → {CF637A36-241E-482e-A41B-7F7895947E6E}
+      - "Association «IN» → ft.p-urban_data"  # {F887A686-FC6B-4e3b-80EB-CBDE1821B434} → {F9620601-80BB-4e7a-97DC-1C1F4CA6C175}
+  - name: "Planned Event Organiser"
+    guid: "{36A55105-0DB9-4945-A5AD-9A89D8DA8FF7}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the External Service Provider Terminator and shall represent an organiser of external events, such as football matches, parades, music festivals, etc. that are likely to attract a large number of attendees, the presence of which may have an impact on the travel conditions on the surrounding road network.  It is expected that this Terminator shall at various times provide data objects containing information about these events such as, time, place, duration, expected numbers of attendees, etc. for use by the incident management functionality in the system.
+      
+      Mnemonic: esp.peo
+    links:
+      - "Aggregation «component of» → External Service Provider"  # {99D1050B-0366-453b-A496-1DB7F8230A55} → {73960376-E008-4811-B5BB-B58A1E143730}
+      - "Association «IN» → fesp.peo-event_data"  # {98C36645-3ABB-4acb-9C56-337481412C18} → {198E219B-C2F4-42df-B7C3-F95DAFAE4807}
+      - "Association «IN» → fesp.peo-planned_events"  # {07D48716-8B8A-4351-B860-0377D5C8E975} → {E41AD1BA-FA31-4ef8-92B6-2B3CCE1D2A92}
+  - name: "Pre-Trip Traveller"
+    guid: "{EC1BCCA4-DD6A-40c3-AACF-C2195C069FE4}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Traveller Terminator represents a human entity that is using the functionality in the system to prepare a trip plan to be used at some point in the future.  It is expected that the Terminator shall provide inputs from which data objects can be generated by functionality in the system to represent requests and data for use by the system.  The Terminator is also expected to be capable of translating in human readable form data objects output from the functionality in the system and responding to that output if required.
+      
+      Mnemonic: t.ptt
+    links:
+      - "Aggregation «component of» → Traveller"  # {EA2DCA9A-03BE-4137-8AD9-E7697148EBAB} → {5F83A087-8531-4855-A274-F88A8ACBBAF0}
+      - "Association «IN» → ft.ptt-additional_trip_parameters"  # {A9152236-EE14-43d5-A02F-8CD77FC482E2} → {958D7BA6-A5D4-49ba-97C1-4559E9C79A01}
+      - "Association «IN» → ft.ptt-basic_trip_parameters"  # {34EE2216-B760-4176-88F0-B497ECE429D2} → {F01DADE9-820B-4b2f-AA99-8F0F79FC4511}
+      - "Association «IN» → ft.ptt-booking_approval"  # {EA6E1961-20FC-43f4-88D0-78569A7BFA05} → {C1E47840-005E-47d5-8560-EE65D9FC427F}
+      - "Association «IN» → ft.ptt-confirm_demand_service"  # {60F621AB-7FA3-426e-A616-247F9D382D83} → {6DD699F0-7542-4ae6-B9D3-00B315D9F425}
+      - "Association «IN» → ft.ptt-final_approval"  # {F06F1C77-7706-4919-BFB2-9380D3AAFCAE} → {63A03663-FBEE-4ba3-837A-62127D2702B3}
+      - "Association «IN» → ft.ptt-make_demand_service_payment"  # {05013B0E-227F-4ad4-B941-95DEEB825B9F} → {F779FEDF-C0B5-40b0-9EEA-66B8A2F22807}
+      - "Association «IN» → ft.ptt-modified_trip_parameters"  # {4BF4A221-BFF3-43af-825B-F7963BCB85B2} → {690EFC8D-7EAD-4f7b-9DDD-0620CDE7F48F}
+      - "Association «IN» → ft.ptt-on-demand_service_inputs"  # {9D28B361-CA18-4348-A016-128CE9E9B41F} → {49B3E67E-73AA-47d3-906B-5E6E098BD7DE}
+      - "Association «IN» → ft.ptt-request_PT_service_information"  # {AEB20AD9-0B30-4f71-AAEE-E074878AB2B5} → {E9EC6537-5908-4b8b-9877-A23772B4E81D}
+      - "Association «IN» → ft.ptt-request_demand_service"  # {89AA0114-A043-4e9f-99FB-269458386B99} → {22C431A6-0F79-4140-A22F-98EE3F5C7502}
+      - "Association «IN» → ft.ptt-revised_booking_choices"  # {E4405A18-12E9-4e46-9A34-51E26CC66011} → {76E34761-6BFB-4d82-9267-D396AF5E28FF}
+      - "Association «IN» → ft.ptt-trip_planning_information"  # {F03BA201-1F6C-46a1-996E-0A22F281BB92} → {A62CD290-367A-4ba4-9417-FC604AF71523}
+      - "Association «IN» → ft.ptt-trip_planning_payment"  # {4DF1133D-6C65-4bec-B938-411BA7215AAD} → {095DE2E5-C0B5-4668-834D-96E3210A57A6}
+      - "Association «IN» → ft.ptt-trip_selection"  # {F769CCDD-CB13-4df8-9BDC-6C0F8BA267BF} → {1A1E1EEE-33D1-473e-9E24-EBF79617E88A}
+  - name: "Public Transport Driver"
+    guid: "{41B86F06-F441-4248-9292-8E77F40D89C1}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Driver Terminator and shall represent a human entity that drives a vehicle that is licensed to carry passengers who pay for their transportation and which may or may not use fixed or pre-defined routes.  It is expected that the Terminator shall provide inputs from which data objects can be created by system functionality to represent requests and data for use in the system and be capable of translating into human readable form data objects output from the functionality in the system.  The Vehicle type for this Driver is defined in the description of the Public Transport Vehicle Terminator.  The functionality in the system must also be able to communicate with more than one human entity that is a Public Transport Driver, each of which may belong to the same PT organisation, or to different organisations.
+      
+      Mnemonic: d.ptd
+    links:
+      - "Aggregation «component of» → Driver"  # {009E33C8-B55A-49e4-B403-1873E4D3EE76} → {0C560BF0-702E-48c1-B7F0-69F55BF03556}
+      - "Association «IN» → fd.ptd-assign_vehicle_to_service"  # {B6BC46BA-9DFE-493b-900D-B416DC270D06} → {18725561-066C-44b8-8227-6FD9124D052B}
+      - "Association «IN» → fd.ptd-control_feedbk"  # {185D9A84-97FB-4b36-9BCB-175DEE5F9993} → {176CA711-3247-4497-B1BD-463FA22758BB}
+      - "Association «IN» → fd.ptd-driver_status"  # {A0911BBE-46E7-48b9-8743-DAF9349C361C} → {4DFB28C0-50C8-40ff-BB76-54C2A79228F3}
+      - "Association «IN» → fd.ptd-messages"  # {251C8383-8DE2-4d96-81B9-8BC20AAF3AD3} → {7FF12580-8EA1-4fee-A511-81B9962B21F7}
+      - "Association «IN» → fd.ptd-request_fares"  # {78D49FE2-D1A5-4c6e-90E3-DAD6E189093F} → {19D47157-5279-4623-AB8B-6EF818ABA463}
+  - name: "Public Transport Maintenance Organisation"
+    guid: "{C9FF7EC8-9B49-438d-A478-3A4DAD1550A3}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Maintenance Organisation Terminator and shall represent an organisation that is able to carry out maintenance of Public Transport (PT) related equipment that is used to provide the ITS Services for which functionality exists within the system.  It shall be possible for the Terminator to both receive data objects from functionality in the system about PT related equipment maintenance that is required and provide data objects showing the progress with and/or plans for that maintenance.  The functionality in the system must also be able to communicate with more than one Public Transport Maintenance Organisation.
+      
+      Mnemonic: mo.ptmo
+    links:
+      - "Aggregation «component of» → Maintenance Organisation"  # {1A04BAC3-CB6B-4973-874C-4D9F59397581} → {C531C2A9-B828-456d-8F56-C342DBA4F25F}
+      - "Association «IN» → fmo.ptmo-plans"  # {86EDFD0C-77F6-42d9-AAB4-46FD0E048CEC} → {28CFF771-DA75-44b9-8E5D-E5306E7057E0}
+  - name: "Public Transport Management System"
+    guid: "{749DF1B3-1602-4c00-83E3-1F18E9539D04}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Other Related System Terminator and shall represent another instance of the functionality in the system that manages the operation of Public Transport (PT) Services.  It shall enable the same data objects to be sent to and received from other instances of the PT management functionality.  These other instances may belong to another PT management organisation operating in the same geographic area, or to a PT management organisation operating in a different geographic area.  It shall be possible for the data objects to be sent and received on request, at regular intervals, or because the sending functionality has made changes.
+      
+      Mnemonic: ors.ptms
+    links:
+      - "Aggregation «component of» → Other Related System"  # {B524B464-DA61-4f5a-8EE2-D67FF8E117B2} → {AB919AF2-B1C5-45bf-8731-FB6EC44C2A2E}
+      - "Association «IN» → fors.ptms-control_parameters"  # {9F3A961C-B276-4e85-A48D-0F26CA57382C} → {54BA5D49-7BF9-41ee-924F-ECC0376C80DC}
+      - "Association «IN» → fors.ptms-plans"  # {28CE5F30-F2C5-4b13-A65A-0CA8B148DF8F} → {68FB4015-CA72-4c7e-8900-E69494F515A7}
+      - "Association «IN» → fors.ptms-pt_planning"  # {E000DC7F-63A6-4203-AC3B-95CFCAE861BC} → {4F691769-3F64-4021-AFDF-15C263B745F4}
+  - name: "Public Transport Operator"
+    guid: "{FDF0642B-3981-4c99-ACFD-312BA0227A44}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Operator Terminator and shall represent a human entity that uses the functionality in the system to manage the provision and operation of Public Transport (PT) services by a Public Transport organisation.  It is expected that the Terminator shall provide inputs from which data objects can be created by system functionality to represent commands, data and requests for use in the system and be capable of translating into human readable form data objects output from the functionality in the system.  The functionality in the system must also be able to communicate with more than one human entity that is a Public Transport Operator, each of which may belong to the same PT organisation, or to different organisations.
+      
+      Mnemonic: o.pto
+    links:
+      - "Aggregation «component of» → Operator"  # {622BB9A7-34C6-423c-A0F1-7ECF53CA5049} → {102BBDF5-FF2D-4077-AD52-BEE0EA237E1C}
+      - "Association «IN» → fo.pto-PT_driver_management_inputs"  # {C24A841E-5152-4714-B0BB-18D2B268CA84} → {A5AC0EFA-861C-433a-83B3-D648F88093C8}
+      - "Association «IN» → fo.pto-PT_vehicle_static_data"  # {E4A6DA11-2AEA-4959-84EE-5C69D39E59D6} → {EACED9EB-BFB3-40ac-AD48-A7CF1341C410}
+      - "Association «IN» → fo.pto-change_service_delivery_criteria"  # {B298124E-4925-4ca9-9002-0EE3124FC1D4} → {81C0FBFE-DB7E-4c64-B69E-81E595228496}
+      - "Association «IN» → fo.pto-communications"  # {06F8F949-C02F-4621-AF89-36316CDE0910} → {93239797-E75B-47a6-B034-A4A04B501DE9}
+      - "Association «IN» → fo.pto-fare_strategies"  # {E2E003D4-1F8A-4e18-8754-CA70716D4D05} → {19092133-E035-48a4-B62C-A1BE10F73779}
+      - "Association «IN» → fo.pto-mpto_control_inputs"  # {005FA1FF-C24D-40d8-A43B-89CFD5278845} → {C61E3E4C-83F7-4596-B3C3-4034A708B8B6}
+      - "Association «IN» → fo.pto-output_historic_information"  # {E302E6E9-34D7-4e16-A962-6ED3C3E55C91} → {902BE8B9-2443-4871-A35D-DE3F43B14701}
+      - "Association «IN» → fo.pto-output_predicted_PT_data"  # {CEEBBD63-2CC1-4c16-A827-CB8E121090D1} → {95013329-9492-40fc-8984-14F6B80E634C}
+      - "Association «IN» → fo.pto-output_real_time_information"  # {C110E171-731D-45ac-A9C4-54B671CDD407} → {10B2B6EF-3B45-4c13-92B9-7B6883864FA4}
+      - "Association «IN» → fo.pto-performance_criteria"  # {3F5EFAC6-AAE6-442a-A147-ED02FEAD288B} → {7723CA6E-2580-4a7d-A821-CA1142819454}
+      - "Association «IN» → fo.pto-planning_strategies"  # {730240B4-FBEE-4f8b-8A00-9892A8996347} → {9BC4977F-6871-4698-83E2-ABE4E7D58422}
+      - "Association «IN» → fo.pto-pt_planning_inputs"  # {C873834B-831A-475b-92B2-9B596A7A4371} → {DE87D89E-06D1-4bf9-B6EA-F6F53D43A462}
+      - "Association «IN» → fo.pto-request_actions_report"  # {75DB2144-E2CA-442b-AC50-E428748273D9} → {E768F19E-F170-44f6-B559-7E8B094F31FA}
+      - "Association «IN» → fo.pto-request_driver_statistics"  # {EA25281B-636F-43cf-BE54-CF78B7F3D612} → {8F351B90-1E7D-425f-BEE7-85A2B3B6D13A}
+      - "Association «IN» → fo.pto-request_route_static_data"  # {E5A372F0-CEA7-4d19-A5A5-0DC6CCB7B8B4} → {9D73ABB4-4968-42e1-9DD3-8645B47C2CFB}
+      - "Association «IN» → fo.pto-request_travel_plan_criteria"  # {8BE3F018-4771-46ce-B2EE-D93BD0F074FB} → {00BD2022-C87F-42cd-98AD-2D1C7A13F5EA}
+      - "Association «IN» → fo.pto-requests_and_updates"  # {9F870437-0219-4767-9158-352ADC88BD31} → {4B1E0203-50A7-47aa-95DE-AB047646B41D}
+      - "Association «IN» → fo.pto-route_static_data_update"  # {A6A7126C-3246-410a-BB7E-FF98DCBEB449} → {691E091D-F657-4b61-9B0C-E5F00F79853D}
+      - "Association «IN» → fo.pto-service_change_response"  # {88D77DA4-D27E-4fd4-BCC0-8E47E1AFD963} → {5B5ECA44-2320-4297-920F-C6E4B0A6A877}
+      - "Association «IN» → fo.pto-update_driver_details"  # {910A1A48-FD1E-49b0-8594-4C095F310831} → {3CA5DE85-116E-482e-9BA9-F6684200F230}
+      - "Association «IN» → fo.pto-updated_travel_plan_criteria"  # {899698FE-2CD4-4582-BB14-9B6D51F8AE45} → {2B98B407-34FD-4699-A6D9-B776430B4C39}
+      - "Association «IN» → fo.pto-vehicle_comms_and_interaction"  # {6A562998-EAE1-454f-8DEB-6CCCBC190B6B} → {1E797171-9766-49b3-ABC0-53402FFADED0}
+      - "Association «IN» → fo.pto-vehicle_sharing_inputs"  # {592E8439-D689-48d5-AA1E-7A57960C4683} → {B3F3087D-DC50-4091-8E1F-F729763EEC5F}
+  - name: "Public Transport Passenger"
+    guid: "{138501AE-353C-46d0-A64F-A05D9CA75161}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Traveller Terminator represents a human entity that is currently using a Public Transport (PT) Vehicle to complete some or their entire trip.  It is expected that the Terminator shall provide inputs from which data objects can be generated by functionality in the system to represent requests and data for use by in the system.  The Terminator is also expected to be capable of translating into human readable form the data objects output from the functionality in the system and responding to that output if required.
+      
+      Mnemonic: t.ptp
+    links:
+      - "Aggregation «component of» → Traveller"  # {BDA3CBC4-22EA-429c-9683-376CB1921017} → {5F83A087-8531-4855-A274-F88A8ACBBAF0}
+      - "Association «IN» → ft.ptp-current_fare_credit_request"  # {76C0F995-EDA9-4f40-A549-16A9D893D2FF} → {D90FCD37-16B4-4c02-92EC-B323746334E8}
+      - "Association «IN» → ft.ptp-passenger_emergency"  # {E5B8D03B-4332-440e-8560-58295C00E448} → {A7A794EB-3F21-4a82-BCC1-EAB1AAEC350E}
+      - "Association «IN» → ft.ptp-pay_for_journey"  # {9809A3CD-9B0B-4422-8B27-72DFB8AC1983} → {76C59B8C-AC4B-43e4-9E66-CAF325A8998C}
+      - "Association «IN» → ft.ptp-provide_PT_fare_card_inputs"  # {1B8EC453-C116-4dae-A5C2-08A189E26DC1} → {7A9B9884-BB5F-4f39-B51C-D65BACF4B73F}
+      - "Association «IN» → ft.ptp-request_fare_credit_update"  # {BF3CB4D3-89FD-4d1a-937F-0BEB0575CA6E} → {B221B6E8-292A-4de7-91B5-B36C685EBA66}
+      - "Association «IN» → ft.ptp-request_journey_fare_cost"  # {D7DF106C-7AB1-4bef-AF19-04B5019906EC} → {410F02E0-2972-490f-8526-E935957F903C}
+  - name: "Public Transport Stop"
+    guid: "{184E3249-34EC-48ec-98D2-75C9FF6FD0E9}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Other Related System Terminator and shall represent another instance of the functionality in the system that is for use at a Public Transport (PT) Stop.  It shall enable the data objects to be exchanged between PT Stops so that if necessary information can be passed along PT routes.  It shall be possible for the data objects to be sent and received on request, at regular intervals, or because the sending functionality has made changes.
+      
+      Mnemonic: ors.pts
+    links:
+      - "Aggregation «component of» → Other Related System"  # {9993E81D-2FF3-4683-907A-362C8F7340BC} → {AB919AF2-B1C5-45bf-8731-FB6EC44C2A2E}
+      - "Association «IN» → fors.pts-arrival_prediction_data"  # {FEE6948C-93ED-4dfe-8493-EA29C43AD784} → {625870DF-CAD3-4580-8771-898B860C21A3}
+  - name: "Public Transport Vehicle"
+    guid: "{26AF8AAA-289F-4bb7-B55B-405CEEFF79B1}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Vehicle Terminator and shall represent a Vehicle that is licensed to use the road network, carry passengers who pay for their transportation and who expect it to follow a fixed or predicted route to provide a Public Transport (PT) service.  It is expected that this Terminator shall provide data objects to the functionality in the system either directly through an interface or through sensors, and these shall be used to assist in providing the PT services.  In addition, the Terminator shall be sent data objects through an interface by functionality in the system that requests the output of instructions for the PT Driver to follow.  Note that this shall be a "request" and not a command, as it shall not be possible for the PT Vehicle to be controlled by the functionality in the system.
+      
+      Mnemonic: v.ptv
+    links:
+      - "Aggregation «component of» → Vehicle"  # {C8E47EBA-5814-424a-BA79-4D679BEBAD38} → {9021465A-4479-4fa8-B8DB-3481C001B9C3}
+      - "Association «IN» → fv.ptv-alarms"  # {B379A177-FFA8-4a80-A7D4-95F25E5BE34B} → {8DFF0C48-02E6-4dee-84C8-F468E085C4D4}
+      - "Association «IN» → fv.ptv-control_feedbk"  # {840519CD-417B-4bde-9617-972FB3093DF1} → {861D900E-EF63-4afb-9AC1-3AF6DF2BC00B}
+      - "Association «IN» → fv.ptv-local_priority_request"  # {B1979CB4-75DF-4fc5-BC40-8D8298E58EAD} → {D6BC5C1E-AF8F-4c5e-A67D-AFD750A5F13C}
+      - "Association «IN» → fv.ptv-passenger_numbers"  # {23690F61-06AF-4904-8B7C-EE01D32A6142} → {B47185A8-6F74-4d44-A484-455C2E962BC4}
+      - "Association «IN» → fv.ptv-vehicle_data"  # {1C89A014-D39E-4437-8898-AD438F7F170B} → {8FBFDBEE-A66D-4b4e-9E34-F533CCB76B6E}
+      - "Association «IN» → fv.ptv-vehicle_indicators"  # {C589C2F7-EDD1-4e6a-AD60-1D97520FD8B9} → {38722881-F698-49b6-ABB9-2CF87E9F151D}
+      - "Association «IN» → fv.ptv-vehicle_internal_view"  # {D24565F1-65A9-463f-AC8B-F44B648E6211} → {C848CF19-B3DA-451c-AB0E-73993EDDEE8F}
+  - name: "Road Maintenance Operator"
+    guid: "{8663EB8E-D95A-492f-A0BB-A1FE2F38099D}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Operator Terminator and shall represent a human entity that uses the functionality in the system to manage the maintenance of road network and roadside equipment.  It is expected that the Terminator shall provide inputs from which data objects can be created by system functionality to represent commands, data and requests for use in the system and be capable of translating into human readable form data objects output from the functionality in the system. The functionality in the system must also be able to communicate with more than one human entity that is a Road Maintenance Operator, each of which may belong to the same organisation or to different organisations that are responsible for different parts of the road network.
+      
+      Mnemonic: o.rmo
+    links:
+      - "Aggregation «component of» → Operator"  # {F2C852B1-8890-497d-867E-BF4DEF42FA0D} → {102BBDF5-FF2D-4077-AD52-BEE0EA237E1C}
+      - "Association «IN» → fo.rmo-confirm_maintenance_activities"  # {54AB6ABD-52D3-42b2-82B4-48039D3381D6} → {83D267BB-AF4C-4346-8236-833A2E765D19}
+      - "Association «IN» → fo.rmo-confirmed_de-icing_activities"  # {F6980EDC-9EE4-499e-8A84-04EF7C4DDE60} → {442E7907-18DE-4255-9D01-6E24A1C68CB1}
+      - "Association «IN» → fo.rmo-maintenance_commands"  # {4C6C0150-4494-4f33-A25A-CB9F0C8BFFFB} → {DB5F8FC3-1F45-4752-87AC-90782D176308}
+      - "Association «IN» → fo.rmo-output_current_equipment_faults"  # {21D0BB51-BAEA-4e90-822C-AF2B04248ECE} → {6E27B3F2-EF61-4038-A2A4-6BA58A10DEC4}
+      - "Association «IN» → fo.rmo-request_activity_status"  # {B1106AEB-E2D3-4ddb-B1CA-DA24DB8E03DD} → {52E59BEA-0424-43ff-BAFB-C0A0738762A3}
+      - "Association «IN» → fo.rmo-request_static_data_output"  # {9DF67B97-F555-4fba-8AC0-F8CAD3A75D08} → {2DB4543E-556F-450f-8F8B-E7F26B37EA20}
+      - "Association «IN» → fo.rmo-update_static data"  # {7473936A-F738-4901-BC65-81DEF9169454} → {ECEB5991-C306-476f-8459-56CDE814033B}
+  - name: "Road Maintenance Organisation"
+    guid: "{7ADF4851-9B73-4fd2-B6D2-81BC10AB7E94}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Maintenance Organisation Terminator and shall represent an organisation that is able to carry out work to maintain the road network and any equipment that is used to manage traffic using the road network.  It shall be possible for this Terminator to be sent requests for maintenance work to be performed on the road network and/or any of the equipment.  The Terminator is also expected to provide data objects to functionality in the system about the time, place and duration of planned road works and the status of previously requested maintenance work.  The maintenance work is expected to include any repairs to the physical road network such as worn surfaces and faulty equipment, plus the management of operations and use of de-icing and snow clearing equipment in various parts of the road network.
+      
+      Mnemonic: mo.rmo
+    links:
+      - "Aggregation «component of» → Maintenance Organisation"  # {C560226C-6665-45b7-8F92-E13A32E03F11} → {C531C2A9-B828-456d-8F56-C342DBA4F25F}
+      - "Association «IN» → fmo.rmo-de-icing_activity_update"  # {DC7C0296-A6D3-4783-A9FD-F98842F153AA} → {2C40877D-E08C-471f-B99F-859A225D33F4}
+      - "Association «IN» → fmo.rmo-equipment_maintenance_activity_update"  # {FF8F88A0-4A4F-42b4-BC8A-2BBF399D4D79} → {F8397908-F9D8-46cb-AB72-56C57B4E3DDF}
+      - "Association «IN» → fmo.rmo-infrastructure_diagnostics"  # {A725E95E-40A4-4edd-A345-9BC144E3D47A} → {F3F7A896-B78B-41f9-85F2-E948CDA5CC1D}
+      - "Association «IN» → fmo.rmo-long_term_maintenance_activity_update"  # {00788FD1-EA94-421a-9563-85AC7B3B2A0D} → {B4319531-39DB-424c-80C8-9782ABBA3BC9}
+      - "Association «IN» → fmo.rmo-maintenance_activity_updates"  # {E0248A20-A0C8-4dcf-8DFA-BC0E2156F264} → {6FF713ED-CD77-4e4d-A4E2-88E166255B59}
+      - "Association «IN» → fmo.rmo-short_term_maintenance_activity_update"  # {0AF1D8A8-23B3-41a8-8B40-E21B0485A960} → {5D5831F9-BE99-4be5-BFAB-E2E8B4FA4048}
+  - name: "Road Network Operator"
+    guid: "{29663965-6B51-4bd0-85FF-28C9510C17C5}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Operator Terminator and shall represent a human entity that uses the functionality in the system to manage the traffic using the road network and the operation of the functionality that provides the management.  It is expected that the Terminator shall provide inputs from which data objects can be created by system functionality to represent commands, data and requests for use in the system and be capable of translating into human readable form data objects output from the functionality in the system.  The functionality in the system must also be able to communicate with more than one human entity that is a Road Network Operator, each of which may belong to the same organisation or to different organisations and which may be responsible for different sections of the road network.
+      
+      Mnemonic: o.rno
+    links:
+      - "Aggregation «component of» → Operator"  # {CCFCD73A-7414-4dab-9206-0AD35329A45C} → {102BBDF5-FF2D-4077-AD52-BEE0EA237E1C}
+      - "Association «IN» → fo.rno-bus_lane_inputs"  # {71C6B409-BCCE-4e4c-AA5A-83EE78076427} → {FD78417A-AE88-4e25-AF0D-8B5534B09DB0}
+      - "Association «IN» → fo.rno-confirm_environmental_actions"  # {DE220F87-55CC-46ad-B2BC-BE4466B2A90F} → {03F66A0F-0F5D-492f-9EB1-2A0C96B2479C}
+      - "Association «IN» → fo.rno-create_incident_strategy"  # {078B6B8D-9F36-494c-A554-074AD73DFB80} → {E2AAA6DB-942E-4ed8-B34D-7BEB7D25281A}
+      - "Association «IN» → fo.rno-demand_management_data_requests"  # {69A42CA2-6E63-41d8-95B5-1431FC0F26D2} → {FBE5094C-F748-4507-A638-C88C57F1D024}
+      - "Association «IN» → fo.rno-demand_management_development_commands"  # {F7F33A94-3817-4c3e-8857-E10B848CCD9F} → {D3C40FAD-6D13-42fe-88B5-0254B680AC15}
+      - "Association «IN» → fo.rno-demand_management_inputs"  # {1818A7C7-842F-40de-B7EC-AC13D56A2DFF} → {ED224F69-DA94-4957-B6E4-E64746940357}
+      - "Association «IN» → fo.rno-demand_management_inputs"  # {9AF58815-E7A2-4d7a-8905-FA1A705BA02C} → {ED224F69-DA94-4957-B6E4-E64746940357}
+      - "Association «IN» → fo.rno-demand_management_report_requests"  # {3F966C64-C4E6-4be6-B379-18BF77447B9B} → {2E0AC1FA-21DD-4ad9-8412-6300FED79466}
+      - "Association «IN» → fo.rno-demand_management_strategy_commands"  # {87E20213-1A31-44c8-B016-70BAD661C898} → {793F8D2B-6B18-4b3f-9C3C-8A89C66E24E8}
+      - "Association «IN» → fo.rno-hazardous_goods_vehicle_criteria_request"  # {70384004-705F-4444-A702-2A15E5544916} → {9DA597D9-D898-42a4-883C-AFE7F3F47596}
+      - "Association «IN» → fo.rno-hazardous_goods_vehicle_management_inputs"  # {475E319D-A1C8-4c5c-9947-ED1116C336A5} → {A1773C57-7DDC-463b-A0C4-0CD992A984CB}
+      - "Association «IN» → fo.rno-hazardous_goods_vehilce_criteria_update"  # {2C38251B-8045-40b5-9EAE-E44B45B80A29} → {4A359900-9BA9-4389-8ACB-67B086D38FE8}
+      - "Association «IN» → fo.rno-implement_incident_strategy"  # {701F5CEF-ABE1-4026-AD47-3BD62ACC87FC} → {9A6D37E3-9363-48c0-83A4-7AE78E517BF5}
+      - "Association «IN» → fo.rno-incident_inputs"  # {AC68EC5A-FA53-4808-BE4C-DFD3EC163E33} → {2860FF7E-346D-4c14-A0E1-BAD58C4ED38F}
+      - "Association «IN» → fo.rno-inter-urban_command_output_override"  # {0D8A32C1-DEB5-4171-ABB5-CA929D00F17D} → {6001F213-F42C-4646-9106-0A60E9F597C0}
+      - "Association «IN» → fo.rno-inter-urban_road_static_network_data"  # {B2AEEBAE-49C9-4eaa-92A3-A463A3CD7712} → {903A699C-1C5C-4565-A9F9-F4D29F39A695}
+      - "Association «IN» → fo.rno-inter-urban_traffic_commands"  # {4EA62B83-42B2-4a82-9B9F-4FD969A3CC9F} → {26680F03-A71C-4286-8996-33500236AFBE}
+      - "Association «IN» → fo.rno-inter-urban_traffic_control_commands"  # {8509778F-C0AC-41dc-BF13-63CFAD013AA5} → {31CBE563-83A7-4ea2-9944-F684CAA93088}
+      - "Association «IN» → fo.rno-inter-urban_traffic_management_commands"  # {DDECE63B-DC18-4617-9B44-46DB9054C9C2} → {565FD599-433A-4a3a-B537-8616895F9278}
+      - "Association «IN» → fo.rno-request_bus_lane_use_data"  # {4EA36123-303E-4b0b-AA22-6827B4F581ED} → {87678BA5-CD17-4f4a-A8BF-47AF8B95A99E}
+      - "Association «IN» → fo.rno-request_current_vehicle_access_criteria"  # {4006818F-AA0D-4962-821C-B69AB812FB10} → {EB36EC02-9973-4228-86BF-C0DD1BD688FF}
+      - "Association «IN» → fo.rno-request_environmental_data_analysis"  # {D67526E7-0955-43fc-BA23-81D69BFFF4FF} → {DBBF3CC1-2674-4895-8407-7126323B1CF8}
+      - "Association «IN» → fo.rno-request_incident_data_analysis"  # {FBFFF4F8-DD8A-4ea8-9E70-8ABA378FF6B9} → {AE898639-D560-4c9f-B21C-BC633D405A79}
+      - "Association «IN» → fo.rno-request_incident_statistics"  # {735CF21F-D97C-48bd-9D49-931FDE59D2A5} → {F757114D-9901-4550-BF6D-7724FA0BA41F}
+      - "Association «IN» → fo.rno-request_inter-urban_ouput_monitoring"  # {1F1D5B1E-5689-4c35-9415-FFE155EA783D} → {ED55D2AB-CA59-494b-8FD6-2B4AEFAEC4D0}
+      - "Association «IN» → fo.rno-request_sensitive_area_vehicle_use_report"  # {5D9C7BE0-D47E-4647-85B0-4977D0B2CDC3} → {001545BD-BB1C-4834-9001-4975864DD793}
+      - "Association «IN» → fo.rno-sensitive_zone_access_inputs"  # {95B9E1B5-D630-4fd0-98E7-2C51292FEA87} → {DD1F4B7B-147E-4c8d-805B-CC13DDAB0634}
+      - "Association «IN» → fo.rno-traffic_management_inputs"  # {55CF8A3B-4FE9-44b6-834D-63B8E6069BCD} → {B77AE026-79F4-491e-88F5-9F7C08C2FA73}
+      - "Association «IN» → fo.rno-update_current_vehicle_access_criteria"  # {72C6BB8A-F86E-4f30-B625-67C03C931FFD} → {8B1ACDF6-13ED-4b4e-9F34-5C7B6C877BE0}
+      - "Association «IN» → fo.rno-update_road_network_data"  # {E69DD7ED-AB5F-4817-9E38-1E3DA1DB2341} → {A93CF977-9651-4367-A8C0-871D6D57DFC3}
+      - "Association «IN» → fo.rno-urban_road_static_network_data"  # {F8FB8464-215E-483b-9AC5-678F12A033F9} → {4FA5B85E-C8B6-40b9-96E7-4ABD1F68EBCB}
+      - "Association «IN» → fo.rno-urban_traffic_commands"  # {F2CE21A7-92F3-44d4-9556-93B9556CFA41} → {FF1CE0CA-6034-4a50-9E4C-11E57FAED990}
+  - name: "Static Traveller"
+    guid: "{D1578012-5CE8-4181-BD1D-DF96C9C21B78}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Traveller Terminator represents a human entity that is using the functionality in the system for a journey but at this moment is not moving, i.e. static, because for example they are waiting at a bus stop, or within a transport interchange.  It is expected that the Terminator shall provide inputs from which data objects can be generated by functionality in the system to represent requests and data for use by the system.  The Terminator is also expected to be capable of translating in human readable form data objects output from the functionality in the system and responding to that output if required.
+      
+      Mnemonic: t.st
+    links:
+      - "Aggregation «component of» → Traveller"  # {C17F641E-7625-45ad-8A2B-FBD4873B2CC7} → {5F83A087-8531-4855-A274-F88A8ACBBAF0}
+      - "Association «IN» → ft.st-traveller_emergency_at_stop"  # {5F78132C-899D-44a2-B220-ABCB1D32E8B2} → {F743B5B8-B2AA-454c-A3A1-C7EF3789DDA7}
+      - "Association «IN» → ft.st-traveller_presence_at_stop"  # {CD926912-E2C2-4dfd-80C1-D94BC00A7340} → {E47D9CB4-F1B8-42e7-8BE3-B8A44FDA8A72}
+  - name: "Stationary Object"
+    guid: "{E3535D12-4EB0-4d16-9F2E-1B2712CF3DDD}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Vehicle Environment Terminator and shall represent the manifestation of stationary objects.  These objects may be anything such as solid objects, e.g. debris, that are in or near the roadway of the immediate geographic area that surrounds the Vehicle.  It is expected that this Terminator shall provide manifestations of stationary objects in such a way that they can be detected by sensors which shall create data objects for use by the functionality in the system to enable the Vehicle navigate through the road network.
+      
+      Mnemonic: ve.so
+    links:
+      - "Aggregation «component of» → Vehicle Environment"  # {9FE6ECF1-ACD7-4a1f-BA8A-CB55314A8149} → {934987E7-82A3-48fb-A8DA-EDB2F5D850E7}
+      - "Association «IN» → fve.so-object_presence_indication"  # {4F412991-E843-4478-BA15-95CEA5663AA5} → {F6833E8A-6EB1-432b-854F-C73C4F526ECB}
+  - name: "Traffic Signal Controller"
+    guid: "{29644FE4-8D9E-44e5-AAE8-17A4A49388D9}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Other Related System Terminator and shall represent another instance of the functionality in the system that manages traffic flow at a road junction.  It shall enable the same data objects to be sent to and received from other instances of the traffic flow management functionality.  These other instances may belong to another road traffic management organisation operating in the same geographic area, or to a road traffic management organisation operating in a different geographic area.  It shall be possible for the data objects to be sent and received on request, at regular intervals, or because the sending functionality has made changes.
+      
+      Mnemonic: ors.tsc
+    links:
+      - "Aggregation «component of» → Other Related System"  # {83A657EE-D837-4753-BA00-BD3D716B01E1} → {AB919AF2-B1C5-45bf-8731-FB6EC44C2A2E}
+      - "Association «IN» → fors.tsc-local_priority_request_details"  # {139C8482-656A-4e44-8867-1223369471C5} → {04E080C8-DB8C-4f17-8A7B-2A1C2714C402}
+  - name: "Traffic Simulation System"
+    guid: "{3521BB9A-DD94-496c-8F94-FAD65008DE37}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Other Related System Terminator and shall represent another instance of the functionality in the system that can be used to simulate traffic flow in the road network.  It shall enable the same data objects to be sent to and received from other instances of the traffic flow simulation functionality.  These other instances may belong to another road traffic management organisation operating in the same geographic area, or to a road traffic management organisation operating in a different geographic area.  It shall be possible for the data objects to be sent and received on request, at regular intervals, or because the sending functionality has made changes.
+      
+      Mnemonic: ors.tss
+    links:
+      - "Aggregation «component of» → Other Related System"  # {4365FAFF-C53E-499f-AEE6-38E3230CEA3F} → {AB919AF2-B1C5-45bf-8731-FB6EC44C2A2E}
+      - "Association «IN» → fors.tss-traffic_prediction_results"  # {7C311714-BA96-4dbe-8D4D-C66678765E1F} → {A9A5ED3A-2F18-450c-BAD9-17EEDB86705E}
+  - name: "Traffic and Travel Information Provider"
+    guid: "{75CC9989-0384-406c-8F42-CD32AEA7DDC2}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the External Service Provider Terminator and shall represent an organisation that provides a service through which Travellers can obtain traffic and travel information for the road network. It is expected that this Terminator shall at various times input data objects containing requests for traffic and travel information because incidents have occurred, to which the incident management functionality shall respond.  Without previous requests, other functionality in the system may also at various times provide this Terminator with data objects containing both current and forecast traffic and travel information, plus information about weather conditions.
+      
+      Mnemonic: esp.ttip
+    links:
+      - "Aggregation «component of» → External Service Provider"  # {0450DB08-F5CF-4357-A423-1171D690D64E} → {73960376-E008-4811-B5BB-B58A1E143730}
+      - "Association «IN» → fesp.ttip-access_criteria"  # {C75B0D4B-2DA8-42c5-BFBE-A9FAD0F87F2E} → {BE80D41E-86AF-4435-AF77-CE2BE0BABB68}
+      - "Association «IN» → fesp.ttip-contract_statistics_request"  # {9F3B4A47-AAAD-4841-B4E2-C398D57C9C71} → {AA3B423D-87AF-4a85-8A2B-0D2849E1181F}
+      - "Association «IN» → fesp.ttip-request_current_incident_strategies"  # {614C6C7D-8AE9-49a4-A6B6-FD2D4B58B9C1} → {8CB9C876-4DF7-4b1a-8063-54BB3EAF4EBC}
+      - "Association «IN» → fesp.ttip-request_incident_data"  # {4122ECE5-B787-4c32-9AB3-524DADB7A239} → {99408114-0737-4bd6-A4C4-8D07909DA4CE}
+      - "Association «IN» → fesp.ttip-service_contract_information"  # {D8A98F0D-3300-4e7f-A1FD-8E9580A7241D} → {D03484F4-46D7-403c-A5C2-66A0358DB98B}
+      - "Association «IN» → fesp.ttip-tarrif_grids"  # {29CC14D5-5C1A-4b4a-AC48-B3DF252EE887} → {4038E4C3-F752-41fb-9A21-66C9B6392639}
+      - "Association «IN» → fesp.ttip-transaaction_information_request"  # {74B65327-EA50-420e-AAE2-CF5CFCA31445} → {7B8EFE04-90E0-4d5d-9286-89EF111BC271}
+  - name: "Traveller Information Operator"
+    guid: "{0AB6FB01-6DE9-4fa8-8D10-B1FED17A8A5D}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Operator Terminator and shall represent a human entity that uses the functionality in the system to provide the Traveller with information about travel conditions.  It is expected that the Terminator shall provide inputs from which data objects can be created by system functionality to represent commands, data and requests for use in the system and be capable of translating into human readable form data objects output from the functionality in the system.  The functionality in the system must also be able to communicate with more than one human entity that is a Traveller Information Operator, each of which may belong to the same organisation, or to different organisations.
+      
+      Mnemonic: o.tio
+    links:
+      - "Aggregation «component of» → Operator"  # {8FC3F7F6-245C-40e9-B6C4-A15D09A8ABB7} → {102BBDF5-FF2D-4077-AD52-BEE0EA237E1C}
+      - "Association «IN» → fo.tio-GTP_requests"  # {F0DD1F8E-FB40-49c5-BF7F-B8656A1D8288} → {FCC3CDDA-A31C-4cbf-8217-04E3A7107605}
+      - "Association «IN» → fo.tio-current_travel_information_request"  # {D963CBA1-51FF-4f68-B3CC-65C7E26E43B8} → {6E0B8EC5-927E-4e8d-9963-6E1EE21DA7BF}
+      - "Association «IN» → fo.tio-inter-urban_road_network_data_update"  # {AEEF945B-F50C-46d4-A299-48B92459A436} → {4A00540A-3BAE-40ee-851C-AFE3171867C4}
+      - "Association «IN» → fo.tio-output_travel_information_request"  # {B3E5D213-8F3C-4fd2-9DCB-E241E654A5B2} → {DEA9BA95-0583-4ad0-BE08-57E5B420EBA9}
+      - "Association «IN» → fo.tio-request_trip_planning_criteria"  # {4D1BD05A-3214-4e0f-86EC-77419721B908} → {44CA61F6-0AEF-4e03-9A62-1A3E6B82CFFC}
+      - "Association «IN» → fo.tio-travel_information_filter_request"  # {A5136FD6-56A9-4cb4-9622-4096096732FE} → {21EC9116-527F-4c1e-B6AF-03322DBD2359}
+      - "Association «IN» → fo.tio-travel_information_filter_updates"  # {62D55278-D2FA-4527-97E0-C5994C4B17B9} → {852B97DA-CA46-4332-BAC0-1E7D67235AAD}
+      - "Association «IN» → fo.tio-travel_information_inputs"  # {666EC5B5-2C11-4df9-9C0F-C9231CB7A520} → {D7EEB826-8F53-445b-8DD6-C6ACBB13FF08}
+      - "Association «IN» → fo.tio-trip_plan_management_report_request"  # {E151F81F-D99D-4bd2-9EB7-107151EA567B} → {AC2B6D87-A0FE-45cf-BA40-D1C90432A169}
+      - "Association «IN» → fo.tio-trip_planning_data_inputs"  # {B79CFF2E-6A31-4291-B33B-00DEB8B71754} → {7AB5C640-796E-46e5-9378-A164667B9A97}
+      - "Association «IN» → fo.tio-trip_planning_data_requests"  # {2039243D-FB55-4599-B63B-CF4777C9780D} → {24117FC1-E55B-4922-98BC-AEBC9B3B97BB}
+      - "Association «IN» → fo.tio-update_trip_planning_criteria"  # {2E896606-7469-4d31-9070-C0F354E57B68} → {320E758B-76A8-4930-986A-4ED84A0B51DC}
+      - "Association «IN» → fo.tio-urban_road_network_data_update"  # {6B6626B7-3FEE-4ff0-BA9C-C3AD9205B2DE} → {C824184D-7257-4782-9B02-611510E48D6C}
+  - name: "Trip Planning Driver"
+    guid: "{119C83B9-313A-4d35-B64A-58DD776CA919}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Driver Terminator and shall represent a human entity that as a Driver is able to plan their own routes using a trip planning service.  The Terminator shall provide inputs from which data objects can be created by system functionality to represent requests and information for use in the system and be capable of translating into human readable form data objects sent to the functionality from within the system.  This Terminator is used when the inputs/outputs from/to it do not apply to the Driver of a particular type of Vehicle.
+      
+      Mnemonic: d.tpd
+    links:
+      - "Aggregation «component of» → Driver"  # {CC9210B3-ADAA-429e-AB35-30E4B6B22097} → {0C560BF0-702E-48c1-B7F0-69F55BF03556}
+      - "Association «IN» → fd.tpd-accept_revised_vehicle_trip_plan"  # {B1FF2E3F-E2E7-489f-9CE8-AC238052E58D} → {F23CA0C8-EA4B-435f-938C-BD4269ACD691}
+      - "Association «IN» → fd.tpd-implement_vehicle_trip_plan"  # {0B16B03D-27F3-4827-8C46-66D125702C4E} → {90D91877-7E7A-4f2f-9983-573998C793A5}
+      - "Association «IN» → fd.tpd-modified_vehicle_trip_plan_data"  # {64828318-3C88-4249-BCB7-699E45F99F68} → {FCF9B9B1-E71B-4c84-876F-75388365A908}
+      - "Association «IN» → fd.tpd-modify_current_vehicle_trip_plan"  # {BBBBAED0-0E77-4abd-A2D9-0118E1C5471D} → {1F0FF154-A080-4bc2-BF9D-5CDAEF4ACC90}
+      - "Association «IN» → fd.tpd-revised_vehicle_trip_plan_booking_choices"  # {4DEA90A7-C74D-45b7-983A-D6EBB51A3A7D} → {C25463F9-594B-412f-9271-2CD1B1126515}
+      - "Association «IN» → fd.tpd-trip_inputs"  # {BF20187B-8A2F-45ec-A9DB-F8C9158FD5B2} → {3217E8F8-9609-4450-A608-DEC57D956D51}
+      - "Association «IN» → fd.tpd-vehicle_trip_plan_accepted"  # {AD684D76-05F4-4875-992F-36FF3C837BA2} → {9DEFB83A-2A80-4ae6-B704-6D3834912E14}
+      - "Association «IN» → fd.tpd-vehicle_trip_plan_booking_approval"  # {44C5A04B-E9D1-4e1d-B733-3A7EC725D690} → {68758D90-3F21-4116-A1C2-DB5EB38437D0}
+      - "Association «IN» → fd.tpd-vehicle_trip_plan_data"  # {1C611C8D-7EE2-4d82-A422-6B5F22D6BFD7} → {5DA099C8-9ABB-465d-A21F-A130B3AFA57F}
+      - "Association «IN» → fd.tpd-vehicle_trip_planning_payment"  # {35DCE493-E791-4ba1-A46F-2950D18A1A22} → {583F6E38-2A74-4877-A2F2-EB586809DD8B}
+      - "Usage → SSTPIS End User Application"  # {1C4F62BE-AEA4-457a-997F-8FDFAA17915B} → {DC5A7FF3-1BC8-4d67-A0C5-64B5CA5C2C21}
+  - name: "Tunnel Management System"
+    guid: "{D0AE1DE0-9672-4cb3-945A-01B1EA450EA9}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      This Terminator is part of the Bridge/Tunnel Infrastructure Terminator and shall represent the outputs provided by tunnel management systems that monitor the operation of equipment in a tunnel.  The outputs shall provide data objects that show such things as the state of the atmosphere inside the tunnel (pollution detection), if a fire or other hazardous condition has been detected, or if the systems themselves are operating correctly.  These data objects shall be used by functionality to manage the flow of road traffic entering the tunnels to which they relate.
+      
+      Mnemonic: bti.tms
+    links:
+      - "Aggregation «component of» → Bridge/Tunnel Infrastructure"  # {2B412C0F-4430-4bb5-B363-C0134A05F8F7} → {238D1096-B655-4900-BF9D-2B03E46D0D25}
+      - "Association «IN» → fbti.tms-tunnel_system_inputs"  # {CE10796C-80C2-458f-ADD5-1D774690B06C} → {3757C2BB-926B-4575-81B9-664B6710BAA5}
+  - name: "Tunnel Operator"
+    guid: "{C24E9DB7-F2A5-484b-9A3B-BA2B354D5AA7}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Operator Terminator and shall represent the human entity that uses the functionality in the system to manage the way in which Vehicles are able to use one or more tunnels in the road network.  It is expected that the Terminator shall provide inputs from which data objects can be created by system functionality to represent commands, data and requests for use in the system and be capable of translating into human readable form data objects output from the functionality in the system.  The functionality in the system must also be able to communicate with more than one human entity that is a Tunnel Operator, each of which may belong to the same organisation, or to different organisations and may be responsible for one or more tunnels in the road network.
+      
+      Mnemonic: o.tnlo
+    links:
+      - "Aggregation «component of» → Operator"  # {5E51AC6F-9D1A-4f68-8A4B-E5D4A56E313F} → {102BBDF5-FF2D-4077-AD52-BEE0EA237E1C}
+      - "Association «IN» → fo.tnlo-exceptional_condition_action_response"  # {00EBB643-ACB2-460e-A8C4-DA1A6A1CEDA5} → {66686032-5DB7-4f28-B8E3-729837358706}
+      - "Association «IN» → fo.tnlo-tunnel_action_definitions"  # {463C3A42-0B1E-4e84-99F7-4102AF1DC0AC} → {4BFB37CC-6AA8-4e8e-BFBC-76FE8A58C5D4}
+      - "Association «IN» → fo.tnlo-tunnel_operator_inputs"  # {6BD0644E-259B-4b6a-B47D-8A9F2AC07FA5} → {FAA4FDD4-6188-4909-BA7D-9FF6F0783B2C}
+  - name: "Un/Loading Zone Operator"
+    guid: "{BFFCF1E7-B3E8-4442-95DB-0C3ACCC50B2E}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Operator Terminator and shall represent a human entity that uses the functionality in the system to manage the use of Un/Loading Zones by Freight Vehicles.  It is expected that the Terminator shall provide inputs from which data objects can be created by system functionality to represent commands, data and requests for use in the system and be capable of translating into human readable form data objects output from the functionality in the system.  The functionality in the system must also be able to communicate with more than one human entity that is an Un/Loading Zone Operator, each of which may belong to the same organisation that owns and/or operates un/loading zones, or to different organisations.
+      
+      Mnemonic: o.ulzo
+    links:
+      - "Aggregation «component of» → Operator"  # {C08ECE27-F6DB-4fc4-9DA2-D3D4B8C88966} → {102BBDF5-FF2D-4077-AD52-BEE0EA237E1C}
+      - "Association «IN» → fo.ulzo-current_un/loading_zone_data_update"  # {C4B00C00-7458-4d01-800C-2C70FC03268B} → {5A7D8BBB-23AA-4f9c-8344-D59A27CDB930}
+      - "Association «IN» → fo.ulzo-request_current_ul/loading_zone_data"  # {97B54215-EBEC-4801-812B-A187CBA309C6} → {4E47E336-0FDD-4fee-8C47-2C1D90C7DFD7}
+      - "Association «IN» → fo.ulzo-un/loading_zone_inputs"  # {ECDBB999-D9C1-48d6-B71E-A9B9DAA5B32B} → {21372FF8-63CC-40db-927A-C3D72DC4BA3B}
+      - "Association «IN» → fo.ulzo-un/loading_zone_use_response"  # {479F7795-4027-4f5f-A134-65D179692152} → {614403FC-86B5-43d3-83C7-F1097547EF64}
+  - name: "Urban Traffic Management System"
+    guid: "{6B2ADF25-5FB1-49fb-9D70-15D28D4C65E3}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Other Related System Terminator and shall represent another instance of the functionality in the system that manages traffic using the urban road network.  It shall enable the same data objects to be sent to and received from other instances of the urban traffic management functionality.  These other instances may belong to another organisation operating in the same geographic area, or to an organisation that manages urban traffic in a different geographic area.  It shall be possible for the data objects to be sent and received on request, at regular intervals, or because the sending functionality has made changes.
+      
+      Mnemonic: ors.utms
+    links:
+      - "Aggregation «component of» → Other Related System"  # {F07CA8C0-FC24-4f69-9480-6950054726D1} → {AB919AF2-B1C5-45bf-8731-FB6EC44C2A2E}
+      - "Association «IN» → fors.utms-urban_data_transfer"  # {3961362D-7C6A-48a6-9DA8-6CAB426A6F49} → {87DF2EB1-DCC9-4496-8BCE-5D729C8C259F}
+      - "Association «IN» → fors.utms-urban_data_updates"  # {051ADDCB-37DC-415b-B82C-03718129CA7C} → {D7C9F930-6140-4714-A920-2557CCB0FDDB}
+      - "Association «IN» → fors.utms-urban_traffic_management_strategies"  # {8953AD1D-4834-4d15-A7A8-250BF7672288} → {8E092B9F-7CE7-44d8-B708-8EC34F8704DB}
+  - name: "Vehicle Sharer"
+    guid: "{63B96A5E-A5D6-46e1-8895-76C9A04E4A04}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Traveller Terminator and shall represent a human entity that is a Vehicle Sharer that uses the functionality in the system to participate in a Vehicle Sharing Service.  It is expected that the Terminator shall provide inputs from which data objects can be generated by functionality in the system to represent requests and data for use by in the system.  The Terminator is also expected to be capable of translating into human readable form data objects output from the functionality in the system and responding to that output if required.
+      
+      Mnemonic: t.vs
+    links:
+      - "Aggregation «component of» → Traveller"  # {C731662D-7CED-4f68-911E-9CADE2171ED4} → {5F83A087-8531-4855-A274-F88A8ACBBAF0}
+      - "Association «IN» → ft.vs-accept_travel_plan"  # {B8FA9791-0BF7-491c-8A9A-1A1406283422} → {8CC1834A-4DD8-4a3b-8183-8C72301BDD83}
+      - "Association «IN» → ft.vs-deregistration"  # {39471855-4830-4583-A96C-14B3B93DF473} → {B2DA8C3B-665B-4249-B021-0442B6C370BB}
+      - "Association «IN» → ft.vs-personal_details"  # {29D6452E-517E-414e-BEC1-EB148778B986} → {FA522480-C353-491c-B587-A09795478500}
+      - "Association «IN» → ft.vs-request_current_travel_plan"  # {5CB4F067-7BEE-4d9a-92F6-6B3A4C9E07E2} → {F46A3352-6B69-426b-A257-309A70232C7A}
+      - "Association «IN» → ft.vs-travel_needs"  # {9FE2C89E-7A26-4b9c-A72A-FE921ED1D4E7} → {2579009A-CEF7-43d8-AC76-E7FAFAEA982A}
+      - "Association «IN» → ft.vs-vehicle_sharing_inputs"  # {BC507352-BB21-4607-989B-F0F1D04AC6AC} → {439C572B-4DF1-4d93-8DC9-0F88BF587922}
+  - name: "Vehicle Systems"
+    guid: "{AE3B0D17-1722-4079-8B0E-F65BEED3E51B}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Vehicle Terminator and shall represent the systems that are in the Vehicle and which are provided by the Vehicle manufacturer for the basic control and management of Vehicle operations.  It is expected that this Terminator shall provide data objects to the functionality in the system either directly through an interface or through sensors, and these shall be used to manage the operation of the road network.  In addition, the Terminator shall be sent data objects through an interface by functionality in the system that requests action to be taken by the Vehicle Systems.  Note that this shall be a "request" and not a command, as it shall not be possible for the Vehicle to be controlled by the functionality in the system.
+      
+      Mnemonic: v.vs
+    links:
+      - "Aggregation «component of» → Vehicle"  # {01546C1B-6ED8-45b0-BE26-1AD7DF2EB5A3} → {9021465A-4479-4fa8-B8DB-3481C001B9C3}
+      - "Association «IN» → fv.vs-current_vehicle_location"  # {9F3B3835-30FF-4faa-AC0D-50B86D2E9969} → {0A8642F1-84E9-4836-8A3A-7FB8C88A51AD}
+      - "Association «IN» → fv.vs-input_data"  # {7475D912-A0CD-484b-A0CA-1711D465844F} → {2E320EF7-E80E-4655-928E-F4332DCF1D6F}
+      - "Association «IN» → fv.vs-previous_vehicle_location"  # {2B949F31-EDAE-46e6-BAC2-C7412990531E} → {D0C3A004-1E4B-42df-AEC4-BC9D611FA391}
+      - "Association «IN» → fv.vs-vehicle_data_for_bus_lane_use"  # {30A1B0D1-DF6D-458d-9679-13C0CA164E20} → {F8043576-FE34-42e0-86FF-DA0863A54D22}
+      - "Association «IN» → fv.vs-vehicle_data_for_priority"  # {0299772B-42E2-4a7f-A57F-31F6316D0043} → {935352FB-B6AB-4ce3-8090-0BDBFE0DBF42}
+      - "Association «IN» → fv.vs-vehicle_distance_travelled_reading"  # {6C3703C6-A281-490b-BFB3-484E9E44039C} → {EA420B3C-427E-42bd-BB16-C220290D6E61}
+      - "Association «IN» → fv.vs-vehicle_fuel_type"  # {F1117528-E0B7-4177-A919-FBD113089388} → {C37CEDD1-35EE-4cb1-8194-7369E1C1105E}
+      - "Association «IN» → fv.vs-vehicle_headway"  # {0940305D-7530-4fc8-920A-64E505F4AEE2} → {E95E24DE-087B-4af1-AE62-1F6E01342637}
+      - "Association «IN» → fv.vs-vehicle_identity_for_bus_lane"  # {7F353B9D-2B79-4ffd-BE8F-AE2943953CCC} → {94EC9616-1551-447a-B14C-A6F5247A1831}
+      - "Association «IN» → fv.vs-vehicle_indentity_(VIN)"  # {98EE65EF-50D4-4d53-BA8C-D5BCE4DAC74B} → {0D0F760F-5258-450f-845B-611CFBF113E7}
+      - "Association «IN» → fv.vs-vehicle_occupants"  # {E6094E55-4249-47a0-8F3A-639E452A23FF} → {5437A2FA-952C-495f-BD29-5283F1A24E12}
+      - "Association «IN» → fv.vs-vehicle_speed"  # {88702917-688E-4b2a-B5E5-7853C595FF7B} → {354B7870-E764-45da-AA05-4B87FA4BF685}
+      - "Association «IN» → fv.vs-vehicle_time_&_date"  # {2E0CA74A-3EF9-4874-9EA6-304964C58AFB} → {637EAE26-5397-498b-B9C3-A0F9C3CAF7B2}
+      - "Realisation → eCall Onboard Unit"  # {BF083D7A-F06A-433a-A9B0-48584633DA94} → {3244E2A9-F15D-4568-9A9D-EBAD4BE0DD8C}
+  - name: "Vehicle eCall Activation"
+    guid: "{E63D2426-3CC0-43e8-A1C9-E2780DA0A771}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "5.1"
+    order: 0
+    note: |
+      This Terminator is part of the Vehicle Terminator and shall represent devices and/or sensors within the Host Vehicle that if set shall indicate that an eCall message must be sent to the Public Safety Access Point (PSAP).
+      
+      Mnemonic: v.vea
+    links:
+      - "Aggregation «component of» → Vehicle"  # {A2100D85-B63B-4a14-9388-B849FA60163C} → {9021465A-4479-4fa8-B8DB-3481C001B9C3}
+      - "Association «IN» → fv.vea-eCall_activation_status"  # {68146967-0190-492f-AF26-4214CD618BD5} → {E011CC4A-C32A-4fca-A108-8AACF4A6AC14}
+      - "Usage «Instantiate» → eCall Onboard Unit"  # {C3B688B6-7757-4e03-9D29-636D34A49847} → {3244E2A9-F15D-4568-9A9D-EBAD4BE0DD8C}
+  - name: "Ambient Environment"
+    guid: "{1D0E0879-CC83-416f-8C29-E432C3D8E2AE}"
+    type: "Class"
+    stereotype: "FRAME_Terminator"
+    alias: "ae"
+    status: "Proposed"
+    version: "5.0"
+    order: 1
+    note: |
+      This Terminator shall represent weather effects such as snow, rain and fog, pollution effects such as dust and smoke, and man-made electromagnetic effects through which ITS Services are to be delivered.  It is a physical entity from which data objects can be obtained through functionality that analyses the output of sensors capable of detecting the weather and other effects.  The data objects produced by this functionality shall be used for a variety of purposes connected with the operation and maintenance of ITS Services and may therefore influence road traffic management strategies plus the choices Travellers make in the planning of their trips.
+      
+      Mnemonic: ae
+    links:
+      - "Association «IN» → From Ambient Environment"  # {BF46235B-1F74-40d2-8A6D-4684FA2FFDB9} → {B96F4097-D81A-4e3e-96D1-4DC740D9554A}
+      - "Association «IN» → fae-atmospheric_pollution_inputs"  # {3716D7C5-B2F2-441e-B83F-3CAC4A97642F} → {2F3D37FB-5E11-49af-B13C-1E303BAAE691}
+      - "Association «IN» → fae-bridge_weather_conditions"  # {46B198D4-4172-41e0-9070-649CB7D987B7} → {29B1C681-D8E7-4ed9-98C3-93732B26A40F}
+      - "Association «IN» → fae-environmental_inputs"  # {2FBD0174-029B-420e-BF8D-6ADB9E9BACCF} → {D0FEBD4B-50EE-4417-80B2-039ED6F654FE}
+      - "Association «IN» → fae-local_vehicle_atmospheric_conditions"  # {2B83A49A-CC76-497e-9A52-1B09F07982CC} → {2CA55DA1-0A9C-45bc-BDFF-AA286AA48382}
+      - "Association «IN» → fae-local_vehicle_conditions"  # {E8D9DABD-2EDB-4b12-AFA0-F6CB056769FF} → {B5C358A3-9ADF-4cc3-AFF8-4BEC384BEC58}
+      - "Association «IN» → fae-local_vehicle_visibility_conditions"  # {FE36610B-CB59-4fa3-A84E-FA08ACC2286C} → {174A7C5F-8B76-4286-B9DB-CF11629E9A6B}
+      - "Association «IN» → fae-mt_inputs"  # {4322F62E-B34C-419e-A63B-FD736C590877} → {3D372511-0FBC-4b3d-9115-938ACC58E583}
+      - "Association «IN» → fae-noise_inputs"  # {567D02C4-829D-4335-8F15-6BAE0CE39109} → {5C6BE6DF-C352-425d-AEEE-6CCF2FBBD1B7}
+      - "Association «IN» → fae-pshvs_inputs"  # {8303B009-E945-4ad9-9720-A00A3A93C9B7} → {6CB74971-DCAE-40a8-877C-5877EA813E4F}
+      - "Association «IN» → fae-tunnel_atmospheric_conditions"  # {471136E2-645E-4e80-AE2F-117039595014} → {3DA87F66-04F0-4aef-8DA6-C564EB34C337}
+      - "Association «IN» → fae-weather_inputs"  # {BE92BDD8-7D15-4e70-8B49-40A01B706554} → {B336D44C-4238-41b0-9879-F3E2AA0A74E9}
+  - name: "Freight Transport"
+    guid: "{662CD0E2-2FF1-4cc1-9FAC-D2280761477E}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "1.0"
+    order: 2
+    note: |
+      This Terminator shall represent all the entities that need to be involved in the movement of freight.  It shall consist of the following Terminators:
+      
+      Freight Terminal Area Facilities
+      Freight Transport User
+      Freight Transport Operations Manager
+      
+      It is expected that each Terminator shall provide inputs from which data objects can be generated by functionality in the system to represent requests for the movement of freight and the responses to those requests, plus requests and responses concerning the management of the actual freight movement.  Each of the above Terminators shall be expected to be capable of translating into human readable form data objects output from the functionality in the system and responding to that output if required.
+      
+      Mnemonic: ft
+    links:
+      - "Association «IN» → fft-mffo_inputs"  # {8B97E3E2-43FA-40f7-96B3-D15B3941CB2B} → {5AD13A9F-99E7-42bd-A30B-528626A5B517}
+      - "Association «IN» → fft-pscs_inputs"  # {ADC1A9F2-0776-45b4-B9B1-982A005D5FED} → {C6A1E7B1-F11F-4d4b-8B01-62D9EB8ABC44}
+      - "Association «IN» → fft-pshvs_inputs"  # {E5633722-DD78-4e29-9146-398B7F25F908} → {2CFEE8C6-E95A-4174-963F-F0E3C2DC2946}
+  - name: "Bridge/Tunnel Infrastructure"
+    guid: "{238D1096-B655-4900-BF9D-2B03E46D0D25}"
+    type: "Class"
+    stereotype: "FRAME_Terminator"
+    alias: "bti"
+    status: "Proposed"
+    version: "5.0"
+    order: 3
+    note: |
+      This Terminator shall represent the output from sensors and/or external systems that can detect the physical conditions of Bridges and Tunnels. It shall consist of the following Terminators that represent the different versions of it:
+      
+      Bridge Structures
+      Tunnel Management System
+      
+      The conditions that these Terminators can detect shall comprise such things as the status of the bridge or tunnel infrastructure and atmospheric conditions on the bridge or in the tunnel.  The output from the sensors that detect these conditions shall be monitored by functionality in the system that creates data objects to represent these conditions.  The functionality in the system must also be able to communicate with more than one sensor and/or external systems that may be monitoring any combination of Bridges and Tunnels.
+      
+      Mnemonic: bti
+    links:
+      - "Association «IN» → From Bridge/Tunnel Infrastructure"  # {EF6061D1-89CA-4252-8F15-B454F8C2D144} → {354AB6DD-08A8-447e-85E0-07BAA6810B94}
+      - "Association «IN» → fbti-bridge_and_tunnel_inputs"  # {44E80D89-76F4-42e4-B892-E0DE4BBB5D89} → {71B2A500-E075-4e2f-B90F-80A69C190E4A}
+      - "Association «IN» → fbti-current_status"  # {AD8BE51B-DCB2-48aa-871E-900EE05FCE56} → {5E3FE3AB-70F8-4686-BDFA-4848AA399A18}
+      - "Association «IN» → fbti-mt_inputs"  # {C577D1D8-0E96-48aa-AF9A-FCDC5F053CDF} → {D989BF7C-E882-4696-83E9-F581CF02F3D1}
+  - name: "Driver"
+    guid: "{0C560BF0-702E-48c1-B7F0-69F55BF03556}"
+    type: "Class"
+    stereotype: "FRAME_Terminator"
+    alias: "d"
+    status: "Proposed"
+    version: "5.0"
+    order: 4
+    note: |
+      This Terminator shall represent the human entity that operates any type of licensed Vehicle using any part of the road network.  It shall consist of the following Terminators, each of which shall represent the human entity that drives a particular type of Vehicle:
+      
+      Emergency Vehicle Driver
+      Freight Vehicle Driver
+      Hazardous Goods Vehicle Driver
+      On-Demand Service Driver
+      Public Transport Driver
+      Trip Planning Driver
+      
+      It is expected that each Terminator and the Driver Terminator itself shall provide inputs from which data objects can be generated by functionality in the system to represent requests and data for use by in the system. Each Terminator and the Driver Terminator shall also be expected to be capable of translating into human readable form data objects output from the functionality in the system and responding to that output if required.
+      
+      Mnemonic: d
+    links:
+      - "Abstraction → Person who manually triggerd eCall (via Button)"  # {86E2933A-1216-4e59-A128-05222C861537} → {D597BCA2-E358-44bd-94EA-AB30C07F72AC}
+      - "Association «IN» → From Driver"  # {E6A3C8F9-20D9-40f5-8132-6C57A724B74F} → {7590C1C5-F94F-4929-8D0C-1EAFBB19AA51}
+      - "Association «IN» → fd-bus_lane_inputs"  # {300957ED-635F-431a-86C4-B96DF68EEF63} → {7661C401-82BC-4b46-9367-F13B2778EE5D}
+      - "Association «IN» → fd-carpark_space_payment"  # {0C2AABFE-7594-4eba-B5B8-9C237CF03409} → {53A14370-2844-4b2b-B287-38A33F72629A}
+      - "Association «IN» → fd-desitnation_for_bus_lane_use"  # {7FABAFB7-2B05-483d-B911-848D03AA8490} → {84129F6E-6647-4074-8D29-5543DAE9D724}
+      - "Association «IN» → fd-driver_details"  # {09CCA932-9EB3-47a0-977D-9A0009AE608E} → {4BCE4253-AA48-4391-AA96-B0E9D8B577D8}
+      - "Association «IN» → fd-driver_priority_request"  # {5A6423D6-1B58-4fd4-98B7-D907A4CAE7C4} → {DA07E909-ADF5-4d3f-BD6D-01DCF0194D84}
+      - "Association «IN» → fd-driver_status"  # {0E898C21-3801-4f45-9D71-7E31A7F5AD34} → {C374A40F-BB59-4eb0-9688-0101CF8BCD65}
+      - "Association «IN» → fd-driver_vehicle_inputs"  # {9497D979-9BE7-4f84-A80E-EAA7E8322A54} → {5A403F9E-E385-41fc-8939-261E085822E5}
+      - "Association «IN» → fd-incident_notification"  # {FB896C9A-F6FF-4133-9D40-6550A36B9270} → {A78024B0-4C77-472d-8CC2-11EAC53FE6A0}
+      - "Association «IN» → fd-mffo_inputs"  # {4D214C15-392A-454e-A33E-B6B3EAEDAB9B} → {1FA48077-6B9A-44e1-A72B-3B55942280FE}
+      - "Association «IN» → fd-mpto_inputs"  # {A5696EEE-6201-4d79-A275-BD81AB52B20D} → {7675F0F3-9CE3-4c10-8F5C-44E10F86DC77}
+      - "Association «IN» → fd-mt_inputs"  # {57063FC9-1F7D-4a00-9C11-3C2E5955BB23} → {414A67C9-D8FA-4b81-9DAA-57B02016F5A9}
+      - "Association «IN» → fd-pepf_contract_selection"  # {9F1D51EF-BE39-4cad-A8CC-84305B978B33} → {B4AFF010-8A89-4b8b-BE8E-6D2EA1674729}
+      - "Association «IN» → fd-pepf_inputs"  # {D3F0AD00-B007-4366-A47B-50CD6301143B} → {3865BC44-10EF-4c47-A14C-BC58ACD7524A}
+      - "Association «IN» → fd-pepf_payment"  # {2B430BF1-BF72-46d6-BDDA-40E753B7FC45} → {4B0722BA-09A0-4dbd-971D-60F69F3A99D7}
+      - "Association «IN» → fd-pepf_payment_input"  # {CAC2AF38-ADCB-471b-973E-399E429654EC} → {60640E69-3223-454d-8C03-AF0E1D17A50C}
+      - "Association «IN» → fd-pepf_selected_service"  # {D1AFD0E1-D1BE-4932-9D4C-8300C2534FFE} → {9C450EDA-8AB2-4e7b-BED5-0FB8374C7002}
+      - "Association «IN» → fd-pepf_user_ID_for_detection"  # {B0C4CFF4-9173-45b2-B0AA-B34BCEDF1C82} → {05BC62B0-D8A3-443f-9B66-9B7C545F09D1}
+      - "Association «IN» → fd-pscs_inputs"  # {ED98A520-BA5F-4043-8FB2-DC4BF0C2F303} → {3D72FD90-629D-440b-B795-C63999110646}
+      - "Association «IN» → fd-psef_inputs"  # {AED40473-17D6-4db4-8CB0-C2B6A77F0497} → {974928BD-AA88-4b9f-AA95-F3CEBD32F63F}
+      - "Association «IN» → fd-pshvs_inputs"  # {0FFA2B8C-579A-4d32-B91B-8F7B6E87CE54} → {0D7AFA79-BED7-4dc2-AB11-FAAC4615F7A3}
+      - "Association «IN» → fd-psle_inputs"  # {0867D653-A23C-4291-B259-89DD5BD9ACC6} → {B5D73977-6264-4a40-9A9A-1866B0C0CD8B}
+      - "Association «IN» → fd-psle_record"  # {5E1A5BEC-1866-4ea5-9791-38028F5583C1} → {482800DB-ED7E-442f-897C-4535929F5515}
+      - "Association «IN» → fd-request_bus_lane_use"  # {69B6F393-8C96-4dc6-AB38-BAAAEE206EEF} → {38D52CBB-0CE9-4f22-B591-40128D2EBA13}
+      - "Association «IN» → fd-request_relevant_incident_information"  # {F49A69BD-891D-4986-AE07-B5BCC2666DBB} → {D8C495BA-C66A-4941-948D-27D87F7C7CDA}
+      - "Association «IN» → tSSTIS-fd"  # {CFC38FEB-EC5A-4e8d-A2D0-2B9D79E79CF9} → {1E792568-4CE7-4339-9045-D7AFFCE9A398}
+      - "Usage «Call» → eCall Onboard Unit"  # {984706F8-4ED3-47d9-987C-70A3B7469D77} → {3244E2A9-F15D-4568-9A9D-EBAD4BE0DD8C}
+  - name: "Emergency Systems"
+    guid: "{751D27AE-0A31-4d65-824C-F9AA0608D1BF}"
+    type: "Class"
+    stereotype: "FRAME_Terminator"
+    alias: "es"
+    status: "Proposed"
+    version: "5.0"
+    order: 5
+    note: |
+      This Terminator shall represent systems that are used by the Emergency Services as part of their operations.  The term Emergency Services is assumed to include organisations that are responsible for services such as fire, police, ambulance and vehicle recovery.  They are expected be able to co-ordinate their activities amongst themselves and dispatch and control the activities of their vehicles and personnel when they respond to incidents.  The Emergency Systems shall be sent data objects by functionality in the system containing information about emergencies that it has detected.  In return the Emergency Systems are expected to provide data objects containing reports on progress in dealing with these incidents so that any traffic and travel management strategies imposed by functionality in the system to mitigate the impact of the incidents can be updated.  The Emergency Systems are also expected to provide details of incidents affecting road transportation that are reported directly to them.
+      
+      Mnemonic: es
+    links:
+      - "Association «IN» → From Emergency Systems"  # {C646CDDA-6B9E-482d-948A-B626DC3EF446} → {90B6FE90-9BC4-483c-822F-EFDE352D4B4F}
+      - "Association «IN» → fes-emergency_progress_report"  # {3813A93A-4C73-432f-A446-BC8FFBBAB2B4} → {6A059B5A-8995-40fb-BF23-66A2F1FCD137}
+      - "Association «IN» → fes-emergency_services_information"  # {938CA9F2-AB26-417f-930C-33C4770C070F} → {CC4B1FC6-DB60-4573-8512-4561C910BA2A}
+      - "Association «IN» → fes-intervention_answer"  # {5F7630A2-B34F-45dd-BF45-15F27D349DAF} → {2767169F-3845-45cd-89BA-4B3DD03CF911}
+      - "Association «IN» → fes-psef_iputs"  # {373BFB12-F376-4204-988F-4D91A98A54C0} → {B3A98968-71B0-4944-9F49-8FC9CBC8E6FE}
+  - name: "External Service Provider"
+    guid: "{73960376-E008-4811-B5BB-B58A1E143730}"
+    type: "Class"
+    stereotype: "FRAME_Terminator"
+    alias: "esp"
+    status: "Proposed"
+    version: "5.0"
+    order: 6
+    note: |
+      This Terminator shall represent external entities that interface with the functionality in the system in different ways.  Each entity shall be represented by one of the following Terminators:
+      
+      Bookable Service Provider
+      Broadcaster
+      Driver and Vehicle Information Provider
+      Freight Storage Renting Agency
+      General Information Provider
+      Geographic Information Provider
+      Mobile Communications Provider
+      Multi-modal Travel Information Provider
+      Planned Event Organiser
+      Traffic and Travel Information Provider
+      Vehicle Renting Agency
+      
+      Some of these Terminators shall provide data objects to the system either on request from functionality in the system, or whenever a change occurs to the previously provided data objects.  They are expected to contain information that is relevant to the system operation and the way it provides ITS Services.  Other of these Terminators shall provide data objects that are requests for functionality in the system to respond with data objects containing information about its operation.
+      
+      Mnemonic: esp
+    links:
+      - "Association «IN» → From External Service Provider"  # {2F11A39B-17D1-4ecb-81E2-9ACC0FF98A46} → {043CDB53-3950-4d7e-BDA0-C15A0A414DFB}
+      - "Association «IN» → fesp-data_for_emergency_reponse"  # {7BE6A9E4-65F9-4a7d-808A-A972191BDBBE} → {5625F9D5-024F-4607-ADA3-2D98F45B86D2}
+      - "Association «IN» → fesp-inter-urban_road_network_data"  # {D2CAD2AA-7908-4bf1-A12B-44B10E01AF38} → {83B9A366-8D76-4265-AAFD-0BD59999ABF8}
+      - "Association «IN» → fesp-mffo_inputs"  # {A3354EBC-E309-4ebe-9AEC-9924148FD497} → {EAD0A5FC-4AD0-41a8-A9EF-043BB2C591B5}
+      - "Association «IN» → fesp-mpto_inputs"  # {5121F6D5-108F-468f-A341-12704656B852} → {91E835FF-9164-47f1-86DC-5FE5875D7299}
+      - "Association «IN» → fesp-mt_inputs"  # {DE9A4724-BB03-4c3c-991A-3738003AE7E5} → {B52DA341-41B6-4a67-8085-B16A19F62A40}
+      - "Association «IN» → fesp-pepf_access_criteria"  # {0EC38F80-A54A-461d-AE2F-213C9492BE03} → {F209732A-ED50-4187-A2F6-A0FC812C1C8D}
+      - "Association «IN» → fesp-pepf_inputs"  # {71ED6B96-8E65-4631-B670-85F48FC368A7} → {AABC6500-8CCA-4de4-A84C-90A083F176BC}
+      - "Association «IN» → fesp-pepf_services_available"  # {828DD172-7174-43d9-AA36-6722459FF1D2} → {E76328A8-B22A-4615-B50F-9CC5BB800FE4}
+      - "Association «IN» → fesp-pepf_tariff_grids"  # {CF4135FB-A0ED-4e3b-9E41-D6CCDBB05673} → {C1BB8AA6-6CA9-40d8-91A8-D11089DE6EF9}
+      - "Association «IN» → fesp-pepf_trans_info_request"  # {91AA80E4-4549-4bb2-AF15-30C51F0217B8} → {6F6FB782-2AAF-4991-897D-2B84D3E4125D}
+      - "Association «IN» → fesp-pscs_inputs"  # {050983EB-79FD-4d2a-81B5-6D9C8B42953F} → {B2595007-82EB-4ec4-98A5-E003EE469407}
+      - "Association «IN» → fesp-psef_inputs"  # {A352C2C4-23E2-4b15-8268-43CE6B9AF57F} → {46BE4546-DEAB-4dc4-BB62-51F1A9A4A197}
+      - "Association «IN» → fesp-pshvs_inputs"  # {DEC48B3A-EC8D-4f66-B088-CA0F393B2294} → {2B80B2E4-62C6-4d26-96FD-9F21509F51C1}
+      - "Association «IN» → fesp-ptja_inputs"  # {D4B8DBAF-5CB0-4871-824C-CD94428630CE} → {22C14575-DCC5-4340-B1D6-C70EE9989C7D}
+      - "Association «IN» → fesp-road_network_data"  # {0FA8B07C-A6F6-4c79-98B0-E00E24EACB60} → {7D8D9C68-C624-4be0-B878-0BEA377D30C7}
+      - "Association «IN» → fws-environment_data_for_PT"  # {99DE777F-9F0C-4767-AFA8-D250B912C8AD} → {526BF358-E87E-4292-952C-E02BFA9C24D9}
+  - name: "Financial Clearinghouse"
+    guid: "{5A39AC3C-0ED7-4d7d-A2F3-E9E5C43A4711}"
+    type: "Class"
+    stereotype: "FRAME_Terminator"
+    alias: "fc"
+    status: "Proposed"
+    version: "5.0"
+    order: 7
+    note: |
+      This Terminator shall represent the organisation(s) that process all electronic fund payment requests originated from functionality in the system.  Typically these payment requests shall be from Travellers for the provider of a service such as trip planning, parking, tolls or to top up a PT Fare Card.  It shall be possible for functionality in the system to send data objects containing details of the payment, include the originator and the receiver to this Terminator.  In response it is expected that this Terminator shall provide data objects that show either that the payment request was successful or that it has failed, in which case the data objects may include a reason.  The functionality in the system must also be able to communicate with more than one organisation that processes electronic fund payment requests.
+      
+      Mnemonic: fc
+    links:
+      - "Association «IN» → From Financial Clearinghouse"  # {53390323-5AAC-432c-9D53-BDDC172177E5} → {7A02C9E7-9516-4e4b-858E-6B55D4CEAB06}
+      - "Association «IN» → ffc-carpark_space_payment_response"  # {D31B11A8-4233-4c3b-B8F7-AF8958A79DC2} → {726E070D-1C7C-4392-B7F5-0EC60EF05DFB}
+      - "Association «IN» → ffc-confirmed_fare_payment"  # {5ED5D173-F8B2-4bc1-BED9-02A2AFCD933B} → {F330E21F-B009-4f65-AB6E-ECDB576D9CF5}
+      - "Association «IN» → ffc-demand_service_payment_confirmed"  # {9116618A-40F7-4c35-9406-47237E02083B} → {210E3E3E-8CE5-4226-A703-5B3E73E51BCB}
+      - "Association «IN» → ffc-mpto_inputs"  # {E58E7DB2-F540-4aa5-BDA9-EAFDB3CE4070} → {988E8387-CBBF-4afc-9A20-4C369404CEDC}
+      - "Association «IN» → ffc-mt_inputs"  # {CD8BBD2A-DF31-46d7-A977-0B48A00392A7} → {C8261C2B-9187-42ed-9F7B-BA438B197A3A}
+      - "Association «IN» → ffc-payment_for_trip_planning_response"  # {1604987F-F087-4163-AD14-518FCD03892D} → {5D47869D-117A-4798-965C-898C8A7F67CF}
+      - "Association «IN» → ffc-payment_for_vehicle_trip_planning_response"  # {9534947E-AC5B-42b9-9DB3-7EB22158DEF0} → {4279EF3F-EE11-4e7f-B4CE-24F4310B125B}
+      - "Association «IN» → ffc-pepf_account_status"  # {4A3995CD-90FC-4124-8724-0E8039776B30} → {4FD30CD8-F1B6-4735-A5DB-805B2F66043F}
+      - "Association «IN» → ffc-pepf_inputs"  # {FAA4EA4C-37E2-4f77-9686-D14EB711DCFE} → {EABB9BA1-A36E-4e9d-82AB-E63152C4780D}
+      - "Association «IN» → ffc-pshvs_inputs"  # {42039896-1456-412a-90CE-2BCC8BA9668A} → {26045BF1-6D9F-49f1-92A4-A186800A239B}
+      - "Association «IN» → ffc-ptja_inputs"  # {B97DD035-0D42-4d37-B03B-F0932C53CA70} → {AF40136A-83F3-4875-8C42-904DE14A50B3}
+      - "Association «IN» → ffc-trip_planning_payment_responses"  # {8127F32E-110F-4364-AD1B-A955DE95FA9C} → {885F7DA6-E79D-48a4-9195-D0C8B3583AD0}
+      - "Association «IN» → ffc-trip_planning_service_payment_response"  # {C2EE0FD3-6B5C-48b8-8F00-B5F4032861C7} → {939A7415-7C69-404b-BDBF-34E271F06CC5}
+      - "Association «IN» → ffc-vehicle_trip_planning_payments"  # {564C1FC7-EA57-48dd-A1C9-90F807AE4C1B} → {73534089-C1DE-41da-9702-73AF34C14991}
+      - "Association «IN» → ffc-vehicle_trip_planning_service_payment_response"  # {E8C039F5-BCCF-4795-BF21-67F472015C8C} → {EE157160-D50B-431d-AF2F-9E2992A7E4D1}
+  - name: "Law Enforcement Agency"
+    guid: "{4014FC28-A08A-4fcc-B9A5-B6ADCC9E3353}"
+    type: "Class"
+    stereotype: "FRAME_Terminator"
+    alias: "lea"
+    status: "Proposed"
+    version: "5.0"
+    order: 8
+    note: |
+      This Terminator shall represent an organisation taking the necessary measures or actions to achieve compliance with laws, rules and regulations that are relevant to road traffic and the movement of freight. Functionality in some parts of the system shall be able to input data objects containing details of any violation of laws, rules and regulations relevant to road traffic and the movement of freight, plus information about required customs clearances and freight vehicle fleet registrations to this Terminator.  In response this Terminator is expected to provide the functionality with data objects containing confirmation of acceptance to the inputs and details of the resulting action that is being taken.
+      
+      Mnemonic: lea
+    links:
+      - "Association «IN» → From Law Enforcement Agency"  # {C923F1EB-36BF-4642-8116-012081FF91DE} → {BF3E770E-1DC4-4010-AE8A-C9F213BD20B2}
+      - "Association «IN» → flea-psle_inputs"  # {5E555CA7-43F5-4733-965B-0718CB7233D4} → {D088AA00-237E-4934-8CE5-847196093432}
+      - "Association «IN» → flea-psle_rules"  # {819275EA-9574-48d9-8987-32F915E0942F} → {F2968980-EB73-4dc6-A7B1-C25659C5680F}
+      - "Association «IN» → flea-psle_user_clearance"  # {0C403E32-6D80-4dcd-8365-001A03AB80C1} → {17CD09AF-AE56-4cba-8EA9-2E5403C00358}
+      - "Association «IN» → flea-psle_user_registration"  # {1B415498-BC33-4af7-B4D3-B82934795B11} → {87DD7C3F-769C-4617-91AF-12CEDC6DCD40}
+      - "Association «IN» → flea-psle_violation_data_request"  # {0DB7C14D-75FC-4dcf-9DE0-4170CCDFF1F8} → {DD84BA67-5858-4e97-BE4C-9BFAD6F22E31}
+      - "Association «IN» → flea-request_for_incident_data"  # {E8338DE3-1B3F-43e6-B909-ACA09A27D53A} → {C0638A5A-F3C1-40b6-A786-DDE3E9FD9508}
+  - name: "Location Data Source"
+    guid: "{F5718DD4-62B6-430b-98EE-99E0720703B3}"
+    type: "Class"
+    stereotype: "FRAME_Terminator"
+    alias: "lds"
+    status: "Proposed"
+    version: "5.0"
+    order: 9
+    note: |
+      This Terminator shall represent external entities that provide data objects to functionality in various parts of the system from which they can determine their location.  Typically these data objects shall be provided continuously without requests being made by any of the functionality and be used to determine the location of any type pf Vehicle and Travellers.  The actual identity of the source of the data is not important, but it could for example be a Global Navigation Satellite Systems (GNSS) such as the European Galileo System or the American Global Positioning System (GPS), or it could be a ground based unit such as a beacon of the type that is used to enable Public Transport Vehicles to determine their location as they follow a proscribed route.
+      
+      Mnemonic: lds
+    links:
+      - "Association «IN» → From Location Data Source"  # {04F8079A-36A0-4921-8DE3-4CAE24C66278} → {B81C99FC-BB55-44e6-813C-CD04A0309AF5}
+      - "Association «IN» → flds-hazardous_goods_vehicle_location"  # {CD898F2B-6073-4fb2-AE4E-8BC2EB78904E} → {5B2D9C42-E1BE-4e7f-9541-E5BD4E484FD1}
+      - "Association «IN» → flds-location_data_for_bus_lane_use"  # {A09CEA72-02F0-488b-93AD-677721C7EA4D} → {FAA25148-1968-4e7c-9D8F-9B3919519332}
+      - "Association «IN» → flds-location_data_for_command_&_warning_outputs"  # {1A8B4FD9-835A-4222-B44A-4FBAA6C6E1A9} → {D2301F62-F92F-4c78-BAE7-8D01CC683DA1}
+      - "Association «IN» → flds-location_data_for_incident_warnings"  # {E0A88B18-482F-4fcd-AFE0-095B42E76CD2} → {4F2A688C-F24E-4eca-8E03-14AE563039FE}
+      - "Association «IN» → flds-location_data_for_vehicle_sensor_data"  # {FADC9F84-4FD5-4170-BDCF-04B1B65ECBC6} → {8EBDBD1B-44DE-4d97-BF05-397656D15C17}
+      - "Association «IN» → flds-location_for_priority"  # {BCD95001-691D-4ae4-B207-91FBBC1E4D57} → {79F48888-C59B-4d86-8EBA-B08161E137F6}
+      - "Association «IN» → flds-monitor_PT_fleet_inputs"  # {949ADAF9-D395-4b0a-A46D-5394D16D77A0} → {69E2C431-D9ED-46d3-BB78-2266CAC2DE63}
+      - "Association «IN» → flds-mpto_inputs"  # {B4780F24-060D-4d99-A5A8-55E22094349C} → {151721E9-8A20-4e19-BFD5-F417C3B4271B}
+      - "Association «IN» → flds-mpto_passenger_location"  # {635785D1-0213-4517-ABB9-FA4F49FA6534} → {43E4B86D-B845-40e9-84D2-BD81AFA5246E}
+      - "Association «IN» → flds-mpto_traveller_location"  # {8FC66038-4CC0-4c86-8AFD-81DDC23B8FEC} → {5635A86B-E302-4871-9E3D-E5AD7E813D59}
+      - "Association «IN» → flds-mpto_vehicle_position"  # {FA534BD7-69FE-4b4f-A400-EA9CA97D2ADC} → {E91DB506-9493-40c0-8E18-840F095B14F9}
+      - "Association «IN» → flds-mt_inputs"  # {7C3C7981-E237-4992-87C5-7B9B70EF9714} → {3C97B045-1854-4a11-82CC-CEF7C4CCB03D}
+      - "Association «IN» → flds-on-demand_service_vehicle_location"  # {2808C803-504D-475d-9E45-C738F5085F4B} → {60DD4B30-2F26-4bba-8296-4035DD8E7DDD}
+      - "Association «IN» → flds-pscs_inputs"  # {4BE729B0-9E96-4b35-80EA-442A657186D1} → {8BBE5777-9A39-4590-AC35-0B6A6619F977}
+      - "Association «IN» → flds-psef_location_data"  # {BA42D150-F8C9-4484-9E73-C60AB1D37970} → {2BE5E12C-12EB-488e-9CAD-8EE7FA2E3207}
+      - "Association «IN» → flds-pshvs_inputs"  # {FDF19BDE-FEEB-4088-8E02-E8D3AC2BACD5} → {07C95970-EDDA-40b1-91CC-B71640769D7B}
+      - "Association «IN» → flds-ptja_inputs"  # {E9A44AD0-FFB9-44cb-B588-16F1F1C0B9DA} → {5144AF52-3E0A-412d-B3CA-B33E2B0707BE}
+      - "Association «IN» → flds-ptja_location_for_information"  # {676E71E8-BB7B-4dbf-9D0A-753678D31368} → {59754BDE-F64F-4c3c-B292-C1932334CE02}
+      - "Association «IN» → flds-ptja_traveller_location"  # {C3CDE133-282D-4a34-AF5B-B22D7C55E151} → {52CCB04E-E769-4b4e-B4B7-7D7D108A41D2}
+      - "Association «IN» → flds-vehicle_location_for_attitude"  # {67DCE9CC-A578-4dfe-A243-B6BA01BFD397} → {BD87374A-2ADA-4393-96CD-6AC5DF289605}
+      - "Association «IN» → flds-vehicle_location_for_road_information"  # {AABCCC67-7921-4aba-8007-A163B3BDCD74} → {F541D1E5-5D53-4a35-ABAB-B6BEDE56C908}
+      - "Association «IN» → flds-vehicle_location_for_trip_monitoring"  # {159CA726-5F04-4e63-8FEB-DE7DC4E3A1E3} → {5C1C18D1-CF31-4f96-A416-1FAA9402BA1F}
+      - "Association «IN» → flds-vehicle_location_for_trip_planning"  # {8A10E972-4DE0-4511-84E8-C7FE8CFD4C8A} → {EA3B6F09-2B99-45e9-B10F-25BB734950D2}
+      - "Association «IN» → flds-vehicle_position_for_eCall"  # {8BDC71DC-0F3D-4fe8-8778-3CF810B86615} → {4EA87019-44FE-4618-8714-2E0DCE545246}
+      - "Association «IN» → flds-vehicle_sharer_location"  # {51D4E84A-B139-4f03-832A-238C473BD691} → {9CB1F659-379D-424c-9937-F9B977DC9E3E}
+      - "Association «IN» → flds_vehicle_location_for_sensitive_area_access"  # {0D83FF4F-AC23-4fad-B531-081119F71EB7} → {7D8818DE-BE50-415f-ACF5-6EA1652E2424}
+  - name: "Maintenance Organisation"
+    guid: "{C531C2A9-B828-456d-8F56-C342DBA4F25F}"
+    type: "Class"
+    stereotype: "FRAME_Terminator"
+    alias: "mo"
+    status: "Proposed"
+    version: "5.0"
+    order: 10
+    note: |
+      This Terminator shall represent organisations that are capable of carrying out maintenance activities.  Each organisation shall be represented by one of the following Terminators:
+      
+      Public Transport Maintenance Organisation
+      Road Maintenance Organisation
+      
+      These Terminators shall be capable of both receiving data objects from functionality in the system and providing data objects as input to that functionality.  It shall be possible for the input data objects to be provided both as a response to those received from functionality in the system, or as unsolicited input.
+      
+      Mnemonic: mo
+    links:
+      - "Association «IN» → From Maintenance Organisation"  # {6837BE36-01BB-4b3a-A953-720A94FEFD68} → {BCD337BD-9172-4f33-979C-EFF122A25F4B}
+      - "Association «IN» → fmo-mpto_inputs"  # {1DAC36E5-8A59-4ba4-8CD4-59278F37843D} → {F847F6DF-5A88-4d8a-8753-396C0058EAA1}
+      - "Association «IN» → fmo-mt_inputs"  # {4A573C50-7EEE-4350-AF6F-4D8B51F46BE1} → {9122FA77-8E8F-4728-B69A-56AD3C8C3BFE}
+      - "Association «IN» → fmo-pshvs_inputs"  # {124E4BB8-F17B-4dc1-8CE0-E8A1603B9C3D} → {7482FC28-38F0-4c7c-8C15-420BD7A78266}
+  - name: "Multi-Modal System"
+    guid: "{05CAA29F-450A-4dcf-8141-059421D3CB54}"
+    type: "Class"
+    stereotype: "FRAME_Terminator"
+    alias: "mms"
+    status: "Proposed"
+    version: "5.0"
+    order: 11
+    note: |
+      This Terminator shall represent systems and equipment that manage the transportation of Travellers and Freight by modes other than those that are road based.  It shall consist of the following Terminators:
+      
+      Multi-Modal Crossing
+      Multi-Modal Management System
+      Other Mode Freight System
+      
+      These Terminators shall be able to exchange data objects with functionality in the system to enable multi-modal trips to be planned and implemented for both Travellers and Freight.  In some instances the other modes shall be able to exchange "control" information so that for example, a bridge can be left open to road traffic for the passage of an Emergency Vehicle.
+      
+      Mnemonic: mms
+    links:
+      - "Association «IN» → From Multi-Modal System"  # {0BD55055-8BD6-47de-8340-1B1D8D21A63B} → {4E4D632B-D78C-4196-BEAF-D829B099E7AF}
+      - "Association «IN» → fmms-mffo_inputs"  # {19ABE279-0070-4f21-9156-E95A7F5E37E5} → {EAFBA6CC-F0C2-40bb-B0E6-621863F137E0}
+      - "Association «IN» → fmms-mpto_control_inputs"  # {3DB66CDD-27B6-47fc-82AC-A8B25EB6578C} → {51465906-5ED9-4bec-8421-4D8702638672}
+      - "Association «IN» → fmms-mpto_inputs"  # {BBF06CAF-4230-4aa4-AE1A-39138AB94780} → {714B23EA-171C-4f7a-AC44-9264DED78AFB}
+      - "Association «IN» → fmms-mt_inputs"  # {1ABC3E71-CA4D-4291-9C31-CAC528B8CF63} → {114919E6-7494-4f5a-B641-F644431B8FCD}
+  - name: "NAP Actors"
+    guid: "{FAF5089D-CEC9-4fac-A49D-D18F6E0ADC95}"
+    type: "Class"
+    stereotype: "FRAME_Terminator"
+    alias: "nap"
+    status: "Proposed"
+    version: "5.0"
+    order: 12
+    note: |
+      This Terminator shall represent the actors that are involved in the National Access Point (NAP) ITS Service.  This ITS Service provides a mechanism that enables organisations to be provided with the means to access data available from other ITS Services.  It shall consist of the following Terminators;
+      
+      NAP Content Provider
+      NAP Content Consumer
+      
+      The first of these Terminators provides the "means" in the form of Internet addresses from which the second of these Terminators can extract data objects about ITS Services that are available in their geographic areas.  These data objects shall initial comprise such things as traffic flow data and speeds, but may be expanded at a later date to include data objects relating to other ITS Services.
+      
+      Mnemonic: nap
+    links:
+      - "Association «IN» → From NAP Actors"  # {9C98D9A3-97BF-4db3-97A9-830FB08DAF17} → {59087751-DC42-4fcc-AA52-7330F931BC0E}
+      - "Association «IN» → fnap-mt_inputs"  # {038A8C2E-458A-4811-8B28-D7C97C881426} → {572F1D4D-9EB2-41ef-9944-23A22C7DA25B}
+      - "Association «OUT» → tnap-mt_outputs"  # {DD785317-9486-4b8f-9E95-A4A265EE7D70} → {D2D62478-1875-414b-A64F-9D0535140FF4}
+  - name: "Operator"
+    guid: "{102BBDF5-FF2D-4077-AD52-BEE0EA237E1C}"
+    type: "Class"
+    stereotype: "FRAME_Terminator"
+    alias: "o"
+    status: "Proposed"
+    version: "5.0"
+    order: 13
+    note: |
+      This Terminator shall represent a diverse set of human entities that can perform privileged interactions with functionality in the system to manage the way it operates.  Each of the human entities shall be represented by one of the following Terminators:
+      
+      Bridge Operator
+      Emergency Operator
+      Fleet Operator
+      Freight Management Operator
+      On-Demand Service Operator
+      Parking Operator
+      Public Transport Operator
+      Road Maintenance Operator
+      Road Network Operator
+      Traveller Information Operator
+      Tunnel Operator
+      Un/Loading Zone Operator
+      
+      It is expected that each Terminator shall provide inputs from which data objects can be generated by functionality in the system to represent requests and data for use by in the system.  Each Terminator is also expected to be capable of translating into human readable form data objects output from the functionality in the system and responding to that output if required.
+      
+      Mnemonic: o
+    links:
+      - "Association «IN» → From Operator"  # {DF73D93F-09D8-4cfe-8435-3D5598DFB4FB} → {BB9A1A2D-DF0E-4c2f-8BBC-F572C836D9D6}
+      - "Association «IN» → fo-bridge_and_tunnel_inputs"  # {0E1D650A-7138-4348-8C3F-5F089F354A58} → {9AFBCBCF-E77B-45f2-BC4E-D1A44D8EEBB3}
+      - "Association «IN» → fo-mpto_inputs"  # {3B4CCC4F-AB1C-4e1d-A6F4-762F1784997E} → {70D85673-5206-4760-B61A-95C9E788E4BB}
+      - "Association «IN» → fo-mt_inputs"  # {C987637E-57D3-4609-BFD0-D5BC3D7A4997} → {2035CF3E-F0D8-4d03-A763-EE89BA1ED241}
+      - "Association «IN» → fo-pepf_inputs"  # {6F0DC1E7-2DA5-42b7-9C3E-439DB5C6ED86} → {54E198C5-3759-422b-97D2-4F616F2FDB0F}
+      - "Association «IN» → fo-pscs_inputs"  # {2718DAF7-1F3C-4998-909C-ED0B69218F0E} → {D7A005DF-117D-4072-8DBD-470565B6F3EF}
+      - "Association «IN» → fo-psef_inputs"  # {D1AAB2B5-D27C-4964-A4D9-C760ADD6A86B} → {C53B9470-22A2-4614-83E4-B89591662B8D}
+      - "Association «IN» → fo-ptja_inputs"  # {437F3F97-177A-424b-AE95-148ED8EEDF23} → {18682DEC-CF9D-4c4f-8ACD-1B42481D15C8}
+  - name: "Other Related System"
+    guid: "{AB919AF2-B1C5-45bf-8731-FB6EC44C2A2E}"
+    type: "Class"
+    stereotype: "FRAME_Terminator"
+    alias: "ors"
+    status: "Proposed"
+    version: "5.0"
+    order: 14
+    note: |
+      This Terminator shall represent other instances of different functionality that is included in parts of the system. Each different instance shall be represented by the following Terminators:
+      
+      Emergency Management System
+      Environmental Traffic Management System
+      Hazardous Goods Vehicle Route Monitoring
+      Incident Traffic Management System
+      Inter-urban Traffic Management System
+      Other Navigation Device
+      Public Transport Management System
+      Public Transport Stop
+      Traffic Signal Controller
+      Traffic Simulation System
+      Urban Traffic Management System
+      
+      These Terminators shall enable the same data objects to be sent to and received from other instances of the functionality that they each represent.  These other instances may serve other geographic areas, or be managed and operated by different organisations serving the same geographic area.  It shall be possible for the data objects to be sent and received on request, at regular intervals, or because the sending functionality has made changes.
+      
+      Mnemonic: ors
+    links:
+      - "Association «IN» → From Other Related System"  # {BF7AD266-27FC-4525-8F6B-730D29475515} → {F61B6D7E-F9F8-464e-8AE2-B0868F09146E}
+      - "Association «IN» → fors-mpto_inputs"  # {F1B91879-2F3B-40e9-B134-A89BE9B77DCB} → {9473C236-39A5-4c60-9D62-F458A04C3008}
+      - "Association «IN» → fors-mt_inputs"  # {C0FDE8D9-BF1C-43fc-8FE1-AC5F6D2A3810} → {EEA64EEA-EFEF-431e-8231-DE877912EC8C}
+      - "Association «IN» → fors-pscs_inputs"  # {974AA1D5-69DA-4439-8D88-B1260E429206} → {F90A26E5-32FC-4edc-A70E-B05A235D83A5}
+      - "Association «IN» → fors-psef_inputs"  # {83FBC15C-E10A-4291-925A-A5D8B2EC2B52} → {51752D5C-F704-41ac-A05D-FAE6134D58D4}
+      - "Association «IN» → fors-ptja_inputs"  # {32292870-B92A-408f-AE6E-C8468E27E23E} → {948FBB76-0F1E-4e2e-B9A3-EBEB38E349C2}
+  - name: "Road Pavement"
+    guid: "{C5135D50-7ED7-4ceb-9641-5011F07CDAB1}"
+    type: "Class"
+    stereotype: "FRAME_Terminator"
+    alias: "rp"
+    status: "Proposed"
+    version: "5.0"
+    order: 15
+    note: |
+      This Terminator shall represent the material that makes up the surface of the road. It shall be possible for the functionality in the system to use its sensors to create data objects that enable it to identify the status of the road and/or decide what maintenance operations are necessary to ensure that the surface causes no hazard to vehicles, pedestrians, as well as to those in wheelchairs, or have imperfect sight.  The different status of the road surfacing that can be measured shall include but not be limited to conditions such as rough or warn surfaces, ice, flood water, landslides, etc.
+      
+      Mnemonic: rp
+    links:
+      - "Association «IN» → From Road Pavement"  # {FE1543D0-FCFB-4d85-8BF8-B4EFCD1BACB7} → {E3E191DA-5784-4c53-AA36-07158215A19F}
+      - "Association «IN» → frp-current_conditions"  # {F8545886-4D31-4850-93D5-B6E97C710759} → {225CF96D-9387-4992-A816-85D6FF717ADF}
+      - "Association «IN» → frp-guidance_data"  # {86EC8A1E-611A-4cc6-A4E3-990D898C5720} → {E16FA166-6B0B-4fd9-8CA2-FBC023E4457B}
+      - "Association «IN» → frp-local_vehicle_road_surface_conditions"  # {6ED4ECA4-575F-4044-8AE7-0971CBE88176} → {887AF239-B89B-433c-9FFE-8900E8ECE907}
+      - "Association «IN» → frp-location_data"  # {BCF6EE10-C487-4fc0-880C-83621BED2914} → {4FF476C0-EF23-4ea3-B7F5-B734FACC3389}
+      - "Association «IN» → frp-long_term_wearing_state"  # {4E396668-D23F-4b5f-9FFB-494A57741AE6} → {47699D62-8DD4-4913-B841-E65AAC026334}
+      - "Association «IN» → frp-mt_inputs"  # {EE3F1B07-C710-4a80-A5C4-E67B1A7E2689} → {01142CF7-5B65-4bb5-9107-F527C6844FB1}
+      - "Association «IN» → frp-pshvs_inputs"  # {631D3A48-3461-44ec-B085-852ED82F9A09} → {BCF13BFF-B76E-4c13-B77C-9068B500E8A1}
+      - "Association «IN» → frp-short_term_wearing_state"  # {C9D6DF95-0101-4a57-8035-445F81378BC2} → {8434DCCE-B1AB-4464-A86C-5E5F86D92CCA}
+  - name: "Roadside Equipment"
+    guid: "{4633CF29-A219-48bd-9A3C-00495153D47D}"
+    type: "Class"
+    stereotype: "FRAME_Terminator"
+    alias: "re"
+    status: "Proposed"
+    version: "5.0"
+    order: 16
+    note: |
+      This Terminator shall represent entities that are outside Vehicles and located on or near the roadside.  They shall be capable of providing the information directly to the Cyclists, Drivers and Pedestrians in human readable form.  The information shall be produced by functionality that receives data objects from elsewhere in the system
+      
+      Mnemonic: re
+    links:
+      - "Association «IN» → From Roadside Equipment"  # {70919ABB-53EE-4be6-B3AE-E9E429865944} → {D148A16C-9F49-4ed5-AD94-FCD392FADE20}
+      - "Association «IN» → fre-dynamic_commands_&_warnings_details"  # {D086F297-B84E-4937-9B64-B77FCDBE2EEF} → {7B9C7BA0-4869-4fc9-AA6A-BAC78EF8DD14}
+      - "Association «IN» → fre-pshvs_inputs"  # {4BD0156F-FACF-462d-AE34-D3820F95FE2C} → {03403272-1630-4bb0-8F28-5E7C912BFE0A}
+      - "Association «IN» → fre-roadside_speed_indication_details"  # {38FCC199-D228-40c7-92F2-4A72E93ADBEC} → {70C8ECB8-F154-4b14-8858-6D0D21234AC6}
+  - name: "Traffic"
+    guid: "{3AE966D8-0BD1-4b89-95EC-0625A22F6570}"
+    type: "Class"
+    stereotype: "FRAME_Terminator"
+    alias: "trfc"
+    status: "Proposed"
+    version: "5.0"
+    order: 17
+    note: |
+      This Terminator shall represent the movement of Vehicles at discrete points within the road network.  Functionality in the system shall be able to use its sensors to create data objects that indicate the presence of Vehicles.  The functionality shall be able to distinguish different types of Vehicle and the numbers of each type that are pass the discrete points. The sensors used by the functionality shall be able to detect Vehicles in different ways such as video, laser or infra-red images, magnetic signature or any other way in which the presence of a vehicle can be determined.
+      
+      Mnemonic: trfc
+    links:
+      - "Association «IN» → From Traffic"  # {C6B88563-74F2-465a-AD30-86F57694D57A} → {AE61597B-0EBF-4c13-B460-A4593C5CE2F8}
+      - "Association «IN» → ftrfc-carpark_space_occupancy_data"  # {3BF35266-DEAE-46c0-B0C6-EEB850E5B365} → {1FB67819-DE16-4779-9EA3-CC43D969F437}
+      - "Association «IN» → ftrfc-carpark_vehicle_data"  # {2CA70DE4-F4A2-471c-9A1A-0433A94372C4} → {DB49A19D-4884-4fa3-AEC3-EC0B04D665EB}
+      - "Association «IN» → ftrfc-freight_vehicle_identity_for_holding_zone"  # {AD2F6624-18FB-4ad5-B8CC-75130A0A4250} → {046B85B6-3DFA-4c86-A23D-361720CA8249}
+      - "Association «IN» → ftrfc-freight_vehicle_identity_for_un/loading_zone"  # {2C360CC9-13C8-421f-AE45-4CC919440260} → {D056C826-0AB8-463a-9874-84497134DBBF}
+      - "Association «IN» → ftrfc-freight_vehicle_identity_for_zones"  # {352D98DC-0C02-457a-B34A-5FFDB07B16C4} → {45B439BD-27A0-4f10-8F90-FFC958D76E5D}
+      - "Association «IN» → ftrfc-inter-urban_data"  # {47423B3A-05D6-41ef-A90B-3D4DBCBC702B} → {A76A66AD-FB4A-455a-9ABD-8AFA3E16D49D}
+      - "Association «IN» → ftrfc-inter-urban_fcd_source_vehicle_image"  # {6BBD01C4-E578-4e78-9A45-BA55B7D7F28B} → {C408FC86-D808-4802-90D8-39B0EABACD59}
+      - "Association «IN» → ftrfc-inter-urban_local_data_for_ramp_metering"  # {20A49F89-E6A4-4f94-94D3-394B920514E4} → {E54FAC58-81CF-4df7-89D6-07F3F83F4DF9}
+      - "Association «IN» → ftrfc-inter-urban_traffic_flow_data"  # {59123353-566B-45a4-84CB-E2392BD94E4B} → {514FF47C-D1C3-4a39-AEF3-C83D5BBD9E5C}
+      - "Association «IN» → ftrfc-inter-urban_traffic_vehicle_identities"  # {ACA61C9E-695F-440d-875C-1DEFBA664FA7} → {D7F140FF-1687-443e-ACDB-0C9D1887F240}
+      - "Association «IN» → ftrfc-inter-urban_vehicle_identity_for_violations"  # {52EDCB1B-201B-4639-9A42-748A204BEDD7} → {55BAFD70-58B6-4b34-99A3-ACBD72F5C530}
+      - "Association «IN» → ftrfc-inter-urban_vehicle_presence_for_messages"  # {688FCD3B-E253-4b6e-8541-6B64680E15EF} → {87909A77-8F63-406d-B7C1-867061733267}
+      - "Association «IN» → ftrfc-local_traffic_presence_data"  # {00395B73-D47B-4e41-9C87-B2B43C06B5D6} → {188E766F-C02F-4ba6-81F3-555031F2E4BB}
+      - "Association «IN» → ftrfc-mt_inputs"  # {2899B320-91DC-4c73-A4EC-5C853974E185} → {E120AE37-6FE5-4248-92A3-80CDBFE995CD}
+      - "Association «IN» → ftrfc-presence_indication"  # {D5039944-B320-4799-8BE1-749E866C73F6} → {43D55E3E-9A2F-47e8-BA2E-BE06362498FB}
+      - "Association «IN» → ftrfc-pscs_inputs"  # {9892A92F-87CF-4056-BBB6-BE2FF7DF20A8} → {18020012-80D0-4489-9A13-EC4D032B932C}
+      - "Association «IN» → ftrfc-pshvs_inputs"  # {90B3A47F-27DF-43e4-8326-250400DD33F3} → {E5C02F64-D649-489e-A1AB-BE1E0E3B91ED}
+      - "Association «IN» → ftrfc-service_area_vehicle_data"  # {817E2291-168D-47da-AB0D-182C66388F3B} → {BE3A1369-223E-4cc1-A26C-B8929D99F7BE}
+      - "Association «IN» → ftrfc-traffic_conditions_in_tunnel"  # {674C083B-6DB4-4465-B14A-C759D12A74B7} → {081E7357-32B2-41bd-8709-40EED3F2B262}
+      - "Association «IN» → ftrfc-traffic_data"  # {43E3F059-FC39-43d9-A217-C8BBA8E4148F} → {2F8E1C77-F695-4757-86F0-8A17858DCA43}
+      - "Association «IN» → ftrfc-traffic_data_input"  # {1069D03D-07EB-4507-BCF9-A8FD37475539} → {12D501E0-4CE7-4132-945A-DF73C669B8A7}
+      - "Association «IN» → ftrfc-urban_data"  # {9A08D9CD-4AA0-4b5e-8BB7-922733ED5AEE} → {5F84360B-BA22-4ee5-A5F8-BABB1943DE5E}
+      - "Association «IN» → ftrfc-urban_fcd_source_vehicle_image"  # {A2030EF5-5A03-40de-8D31-79E07E19F486} → {060EEB55-43F1-44d3-9982-EA0FBDBB98D4}
+      - "Association «IN» → ftrfc-urban_local_traffic_data"  # {8CDBB1C0-A681-4900-AFB6-20DA61285F86} → {DEE17BC4-B3CB-4c04-98A8-D943A042E198}
+      - "Association «IN» → ftrfc-urban_traffic_flow_data"  # {6FCB0C88-4BA4-44e4-9DCB-A74B4FC99630} → {EFDEA1D1-9870-472a-840C-2F7351FD8B17}
+      - "Association «IN» → ftrfc-urban_vehicle_identity_for_violations"  # {5FB9355C-F54D-4f0b-9E6B-2FD3CA26A512} → {C6EC644F-7159-497f-B336-CA5E9D426A13}
+      - "Association «IN» → ftrfc-urban_vehicle_presence_for_messages"  # {F95F4CBD-45E6-409a-9E26-CC7A994286E3} → {0ADD0D2E-BE9C-4189-AFF2-C4CC8AD721DC}
+      - "Association «IN» → ftrfc-vehicle_approaching_inter-urban_zone"  # {F8DD9CAE-D81D-4914-A988-5188EEA2A51E} → {344C5C20-3B2F-438e-B633-44E8C87D6C1D}
+      - "Association «IN» → ftrfc-vehicle_approaching_urban_zone"  # {06C252E1-F458-43bb-8159-9EDD41A5021A} → {7384E254-A72C-4361-AF89-FF8484B90004}
+      - "Association «IN» → ftrfc-vehicle_entering_inter-urban_zone"  # {9FE31B81-60E6-416e-AD9F-B556AA1E6D90} → {0007863D-9CAB-4e75-85B8-1DEAF3CEAD13}
+      - "Association «IN» → ftrfc-vehicle_entering_urban_zone"  # {CA10C3E3-36A7-4757-BAC8-1A44AD89E67D} → {DD473A09-23B5-448f-BA42-0EAAFE291541}
+  - name: "Transport Planner"
+    guid: "{3F15E9CE-9FDB-44df-B977-5E140B660C93}"
+    type: "Class"
+    stereotype: "FRAME_Terminator"
+    alias: "tp"
+    status: "Proposed"
+    version: "5.0"
+    order: 18
+    note: |
+      This Terminator shall represent the human entity that is responsible for deciding how the traffic using the road network is to be managed.  It is expected that the Terminator shall provide inputs from which data objects can be created by functionality in the system to represent commands, data and requests for use in the system and be capable of translating into human readable form data objects output from the functionality in the system.
+      
+      Mnemonic: tp
+    links:
+      - "Association «IN» → From Transport Planner"  # {9D29813B-9333-4f5b-B895-12FC105F9DCE} → {2EEBACB3-042D-4cf8-9B64-883FAEC2591B}
+      - "Association «IN» → ftp-demand_management_commands"  # {99F80196-2746-4ffd-B9B2-5169EB21B9C6} → {0B7D2443-4724-49e9-87AE-53AE2FF6DBF9}
+      - "Association «IN» → ftp-mffo_inputs"  # {0E89BEDF-F9C7-4ddf-BF0C-C93B66CCC4F7} → {9D86E581-5FE7-4e99-AEDD-914DA36D32FE}
+      - "Association «IN» → ftp-mt_inputs"  # {849F63EE-EEE4-4b36-8E25-41E3B8FB8CB9} → {82475DB1-94E4-4e0f-AA3A-9ABBE69A3684}
+      - "Association «IN» → ftp-process_traffic_prediction_results"  # {B763AEB5-B1F2-4f16-8839-A3B3DFCFC346} → {4BAE3BF4-FF7C-4d73-8604-AEFB9FC5D38F}
+      - "Association «IN» → ftp-request_demand_data_output"  # {23C03096-561A-4b77-8859-F25FD1375E23} → {16570A74-319F-46f7-93E6-C166A21FC75E}
+      - "Association «IN» → ftp-request_demand_strataegy_simulation"  # {7FE2BD3F-892C-43a6-8817-4B15BCEE7938} → {5C24AE25-BF6D-4588-A92B-6B228DB61D51}
+      - "Association «IN» → ftp-request_demand_strategy_analysis"  # {53893123-ECF5-4265-952B-CB97149CFEBF} → {FFBD9BDC-32C7-4ea3-A19F-5C22BE274C73}
+      - "Association «IN» → ftp-request_new_demand_strategy"  # {B068B3E4-38F8-4070-A84A-0032E8CEEF47} → {E50B7A24-4D6E-4d48-94BC-3F46C7310DF4}
+      - "Association «IN» → ftp-request_road_network_data"  # {CE686590-1000-45c4-AF72-DFDA5761341D} → {2E80EA46-3F45-4a83-BE52-B435CEA8EF0B}
+      - "Association «IN» → ftp-request_traffic_prediction_results"  # {EB84D6D8-4E8E-4b62-BE0E-66E2B56808A6} → {0400E33B-727D-4923-93DF-B494925EF1E4}
+      - "Association «IN» → ftp-run_traffic_prediction_creation"  # {4C50665A-BA7C-44bb-B045-493258022194} → {F4C85976-8258-4977-AEB3-6ADA02CF58E4}
+      - "Association «IN» → ftp-strategy_and_prediction_commands"  # {5E634196-55EB-4638-B2A4-D97092C0B9E8} → {F9D061E1-A70A-446f-B44F-7B6F77E4EFCE}
+      - "Association «IN» → ftp-updates_to_road_network_data"  # {35F8DA62-2E17-4f2f-9049-C04FBED952AE} → {91F349FF-12B4-4e03-A507-580F7D62F64A}
+  - name: "Traveller"
+    guid: "{5F83A087-8531-4855-A274-F88A8ACBBAF0}"
+    type: "Class"
+    stereotype: "FRAME_Terminator"
+    alias: "t"
+    status: "Proposed"
+    version: "5.0"
+    order: 19
+    note: |
+      This Terminator shall represent the roles of a human entity that uses (or is about to use) ITS Services provided by functionality in the system.  It shall be possible for the human entity this Terminator represents to switch between several roles during their use the ITS Services provided by the functionality in the system.  Each role shall be represented by one of the following Terminators:
+      
+      Cyclist
+      On-Demand Service Passenger
+      Pedestrian
+      Pre-Trip Traveller
+      Public Transport Passenger
+      Static Traveller
+      Vehicle Sharer
+      
+      It is expected that each Terminator shall provide inputs from which data objects can be generated by functionality in the system to represent requests and data for use by in the system.  Each Terminator is also expected to be capable of translating into human readable form the data objects output from the functionality in the system and responding to that output if required.
+      
+      Mnemonic: t
+    links:
+      - "Association «IN» → From Traveller"  # {1AFE99A9-9334-483a-9A78-CC6A1CCC0608} → {61624BC0-2356-4bdc-985A-0CEC01D88531}
+      - "Association «IN» → ft-GTP_data_updates"  # {89E06945-E8F5-47df-B8C6-3445D39F167C} → {91107C14-1F8C-4f3f-AB80-5254DB1EF1A9}
+      - "Association «IN» → ft-general_trip_preferences"  # {F9EB57D1-D5D1-4769-8E21-ADB84FE0F0D8} → {9770AACD-6797-4c46-A1EE-C9C6DD90C5E8}
+      - "Association «IN» → ft-incident_notification"  # {C131731F-B10E-448c-A34B-EC3E3276D274} → {254F3550-3DBA-4356-9620-5DEEC6633635}
+      - "Association «IN» → ft-mpto_inputs"  # {ABFF23C7-F380-43fc-B994-5FA6D7E6FB44} → {E85DB2B5-BF02-47dc-99C7-E4B0E4C73BB9}
+      - "Association «IN» → ft-mt_inputs"  # {86AEAA66-F5C2-4605-B62A-3233C6846E8F} → {BE2B7542-BDB6-4567-912C-756B347AB24A}
+      - "Association «IN» → ft-pepf_account_input"  # {08036AD6-ACD2-4689-B32B-F0F6B1A316D8} → {2AD69B1D-0C33-4034-B83E-52F75E389033}
+      - "Association «IN» → ft-pepf_characteristics"  # {58F521C8-0D40-454b-8EDD-0B28F58084C7} → {C67CF25D-D120-4f7f-83A4-56DE52403F96}
+      - "Association «IN» → ft-pepf_contract_data"  # {E19F4B8A-FABA-43e8-9DEC-2A8910345FB7} → {7CC09477-FE51-4ced-8126-61AF94F7E6F8}
+      - "Association «IN» → ft-pepf_contract_selection"  # {BCF9551E-3847-4895-AC96-8596AE180894} → {A6FCCA83-CB03-443b-BD84-9406C0083E6C}
+      - "Association «IN» → ft-pepf_contract_selection_2"  # {D68CD1EA-C02C-4288-8080-B0737B715554} → {9D29043B-24E7-4e87-A162-88450FB7AC42}
+      - "Association «IN» → ft-pepf_inputs"  # {0B5521BC-B518-4b66-AF5A-DD0573F9F203} → {0017141A-DC22-4463-AAEC-5143AF92DE32}
+      - "Association «IN» → ft-pepf_loading_parameters"  # {53980538-E977-41a5-AC28-2719F2688CB6} → {85C5A2F4-6356-40a3-9773-074932E1D757}
+      - "Association «IN» → ft-pepf_payment"  # {93E1CA42-BD02-4f54-AF9F-A38D69C6BF72} → {AB39F96D-DFE9-4e52-9912-9E40DBFCBA02}
+      - "Association «IN» → ft-pepf_payment_input"  # {86C5E1AB-141D-4cde-8D24-A1A2AC3FDD09} → {22E07C19-1669-43b8-9411-0FE9FDBEB702}
+      - "Association «IN» → ft-pepf_selected_service"  # {BCC032CB-44F6-411d-9219-13A9307F1285} → {A94EA78A-EF7A-4f5f-9ECD-0F4B6579F654}
+      - "Association «IN» → ft-pepf_transaction_info_request"  # {EB6FF765-2159-469c-8FFF-3F4629534A87} → {B0057D5B-9960-424b-BEA8-26C4608C0E62}
+      - "Association «IN» → ft-pepf_user_ID"  # {77935571-80DD-4a75-9137-86BA439800C5} → {7BB1818D-8F04-418e-95D2-BD23338C5B78}
+      - "Association «IN» → ft-pepf_user_ID_for_detection"  # {5D7B03C9-7D20-4d23-9583-105023CB1B55} → {A2051D25-1D6D-4ffb-9588-0E45CBED89E2}
+      - "Association «IN» → ft-post_trip_preferences"  # {2F421A6A-9936-4318-9709-6BC3F2A7537A} → {BB17AF53-BB80-4925-8537-0198FD85F53D}
+      - "Association «IN» → ft-psef_inputs"  # {D96F875A-6A64-4c68-BEBF-BBC4BFD7B3D3} → {6275E981-04B7-406f-973C-0500C4A73F16}
+      - "Association «IN» → ft-ptja_inputs"  # {A7A5A466-021B-45b8-BCF5-2221B1C23B14} → {43B73076-8407-48ff-8BEE-ED3A01249819}
+      - "Association «IN» → ft-request_general_trip_preferences"  # {06E7EDDE-92D0-40f1-986E-306E0B41A89D} → {5BD958A3-E860-4fdd-9C33-616864C65A7D}
+      - "Association «IN» → ft-request_trip_plan_implementation"  # {32AE22CE-09A6-4045-9204-26B17CC294B2} → {D2FEE271-C7AE-4c1a-AF3E-A1E6CFB2CC93}
+      - "Association «IN» → ft-requested_implementing_trip_plan_change"  # {01FB08A4-C06F-450d-BE57-67E06E491744} → {831AE13E-0B0C-4b24-9F8B-A16A3957D056}
+      - "Association «IN» → ft-traveller_information_request"  # {409F9391-F7D9-4279-9489-FE669860E422} → {EA55917C-44C9-4a36-91CE-A933772504DC}
+      - "Association «IN» → ft-trip_plan_change_approval"  # {799C8A3A-A0BD-4e84-BA13-3089B96CD9BC} → {541D2D50-BCF4-4e09-8AEA-30C4B77E5FF8}
+      - "Association «IN» → ft-trip_plan_imlpementation_commands"  # {DDFC8AF1-5648-4086-8C7D-0B359B6D371D} → {1AD453C5-12A1-4797-B9CC-5809D5C09A0D}
+  - name: "Vehicle"
+    guid: "{9021465A-4479-4fa8-B8DB-3481C001B9C3}"
+    type: "Class"
+    stereotype: "FRAME_Terminator"
+    alias: "v"
+    status: "Proposed"
+    version: "5.0"
+    order: 20
+    note: |
+      This Terminator shall represent the part(s) of the Vehicle that shall need to be involved in the delivery of the ITS Services provided by functionality in the system.  In addition to the systems in the Vehicles themselves there are several different types of Vehicle that shall contribute in different ways to the provision of ITS Services. The systems in the Vehicle and each type of Vehicle shall be represented by the following Terminators:
+      
+      Freight Vehicle
+      Hazardous Goods Vehicle
+      On-Demand Service Vehicle
+      Other Vehicle
+      Public Transport Vehicle
+      Vehicle Systems
+      
+      It is expected that each of these Terminators shall provide data objects to the functionality in the system either directly through an interface or through sensors, and these data objects shall be used to provide the ITS Services.  In addition, the Terminators shall be sent data objects through an interface by functionality in the system that requests the Vehicle systems to take some action.  Note that this shall be a "request" and not a command, as it shall not be possible for the Vehicle to be controlled by the functionality in the system.
+      
+      Mnemonic: v
+    links:
+      - "Association «IN» → From Vehicle"  # {246D20A8-AA39-48cc-8933-E5EA0717B93C} → {8091A438-AC1B-4ead-9BF4-76F8FF5E4D94}
+      - "Association «IN» → ftrfc-freight_vehicle_identity_for_rest_area"  # {5E456809-8726-4df7-924A-ABC5074DB270} → {8B961AD4-4260-451e-AA53-D8872CA968CC}
+      - "Association «IN» → fv-identity_for_inter-urban_zone_access"  # {4235FE6B-BA55-4cb0-B01E-4308891C61FF} → {6D214B18-8E24-4f02-BD94-C0A443D269D7}
+      - "Association «IN» → fv-identity_for_urban_zone_access"  # {3574B2EA-9F80-4cc2-9922-09A84256CA9D} → {1F88F0DC-428F-4c18-A24A-3CE328B6BF24}
+      - "Association «IN» → fv-incident_notification"  # {50BF20BE-1951-48e9-9209-B6768D6F0115} → {2A6FBBBD-3511-42c6-B97E-552F1F106587}
+      - "Association «IN» → fv-mpto_inputs"  # {886949EA-1E75-4018-874F-7F4714C6045E} → {BDA6C016-18CD-43e2-8807-608EDB81F0C0}
+      - "Association «IN» → fv-mt_inputs"  # {E6471F7C-CE66-4e16-89B4-7B13C56FB2E2} → {39F1F3B1-19F1-4d74-A598-18E6DA22C2A5}
+      - "Association «IN» → fv-pepf_characteristics"  # {921BD9E7-8E2D-423a-890D-209613F539EC} → {34AD26E1-A35A-4d2b-8404-7588865DAAE6}
+      - "Association «IN» → fv-pepf_inputs"  # {F71B5DFD-AF6E-4a4e-BE12-91FA1B85345D} → {41ECB55A-5831-4618-A0F8-631F089D4377}
+      - "Association «IN» → fv-pscs_inputs"  # {EC555A9B-5712-471f-BA5F-E8C76CED54E2} → {25816617-6225-4a87-BA0C-F2715E6A77BE}
+      - "Association «IN» → fv-pshvs_inputs"  # {F7028D22-83C7-4f00-BE97-593C629A643A} → {8548450D-2CC2-40c1-B982-8A9521950F8F}
+      - "Association «IN» → fv-psle_characteristics"  # {90534CA9-E9F7-49f2-B7C3-0C4E9DDC189C} → {ECC58EBC-98C8-4066-84B0-B9BF449D08B8}
+      - "Association «IN» → fv-psle_inputs"  # {36A90252-44FC-45a5-A923-F91AE08911D3} → {2814E720-AF67-4324-ADE2-93689DD60B55}
+      - "Association «IN» → fv-psle_vehicle_image"  # {96F05854-06F5-4a16-8CFD-E8C7CE4797F4} → {FC7DED18-68F1-480c-B011-1694A61B1FD9}
+      - "Association «IN» → fv-vehicle_image_for_bus_lane"  # {9114FD6D-A5A5-4823-8652-8BD9DB4537D3} → {125158C1-A683-46e8-8260-5ECD1871B028}
+      - "Association «IN» → fv.fv-mffo_inputs"  # {01C45DD4-D401-4536-8B68-019F278CDFE0} → {2321B561-2DFF-45ec-B8F1-8352C2CCB6C2}
+  - name: "Vehicle Environment"
+    guid: "{934987E7-82A3-48fb-A8DA-EDB2F5D850E7}"
+    type: "Class"
+    stereotype: "FRAME_Terminator"
+    alias: "ve"
+    status: "Proposed"
+    version: "5.0"
+    order: 21
+    note: |
+      This Terminator shall represent different types of objects in the immediate geographic area that surrounds the Vehicle.  Each type of object shall be represented by one of the following Terminators:
+      
+      Other Nearby Vehicles
+      Other Road Users
+      Stationary Object
+      
+      It is expected that these Terminators shall provide data objects to the functionality in the system either directly through an interface or through sensors, and these shall be used by the functionality in the system to assist the Vehicle to navigate through the road network.  The functionality in the system shall identify the Vehicle in which is it operating as the Host Vehicle.
+      
+      Mnemonic: ve
+    links:
+      - "Abstraction → Automatically triggerd eCall"  # {FDEAF8A6-2004-4c4c-871C-971D370DC4F7} → {0A6CCF7B-02A3-4d11-AAFE-50BCAD221A74}
+      - "Association «IN» → From Vehicle Environment"  # {7165FE62-1F37-4d6e-BC4F-B0E24BD78C30} → {E7253BCA-AF66-45b9-80CB-45A8C381F66C}
+      - "Association «IN» → fve-pshvs_inputs"  # {413589EB-CC33-49b1-85B1-BF0D634434C1} → {237DCC76-E3B0-4ad8-9466-1325D7EE9170}
+  - name: "Weather Systems"
+    guid: "{8C606233-3F45-4ced-9E61-7FA2817007F3}"
+    type: "Class"
+    stereotype: "FRAME_Terminator"
+    alias: "ws"
+    status: "Proposed"
+    version: "5.0"
+    order: 22
+    note: |
+      This Terminator shall represent those systems that detect and monitor weather conditions in the geographic area served by the system.  It is expected that this Terminator shall provide data objects that it has created from its own sensors which shall enable the functionality in the system to react to current and forecast weather conditions so that the flow of traffic in the road network suffers the minimum of disruption and, if necessary. PT services are adjusted to take account of any adverse weather conditions.
+      
+      Mnemonic: ws
+    links:
+      - "Association «IN» → From Weather Systems"  # {7FAD86E7-AE8A-487f-8763-CC28C36FE037} → {B013B1F3-2D52-4109-BA31-E746309E687D}
+      - "Association «IN» → fws-ice_formation_conditions"  # {7D990912-866E-4518-887B-D611377720E2} → {4B1C8775-F4DE-41ba-BCAC-7BBDAE756A63}
+      - "Association «IN» → fws-long_term_maintenance_conditions"  # {8E1DABD4-410C-4d1f-8DF3-2CA47270D699} → {79EB57B7-9EB9-435a-B600-9BF5052BF1BD}
+      - "Association «IN» → fws-mffo_inputs"  # {CA328666-0BC2-4c4a-965C-9A44A0B04EF2} → {ED5F64FC-2C10-4498-BEA4-2CC647D62252}
+      - "Association «IN» → fws-mt_inputs"  # {6A6CD9C2-B7E4-4473-85DB-73D4ADADB9BA} → {1BC755AB-FD44-43f9-A559-3B173F9FF289}
+      - "Association «IN» → fws-pshvs_inputs"  # {070E2B66-4AB3-47bb-B826-327002E3E2D0} → {04D3BB54-483C-4e0a-AB74-E50BEFB9BB6F}
+      - "Association «IN» → fws-short_term_maintenance_conditions"  # {4BA1F680-6238-48bf-A91F-C65FEED73A25} → {F2AD222D-9A60-49f6-86FE-1516FE422AF5}
+      - "Association «IN» → fws-weather_conditions_for_ISA"  # {E510D37A-065C-4364-856C-A65B66C315F3} → {82347ABE-D6F9-451b-BB7F-CF7E11D40A3B}
+      - "Association «IN» → fws-weather_data"  # {E3941223-5269-4988-8C45-60CA5ED5323C} → {3DE227C1-8BF2-470d-AD21-044B874FA44B}
+      - "Association «IN» → fws-weather_data_for_incidents"  # {4F5F8DB2-B701-4172-ADB6-5937A4944EB3} → {FA8CA04D-6117-4c98-933C-5200E3E962FA}
+      - "Association «IN» → fws-weather_data_for_maintenance"  # {4405B5DD-3C70-4420-9FD5-D0A4E6A6F783} → {314A8E7D-5DCF-4198-9833-1AFC22803F73}
+      - "Association «IN» → fws-weather_for_bridges"  # {515C2D62-86E0-4ba2-BA57-F25B19091F97} → {209664B7-AF94-4e2b-ABB4-4D0643060085}
+      - "Association «IN» → fws-weather_information"  # {4058EE8A-78C6-4c93-9D2C-23EFB2307E90} → {38AC8545-7F2F-4b86-B7B4-9C98BE4C272B}

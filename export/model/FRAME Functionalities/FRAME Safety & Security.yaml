@@ -1,0 +1,108 @@
+package: "FRAME Functionalities/FRAME Safety & Security"
+guid: "{676BE8A9-55FE-4b89-A035-12C2A5660741}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: ""
+    guid: "{0D66FE8B-89F8-4ac1-A624-426CE5E8D53B}"
+    type: "Text"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      In some languages the colloquial terms for Safety and Security might imply that they relate to the same thing.  In one sense they are the same - the absence of risk - but the nature of the risks, and how to mitigate them, can be very different.  For ITS they can be defined as follows:
+      
+      
+      	- Safety - freedom from unacceptable risk, where risk is defined as a combination of the probability of occurrence of (physical) harm, and the severity of that harm.
+      	- Security - the preservation of confidentiality, integrity and availability of information.
+      
+      
+      There is a statutory requirement that all equipment should be safe to use, and there is a legal expectation that the engineers who design such systems should take active steps to ensure that they are indeed safe to use.  In the road transport environment there are two primary sets of equipment, both of which need to be safe to use, the vehicles and the road-side equipment (it should be noted that, whilst the basic safety of a vehicle, or road-side equipment, is the responsibility of the manufacturer, the addition of certain ITS features can affect the way that drivers perform their tasks (indeed they are probably intended to!). These additions should not affect the overall safety of the vehicle, or the surrounding traffic, pedestrians etc.
+      
+      The introduction of ITS, and their reliance on data (both personal and functional), opens up the issue of security, which was once only of interest to the realm of Information Systems (IT). It should also be noted that some security issues may also result in a safety issue.
+      
+      See also:
+      Safety
+      https://frame-online.eu/library-2/other-related-reports
+      UTMC22 – Framework for the Development and Assessment of Safety-Related (Inter-)Urban Traffic Management Systems (March 2000)
+      PASSPORT – Framework for Preliminary Safety Analysis (December 1995)
+      Security
+      https://www.evita-project.org/index.html
+  - name: ""
+    guid: "{7AA522F4-71AC-4842-A842-087345BE9253}"
+    type: "Text"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Safety and Security – Introduction
+  - name: "Handling Security Issues"
+    guid: "{A55FBB46-D9E6-4956-B9CD-D98693D4C05F}"
+    type: "Text"
+    keywords: "Safety Security"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Security is the preservation of confidentiality, integrity and availability of information.
+      
+      With the development of the Internet, together with the increasing availability of computers in their various forms, the issue of security from cyber-attack has also become important. It is therefore necessary to undertake a Security Analysis of any proposed ITS application to ascertain whether it will have any security and, if so, include a plan on how to deal with them.
+      
+      These issues, as they related to road vehicles in general, and C-ITS in particular, were studied by the EC funded project EVITA (2008-11), see https://www.evita-project.org/index.html .
+      
+      Whilst there are now certain ITS Applications for which there are international agreements as to how particular aspects of security will be handled in order that different parts of the system can communicate effectively with each other, these will not necessarily all situations, or types of attack.
+      
+      As one moves from Traffic Control to Traffic Management there is an increasing use of both current and historic data, and it is important that this data is available when required and not corrupted by external agents.  In addition there is an increasing use of personal/vehicle identification, and this should be made available only to those who have a legitimate need to have access to that information.  The nature and interests of the stakeholders involved in future road transport systems therefore include:
+      
+      	- vehicle users – safe and efficient driving, valid financial transactions, personal privacy, protection of personal data;
+      
+      
+      	- other road users – safe and efficient transport;
+      
+      
+      	- vehicle/sub-system manufacturers – successful and affordable satisfaction of customer expectations, protection of IPR;
+      
+      
+      	- ITS system operators – safe and efficient operation of systems, valid financial transactions, protection of user data;
+      
+      
+      	- civil authorities – safe and efficient transportation networks, reliable financial transactions, data protection.
+      
+      
+      For the networked vehicles and intelligent transport systems (ITS) envisaged for the future, unauthorised access to vehicle or personal data may become possible, while the corruption of data or software could result in anomalies in vehicle function or traffic behaviour. Potential threat agents and their objectives may include:
+      
+      	- dishonest drivers – avoid financial obligations, gain traffic advantages;
+      	- hackers – gain/enhance reputation as a hacker;
+      	- criminals and terrorists – financial gain, harm or injury to individuals or groups;
+      	- dishonest organisations – driver profiling, industrial espionage, sabotage of competitor products;
+      	- “rogue states” – achieve economic harm to other societies.
+      
+      
+      Security functional requirements for information systems are broadly categorized into three types1:
+      
+      	- confidentiality – prevention of unwanted/unauthorized disclosure of data;
+      	- integrity – prevention of unwanted/unauthorized alteration or creation of data;
+      	- availability – prevention of unwanted/unauthorized loss of data or access to data.
+      
+      
+      In future road transport scenarios, breaches in the security of vehicle information or functions could lead to possible issues for stakeholders in four main areas:
+      
+      	- privacy – unwanted/unauthorized acquisition of data relating to vehicle/driver activity, vehicle/driver identity data, or vehicle/sub-system design and implementation;
+      	- financial – unwanted/unauthorized commercial transactions, or access to vehicle;
+      	- operational – unwanted/unauthorized interference with on-board vehicle systems or C2X communications that may impact on the operational performance of vehicles and/or ITS systems (without affecting physical safety);
+      	- safety – unwanted/unauthorized interference with on-board vehicle systems or C2X communications that may impact on the safe operation of vehicles and/or ITS systems.
+      
+      
+      An implication of this is that a subset of security issues may also impact on functional safety.
+      
+      -------------------------
+      1 ISO/IEC 15408, “Information technology – Security techniques – Evaluation criteria for IT security”
+  - name: "Safety & Security Title"
+    guid: "{AD565198-0A0A-405c-9B83-88DF37E117EC}"
+    type: "Text"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Security Issues for ITS

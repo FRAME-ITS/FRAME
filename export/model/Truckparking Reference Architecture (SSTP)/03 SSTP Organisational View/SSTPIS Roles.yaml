@@ -1,0 +1,121 @@
+package: "Truckparking Reference Architecture (SSTP)/03 SSTP Organisational View/SSTPIS Roles"
+guid: "{8461817A-5F07-4861-B82D-FE426DE942D0}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "National Assessment Body"
+    guid: "{F4F3F882-DD54-42d6-B45A-ED3C6FB1985E}"
+    type: "Object"
+    stereotype: "FRAME_Role"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Key Issue": ""
+      "Role Part Of Value Chain": ""
+      "Role Value": ""
+      "Role View": ""
+    note: |
+      Member States shall designate areas where traffic and security conditions require the deployment of information services on the safe and secure parking places.
+      
+      They shall also define priority zones where dynamic information will be provided.
+      
+      Member States shall designate a national body competent to assess whether the requirements set out in Articles 4 to 7 (of DELEGATED REGULATION No 885/2013) are fulfilled by service providers parking operators and NAP administrators. This body shall be impartial and independent from the latter.
+      
+      Two or more Member States may designate a common regional body competent to assess compliance with those requirements on their territories.
+      
+      Member States shall notify the nominated body to the Commission.
+      
+      All services providers shall submit a declaration to the designated bodies on their compliance with the requirements set out in Articles 4 to 7.
+      
+       Designated bodies shall randomly inspect the correctness of the declarations of a number of public and private service providers and parking operators, and request a demonstration of compliance with the requirements set out in Articles 4 to 7.
+      
+      The quality of the service may also be assessed using user-generated comment.
+      
+      Every year, the designated bodies shall report to the relevant national authorities on the declarations submitted, as well as on the results of their random inspections.
+      
+      Member States shall provide to the Commission at the latest 12 months following the entry into force of this Regulation the following information:
+      
+      (a)
+      
+      the competent bodies designated for assessment of compliance with the requirements set out in Articles 4 to 7;
+      
+      (b)
+      
+      the description of the national access point if applicable.
+      
+      2.   At the latest 12 months following the entry into force of this Regulation and every calendar year afterwards, Member States shall communicate the following information:
+      
+      (a)
+      
+      the number of different parking places and parking spaces on their territory;
+      
+      (b)
+      
+      the percentage of parking places registered in the information service;
+      
+      (c)
+      
+      the percentage of parking places providing dynamic information on the availability of parking spaces and the priority zones to the Commission.
+    links:
+      - "Association → NAP Operator (NO)"  # {218BFE8F-5E4D-4c13-9768-07D4ABBF6030} → {234C8914-6D8F-43fd-B3A7-34118A92FBA3}
+      - "Association → Park Operator"  # {A0383F2A-D425-42ec-BE41-F9ACE2F444FC} → {F889E587-63FF-4ed3-A1DA-3B5232BCD976}
+      - "Association → Service Provider"  # {98094AC1-5269-4438-9EEF-E915C73B65A3} → {56E95060-70F8-4023-9557-1EE0A92B253B}
+      - "Association → User"  # {A2C3681A-523D-4e5b-95E3-3DDE3EB9D5DD} → {9887014B-F428-4c13-82F6-E9513B4B18AB}
+      - "Dependency → "  # {BC65C41E-DADC-4ba0-AEFA-02FA8F7C5C90} → {5611A6C0-4ABC-4fc4-82D8-8902E6C5CCA1}
+  - name: "Park Operator"
+    guid: "{F889E587-63FF-4ed3-A1DA-3B5232BCD976}"
+    type: "Object"
+    stereotype: "FRAME_Role"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Key Issue": ""
+      "Role Part Of Value Chain": ""
+      "Role Value": ""
+      "Role View": ""
+    note: |
+      Responsible for providing the static information to NAP and Service provider (if park operator service provision agreement requires) and maintain this information through time in defined time intervals
+      
+      If the Parking Area is in priority zone, responsible of setting infrastructure for provision of dynamic information
+      
+      maintain relations with service provider and nap administrator
+    links:
+      - "Association «ArchiMate_Association» → NAP Operator (NO)"  # {69B230F7-A7B9-4f3e-9A11-438ABC562FBF} → {234C8914-6D8F-43fd-B3A7-34118A92FBA3}
+  - name: "Service Provider"
+    guid: "{56E95060-70F8-4023-9557-1EE0A92B253B}"
+    type: "Object"
+    stereotype: "FRAME_Role"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Key Issue": ""
+      "Role Part Of Value Chain": ""
+      "Role Value": ""
+      "Role View": ""
+    note: |
+      Responsible for the service setting up the technologies and the infrastructure for necessary for provision of the Tuck Parking information to end user,
+      
+      Responsible manage organizational, legal, financial aspect of service provided, maintain relations with other Actors of SSTPIS
+      
+      Responsible to provide support to user.
+    links:
+      - "Association → NAP Operator (NO)"  # {F8C934D1-69A1-4470-A54D-6E13704F39C3} → {234C8914-6D8F-43fd-B3A7-34118A92FBA3}
+      - "Association → Park Operator"  # {E18E34C4-ED4B-4076-8C2C-144E68D5EF50} → {F889E587-63FF-4ed3-A1DA-3B5232BCD976}
+      - "Association «ArchiMate_Association» → User"  # {741EF9FE-3964-49be-8270-ED80CD62AC22} → {9887014B-F428-4c13-82F6-E9513B4B18AB}
+  - name: "User"
+    guid: "{9887014B-F428-4c13-82F6-E9513B4B18AB}"
+    type: "Object"
+    stereotype: "FRAME_Role"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Key Issue": ""
+      "Role Part Of Value Chain": ""
+      "Role Value": ""
+      "Role View": ""
+    note: ""

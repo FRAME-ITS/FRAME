@@ -1,0 +1,67 @@
+package: "C-ITS Reference Architecture/05 C-ITS Communication View/C-ITS interfaces"
+guid: "{48DBBF8E-22FC-4bd8-ABBC-399A4A7D8403}"
+alias: ""
+version: "1.0"
+note: |
+  Interfaces used to connect C-ITS stations and transfer standard C-ITS messages (e.g. DENM, CAM, ...) as information objects.
+elements:
+  - name: "BI  - Basic Interface specification"
+    guid: "{88F19296-B6FB-42a8-8E42-0F6E3B071E66}"
+    type: "Interface"
+    stereotype: "FRAME_Interface"
+    keywords: "BI Interface"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The BI interface is used to transfer all C-ITS messages (including security headers and message identifiers) via IP Based networks to end users.
+      The BI specification in the latest version is available at https://www.c-roads.eu/platform/documents.html
+  - name: "C-ITS_Data_Interface1"
+    guid: "{69F43A29-1092-4f1a-97D5-D4A55059A8E1}"
+    type: "Interface"
+    stereotype: "FRAME_Interface"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Data input Datex II -> C-ITS Messages
+  - name: "I2V - V2I Interface"
+    guid: "{78A4A59A-331A-4ca2-82C3-F9CEC659C003}"
+    type: "Interface"
+    stereotype: "FRAME_Interface"
+    keywords: "I2V V2I"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      This interface is used to transfer all C-ITS messages on long range communication networks
+  - name: "I2V - V2I Interface"
+    guid: "{CC29E521-3562-43ca-A32B-59024B2903C4}"
+    type: "Interface"
+    stereotype: "FRAME_Interface"
+    keywords: "I2V V2I "
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      This interface is used by all C-ITS stations to transfer C-ITS messages on short range networks
+  - name: "In vehicle standard interface"
+    guid: "{CBEC1D64-D92F-41fc-8DF3-4905195D44D4}"
+    type: "Interface"
+    stereotype: "FRAME_Interface"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Interface for data transfer between client and C-ITS unit based on standard protocols, e.g. UDP
+  - name: "Roadside standard interface"
+    guid: "{70B68EFC-4337-4fa1-BBAA-8875FE692C5B}"
+    type: "Interface"
+    stereotype: "FRAME_Interface"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Standard interface in ITS roadside installations based on the TCP-IP protocol.
+      
+      For the transmission of traffic related data also the use of DATEX II (in the latest version - currently 2.3) is possible.

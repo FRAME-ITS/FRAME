@@ -1,0 +1,33 @@
+package: "C-ITS Reference Architecture/Supplements/C-ITS day one service packages"
+guid: "{CE227CD1-D642-4708-A539-D47190155B5C}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "FRAME_Specification C-Roads Communication profile"
+    guid: "{2BEF6417-C1BD-4f52-B2A5-E4DA23E5D6EF}"
+    type: "DeploymentSpecification"
+    stereotype: "FRAME_Specification"
+    status: "Proposed"
+    version: "1.0"
+    order: 1
+    note: |
+      See latest documents at https://www.c-roads.eu/platform/documents.html
+  - name: "FRAME_Specification C2C CC Basic System Profile"
+    guid: "{3DACFB0E-CADC-4ebc-9731-A007BD2AAC46}"
+    type: "DeploymentSpecification"
+    stereotype: "FRAME_Specification"
+    status: "Proposed"
+    version: "1.0"
+    order: 2
+    note: |
+      PLease see latest version at: https://www.car-2-car.org/documents/basic-system-profile/
+  - name: "FRAME_Specification C-Roads Basic Interface"
+    guid: "{C81439A3-422D-4047-A3B9-0356C7509D7A}"
+    type: "DeploymentSpecification"
+    stereotype: "FRAME_Specification"
+    status: "Proposed"
+    version: "1.0"
+    order: 3
+    note: |
+      Please see details in the latest C-Roads Communication profile details

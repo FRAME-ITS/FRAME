@@ -1,0 +1,36 @@
+package: "Truckparking Reference Architecture (SSTP)/00 SSTP Motivation Layer"
+guid: "{CA40F5A8-0853-4b6a-B4D6-8CCFD5D18BCA}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: ""
+    guid: "{657ACBC0-73F1-4585-B23C-FCC272EB622E}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: ""
+    guid: "{A0F77BBB-3000-45fe-B468-5A9CB979EAA0}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Dependency → Safe amd Secure Truck Parking Information Service"  # {229D8977-6F1E-42ed-9B60-BA68E55A1FAF} → {33781BF1-9091-4275-AD48-509C4D253D92}
+  - name: ""
+    guid: "{BB84B21A-D7A1-4e6d-A293-DB1B340591CE}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: ""
+    guid: "{DEED21C0-247D-49df-8C2E-55F184AEBC46}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""

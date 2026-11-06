@@ -1,0 +1,49 @@
+package: "National Body Reference Architecture"
+elements:
+  - name: ""
+    guid: "{E4465B7B-E1A0-43cb-846A-D4773AED8E66}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "00_NB_Motivational View"
+    guid: "{87891A57-D401-4153-825F-3E122C1C2583}"
+    type: "Text"
+    stereotype: "NavigationCell"
+    alias: "00 National Body Motivational Layer"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      00_NB_Motivational View
+  - name: "02 National Body Functional View"
+    guid: "{CDBE3B69-14AB-4317-9C47-17FE2C267154}"
+    type: "Text"
+    stereotype: "NavigationCell"
+    alias: "02 National Body Functional View"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      02 National Body Functional View
+  - name: "03 NB Organisational View"
+    guid: "{9D04FFC7-1112-4a14-A47B-E6963E61547E}"
+    type: "Text"
+    stereotype: "NavigationCell"
+    alias: "03 National Body Organisational View"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      03 NB Organisational View
+  - name: "05 NB Communication View"
+    guid: "{4931D11E-A184-46de-B0EA-37EFECEC08BD}"
+    type: "Text"
+    stereotype: "NavigationCell"
+    alias: "05 National Body Communication View"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      05 NB Communication View

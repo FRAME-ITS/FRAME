@@ -1,0 +1,86 @@
+package: "NAP Reference Architecture/05 NAP Communication View/Specification"
+guid: "{AE3AED1B-6DAC-4b52-8D35-58AEDDA47095}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "Proposal Usability"
+    guid: "{FCEC8243-9F60-43ec-8978-F5EF5F50D1F3}"
+    type: "DeploymentSpecification"
+    stereotype: "FRAME_Specification"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "Specification of Content Consumer support interface"
+    guid: "{82CC8D2F-E13E-47eb-BE1F-7D75E6DD2C3C}"
+    type: "DeploymentSpecification"
+    stereotype: "FRAME_Specification"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      This specification describes how the Content Consumer interacts with the NAP support technically.
+  - name: "Specification of Content Provider Metadata repository interface"
+    guid: "{AC07F298-FBD1-4be1-9F28-642826EE1128}"
+    type: "DeploymentSpecification"
+    stereotype: "FRAME_Specification"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      This specification provides the technical specification for the Content Provider metadata repository interface.
+  - name: "Specification of content provider user management interface"
+    guid: "{D271BE6E-335F-468c-8DB8-CC201E38958F}"
+    type: "DeploymentSpecification"
+    stereotype: "FRAME_Specification"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      This specification contains the technical description of the content provider user management interface.
+  - name: "specification for Content Consumer data retrieval interface"
+    guid: "{69695A87-EBC5-47cf-BE97-A9B8E9483960}"
+    type: "DeploymentSpecification"
+    stereotype: "FRAME_Specification"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      This specification describes the content retrieval interface.
+  - name: "specification for the user management metadata repository interface"
+    guid: "{DA09DDC9-9B5F-48e0-BA9B-015027D7F249}"
+    type: "DeploymentSpecification"
+    stereotype: "FRAME_Specification"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      This specification describes the technical means to exchange user data and access rights between the metadata repository and user management.
+  - name: "specification of Content Provider support interface"
+    guid: "{2F4665D0-6CEF-4ab9-85A6-5F3CEF1FF0BB}"
+    type: "DeploymentSpecification"
+    stereotype: "FRAME_Specification"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The specification for the content provider support interface describes the technical means by which the support can be contacted.
+  - name: "specification of content provider data provision interface"
+    guid: "{911BBC94-A631-4bc2-98A7-F795D2E93E2D}"
+    type: "DeploymentSpecification"
+    stereotype: "FRAME_Specification"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The technical specification of the content provision interface, e.g. sFTP
+  - name: "specification of interface to Content Consumer"
+    guid: "{B80CF473-075E-41d6-BCD6-286ED8D59230}"
+    type: "DeploymentSpecification"
+    stereotype: "FRAME_Specification"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      This specification describes the technical means to exchange metadata with the content consumer.

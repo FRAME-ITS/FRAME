@@ -1,0 +1,17 @@
+package: "Truckparking Reference Architecture (SSTP)/00 SSTP Motivation Layer/SSTPIS High Level Requirements/SSTPIS Mission Statement"
+guid: "{250596B3-342E-4067-94A1-E8D6A421D08D}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "To provide accurate information related to truck parking areas"
+    guid: "{D5A1FCD6-01F8-4e2f-AE80-0BE2E2880B4F}"
+    type: "Class"
+    stereotype: "FRAME_Mission_Statement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      To provide accurate information related to truck parking areas
+    links:
+      - "Association «defines» → Safe amd Secure Truck Parking Information Service"  # {788207FA-DAA9-4b53-AD48-5EA85C216587} → {33781BF1-9091-4275-AD48-509C4D253D92}

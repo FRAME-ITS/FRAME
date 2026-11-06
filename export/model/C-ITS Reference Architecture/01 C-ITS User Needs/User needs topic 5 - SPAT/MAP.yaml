@@ -1,0 +1,52 @@
+package: "C-ITS Reference Architecture/01 C-ITS User Needs/User needs topic 5 - SPAT/ MAP"
+guid: "{4CE8A8B2-B8B3-49f9-B46B-FF1CF6D117E1}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "C-ITS_Service_Process based on SPAT/MAP"
+    guid: "{7D262436-85BD-4688-8B05-4E0F67F5BF5D}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      C-ITS Services based on SPAT/MAP basic message standards, and specifications of roadside communication profile.
+    links:
+      - "Association «adheres to» → FRAME_Specification C-Roads Basic Interface"  # {88D76551-3F71-46fe-AAE1-93E974AD987A} → {C81439A3-422D-4047-A3B9-0356C7509D7A}
+      - "Association «served by» → F9.1.1"  # {198D32DF-3742-49b6-A804-8F9F0B1C0D9C} → {1FC1BA14-3557-4877-ADD8-B44061E61909}
+      - "Association «served by» → F9.1.2"  # {62652D16-F7D8-4078-AD55-91AA3F0D9590} → {2E6AB6C1-8DEB-4cab-BD3C-1DAD8AA295E1}
+      - "Association «served by» → F9.1.3"  # {C99D5605-33F7-4355-806A-D8D68C416D3E} → {090C96DD-B4DE-4899-B67D-31FAD1B7A1AF}
+      - "Association «served by» → F9.1.4"  # {2B8E19E0-8260-45f7-8268-7A4EC4C79C75} → {A58CA23B-0C02-4b84-A860-003644D94BB7}
+      - "Association «served by» → F9.1.5"  # {0B8D1E92-9F30-48ef-8FD5-0CA945C73F90} → {FA6D29C1-B909-4289-9E4C-9CA9933663B7}
+      - "Association «served by» → F9.1.6"  # {D02652FE-9844-4f35-949F-B989A6A39B25} → {9C8A68C2-444C-4e37-B712-3FA08A447528}
+      - "Association «served by» → F9.1.7"  # {FD181F78-BFF4-4e1b-84B3-AD74E71E231D} → {840CD5EB-B0C5-4fb8-AF12-22818D228E5F}
+  - name: "FRAME_User_Need_Topic5 SPAT/MAP Messages"
+    guid: "{E1094F3C-7DD4-43f9-AFC2-3010DD9A5DF0}"
+    type: "Requirement"
+    stereotype: "FRAME_User_Need_Topic"
+    keywords: "SPAT / MAP"
+    status: "Proposed"
+    version: "1.0"
+    order: 33
+    note: |
+      User Need Topics are defined as follows:
+      1 - C-ITS SYSTEM related
+      2 - DENM related
+      3 - CAM related
+      4 - IVIM related
+      5 - SPAT/MAP related
+      6 -for future messages to be defined
+    links:
+      - "Abstraction → 11.1.5.1"  # {16F61DC3-01A6-4f60-A2E6-CD08597B17C7} → {159FAE41-53DC-4633-9EAB-187BA2207820}
+  - name: "11.1.5.1"
+    guid: "{159FAE41-53DC-4633-9EAB-187BA2207820}"
+    type: "Requirement"
+    stereotype: "FRAME_User_Need"
+    keywords: "SPAT / MAP"
+    status: "Proposed"
+    version: "1.0"
+    order: 61
+    note: |
+      The System shall provide intersection related informations for vehicles in SPAT / MAP message formats according to the standards as defined in ETSI TS 103 301 which refers to the SAEJ2735 data dictionary.

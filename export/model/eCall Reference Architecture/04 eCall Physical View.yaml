@@ -1,0 +1,14 @@
+package: "eCall Reference Architecture/04 eCall Physical View"
+guid: "{EF286C72-0BA3-452b-B51E-4D83F9F275B4}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: ""
+    guid: "{5C457C3B-56C0-4a65-B45F-630B0B55B856}"
+    type: "Note"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      https://circle.visual-paradigm.com/component-diagram-ticket-selling-system/

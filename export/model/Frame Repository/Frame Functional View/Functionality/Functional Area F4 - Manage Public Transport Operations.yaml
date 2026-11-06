@@ -1,0 +1,1342 @@
+package: "Frame Repository/Frame Functional View/Functionality/Functional Area F4 - Manage Public Transport Operations"
+guid: "{90078C4E-186A-42cd-A4A1-52DBE6A4FADD}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "F4. Manage Public Transport Operations"
+    guid: "{132D4B60-A4E2-4229-9661-F6171B8DE3C2}"
+    type: "Activity"
+    stereotype: "FRAME_Functional_Area"
+    status: "Proposed"
+    version: "4.5"
+    order: 0
+    note: |
+      This Functional Area shall provide functionality to enable the management of Public Transport operations.  It shall include the scheduling of PT Services, the set up of fare schemes, PT Driver and PT Vehicle management, vehicle sharing and on-demand PT Services.  This Functional Area shall have links with the Manage Traffic Functional Area (F3) to provide priority for its vehicles, and to provide data on the use of PT Services so that an assessment can be made of demand for different modes of transport.  The Manage Traffic Functional Area shall also provide requests for service changes to enable a move towards a better balance in the use of transport modes.  There shall also be links with other Functional Areas to provide information about violations and incidents that have been detected in the Public Transport network and to provide information for use in the preparation of trip plans for Travellers.
+      
+      Mnemonic: mpto
+    links:
+      - "Aggregation «componentof» → System"  # {09282F3C-3B1F-4aac-9BF1-5F364715906B} → {A7365472-4893-4994-9241-EEED83ABEF7D}
+      - "Association «IN» → To Maintenance Organisation"  # {3544BEBF-B50E-4799-AD4B-4581EB90FFCF} → {8572AE13-B6F9-4e6b-8D05-7B93E36A105C}
+      - "Association «IN» → To Multi-Modal System"  # {99C9057C-9695-419f-A07A-AA907EA5B066} → {B5C9D8C7-873B-40b6-A991-CC0A7C4FD415}
+      - "Association «IN» → To Operator"  # {21076D88-B26A-43e6-9E1E-0197512984B7} → {BED224D6-0F6C-4a10-9057-54D9140F33F4}
+      - "Association «IN» → To Other Related System"  # {AFDC45FA-10C2-4508-A3EE-556B063A6CAE} → {B211B65C-3E19-4618-8019-7D7744237A96}
+      - "Association «IN» → To Traveller"  # {85D59FF7-AE8A-45d6-95C7-C0B64E726BA8} → {0F2BCEB7-7EEB-46f9-B031-5D3328B73E67}
+      - "Association «IN» → fd.odsd-driver_inputs"  # {23DBBA8A-DB77-44db-A6B9-6047FFB0A59C} → {615B7D23-90DB-41a3-B8A4-FFF1B74BDE88}
+      - "Association «IN» → flds-monitor_PT_fleet_inputs"  # {AAE5FB10-4AC5-40ad-B00C-8D086D11C0B7} → {69E2C431-D9ED-46d3-BB78-2266CAC2DE63}
+      - "Association «IN» → fo.odso-operator_inputs"  # {20370BAD-F026-4cd6-8403-26E02AC99454} → {708E369C-7F2E-4e79-8F2D-A969CC898710}
+      - "Association «IN» → fo.pto-PT_driver_management_inputs"  # {B516E318-9B39-47a6-82D8-A7E070EF40E8} → {A5AC0EFA-861C-433a-83B3-D648F88093C8}
+      - "Association «IN» → fo.pto-mpto_control_inputs"  # {24401CDA-FA4C-4659-ABCC-514E024220AD} → {C61E3E4C-83F7-4596-B3C3-4034A708B8B6}
+      - "Association «IN» → fo.pto-vehicle_sharing_inputs"  # {E00A4646-B20A-4a34-BB0B-7336152957AC} → {B3F3087D-DC50-4091-8E1F-F729763EEC5F}
+      - "Association «IN» → ft-monitor_PT_Fleet_inputs"  # {5507CFD8-6139-4aaf-8E2B-3251D7C36FC2} → {EE713F39-DFA8-4eb7-8030-84AADEBE5E8B}
+      - "Association «IN» → ft.ptp-provide_PT_fare_card_inputs"  # {9C1380FE-624C-4442-9355-0E932044B28B} → {7A9B9884-BB5F-4f39-B51C-D65BACF4B73F}
+      - "Association «IN» → ft.ptt-on-demand_service_inputs"  # {E0F641C6-459A-4a99-8FBE-AEF8D573EC50} → {49B3E67E-73AA-47d3-906B-5E6E098BD7DE}
+      - "Association «IN» → ft.vs-vehicle_sharing_inputs"  # {BD6DB655-C99F-49d9-B240-FDDB9A89E6D2} → {439C572B-4DF1-4d93-8DC9-0F88BF587922}
+      - "Association «IN» → fv.odsv-vehicle_inputs"  # {F58BDABE-A711-4150-BC88-F928FAF1EB21} → {041F9B20-3F01-497a-B227-98664D2E174B}
+      - "Association «IN» → mpto.mt-vehicle_sharing_requests"  # {D5E3BC8D-5C76-44f2-A940-DC6EC357F3EB} → {39A5B0FF-C605-46c2-9C06-9C0F0D690ECC}
+      - "Association «IN» → mpto.mt_information_and_priority_requests"  # {896CFE00-09AA-496b-B17A-DA32EA1CEC11} → {565446CB-D8ED-42fd-93D7-F602C6DA4CDB}
+      - "Association «IN» → mpto.pepf_fare_schemes"  # {4C8BD117-7FCF-476e-853D-36F6EB727FB5} → {E9487BD5-6109-45aa-85F7-F4DCE1BA97AC}
+      - "Association «IN» → mpto.pscs_data_for_coop_sys"  # {0735FB13-132D-4908-BBD7-91FB06ED86A2} → {FAC8BE68-2AD5-4c18-959F-1C394A0F2E59}
+      - "Association «IN» → mpto.psef_alarm_inputs"  # {11B8AF0B-39B1-4593-86AD-2BB4DCC9505B} → {450915D2-CDB9-4277-98EF-D3F8E439A2FA}
+      - "Association «IN» → mpto.ptja_service_information"  # {F2FCBD89-D673-47b3-AFDE-7347F73493F6} → {AF5DE6DE-8B74-4b5d-AA13-4C884F15EC3A}
+      - "Association «IN» → mpto_PT_data_for_demand_services"  # {058484C6-9DAA-4aa4-A243-E972EB992870} → {EDE4961E-F220-4247-B2A9-5F35649723CA}
+      - "Association «IN» → mpto_PT_data_for_vehicle_sharing"  # {2AD2C346-C231-4d7a-8E59-B3BD37E60B98} → {7F495FC8-C82C-40b4-B341-637B904E9CED}
+      - "Association «IN» → mpto_request_service_data"  # {4BC8A277-5A83-4558-A099-3ABA917536BC} → {7023E52B-9A07-439e-8240-F44C5553C9B5}
+      - "Association «IN» → mpto_route_data_for_planning_&_reports"  # {207AFA26-4BA1-4c50-A156-B95227C5F4DE} → {2E367B41-5692-4367-A969-D87A40D8D809}
+      - "Association «IN» → mpto_service_&_scheduling_data"  # {42DE96C0-D127-411c-A771-3FF85C17BE53} → {E4740BC4-E5B4-4d06-BAE7-8226F5751682}
+      - "Association «IN» → mpto_service_change_data_for_output"  # {4F27A0F1-B471-4e4b-9265-EFFF003E818D} → {377AA07E-4408-4d5b-8589-EFD4E62E8756}
+      - "Association «IN» → mpto_service_information"  # {F3863DB0-5D37-4a3c-B78A-E374217B55A0} → {A7D786C6-4BD0-490b-89C3-27131A456B61}
+      - "Association «IN» → mt.mpto_PT_service_planning_inputs"  # {F548D8D7-45EF-4454-928F-0276EEB92738} → {AADAA88D-7E8D-45db-BFAD-EEBBE5BB2772}
+      - "Association «IN» → mt.mpto_requested_parking_details"  # {0F283017-8E4A-4043-BC55-DDACF0164E63} → {1A91FA05-79A3-4a66-A2EE-B8F7FDCA497C}
+      - "Association «IN» → mt.mpto_road_data_for_demand_services"  # {5128AF4F-C577-43ba-918B-6C942C83BA2D} → {C2DCE2C8-9663-4e07-BC9B-35FB7B355595}
+      - "Association «IN» → mt.mpto_road_network_details"  # {2631D6DD-B1EE-44f6-9964-8659C1A646AD} → {E94819F2-3B4D-47de-A17E-6FCFF6A09B94}
+      - "Association «IN» → td-mpto_outputs"  # {AAF5C3CC-A562-4cc4-B63E-51D7BA0D93F2} → {25369E0A-AFBE-4d29-AD09-A194CED26E3B}
+      - "Association «IN» → td.odsd-driver_outputs"  # {BD4C6D24-45D7-487f-ABFC-0F803E4085ED} → {5ABCE4DB-65D6-411c-B142-ECDD676D3D3D}
+      - "Association «IN» → td.ptd-outputs_to_PT_vehicle_driver"  # {466D2283-8679-403f-AB60-C0B5072933AE} → {61214137-C232-4256-B43D-B2A9C81D2350}
+      - "Association «IN» → tfc-demand_service_payment"  # {F420C336-4F67-4612-ABBE-C78BB081FEFA} → {89DD8582-979D-4806-8056-7D66108E871F}
+      - "Association «IN» → tfc-mpto-outputs"  # {7DE43ABE-2C86-45fe-A1E7-2E9658D92375} → {0A3E5645-6171-4a31-8181-9AA06AB5FD19}
+      - "Association «IN» → tmms-mpto_control_outputs"  # {458C6AB1-70DC-4426-9D30-64A5CC81853F} → {440D6AD1-ECE8-44ae-ACE7-54432E23850D}
+      - "Association «IN» → tmms-mpto_outputs"  # {4B166029-CE24-4905-A1A9-7286077169AA} → {83C0C545-E15D-4056-832D-D0716391E61E}
+      - "Association «IN» → tmms.mms-request_data_for_demand_services"  # {163E4D01-A542-4b4a-AC82-AEE7CF1E93E0} → {A9B621F6-0CDB-48a5-BEBF-DA5AC08EB122}
+      - "Association «IN» → tmo-mpto_outputs"  # {367EB754-191C-4285-BACC-EC7BED63B4C1} → {035A21B5-F0AD-402b-AE28-7BAA0E0CF91F}
+      - "Association «IN» → to-mpto_outputs"  # {C2892022-B87C-48c9-A1C4-F3806360A5D5} → {B9682BF0-890D-465b-9803-4D5F6AA2A287}
+      - "Association «IN» → to.odso-outputs_to_operator"  # {C65EDEEF-949E-4d4d-8F7C-59B33A910622} → {269B65F1-CC2C-4a72-AA35-E4D256933EA5}
+      - "Association «IN» → to.pto-PT_driver_management_outputs"  # {A1787775-651E-48c8-8327-4208EAB97DDD} → {BFA25C98-CACA-4d82-8810-2CDB460A99D3}
+      - "Association «IN» → to.pto-monitor_PT_fleet_outputs"  # {60AA8CAE-E126-4b63-B420-64985A093313} → {08EE0924-29F3-45dd-BF62-F57038867B6D}
+      - "Association «IN» → to.pto-mpto_control_outputs"  # {612EA866-7A35-4813-9D08-A8EDB8325C0E} → {588E6CAB-504A-4ba2-BD17-2D947D878DB0}
+      - "Association «IN» → tors-mpto_outputs"  # {282D7DD7-2FF2-4906-AD48-BE3294F5012C} → {2FCA727D-0B96-4b06-A181-9C678B33BBA9}
+      - "Association «IN» → tt-monitor_PT_fleet_outputs"  # {FD20D643-FA89-4780-A0E1-820F38EF38CE} → {66F4560F-A14C-4b2b-AFB5-7BCB96B9CF38}
+      - "Association «IN» → tt-mpto_outputs"  # {47C9D604-C35F-4ff4-B710-426546C6817F} → {CD10DEEB-2201-40ab-969D-DF8E9C781D89}
+      - "Association «IN» → tt.odsp-outputs_to_passengers"  # {A713A0DE-70BD-48a6-9463-ADEC7C5BA562} → {F61548AD-EFA6-474e-B029-FF9A0A8E3625}
+      - "Association «IN» → tt.ptp-provide_PT_fare_outputs"  # {233655AD-AF3E-4e66-964B-6D05DE32AF7E} → {EC2CD472-C480-4fea-B082-EE9961CAF5B7}
+      - "Association «IN» → tt.ptt-demand_outputs_to_travellers"  # {3A478CCC-87D7-44dc-8C48-D1C22CD2FA21} → {7CD4BE15-63F1-4fc4-A970-DD2BB6E972E0}
+      - "Association «IN» → tt.vs-vehicle_sharing_outputs"  # {C6A9DE88-4E50-4575-9B67-4C3F5929BA74} → {3A358CF8-F4D4-4382-A20C-15F0C11F862E}
+      - "Association «IN» → tv-mpto_outputs"  # {BE3F50FA-3091-47a2-B647-D90739BCD790} → {19A0BB40-F0A1-4ccd-B0DE-DF52A34AB1B7}
+  - name: "F4.1 Monitor PT fleet"
+    guid: "{6371794D-1857-4152-B781-18AE7C5B8FC3}"
+    type: "Activity"
+    stereotype: "FRAME_High_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This High-level Function shall provide continuous real time monitoring of the Public Transport vehicles progressing along their routes. Data shall be available by means of a direct data and voice link to vehicles and their drivers. Any available vehicle indicators (e.g. travel time, number of passengers, diagnostic, etc.) shall be regularly observed and estimated, before being made available to other functions.  Also special events detected by vehicles shall also be processed, e.g. emergencies, alarms, etc.  Archiving functionality shall also be included.  This Function shall provide the interface to vehicles for operators and other functions. Predicted data shall be made available to Travellers through functional Area 6.  The Function shall consist of the following lower level Functions:
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {8FC3731E-0F7A-424f-AE72-70796078EE21} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Association «IN» → flds-mpto_passenger_location"  # {C70E02F7-5C75-4548-B698-9CE252CDE9CE} → {43E4B86D-B845-40e9-84D2-BD81AFA5246E}
+      - "Association «IN» → flds-mpto_traveller_location"  # {86A7C9EF-04E5-49f4-88D0-787802E1EB3E} → {5635A86B-E302-4871-9E3D-E5AD7E813D59}
+      - "Association «IN» → flds-mpto_vehicle_position"  # {06265F06-C1D9-4aed-9631-557A693024EE} → {E91DB506-9493-40c0-8E18-840F095B14F9}
+      - "Association «IN» → fo.pto-output_historic_information"  # {BC459E0C-C8F7-4e07-919D-EBE0E7FAD078} → {902BE8B9-2443-4871-A35D-DE3F43B14701}
+      - "Association «IN» → fo.pto-output_predicted_PT_data"  # {90635435-88C3-4b07-B58F-9CC8DCAB05A6} → {95013329-9492-40fc-8984-14F6B80E634C}
+      - "Association «IN» → fo.pto-output_real_time_information"  # {98C6D725-0BC4-4c71-B7B1-2B6296FC74F6} → {10B2B6EF-3B45-4c13-92B9-7B6883864FA4}
+      - "Association «IN» → ft.ptp-passenger_emergency"  # {598274A5-6F74-4351-8602-336AC660D2F7} → {A7A794EB-3F21-4a82-BCC1-EAB1AAEC350E}
+      - "Association «IN» → ft.ptt-request_PT_service_information"  # {A331DD44-D828-454d-AA6A-E4D1FA052891} → {E9EC6537-5908-4b8b-9877-A23772B4E81D}
+      - "Association «IN» → ft.st-traveller_emergency_at_stop"  # {D353413C-3D51-4dac-8DD0-419AFB958607} → {F743B5B8-B2AA-454c-A3A1-C7EF3789DDA7}
+      - "Association «IN» → ft.st-traveller_presence_at_stop"  # {036DB12C-CE05-4a79-9586-051FFB48A9CF} → {E47D9CB4-F1B8-42e7-8BE3-B8A44FDA8A72}
+      - "Association «IN» → fv.ptv-passenger_numbers"  # {DCB018E7-109E-4b14-8961-2397EC25DD53} → {B47185A8-6F74-4d44-A484-455C2E962BC4}
+      - "Association «IN» → fv.ptv-vehicle_internal_view"  # {C02ACA6B-0C3E-40d0-A28C-6F534817317E} → {C848CF19-B3DA-451c-AB0E-73993EDDEE8F}
+      - "Association «IN» → mpto.mt_incident_data"  # {AEB26B5B-F7A1-423b-9BC9-574338E6D38B} → {75340138-07A3-4e27-87F7-1ABF34D6CF8C}
+      - "Association «IN» → mpto.pscs_predicted_PT_vehicle_arrival_times"  # {B270445D-E7C9-4a89-A436-D3EB1280B8C7} → {B4376073-87AB-45e0-8A69-13C958DC503E}
+      - "Association «IN» → mpto.psef_PT_stop_alarm_notification"  # {5DDC2134-EA18-4e57-9FFD-39C32C48AD48} → {18C7C480-1BE3-4e35-9A86-C0753B5A72EA}
+      - "Association «IN» → mpto.psef_alarm_inputs"  # {F5A239BE-A3CC-4d1b-A781-F7DD16872CCA} → {450915D2-CDB9-4277-98EF-D3F8E439A2FA}
+      - "Association «IN» → mpto.ptja_pt_journey_time_prediction"  # {0795C3E4-4299-4679-9DDE-9BD757CE9312} → {4DBFB22A-13EC-468a-8376-24F496F32FAE}
+      - "Association «IN» → mpto_PT_vehicle_data"  # {51F117A3-3DBC-4d12-BB3E-E685F90684B7} → {D019D8E7-74A6-4153-83F7-636DACFB946C}
+      - "Association «IN» → mpto_PT_vehicle_real_time_data"  # {E8A4BF30-CC10-4dc2-B017-6A189534F5D3} → {23BAAC12-1CA7-410c-9279-3755D4110A4D}
+      - "Association «IN» → mpto_alarm_at_stop"  # {BF8E0C4D-E2B0-45ed-ACD9-63AA9DD2B66F} → {0292F8AF-78E4-46c1-9B4D-0EDE0AA77515}
+      - "Association «IN» → mpto_alarms_and_faults"  # {781DDDDD-0EE0-4882-9345-F411BE77402E} → {8A1A3DD6-E77D-40dc-845C-8D825DC4CB04}
+      - "Association «IN» → mpto_calculate_service_performance"  # {3F3E0DDD-C5A4-4921-AFB8-4C16C74875E1} → {E1696601-68F9-4058-A471-99268B56C58E}
+      - "Association «IN» → mpto_calculated_service_performance"  # {707394A7-E22C-4189-BBF1-595AA85284CF} → {1AAA70EC-BC4B-42f6-AC5E-5AFE1622EA0C}
+      - "Association «IN» → mpto_communications_from_driver"  # {1707E3EB-8626-48bf-BA4C-7E26A3935AF4} → {316D3471-8E63-4908-A407-930DC034A0E7}
+      - "Association «IN» → mpto_communications_to_driver"  # {DD354264-0E91-4ced-AF9C-3E75E1C1FC28} → {751D5960-E587-44ff-8BF3-6CEF360761A1}
+      - "Association «IN» → mpto_consolidated_vehicle_data"  # {C899BE29-65D3-4fcc-B69C-8D65A2A7C744} → {0C437821-0240-48b8-A44D-B71324A4548B}
+      - "Association «IN» → mpto_current_PT_vehicle_data"  # {B6AC40DD-44B2-440a-8846-D4A5A1DCFB6F} → {D4B97F97-D0C4-4e4a-8FAC-07A4648979E1}
+      - "Association «IN» → mpto_fare_schemes_for_stops"  # {B65911E5-C614-4736-ADB8-5AAA863CF03E} → {02C9099F-0E2C-447d-B817-70D0B095E51C}
+      - "Association «IN» → mpto_fare_schemes_for_travellers"  # {63CEA4FD-6F08-4cc9-B61A-AB5782D6AC3C} → {A1D76628-9697-472b-9BE1-720D8A9E8ACB}
+      - "Association «IN» → mpto_faulty_PT_stop"  # {18D2910C-4B2A-4c2b-B854-B99BA9E42580} → {937C1995-2DCA-4cf0-8E63-B4D2800FBFF9}
+      - "Association «IN» → mpto_faulty_PT_vehicle_display"  # {FB902252-26AE-43dc-B187-38DF60EB0015} → {E77C27D3-864A-40d0-A34A-924397A15CC9}
+      - "Association «IN» → mpto_historical_vehicle_information"  # {5BCCBE80-99E4-4cf8-A7E3-9AC98645BF87} → {FD2F5790-96A2-4192-9313-284307725114}
+      - "Association «IN» → mpto_message_from_driver"  # {7239233B-81F1-4a5e-BF4B-9BE54556204A} → {6FEDD84A-E515-4902-9245-CDCE15F78213}
+      - "Association «IN» → mpto_message_to_driver"  # {5B310636-1CB1-4029-8AA3-29FF635A753D} → {38A10BB2-759C-413f-B1EF-DE3F65FA417D}
+      - "Association «IN» → mpto_passenger_alarm_acknowledgement"  # {91568B7D-4EA8-4575-9D81-B071331EF3D5} → {6819130C-5F59-44b3-B8E7-59E5E7C16076}
+      - "Association «IN» → mpto_passenger_alarm_raised"  # {4A27DAFD-73B0-45da-BDDF-70F48889D29C} → {7B24DEF4-26D8-4470-AC73-C24C6ED3EEF3}
+      - "Association «IN» → mpto_passenger_numbers_at_stop"  # {8A7A83F0-8F4B-49ee-8A36-2F9830CC5368} → {EADAF5A7-C9E5-43e0-8AAE-7A4D90E656B5}
+      - "Association «IN» → mpto_possible_PT_vehicle_fault"  # {EC950098-C60C-431b-BA8A-417E0A793A42} → {AEFD9D09-10AC-4f4e-AEA3-B9199DE79B18}
+      - "Association «IN» → mpto_predicted_PT_vehicle_data"  # {CCAC8649-FE07-451c-A225-209B453A113F} → {A8FDD222-7CD4-40ba-8C74-FE1C74090605}
+      - "Association «IN» → mpto_real_time_vehicle_indicators"  # {95701624-A60E-47e2-82CE-3BE263AB9AE9} → {F7CDB38E-229E-40cc-9846-D44AF73D88FE}
+      - "Association «IN» → mpto_real_time_vehicle_information"  # {17058200-6241-4383-BD94-3479145BC801} → {48769FD4-7478-40a0-8079-B6EAEB9AC1F9}
+      - "Association «IN» → mpto_recorded_data"  # {3C1A38E1-10DF-4ff6-9F88-85D64D9CDBF6} → {451C255F-10F1-43f6-B77F-A0099EAE18F1}
+      - "Association «IN» → mpto_request_fares_for_vehicle"  # {D10FE877-EACF-4bec-9419-9E0EBCC872D9} → {C76BC072-8058-492e-8649-AA832CB6C446}
+      - "Association «IN» → mpto_request_schedule_for_vehicle"  # {97BC735E-A859-4418-ADEE-D7EAA193476E} → {CD612B96-F643-4e21-BD15-4DF8AEB6A6E4}
+      - "Association «IN» → mpto_request_service_data"  # {75B6A116-F9CC-44fe-8FC9-34571949B057} → {7023E52B-9A07-439e-8240-F44C5553C9B5}
+      - "Association «IN» → mpto_requested_fares_for_vehicle"  # {A5E6DFD9-E3A6-4ee5-8724-34FB344D19C6} → {5775C9D8-A575-4174-992A-BA46D0D4F3B7}
+      - "Association «IN» → mpto_requested_schedule_for_vehicle"  # {D75FAB21-3D8B-4bd8-B069-66313D38B6C6} → {BA11C28A-7718-45cb-954E-5F6A91B78828}
+      - "Association «IN» → mpto_route_static_data_for_stops"  # {5E10F0E8-C170-4a44-8BE0-CCA18D0DDC8C} → {C9642D55-D495-47cf-91C4-CA29DD82D4C8}
+      - "Association «IN» → mpto_route_static_data_for_travellers"  # {C7FCE476-26A4-4b2f-8542-9B35C9D2106E} → {90DF6712-C73A-4e75-AC63-F99649E428F9}
+      - "Association «IN» → mpto_service_information_for_passengers"  # {550B7B87-A4B2-49d2-A3CF-02D084FEFDE6} → {814F3F1A-06B2-4b1b-842E-9CD6C07F8981}
+      - "Association «IN» → mpto_service_information_for_stops"  # {B7DDF384-F9C4-44ce-A3D8-74D292F553BB} → {9BC363E1-4211-469b-9D59-57D4E4105D76}
+      - "Association «IN» → mpto_service_information_for_travellers"  # {61F9B722-C944-41a2-B666-DA13C60B4868} → {ACF79C5C-4D8D-4642-B500-6A70CDB44FEE}
+      - "Association «IN» → mpto_typical_travel_times"  # {6FE29239-3086-4929-B7EA-21714278A1AF} → {9F0B4A54-EF25-462a-923B-713984B36A72}
+      - "Association «IN» → mpto_vehicle_data"  # {C5828BF3-CF14-4226-8543-CA0DBD7856DA} → {35F51229-08C9-4cbb-938D-8B2FE69D7B02}
+      - "Association «IN» → mpto_vehicle_data_and_alarms_for_driver"  # {1403D931-F9F5-459c-82B5-6B519BE5E921} → {709CA210-E7EB-4dc3-916C-D862C7251190}
+      - "Association «IN» → mpto_vehicle_internal_images"  # {518A35FC-24F9-4a1b-84B9-EBD19999E6A7} → {E0DABFB7-687D-4faf-A3B9-0FC1425E4571}
+      - "Association «IN» → psef.mpto_PT_stop_alarm_acknowledgement"  # {AA57E1EF-5C0E-40d9-8386-AFAB5FD157A4} → {F3AAAF57-08E2-436e-8FB2-C1BD096B805D}
+      - "Association «IN» → td.ptd-data_and_alarm_outputs"  # {1BF817EB-8CED-4ec1-962B-D8B1012D83FF} → {D9FF3F32-83C3-4a4b-8D94-037659BF7D3D}
+      - "Association «IN» → td.ptd-outputs_to_PT_vehicle_driver"  # {44F4177E-0598-4195-8C79-1EAA2CFA1247} → {61214137-C232-4256-B43D-B2A9C81D2350}
+      - "Association «IN» → to.eo-alarms"  # {758DD8D6-F824-421c-A303-A91BC729C2D5} → {3517B182-48F4-48eb-9288-B839D07AB5B0}
+      - "Association «IN» → to.pto-alarms_raised"  # {E6BF0786-270B-46d3-A960-8B13978358B2} → {43A839EA-A70A-46dc-BFC6-F36E71234F33}
+      - "Association «IN» → to.pto-monitor_PT_fleet_outputs"  # {A008CE1F-70BF-4ec9-B719-A5ABEC692FE0} → {08EE0924-29F3-45dd-BF62-F57038867B6D}
+      - "Association «IN» → tors.pts-arrival_prediction_data"  # {9B5D7C23-DF23-4fc3-B50E-0D029BA83105} → {7A81647E-BE03-4b13-BCE5-3AF3D457E4C2}
+      - "Association «IN» → tt-monitor_PT_fleet_outputs"  # {2B403D91-59B8-407d-9613-93B1D072DA69} → {66F4560F-A14C-4b2b-AFB5-7BCB96B9CF38}
+      - "Association «IN» → tt.ptp-passenger_emergency_response"  # {26DFC208-DBA3-440e-BAB7-840E415C0677} → {31A1E76E-CF19-4362-99DE-7B054E8720FC}
+      - "Association «IN» → tt.ptt-requested_PT_service_information"  # {E60A8D3E-A9F1-4b55-943D-EC57328BD9EE} → {24E01E10-2D6C-49d5-8F9B-95AF543A9AC4}
+      - "Association «IN» → tt.st-alarm_acknowledgement"  # {6CD78332-6A74-442a-A826-B99BC2BACA2F} → {E873AF28-6611-4ff4-B475-F902AE294C55}
+      - "Association «IN» → tt.st-service_information_from_stop"  # {2DD38A18-48A4-4c52-9436-1EF1B8F4EE6F} → {D197CFA7-3F6E-46df-86B0-E8CF9FEF57F3}
+  - name: "F4.2 Plan PT Service"
+    guid: "{11256DFE-FADE-493f-803F-220E79388CDC}"
+    type: "Activity"
+    stereotype: "FRAME_High_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This High-level Function shall perform the strategic planning of all the Public Transport services on the basis of all available information about the availability of resources and a record of historical data.  The scheduling of all the Public Transport services shall mainly be performed off-line according to parameters such as analysis of demand, revenue, fleet and personnel resources, etc. It shall take into account the configuration of the road network so that the routes that are used by the services will be accessible to Public Transport vehicles.  Specific functionality dealing with the planning of car-pooling services, according to the demand and availability of travellers and drivers, shall also be provided.  Availability of on-demand services shall also be defined by this Function as well as all definition and management of tariff schemes.
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {08EC55AB-93A3-4a0a-9371-51DCAFCCAE0E} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Association «IN» → fo.pto-request_route_static_data"  # {AEB46844-A494-47b4-9E2B-E49AF49332F7} → {9D73ABB4-4968-42e1-9DD3-8645B47C2CFB}
+      - "Association «IN» → fo.pto-route_static_data_update"  # {40CC4931-2C60-4f4b-BA9E-1C648636D6AA} → {691E091D-F657-4b61-9B0C-E5F00F79853D}
+      - "Association «IN» → mpto.mt_services_and_fares"  # {57953417-8572-4e3a-8643-602F01B90DBF} → {27157F5A-1A58-47b5-8955-F234B5FEE61A}
+      - "Association «IN» → mpto.pepf_fare_schemes"  # {48B681D9-1C0E-4039-B4AF-6353DDD88B4B} → {E9487BD5-6109-45aa-85F7-F4DCE1BA97AC}
+      - "Association «IN» → mpto.pscs_PT_services_and_schedules"  # {C5114D18-92C3-4f62-ABE7-4DEC51FBBF58} → {BC6E500A-4D08-4778-BFCD-FDD9A7E4F67E}
+      - "Association «IN» → mpto.ptja_available_pt_services"  # {599BC075-CD70-41a3-8102-C039F6823E3D} → {D93567BB-1582-4159-97D3-3F6F0C6B7D3A}
+      - "Association «IN» → mpto.ptja_current_fares"  # {A3EF2CE2-4283-437a-AE0A-65463B64F081} → {199CCF56-2098-4419-908B-ECD79273030B}
+      - "Association «IN» → mpto.ptja_pt_services_for_trip_monitoring"  # {2F88BCD3-27E9-4787-908D-A0544681D0EC} → {0E21F206-2F35-4825-8A0A-EE6D25478669}
+      - "Association «IN» → mpto_PT_data_for_demand_services"  # {F82265DC-B091-4b25-BB73-348C9D7B381B} → {EDE4961E-F220-4247-B2A9-5F35649723CA}
+      - "Association «IN» → mpto_PT_data_for_vehicle_sharing"  # {8BDABF31-A610-418f-863D-C4303DB96FAD} → {7F495FC8-C82C-40b4-B341-637B904E9CED}
+      - "Association «IN» → mpto_PT_services_in_operation"  # {BDFE1237-0BB8-4d44-870B-90C14FD49BAC} → {C9BB6E62-0A74-4382-A688-7053139D1A50}
+      - "Association «IN» → mpto_current_fare_scheme"  # {4BEC1851-C59B-4dcb-BBD5-B30C8931E85A} → {36EA93E5-3878-4ca3-BD13-CA39789E11EA}
+      - "Association «IN» → mpto_fare_scheme_planning_strategies"  # {2048A179-C0BE-4d77-8090-761D48D1809F} → {F5134D2F-7FF4-41f6-8408-D1555258E45B}
+      - "Association «IN» → mpto_load_fare_scheme"  # {9F80E26E-ECB7-4d92-BB3F-8663316B31AC} → {05FB49F6-ABEF-4e08-A404-75C3A1460FF5}
+      - "Association «IN» → mpto_load_static_data"  # {79E395B5-8C44-4c41-8BD3-79194589567F} → {74172621-2AC5-422c-BA0E-3D1CFBE72D80}
+      - "Association «IN» → mpto_read_fare_scheme"  # {5D72CCD7-1203-46bb-9995-25F1F3E49F0A} → {921FF5D3-138C-44ac-8D12-459200B9606D}
+      - "Association «IN» → mpto_request_current_static_data"  # {EBF08FEC-0430-4e2b-A129-4D4F39A366DF} → {51542AFE-3778-48db-8CD4-75A95A5B91E7}
+      - "Association «IN» → mpto_revised_fare_schemes_for_operators"  # {E08F7889-5ACB-463c-A16A-26A13692AA3B} → {4DAFD161-4047-458d-9CF0-771A30869BC2}
+      - "Association «IN» → mpto_revised_services_and_schedules"  # {6483D4A9-F672-4710-A081-38C6B3157C13} → {F40768E9-F430-4301-BD69-3BBE5CACD3F4}
+      - "Association «IN» → mpto_route_static_data_for_reports"  # {E37F6F56-35F7-4dfe-822F-DB39DF7A0AC2} → {593906F7-A674-4c42-9E1D-C6D1218A8315}
+      - "Association «IN» → mpto_route_static_data_updates"  # {1EE3C77A-49F4-4711-A7AB-01E72983D95B} → {541F76A4-53CD-4e46-B275-44641902E997}
+      - "Association «IN» → mpto_service_information"  # {05B0CC0A-C3C4-4d0f-8EB1-A04C7D914B18} → {A7D786C6-4BD0-490b-89C3-27131A456B61}
+      - "Association «IN» → mpto_service_planning_strategies"  # {B752DE5C-A0C8-4feb-A7ED-5F900305CC0A} → {AB638EC7-9FA9-4697-8635-EB0820DF8964}
+      - "Association «IN» → mpto_updated_fare_scheme"  # {857D40F4-480D-49b9-BB18-3E5979BBE541} → {412DA9DF-47AC-4617-B37E-19D060959F1F}
+      - "Association «IN» → tmms.mms-plannings"  # {C3E7631B-2699-4716-A104-8F9670E875B4} → {34EA4A8D-3280-47bc-ADB4-93C89D52304C}
+      - "Association «IN» → to.pto-pt_planning_outputs"  # {7245DA24-71D7-42cd-941B-EDB67436E0EE} → {F670C4FF-52E3-45ea-A973-FAFB35CEF209}
+      - "Association «IN» → to.pto-requested_route_static_data"  # {EBF5CB8F-E95F-4e9c-A992-D2E5442BBEBA} → {0B1FEBCD-C299-473a-A749-6A28C621066C}
+      - "Association «IN» → to.pto-revised_fare_schemes"  # {8BDF3E0B-8C53-453e-9E25-86C8E82F0BB6} → {99FCB0EC-DD76-4801-BF05-7D0F30C980E7}
+      - "Association «IN» → to.pto-revised_services"  # {A7D5A5A1-9A20-4243-8467-345565EC42D5} → {98EECAE5-08BE-4727-A589-563C5015E895}
+      - "Association «IN» → tors.ptms-pt_planning"  # {2C153650-FFD1-4851-9207-F48B1CDAD51A} → {8C29C95B-7A31-4471-BC7F-7444C5A7ECB0}
+  - name: "F4.3 Provide PT Management"
+    guid: "{29AD1A4E-431A-4a7c-BE08-C8D119466A60}"
+    type: "Activity"
+    stereotype: "FRAME_High_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This High-level Function shall provide operation management functionality by managing drivers, crew and vehicles. It shall cover the provision of on-demand transport services to individual travellers and car sharing services. The Function shall continuously monitor the status of the infrastructure and vehicles and then deal with routine and non-routine maintenance.
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {6FD4EAE9-5A8B-4f7b-96B2-54F9E6ED2E44} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Association «IN» → fo.pto-request_driver_statistics"  # {E575A03D-66D9-46d6-8620-422829A27CE0} → {8F351B90-1E7D-425f-BEE7-85A2B3B6D13A}
+      - "Association «IN» → fo.pto-update_driver_details"  # {4F2A85B4-2B76-49e9-9038-F2D4AFE2A41E} → {3CA5DE85-116E-482e-9BA9-F6684200F230}
+      - "Association «IN» → mpto_current_driver_availability"  # {B80D7A3C-8D02-4002-A01F-0DA975F9ABFF} → {F1BF7157-5731-4655-9D8C-FD9035197E03}
+      - "Association «IN» → mpto_current_driver_statistics"  # {E4569201-791A-4e1c-8C03-002DF6F38141} → {FD368FDF-5A0F-48be-B5A1-16DAB243FEF6}
+      - "Association «IN» → mpto_demand_vehicle_repaired"  # {E708FED4-DCAC-4e87-B983-3A329F9F428A} → {45A8441E-D8E6-47f4-9218-78855E63A9AA}
+      - "Association «IN» → mpto_driver_scheduling_failed"  # {43B905EE-A52A-46e3-9AD3-1DAE83386DF4} → {4DDA4A1E-D5B1-4dd8-AFE1-41FD23DEF726}
+      - "Association «IN» → mpto_driver_statistics_request"  # {2FC3244E-11A8-4b0d-BF78-EA03C44C4E15} → {025CC778-3A3A-4168-8491-7430D5E8396A}
+      - "Association «IN» → mpto_maintenance_plans"  # {D56C9CC4-05BB-450a-B5B8-201EBE78DD68} → {10928A7A-C857-46b9-A0B4-C38D3C4CD3FA}
+      - "Association «IN» → mpto_new_driver_schedule"  # {4EFC33CB-0B08-46ce-8FF8-FBC9586AEC8A} → {12866D2B-89D5-41f4-A908-7FF224961CA7}
+      - "Association «IN» → mpto_updated_driver_details"  # {90A82146-577A-4ab3-921F-7B039C9E5966} → {35946697-76A7-484a-813C-FF8BF5FC6A00}
+      - "Association «IN» → mpto_updated_driver_status"  # {72B282C9-B19E-45f2-A5F9-0802370A9FC2} → {BE6EE5D5-B5E6-4a55-8A6D-F184FCE93EF8}
+      - "Association «IN» → td.ptd-scheduling"  # {C4C0787A-D82B-44df-A336-80BD3D59477C} → {00A644B7-BE2F-4044-854D-D3A39B1C18F5}
+      - "Association «IN» → tmo.ptmo-plans"  # {5690E446-B1BF-460e-8270-7AA688394E60} → {0428BCC4-253B-45a1-B0D6-A840D533BFD3}
+      - "Association «IN» → to.pto-PT_driver_management_outputs"  # {8EB47A69-1BAD-41ad-A2F4-BBDDDA22F6DD} → {BFA25C98-CACA-4d82-8810-2CDB460A99D3}
+      - "Association «IN» → to.pto-driver_scheduking_failed"  # {CB4228B6-E5DF-47dd-84E3-8662A1EB4C53} → {91BE20AC-E8F5-496d-AD42-507C09DC9AA2}
+      - "Association «IN» → to.pto-driver_statistics"  # {D87FD399-0668-4835-BCDA-39D7F57E2263} → {702CBF07-6E3C-4fda-AC1B-59C814A220AD}
+      - "Association «IN» → tors.ptms-plans"  # {FB9B990B-795B-42ad-B9FB-D71E472D4F3E} → {AA853A32-76B4-422e-A34E-6E71D2023ED7}
+  - name: "F4.4 Control PT Fleet"
+    guid: "{A2FF30DF-0587-4b92-A15D-1EC9040BD276}"
+    type: "Activity"
+    stereotype: "FRAME_High_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This High-level Function shall directly control in real-time the progressing and operation of Public Transport vehicles to guarantee the service reliability and schedule adherence.  Functionality for the management of reserve vehicles and the possibility of requiring priority for vehicles shall be features included.
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {2E509D14-CDB9-429e-8298-5F4D9F3E32A2} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Association «IN» → fmms.mms-PT_service_change_request"  # {AFAA7838-52C6-40bb-A3CB-A5B1542F8FDD} → {C0F2B0B8-7A2C-49a8-9A75-A34CAAE46E55}
+      - "Association «IN» → fmms.mms-current_service_status"  # {3836D774-580A-4f00-AB13-E668FF14A109} → {90D2D1C2-7E36-4938-A516-9FA22FFAFF3D}
+      - "Association «IN» → fmms.mms-service_change_request_response"  # {C25E2DAE-B5D8-4b8e-B235-035D8A3FFC99} → {A9C43B29-0AA8-4994-AE09-1992E97D8E73}
+      - "Association «IN» → fo.pto-PT_vehicle_static_data"  # {EBC7739B-C237-49e5-A86A-6366E71452BE} → {EACED9EB-BFB3-40ac-AD48-A7CF1341C410}
+      - "Association «IN» → fo.pto-request_actions_report"  # {CCB76C60-0D26-457e-B2C2-B222BB5C3FC8} → {E768F19E-F170-44f6-B559-7E8B094F31FA}
+      - "Association «IN» → fo.pto-service_change_response"  # {62887487-AE14-4208-AB33-0FD4E15C22CB} → {5B5ECA44-2320-4297-920F-C6E4B0A6A877}
+      - "Association «IN» → mpto.mt_pt_data"  # {0F221972-6564-4816-ADD7-8B94A2C9C539} → {ABDBAD52-34E5-44da-B695-EA4211F34A79}
+      - "Association «IN» → mpto_PT_vehicle_details"  # {35D0D172-05E0-4658-ABC7-5FF0069D88A4} → {84BA71DF-AF96-4ddd-AE49-29B457B9F25A}
+      - "Association «IN» → mpto_actions_report_request"  # {BF4AE5B6-025D-4a4f-8209-E0CBC44D86CD} → {7ABC3847-0011-4d0f-B8C9-F2C5534EE51E}
+      - "Association «IN» → mpto_confirm_PT_service_change"  # {B91C0692-6081-430a-B8A1-7CF17B6870A7} → {A6529A43-9091-4839-AB72-EFB88E4FC96F}
+      - "Association «IN» → mpto_confirmed_PT_service_change"  # {E982B96D-56B0-47da-9431-323E549E148A} → {E382425B-9FD4-4c72-89C5-84507B2034FE}
+      - "Association «IN» → mpto_control_actions"  # {BFDBAA6C-3953-459a-863B-7B1CFE0BFA9A} → {91AB426E-EA2C-4a9b-91D6-3B0909A0530B}
+      - "Association «IN» → mpto_other_mode_service_change_request"  # {E8DF37B2-08AE-4e33-9C49-769E1D5C284B} → {52B19A9B-AFA6-447e-8759-8FE0CEA0A9B6}
+      - "Association «IN» → mpto_other_mode_service_change_response"  # {4AA8BE4E-B3F4-4040-A5B9-B93192815D66} → {73DA5BBD-CB2D-478f-86D9-1C5C7499E061}
+      - "Association «IN» → mpto_other_mode_services"  # {D6E4D59F-67B3-406e-AABF-49D4514E2013} → {ACD44FB2-1ECC-4e33-BA95-7929FF089052}
+      - "Association «IN» → mpto_request_other_mode_service_details"  # {DAD88C24-8906-4851-89D4-C1166D5430C7} → {09C0B577-5E48-4d71-9953-D9B25338C1C0}
+      - "Association «IN» → mpto_requested_action_report"  # {C5D0F272-2960-4152-A656-DDE64E99374E} → {B0618BCC-A13F-4ec9-B32B-622D76B68425}
+      - "Association «IN» → mpto_revised_driver_servce_instructions"  # {F3196EC6-3910-4192-A562-BCF62E08D8E3} → {CB90AD26-3AF0-4702-9F29-7B766CA7E87B}
+      - "Association «IN» → mpto_service_change_data_for_output"  # {3B5AB69E-075C-4bbd-96EA-16A6D1C13573} → {377AA07E-4408-4d5b-8589-EFD4E62E8756}
+      - "Association «IN» → mpto_service_change_data_for_stops"  # {420D0E91-4678-4e04-B022-86ED7C1CEAB7} → {49256CA4-DF1B-4bc1-9EEA-0BF5640A18D7}
+      - "Association «IN» → mpto_service_change_data_for_vehicles"  # {FC31D059-6A91-4042-B082-51CA1A0C25C2} → {D36961BE-1D70-4dcc-83BC-217A608CB064}
+      - "Association «IN» → mpto_service_change_request_from_other_mode"  # {F02BA387-B81C-48b3-B6F9-EFE376839EB7} → {6EEDAA78-6630-48bf-BCDC-3F1A0CA89DAD}
+      - "Association «IN» → mpto_service_change_response_to_other_mode"  # {C6C62581-7684-446e-80E0-EC56AF817C01} → {32889ADE-C200-4750-8830-20FE7AC80D14}
+      - "Association «IN» → mpto_service_number_for_priority"  # {F79740CD-0CE9-48e6-B4EE-93ECEB8BB326} → {5895A6C5-6F88-411a-B815-FE8146082E12}
+      - "Association «IN» → mpto_updated_service_delivery_criteria"  # {376BDEDB-276B-49d1-804A-47158213747C} → {616B0B07-ACEC-4472-90A4-DBD62FC21D66}
+      - "Association «IN» → td.ptd-commands"  # {0566FAB2-3B3E-43a6-A736-F5FE18663225} → {A1EF6C25-9B0B-4e4b-A478-2BA978AC65BF}
+      - "Association «IN» → tmms-mpto_control_outputs"  # {150303A0-1166-4e03-A90F-297847F188DC} → {440D6AD1-ECE8-44ae-ACE7-54432E23850D}
+      - "Association «IN» → tmms.mms-request_change_to_services"  # {EFC0F197-313B-4772-81E6-D46B1BFF9405} → {4D2C5FED-62CF-45f6-82BF-55E6154C940A}
+      - "Association «IN» → tmms.mms-request_current_service_status"  # {C1C8CDAB-74DB-4e84-BC8A-AB0AC0FD6338} → {90419F48-37FC-42bc-BA32-4F86394D79D1}
+      - "Association «IN» → tmms.mms-requested_PT_service_change_confirmed"  # {32AB5F29-5581-4d9d-AC84-C0D7558A67F7} → {0C10883A-3623-40c8-B832-061964B20FC6}
+      - "Association «IN» → to.pto-actions_report"  # {430A38D8-9F29-42f7-844C-41B8AB6275FF} → {BB3FB59E-A940-4e73-A064-85E21F7A90BD}
+      - "Association «IN» → to.pto-mpto_control_outputs"  # {D4FA4E49-6C1C-4653-BAB9-1BA3CAD4A7A4} → {588E6CAB-504A-4ba2-BD17-2D947D878DB0}
+      - "Association «IN» → to.pto-request_for_service_change"  # {2B05AA6D-347D-4801-9B9E-7FAAB4E09731} → {DDCF4F07-FFC4-4287-8839-577F2BF9BD17}
+      - "Association «IN» → tors.ptms-control_parameters"  # {09366F2C-AA3C-4990-A5B8-6F9C5E778F69} → {AD2762A9-5CB1-4c20-BEFB-9733EEE8E365}
+      - "Association «IN» → tv.ptv-commands"  # {9B62E672-6F16-4bdd-81F4-446367B67D1F} → {80C49B5B-EB84-4217-9695-97D9F1DC0B53}
+  - name: "F4.5 Provide PT Fare Facilities"
+    guid: "{0B6EE3D2-3124-4ff6-A5B3-3C8F646B059F}"
+    type: "Activity"
+    stereotype: "FRAME_High_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This High-level Function shall provide facilities that enable fares to be collected for the use of PT Services.  Fares are only collected using a "fare card" for which payment is collected via the Financial Clearinghouse.  The use of cash (coins/notes) for fare payment is not supported by the functionality.  PT Passengers can top up their "fare cards" as and when they wish and with as much credit as they wish.  Every time the "fare card" is used, the amount of credit that it contains is reduced by the cost for the use of the PT Service.  The PT Driver is provided with in indication of whether or not the "fare card" transaction was successful or not.
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {4449F2CA-59E3-4e62-9A8E-04CCB2B50155} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Association «IN» → ft.ptp-current_fare_credit_request"  # {85DAB8D2-2207-4a42-A6AC-BF9B99D6C670} → {D90FCD37-16B4-4c02-92EC-B323746334E8}
+      - "Association «IN» → ft.ptp-pay_for_journey"  # {A6B2BF96-F975-4103-AEDE-14D59289961F} → {76C59B8C-AC4B-43e4-9E66-CAF325A8998C}
+      - "Association «IN» → ft.ptp-request_fare_credit_update"  # {B4EA7BEB-7FD3-4e7e-855F-F98DD40636EE} → {B221B6E8-292A-4de7-91B5-B36C685EBA66}
+      - "Association «IN» → ft.ptp-request_journey_fare_cost"  # {C64A6F8C-A903-4797-B2B1-20E3CEE86A1F} → {410F02E0-2972-490f-8526-E935957F903C}
+      - "Association «IN» → mpto_PT_driver_request_for_fare_scheme"  # {130D2F5D-817A-49b6-9ED4-D50598D7288B} → {765483F0-1D16-4844-A9BD-4FDC4EBAEF5F}
+      - "Association «IN» → mpto_current_fare_credit"  # {9C853114-B53A-4b66-8B9A-3A1670564026} → {D0EFC395-E635-42f9-B2CC-0A90DC2BAB62}
+      - "Association «IN» → mpto_deduct_fare_credit_for_journey"  # {8953CE44-B893-47db-9213-74F0EEAB266E} → {8B4AFC26-7EDE-4217-998C-7DDCF172D753}
+      - "Association «IN» → mpto_fare_credit_balance"  # {A1F4BE34-B015-46c5-BF0B-B473DA61C518} → {F5DA4F9F-19A2-485f-83F3-09EFA936DB83}
+      - "Association «IN» → mpto_fare_scheme_for_PT_driver"  # {D8914F78-7EC1-410c-97C5-28D877D3DB97} → {940D2FB1-4095-4d19-B37B-1E73F78393DA}
+      - "Association «IN» → mpto_fare_scheme_for_service"  # {BD48A4C5-8720-4fd3-B81A-72D08CFFC525} → {BFD0DF8C-793F-4727-AA81-F060ED8D092F}
+      - "Association «IN» → mpto_result_of_fare_transaction"  # {32E8ABEA-557E-40d1-A57F-D48B4CD47150} → {CCE55A3A-0798-470b-B7E0-31FBC7804AE4}
+      - "Association «IN» → mpto_update_fare_credit"  # {49BF597C-FB08-4ae9-BAFD-77D73761B5C4} → {A84B5B7E-E184-486b-BE75-32F20528C6F7}
+      - "Association «IN» → td.ptd-display_fares"  # {239B7932-D71E-4562-9015-3F5E11A17E4C} → {CFAF115A-3613-44b4-AB59-A77009EE91A5}
+      - "Association «IN» → td.ptd-fare_transaction_result"  # {2EE057FD-322B-4ffd-BF22-04D3FB06D8AC} → {61C589A8-809D-4f2b-A1DD-2F8B508197FD}
+      - "Association «IN» → tfc-request_fare_card_update"  # {C2CEEDF0-32BA-4eae-97BF-628CC50A52AF} → {4EC3C9D1-6169-412f-B510-5CF84B87AFCC}
+      - "Association «IN» → tt.ptp-confirm_fare_credit_update"  # {2C3937F7-5BDA-46be-A263-663D16B7CD46} → {C5E10566-D1FD-4854-A808-774FA1380BCE}
+      - "Association «IN» → tt.ptp-display_current_fare_credit"  # {0A31780C-8999-431d-889E-85846C32F786} → {FE5C663D-039A-433b-A44C-A28E0E2557EB}
+      - "Association «IN» → tt.ptp-fare_credit_after_journey"  # {B1BF908B-12F1-4ea8-9558-1F96932966FB} → {338C91F3-F0E0-47a6-8AF4-EDF8F8417863}
+      - "Association «IN» → tt.ptp-journey_fare_cost"  # {FD105865-A3DD-4dbe-82BD-3A6CB24D1403} → {51E077C7-DD12-4a7b-B4C9-8980E3ACA314}
+      - "Association «IN» → tt.ptp-no_fare_credit_for_journey"  # {9AF0F80D-C226-4580-8E5C-53B4BDD6494C} → {9587416E-D671-411d-BC11-ABE0C5EAC732}
+      - "Association «IN» → tt.ptp-ok_to_travel"  # {DF02AD1B-A77F-43c2-AF98-DF5985F0EA5D} → {838E16BE-5CD8-43e8-B76E-47148E4840B3}
+      - "Association «IN» → tt.ptp-provide_PT_fare_outputs"  # {5229C75B-6263-477e-9F2C-ED3C021A5443} → {EC2CD472-C480-4fea-B082-EE9961CAF5B7}
+  - name: "F4.5.1 Provide PT Drivers access to Fares"
+    guid: "{05AF58D0-FF47-427e-A589-47A0E41D7775}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) A HMI to enable the PT Vehicle Driver to provide information about the date, time and route that the PT Vehicle is operating so that any fare information that is obtained is relevant.
+      (2) The HMI shall also enable through which the PT Vehicle Driver can be provided with a display of the fares that are applicable to the current route being operated by the PT Vehicle.
+      (3) The ability to obtain the most up to date fare information from the store of Fare Schemes Data through the Manage Fare Schemes Data Store function whenever the Driver makes a request.
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {5DD3042F-8AA7-401f-AE71-704CA5396CCA} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Aggregation «componentof» → F4.5 Provide PT Fare Facilities"  # {7D27946A-3F54-45b7-94E2-99156149E4D9} → {0B6EE3D2-3124-4ff6-A5B3-3C8F646B059F}
+      - "Association «IN» → mpto_PT_driver_request_for_fare_scheme"  # {722CFA1E-BE58-4dba-9574-40BB2BCEC6C6} → {765483F0-1D16-4844-A9BD-4FDC4EBAEF5F}
+      - "Association «IN» → td.ptd-display_fares"  # {72C175C8-50D5-4122-AD63-AC199FA49977} → {CFAF115A-3613-44b4-AB59-A77009EE91A5}
+      - "Association «IN» → td.ptd-fare_transaction_result"  # {62A12E80-50BD-4c80-BF2D-9B3D20E9DAA4} → {61C589A8-809D-4f2b-A1DD-2F8B508197FD}
+  - name: "F4.5.2 Validate Fare Credit for Journey"
+    guid: "{BAC7CE1B-B9B3-4fd3-890E-8DB3F4DE9F12}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to manage the current level of fare credit in the "fare card" (store of Fare Card Data) to be managed so that there is always sufficient for the PT portion of the journey that the PT Passenger is about to make.
+      (2) The ability to inform the PT Passenger the amount of fare credit available and whether or not it is sufficient for the PT portion of the journey.
+      (3) If required the ability to include some form of access control mechanism for PT Passengers entering and/or leaving the PT Vehicle.
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {CBA0A956-1A6B-44b1-82A5-537C106E7A57} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Aggregation «componentof» → F4.5 Provide PT Fare Facilities"  # {229E7B42-8860-444c-AB6D-DBB14D015ED2} → {0B6EE3D2-3124-4ff6-A5B3-3C8F646B059F}
+      - "Association «IN» → mpto_deduct_fare_credit_for_journey"  # {6C657EF1-E928-432d-B3E9-B707B61EE1F6} → {8B4AFC26-7EDE-4217-998C-7DDCF172D753}
+      - "Association «IN» → mpto_result_of_fare_transaction"  # {4B7E61BA-491D-4c85-BE74-5B6056429071} → {CCE55A3A-0798-470b-B7E0-31FBC7804AE4}
+      - "Association «IN» → tt.ptp-fare_credit_after_journey"  # {5EDC8E58-7E9D-4a1b-A888-0F05D12EB737} → {338C91F3-F0E0-47a6-8AF4-EDF8F8417863}
+      - "Association «IN» → tt.ptp-journey_fare_cost"  # {F3F1AD06-857A-4e19-B12F-AE37C70121B1} → {51E077C7-DD12-4a7b-B4C9-8980E3ACA314}
+      - "Association «IN» → tt.ptp-no_fare_credit_for_journey"  # {A9B1BF79-6075-438a-B62F-63DE15948B9A} → {9587416E-D671-411d-BC11-ABE0C5EAC732}
+      - "Association «IN» → tt.ptp-ok_to_travel"  # {DBBF0C6B-4D20-4153-898F-E1419754E4EF} → {838E16BE-5CD8-43e8-B76E-47148E4840B3}
+  - name: "F4.5.3 Provide PT Passenger access to Fare Credit"
+    guid: "{1A1FE691-4DFD-406d-8866-94205433663A}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) A HMI through which PT Passengers shall be able to see the amount of credit that they have on their "fare card" (store of Fare Card Data).
+      (2) A (possibly) separate interface through which the PT Passenger can if necessary increase the amount of credit that they have on their "fare card".
+      (3) An interface through which the Function can exchange of data with the Financial Clearinghouse to validate the purchase of additional credit for the "fare card".
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {9EB3FB9F-5C81-4d41-A354-7127C9151C26} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Aggregation «componentof» → F4.5 Provide PT Fare Facilities"  # {77AA6C4E-9D7E-4cab-8E06-578EC539C976} → {0B6EE3D2-3124-4ff6-A5B3-3C8F646B059F}
+      - "Association «IN» → mpto_update_fare_credit"  # {85FF9BD9-EBD3-445b-AC1C-ED68BD6B92FC} → {A84B5B7E-E184-486b-BE75-32F20528C6F7}
+      - "Association «IN» → tfc-request_fare_card_update"  # {E3F48A34-309B-4287-B04F-E895E73EE103} → {4EC3C9D1-6169-412f-B510-5CF84B87AFCC}
+      - "Association «IN» → tt.ptp-confirm_fare_credit_update"  # {EDAE014A-6D4C-4579-BF63-CDD39B8F4585} → {C5E10566-D1FD-4854-A808-774FA1380BCE}
+      - "Association «IN» → tt.ptp-display_current_fare_credit"  # {AA9B771E-0BB0-4a88-9D8B-9AA94F590253} → {FE5C663D-039A-433b-A44C-A28E0E2557EB}
+  - name: "F4.6 Provide Facilities for Vehicle Sharing"
+    guid: "{A8C5BEF7-4F95-43ce-9B22-C4329AFFB177}"
+    type: "Activity"
+    stereotype: "FRAME_High_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This High-level Function provides facilities that support the sharing of Vehicles by Travellers making a journey.  These Travellers are identified by the Car Pooler Terminator and are able to set up travel plans for a journey in which they combine with other Car Poolers to share the use of their Vehicles.  A travel plan may link up to the current PT services, or the services provided by other transport modes and may involve the use of car parks or service areas as places to start/finish particular segments of the journey.  Once all the car poolers in a travel plan have accepted it, the implementation is up to them.  Thus a travel plan may be for a single journey or for multiple repeats of the same journey, depending on the needs of the Car Poolers who are involved.  For security reasons, a car pooler can only find out about the travel plan(s) in which they are personally involved and can only contact other car poolers in that travel plan through the communications mechanism that each provides.  Payment for the Vehicle sharing is not included in the functionality.
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {F46A47F6-6705-4656-8E0D-EB3735BE876E} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Association «IN» → fo.pto-request_travel_plan_criteria"  # {5686F5DF-2B9C-4c85-93D9-639EBD60EA8A} → {00BD2022-C87F-42cd-98AD-2D1C7A13F5EA}
+      - "Association «IN» → fo.pto-updated_travel_plan_criteria"  # {0BCD376A-CE8D-4c10-865D-5A3C7E7DFDD4} → {2B98B407-34FD-4699-A6D9-B776430B4C39}
+      - "Association «IN» → ft.vs-accept_travel_plan"  # {CA711A2C-F417-4e40-8B17-E36A4E880874} → {8CC1834A-4DD8-4a3b-8183-8C72301BDD83}
+      - "Association «IN» → ft.vs-deregistration"  # {420CEA92-E16C-41f1-A1CA-6366978CDE5C} → {B2DA8C3B-665B-4249-B021-0442B6C370BB}
+      - "Association «IN» → ft.vs-personal_details"  # {681BBD17-FCDC-4ad4-8411-BFF6C95F5350} → {FA522480-C353-491c-B587-A09795478500}
+      - "Association «IN» → ft.vs-request_current_travel_plan"  # {5CED64C2-AE12-4178-AFDA-2E24CDB27A39} → {F46A3352-6B69-426b-A257-309A70232C7A}
+      - "Association «IN» → ft.vs-travel_needs"  # {FB4591A0-5F97-4573-8CE5-0934A80FBFCD} → {2579009A-CEF7-43d8-AC76-E7FAFAEA982A}
+      - "Association «IN» → mpto.mt-vehicle_sharing_requests"  # {3FB1AE5D-8259-4e3a-8F30-1D39D3658B15} → {39A5B0FF-C605-46c2-9C06-9C0F0D690ECC}
+      - "Association «IN» → mpto.mt_request_car_park_details"  # {31E6F3A5-EE11-4b7d-8BD5-BB35160DA466} → {D7C17B89-0DC9-44fa-B271-6D17A42141DC}
+      - "Association «IN» → mpto.mt_request_service_area_details"  # {3840B874-7AFE-4e9d-BBA3-79EA077D0099} → {D65E0953-4FD4-4248-894F-41520E828C9A}
+      - "Association «IN» → mpto_PT_fares_for_vehicle_sharing"  # {2EF7B2A1-719D-4353-99C0-64664DE9F549} → {B60F19DC-8396-4889-B700-BFC22A02398D}
+      - "Association «IN» → mpto_PT_schedules_for_vehicle_sharing"  # {9732E51C-0447-48f7-98A3-1A4F0914A12C} → {124E3C29-3926-492b-A1F1-27E80C16850F}
+      - "Association «IN» → mpto_accepted_travel_plan"  # {B05E10D6-751B-4478-9445-DF3BFA0E4066} → {5D916304-A617-4830-B86C-484D1A22E81C}
+      - "Association «IN» → mpto_load_vehicle_sharing_data"  # {68EB29F7-0713-4772-9F3F-E55A56AE70BB} → {70426DC0-7C80-48eb-9097-6C422978B135}
+      - "Association «IN» → mpto_proposed_travel_plan"  # {FE12AF92-763A-40c8-9726-5718FD2D5451} → {F0288466-D13B-4c90-8F71-5915DCA033C9}
+      - "Association «IN» → mpto_read_vehicle_sharing_data"  # {3E313739-19DC-4f19-96B3-367970720E26} → {9097F51B-CE40-4883-A7F7-6FE6EC91822D}
+      - "Association «IN» → mpto_request_current_travel_plan"  # {9344550F-9CE9-4dfc-B528-E098EECF1C30} → {4BD8A4F1-8616-40c9-AEE7-8B1C048BB07F}
+      - "Association «IN» → mpto_request_existing_travel_plans"  # {BA5D719E-02E7-4809-9DCE-C47D085A9707} → {0F30E57C-EE33-4986-9642-060E7C37E548}
+      - "Association «IN» → mpto_requested_current_travel_plan"  # {F44066A9-64CF-48eb-B961-078A3A5C5838} → {015CBB54-82F7-4644-906E-00A8D5BE39AF}
+      - "Association «IN» → mpto_requested_travel_plan_criteria"  # {0FC9554A-F0F9-44cf-ADB7-086D712EED61} → {B1906989-EC3A-4e83-8E28-CA94AC672A00}
+      - "Association «IN» → mpto_requested_travel_plans"  # {64459937-EFB7-4e14-88D6-AA74086E7608} → {A75397D4-3CA0-471c-9D24-C118BE0097A7}
+      - "Association «IN» → mpto_travel_plan_accepted"  # {D38926E0-1A1F-43a4-88AE-1B9A7D4A6A8A} → {C09FE907-964A-41cc-9796-FFC291C129F6}
+      - "Association «IN» → mpto_travel_plan_criteria_request"  # {92C2768B-784F-4217-9D3D-893AA36156F2} → {E30BFA4A-FF26-441b-BDC3-09078AE2F60A}
+      - "Association «IN» → mpto_travel_plan_criteria_update"  # {2850AE45-1A19-490b-829C-49B91F4DB785} → {BEB2125E-84C9-4b2f-989B-6523C4E77C54}
+      - "Association «IN» → mpto_travel_plan_rejected"  # {37E50C7C-28C6-4fe7-A029-6BE6731E30D6} → {A29AB384-BAD3-48eb-875F-754C16DD5535}
+      - "Association «IN» → mt.mpto_inter-urban_road_network_details"  # {3A311A28-A780-4472-9702-50B52E49810B} → {120F435F-F750-4f5a-A605-C01ED164B048}
+      - "Association «IN» → mt.mpto_requested_car_park_details"  # {E1F5465F-71B0-4c3f-8DA5-235A5DA8AF02} → {E9B66915-B77C-4a63-B69D-9424771B3604}
+      - "Association «IN» → mt.mpto_requested_service_area_details"  # {830F60DB-88BC-42ad-8BE0-3CEF0D7D1250} → {14DBF88D-9BA4-406e-BB55-99EBBD836502}
+      - "Association «IN» → mt.mpto_urban_road_network_details"  # {D80F5164-41AD-48a9-8B36-C6531004FAF4} → {3FA60343-03EF-4a51-ADC0-4AD658AD3D9A}
+      - "Association «IN» → tmms.mms-service_details_request"  # {521CFB1B-D172-4160-9FC6-C796FF05F8A0} → {9D4A5FE0-BA32-4d94-B867-262AE54E0A92}
+      - "Association «IN» → to.pto-current_travel_plan_criteria"  # {6C912D16-CAA1-42f1-B3DF-D9622D668AF6} → {06D2B8E8-AAD8-4836-A100-2175ACD4ADB7}
+      - "Association «IN» → tt.vs-current_travel_plan"  # {B89828C0-7576-4b22-8DA5-394741094DB8} → {175B6925-2A1E-41c0-A220-4C48ACAB92BC}
+      - "Association «IN» → tt.vs-proposed_travel_plan"  # {A4CA2F9C-1590-4a7b-A856-1BE3BE78A537} → {3D128BFB-D08B-49e9-B3B4-B671A7D3ECC9}
+      - "Association «IN» → tt.vs-vehicle_sharing_outputs"  # {0980921E-89D0-47bb-AE7D-0FF7AE67EB61} → {3A358CF8-F4D4-4382-A20C-15F0C11F862E}
+  - name: "F4.6.1 Provide Vehicle Sharer Interface"
+    guid: "{03E45E36-BEAB-4729-B2FB-DCA15B1A6590}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) A HMI through which the Vehicle Sharer can register or de-register to be included in vehicle sharing travel plans.
+      (2) The HMI shall also enable the Vehicle Sharer to take part in plans that they propose, or are proposed by other Vehicle Sharers.
+      (3) The ability through the HMI for Vehicle Sharers to accept or reject any proposed travel plan to be shared with other Vehicle Sharers and to request and view only those travel plans in which they are active participants.
+      (4) The HMI shall also be capable of operating in a variety of locations and if necessary provide controlled access for registered Vehicle Sharers.
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {31C80455-1D4C-48f6-B7B2-91DC706B8753} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Aggregation «componentof» → F4.6 Provide Facilities for Vehicle Sharing"  # {3956932D-A1F2-460b-8A38-B05EA064FEFF} → {A8C5BEF7-4F95-43ce-9B22-C4329AFFB177}
+      - "Association «IN» → mpto_request_current_travel_plan"  # {04ACE301-C0D0-4015-8E4C-33F67894E5CE} → {4BD8A4F1-8616-40c9-AEE7-8B1C048BB07F}
+      - "Association «IN» → mpto_travel_plan_accepted"  # {A259A9A6-AC33-47b7-893C-59411E8D15C9} → {C09FE907-964A-41cc-9796-FFC291C129F6}
+      - "Association «IN» → mpto_travel_plan_rejected"  # {5FB7EA24-023F-4b7a-AF07-2FF6C879B8F6} → {A29AB384-BAD3-48eb-875F-754C16DD5535}
+      - "Association «IN» → mpto_vehicle_sharer_details"  # {A4DF8981-FB5C-4527-99AF-74F88C5F4C43} → {94760535-2782-4245-B60A-564693B80E2B}
+      - "Association «IN» → mpto_vehicle_sharer_travel_needs"  # {683A48C6-351B-4d09-B4C8-C1AE896BDC53} → {8FFC2601-A059-4050-AA81-AFBADCCCC4A6}
+      - "Association «IN» → tt.vs-current_travel_plan"  # {19E79DB9-5ABB-43e1-915D-7DB1681E81A8} → {175B6925-2A1E-41c0-A220-4C48ACAB92BC}
+      - "Association «IN» → tt.vs-proposed_travel_plan"  # {1E2CF4F0-6C11-4b8f-85FA-7CFA4CD31947} → {3D128BFB-D08B-49e9-B3B4-B671A7D3ECC9}
+  - name: "F4.6.2 Create Travel Plans for Vehicle Sharing"
+    guid: "{B7D57CA7-84EE-403f-8C46-3D00AA7F7E52}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability for Vehicle Sharers to create travel plans only in response to a request for a new travel plan from a Vehicle Sharer.
+      (2) The details of the travel plan must show the requesting Vehicle Sharer showing how they will travel from their origin place to their desired destination using either their own Vehicle (with other Vehicle Sharers) or as passengers in Vehicles belonging to one or more other Vehicle Sharers.
+      (3) It shall be possible for the implementation of a new travel plan to be conditional on its acceptance by any Vehicle Sharers that will be affected, because their existing travel plans will be changed.
+      (4) It shall also be possible for a travel plan to use of the current PT Services, travel services provided by other modes and meeting points in car parks
+      (5) The ability for the criteria used to create travel plans to be made available to the PT Operator through a HMI provided by a separate function.
+      (6) It must not be possible for the PT Operator to obtain information about individual Vehicle Sharers.
+      (7) The ability to obtain data about existing travel plans and Vehicle Sharers through the functionality that manages the store of Vehicle Sharer Data.
+      (8) The ability to exchange travel plan data with the functionality providing the HMI for Vehicle Sharers, so that new travel plans can be displayed, modified and approved, at which point they will be sent to the functionality that manages the store of Vehicle Sharer Data for future use.
+      (9) The ability to modify created travel plans in response to requests from Vehicle Sharers.
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {514BF9A9-6F7E-4cce-B63A-E6A12C793378} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Aggregation «componentof» → F4.6 Provide Facilities for Vehicle Sharing"  # {D0DE148F-2970-4ea5-96B9-31BAF584B5EC} → {A8C5BEF7-4F95-43ce-9B22-C4329AFFB177}
+      - "Association «IN» → mpto.mt_request_car_park_details"  # {EEA00A03-3EE3-4906-BDDC-8AC801DAACBA} → {D7C17B89-0DC9-44fa-B271-6D17A42141DC}
+      - "Association «IN» → mpto.mt_request_service_area_details"  # {89725345-A8EC-4f8a-A5C6-D5361A2F7EC1} → {D65E0953-4FD4-4248-894F-41520E828C9A}
+      - "Association «IN» → mpto_accepted_travel_plan"  # {6FF2FB09-06C9-41be-B2F5-FAA894C14753} → {5D916304-A617-4830-B86C-484D1A22E81C}
+      - "Association «IN» → mpto_proposed_travel_plan"  # {71248777-B6AF-464c-8FA1-CF969FE3BA4A} → {F0288466-D13B-4c90-8F71-5915DCA033C9}
+      - "Association «IN» → mpto_request_existing_travel_plans"  # {F6B21DAD-8FBB-4de0-A3A4-F60DCE7B6517} → {0F30E57C-EE33-4986-9642-060E7C37E548}
+      - "Association «IN» → mpto_requested_travel_plan_criteria"  # {96009F40-8E47-4e5b-90BD-9EBF99650B70} → {B1906989-EC3A-4e83-8E28-CA94AC672A00}
+      - "Association «IN» → tmms.mms-service_details_request"  # {96CB1CA3-703C-4c00-A62E-A64990B4006F} → {9D4A5FE0-BA32-4d94-B867-262AE54E0A92}
+  - name: "F4.6.3 Manage Vehicle Sharing Information"
+    guid: "{77F474EF-B1AA-4def-BDBF-F826363D1E8C}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to manage the store of Vehicle Sharing Data which contains data about Car Sharers and their travel plans.
+      (2) As one part of the management activity, it shall be possible for a Vehicle Sharers to register to take part in shared travel by providing sufficient data about the trips that they wish to make and their willingness to share their own Vehicle, or share Vehicles belonging to other Vehicle Sharers.
+      (3) Another part of the management activity shall enable a record to be kept of the currently accepted travel plans for use in new travel plans, or for retrieval by the Vehicle Sharers involved in them.
+      (4) A further part of the management activity shall control access to the store of Vehicle Sharing Data so that Vehicle Sharers may only see the travel plans in which they are active participants.
+      (5) The store of information about each Vehicle Sharer must conform to the requirements of the relevant European Data Protection laws and any local variations that may have been introduced.
+      (6) If notice of a Vehicle Sharer de-registering is received from the Vehicle Sharer interface functionality, details of the affected travel plans shall be sent back to that functionality for output to the other Vehicle Sharers who are involved in them.
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {C4B0BDB5-EEA3-4f09-8C30-EC6371042D37} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Aggregation «componentof» → F4.6 Provide Facilities for Vehicle Sharing"  # {08F284F4-EBB9-432c-B3A8-85EB8E3A7E42} → {A8C5BEF7-4F95-43ce-9B22-C4329AFFB177}
+      - "Association «IN» → mpto_load_vehicle_sharing_data"  # {411672EC-5479-4972-8B50-BBED75723C14} → {70426DC0-7C80-48eb-9097-6C422978B135}
+      - "Association «IN» → mpto_requested_current_travel_plan"  # {9F97DCA1-204A-43c3-BB91-A02C0B6DA4EF} → {015CBB54-82F7-4644-906E-00A8D5BE39AF}
+      - "Association «IN» → mpto_requested_travel_plans"  # {B5F26CB6-3402-4549-9055-595CBF3E5EDC} → {A75397D4-3CA0-471c-9D24-C118BE0097A7}
+  - name: "F4.6.4 Provide Operator Interface for Vehicle Sharing"
+    guid: "{9CCB989F-80E5-487b-B6AC-173812D17D3A}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) A HMI through which the PT Operator may have access to the criteria being used to create travel plans for Vehicle Sharers.
+      (2) The HMI shall enable the PT Operator to request and be provided with output showing the current criteria, and for the Operator to amend the criteria,
+      (3) The HMI shall not enable the PT Operator to see any information about Vehicle Sharers.
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {7B4EBA8B-8783-43bc-94EA-A0E14536942A} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Aggregation «componentof» → F4.6 Provide Facilities for Vehicle Sharing"  # {266CC54E-1A2F-4655-ABFA-A71A173C3EFE} → {A8C5BEF7-4F95-43ce-9B22-C4329AFFB177}
+      - "Association «IN» → mpto_travel_plan_criteria_request"  # {AE86FD22-D7ED-479e-8E94-6C57FEB2AD93} → {E30BFA4A-FF26-441b-BDC3-09078AE2F60A}
+      - "Association «IN» → mpto_travel_plan_criteria_update"  # {E9BBE8AD-0401-44cb-800B-B8113ABC83A8} → {BEB2125E-84C9-4b2f-989B-6523C4E77C54}
+      - "Association «IN» → to.pto-current_travel_plan_criteria"  # {330A7C96-EA6E-4c50-8A3E-EF1736677B17} → {06D2B8E8-AAD8-4836-A100-2175ACD4ADB7}
+  - name: "F4.7 Provide On-demand Services"
+    guid: "{ED1680A0-3B04-41e7-84AF-855C767F8066}"
+    type: "Activity"
+    stereotype: "FRAME_High_Level_Function"
+    status: "Proposed"
+    version: "7.0.7"
+    order: 0
+    note: |
+      This High-level Function shall provide functionality that enables Travellers to request that they be provided with an "on-demand" form of Public Transport Service.  It shall differ from the usual (or "standard") Public Transport Service because the route and timing of the Service is customised to suit one or more Travellers.
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {89F5278E-0123-455d-88D7-6E196AC68F6D} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Association «IN» → fd.odsd-instruction_acknowledgement"  # {4EF89E88-8A85-4cd8-8E23-61556CEC4D6C} → {E4BF54D2-6F45-4745-8C83-46EB9DFE5272}
+      - "Association «IN» → fd.odsd-message_from_vehicle"  # {5BCEC80E-1541-43a1-A8E2-BC194545C4EC} → {3775AD22-B463-4bf5-91FE-93E59F0E5B29}
+      - "Association «IN» → fo.odso-provide_message_for_driver"  # {66B089A7-78B8-424b-B059-8F6A6D0C82CD} → {88051A11-373D-40b1-94FB-67E73D58A309}
+      - "Association «IN» → fo.odso-provide_road_network_data"  # {D82A0775-5C6C-4044-9C36-38DBAF4D7258} → {57E11186-3709-487e-ADF0-0C9378D58E8A}
+      - "Association «IN» → fo.odso-request_current_service_criteria"  # {57018B1D-7EEB-4521-85B3-27A3901F38F7} → {CDDA66E5-BB18-405c-9550-EAF810E5BB17}
+      - "Association «IN» → fo.odso-request_service_performance"  # {B629F7C8-A4CB-4e39-9EBE-2C7B955CEF5F} → {8828D96B-8AB5-4551-8CA1-1D318915B4A6}
+      - "Association «IN» → fo.odso-update_current_service_criteria"  # {2E475959-CE5F-475a-B1C7-742723536421} → {4C9293D0-8F70-4645-A381-D34CB515ADA2}
+      - "Association «IN» → ft.ptt-confirm_demand_service"  # {C7AB62EE-A53D-4065-8E7E-A1ECA4632124} → {6DD699F0-7542-4ae6-B9D3-00B315D9F425}
+      - "Association «IN» → ft.ptt-make_demand_service_payment"  # {592E35B0-32E2-4bd6-BD43-A8876C298B15} → {F779FEDF-C0B5-40b0-9EEA-66B8A2F22807}
+      - "Association «IN» → ft.ptt-request_demand_service"  # {51F735F7-C87A-4bcf-8E5E-E964EFDB8194} → {22C431A6-0F79-4140-A22F-98EE3F5C7502}
+      - "Association «IN» → fv.odsv-passenger_numbers"  # {9D19AB62-9B57-4eef-8976-79260D4806C5} → {11C18F29-E30B-4c1e-A2A9-0A7B47C69135}
+      - "Association «IN» → fv.odsv-status"  # {A5BDA687-C99B-4c6c-AC6E-35EFB32A672D} → {6DCBF601-19A4-4609-8AB1-FAE24F56D9B9}
+      - "Association «IN» → mpto.mt_request_demand_vehicle_priority"  # {55920D0E-23DF-4702-BFC3-CCEAB3E21C26} → {4D24D721-6662-4294-8F1E-F21054B67609}
+      - "Association «IN» → mpto_PT_fares_for_demand_services"  # {DE4D46C6-CDC1-4cda-80F6-742BB1206851} → {7BFA98BA-77CB-493c-88A6-0D7FE2137A55}
+      - "Association «IN» → mpto_PT_schdeules_for_demand_services"  # {5F1164B4-152C-4126-BCD0-E81E62A3780D} → {176B5EDE-5086-48b4-9172-94D7D5BCD98A}
+      - "Association «IN» → mpto_confirmed_demand_service"  # {CF170918-AEB8-4269-9252-77334FD36BA4} → {09522BE0-65C6-4e12-848E-F32A12DD8AD5}
+      - "Association «IN» → mpto_current_demand_criteria"  # {8BCEF667-DBE6-42f2-A023-2956C65218B5} → {F3AFCD8C-8F74-4d1c-96D2-5E30D81486AB}
+      - "Association «IN» → mpto_demand_service_arrival_prediction"  # {09A0650E-BAB0-4a33-A86A-69A315C0B6B3} → {9C1952DD-BD1C-4387-A3B3-C1E8826D4BB5}
+      - "Association «IN» → mpto_demand_service_confirmed"  # {D4AD1975-3F21-47ea-B34A-FE2ED2248715} → {2218FFF9-D3AC-41e7-B10C-7E6733E54695}
+      - "Association «IN» → mpto_demand_service_payment_successful"  # {E916BAB9-E4B0-4629-8F53-A6FA470A8C67} → {236CABF9-9B3C-4fd0-841B-5AF7F01E39E5}
+      - "Association «IN» → mpto_demand_service_perfornace"  # {ACE61BC4-A1A0-4cad-B08E-7D289CA3AD95} → {4D4DB2E6-A88C-4b40-8A3C-147FCAA94274}
+      - "Association «IN» → mpto_demand_service_request"  # {82CF2729-8C4A-4105-9FC7-AEFA4B1B1E47} → {4D68E75A-07A8-42a3-9737-CF5A5A48B6C2}
+      - "Association «IN» → mpto_demand_vehicle_faulty"  # {6589E9DD-9291-4e02-9C78-B42051283C86} → {F477E11A-40DB-41f1-8AEA-728C2493BCB1}
+      - "Association «IN» → mpto_demand_vehicle_status"  # {5FF6962B-86A1-402e-A85A-D8402CCB9E45} → {396DFF44-AAA6-4b61-B2A9-18E4118C7CF4}
+      - "Association «IN» → mpto_load_demand_service"  # {83AE297D-5C29-4813-8D8C-7E32F9DD46F4} → {7E380C7E-3996-4f41-B694-3E06DECBB286}
+      - "Association «IN» → mpto_load_demand_service_performance"  # {AA289720-629E-47c7-9F3F-AA4E8D7220E8} → {BEECA2DD-CD9B-48c6-BC64-89BD101B821E}
+      - "Association «IN» → mpto_message_for_demand_driver"  # {83A33CD0-050C-45f0-8903-19AB53B9CDB1} → {68DEDADD-59D7-49d0-B5A0-4331DA2A4CB0}
+      - "Association «IN» → mpto_message_from_demand_driver"  # {88239149-3458-4287-BD05-9CBFB959B76C} → {018C9E13-60C7-4e6a-B087-79C7EF45F3D7}
+      - "Association «IN» → mpto_message_from_driver_to_operator"  # {FF444148-9880-40e1-9CB9-55C873DDDFF6} → {E718F2D2-15E9-4140-BF59-06DF59DB2A11}
+      - "Association «IN» → mpto_message_from_operator_to_driver"  # {9A2A53F1-D952-448b-A32C-4C9135E4C625} → {012A5944-0CE6-416d-AD91-875407BF1AB1}
+      - "Association «IN» → mpto_proposed_demand_service"  # {DA65D224-F24D-460d-8BB1-9E5100D8682F} → {4402E6E9-C863-4883-90AF-559467183483}
+      - "Association «IN» → mpto_read_demand_service_performance"  # {909E4C30-0A80-4cea-830D-15D7911C26BA} → {EE6326FB-A218-49f3-9680-5F9A3CC5CF40}
+      - "Association «IN» → mpto_read_demand_services"  # {678FE02E-9002-4958-9A63-A88930148BB2} → {28A86CD9-25B2-417b-B552-94944F64A41F}
+      - "Association «IN» → mpto_request_demand_criteria"  # {689CF7D4-3B43-4b60-992F-A0C5B8B1403E} → {4D8CDFEC-21E0-45cd-875C-A25382E85B06}
+      - "Association «IN» → mpto_request_demand_service_performance"  # {D1079567-A5CC-45e2-9482-1C3F5A94F4C9} → {211D45BA-01A9-4332-9212-7B2D0AC532A5}
+      - "Association «IN» → mpto_service_instructions_for_demand_driver"  # {1A08B8C6-6BC5-488a-A72D-3392709465B0} → {A66B8180-2FDB-4642-8469-190B160BA60E}
+      - "Association «IN» → mpto_update_demand_criteria"  # {711F1330-0616-4340-8A19-11233721F7BE} → {B702D0AA-8A2A-4cbb-BD7A-944ED1ABE57A}
+      - "Association «IN» → mpto_update_road_network_data"  # {31B400CA-B1B9-45f7-A25C-C98AFE04E0FD} → {644BC2B1-00AB-4428-9D61-15321AB1DFF5}
+      - "Association «IN» → mt.mpto_inter-urban_road_data_for_demand"  # {F54D0304-237F-40d0-BEF8-3D8E54E7FBD0} → {EDF59BAA-9709-4528-B15C-0D2AF02812E0}
+      - "Association «IN» → mt.mpto_predicted_road_conditions_for_demand"  # {18E911DB-B24E-4822-82EB-38E4836DFA94} → {9E37BFEE-167C-4c84-9385-5383191BCE75}
+      - "Association «IN» → mt.mpto_urban_road_data_for_demand"  # {390AEECA-217B-47b4-B994-3FE490ACDD0B} → {CF11D4FC-8C23-4f3c-95F9-C31D586DE0FB}
+      - "Association «IN» → td.odsd-driver_instructions"  # {23799668-9B8A-4ae6-979D-936F7583AF76} → {E2FA2F7D-464B-4617-A41F-97A895556795}
+      - "Association «IN» → td.odsd-driver_outputs"  # {5E700447-5003-449d-9047-3AB6937037F4} → {5ABCE4DB-65D6-411c-B142-ECDD676D3D3D}
+      - "Association «IN» → td.odsd-information_for_driver"  # {0C7EC77F-D69C-4934-B458-294F9DB031DB} → {6B4F49AC-C484-4be1-A086-4309D3197D4F}
+      - "Association «IN» → td.odsd-service_instructions"  # {E7E6CD99-9481-45a1-883D-42368C1A3008} → {ADE81496-8821-4579-B4BF-6B2824C80286}
+      - "Association «IN» → tfc-demand_service_payment"  # {322BEDA9-80DB-45e6-B729-C32315C3A0F0} → {89DD8582-979D-4806-8056-7D66108E871F}
+      - "Association «IN» → tmms.mms-request_data_for_demand_services"  # {1A0EFCDD-DA1D-446d-98FF-153B969B778B} → {A9B621F6-0CDB-48a5-BEBF-DA5AC08EB122}
+      - "Association «IN» → to.odso-demamd_service_criteria_output"  # {9B1D0629-EAD0-4749-B5D3-2F08442771D0} → {D37F1AE3-77EC-44e1-9106-2ADAB6E8CC26}
+      - "Association «IN» → to.odso-message_from_driver"  # {4FE75B0A-BECF-414d-A434-FBEF58633306} → {EF45AEE4-59E4-4cdb-AF95-66373BACE17C}
+      - "Association «IN» → to.odso-outputs_to_operator"  # {05A035BE-FF47-4e3f-9150-58963DC06525} → {269B65F1-CC2C-4a72-AA35-E4D256933EA5}
+      - "Association «IN» → to.odso-service_performance_output"  # {494E8A9A-D424-4c4b-80F0-F3456864D691} → {0460290B-BB48-430a-A69D-31342003B017}
+      - "Association «IN» → tt.odsp-arrival_prediction"  # {0D0C34E6-9746-494c-BC21-9B347E55D4CE} → {50501A27-2CFF-4690-85E4-AD3527070FC1}
+      - "Association «IN» → tt.odsp-outputs_to_passengers"  # {A0A1AA46-F2E2-4b22-9C31-8AFB366A2A31} → {F61548AD-EFA6-474e-B029-FF9A0A8E3625}
+      - "Association «IN» → tt.odsp-predicted_arrival_time"  # {3F0E26BC-26C7-4367-AB40-A838AD0699A5} → {F4E7EB26-9FF0-4249-8C7F-5EF0A944848B}
+      - "Association «IN» → tt.ptt-demand_outputs_to_travellers"  # {90E8299E-7372-4a96-A940-BD5F37BF2CD4} → {7CD4BE15-63F1-4fc4-A970-DD2BB6E972E0}
+      - "Association «IN» → tt.ptt-demand_service"  # {B6267547-D40C-4fd9-A522-FD372B0BD924} → {1BC56ED7-BDE6-4414-AB2A-B4A1BEBF3B89}
+      - "Association «IN» → tt.ptt-proposed_demand_service"  # {2F75C4E3-2C8A-41b2-AC01-BB3236ACDDD6} → {F108DA9B-64DA-4c46-BAD5-6079D82A4C92}
+  - name: "F4.7.1 Provide On- Demand Service Traveller Interface"
+    guid: "{B8C7D7B7-FF8D-402d-B277-6C43EE0795FA}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) A HMI through which Pre-Trip Travellers can request an On-Demand Service for some or their entire proposed journey.
+      (2) The HMI shall enable the Traveller to provide information about the proposed journey, such as origin, destination, required times of departure and arrival, plus any other relevant information, e.g. disabled, elderly, luggage and young children.
+      (3) Once the Traveller has accepted the proposed service, the HMI shall also enable payment to be requested and only confirm acceptance once payment has been completed.
+      (4) A separate interface through which payments can be transacted in a safe and secure way.
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {902CEF2C-EAA6-4b15-9AD3-410BDA296C6E} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Aggregation «componentof» → F4.7 Provide On-demand Services"  # {B0591C92-50CE-4f7e-87DB-A31969312924} → {ED1680A0-3B04-41e7-84AF-855C767F8066}
+      - "Association «IN» → mpto_demand_service_payment_successful"  # {BE0AAB8C-5B46-40d4-8B4F-037AC5412751} → {236CABF9-9B3C-4fd0-841B-5AF7F01E39E5}
+      - "Association «IN» → mpto_demand_service_request"  # {2335C5B9-4F9F-4cf7-9A7C-82ED1295CFC7} → {4D68E75A-07A8-42a3-9737-CF5A5A48B6C2}
+      - "Association «IN» → tfc-demand_service_payment"  # {B0D274C8-A583-4e51-A8B1-C2CE4817393C} → {89DD8582-979D-4806-8056-7D66108E871F}
+      - "Association «IN» → tt.ptt-demand_service"  # {68578A1C-558B-446e-8244-055D578C94FE} → {1BC56ED7-BDE6-4414-AB2A-B4A1BEBF3B89}
+      - "Association «IN» → tt.ptt-proposed_demand_service"  # {2432E1A1-8E50-4c64-9DDF-F132300DA87A} → {F108DA9B-64DA-4c46-BAD5-6079D82A4C92}
+  - name: "F4.7.2 Plan On-Demand Services"
+    guid: "{C62A6214-31B0-4554-9747-556EAFA428F0}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to plan the On-Demand Services following requests from Pre-Trip Travellers.
+      (2) The ability to plan the Services using the Traveller's requirements, plus data about the road network, current traffic conditions, current scheduled PT services, the services provided by other modes of transport and where appropriate any Services already in progress.
+      (3) The ability to plan Services using routes that shall be the most efficient within the constraints provided by the Travellers in the Service requests and may make use of existing scheduled services provided by PT operations and those of other transport modes.
+      (4) Once the Service route, timings and cost have been determined, it shall be possible for them to be sent to the Traveller interface functionality.
+      (5) When confirmation is received from the Traveller interface functionality, the Service details shall be sent to the implementation functionality,
+      (6) If the Service is rejected, it shall be possible for the route and other Service parameters to be re-determined before they are again sent to the Traveller interface functionality.
+      (7) The ability for the criteria used to produce the route for the Service to be updated by data from the functionality providing the HMI to the On-Demand Service Operator.
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {EF2F317E-0E29-4760-B949-CC47C7D854D2} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Aggregation «componentof» → F4.7 Provide On-demand Services"  # {C889385A-E8A2-4b14-B4F4-D09BB0BD5BD3} → {ED1680A0-3B04-41e7-84AF-855C767F8066}
+      - "Association «IN» → mpto_confirmed_demand_service"  # {EBCC870C-C4FE-414b-B550-2435FA57957D} → {09522BE0-65C6-4e12-848E-F32A12DD8AD5}
+      - "Association «IN» → mpto_current_demand_criteria"  # {57342752-642B-4401-8EBE-E33D7D3D41CD} → {F3AFCD8C-8F74-4d1c-96D2-5E30D81486AB}
+      - "Association «IN» → mpto_demand_service_confirmed"  # {975509FB-537F-44c7-8E76-7E5AD563E421} → {2218FFF9-D3AC-41e7-B10C-7E6733E54695}
+      - "Association «IN» → mpto_load_demand_service"  # {A46B8482-44A9-4db3-A3CC-A3CBBB90759D} → {7E380C7E-3996-4f41-B694-3E06DECBB286}
+      - "Association «IN» → mpto_proposed_demand_service"  # {CBC3C719-34E8-4ffa-955F-D0E1CE1682BB} → {4402E6E9-C863-4883-90AF-559467183483}
+      - "Association «IN» → tmms.mms-request_data_for_demand_services"  # {9D9A0EDB-1EB5-471d-A257-7CEBBDA23FAA} → {A9B621F6-0CDB-48a5-BEBF-DA5AC08EB122}
+  - name: "F4.7.3 Implement On-Demand Service"
+    guid: "{D3D87063-83E3-470f-A9FE-C0A628578585}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to implement On-Demand Services that have been confirmed by Pre-Trip Travellers.
+      (2) For the implementation of a Service it shall be possible to use the most appropriate Vehicle and Driver and to provide the Driver with details of the Service.
+      (3) Part of the Service implementation shall also include the provision of the participating Travellers with the predicted arrival time of the Vehicle delivering the Service at each Traveller's pick-up point.
+      (4) During the Service implementation it shall be possible for contact to be maintained with the Vehicle delivering it, so that changes in location and status can be tracked, and messages (voice and data) can be exchanged with the Vehicle Driver.
+      (5) The ability to determine whether or not the Vehicle delivering the Service is keeping to the schedule for the Service and if necessary request priority for the Vehicle at any of the signalised junctions on the route in order to regain compliance with the schedule.
+      (6) The ability to propose modifications to the planned Service route to the Vehicle Driver, if this will improve the Service performance.
+      (7) The ability to send information about Vehicles that are faulty to the maintenance management functionality and these Vehicles shall not be used until it is confirmed that they are now available for use.
+      (8) The ability to create and store details of the performance of the delivery of Services and of the Vehicles involved so that they can be requested by and sent to the functionality providing the HMI for the On-Demand Service Operator.
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {5014D87B-D035-4fcc-9FCA-6993468D4921} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Aggregation «componentof» → F4.7 Provide On-demand Services"  # {87F0265A-CC9A-4f84-953D-D71475DDC674} → {ED1680A0-3B04-41e7-84AF-855C767F8066}
+      - "Association «IN» → mpto.mt_request_demand_vehicle_priority"  # {56787AF6-238A-4089-A160-B132334021C2} → {4D24D721-6662-4294-8F1E-F21054B67609}
+      - "Association «IN» → mpto_demand_service_arrival_prediction"  # {CA074D66-7061-4035-A90F-579660F23E02} → {9C1952DD-BD1C-4387-A3B3-C1E8826D4BB5}
+      - "Association «IN» → mpto_demand_service_perfornace"  # {38D0FC99-1BD6-431e-B449-BE5BAB57D1CB} → {4D4DB2E6-A88C-4b40-8A3C-147FCAA94274}
+      - "Association «IN» → mpto_demand_vehicle_faulty"  # {64B68341-6A4E-43ee-AD07-4DC096D49884} → {F477E11A-40DB-41f1-8AEA-728C2493BCB1}
+      - "Association «IN» → mpto_load_demand_service_performance"  # {2E5D2A9F-D61B-4253-B0D5-4C77359E8DFE} → {BEECA2DD-CD9B-48c6-BC64-89BD101B821E}
+      - "Association «IN» → mpto_message_for_demand_driver"  # {62E31AA2-7F3B-46fc-ACC4-E5DB71374B07} → {68DEDADD-59D7-49d0-B5A0-4331DA2A4CB0}
+      - "Association «IN» → mpto_message_from_driver_to_operator"  # {5FABE62F-2742-4de0-B5B4-9633DF372286} → {E718F2D2-15E9-4140-BF59-06DF59DB2A11}
+      - "Association «IN» → mpto_service_instructions_for_demand_driver"  # {65CE30E8-3BEC-4a45-8F31-C6B053DABE53} → {A66B8180-2FDB-4642-8469-190B160BA60E}
+      - "Association «IN» → td.odsd-service_instructions"  # {84B309E0-A820-4544-B878-B78055DB81A8} → {ADE81496-8821-4579-B4BF-6B2824C80286}
+      - "Association «IN» → tt.odsp-predicted_arrival_time"  # {E9E46BD9-170C-484e-A951-8BDDEB68B3BC} → {F4E7EB26-9FF0-4249-8C7F-5EF0A944848B}
+  - name: "F4.7.4 Monitor On-Demand Service Vehicle"
+    guid: "{FFFD824E-7235-47c0-931D-23CA846A444F}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to monitor the status of the Vehicle that is providing the On-Demand Service.
+      (2) A HMI through which the Driver can exchange messages (voice and data) with the implementation functionality.
+      (3) The ability to include a separate interface through which information can be provided to Passengers including updates on the arrival times at their drop-off points.
+      (4) The ability to provide information about the status of the Vehicle and the number of Passengers to the implementation functionality and to maintain a record of how the Services have been delivered by the Vehicle.
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {B0418BDB-05D4-4f56-B1AF-8B6FF044CB43} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Aggregation «componentof» → F4.7 Provide On-demand Services"  # {DD3B01E8-39C1-4ad3-81CD-908E6D4A865D} → {ED1680A0-3B04-41e7-84AF-855C767F8066}
+      - "Association «IN» → mpto_demand_vehicle_status"  # {E8AE355D-DA55-4d21-BB5E-7D062D5838E1} → {396DFF44-AAA6-4b61-B2A9-18E4118C7CF4}
+      - "Association «IN» → mpto_message_from_demand_driver"  # {C9B49862-3B34-4f38-BD96-5A32DE5E1A87} → {018C9E13-60C7-4e6a-B087-79C7EF45F3D7}
+      - "Association «IN» → td.odsd-driver_instructions"  # {1CD04BE6-006E-4ae1-BEC2-BB83B8E8A21A} → {E2FA2F7D-464B-4617-A41F-97A895556795}
+      - "Association «IN» → td.odsd-information_for_driver"  # {ED361EBD-DBCD-4908-A082-DB00DE734D6F} → {6B4F49AC-C484-4be1-A086-4309D3197D4F}
+      - "Association «IN» → tt.odsp-arrival_prediction"  # {7EB05733-67AF-44a1-9F90-4CBF6F24B533} → {50501A27-2CFF-4690-85E4-AD3527070FC1}
+  - name: "F4.7.5 Provide On-Demand Service Operator Interface"
+    guid: "{C7F5B28A-EC2D-43a3-92A8-E305C5EA2A8D}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "7.0.7"
+    order: 0
+    tags:
+      "Functionnal Requirements": "(a) continuously monitor for the arrival of all data flows from the on-demand service operator(b) when any of them are received, put the data they contain into the appropriate data flow and send it to either the Plan On-Demand Services or Implement On-Dem"
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) A HMI through which the On-Demand Service Operator can manage the provision of On-Demand Services to Travellers.
+      (2) The HMI shall enable the Operator to set up the criteria used to plan the Services, manage the use of Drivers and Vehicles and gain access to reports about the delivery of Services.
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {95645F4B-AE53-411f-88D5-101ABAA9B5F3} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Aggregation «componentof» → F4.7 Provide On-demand Services"  # {C2E152BA-7B1F-4735-97FD-91449BC24C5B} → {ED1680A0-3B04-41e7-84AF-855C767F8066}
+      - "Association «IN» → mpto_message_from_operator_to_driver"  # {3927BA26-A6F2-4da7-BAC6-597A8BB68F04} → {012A5944-0CE6-416d-AD91-875407BF1AB1}
+      - "Association «IN» → mpto_request_demand_criteria"  # {811A3AAE-A34A-4b37-A02C-524F0A4DA418} → {4D8CDFEC-21E0-45cd-875C-A25382E85B06}
+      - "Association «IN» → mpto_request_demand_service_performance"  # {6BAF12B0-6074-43f8-8032-1CD319C8C817} → {211D45BA-01A9-4332-9212-7B2D0AC532A5}
+      - "Association «IN» → mpto_update_demand_criteria"  # {3D1F79EE-835C-4a02-96DA-BD6922DF1BF9} → {B702D0AA-8A2A-4cbb-BD7A-944ED1ABE57A}
+      - "Association «IN» → mpto_update_road_network_data"  # {CBD945AD-D1EC-487d-B43E-F8B1CB026BB3} → {644BC2B1-00AB-4428-9D61-15321AB1DFF5}
+      - "Association «IN» → to.odso-demamd_service_criteria_output"  # {935E7A1E-B3E9-4844-A14A-2CFB893AFBD1} → {D37F1AE3-77EC-44e1-9106-2ADAB6E8CC26}
+      - "Association «IN» → to.odso-message_from_driver"  # {5379DABC-0D8D-4770-B753-FF3B99645F72} → {EF45AEE4-59E4-4cdb-AF95-66373BACE17C}
+      - "Association «IN» → to.odso-service_performance_output"  # {6F4C2E02-DA81-4abe-A9FB-144831262842} → {0460290B-BB48-430a-A69D-31342003B017}
+  - name: "F4.1.5 Collect PT Vehicle Data"
+    guid: "{89E3C986-3450-482b-9CAB-0BC3F1CF0D95}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 1
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to collect and send for storage data (e.g. location, status, alarms, occupancy) in real-time from PT Vehicles through any suitable data communications links.
+      (2) When fault data is received from PT Vehicles, the ability to pass it on to maintenance functionality.
+      (3) The ability to provide PT Vehicle data, include locations that are combined with digital map data, to the PT Operator interface functionality.
+      (4) The ability to exchange with PT Drivers in PT Vehicles voice and data messages concerning unusual situations that are not included in updates provided by regularly transmitted data, including such things as emergencies, special messages to PT Drivers, etc.
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {3FFDB81B-9D82-42f5-8678-16CCCEE00CF0} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Aggregation «componentof» → F4.1 Monitor PT fleet"  # {60A3CE63-FE7A-472a-AA22-226617B7B1E0} → {6371794D-1857-4152-B781-18AE7C5B8FC3}
+      - "Association «IN» → mpto_communications_from_driver"  # {54F228BD-BF06-4b10-B242-FC348A7D7AA9} → {316D3471-8E63-4908-A407-930DC034A0E7}
+      - "Association «IN» → mpto_consolidated_vehicle_data"  # {46399807-0EA6-4c96-B94C-C3591ED96D83} → {0C437821-0240-48b8-A44D-B71324A4548B}
+      - "Association «IN» → mpto_historical_vehicle_information"  # {FD890F0E-73A4-404b-9034-F90520E87826} → {FD2F5790-96A2-4192-9313-284307725114}
+      - "Association «IN» → mpto_message_to_driver"  # {50FB6C81-E154-4f87-81B0-39103ABF3509} → {38A10BB2-759C-413f-B1EF-DE3F65FA417D}
+      - "Association «IN» → mpto_possible_PT_vehicle_fault"  # {6D63C237-A480-4e0f-8737-8A56F8D91BC7} → {AEFD9D09-10AC-4f4e-AEA3-B9199DE79B18}
+      - "Association «IN» → mpto_real_time_vehicle_indicators"  # {6B1AD4E7-AFB9-45b5-A81E-18B49C6B83A9} → {F7CDB38E-229E-40cc-9846-D44AF73D88FE}
+      - "Association «IN» → mpto_real_time_vehicle_information"  # {417A6012-5D7E-42ee-9577-C2955A6E234B} → {48769FD4-7478-40a0-8079-B6EAEB9AC1F9}
+  - name: "F4.2.5 Prepare Fare Schemes"
+    guid: "{36D5CEB6-CCC2-49c6-80F1-262B85060222}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 1
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to prepare new fare schemes for the current and new PT Service Plans according to the current fare policy whenever the Plans are created and/or changed.
+      (2) Once they have been created, the ability to provide details of the new fare schemes directly to other functionality in the Manage PT and Provide Traveller Journey Assistance Functional Areas.
+      (3) Also once they have been created, the ability to provide details of the new fare schemes to the functionality that manages the fare scheme store of data and provides the PT Operator interface.
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {713279EF-AB70-43f3-8030-58AAE5D5BCD8} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Aggregation «componentof» → F4.2 Plan PT Service"  # {F6A77567-CBDA-4c85-8FC2-FD8698171119} → {11256DFE-FADE-493f-803F-220E79388CDC}
+      - "Association «IN» → mpto.pepf_fare_schemes"  # {358AE8CC-046E-42f9-8ACD-2F970D5F06E0} → {E9487BD5-6109-45aa-85F7-F4DCE1BA97AC}
+      - "Association «IN» → mpto.ptja_current_fares"  # {4124B1F0-1E31-4960-B794-466626336EC6} → {199CCF56-2098-4419-908B-ECD79273030B}
+      - "Association «IN» → mpto_PT_fares_for_demand_services"  # {2850B386-2266-46a6-A0C0-A734EA7F8EE9} → {7BFA98BA-77CB-493c-88A6-0D7FE2137A55}
+      - "Association «IN» → mpto_PT_fares_for_vehicle_sharing"  # {83DA380E-0703-4f39-BB6C-4D5190E8CED4} → {B60F19DC-8396-4889-B700-BFC22A02398D}
+      - "Association «IN» → mpto_fare_schemes_for_stops"  # {241D54C2-5C7C-4d7d-93C5-2FEB1E086609} → {02C9099F-0E2C-447d-B817-70D0B095E51C}
+      - "Association «IN» → mpto_fare_schemes_for_travellers"  # {40AFB56C-2BE2-4cd0-B788-A519122E54C7} → {A1D76628-9697-472b-9BE1-720D8A9E8ACB}
+      - "Association «IN» → mpto_revised_fare_schemes_for_operators"  # {30678619-C65A-458c-B68B-50C365321889} → {4DAFD161-4047-458d-9CF0-771A30869BC2}
+      - "Association «IN» → mpto_updated_fare_scheme"  # {59D290F0-FAED-4b15-91A6-DF64C551E774} → {412DA9DF-47AC-4617-B37E-19D060959F1F}
+  - name: "F4.3.2 Provide PT Maintenance Co-ordination"
+    guid: "{4EA8297D-03E1-4704-8FE6-F0713BDC1E57}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 1
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to optimise PT infrastructure and Vehicle maintenance schedules based on relevant criteria.
+      (2) The ability to include optimisation criteria such as faults reported for the PT infrastructure and Vehicles, as well as the current PT service plans and the maintenance plans of other PT operations.
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {E69D252E-E620-4fb6-80C6-E0932FA544A4} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Aggregation «componentof» → F4.3 Provide PT Management"  # {23AF2BA7-646E-411a-90D7-19E46B623D5D} → {29AD1A4E-431A-4a7c-BE08-C8D119466A60}
+      - "Association «IN» → mpto_demand_vehicle_repaired"  # {AD16DE23-A427-4bdd-9029-7734047FE5DB} → {45A8441E-D8E6-47f4-9218-78855E63A9AA}
+      - "Association «IN» → mpto_maintenance_plans"  # {881A3507-56A9-4e5b-9620-060D7DBB238E} → {10928A7A-C857-46b9-A0B4-C38D3C4CD3FA}
+      - "Association «IN» → tmo.ptmo-plans"  # {15A21E62-F84C-4ac1-BF2E-C33A36F9A427} → {0428BCC4-253B-45a1-B0D6-A840D533BFD3}
+      - "Association «IN» → tors.ptms-plans"  # {98A647ED-9DB1-48b1-941F-9BC5B3FEA3D4} → {AA853A32-76B4-422e-A34E-6E71D2023ED7}
+  - name: "F4.4.3 Control Vehicle Driving"
+    guid: "{22716786-7FB1-420c-BFBB-A9A994F3E2E1}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 1
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to convert the actions defined by the control strategies into commands to be acted upon directly by the controlled PT Vehicles or their Drivers.
+      (2) The ability to control automatically driven PT Vehicles, if applicable and available.
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {328BBB14-9246-4096-A5B9-091AAB330E4A} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Aggregation «componentof» → F4.4 Control PT Fleet"  # {9CE118BC-67F0-4bbb-8D3E-6601DD433EFE} → {A2FF30DF-0587-4b92-A15D-1EC9040BD276}
+      - "Association «IN» → mpto_PT_vehicle_data"  # {29FA004E-0EF8-47f7-A2FF-0DF1FFE9F3B3} → {D019D8E7-74A6-4153-83F7-636DACFB946C}
+      - "Association «IN» → td.ptd-commands"  # {D7502423-37C5-4cba-87B8-9266EF391C34} → {A1EF6C25-9B0B-4e4b-A478-2BA978AC65BF}
+      - "Association «IN» → tv.ptv-commands"  # {CA96E0EB-7895-4b43-9F28-E3D42722C185} → {80C49B5B-EB84-4217-9695-97D9F1DC0B53}
+  - name: "F4.1.6 Predict PT Vehicle Timings"
+    guid: "{C0F26D18-CFE8-4df9-B029-9A102C326A54}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 2
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to provide predictions of PT vehicle and fleet parameters (e.g. arrival time of a PT Vehicle at a given point), for any required time horizon.
+      (2) The ability for these predictions to be based on the knowledge of the current situation and historical data.
+      (3) The ability for predicted information about PT Vehicles to be delivered to other functionality from which it can be output directly to the Traveller and Passengers.
+      (4) The ability for predicted information about PT vehicles to be delivered to other functionality for use in preparing trip plans requested by Travellers.
+      (5) The ability for predicted information about PT Vehicles to be delivered to other functionality for use in managing the use of Bus Lanes.
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {EB0EA111-1CA9-4375-A90F-97FF53DF5C5D} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Aggregation «componentof» → F4.1 Monitor PT fleet"  # {19F646BB-E59A-477a-AB20-9F6C3F229CDE} → {6371794D-1857-4152-B781-18AE7C5B8FC3}
+      - "Association «IN» → mpto.pscs_predicted_PT_vehicle_arrival_times"  # {80424969-E215-413b-A092-7DBF32E0ED37} → {B4376073-87AB-45e0-8A69-13C958DC503E}
+      - "Association «IN» → mpto.ptja_pt_journey_time_prediction"  # {0747FFBF-4E3E-4afe-9C05-05C6CA32D007} → {4DBFB22A-13EC-468a-8376-24F496F32FAE}
+      - "Association «IN» → mpto_PT_vehicle_arrival"  # {26858E31-1A4C-4329-A598-BE05B718BED1} → {9E15A646-6833-4f4b-8499-972CA288CA2D}
+      - "Association «IN» → mpto_predicted_PT_vehicle_data"  # {6A5D1FE2-1588-4000-A74A-C68328A9807B} → {A8FDD222-7CD4-40ba-8C74-FE1C74090605}
+      - "Association «IN» → mpto_service_information_for_passengers"  # {544E05EC-DE10-43c0-945E-C597562B275D} → {814F3F1A-06B2-4b1b-842E-9CD6C07F8981}
+      - "Association «IN» → mpto_service_information_for_stops"  # {62296E18-9742-4e91-848F-79B8312BB458} → {9BC363E1-4211-469b-9D59-57D4E4105D76}
+      - "Association «IN» → mpto_service_information_for_travellers"  # {12F9639F-6472-49c6-B052-DB2B576B6662} → {ACF79C5C-4D8D-4642-B500-6A70CDB44FEE}
+  - name: "F4.2.6 Manage Fare Schemes Data Store"
+    guid: "{54436E6E-D8E2-4d85-8214-49675DCDF908}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 2
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to manage the store of PT Fare Schemes, updating its contents every time a new set of fare schemes is received.
+      (2) The ability to provide details of the current fare scheme whenever requests are received from other functionality.
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {D1ACA3B4-1D02-4704-B1A3-A5B94EAD7AAA} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Aggregation «componentof» → F4.2 Plan PT Service"  # {E7B86BC2-E3FB-4f88-A284-8F01318B96A8} → {11256DFE-FADE-493f-803F-220E79388CDC}
+      - "Association «IN» → mpto.mt_current_fares"  # {BD699FCB-60EB-4035-B7DC-5151D8AB6005} → {137CEA8F-46D8-49b3-AFFA-D6D48C54E899}
+      - "Association «IN» → mpto_current_fare_scheme"  # {9E213FA7-09F4-4561-BA83-8B9FE3E87947} → {36EA93E5-3878-4ca3-BD13-CA39789E11EA}
+      - "Association «IN» → mpto_fare_scheme_for_PT_driver"  # {DBC99BFF-FF80-426b-BE24-BA510C108901} → {940D2FB1-4095-4d19-B37B-1E73F78393DA}
+      - "Association «IN» → mpto_fare_scheme_for_service"  # {61453F10-2E72-4a7b-BC77-2F352F336DBF} → {BFD0DF8C-793F-4727-AA81-F060ED8D092F}
+      - "Association «IN» → mpto_load_fare_scheme"  # {A93A7FA3-F79F-47d9-9E7D-4BA77830D30B} → {05FB49F6-ABEF-4e08-A404-75C3A1460FF5}
+      - "Association «IN» → mpto_requested_fares_for_vehicle"  # {DCEFC463-153D-4c13-BFA1-E700A446479D} → {5775C9D8-A575-4174-992A-BA46D0D4F3B7}
+  - name: "F4.3.6 Monitor PT Infrastructure"
+    guid: "{5A12C5AB-965E-4cc3-9950-ACDD46765C99}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 2
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to continuously monitor both the PT roadside   infrastructure and PT Vehicles.
+      (2) The ability to report faulty infrastructure and/or Vehicles to the maintenance co-ordination functionality.
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {BE49140A-F6E7-431e-8E8C-FCE12874B4FB} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Aggregation «componentof» → F4.3 Provide PT Management"  # {351560DA-5A5A-4620-9266-B29CC7F96E83} → {29AD1A4E-431A-4a7c-BE08-C8D119466A60}
+      - "Association «IN» → mpto_faulty_equipment"  # {5A3BF15B-4AEC-4c4f-B9F3-F4E3F9171B1C} → {C1FECF17-5F44-4e78-99C9-05FFDDAC4535}
+  - name: "F4.4.5 Optimise PT Fleet Control"
+    guid: "{F9D068DE-95DB-49d5-88F0-975A9FEA97C5}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 2
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to optimise actions to improve the reliability and schedule adherence of PT services, due to such events as changes in Passenger numbers (e.g. high demand), PT Vehicle breakdown and incidents that have occurred that affect the flow of traffic through the road network.
+      (2) The ability to change the current way that PT Services are being operated, including sending revised instructions to PT Vehicle Drivers, and introducing extra PT Vehicles to support those already delivering the current services.
+      (3) The ability to send to other functionality requests PT Vehicle priority for late running services or individual PT Vehicles and additional Vehicles added to services when Traveller demand is high.
+      (4) The ability to exchange data with the functionality providing the HMI that enables the PT Operator to monitor and manage PT service delivery.
+      (5) The ability to exchange data about PT Service operation with other instances of PT management functionality,
+      (6) The ability to interact through an interface function with other transport modes to enable co-operation on the maintenance and variation in PT Services
+      (7) The ability to use both real-time and historic PT Vehicle data in its actions and to record service information in the Store of historic PT Vehicle data.
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {85ECD85F-489D-4f38-960B-CFB327EAB48C} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Aggregation «componentof» → F4.4 Control PT Fleet"  # {16DB1B4E-1573-4f64-8BDC-30BBAB754F87} → {A2FF30DF-0587-4b92-A15D-1EC9040BD276}
+      - "Association «IN» → mpto.mt_PT_service_variations"  # {05582897-060F-4489-8623-08CCD88286BA} → {DB55721D-9CD1-48dd-AF0C-2D4114FC8ADD}
+      - "Association «IN» → mpto_additional_PT_vehicle_required"  # {FEF31FF4-4513-4a93-8937-887FD23DDC32} → {64D31151-709C-43ad-AB99-4749C7F69F32}
+      - "Association «IN» → mpto_confirm_PT_service_change"  # {8C18089A-4418-435a-9AB3-DD9EB3D1F8ED} → {A6529A43-9091-4839-AB72-EFB88E4FC96F}
+      - "Association «IN» → mpto_control_actions"  # {94FDEB8F-2650-4f3d-A43C-438FDEEEA594} → {91AB426E-EA2C-4a9b-91D6-3B0909A0530B}
+      - "Association «IN» → mpto_control_strategy"  # {2B582A5D-572B-41a9-9BE3-87248A14E549} → {E93E73CE-10BD-4004-B51F-A6FBD40B23D9}
+      - "Association «IN» → mpto_other_mode_service_change_request"  # {A692C434-D11D-4152-8654-B5BA46C3CBA7} → {52B19A9B-AFA6-447e-8759-8FE0CEA0A9B6}
+      - "Association «IN» → mpto_priority_PT_vehicle_identity"  # {1C1C9801-AF43-4692-929B-10BAAED0D809} → {60F633FA-CB19-429d-8F41-945973A598C3}
+      - "Association «IN» → mpto_request_other_mode_service_details"  # {C6A31168-FBF0-4091-A35D-C5184D76B777} → {09C0B577-5E48-4d71-9953-D9B25338C1C0}
+      - "Association «IN» → mpto_requested_action_report"  # {B799978A-D188-47b8-BFFD-4973618B20D0} → {B0618BCC-A13F-4ec9-B32B-622D76B68425}
+      - "Association «IN» → mpto_service_change_data_for_stops"  # {3C8E9B42-979A-4566-A8D8-27313C143F06} → {49256CA4-DF1B-4bc1-9EEA-0BF5640A18D7}
+      - "Association «IN» → mpto_service_change_data_for_vehicles"  # {2F88E060-09E2-41f4-8A6C-5F3E8BFEB811} → {D36961BE-1D70-4dcc-83BC-217A608CB064}
+      - "Association «IN» → mpto_service_change_response_to_other_mode"  # {0289B161-23B0-4c2a-B94E-C5C09462DA3A} → {32889ADE-C200-4750-8830-20FE7AC80D14}
+      - "Association «IN» → mpto_service_number_for_priority"  # {81A73F77-B7DC-4fc9-8828-92278493769E} → {5895A6C5-6F88-411a-B815-FE8146082E12}
+      - "Association «IN» → tors.ptms-control_parameters"  # {64B8025D-C38A-4f2f-99A8-3BFF00FAD54E} → {AD2762A9-5CB1-4c20-BEFB-9733EEE8E365}
+  - name: "F4.1.8 Calculate PT Service Performance"
+    guid: "{93C46EF1-DBCD-4c84-B60B-C612E80829D8}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 3
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to calculate the performance for the operation of the PT Services.
+      (2) The ability for the performance calculations to be based on continuously observed real time data collected from the operating PT Vehicles by other functionality.
+      (3) The ability for the performance calculations to be initiated by the PT Operator through the PT Operator Interface Function, to which the results shall be automatically sent.
+      (4) The ability to send the results of the performance calculations to the Optimise Control Action Function.
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {C6B273BC-FB07-4224-9C50-40263B43294E} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Aggregation «componentof» → F4.1 Monitor PT fleet"  # {434A47EF-3767-4b6b-8CE2-346C1414AB58} → {6371794D-1857-4152-B781-18AE7C5B8FC3}
+      - "Association «IN» → mpto_calculated_service_performance"  # {647A9A61-691C-41c8-8A62-27257DCB5FA7} → {1AAA70EC-BC4B-42f6-AC5E-5AFE1622EA0C}
+      - "Association «IN» → mpto_observed_performance_figures"  # {327E2EF8-162D-49b6-A971-E05D43459D43} → {97D72E9B-CB59-43e4-BB95-9277A34170D0}
+  - name: "F4.2.7 Manage PT Route Data Store"
+    guid: "{4CB95CAB-929A-4f84-B636-86164AAC1B70}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 3
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to manage the store of PT Route Static Data, loading it with data provided by other functionality comprising data about the road network served by the PT operation and strategies that have been devised for its management.
+      (2) The ability to provide data from the store for use in PT service schedule preparation, plus for use at PT stops, by Travellers preparing trip plans and in reports produced by other functionality at the request of the PT Operator.
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {B4CF2FB0-EED9-43a4-B4CA-AC71D16E194B} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Aggregation «componentof» → F4.2 Plan PT Service"  # {629BE43A-1F66-4a62-8EA9-889EDAF6B706} → {11256DFE-FADE-493f-803F-220E79388CDC}
+      - "Association «IN» → mpto_load_static_data"  # {220B434A-05D5-413a-A883-90C2FDBDFD03} → {74172621-2AC5-422c-BA0E-3D1CFBE72D80}
+      - "Association «IN» → mpto_route_data_for_planning"  # {57A67C58-3FAA-49af-8F92-45FA6827A8DB} → {6F291712-7852-4f0d-B971-6FBE179368D6}
+      - "Association «IN» → mpto_route_static_data_for_reports"  # {121E3612-8685-40f6-9B4E-73A7A37E645A} → {593906F7-A674-4c42-9E1D-C6D1218A8315}
+      - "Association «IN» → mpto_route_static_data_for_stops"  # {DE504634-D22A-4bd9-A74F-46020AC8237F} → {C9642D55-D495-47cf-91C4-CA29DD82D4C8}
+      - "Association «IN» → mpto_route_static_data_for_travellers"  # {2B706309-E056-4a7b-991B-6729D408D74E} → {90DF6712-C73A-4e75-AC63-F99649E428F9}
+  - name: "F4.3.8 Provide PT Driver management PT Operator interface"
+    guid: "{285601DF-244C-4cb7-937B-D29DC367133D}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 3
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) A HMI through which the PT Operator can manage the creation of schedules for PT Drivers.
+      (2) The ability to use this HMI to update the details about individual PT Drivers, such as age, ability, experience, availability, etc. after which a new schedule for the Driver's work will be created.
+      (3) The ability to use the HMI to request and have output the current details about the PT Driver, including the current work schedule.
+      (4) The ability to use the HMI to be provided with the reason(s) why the creation of a new PT Driver schedule has failed.
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {48144FDC-E227-4293-9F60-27897EE4F5D6} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Aggregation «componentof» → F4.3 Provide PT Management"  # {5F30D103-352F-4385-8233-E884C987F233} → {29AD1A4E-431A-4a7c-BE08-C8D119466A60}
+      - "Association «IN» → mpto_driver_statistics_request"  # {4E263ECF-2106-4d65-B9EA-9D68774A76E4} → {025CC778-3A3A-4168-8491-7430D5E8396A}
+      - "Association «IN» → mpto_updated_driver_details"  # {E8D8C79E-CF7A-4956-95B6-BC7CAFC5A55E} → {35946697-76A7-484a-813C-FF8BF5FC6A00}
+      - "Association «IN» → to.pto-driver_scheduking_failed"  # {060A5618-B042-4e24-8F3A-BF4361A10D3C} → {91BE20AC-E8F5-496d-AD42-507C09DC9AA2}
+      - "Association «IN» → to.pto-driver_statistics"  # {748E5829-F995-4de5-9FB3-BADFDAB4DC92} → {702CBF07-6E3C-4fda-AC1B-59C814A220AD}
+  - name: "F4.4.6 Request Vehicle Priority"
+    guid: "{B5403C8F-4277-4e2d-994D-A24718E4DE56}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 3
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to send requests for PT Vehicle priority to the Manage Traffic functionality as a result of requests being received from the Optimise PT Fleet Control function for priority to be given to particular PT Vehicles and/or PT services.
+      (2) The ability to generate the priority request based on the expected arrival time of the target PT Vehicle.
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {C5726CE3-0676-4e18-8D94-ED9554B554A1} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Aggregation «componentof» → F4.4 Control PT Fleet"  # {41A01CB2-7D71-4107-95C4-5C4CE418A372} → {A2FF30DF-0587-4b92-A15D-1EC9040BD276}
+      - "Association «IN» → mpto.mt_vehicle_priority_request"  # {82D905F5-EDC1-438a-8AFE-EB616AEBF4CB} → {68D72961-85C1-416f-804E-7F1ADA3FC9BD}
+  - name: "F4.1.9 Output Arrival Information to Passengers"
+    guid: "{A3A3C514-3240-46b2-9B2B-8CE3ABB71474}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 4
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to receive information about predicted PT Vehicle arrival times from the prediction functionality plus information related to the optimisation of the use of the PT Vehicle fleet.
+      (2) The ability to use a suitable HMI to display to Travellers on PT Vehicles information about their arrival times at the next PT stops.
+      (3) The ability to filter information that is received so that only information which is relevant to the service that the PT Vehicle is operating and its current location is displayed.
+      (4) The ability to output information to those with disabilities, e.g. deafness and blindness.
+      (5) The ability to continuously monitor its operation and when a problem is detected, send a message to the Monitor PT infrastructure functionality.
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {67B225F1-7676-4a1f-96DC-0F65205928F1} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Aggregation «componentof» → F4.1 Monitor PT fleet"  # {683EA191-8E37-4950-AFC1-4507163F26CA} → {6371794D-1857-4152-B781-18AE7C5B8FC3}
+      - "Association «IN» → mpto_faulty_PT_vehicle_display"  # {04AFAD61-5E2A-40dd-BBD7-D96413F9B856} → {E77C27D3-864A-40d0-A34A-924397A15CC9}
+      - "Association «IN» → tt.ptp-predicted_PT_information"  # {A091745C-E05A-4d11-AA3A-2BC9C976622C} → {9EFE478A-F8CA-45d0-9FB0-9DEEC3FC142B}
+  - name: "F4.2.8 Plan New PT Service Schedule"
+    guid: "{6646E43B-CB56-4531-A39F-0D4D27299BFC}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 4
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to prepare new PT Service Plans at the request of the PT Operator, taking account of constraints such as, the geographic area to be served, quality of service parameters (e.g. frequency of Vehicles, required routes), timetables, synchronisation, PT Driver duty scheduling, co-ordination with other modes of transport, etc.
+      (2) The ability to also prepare new PT Service Plans that are variations in the normal service provision when input is received about such things as special events, unusual traffic conditions, changes in the services provided by other PT operations, the occurrence of incidents that affect the flow of traffic in the road network and requests resulting from the implementation of a demand management strategy.
+      (3) The ability to send the newly prepared PT Service Plans to the Manage PT Service Plan Data function for use by other PT functionality and to other Functional Areas, such Provide Traveller Journey Assistance, where it will be used to plan Travellers' trips.
+      (4) The ability to also send newly prepared PT Service Plans to other instances of this functionality such as different PT service providers and the operators of other transport modes.
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {24237585-BC23-4083-BE6B-5D7E0547F330} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Aggregation «componentof» → F4.2 Plan PT Service"  # {0D02D6A5-0E30-487b-A09F-81277380C7E1} → {11256DFE-FADE-493f-803F-220E79388CDC}
+      - "Association «IN» → mpto.mt_current_services"  # {65A6E9CD-1497-4ec5-A440-EAD9E8EF4FB9} → {2B908D75-E9EA-4605-8E01-58C6835DAEA6}
+      - "Association «IN» → mpto.pscs_PT_services_and_schedules"  # {809A5EB7-2934-42c9-8D23-D35DDBE14AE4} → {BC6E500A-4D08-4778-BFCD-FDD9A7E4F67E}
+      - "Association «IN» → mpto.ptja_available_pt_services"  # {56E02142-DB7A-4c2c-8E46-D1A4DA88D130} → {D93567BB-1582-4159-97D3-3F6F0C6B7D3A}
+      - "Association «IN» → mpto.ptja_pt_services_for_trip_monitoring"  # {379EFCD0-172E-4736-8D35-382FBC0368B0} → {0E21F206-2F35-4825-8A0A-EE6D25478669}
+      - "Association «IN» → mpto_PT_schdeules_for_demand_services"  # {E2EBF05D-89E5-4690-862B-5C0D7657A17C} → {176B5EDE-5086-48b4-9172-94D7D5BCD98A}
+      - "Association «IN» → mpto_PT_schedules_for_vehicle_sharing"  # {4C9A099C-5C18-425c-95E2-B716195B3CD8} → {124E3C29-3926-492b-A1F1-27E80C16850F}
+      - "Association «IN» → mpto_fare_strategies"  # {12198C17-3D5F-4b10-BFFF-69CE04DEF566} → {ABE443DB-010F-4ba6-B2E6-B3A5DD44A8E3}
+      - "Association «IN» → mpto_requested_schedule_for_vehicle"  # {861C0A6D-6862-4bd5-BB76-C8014E80739F} → {BA11C28A-7718-45cb-954E-5F6A91B78828}
+      - "Association «IN» → mpto_revised_services_and_schedules"  # {62EBFF8F-74AA-464f-8599-0B651D0F05B1} → {F40768E9-F430-4301-BD69-3BBE5CACD3F4}
+      - "Association «IN» → mpto_updated_scheduling"  # {4A31226D-CB8D-44eb-818F-F93CF6A0EE2F} → {5589FC90-BD05-4ca4-9334-778EC0EC6327}
+      - "Association «IN» → tmms.mms-plannings"  # {3DDE3898-E618-4658-8BCC-A789C781940E} → {34EA4A8D-3280-47bc-ADB4-93C89D52304C}
+      - "Association «IN» → tors.ptms-pt_planning"  # {7F1D8658-1C8F-47ff-9F11-603D03ECF065} → {8C29C95B-7A31-4471-BC7F-7444C5A7ECB0}
+  - name: "F4.3.9 Provide PT Driver interface for management"
+    guid: "{E21108D4-585B-431c-B343-7954F47DDD9C}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 4
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) A HMI through which the PT Vehicle Driver can be provided with information about the duties they are to perform.
+      (2) The ability for the PT Vehicle Driver to update the details of their current status through the HMI.
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {7C0690DC-4439-4372-938B-A8DA2FA74E44} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Aggregation «componentof» → F4.3 Provide PT Management"  # {418819F9-12C6-4558-AEB4-006E996A3A24} → {29AD1A4E-431A-4a7c-BE08-C8D119466A60}
+      - "Association «IN» → mpto_updated_driver_status"  # {80A617AA-A490-461f-A601-C10B1C5EE474} → {BE6EE5D5-B5E6-4a55-8A6D-F184FCE93EF8}
+      - "Association «IN» → td.ptd-scheduling"  # {2F88A710-95B9-43c9-A30D-20F87B7D9197} → {00A644B7-BE2F-4044-854D-D3A39B1C18F5}
+  - name: "F4.4.7 Manage use of Additional Vehicles"
+    guid: "{261F78A0-A165-4920-8879-DEBBBAD056BF}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 4
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to manage and co-ordinate the use of PT Vehicles that are not currently in use.
+      (2) The ability to use these additional PT Vehicles as substitutes for faulty vehicles, or to re-enforce those on a particular service, either due to high Passenger loadings or delays.
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {888E8D83-7052-4939-B8B2-9C593F86C550} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Aggregation «componentof» → F4.4 Control PT Fleet"  # {C918C0A2-9205-496b-8748-BDBD67B30671} → {A2FF30DF-0587-4b92-A15D-1EC9040BD276}
+      - "Association «IN» → mpto_additional_PT_vehicle_available"  # {3C561C93-77E8-48f7-A9A4-92455AD85D11} → {D08CD11A-2A26-4752-B8E4-EF8B42A8FFAE}
+      - "Association «IN» → mpto_revised_driver_servce_instructions"  # {C79C20E2-44EF-47f1-9D4C-F912AB2D1FC1} → {CB90AD26-3AF0-4702-9F29-7B766CA7E87B}
+  - name: "F4.1.10 Monitor On-board PT Vehicle Activity"
+    guid: "{46C1166F-6656-4796-A316-C15F3862326A}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 5
+    tags:
+      "Functionnal Requirements": "(a) continuously monitor the internal spaces in the PT Vehicle using the data obtained from the vehicle internal view data flow(b) if the monitoring process in (a) shows what could be an incident send the relevant images to the Monitor PT Vehicle Status f"
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to monitor on-board activity amongst the Passengers on a PT Vehicle.
+      (2) If not provided in digital form, the ability to convert the data into this form and send it to other functionality.
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {7C097327-A096-4295-8808-BAA7A23A25EB} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Aggregation «componentof» → F4.1 Monitor PT fleet"  # {7414DC55-FE63-444b-8AE1-07DC8002C244} → {6371794D-1857-4152-B781-18AE7C5B8FC3}
+      - "Association «IN» → mpto_vehicle_internal_images"  # {72DC9CF7-B7D3-4aa4-85AF-F8D675FABA41} → {E0DABFB7-687D-4faf-A3B9-0FC1425E4571}
+  - name: "F4.2.9 Provide PT Operator Interface for PT Service Plans"
+    guid: "{D5EEE42B-1554-4b73-8057-C66822F369F0}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 5
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) A HMI through which the PT Operator can manage the creation of new PT service plans and fare schemes.
+      (2) This HMI shall enable the preparation of new PT Service Plans and/or new fare schemes to be initiated and managed by the PT Operator.
+      (3) It shall be possible for the same HMI to be used to output the contents of the new PT Service Plans and fare schemes, as well as to load and amend data in the store of PT Route Static Data and output the data that the store contains.
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {D9D0B6ED-3EF0-42a7-AE3C-81242445FCA4} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Aggregation «componentof» → F4.2 Plan PT Service"  # {9A9C7C24-8E08-49da-AACF-6C1040451A95} → {11256DFE-FADE-493f-803F-220E79388CDC}
+      - "Association «IN» → mpto_fare_scheme_planning_strategies"  # {84A657B4-DB46-42f1-A4A0-36B3B72F8399} → {F5134D2F-7FF4-41f6-8408-D1555258E45B}
+      - "Association «IN» → mpto_request_current_static_data"  # {C2063D53-EFFD-4aa5-8C7D-EF23C7285415} → {51542AFE-3778-48db-8CD4-75A95A5B91E7}
+      - "Association «IN» → mpto_route_static_data_updates"  # {E651DB70-36A7-476b-8260-560CE08011BF} → {541F76A4-53CD-4e46-B275-44641902E997}
+      - "Association «IN» → mpto_service_planning_strategies"  # {37DF4ABB-9E28-4331-AD3B-E3B7456281BF} → {AB638EC7-9FA9-4697-8635-EB0820DF8964}
+      - "Association «IN» → to.pto-requested_route_static_data"  # {49BC384B-4BD0-44e3-A64C-C0EA58CB9213} → {0B1FEBCD-C299-473a-A749-6A28C621066C}
+      - "Association «IN» → to.pto-revised_fare_schemes"  # {09DD54C1-3C2D-4513-A144-0AEB9370C28B} → {99FCB0EC-DD76-4801-BF05-7D0F30C980E7}
+      - "Association «IN» → to.pto-revised_services"  # {0B6E3178-9733-4dc4-84C4-4ECD73C1BAE6} → {98EECAE5-08BE-4727-A589-563C5015E895}
+  - name: "F4.3.10 Provide PT Driver Management"
+    guid: "{F17F05F9-42FE-442d-A0EF-598D649FD21F}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 5
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to create mid and short term assignments for PT Drivers to the PT Services that are currently being provided when either the Driver data or PT Service schedules change.
+      (2) The ability to assign PT Drivers to PT Services based on information about them provided by the PT Operator and on their current availability, taking account of the number of hours that the Driver has worked and must comply with the applicable legal requirements for Driver hours.
+      (3) The ability to collect data about PT Drivers that has been sent by other functionality.
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {14716F18-A6DA-4a39-AE41-96F7BD0961A7} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Aggregation «componentof» → F4.3 Provide PT Management"  # {8688E66D-D124-4caf-A74B-5E3D7FD08A76} → {29AD1A4E-431A-4a7c-BE08-C8D119466A60}
+      - "Association «IN» → mpto_current_driver_availability"  # {13ADAEE2-82E0-4170-903B-4145E50059AD} → {F1BF7157-5731-4655-9D8C-FD9035197E03}
+      - "Association «IN» → mpto_current_driver_statistics"  # {61D80F8D-1280-4c53-BAAC-9CEC9D7D30B3} → {FD368FDF-5A0F-48be-B5A1-16DAB243FEF6}
+      - "Association «IN» → mpto_driver_scheduling_failed"  # {E8ED5522-B390-4502-9ECA-03C7A74D1907} → {4DDA4A1E-D5B1-4dd8-AFE1-41FD23DEF726}
+      - "Association «IN» → mpto_new_driver_schedule"  # {787F88BA-116A-4d87-908C-938E60E58175} → {12866D2B-89D5-41f4-A908-7FF224961CA7}
+  - name: "F4.4.8 Provide Interface to Other Modes"
+    guid: "{BAEF6D09-60A1-4572-9C90-87EF852B885A}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 5
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to provide links to other transport modes to enable PT services to be optimised.
+      (2) The ability to support an exchange of information with other transport modes so that the current PT services can be optimised to provide a better "fit" with those of the other modes.
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {2EACCC26-FB04-477b-914E-FD0E46B2312C} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Aggregation «componentof» → F4.4 Control PT Fleet"  # {91C8248F-B08B-4d43-AAC8-8B85721E8EDE} → {A2FF30DF-0587-4b92-A15D-1EC9040BD276}
+      - "Association «IN» → mpto_other_mode_service_change_response"  # {93A18654-1CC7-4bc9-B8D0-D590A9BA141E} → {73DA5BBD-CB2D-478f-86D9-1C5C7499E061}
+      - "Association «IN» → mpto_other_mode_services"  # {DD6057C6-E18B-4d1e-8A18-787AE308D5E2} → {ACD44FB2-1ECC-4e33-BA95-7929FF089052}
+      - "Association «IN» → mpto_service_change_request_from_other_mode"  # {22D5EF6F-8001-4ae2-A5BD-E6F97CF8DEA0} → {6EEDAA78-6630-48bf-BCDC-3F1A0CA89DAD}
+      - "Association «IN» → tmms.mms-control_parameters"  # {B77438A4-1E1C-474c-BAB0-002BA6ACB040} → {D21B34DA-6E7F-4980-8B32-DD42FF0F7B33}
+      - "Association «IN» → tmms.mms-request_change_to_services"  # {F322B9F1-5F16-4f2e-955C-B8212A628531} → {4D2C5FED-62CF-45f6-82BF-55E6154C940A}
+      - "Association «IN» → tmms.mms-request_current_service_status"  # {1DDF1C48-D6A0-4d7f-AA6E-ACC7FD7926D3} → {90419F48-37FC-42bc-BA32-4F86394D79D1}
+      - "Association «IN» → tmms.mms-requested_PT_service_change_confirmed"  # {202BF6FA-1D8C-4fcf-ADAF-A31B702CCA02} → {0C10883A-3623-40c8-B832-061964B20FC6}
+  - name: "F4.1.11 Manage PT Vehicle Stop"
+    guid: "{B0F0527D-5DDB-44f5-83F3-2942C76C930E}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 6
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to manage the operation of a PT stop used by PT Vehicles using real-time, static and fare information that it has received from other PT management functionality and from other PT stops.
+      (2) The ability to collate, filter and fuse all the received data and to present it at the PT Stop using a suitable HMI to Static Travellers, i.e. Travellers who have commenced their trips but are not actually moving because they are waiting for a PT service to arrive at the stop.
+      (3) The data filtering process shall remove all information that is not relevant to PT Services that use the PT stop and because its location is known, any information that is not geographically relevant.
+      (4) The ability to detect any unexpected activity in the area surrounding its location and provide an emergency call facility for use by Static Travellers at the PT stop.
+      (5) When an emergency notification is received, the ability to forward it to the Provide Safety and Emergency Facilities functionality and output the acknowledgement that is received.
+      (6) The ability to send all the data it has collected to any adjacent PT stops for them to similarly process and where relevant output to Travellers.
+      (7) The ability to output information to those with disabilities, e.g. deafness and blindness.
+      (8) The ability to continuously monitor its operation and when a problem is detected, send a message to the Monitor PT infrastructure functionality.
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {7CE9683A-4CA7-413f-B242-C3037B8DA10A} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Aggregation «componentof» → F4.1 Monitor PT fleet"  # {5815803A-8744-4132-8A67-BC86C821DC1B} → {6371794D-1857-4152-B781-18AE7C5B8FC3}
+      - "Association «IN» → mpto.psef_PT_stop_alarm_notification"  # {AEC6AF71-EAA9-41b4-B766-A7EED07F33FD} → {18C7C480-1BE3-4e35-9A86-C0753B5A72EA}
+      - "Association «IN» → mpto_alarm_at_stop"  # {6319A478-F29A-4f7f-B561-3698818493A4} → {0292F8AF-78E4-46c1-9B4D-0EDE0AA77515}
+      - "Association «IN» → mpto_faulty_PT_stop"  # {86AF79E3-F876-4d21-B40A-6309B5401D38} → {937C1995-2DCA-4cf0-8E63-B4D2800FBFF9}
+      - "Association «IN» → mpto_passenger_numbers_at_stop"  # {BE120759-57F8-4898-83A1-3387C44E0769} → {EADAF5A7-C9E5-43e0-8AAE-7A4D90E656B5}
+      - "Association «IN» → tors.pts-arrival_prediction_data"  # {7D6EF365-8F2B-4ff5-8681-8679864C1FFE} → {7A81647E-BE03-4b13-BCE5-3AF3D457E4C2}
+      - "Association «IN» → tt.st-alarm_acknowledgement"  # {BF55FCA6-5265-46ff-9F41-66F111E2B7FE} → {E873AF28-6611-4ff4-B475-F902AE294C55}
+      - "Association «IN» → tt.st-service_information_from_stop"  # {0E7AD3C3-9BB2-49c2-9F13-9BBB3D5E120C} → {D197CFA7-3F6E-46df-86B0-E8CF9FEF57F3}
+  - name: "F4.2.10 Manage PT Service Plan Data Store"
+    guid: "{A753E2CC-1878-4a0a-ACCE-B7D407196651}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "1.0"
+    order: 6
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) Manage the information objects in the store of PT Service Plan Data to ensure that its coherency is maintained at all times ensuring that the new data objects that are loaded are either applied to a new PT Service Plan or are used to update an existing PT Service Plan.
+      (2) When received from the Plan New PT Service Schedule function, load the data objects containing details of the new or updated PT Service Schedule into the Data Store.
+      (3) Every time data objects containing a new or updated PT Service Schedule into the Data Store, also send copies to the Prepare Fare Schemes, Optimise PT Fleet Control, Provide PT Driver Management and Provide PT Maintenance Co-ordination functions.
+      (4) When requested by the Plan New PT Service Schedule function extract all the details of the existing PT Service Plans from the store of PT Service Plan Data and send them back to the function.
+    links:
+      - "Aggregation «componentof» → F4.2 Plan PT Service"  # {E91D623E-50C5-42b8-AC45-9180C6F26467} → {11256DFE-FADE-493f-803F-220E79388CDC}
+      - "Association «IN» → mpto_PT_scheduling"  # {3D644C38-AEAD-432c-89D3-C9031E01F829} → {3EFCC991-7CFC-40f3-9891-15D1A213ACCC}
+      - "Association «IN» → mpto_PT_services"  # {B587FF42-B70B-443c-9425-64AC93BC7FF8} → {D1CCEE5E-8719-4ce4-818B-0577FDD1A4D8}
+      - "Association «IN» → mpto_PT_services_in_operation"  # {9D53E129-DEBD-4ed5-9785-CF61550C32A1} → {C9BB6E62-0A74-4382-A688-7053139D1A50}
+      - "Association «IN» → mpto_available_services"  # {75BEB8FF-A67E-4d1b-9669-F9DF08D4CFF5} → {B4DD33DB-6404-46d0-8A52-5E49ED3841ED}
+      - "Association «IN» → mpto_complete_scheduling"  # {74DB1A94-18E5-4c8e-B6D5-751DC9A9F23D} → {8CA26CA8-3D56-41db-8795-00F518166DA6}
+      - "Association «IN» → mpto_load_service_plan_data"  # {D9EAD65E-C801-4fda-B64D-522F7149212F} → {BE906B2D-92EC-4003-83C9-79AF7B96C7A0}
+  - name: "F4.4.10 Provide PT Operator Fleet Control Interface"
+    guid: "{195D05D8-4A51-4d07-BC72-67F1A4D5DC55}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 6
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) A HMI through which the PT Operator can manage the operation of the PT Fleet.
+      (2) The HMI shall enable the PT Operator to set the criteria which is used to decide if and when PT Vehicle or service priority is requested and to request the introduction of additional PT Vehicles.
+      (3) The HMI shall enable the PT Operator to confirm additional PT Vehicles requested by other modes and to request report on the PT Control actions that have been taken.
+      (4) The HMI shall enable the PT Operator to provide data about each PT Vehicle in the fleet so that real-time and historic data can be properly associated with each Vehicle.
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {96331C00-09BB-4c13-B4FB-44BF2FEDEB75} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Aggregation «componentof» → F4.4 Control PT Fleet"  # {F9D3F114-1CA4-47a1-BEAD-33E390E6A8E2} → {A2FF30DF-0587-4b92-A15D-1EC9040BD276}
+      - "Association «IN» → mpto_PT_vehicle_historical_details"  # {A04D78F4-58C5-401c-962C-4F64F9DCE659} → {129A90B3-AC14-49f4-B3DE-7D06DE158B00}
+      - "Association «IN» → mpto_PT_vehicle_real_time_details"  # {CCC3E000-0650-4003-8306-6104292BF6F3} → {AD4E3D3E-5E65-4046-970F-1DD924E71A84}
+      - "Association «IN» → mpto_actions_report_request"  # {B8F3CEF5-F229-4de3-BC6A-0965C8C74240} → {7ABC3847-0011-4d0f-B8C9-F2C5534EE51E}
+      - "Association «IN» → mpto_confirmed_PT_service_change"  # {A5C3D27E-C84D-4016-8B16-06A846051EDD} → {E382425B-9FD4-4c72-89C5-84507B2034FE}
+      - "Association «IN» → mpto_updated_service_delivery_criteria"  # {86DF62BA-EFBB-450a-BD97-44D302394E16} → {616B0B07-ACEC-4472-90A4-DBD62FC21D66}
+      - "Association «IN» → to.pto-actions_report"  # {833072CC-84C5-4fec-A372-7BDB202DDC31} → {BB3FB59E-A940-4e73-A064-85E21F7A90BD}
+      - "Association «IN» → to.pto-request_for_service_change"  # {DF559024-67A8-45e9-8EBF-4CB9DA5571C4} → {DDCF4F07-FFC4-4287-8839-577F2BF9BD17}
+  - name: "F4.1.12 Output Service Information to Travellers"
+    guid: "{C7A4C88B-4CB5-48dc-ACEE-FB8401D41881}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 7
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to receive real-time static and fare information from other functionality from which it shall use a suitable HMI to display information to Pre-Trip Travellers, i.e. those Travellers who are still deciding when to make their journey.
+      (2) The ability to know its location so that the information that it outputs to Pre-Trip Travellers can be filtered to remove anything that is not relevant to its location unless this is overridden at the request of the Traveller.
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {1E369D13-8ACE-4bdb-A4F3-59A00DC3B99F} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Aggregation «componentof» → F4.1 Monitor PT fleet"  # {6BDD1659-14E8-46d0-A9D1-035978CE653B} → {6371794D-1857-4152-B781-18AE7C5B8FC3}
+      - "Association «IN» → tt.ptt-requested_PT_service_information"  # {EF477E15-BFC8-4c15-8251-A5B1FE6A6BB0} → {24E01E10-2D6C-49d5-8F9B-95AF543A9AC4}
+  - name: "F4.1.13 Provide Operator Interface for Manage PT Fleet"
+    guid: "{56DD3309-3A47-453b-BC17-4214FBD1D4DF}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 8
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The provision of a suitable HMI through which the PT Operator can monitor and manage the operation of the PT Vehicle fleet.
+      (2) The ability to request and display through the HMI real-time information about PT Vehicles, including the current locations and predicted arrival times, using digital map data as a background.
+      (3) The ability to request and display through the HMI data about the performance of the PT Vehicle fleet in the delivery of its services.
+      (4) The ability to display through the HMI details of alarms raised by PT Passengers at PT Stops.
+      (5) The ability to display and write, using a suitable HMI, messages that are exchanged with PT Drivers in PT Vehicles.
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {0F203B5A-F5D0-4ea4-A108-7B9392D4F7DC} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Aggregation «componentof» → F4.1 Monitor PT fleet"  # {CADF197A-D7B0-4cfa-9437-D4F7F4496E5A} → {6371794D-1857-4152-B781-18AE7C5B8FC3}
+      - "Association «IN» → mpto_calculate_service_performance"  # {2961406E-192C-4c6f-953F-AEACBB476B63} → {E1696601-68F9-4058-A471-99268B56C58E}
+      - "Association «IN» → mpto_communications_to_driver"  # {3EB7CF82-8464-4ed7-ABDC-AE5EB24969A3} → {751D5960-E587-44ff-8BF3-6CEF360761A1}
+      - "Association «IN» → to.pto-alarms_raised"  # {77944038-7A4E-4383-B569-D1344C9AE36B} → {43A839EA-A70A-46dc-BFC6-F36E71234F33}
+      - "Association «IN» → to.pto-communications"  # {36AD1FDD-EBC7-42a9-A8B8-C8A217A12BB1} → {B2133F27-4384-491e-81F8-F2315770A457}
+      - "Association «IN» → to.pto-historic_information"  # {34F967E6-2763-4b9b-98B4-1CA42010B7E8} → {4A5882F2-A6C5-4d8e-8462-8DCC7FE307C4}
+      - "Association «IN» → to.pto-performance_figures"  # {3AB4DD8A-7F3B-40d9-B8A0-648DA9B0F330} → {A509876D-F3AC-44c7-82F9-2B0AEBE6B6FF}
+      - "Association «IN» → to.pto-predicted_PT_data"  # {B5F59297-2ECF-4d62-9291-E94FDABB1F63} → {429FC36D-B95E-41d9-8A32-C63CC1613BF3}
+      - "Association «IN» → to.pto-real_time_information"  # {CE9AD073-4488-4737-820F-25A955F552F7} → {1078D46D-67C0-4dff-8965-4B247FC102E8}
+  - name: "F4.1.14 Provide PT Passenger Vehicle Alarm Facility"
+    guid: "{CC5ED81F-A182-4b59-8725-CEF23BC2D321}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 9
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to monitor for the receipt of alarms raised by PT Passengers on- board the PT Vehicle.
+      (2) The ability to forward details of the alarms to the Monitor PT Vehicle functionality,
+      (3) A suitable HMI through which the responses to alarms can be displayed to PT Passengers on- board the PT Vehicle.
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {C6483217-657E-4694-ADD4-BECE28DF98F2} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Aggregation «componentof» → F4.1 Monitor PT fleet"  # {C1D377C8-3CED-4e46-AA4C-51245B05D7FB} → {6371794D-1857-4152-B781-18AE7C5B8FC3}
+      - "Association «IN» → mpto_passenger_alarm_raised"  # {B8FF542F-2DE8-439f-AC64-912243DBFD33} → {7B24DEF4-26D8-4470-AC73-C24C6ED3EEF3}
+      - "Association «IN» → tt.ptp-passenger_emergency_response"  # {A3ADEB58-CA8A-41e0-B77C-1230E5D2E35F} → {31A1E76E-CF19-4362-99DE-7B054E8720FC}
+  - name: "F4.1.15 Provide PT Vehicle Driver Interface"
+    guid: "{61CB146E-2271-49ed-8085-40133EBA3E2E}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 10
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) Support for both data and voice dialog between the PT Driver and the Collect PT Vehicle Data functionality through a suitable HMI for use in situations that are not included in updates provided by regularly transmitted data, e.g. emergencies, special messages to drivers, etc.
+      (2) The output of other PT Vehicle data and alarm information to the PT Driver through a suitable HMI.
+      (3) The ability of the PT Driver to use a suitable HMI to request information about the service (schedule and fares) on which the PT Vehicle is to be used and for that information to be displayed.
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {4DED9710-83C9-40f8-8E8F-2AC09490B912} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Aggregation «componentof» → F4.1 Monitor PT fleet"  # {32801CD4-C76F-4776-BC4F-16F33E204EBF} → {6371794D-1857-4152-B781-18AE7C5B8FC3}
+      - "Association «IN» → mpto_message_from_driver"  # {1B6DE039-108A-4301-B37A-24EDDC167678} → {6FEDD84A-E515-4902-9245-CDCE15F78213}
+      - "Association «IN» → mpto_request_fares_for_vehicle"  # {1166C9D3-AC18-4ebd-8C5F-DF7F4602D4D2} → {C76BC072-8058-492e-8649-AA832CB6C446}
+      - "Association «IN» → mpto_request_schedule_for_vehicle"  # {1EF608E2-7DC6-474e-8A8A-D6A959CA054C} → {CD612B96-F643-4e21-BD15-4DF8AEB6A6E4}
+      - "Association «IN» → td.ptd-data_and_alarm_outputs"  # {97B0D13D-CD8F-42b6-97F9-F04602A20F69} → {D9FF3F32-83C3-4a4b-8D94-037659BF7D3D}
+      - "Association «IN» → td.ptd-messages"  # {DD2E8264-A6C8-4155-8B3E-30AC64B114DB} → {757FF23E-18B9-471d-A5A5-4D31FA185F95}
+  - name: "F4.1.16 Monitor PT Vehicle Status"
+    guid: "{9D0B55DE-B1B6-4c2a-871F-130A9C3C5CE1}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 11
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to collect data from sensors and other functionality on-board the PT Vehicle, including Vehicle parameters, numbers of PT Passengers currently on-board, PT Vehicle alarms, notification of unusual passenger activity and notification of an incident from Passengers on-board the PT Vehicle.
+      (2) The ability to forward the PT Vehicle alarms and incidents to the Provide Safety and Emergency Facilities functionality and send the response to other functionality.
+      (3) Send the collected PT Vehicle data to other functionality for processing.
+      (4) Send PT Vehicle data plus details of alarms and their responses to the PT Driver interface functionality.
+      (5) Also send alarms raised by PT Passengers to the Emergency Operator as these may be indication of some form of civil disturbance on-board a PT Vehicle.
+      (6) Support for data and interchange with the PT Vehicle.
+    links:
+      - "Aggregation «componentof» → F4. Manage Public Transport Operations"  # {E5F48AF9-DB1E-4389-A8F8-8117D215E659} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Aggregation «componentof» → F4.1 Monitor PT fleet"  # {27843469-1C79-470a-9D3E-351022C296F0} → {6371794D-1857-4152-B781-18AE7C5B8FC3}
+      - "Association «IN» → mpto.mt_incident_data"  # {21C3DCF8-47CE-42f6-A810-6B39BBB0B0C2} → {75340138-07A3-4e27-87F7-1ABF34D6CF8C}
+      - "Association «IN» → mpto.psef_alarm_notification"  # {18C11BEA-18D1-47c1-898D-EC35279308DD} → {46EB2AD2-EF34-4b4a-B4D4-92D24FAB1271}
+      - "Association «IN» → mpto_PT_vehicle_real_time_data"  # {FFF23546-9ECD-4c44-BBAF-79E7B185EA72} → {23BAAC12-1CA7-410c-9279-3755D4110A4D}
+      - "Association «IN» → mpto_alarm_description"  # {E8D1CE97-BB70-4b71-82F6-57874261DA31} → {803EE229-01FF-4f67-BE2E-4517AC489DCE}
+      - "Association «IN» → mpto_passenger_alarm_acknowledgement"  # {E295116E-60D9-4d48-AE07-4164B271B053} → {6819130C-5F59-44b3-B8E7-59E5E7C16076}
+      - "Association «IN» → mpto_unused_PT_vehicle_status"  # {03CD7037-D298-4856-82AE-F9864ABFD7A2} → {C088F5DE-5950-4e35-8292-4A3BA4A3E79D}
+      - "Association «IN» → mpto_vehicle_data_and_alarms_for_driver"  # {E8CB9684-DCB1-4e1f-A2EA-50AC600892E7} → {709CA210-E7EB-4dc3-916C-D862C7251190}
+      - "Association «IN» → mpto_vehicle_in_alarm"  # {0A79F5C7-03DC-4a0a-A366-391003221B72} → {6D6106F3-2D8A-4fed-AD0C-BD332A2F6900}
+      - "Association «IN» → to.eo-alarms"  # {41912D0E-4AE8-4fa0-A436-6A3B899D33B9} → {3517B182-48F4-48eb-9288-B839D07AB5B0}
+  - name: "F4.1.17 Manage Real Time PT Vehicle Status Data Store"
+    guid: "{216603D1-339C-4041-88DF-A65C160D1A49}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "1.0"
+    order: 12
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) Manage the information objects in the store of Real Time PT Vehicle Status Data to ensure that its coherency is maintained at all times. merging the real time data objects that are received with data objects containing the relevant PT Vehicle static data.
+      (2) When received from the Collect PT Vehicle Data function, load the data objects containing real time PT Vehicle data into the Data Store.
+      (3) Every time data objects containing real time data are received, send copes to the Calculate PT Service Performance, Predict PT Vehicle Timings and Optimise PT Fleet Control functions.
+      (4) When data objects containing static data about a PT Vehicle are received from the Provide PT Operator Fleet Control Interface function load them into the Data Store.
+    links:
+      - "Aggregation «componentof» → F4.1 Monitor PT fleet"  # {EFF58CC4-6697-438c-A096-D0FF2C8E2A1E} → {6371794D-1857-4152-B781-18AE7C5B8FC3}
+      - "Association «IN» → mpto_current_PT_vehicle_data"  # {A5FF9622-0152-45d4-A438-4AD6AE56A9D1} → {D4B97F97-D0C4-4e4a-8FAC-07A4648979E1}
+      - "Association «IN» → mpto_load_real_time_PT_data"  # {3443F8EB-C023-4a8a-B466-FA892A4AF580} → {A0DC8DC6-E4C9-42f6-B75C-A4085C035F1B}
+      - "Association «IN» → mpto_real_time_vehicle_data"  # {C323840D-7246-4cf5-AE99-D80B93E8BB68} → {BFCF0F0A-6E01-4b47-A69B-3CB55B15872D}
+      - "Association «IN» → mpto_real_time_vehicle_progress"  # {6665EC1C-1A62-4090-837C-6D171FC4B8EE} → {E15ECAF0-508E-4445-9998-06FD69F07256}
+  - name: "F4.1.18 Manage Historical PT Vehicle Data Store"
+    guid: "{2DE909B2-973A-4eb2-827E-C8BFAEFDB1BD}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "1.0"
+    order: 13
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) Manage the information objects in the store of Historical PT Vehicle Data to ensure that its coherency is maintained at all times. merging the historical data objects that are received with data objects containing the relevant PT Vehicle static data.
+      (2) When received from the Collect PT Vehicle Data function, load the data objects containing averaged PT Vehicle data into the Data Store.
+      (3) Every time data objects containing averaged PT Vehicle data are received, send copes to the Predict PT Vehicle Timings, Optimise PT Fleet Control and Plan New PT Service Schedule functions.
+      (4) When data objects containing static data about a PT Vehicle are received from the Provide PT Operator Fleet Control Interface function load them into the Data Store.
+      (5) When received from the Optimise PT Fleet Control function, load the data objects containing the PT Vehicle control strategy into the Data Store.
+    links:
+      - "Aggregation «componentof» → F4.1 Monitor PT fleet"  # {D08F0E4B-7B8B-4252-A7EE-E418DA286CFC} → {6371794D-1857-4152-B781-18AE7C5B8FC3}
+      - "Association «IN» → mpto_historical_vehicle_data"  # {39DF48A4-EA8D-4625-BF73-3BAE14BB87D2} → {7DC3FDFD-A21E-421f-81A1-75827C531616}
+      - "Association «IN» → mpto_load_historical_PT_data"  # {D8518C70-7735-4354-AE6D-7A6BCFD63340} → {F4CA6C2A-F329-498f-8DC3-5B9C82DAA8C6}
+      - "Association «IN» → mpto_recorded_data"  # {E7464057-E2DD-485a-B6C6-1AEF786C02D3} → {451C255F-10F1-43f6-B77F-A0099EAE18F1}
+      - "Association «IN» → mpto_typical_travel_times"  # {8A607613-089A-4465-8C19-0950267A611D} → {9F0B4A54-EF25-462a-923B-713984B36A72}

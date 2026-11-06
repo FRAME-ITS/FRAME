@@ -1,0 +1,674 @@
+package: "Frame Repository/Frame Functional View/Functionality/Functional Area F9 - Provide Support for Co-operative Systems"
+guid: "{8BB57C5A-0AA7-401a-B836-0DE70DF6B11D}"
+alias: ""
+version: "5.0"
+note: ""
+elements:
+  - name: "F9. Provide Support for Cooperative Systems"
+    guid: "{F0D7E9A8-9F88-4e8f-AF0F-661C1990D546}"
+    type: "Activity"
+    stereotype: "FRAME_Functional_Area"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Functional Area shall provide the functionality that is needed to support the implementation of some Co-operative Systems (C-ITS) services that cannot be wholly assigned to parts of any other Functional Area.  The particular services that shall be supported by this Functional Area include the management of priority for Other Vehicles, the use by non-Public Transport Vehicles of any spare capacity in Bus Lanes, Vehicle access to sensitive geographic areas within the road network, special routes for Hazardous Goods Vehicles and Urban Un/loading Zones.
+      
+      Mnemonic: pscs
+    links:
+      - "Aggregation «component of» → F9.1 Enable Cooperative Roadside Vehicle Interactions"  # {AF822CC0-588F-41c3-9CB0-8C35E8ADA419} → {480ED898-6E9F-4299-B95D-F346F41B530E}
+      - "Aggregation «component of» → F9.2 Provide Access to Specific Lanes"  # {E8549062-784F-4b8b-91CE-586B2829B5CA} → {FC09C0FD-642C-4559-A5A3-5A352589F9F1}
+      - "Aggregation «component of» → F9.3 Manage Vehicle Access to Sensitive Locations/ Areas"  # {16DA31DE-CF68-4b0a-8932-800CF7605C20} → {5DDE7C5E-7DE4-41d7-B23E-3340DD5B006E}
+      - "Aggregation «component of» → F9.4 Provide Hazardous Goods Management"  # {A05E5577-0680-4b32-A34B-FA3F6CC0B251} → {EAFB823A-1B9A-4a92-B32F-764139615027}
+      - "Aggregation «component of» → F9.5 Manage Interurban Urban Traffic Zones"  # {6EA0FEE1-AD1A-425f-8F1A-D95D254BDCC0} → {0A4E4F63-21D5-403a-BE69-6B7E67348D2B}
+      - "Aggregation «component of» → F9.6 - Future messages and C-ITS services"  # {84A0A230-388B-421b-80D8-BA39F66B3C59} → {3D97D2EF-56EE-4cb5-962D-CC9A4E6F052A}
+      - "Aggregation «componentof» → System"  # {3C1E8011-0538-46da-BD36-4D2DBBA7A17A} → {A7365472-4893-4994-9241-EEED83ABEF7D}
+      - "Association «IN» → pscs.mt_data_for_traffic_management"  # {59FE0BDC-D72D-4e50-8F86-8367D3FD908A} → {B26C3AAA-9357-4d61-81E8-6F97883E65A8}
+      - "Association «IN» → pscs.mt_priority_requests"  # {3F3002FB-B1C3-4f45-86B0-76D8F718B7C5} → {CAAD40B8-C904-422c-AC36-AC30FAEBE177}
+      - "Association «IN» → pscs.pshvs_data_for_vehicles"  # {330D55FC-BD54-4715-8F9E-A3442E30E8D5} → {C6F4C613-5C9D-4706-ADC6-D6A2137E6909}
+      - "Association «IN» → pscs.pshvs_un/loading_zone_data_outputs"  # {16C62269-CB5E-4d4b-89E1-3EAAD73194A0} → {65A4A665-42F8-4978-9071-AF1EFA474D0D}
+      - "Association «IN» → pscs.psle_violations_for_processing"  # {CA5D8957-07DA-416a-8570-2544ECFA4862} → {1103C009-AA16-44a0-8A9F-AF01706AC24D}
+      - "Association «IN» → pscs.ptja_route_requests"  # {33408455-D697-47fe-8302-4F53B2738E05} → {B836DE84-2990-4f54-BCC2-A5E1C1EDE735}
+      - "Association «IN» → pshvs.pscs_un/loading_zone_data_inputs"  # {C3416197-809B-4089-9CBC-F48BD89A5396} → {F0E92709-E754-4ec7-A499-ED2259AA5C24}
+      - "Association «IN» → td-driver_priority_outputs"  # {1E10AB5E-D250-4187-B0CC-2F500AC3ADB7} → {583D95DA-A6F7-4cff-8365-90554B2BD5B2}
+      - "Association «IN» → td-pscs_outputs"  # {EE3585FE-7478-4faa-94A5-300000CE8F72} → {D419A69C-9FD4-4ffe-8488-1B18DD71D8D4}
+      - "Association «IN» → tft-pscs_inputs"  # {D4E8CC77-8922-4d1e-9C82-C3AAD8566AAE} → {0FC6E920-4AC5-408c-9376-9160FA18022E}
+      - "Association «IN» → to-pscs_outputs"  # {7D233068-9C83-4119-9620-1FC2A99FB7C9} → {A7C09F99-E67D-4bee-8C18-C8CB4514D423}
+      - "Association «IN» → tors-pscs_outputs"  # {C37160AA-1246-4497-A3BB-E570A8657C71} → {4DCC3652-0E1B-434f-A71C-7F88E16D6B72}
+  - name: "F9.1 Enable Other Vehicle Priority Selection"
+    guid: "{3976CD5F-BB81-4c2d-9056-390F2CA60098}"
+    type: "Activity"
+    stereotype: "FRAME_High_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This High-level Function shall provide facilities that enable Other Vehicles to request "green waves" through signalised road junctions on the route to their destinations.  Once a "green wave" has been successfully requested, it will be implemented immediately through the Manage Traffic functionality.  If there is only one signalised junction on the route, then the "green wave" will be implemented through a request for local priority at that junction.  If priority conflicts arise at a junction, the functionality will give priority to Emergency Vehicles, then PT Vehicles and finally Other Vehicles.  Priority conflicts between Other Vehicles will be resolved in favour of the Vehicle that first requested priority.  Other Vehicles will be informed if their priority request has been successful or not, and if successful will be provided with speed advice to follow the "green wave".  All Vehicles approaching a signalised junction will be informed if priority has been granted to any Other Vehicles approaching it.
+    links:
+      - "Aggregation «componentof» → F9. Provide Support for Cooperative Systems"  # {081C5E1B-A9AA-4119-8698-774F858AC376} → {F0D7E9A8-9F88-4e8f-AF0F-661C1990D546}
+      - "Association «IN» → flds-location_for_priority"  # {287CADF8-FF23-41e4-9A91-0879A1A3C42C} → {79F48888-C59B-4d86-8EBA-B08161E137F6}
+      - "Association «IN» → fv.vs-vehicle_data_for_priority"  # {0463EE05-45B3-46ed-BECC-A0677B19CCAD} → {935352FB-B6AB-4ce3-8090-0BDBFE0DBF42}
+      - "Association «IN» → mt.pscs_green_wave_result"  # {4EEC499E-A064-40db-8DB3-8F6744738F31} → {7E8DBF0D-6031-4149-BB2C-102BA44E7559}
+      - "Association «IN» → mt.pscs_local_priority_request_result"  # {E84769A6-0A81-4d78-AE32-C265A615CFF4} → {EE1F1B47-8E33-4861-8A22-9A73C36AF3B6}
+      - "Association «IN» → mt.pscs_vehicle_priority_operating"  # {2991EF91-B0D1-4d01-B187-33316BCE4F32} → {495573A0-F7AE-49f4-8B14-46E09FE2E358}
+      - "Association «IN» → pscs.mt_green_wave_request"  # {BAFFDC8F-639F-443e-A8E3-0E3FCD699123} → {1C977575-5E62-48e2-86F3-E6325A2F76DC}
+      - "Association «IN» → pscs.mt_local_priority_request"  # {A59C7B11-5FA0-4a35-9E42-5AA178CB2B2F} → {9749C23A-8C73-473f-A753-81953934752B}
+      - "Association «IN» → pscs.mt_priority_requests"  # {1FBA0A16-0DA4-4fd2-8A3B-0ED9EC843AEF} → {CAAD40B8-C904-422c-AC36-AC30FAEBE177}
+      - "Association «IN» → pscs.ptja_green_wave_route_request"  # {D08AAFC5-83B5-4705-8859-98A6F62CFAFE} → {06061675-C6E8-4cee-9E7E-10C76FBA6FD0}
+      - "Association «IN» → pshvs_driver_priority_response"  # {7A732A51-C88E-4389-BCF9-AF37066855F8} → {1A354731-D88B-4d7d-9474-04B61E5B0400}
+      - "Association «IN» → pshvs_other_vehicle_receiving_priority"  # {02AD6A16-0469-4bba-8FB2-2C8DCCD7808E} → {4823E862-ECCE-443c-BFD2-DBFC67AADEDB}
+      - "Association «IN» → td-driver_priority_outputs"  # {63949331-54A0-4e46-A769-0325CA3D277A} → {583D95DA-A6F7-4cff-8365-90554B2BD5B2}
+      - "Association «IN» → td-green_wave_operating"  # {75B8910F-050A-49e1-8E37-AC1691B13F3A} → {B7C0D102-209E-47cc-B484-585C94CD78CE}
+  - name: "F9.1.1 Provide Driver Interface for Vehicle Priority"
+    guid: "{AF1096E2-EC99-4ffb-BE69-8EAF40ADEC6D}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) A HMI through which the Drivers can request priority for their Vehicle through the urban road network and receive the responses to these requests.
+      (2) The HMI must require the Driver to indicate the destination and any constraints, e.g. mandatory "way points", so that a green wave route can be created.
+      (3) The ability to send the data provided by the Driver through the HMI to the Priority Request functionality.
+      (4) The HMI must output the data from the Priority Request functionality as soon as it is received, superseding for the duration of its relevance any other outputs that the Driver may be receiving from other functionality.
+    links:
+      - "Aggregation «componentof» → F9. Provide Support for Cooperative Systems"  # {A470A22E-D0D6-4f87-AD14-0E4994EC2507} → {F0D7E9A8-9F88-4e8f-AF0F-661C1990D546}
+      - "Aggregation «componentof» → F9.1 Enable Other Vehicle Priority Selection"  # {4F6651C6-3785-45fc-AE1B-C27C040B4D6A} → {3976CD5F-BB81-4c2d-9056-390F2CA60098}
+      - "Association «IN» → pscs_driver_priority_request"  # {BFE857F9-D3F3-41f3-AF08-1DE92B856EEC} → {D6CB4839-8838-40a7-8E68-708BA3FB261E}
+      - "Association «IN» → td-green_wave_operating"  # {32B35298-D49D-4efc-888B-46588D0F19E7} → {B7C0D102-209E-47cc-B484-585C94CD78CE}
+      - "Association «IN» → td-pscs_priority_request_result"  # {5A178FB2-8520-4f29-ADC5-87638D2123D2} → {9DBE6C2F-2F25-498d-8AD4-4D1C0AF23D03}
+  - name: "F9.1.2 Process Priority Request"
+    guid: "{670F40A1-BE76-4f06-9397-99486A641D40}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to provide a mechanism through which Vehicles can be provided with priority through the urban road network.
+      (2) When a request is received via the Driver interface functionality, the ability to request that a green wave route is created by the Provide Traveller Journey Assistance functionality.
+      (3) The ability to obtain the current location of the Vehicle from its own sensors and use it in the priority request, as well as including the destination, plus any compulsory "way points" that the Driver has specified when making the request.
+      (4) When the route is received, the ability to send the data to the Manage Traffic functionality to enable the requested priority to be implemented, adjusting the request according to the number of signalised road junctions involved and sending a local priority request if only one junction is involved.
+      (5) The ability to send the responses received from the Manage Traffic functionality (indicates success or failure of the priority request) to the Driver interface functionality for output to the Driver and to filter the data included in the responses so that anything that is not relevant to the Driver that made the priority request is removed.
+      (6) The ability to include the required average speed for each route segment in the data sent for output to the Driver when the response from the Manage Traffic functionality indicates that the priority request was successful.
+    links:
+      - "Aggregation «componentof» → F9. Provide Support for Cooperative Systems"  # {FFBF9C64-9F92-478c-86A8-6C4F82C25722} → {F0D7E9A8-9F88-4e8f-AF0F-661C1990D546}
+      - "Aggregation «componentof» → F9.1 Enable Other Vehicle Priority Selection"  # {538AD65F-59BB-4f71-840F-59623DD489DC} → {3976CD5F-BB81-4c2d-9056-390F2CA60098}
+      - "Association «IN» → pscs.mt_green_wave_request"  # {AA31FB30-EC7D-422a-B956-5C6D46399C2A} → {1C977575-5E62-48e2-86F3-E6325A2F76DC}
+      - "Association «IN» → pscs.mt_local_priority_request"  # {642893AF-04C4-48d8-A7C4-9F7AD0E554B2} → {9749C23A-8C73-473f-A753-81953934752B}
+      - "Association «IN» → pscs.ptja_green_wave_route_request"  # {08D59FFE-24D4-41bf-8835-EC6E3F0A083C} → {06061675-C6E8-4cee-9E7E-10C76FBA6FD0}
+      - "Association «IN» → pshvs_driver_priority_response"  # {C35441CD-A15A-4a45-867C-E7A7D045CEEB} → {1A354731-D88B-4d7d-9474-04B61E5B0400}
+      - "Association «IN» → pshvs_other_vehicle_receiving_priority"  # {D745243F-50EF-4710-8626-9B99F855D712} → {4823E862-ECCE-443c-BFD2-DBFC67AADEDB}
+  - name: "F9.2 Provide Access to Bus Lanes"
+    guid: "{49FB5289-B936-4c75-A900-FDD675FDF34A}"
+    type: "Activity"
+    stereotype: "FRAME_High_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This High-level Function shall provide functionality that enables flexible lane allocation.  It is aimed principally at Bus Lanes and shall enable them to be used by Other Vehicles, when PT Vehicles are not using them.  Use of Bus Lanes by other Vehicles shall be granted through the allocation of a licence that applies to specific lanes and shall only be valid for a particular length of time.  It shall only be possible for a licence to be granted for Other Vehicles to use some of the Bus Lanes on their route to their destination.  The use of the Bus Lanes shall be monitored and if Other Vehicles are likely to impede the movement of PT Vehicles, they shall be requested to leave the Bus Lane at the end of the next section.  If Other Vehicles are found to be using a Bus Lane without a licence, their details shall be passed to Law Enforcement functionality for subsequent prosecution.
+    links:
+      - "Aggregation «componentof» → F9. Provide Support for Cooperative Systems"  # {5A0D1B25-1D69-4860-9517-0E775581385F} → {F0D7E9A8-9F88-4e8f-AF0F-661C1990D546}
+      - "Association «IN» → fd-desitnation_for_bus_lane_use"  # {7AC28C8E-7CF3-421e-8DFB-91D152517DE0} → {84129F6E-6647-4074-8D29-5543DAE9D724}
+      - "Association «IN» → fd-request_bus_lane_use"  # {26DFE874-2043-4c51-8F8B-7000289C92AF} → {38D52CBB-0CE9-4f22-B591-40128D2EBA13}
+      - "Association «IN» → fesp.g-map_data_for_bus_lane_use"  # {84171F14-FCFC-49b6-B93E-68E1D5DCFF9A} → {F2255894-21E3-40bc-8E3A-3EA4400B8814}
+      - "Association «IN» → flds-location_data_for_bus_lane_use"  # {A56DC98B-F89C-4463-8DE5-6CF1363C3EE4} → {FAA25148-1968-4e7c-9D8F-9B3919519332}
+      - "Association «IN» → fo.rno-request_bus_lane_use_data"  # {0AEBFAFE-FC79-401b-9B7F-3741FD1D403D} → {87678BA5-CD17-4f4a-A8BF-47AF8B95A99E}
+      - "Association «IN» → fo.rno-update_road_network_data"  # {1E89887A-98A0-4a55-AED0-92002D312DE3} → {A93CF977-9651-4367-A8C0-871D6D57DFC3}
+      - "Association «IN» → fv-vehicle_image_for_bus_lane"  # {02F6E519-EF2C-40bb-9ADD-58F3C7975F52} → {125158C1-A683-46e8-8260-5ECD1871B028}
+      - "Association «IN» → fv.vs-vehicle_data_for_bus_lane_use"  # {E2FE5DB7-90BA-4bb3-AA79-912201F21E04} → {F8043576-FE34-42e0-86FF-DA0863A54D22}
+      - "Association «IN» → fv.vs-vehicle_identity_for_bus_lane"  # {CCF6E227-6854-479f-9CBB-E30299889276} → {94EC9616-1551-447a-B14C-A6F5247A1831}
+      - "Association «IN» → mt.pscs_inter-urban_road_network_data"  # {14E551B9-F53E-4937-BE6D-9614F4B1201F} → {137FBF67-8B9C-4a3c-B15D-3037BD868DB8}
+      - "Association «IN» → mt.pscs_urban_road_network_data"  # {C4CE3C6A-6F1F-4e3d-BC73-3795EA72BB15} → {39D6E00C-912F-4127-8E3F-A19633E6DFF4}
+      - "Association «IN» → pscs.psle_bus_lane_violation"  # {8A4DB267-1452-4a94-8981-B5C3371CA21A} → {651D8FE9-4341-40bd-9C60-E14BF9F2A442}
+      - "Association «IN» → pscs_bus_lane_licence_revoked"  # {8B7CDBF3-C37C-4a9f-8830-16F8728B126B} → {D4FA81E5-7C87-47ea-8D18-6423B04FE8C9}
+      - "Association «IN» → pscs_bus_lane_use_licence"  # {6549DEC6-EF4C-423d-A108-EFB157CC9A54} → {E53B64AE-F08D-43ed-93DD-EA36D1494864}
+      - "Association «IN» → pscs_bus_lane_use_licence_details"  # {2C40FE13-C2CD-4228-A0AD-46B21537FA5A} → {53EC9EC4-2F92-49af-AAA5-61B06F0BF405}
+      - "Association «IN» → pscs_bus_lane_use_request"  # {1D5D367B-9F52-4c6e-AB68-B2EF5CA2F2E2} → {540F257E-0D30-4328-90C2-5215A416BF2F}
+      - "Association «IN» → pscs_bus_lane_use_request_result"  # {6664281F-7787-45f5-BD09-30F169A0EA3A} → {D779D5DB-17D8-4fc4-87DD-09F1B2A1549A}
+      - "Association «IN» → pscs_current_data_about_bus_lanes"  # {FCE3D790-2730-4716-833C-40988B9DA76D} → {C90A62CD-3650-4e4b-A38C-32199A80AEFC}
+      - "Association «IN» → pscs_incorrect_bus_lane_use_data"  # {10DB1CB6-5AB0-4d2f-B98B-4EE24E424AE6} → {A299874A-D361-4746-9806-BD5EE6E0E232}
+      - "Association «IN» → pscs_licence_details_for_vehicle_identification"  # {BBDB9FCC-AC53-476e-991E-F1ADEA5455FC} → {0ED5C5A0-5317-4e4c-84AD-02CEAD85AC4A}
+      - "Association «IN» → pscs_load_bus_lane_data"  # {F2FA4B4A-7886-431c-8F6C-D148C2CFDE53} → {B23FAE8B-9A75-4ebf-8200-0FB45B943031}
+      - "Association «IN» → pscs_other_bus_lane_information"  # {038F226E-9538-4549-B50B-C19D515AFA7F} → {7ED23BC7-1548-470e-9D3B-B3C3E6890F82}
+      - "Association «IN» → pscs_read_bus_lane_data"  # {2E22503F-3AE1-4100-9302-35B5936E949F} → {DA8DF15B-4A47-4500-819B-D4621A1047D4}
+      - "Association «IN» → pscs_request_bus_lane_data"  # {68D5FA43-8B4A-4c29-A52A-FE3ECE354C05} → {25E9EB22-E8C3-42f5-A07F-7432E90B7E1F}
+      - "Association «IN» → pscs_request_bus_lane_use"  # {EAF52C66-9A14-4469-9564-1759BA7AC1D7} → {FCA08680-25C3-4862-A958-B888F9D50065}
+      - "Association «IN» → pscs_requested_bus_lane_data"  # {D99E1782-5030-41e5-866A-238D1F03152C} → {1478E221-127B-4e5b-89D1-DF6A4CBB0CBA}
+      - "Association «IN» → pscs_static_bus_lane_data"  # {1CF5E3DB-AA68-444a-8AFA-DCFDDE2D8DB6} → {04561F64-4D83-4497-AF98-E633E9A4961F}
+      - "Association «IN» → pscs_update_road_data_for_bus_lanes"  # {5287E84E-C529-4e0d-A9B3-062BC3BBD6CE} → {F0670CBD-5ADD-48c1-967C-614116F2B491}
+      - "Association «IN» → pscs_warnings_for_driver"  # {8F0C40E2-57A2-4b52-BF61-3AC8909D15B3} → {9B45B18E-776E-4bda-9A44-DB498DF1AB41}
+      - "Association «IN» → pshvs.pscs_destination_for_bus_lane_use"  # {C0687645-5C81-4b71-8563-5009320A1074} → {13B7BCE3-3A5F-4f17-AF5E-84D40279F48A}
+      - "Association «IN» → td-bus_lane_outputs"  # {D867F58C-F2D0-4e85-947A-D6A784FF573E} → {0EEEEC9B-FB68-4611-8A5D-C2E81B76F97B}
+      - "Association «IN» → td-bus_lane_request_result"  # {467E9257-9FDC-4f90-A794-51E9931D01B3} → {E19FC1D5-86E5-4bf0-8DD8-3C6CAB08C0A6}
+      - "Association «IN» → td-bus_lane_warning_message"  # {957E6AD6-14C3-469c-84E4-09F4614B2405} → {0574D043-95D5-4580-A936-F5333F06E45A}
+      - "Association «IN» → to.rno-requested_bus_lane_data"  # {6573C412-8566-43be-A73D-8655D0D10B12} → {CB6C9320-0A01-4e51-A3D1-22E9DC29F7E3}
+  - name: "F9.2.1 Provide Driver Interface for Bus Lanes"
+    guid: "{59F5833C-D2BB-442b-ACB1-BD3861818AED}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) A HMI through which the Driver can request the use of Bus Lanes and be informed about the success of the request.
+      (2) The HMI must require the Driver to provide the destination plus any "way points" for the route on which the use of Bus Lanes is being requested.
+      (3) The HMI must also be able to inform the Driver of the need to leave the Bus Lane because a PT Vehicle is about to use it.
+    links:
+      - "Aggregation «componentof» → F9. Provide Support for Cooperative Systems"  # {DE2844D9-61AC-435d-A40C-716475CC6B30} → {F0D7E9A8-9F88-4e8f-AF0F-661C1990D546}
+      - "Aggregation «componentof» → F9.2 Provide Access to Bus Lanes"  # {21C01619-5ADA-455a-BADD-A09D0A735025} → {49FB5289-B936-4c75-A900-FDD675FDF34A}
+      - "Association «IN» → pscs_request_bus_lane_use"  # {9BBF93FE-18CB-4850-9B20-A8DE22428AA8} → {FCA08680-25C3-4862-A958-B888F9D50065}
+      - "Association «IN» → td-bus_lane_request_result"  # {4FD696FE-4A63-4a18-BB3D-B76119D35449} → {E19FC1D5-86E5-4bf0-8DD8-3C6CAB08C0A6}
+      - "Association «IN» → td-bus_lane_warning_message"  # {3298D22D-14F3-4ace-9AC1-A7386863F138} → {0574D043-95D5-4580-A936-F5333F06E45A}
+  - name: "F9.2.2 Manage Vehicles using Bus Lanes"
+    guid: "{C4EAFE90-C758-40f3-8B2C-6058BB8C9437}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to manage the non-PT Vehicles that wish to obtain licences to use Bus Lanes.
+      (2) The ability to receive the request for using Bus Lanes from the Driver interface functionality and collect data about the Vehicle characteristics, such as its speed and current location, from its own interface and sensors.
+      (3) When all the data has been accumulated, the ability to send the Bus Lane use request as a licence request to the functionality responsible for managing the use of Bus Lanes and to pass on the response to the Driver interface functionality.
+      (4) If the response contains a licence, then the ability to monitor the location of the Vehicle as it moves through the road network and provide messages for output to the Driver through the Driver interface functionality when the Vehicle correctly using any Bus Lanes.
+    links:
+      - "Aggregation «componentof» → F9. Provide Support for Cooperative Systems"  # {9A847A37-1893-444d-A07E-B949ADC7EF47} → {F0D7E9A8-9F88-4e8f-AF0F-661C1990D546}
+      - "Aggregation «componentof» → F9.2 Provide Access to Bus Lanes"  # {D9AA61A9-FE40-477f-A370-DC8DBBF5396A} → {49FB5289-B936-4c75-A900-FDD675FDF34A}
+      - "Association «IN» → pscs_bus_lane_use_request"  # {13D8A7F1-C326-451f-BF04-26C973D3EDDC} → {540F257E-0D30-4328-90C2-5215A416BF2F}
+      - "Association «IN» → pscs_bus_lane_use_request_result"  # {4E1F63E3-74FF-440f-BC05-1953C8D7F6BB} → {D779D5DB-17D8-4fc4-87DD-09F1B2A1549A}
+      - "Association «IN» → pscs_other_bus_lane_information"  # {DF5C7972-6625-4017-BC2E-0086C8D7176B} → {7ED23BC7-1548-470e-9D3B-B3C3E6890F82}
+  - name: "F9.2.3 Manage Bus Lane Use Data"
+    guid: "{D22AEE44-A404-4b93-966F-8C40F9630C4D}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to manage the data about the availability and use of Bus Lanes by other Vehicles.
+      (2) The ability to receive data about the road network and the location of Bus Lanes within it, load that data into the store of Bus Lane Data and enable that data to be updated through input from the Road Network Operator.
+      (3) The ability to also receive data about traffic using the road network from the Manage Traffic functionality, plus data from the Manage Public Transport functionality about the PT service schedules and predicted arrival times at stops, all of which shall be loaded into the store of Bus Lane Data as historic data for traffic conditions and predicted arrival times.
+      (4) The ability to retain the most recent traffic flow and PT Vehicle arrival time prediction data as the current data for each Bus Lane and its associated road link and send it to the Manage Bus Lane use functionality whenever there is a change.
+      (5) When a request is received from the Road Network Operator, the ability to create statistical reports from the contents of the store of Bus Lane Data and send it to the Operator Interface function for output.
+    links:
+      - "Aggregation «componentof» → F9. Provide Support for Cooperative Systems"  # {D42BFACF-7319-4578-B497-9B4236C69929} → {F0D7E9A8-9F88-4e8f-AF0F-661C1990D546}
+      - "Aggregation «componentof» → F9.2 Provide Access to Bus Lanes"  # {F1AD34EA-928B-43bd-B88D-B65000317B36} → {49FB5289-B936-4c75-A900-FDD675FDF34A}
+      - "Association «IN» → pscs_current_data_about_bus_lanes"  # {325C14E4-E7C7-48ce-B598-095AD571FC40} → {C90A62CD-3650-4e4b-A38C-32199A80AEFC}
+      - "Association «IN» → pscs_load_bus_lane_data"  # {EADAB5D2-545E-4f0c-8FAC-AF530BC3AAD1} → {B23FAE8B-9A75-4ebf-8200-0FB45B943031}
+      - "Association «IN» → pscs_requested_bus_lane_data"  # {A6CC066F-8832-43a2-B442-7416500BD2AF} → {1478E221-127B-4e5b-89D1-DF6A4CBB0CBA}
+  - name: "F9.2.4 Provide Operator Interface for Bus Lanes"
+    guid: "{2CBF564D-C503-4103-80AD-2DEA66F6310E}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) A HMI through which the Road Network Operator can define and manage the use of Bus Lanes by other (non-PT) Vehicles.
+      (2) The HMI shall enable the Operator to provide and/or amend the data about the road network and in particular the allocation of Bus Lanes, including the ability to temporarily make some Bus Lane segments unavailable for by other non-PT Vehicles.
+      (3) The HMI shall also enable the Operator to obtain statistics about the use of the Bus Lanes.
+    links:
+      - "Aggregation «componentof» → F9. Provide Support for Cooperative Systems"  # {259B70FF-0ED4-4e9a-AF9D-AEBB9CF6323D} → {F0D7E9A8-9F88-4e8f-AF0F-661C1990D546}
+      - "Aggregation «componentof» → F9.2 Provide Access to Bus Lanes"  # {33CFFF2A-FE75-4572-98A6-B3BEC851EBCA} → {49FB5289-B936-4c75-A900-FDD675FDF34A}
+      - "Association «IN» → pscs_request_bus_lane_data"  # {67FCD3D5-BA54-4539-9BD4-95D10817F67B} → {25E9EB22-E8C3-42f5-A07F-7432E90B7E1F}
+      - "Association «IN» → pscs_update_road_data_for_bus_lanes"  # {FAA19D7B-D78B-4eed-B9AA-AEA7F3BCC197} → {F0670CBD-5ADD-48c1-967C-614116F2B491}
+      - "Association «IN» → to.rno-requested_bus_lane_data"  # {36630084-DD67-45fd-A65A-F7199FA2E585} → {CB6C9320-0A01-4e51-A3D1-22E9DC29F7E3}
+  - name: "F9.2.5 Manage use of Bus Lanes"
+    guid: "{0A320129-66E6-4a37-9324-319A58A48180}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to manage the use of Bus Lanes and when not being used by PT Vehicles to permit them to be used by other Vehicles.
+      (2) The ability to continuously collect from other functionality the current data about traffic flow through each segment of the road network and the predicted arrival times of PT Vehicles at points along the routes used to provide their services.
+      (3) The ability to use an appropriate predictive algorithm to calculate the spare capacity in each Bus Lane for a short time in the future (e.g. 15 minutes), both in terms of the numbers of extra Vehicles that can be accommodated, as well as the time for which this spare capacity will exist.
+      (4) When the Function receives a request from a non-PT Vehicle for a licence to use particular Bus Lane(s), the ability to determine if the presence of the Vehicle will impede the flow of PT Vehicles using the Bus Lane and to grant a licence to the requesting Vehicle if not.
+      (5) The ability to restrict the licence to the Vehicle that made the request, to a particular Bus Lane(s) and for a particular length of time.
+      (6) The ability to return details of the licence to the requesting functionality and to send the details to the functionality monitoring the use of Bus Lanes, so that any non-PT Vehicle with a licence will not be prosecuted for illegally using a Bus Lane.
+      (7) If the traffic conditions for which licences were issued and the algorithms used by the Function predict that the presence of non-PT Vehicles in Bus Lanes will impede the progress of PT Vehicles, or a "critical/emergency" situation arises, the ability to send a message to revoke the relevant licences.
+    links:
+      - "Aggregation «componentof» → F9. Provide Support for Cooperative Systems"  # {420F0256-081E-499e-8625-06408E8A8DA7} → {F0D7E9A8-9F88-4e8f-AF0F-661C1990D546}
+      - "Aggregation «componentof» → F9.2 Provide Access to Bus Lanes"  # {69342F90-A98E-4867-9A31-52ADA76128AD} → {49FB5289-B936-4c75-A900-FDD675FDF34A}
+      - "Association «IN» → pscs_bus_lane_data_request"  # {90FDBFF7-4AC9-450a-81BD-AA5487088031} → {10FB8985-0AB4-4c0d-9C15-9E8859E24676}
+      - "Association «IN» → pscs_bus_lane_licence_revoked"  # {9293EB28-8654-421d-B58D-EEB6395399F8} → {D4FA81E5-7C87-47ea-8D18-6423B04FE8C9}
+      - "Association «IN» → pscs_bus_lane_use_licence"  # {1465DD48-9092-41e9-BD8D-15943AA060C2} → {E53B64AE-F08D-43ed-93DD-EA36D1494864}
+      - "Association «IN» → pscs_bus_lane_use_licence_details"  # {A56D9001-CC6C-486d-B034-3402B43E6956} → {53EC9EC4-2F92-49af-AAA5-61B06F0BF405}
+      - "Association «IN» → pscs_licence_details_for_vehicle_identification"  # {D2EAF610-C2A1-4f02-8923-4E9557135FF2} → {0ED5C5A0-5317-4e4c-84AD-02CEAD85AC4A}
+  - name: "F9.2.6 Monitor Bus Lane Use"
+    guid: "{2E69EA5D-9F1F-4338-A31A-D1AB437F0AF4}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to monitor the Vehicles using Bus Lane and collect images and Vehicle data and compare the latter with a list of those non-PT Vehicles that have been granted licences.
+      (2) Where a non-PT Vehicle is found not to have a valid licence, the ability to send a warning message to the Vehicle Management functionality.
+      (3) If the Vehicle continues to use the Bus Lane without a licence, the ability to send details of the Vehicle and the Bus Lane it is incorrectly using to the Law Enforcement functionality.
+      (4) The ability to send data showing that Vehicles were incorrectly using a Bus Lane to the Manage Bus Lane functionality for recording in the store of Bus Lane Data.
+    links:
+      - "Aggregation «componentof» → F9. Provide Support for Cooperative Systems"  # {F7DCDB9A-A946-43a4-9252-B3475030974F} → {F0D7E9A8-9F88-4e8f-AF0F-661C1990D546}
+      - "Aggregation «componentof» → F9.2 Provide Access to Bus Lanes"  # {D03D282A-D402-4a68-A4D4-0D22056FB6E6} → {49FB5289-B936-4c75-A900-FDD675FDF34A}
+      - "Association «IN» → pscs.psle_bus_lane_violation"  # {BEB7A9B6-5A77-4a3d-BE6A-0C237379FDE8} → {651D8FE9-4341-40bd-9C60-E14BF9F2A442}
+      - "Association «IN» → pscs_incorrect_bus_lane_use_data"  # {7F7DB723-7F7F-4317-879E-EE18549ADBA8} → {A299874A-D361-4746-9806-BD5EE6E0E232}
+      - "Association «IN» → pscs_warnings_for_driver"  # {1CD21E4F-276F-4e26-9FB1-5CE396DAAA5F} → {9B45B18E-776E-4bda-9A44-DB498DF1AB41}
+  - name: "F9.3 Manage Vehicle Access to Sensitive Areas"
+    guid: "{BECAF613-EAD1-4f7d-BBA6-63FBDADA831A}"
+    type: "Activity"
+    stereotype: "FRAME_High_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This High-level Function shall provide functionality that shall enable the management of the use of parts of the road network that are in close proximity to geographic areas that are designated as being "sensitive areas".  It shall be possible for Vehicles to be barred from access to any of these "sensitive areas" and for Vehicles approaching the entrance(s) and exit(s) to be monitored.  When Vehicles are granted access to these "sensitive areas", instructions shall be passed to Drivers about their use using functionality in the Provide Support for Host Vehicle Systems Functional Area.  If a Vehicle tries to enter a "sensitive area" without having been granted access the same mechanism shall be used to send a warming message to the Driver.  Details shall also be sent to the Provide Support for Law Enforcement Functional Area for processing into a prosecution.
+    links:
+      - "Aggregation «componentof» → F9. Provide Support for Cooperative Systems"  # {ABDAFB1D-02AB-4609-A528-C175F42EC921} → {F0D7E9A8-9F88-4e8f-AF0F-661C1990D546}
+      - "Association «IN» → fesp.g-map_data_for_managing_sensitive_area_access"  # {A8949DA6-48CA-4081-835C-B0BBF4D5B072} → {1B3034CE-7CFD-4a33-98E0-3F98DA587D15}
+      - "Association «IN» → flds_vehicle_location_for_sensitive_area_access"  # {A3D4FADE-7629-4ab5-BF98-C59D61919494} → {7D8818DE-BE50-415f-ACF5-6EA1652E2424}
+      - "Association «IN» → fo.rno-request_current_vehicle_access_criteria"  # {06E9D5B4-3790-43aa-92BC-AD5955E1366E} → {EB36EC02-9973-4228-86BF-C0DD1BD688FF}
+      - "Association «IN» → fo.rno-request_sensitive_area_vehicle_use_report"  # {1E0203A4-9E4E-4cae-8365-284305AB22BB} → {001545BD-BB1C-4834-9001-4975864DD793}
+      - "Association «IN» → fo.rno-update_current_vehicle_access_criteria"  # {4F5CC760-99A0-4fe6-9E2F-A396A145FDC9} → {8B1ACDF6-13ED-4b4e-9F34-5C7B6C877BE0}
+      - "Association «IN» → pscs.mt_inter-urban_sensitive_area_access_refused"  # {632ED0F1-6964-4362-A67F-6B4890914D9B} → {6DCF6F9E-C77C-4567-BDEE-A8659A11C54D}
+      - "Association «IN» → pscs.mt_sensitive_area_access_refused"  # {61551FCF-656E-43ba-A459-74FD5C938AE2} → {AC4AFAB4-12DB-41b0-9688-796818EB7E22}
+      - "Association «IN» → pscs.mt_urban_sensitive_area_access_refused"  # {CA122064-B38D-4fc7-A09C-EBDDA0AF7DDA} → {4B329A67-62BA-4278-9426-E81B50CEA0BA}
+      - "Association «IN» → pscs.pshvs_driver_instructions_for_sensitive_areas"  # {31705D84-08EB-45b4-9016-9FFE3AB16F34} → {C4143ED0-8162-4ef2-A227-1573481D88C8}
+      - "Association «IN» → pscs.pshvs_driver_report_from_sensitive_area"  # {D690ABFF-FE6A-4e01-A3C2-4365965F90D6} → {D7504CFB-A476-455e-BC72-06603770DA3A}
+      - "Association «IN» → pscs.psle_sensitive_area_entrance_violation"  # {DCA0EFE3-AA9B-4392-A20B-A8AC15BFAE1B} → {2F8684A0-613A-4d56-97C9-A711D33831D9}
+      - "Association «IN» → pscs_current_vehicle_access_data"  # {99494BE5-AF0F-439b-B707-4A69F597CEFD} → {80281D4C-58D0-47f4-8FC9-DE94D5035891}
+      - "Association «IN» → pscs_current_vehicle_location_in_sensitive_area"  # {CA671AAD-3B6E-44ce-9FB9-47E559281275} → {037E08C2-63E5-4ad0-A0C7-3C62CAF0D79A}
+      - "Association «IN» → pscs_load_sensitive_area_data"  # {D2DA346B-A98D-4681-A63D-345D10BC2693} → {23938F16-9023-4822-9329-1473A3A65E1A}
+      - "Association «IN» → pscs_read_sensitive_area_data"  # {AEE1E5CE-CE34-454d-A7E0-A85BB4570371} → {C0DE5176-0ACE-4204-93D3-771ACBE6014A}
+      - "Association «IN» → pscs_request_current_vehicle_access_data"  # {5BC04F3F-3AA6-421b-943A-585260BADABE} → {3D2F6D7A-B02C-4713-B760-D96B10137E42}
+      - "Association «IN» → pscs_request_sensitive_area_entry_permission"  # {91D8410A-B7F7-4c3b-822B-3A0263484F42} → {949689F4-240D-478c-876E-6254BE5372FA}
+      - "Association «IN» → pscs_requested_sensitive_area_entry_permission"  # {6C466FCE-E481-4789-BB1E-3F77AE085E6C} → {5E5CB47F-CC12-43d0-A0D8-CFC9D72C81CB}
+      - "Association «IN» → pscs_update_vehicle_access_criteria"  # {52E495E4-A54E-49cb-A41B-1954B563CA66} → {E794CBB9-E8B1-46be-9C9C-B2E218A339A9}
+      - "Association «IN» → pscs_vehicle_leaving_sensitive_area"  # {BE1377EB-4B34-4ee4-9953-9F0B3CEB8E77} → {5149E526-2D33-44cc-AD1D-23115E0847F1}
+      - "Association «IN» → to.rno-current_vehicle_access_criteria"  # {8201FDC4-4CD5-4f5a-87E2-E4A2A82AE401} → {47EA5985-9F06-46b9-A8C0-40AFBE78B606}
+      - "Association «IN» → to.rno-requested_sensitive_area_vehicle_use_report"  # {C3C10716-6777-4f6f-8008-95B81BD8F81F} → {DD91A1AB-D650-4776-A469-B4E3E4CD35ED}
+      - "Association «IN» → to.rno-sensitive_area_access_outputs"  # {08EE5CB5-CD43-4dbe-BE7E-20499F05E6FF} → {E64AEB9B-A548-4fed-AEDF-2D8BDA846ABD}
+  - name: "F9.3.1 Provide Vehicle Support for Sensitive Areas Access"
+    guid: "{4269794C-182E-47b6-8ABA-50AEA140E01D}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability for to use various inputs that will enable it to identify that its host Vehicle is entering a part of the road network that has been designated as a "sensitive are".
+      (2) When it finds that the host Vehicle will be entering a "sensitive area", the ability to send an access request to the Manage Data about Vehicle use of Sensitive Areas function and include in the request details of the Vehicle identity, type and other details such as if hazardous goods are being carried.
+      (3) If access is granted the ability to continuously provide data about the location of the host Vehicle so that it can be tracked whilst it is in the "sensitive area".
+      (4) When it detects that its host Vehicle is leaving the "sensitive area" it shall provide this information to the Manage Data about Vehicle use of Sensitive Areas function and shall provide a report to the Driver of the host Vehicle via other functionality.
+      (5) If the host Vehicle is not granted permission to access the "sensitive area" it shall output a message to the Driver, again via other functionality and send a prosecution file to other functionality.
+    links:
+      - "Aggregation «componentof» → F9. Provide Support for Cooperative Systems"  # {D24544D0-D87B-45b3-878A-0EE486D143BB} → {F0D7E9A8-9F88-4e8f-AF0F-661C1990D546}
+      - "Aggregation «componentof» → F9.3 Manage Vehicle Access to Sensitive Areas"  # {97B37C4C-FE03-4976-8568-FE84D9A002DF} → {BECAF613-EAD1-4f7d-BBA6-63FBDADA831A}
+      - "Association «IN» → pscs.mt_inter-urban_sensitive_area_access_refused"  # {2113BD38-A98E-4d7a-898A-1B22692E8E97} → {6DCF6F9E-C77C-4567-BDEE-A8659A11C54D}
+      - "Association «IN» → pscs.mt_urban_sensitive_area_access_refused"  # {F7AB7BE3-DF90-4c28-8A71-B69E75D6903D} → {4B329A67-62BA-4278-9426-E81B50CEA0BA}
+      - "Association «IN» → pscs.pshvs_driver_instructions_for_sensitive_areas"  # {672BA22C-DFD2-469e-9D18-F56C22AD9E52} → {C4143ED0-8162-4ef2-A227-1573481D88C8}
+      - "Association «IN» → pscs.pshvs_driver_report_from_sensitive_area"  # {B175CEB2-0F39-4888-8C2E-1FE31B71C9FA} → {D7504CFB-A476-455e-BC72-06603770DA3A}
+      - "Association «IN» → pscs.psle_sensitive_area_entrance_violation"  # {2CFB49DB-0481-4af7-9E2C-E8EE197A75E5} → {2F8684A0-613A-4d56-97C9-A711D33831D9}
+      - "Association «IN» → pscs_current_vehicle_location_in_sensitive_area"  # {28231BDF-0072-4cbb-8538-86A111563A41} → {037E08C2-63E5-4ad0-A0C7-3C62CAF0D79A}
+      - "Association «IN» → pscs_request_sensitive_area_entry_permission"  # {C0EB58C6-8E92-401b-AEB2-2D62C03EF8E3} → {949689F4-240D-478c-876E-6254BE5372FA}
+      - "Association «IN» → pscs_vehicle_leaving_sensitive_area"  # {8748C2C7-A5A6-427c-B770-19B2C8FF118F} → {5149E526-2D33-44cc-AD1D-23115E0847F1}
+  - name: "F9.3.2 Manage Data about Vehicle use of Sensitive Areas"
+    guid: "{2C6AAFEF-FD0A-4959-9171-9973E8050899}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to take responsibility for the management of the use of "sensitive areas".
+      (2) The ability to receive requests from Host Vehicles to enter these "sensitive areas" and to grant access provided that certain criteria are fulfilled.
+      (3) When access is granted, the ability to use the Host Vehicle location data that it receives to monitor the use the Host Vehicles are making of the "sensitive areas" and to send instructions for output to Drivers via other functionality if and when required.
+      (4) The ability to store information about the Host Vehicles that use the "sensitive areas" and the criteria for their admission in the store of Sensitive Area Monitoring Data.
+      (5) The ability for the Road Network Operator to provide updates to the admission criteria and to see the current criteria through the Provide Operator Interface for Sensitive Area use Function.
+    links:
+      - "Aggregation «componentof» → F9. Provide Support for Cooperative Systems"  # {D7161637-8049-4149-B6B6-EBC31F6F7AF6} → {F0D7E9A8-9F88-4e8f-AF0F-661C1990D546}
+      - "Aggregation «componentof» → F9.3 Manage Vehicle Access to Sensitive Areas"  # {094E0732-FD41-4530-AF9C-CA0520328EE3} → {BECAF613-EAD1-4f7d-BBA6-63FBDADA831A}
+      - "Association «IN» → pscs_current_vehicle_access_data"  # {E187C0DA-B6B0-447b-A2ED-18167387507F} → {80281D4C-58D0-47f4-8FC9-DE94D5035891}
+      - "Association «IN» → pscs_load_sensitive_area_data"  # {1BDA8028-6C00-4968-95AE-D5E7DAD52B91} → {23938F16-9023-4822-9329-1473A3A65E1A}
+      - "Association «IN» → pscs_requested_sensitive_area_entry_permission"  # {203A881A-452B-44b2-8161-4541F7B7FE78} → {5E5CB47F-CC12-43d0-A0D8-CFC9D72C81CB}
+  - name: "F9.3.3 Provide Operator Interface for Sensitive Area Use"
+    guid: "{774F56BF-5A69-4f2f-A540-769663961749}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) A HMI through which the Road Network Operator can manage the criteria that are used to control the access of Vehicles to "sensitive areas" within the road network.
+      (2) The ability for the Operator to use the HMI to request details of the current criteria and to update them.
+      (3) The ability for the Operator to request and be provided with a report on the use that Vehicles have made of the "sensitive areas" in the road network.
+    links:
+      - "Aggregation «componentof» → F9. Provide Support for Cooperative Systems"  # {27CBCEE5-661A-41a1-9B00-101595D69464} → {F0D7E9A8-9F88-4e8f-AF0F-661C1990D546}
+      - "Aggregation «componentof» → F9.3 Manage Vehicle Access to Sensitive Areas"  # {36FD8DFE-E4FB-4a6a-BECE-E92228637DDA} → {BECAF613-EAD1-4f7d-BBA6-63FBDADA831A}
+      - "Association «IN» → pscs_request_current_vehicle_access_data"  # {D5A35AB1-7893-4969-99CF-B2DCA891C6EA} → {3D2F6D7A-B02C-4713-B760-D96B10137E42}
+      - "Association «IN» → pscs_update_vehicle_access_criteria"  # {15CE12B0-C0B9-4260-A550-46D74DF68D59} → {E794CBB9-E8B1-46be-9C9C-B2E218A339A9}
+      - "Association «IN» → to.rno-current_vehicle_access_criteria"  # {80884598-B8F0-408d-BEE5-3DEAF55F552E} → {47EA5985-9F06-46b9-A8C0-40AFBE78B606}
+      - "Association «IN» → to.rno-requested_sensitive_area_vehicle_use_report"  # {F60EDA8F-5235-4181-98D3-2D570020A38E} → {DD91A1AB-D650-4776-A469-B4E3E4CD35ED}
+  - name: "F9.4 Provide Hazardous Goods Management"
+    guid: "{E103AEF6-B156-44ba-8A7D-9B1C3D138571}"
+    type: "Activity"
+    stereotype: "FRAME_High_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This High-level Function shall enable the routes used by Freight Vehicles carrying Hazardous Goods to be planned and for the use that these Vehicles make of these routes to be monitored.  Drivers of these Vehicles shall be sent route guidance instructions so that they can follow the prepared route.
+    links:
+      - "Aggregation «componentof» → F9. Provide Support for Cooperative Systems"  # {F4EB36BC-10A9-4dd7-A9A7-830DAB46375C} → {F0D7E9A8-9F88-4e8f-AF0F-661C1990D546}
+      - "Association «IN» → fd.hgvd-redetermine_route_request"  # {74785CDC-EED2-41ce-B9DC-138D854D8D9E} → {7FB7EAAC-7CF4-4b7a-A9EC-2C8638E504BA}
+      - "Association «IN» → fd.hgvd-route_request_details"  # {A38599D9-394A-425a-BF18-CF9A22E73C67} → {808DD15D-CC02-444f-9C52-09C223040C05}
+      - "Association «IN» → flds-hazardous_goods_vehicle_location"  # {1D5C9EA8-ABE6-4617-BEB4-F7268D8C2FD7} → {5B2D9C42-E1BE-4e7f-9541-E5BD4E484FD1}
+      - "Association «IN» → fo.rno-hazardous_goods_vehicle_criteria_request"  # {73C3EA92-9B9C-4f1e-BD69-1502571F41A8} → {9DA597D9-D898-42a4-883C-AFE7F3F47596}
+      - "Association «IN» → fo.rno-hazardous_goods_vehilce_criteria_update"  # {92D15C1E-67FC-4e34-9BF3-A8BC87D72B2A} → {4A359900-9BA9-4389-8ACB-67B086D38FE8}
+      - "Association «IN» → fors.hgvm-hazardous_goods_vehicle_route_details"  # {93407BB5-49CD-4542-AEF1-6C95A8FFBC76} → {700737C5-8249-406f-B210-6AFEB48D82C1}
+      - "Association «IN» → mt.pscs_hazardous_goods_vehicle_incedent_strategy"  # {A10DF8E7-9BA5-45c7-A1B2-690A0D5E6E40} → {29793AF5-A061-4234-8A6A-D2FEF9AD9050}
+      - "Association «IN» → pscs.mt_rest_area_spaces_request"  # {4AF74F6F-7591-4b0c-AD6B-F5DDF1C9D724} → {E765D8FF-BAC0-4553-A129-68BBEAF97D53}
+      - "Association «IN» → pscs.ptja_hazardous_goods_vehicle_route_request"  # {758F5BD2-C699-492d-98DF-ACCFCE9242C3} → {5B22301C-A7EB-4202-9738-1BE12665C619}
+      - "Association «IN» → pscs_hazardous_goods_vehicle_current_location"  # {0878E700-F65F-4515-95B3-EFDA6D33E645} → {55D8E628-1070-41c6-81E0-1AF1E559CF29}
+      - "Association «IN» → pscs_hazardous_goods_vehicle_route_criteria_input"  # {74E74251-449C-4674-8106-F659A4CCC606} → {4263A60D-D04E-4cb3-858C-6FB4EB4AFD84}
+      - "Association «IN» → pscs_hazardous_goods_vehicle_route_criteria_output"  # {6187B8D6-7740-4fc6-B308-3A105421DDAF} → {A1622805-F10E-48a7-839E-E545C799A15E}
+      - "Association «IN» → pscs_hazardous_goods_vehicle_route_details"  # {4AAE293D-8E9F-46db-9367-E3EAC3E34303} → {F7166709-E00C-4bc7-B035-030B42324994}
+      - "Association «IN» → pscs_hazardous_goods_vehicle_route_guidance"  # {788F71A6-FA17-45f8-AA76-22BC728F6D5B} → {5B7FE77B-BF24-459c-AAE5-F275F2778CA6}
+      - "Association «IN» → pscs_hazardous_goods_vehicle_route_request"  # {DE46A798-77BF-4092-9AEB-215AE4AF8128} → {240603FC-575B-48e6-8BB5-5B211CD7A8E7}
+      - "Association «IN» → pscs_hazardous_goods_vehicle_route_status"  # {3B07F9D2-D42E-44a4-AB1F-1E16078908BE} → {B08A726D-4061-496a-8358-4CE14A7412AD}
+      - "Association «IN» → pscs_hazardous_routes_data_load"  # {839DCE50-E819-444e-8A49-3636F547FC47} → {9843DFA8-E940-451e-AE6E-DB9DD5C1E5C2}
+      - "Association «IN» → pscs_hazardous_routes_data_read"  # {2C7290A0-1B20-42fb-B0CA-D522E988566D} → {C5C16415-F3EA-4aa6-9658-867844784111}
+      - "Association «IN» → pshvs.pscs_hazarduous_goods_vehicle_data_for_route"  # {D48C62F2-B5DE-40e9-9E51-B86CAA741F9C} → {9AE25689-CB48-40a5-86E4-EB9E5515C3F5}
+      - "Association «IN» → ptja.pscs_hazardous_goods_vehicle_route_response"  # {AD54B71F-64CF-4152-BC73-42210D96B256} → {DC3D8DFB-C2BC-43ad-876B-AA2DF94A8B03}
+      - "Association «IN» → td.hgvd-route_guidance"  # {FD3A1F41-14C4-409e-BE08-595A7929FBF4} → {00AC0A79-BBBF-4d51-A6E3-AC425A5B150C}
+      - "Association «IN» → td.hgvd-route_outputs"  # {E648BABB-78DB-498d-9067-C90FFF7E28B7} → {A3BC9CAB-FD0D-4d1a-8A12-6FA8D109AE7B}
+      - "Association «IN» → td.hgvd-vehicle_deviating_from_route"  # {12B66820-F1AE-48d1-BBFF-882722C0CFF8} → {76C724DB-E527-4839-92D7-76C6886FBEA1}
+      - "Association «IN» → to.rno-hazardous_goods_vehicle_criteria_output"  # {772441C8-B1C0-4954-948A-14781A04B435} → {8256CE38-04ED-418f-AF74-49A005F03D1D}
+      - "Association «IN» → to.rno-hazardous_goods_vehicle_management_outputs"  # {E11594AE-2382-4b3c-A64B-7DC3C43556EB} → {E0C93ACD-4DE4-415c-A9DF-D9BDB0BD7B53}
+      - "Association «IN» → tors.hgvm-hazardous_goods_vehicle_route_details"  # {97ED0895-4B60-4dcd-87D8-32EDCFD9B66E} → {4688FD01-75ED-42cc-AFC1-1CD744314D65}
+      - "Association «IN» → tors.hgvm-hazardous_goods_vehicle_route_implementation"  # {08A061F8-BD2D-4663-9D2C-7130F90FA7CA} → {858AA098-3F67-45cf-82D4-5429D4C66038}
+  - name: "F9.4.1 Provide Manage Hazardous Goods Operator Interface"
+    guid: "{6918F957-687D-4535-9856-BF56F94BC3A5}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) A HMI through which the Road Network Operator can have access to the criteria used to determine routes for Vehicles that are carrying Hazardous Goods.
+      (2) The ability for the Operator to use the HMI to either be provided with an output of the current criteria, or to update the current criteria.
+    links:
+      - "Aggregation «componentof» → F9. Provide Support for Cooperative Systems"  # {FA5D3E72-4189-4024-BD92-984C5F40330A} → {F0D7E9A8-9F88-4e8f-AF0F-661C1990D546}
+      - "Aggregation «componentof» → F9.4 Provide Hazardous Goods Management"  # {8CF7F07F-C44D-4340-9EEF-1721BA1E8182} → {E103AEF6-B156-44ba-8A7D-9B1C3D138571}
+      - "Association «IN» → pscs_hazardous_goods_vehicle_route_criteria_input"  # {09922A15-1DE1-4482-BC4A-DF58FE4525E8} → {4263A60D-D04E-4cb3-858C-6FB4EB4AFD84}
+      - "Association «IN» → to.rno-hazardous_goods_vehicle_criteria_output"  # {39678CF4-DD18-45f7-9CF8-D77792085215} → {8256CE38-04ED-418f-AF74-49A005F03D1D}
+  - name: "F9.4.5 Manage Hazardous Goods Vehicle Route Creation"
+    guid: "{47723257-C4DF-457d-8BBD-BC59233D37EB}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to manage the creation of routes by Vehicles carrying Hazardous Goods.
+      (2) The ability to get route for the Vehicle created by the Trip Planning functionality using criteria provided by the Road Network Operator together with data about the actual route provided by the Driver through the HMI on-board the Vehicle.
+      (3) The ability to determine from the time the route will take to implement, the need for the Driver to take a rest break.  If this is needed then the Function must request a parking space from the Manage Traffic functionality.
+      (4) The ability to respond to the Driver through the HMI on-board the Vehicle of the success or failure of the route creation process.
+      (5) The ability to keep all routes that are created plus a unique identifier, the criteria used to do this, the Vehicle details, route origin and destination as a record of what was used and in case they may be useful in the future in the store of Hazardous Vehicle Routes Data.
+      (6) When a route has been created and implementation is requested by the Driver through the HMI on-board the Vehicle, the ability to send it to other functionality for actual implementation.
+      (7) The ability to send details of the route to another instance of itself and to receive details of routes from other instances of itself.
+      (8) For routes received from other instances of itself, the ability to store it and when it required send it to other functionality for actual implementation.
+    links:
+      - "Aggregation «componentof» → F9. Provide Support for Cooperative Systems"  # {83C59747-228B-452a-88D6-6D3BC9275202} → {F0D7E9A8-9F88-4e8f-AF0F-661C1990D546}
+      - "Aggregation «componentof» → F9.4 Provide Hazardous Goods Management"  # {96A3F0B1-98CF-4a7f-A0B5-A2CA742F273A} → {E103AEF6-B156-44ba-8A7D-9B1C3D138571}
+      - "Association «IN» → pscs.mt_rest_area_spaces_request"  # {31345D05-B9DE-416c-9D3C-7D95CBB1BE50} → {E765D8FF-BAC0-4553-A129-68BBEAF97D53}
+      - "Association «IN» → pscs.ptja_hazardous_goods_vehicle_route_request"  # {AB10616C-DA73-4b03-9528-C5187055BD33} → {5B22301C-A7EB-4202-9738-1BE12665C619}
+      - "Association «IN» → pscs_hazardous_goods_vehicle_route_criteria_output"  # {AC902B3D-AA8D-4c8a-9BB2-C53F356BF71B} → {A1622805-F10E-48a7-839E-E545C799A15E}
+      - "Association «IN» → pscs_hazardous_goods_vehicle_route_details"  # {5D863F92-84A2-4b85-BF50-4224ECFBD36F} → {F7166709-E00C-4bc7-B035-030B42324994}
+      - "Association «IN» → pscs_hazardous_goods_vehicle_route_status"  # {5CECD119-85CB-4801-93CE-351DBF997341} → {B08A726D-4061-496a-8358-4CE14A7412AD}
+      - "Association «IN» → pscs_hazardous_routes_data_load"  # {77647D39-D719-44a1-B4BC-912E8D9EA368} → {9843DFA8-E940-451e-AE6E-DB9DD5C1E5C2}
+      - "Association «IN» → tors.hgvm-hazardous_goods_vehicle_route_details"  # {418E6400-85C2-4eb2-A9F4-0D137BD37A88} → {4688FD01-75ED-42cc-AFC1-1CD744314D65}
+  - name: "F9.4.6 Provide Interface for Hazardous Goods Vehicle Driver"
+    guid: "{3ECE82EA-7550-46b0-9D04-152E6A4939BE}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) A HMI through which the Driver of a Hazardous Goods Vehicle can request a route to a specified destination and be given guidance for its implementation.
+      (2) The ability to determine the current Vehicle location and details about the Vehicle from other inputs.
+      (3) The ability to notify the Driver when a new route has been successfully created.
+      (4) In response to an input from the Driver request that a previously created route is implemented.
+      (5) The ability to display received route guidance instructions to the Driver.
+      (6) When a route is being implemented, the ability to continuously provide the Vehicle location so that progress along the route can be monitored by other functionality.
+      (7) If this other functionality sends a message that the Vehicle is departing from the determined route, the ability to immediately output a warning to the Driver, making sure that this output takes priority of all other non-emergency outputs.
+    links:
+      - "Aggregation «componentof» → F9. Provide Support for Cooperative Systems"  # {64805559-F1E4-4641-8D8A-E9BCC7A53279} → {F0D7E9A8-9F88-4e8f-AF0F-661C1990D546}
+      - "Aggregation «componentof» → F9.4 Provide Hazardous Goods Management"  # {745A0EF9-4D53-42af-BDC3-BE8278530264} → {E103AEF6-B156-44ba-8A7D-9B1C3D138571}
+      - "Association «IN» → pscs_hazardous_goods_vehicle_current_location"  # {23C17CA4-A0FB-4209-8BAB-7CCEB3790203} → {55D8E628-1070-41c6-81E0-1AF1E559CF29}
+      - "Association «IN» → pscs_hazardous_goods_vehicle_route_implmentation"  # {9A5E6EAA-FA4A-4e14-B652-D840C04419CC} → {58E4AF8C-5FD9-41c5-8421-210E4DE28980}
+      - "Association «IN» → pscs_hazardous_goods_vehicle_route_request"  # {3CC8450F-9CB4-4555-B4FB-CB7F9F698A61} → {240603FC-575B-48e6-8BB5-5B211CD7A8E7}
+      - "Association «IN» → td.hgvd-route_guidance"  # {5DFDD7DA-033F-4ba9-8457-C784E49BD0D7} → {00AC0A79-BBBF-4d51-A6E3-AC425A5B150C}
+      - "Association «IN» → td.hgvd-route_request_response"  # {3D3A3504-BAD4-491c-ADC7-0A5C7390BD7E} → {91B4FFE7-53F0-4cc3-885A-B1E631BE36E0}
+      - "Association «IN» → td.hgvd-vehicle_deviating_from_route"  # {2B38FC86-8571-44c5-95BB-AC92B4B44706} → {76C724DB-E527-4839-92D7-76C6886FBEA1}
+  - name: "F9.4.7 Manage Hazardous Goods Vehicle Route Implementation"
+    guid: "{0150B315-9BA0-4e79-93EC-DC17410CBA73}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to generate route guidance instructions for the implementation of a route that the Driver of a Hazardous Goods Vehicle has previously requested that can be sent to the Driver interface functionality.
+      (2) The ability to receive updates of the Vehicle's location as it moves along the route.
+      (3) The ability to use these updates to find the next appropriate set of instructions, which it will send to the Driver interface functionality.
+      (4) The ability to manage the simultaneous use of route segments by Vehicles carrying different types of hazardous goods.
+      (5) The ability to identify from the updates of the Vehicle's location that it has deviated from the route and send it to the Driver interface functionality.
+      (6) The ability to identify from the updates of the Vehicle's location that it is going outside the geographic area managed by the system and send a route implementation request to another instance of the functionality in this High-level Function.
+    links:
+      - "Aggregation «componentof» → F9. Provide Support for Cooperative Systems"  # {898B382B-1541-43d2-A16C-C2E7EEC13CCE} → {F0D7E9A8-9F88-4e8f-AF0F-661C1990D546}
+      - "Aggregation «componentof» → F9.4 Provide Hazardous Goods Management"  # {FD92055D-9A66-4140-B2FF-170D0DEA5D87} → {E103AEF6-B156-44ba-8A7D-9B1C3D138571}
+      - "Association «IN» → pscs_hazardous_goods_vehicle_deviated_from_route"  # {0F4E2DDA-9222-43ca-9EA0-BF00F440BBB6} → {DEE9EB8B-8587-4fb0-B811-025E419A491C}
+      - "Association «IN» → pscs_hazardous_goods_vehicle_route_guidance"  # {14D2357A-1AD1-4b55-90E5-6AA1D8559415} → {5B7FE77B-BF24-459c-AAE5-F275F2778CA6}
+      - "Association «IN» → pscs_hazardous_goods_vehicle_route_implementation_status"  # {D3B9BDE7-61B5-49b5-8D48-2A83EF80C3DB} → {48E3FC8D-9736-4c71-9228-30C16F7EC408}
+      - "Association «IN» → tors.hgvm-hazardous_goods_vehicle_route_implementation"  # {EFA87A61-927B-4346-A5A7-31D3E08FA376} → {858AA098-3F67-45cf-82D4-5429D4C66038}
+  - name: "F9.5 Manage Urban Un/Loading Zones"
+    guid: "{73A6BD74-8CDC-47de-9E81-86066B69AD2F}"
+    type: "Activity"
+    stereotype: "FRAME_High_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This High-level Function shall provide functionality for the management of loading and unloading (unloading) zones for Freight Vehicles in the urban road network.  It shall enable Freight Vehicle Drivers and Freight Transport Operations Managers to book the time at which a Freight Vehicle will be in particular zones to load or unload freight.  The Drivers and Freight Transport Operations Managers shall also be able to update these booking if their expected time of arrival changes.  If a particular requested zone is not available for the Freight Vehicle that needs to use it, then the Driver shall be provided with instructions about the holding zone that is to be used as a place to park until the requested zone becomes available.  Facilities shall be provided to enable the Parking Operator to be responsible for the overall management of the zones.
+    links:
+      - "Aggregation «componentof» → F9. Provide Support for Cooperative Systems"  # {0C1378A5-DC4C-40a2-BAB6-9B243D5A399B} → {F0D7E9A8-9F88-4e8f-AF0F-661C1990D546}
+      - "Association «IN» → fft.ftom-hgv_identity_for_un/loading_zone_booking"  # {8BC08E12-CFF1-4e14-A1BA-300607F459E4} → {D6F3A7DC-B3E6-4d3c-9075-AE9FFA7DA082}
+      - "Association «IN» → fo.ulzo-current_un/loading_zone_data_update"  # {A82E18F0-8E98-4350-813E-14F375ADB979} → {5A7D8BBB-23AA-4f9c-8344-D59A27CDB930}
+      - "Association «IN» → fo.ulzo-request_current_ul/loading_zone_data"  # {64CAC74A-6538-4c30-9A63-77F44D04581C} → {4E47E336-0FDD-4fee-8C47-2C1D90C7DFD7}
+      - "Association «IN» → fo.ulzo-un/loading_zone_use_response"  # {7DB44BAC-D62B-48e3-99CA-69D0B6A156F7} → {614403FC-86B5-43d3-83C7-F1097547EF64}
+      - "Association «IN» → ftrfc-freight_vehicle_identity_for_holding_zone"  # {16625338-3E35-4dd7-9B94-72623BA7F0D8} → {046B85B6-3DFA-4c86-A23D-361720CA8249}
+      - "Association «IN» → ftrfc-freight_vehicle_identity_for_un/loading_zone"  # {308C7EFF-2670-47f7-9079-845504D9530B} → {D056C826-0AB8-463a-9874-84497134DBBF}
+      - "Association «IN» → fv.fv-freight_vehicle_identity_for_holding_zone"  # {70153B65-947A-4460-A73E-AD0419067D36} → {55C764D7-1CED-47e3-994A-A639B9799E2B}
+      - "Association «IN» → fv.fv-freight_vehicle_identity_for_un/loading_zone"  # {2091DB6E-D6FF-40ca-8896-7812520227A6} → {5FC8DCE7-9265-4b13-A629-568A3C30962D}
+      - "Association «IN» → pscs.pshvs_un/loading_zone_data_outputs"  # {8C8C93F6-21BC-4df8-ADFF-548411C7030C} → {65A4A665-42F8-4978-9071-AF1EFA474D0D}
+      - "Association «IN» → pscs.pshvs_un/loading_zone_unavailable_for_new_eta"  # {B99F5556-017E-4ba9-8AF4-FFF8AA765B8C} → {7FC47F6B-EBBF-424f-8DA4-09264C5D6898}
+      - "Association «IN» → pscs.pshvs_un/loading_zone_use_response"  # {282F65F3-1B9B-41f0-B507-84288B8F6E85} → {DCABDBA8-7AE2-4e0b-A314-DA235A3171E7}
+      - "Association «IN» → pscs_freight_vehicle_identity_for_holding_zone"  # {9221A900-4584-4bab-85C3-28175423508E} → {8BBFA66D-AC72-4bd4-A9B6-A3D7A62F3607}
+      - "Association «IN» → pscs_freight_vehicle_identity_for_un/loading_zone"  # {BAFB0493-D52D-4715-B427-FC92FAD837D3} → {1FB20052-8408-44bd-A483-3CD9C4FB8751}
+      - "Association «IN» → pscs_incorrect_vehicle_in_un/loading_zone"  # {97E0E75E-F147-4aff-A160-591B9A0485B9} → {61106F8F-D247-4771-873A-4AA225F272C2}
+      - "Association «IN» → pscs_load_zone_use_data"  # {F14C88C0-533F-40db-A409-E78C10FB1CAD} → {E1B2F43E-25A2-42e9-9017-CB6964516BAC}
+      - "Association «IN» → pscs_read_zone_use_data"  # {4CB2106D-50BF-4d94-B648-D49196CBE932} → {C7901726-4076-4dd8-9A60-EAE0220C2EEF}
+      - "Association «IN» → pscs_request_un/loading_zone_data"  # {95DC638F-D3E2-4885-88CF-DD0BE6D1FE2E} → {0C0D7AA2-E694-42e7-8EC4-D38BCBFC5C0F}
+      - "Association «IN» → pscs_request_un/loading_zone_status"  # {987C5210-66A3-43f4-8B61-69F705FAEEB5} → {B9ED7144-3C26-417f-8601-FA01C8641FA1}
+      - "Association «IN» → pscs_requested_un/loading_zone_data"  # {3DFCA353-8DB7-4e98-870B-E9F6A83D978A} → {A43414C3-FD64-404c-AA55-866AA64E3377}
+      - "Association «IN» → pscs_requested_un/loading_zone_status"  # {63CB3170-BB1C-461c-83F6-C93BC2206F8D} → {52665027-3C50-4855-B300-6767FA2E43A8}
+      - "Association «IN» → pscs_un/loading_zone_booking_for_FTOM"  # {0694CFC0-D92E-4563-B10A-44F769FC28A4} → {B9B028B9-C8D2-42aa-8FAE-652232571EF4}
+      - "Association «IN» → pscs_un/loading_zone_use_request"  # {0C86287E-922F-45ad-831A-8407367E29C1} → {D9B7F16D-6729-4364-8B1D-B2DE39F9C7E0}
+      - "Association «IN» → pscs_un/loading_zone_use_response"  # {1904E7C3-B3E0-4f14-8488-A2D24627BF3D} → {E7BB19FD-268B-40de-BA2A-16872989B158}
+      - "Association «IN» → pscs_updated_un/loading_static_data"  # {3A2BC661-6A35-43bb-8743-D18B603B6BC9} → {AADF39B1-B878-4c9e-9DCA-2D10DF0C910F}
+      - "Association «IN» → pshvs.pscs_un/loading_zone_eta"  # {AAD5FB5C-CFE3-429d-B2AB-C21DDBC59096} → {BBE07E17-9D20-408f-AE05-3D398EEFAF0A}
+      - "Association «IN» → pshvs.pscs_un/loading_zone_use_request"  # {E88B0921-DA0D-4dd9-9180-33AB75C8875D} → {55F8D9CB-9AE1-43c0-9159-7BD0A2F0E683}
+      - "Association «IN» → tft.ftom-un/loading_zone_booking_details"  # {3B41D7C2-83E2-49ef-8C55-80894F54DA2E} → {DA57F940-C058-44ce-B493-B20AF6EE92AC}
+      - "Association «IN» → to.ulzo-current_un/loading_zone_data"  # {372D6C3F-6D14-429f-B165-380C8D989F9A} → {5C57FFBB-BBC7-498e-AB95-ACD17A8526F8}
+      - "Association «IN» → to.ulzo-incorrect_vehicle_in_un/loading_zone"  # {4FDD54A9-828F-4c93-AC14-DEC0874D14D4} → {9308A3BE-0E4C-4651-8D35-9B4B68D04F19}
+      - "Association «IN» → to.ulzo-un/loading_zone_outputs"  # {12E62EAC-64A4-4527-BC2D-18F2F9C653F1} → {5697234C-C297-4107-9D94-C47EA60BAA4D}
+      - "Association «IN» → to.ulzo-un/loading_zone_use_request"  # {ACF0BB80-35CE-4ec0-BE12-75530025C158} → {72CF09C3-1F7D-4ae1-8367-D766C73B76EF}
+  - name: "F9.5.2 Provide Loading/Unloading Zone Operator Interface"
+    guid: "{8FD6AAD1-5692-44fb-BA18-3DC91BDD5241}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) A HMI through which the Un/Loading Zone Operator can manage the use of parking places in loading or unloading zones and their associated holding zones.
+      (2) The HMI shall enable the Un/Loading Zone Operator to approve booking requests, plus obtain and update data about the zones.
+      (3) If an incorrect Freight Vehicle is found to be using a parking place, the ability for the HMI to output information about the Vehicle to the Un/Loading Zone Operator.
+    links:
+      - "Aggregation «componentof» → F9. Provide Support for Cooperative Systems"  # {F0CE0EBB-7683-4a62-BA74-952FB7DB680A} → {F0D7E9A8-9F88-4e8f-AF0F-661C1990D546}
+      - "Aggregation «componentof» → F9.5 Manage Urban Un/Loading Zones"  # {0DBD77E4-5F93-45c6-9133-CDC55E2C300E} → {73A6BD74-8CDC-47de-9E81-86066B69AD2F}
+      - "Association «IN» → pscs_request_un/loading_zone_data"  # {815B758B-5136-4627-9807-6136DBA5726E} → {0C0D7AA2-E694-42e7-8EC4-D38BCBFC5C0F}
+      - "Association «IN» → pscs_un/loading_zone_use_response"  # {CE245E3B-EC47-4b3d-BAB5-1C772284E9DB} → {E7BB19FD-268B-40de-BA2A-16872989B158}
+      - "Association «IN» → pscs_updated_un/loading_static_data"  # {BF11108E-1F57-40c2-9F20-7E136337DD53} → {AADF39B1-B878-4c9e-9DCA-2D10DF0C910F}
+      - "Association «IN» → to.ulzo-current_un/loading_zone_data"  # {1033AE1B-A6DB-41da-BD84-8C8795A2494B} → {5C57FFBB-BBC7-498e-AB95-ACD17A8526F8}
+      - "Association «IN» → to.ulzo-incorrect_vehicle_in_un/loading_zone"  # {17A9CC6B-6AB4-4372-BE1C-B43D6E4710B4} → {9308A3BE-0E4C-4651-8D35-9B4B68D04F19}
+      - "Association «IN» → to.ulzo-un/loading_zone_use_request"  # {B3A11077-36D3-4794-8894-A1359AE7D847} → {72CF09C3-1F7D-4ae1-8367-D766C73B76EF}
+  - name: "F9.5.3 Manage Store of Loading or Unloading Zone Use"
+    guid: "{0427B4D8-1171-43b4-BAF2-5E05609B38BA}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to manage the store of Loading or Unloading Zones Data, which contains data about Loading and Unloading zones plus their associated Holding Zones.
+      (2) The ability to load into the store the data about each zone (e.g. location, number of places, use restrictions, use guidance) that is provided by the Loading/Unloading Zone Operator via the Provide Loading/Unloading Zone Operator Interface function.
+      (3) The ability to update the store with information about bookings for parking places in the zones so that it has access to a coherent and up to date record of the historical, current and forecast use.
+    links:
+      - "Aggregation «componentof» → F9. Provide Support for Cooperative Systems"  # {6C205A08-8BDC-4e60-A08B-891D93F697EA} → {F0D7E9A8-9F88-4e8f-AF0F-661C1990D546}
+      - "Aggregation «componentof» → F9.5 Manage Urban Un/Loading Zones"  # {969B5DCB-826C-45da-8021-03AA93AC13B4} → {73A6BD74-8CDC-47de-9E81-86066B69AD2F}
+      - "Association «IN» → pscs_load_zone_use_data"  # {BF30CAAB-3745-40ec-804E-8F32D0EB7B18} → {E1B2F43E-25A2-42e9-9017-CB6964516BAC}
+      - "Association «IN» → pscs_requested_un/loading_zone_data"  # {89FF3EFC-5DE7-4f03-AFDE-2CCFF4002D0F} → {A43414C3-FD64-404c-AA55-866AA64E3377}
+      - "Association «IN» → pscs_requested_un/loading_zone_status"  # {C69D0907-7E0F-4721-9DBC-49ED0E352D1A} → {52665027-3C50-4855-B300-6767FA2E43A8}
+  - name: "F9.5.4 Detect Vehicle Using Loading or Unloading Zone"
+    guid: "{F34C2113-F88E-4200-9CF5-3E38323CBCF4}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to continuously monitor the use of each parking place in a Loading or Unloading.
+      (2) The ability for its sensors to detect that a Vehicle is occupying a parking place and to use the data from the sensors to determine the Vehicle identity.
+      (3) The ability to send the determined identity to the Manage Loading or Unloading Zone Bookings Function.
+    links:
+      - "Aggregation «componentof» → F9. Provide Support for Cooperative Systems"  # {6F08F9C2-8E3B-43b6-839D-0E232407F891} → {F0D7E9A8-9F88-4e8f-AF0F-661C1990D546}
+      - "Aggregation «componentof» → F9.5 Manage Urban Un/Loading Zones"  # {C3DCFEA6-B0F8-45d6-BC2D-2D66F9CEA1FC} → {73A6BD74-8CDC-47de-9E81-86066B69AD2F}
+      - "Association «IN» → pscs_freight_vehicle_identity_for_un/loading_zone"  # {2E2CD807-AC6C-4fee-9E3A-2C8E8A621F17} → {1FB20052-8408-44bd-A483-3CD9C4FB8751}
+  - name: "F9.5.5 Detect Vehicle Using Holding Zone"
+    guid: "{80A6C9A1-21CF-4916-A8D4-E6687B373C78}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to continuously monitor the use of each parking place in a Holding Zone.
+      (2) The ability for its sensors to detect that a Vehicle is occupying a parking place and to use the data from the sensors to determine the Vehicle identity.
+      (3) The ability to send the determined identity to the Manage Loading or Unloading Zone Bookings Function.
+    links:
+      - "Aggregation «componentof» → F9. Provide Support for Cooperative Systems"  # {92DE7856-D1EC-44d9-9262-C2903364B0C1} → {F0D7E9A8-9F88-4e8f-AF0F-661C1990D546}
+      - "Aggregation «componentof» → F9.5 Manage Urban Un/Loading Zones"  # {20D57560-8E19-4059-AD2C-EF6E2CB7B417} → {73A6BD74-8CDC-47de-9E81-86066B69AD2F}
+      - "Association «IN» → pscs_freight_vehicle_identity_for_holding_zone"  # {8435BEA8-047C-44c0-8438-EBC02C41C4E3} → {8BBFA66D-AC72-4bd4-A9B6-A3D7A62F3607}
+  - name: "F9.5.6 Loading or Unloading Zone Booking Management"
+    guid: "{89E5ACB4-6707-4317-A9D9-1AEFFCCCEC59}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to take responsibility for managing the use of loading or unloading zones and holding zones that are used by Freight Vehicle to pick up and deliver goods.
+      (2) The ability to receive requests from the Freight Vehicle Driver via the Vehicle Trip Planning functionality to book a parking place in a loading or unloading zone.
+      (3) If a place is found to be free the ability to obtain confirmation from the Unloading/Loading Zone Operator through the Provide Loading/Unloading Zone Operator Interface function.
+      (4) If there is no parking place available to suit the request from the Freight Vehicle Driver, the ability to recommend alternative loading and unloading zones and/or to determine which is the best holding zone to use until a parking place becomes available.
+      (5) The ability to check the booking against revisions to the Estimated Time of Arrival (ETA) provided by the Vehicle Trip Plan monitoring functionality and to provide guidance to that functionality if the booking is still valid.
+      (6) If the ETA has changed to the extent that the original booking is no longer valid and cannot be honoured then the ability to recommend alterative times, and/or alternative zones, and/or the use of a holding zone until a parking place becomes available.
+      (7) The ability to receive the identity of each Freight Vehicle using each parking place and to send a message to the Unloading/Loading Zone Operator if an incorrect Vehicle is found to be occupying the parking place.
+      (8) The ability to update the booking information when a message is received from the Vehicle Trip Plan Monitoring functionality that the Freight Vehicle has left the parking place.
+      (9) The ability to provide micro-routing information for use by Freight Vehicle Drivers to navigate in and around the un/loading zone.
+    links:
+      - "Aggregation «componentof» → F9. Provide Support for Cooperative Systems"  # {A524BEA4-3808-47e8-BD8B-3AEEB5121BF4} → {F0D7E9A8-9F88-4e8f-AF0F-661C1990D546}
+      - "Aggregation «componentof» → F9.5 Manage Urban Un/Loading Zones"  # {B9C7102D-B462-4a93-938E-88AEE8706BEE} → {73A6BD74-8CDC-47de-9E81-86066B69AD2F}
+      - "Association «IN» → pscs.pshvs_holding_zone_routing_information"  # {E431042D-A587-4203-869D-80F1A8958932} → {F80C48D3-B4D8-4559-92FD-5E798667993A}
+      - "Association «IN» → pscs.pshvs_holding_zone_unavailable_for_new_eta"  # {80D11461-3E08-46ac-A52C-540FD1439B42} → {622E58A0-EB2D-48c4-84FF-DCBBFC4F677F}
+      - "Association «IN» → pscs.pshvs_un/loading_zone_routing_information"  # {C6E7B552-83E0-4455-B341-48C89E58D518} → {21151727-2150-48b2-B194-8478C107AC54}
+      - "Association «IN» → pscs.pshvs_un/loading_zone_unavailable_for_new_eta"  # {8BD0B294-423F-422f-A068-36C19B333FCF} → {7FC47F6B-EBBF-424f-8DA4-09264C5D6898}
+      - "Association «IN» → pscs.pshvs_un/loading_zone_use_response"  # {CC772BC4-2081-4ece-BEA6-FE408AAD709E} → {DCABDBA8-7AE2-4e0b-A314-DA235A3171E7}
+      - "Association «IN» → pscs_incorrect_vehicle_in_un/loading_zone"  # {D44411CF-3CA7-41cd-95AE-B74A56D6644A} → {61106F8F-D247-4771-873A-4AA225F272C2}
+      - "Association «IN» → pscs_request_un/loading_zone_status"  # {E7FC535D-D9EE-411d-B0E0-29C4239028EF} → {B9ED7144-3C26-417f-8601-FA01C8641FA1}
+      - "Association «IN» → pscs_un/loading_zone_booking_for_FTOM"  # {8567BB77-B9B4-4f31-9FEF-F82EA6F6A746} → {B9B028B9-C8D2-42aa-8FAE-652232571EF4}
+      - "Association «IN» → pscs_un/loading_zone_use_request"  # {D483812F-F93B-4958-958A-A71C6728503D} → {D9B7F16D-6729-4364-8B1D-B2DE39F9C7E0}
+  - name: "F9.5.7 Provide Un/loading Zone Freight Transport Operations Manager Interface"
+    guid: "{D3CFDE54-2939-44eb-814D-A97413686546}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) A HMI that enables information to be provided to the Freight Transport Operations Manager.
+      (2) The ability to receive information about un/loading zone bookings made by Heavy Goods Vehicle Drivers.
+      (3) The ability to filter the information received to remove that which is not related to Heavy Goods Vehicles the identities of which have not been specified by the Freight Transport Operations Manager.
+      (4) The ability to use the HMI to output information about un/loading zone bookings that have been made by the Drivers of Heavy Goods Vehicles specified by the Freight Transport Operations Manager.
+    links:
+      - "Aggregation «componentof» → F9. Provide Support for Cooperative Systems"  # {BC96F886-84C3-41a9-BD73-ACD1A08B4919} → {F0D7E9A8-9F88-4e8f-AF0F-661C1990D546}
+      - "Aggregation «componentof» → F9.5 Manage Urban Un/Loading Zones"  # {C5E4EA71-8DE5-4de5-9354-3A1EBACFB376} → {73A6BD74-8CDC-47de-9E81-86066B69AD2F}
+      - "Association «IN» → pscs_hgv_vehicle_id_for_un/loading_zone_booking"  # {5DD0FEA3-EFD6-4474-B35F-E97DF30C963E} → {8092925F-2FFC-4380-9DFC-0C9895B2DA92}
+      - "Association «IN» → tft.ftom-un/loading_zone_booking_details"  # {0DC172BF-1710-4e6b-A8E1-B1CFF1FE0BD1} → {DA57F940-C058-44ce-B493-B20AF6EE92AC}

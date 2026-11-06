@@ -1,0 +1,64 @@
+package: "National Body Reference Architecture/05 NB Communication View"
+guid: "{DF3898D8-D408-4513-883C-F2244B8D329C}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: ""
+    guid: "{5B9F24BE-3ED2-466f-A1C3-2B339065E177}"
+    type: "Text"
+    stereotype: "NavigationCell"
+    alias: "Random inspection and compliance assessment"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: ""
+    guid: "{61D5A1D7-B022-4f76-A82B-E651D622BEE0}"
+    type: "Text"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      There are three processes:
+      (1) Receiving and processing a self-declaration
+      (2) Random inspection and compliance assessment
+      (3) Procedure for dealing with non-compliance
+      
+      and there is the developed state diagram of self declarations.
+  - name: ""
+    guid: "{6D0CECC3-63E3-4dd5-ABC3-493985CAE21B}"
+    type: "Text"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Communication Processes of a harmonized National Body
+  - name: ""
+    guid: "{70704951-A30B-42a0-8896-A534EF750E0A}"
+    type: "Text"
+    stereotype: "NavigationCell"
+    alias: "Self Declaration State Diagram"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "Procedure for dealing with non-compliance"
+    guid: "{7906ADAE-828B-4cbc-B1CA-A9D1FE27B8DD}"
+    type: "Text"
+    stereotype: "NavigationCell"
+    alias: "Procedure for dealing with non-compliance"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "Receiving and processing a self-declaration"
+    guid: "{E23CDCF3-32C8-47f0-B567-508B9B97B399}"
+    type: "Text"
+    stereotype: "NavigationCell"
+    alias: "Receiving and processing a self-declaration"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Self Declaration reception process

@@ -1,0 +1,167 @@
+package: "C-ITS Reference Architecture/05 C-ITS Communication View/C-ITS data flows"
+guid: "{C91BC689-0EDE-42ab-A0A0-4CA33DD05827}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "FRAME_Low_Level_Data_Flow - DENM"
+    guid: "{0F56B06C-EED9-485d-9385-EAD39070B74F}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    keywords: "DENM related"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      This low level data flow transfers DENM messages I2V and V2I
+    links:
+      - "Association «served by» → FRAME_Physical_Data_Flow1"  # {1F855ADA-0931-4181-8F96-D56B6C6EE5F1} → {8283B714-3705-4215-A817-E838AE54B3F5}
+      - "Association «served by» → FRAME_Physical_Data_Flow2"  # {CBE435CC-03F5-442f-821F-B14B0D61B478} → {1A91349A-1DEE-469c-B7BB-EBE8107FADE3}
+      - "Association «served by» → FRAME_Physical_Data_Flow3"  # {C5F08A70-FE73-4792-8063-11A6B0B5F2BD} → {F069E848-D7B5-46dc-B135-7B52376E5D04}
+      - "Association «served by» → FRAME_Physical_Data_Flow4"  # {1B8A9A97-ACAF-4412-B2C0-F69C484C4FD1} → {BA9666D8-2AB1-4708-ADD8-3BFB462F6B66}
+      - "Association «served by» → FRAME_Physical_Data_Flow5"  # {7BE45806-1EB6-44cd-9627-87C1A3030A29} → {B15DEDC4-E1DA-4326-BE19-6EAF316FBCAA}
+  - name: "FRAME_Low_Level_Data_Flow CAM"
+    guid: "{F864A654-927E-4f56-965A-81EE9C325B71}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    keywords: "CAM related"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      This low level data flow transfers CAM messages I2V and V2I
+    links:
+      - "Association «served by» → FRAME_Physical_Data_Flow1"  # {519920FC-654F-4ff7-86E1-6DA5F8AAE4E8} → {8283B714-3705-4215-A817-E838AE54B3F5}
+      - "Association «served by» → FRAME_Physical_Data_Flow2"  # {574ECE72-0AA1-4a33-A1B3-3CA920E8E713} → {1A91349A-1DEE-469c-B7BB-EBE8107FADE3}
+      - "Association «served by» → FRAME_Physical_Data_Flow3"  # {F46F8234-4DE1-443b-B7A7-3EF60D9D7C2E} → {F069E848-D7B5-46dc-B135-7B52376E5D04}
+      - "Association «served by» → FRAME_Physical_Data_Flow4"  # {FE1E2065-7B4C-4e91-B8D9-E94EFACB7C09} → {BA9666D8-2AB1-4708-ADD8-3BFB462F6B66}
+      - "Association «served by» → FRAME_Physical_Data_Flow5"  # {9D25DE5C-3E08-42d8-8FD8-F4B1C2282817} → {B15DEDC4-E1DA-4326-BE19-6EAF316FBCAA}
+  - name: "FRAME_Low_Level_Data_Flow MAPEM"
+    guid: "{A3314F1A-E8AD-43aa-AE01-DFFD56DD0E05}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      This low level data flow transfers MAPEM messages I2V
+    links:
+      - "Association «served by» → FRAME_Physical_Data_Flow1"  # {7C33C91F-2E00-459d-AF70-D36878C8A63E} → {8283B714-3705-4215-A817-E838AE54B3F5}
+      - "Association «served by» → FRAME_Physical_Data_Flow2"  # {2E1ECAAA-33E3-4017-841A-8BCE6429ADB9} → {1A91349A-1DEE-469c-B7BB-EBE8107FADE3}
+      - "Association «served by» → FRAME_Physical_Data_Flow3"  # {7FAD8336-6869-45f3-9380-F71D33352ED0} → {F069E848-D7B5-46dc-B135-7B52376E5D04}
+      - "Association «served by» → FRAME_Physical_Data_Flow4"  # {F626C018-0C98-4428-AE18-F3E61E9F3057} → {BA9666D8-2AB1-4708-ADD8-3BFB462F6B66}
+      - "Association «served by» → FRAME_Physical_Data_Flow5"  # {A5E243CA-9A1F-43bc-9AE6-1DC3F2B95F8C} → {B15DEDC4-E1DA-4326-BE19-6EAF316FBCAA}
+  - name: "FRAME_Low_Level_Data_IVIM"
+    guid: "{C416CCA7-BD84-4ed1-AD25-9000364A97F9}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    keywords: "IVIM related"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      This low level data flow transfers IVIM messages I2V and V2I
+    links:
+      - "Association «served by» → FRAME_Physical_Data_Flow1"  # {D06C3791-BB0A-448e-87B1-C64EE6225102} → {8283B714-3705-4215-A817-E838AE54B3F5}
+      - "Association «served by» → FRAME_Physical_Data_Flow2"  # {91DD16BA-6B51-44c6-8B7D-B495939F2318} → {1A91349A-1DEE-469c-B7BB-EBE8107FADE3}
+      - "Association «served by» → FRAME_Physical_Data_Flow3"  # {94EC3387-3DE1-4c5c-8E63-7651378AA9EA} → {F069E848-D7B5-46dc-B135-7B52376E5D04}
+      - "Association «served by» → FRAME_Physical_Data_Flow4"  # {E36F7D25-A8FE-4a7e-9C5E-8279D4591F2F} → {BA9666D8-2AB1-4708-ADD8-3BFB462F6B66}
+      - "Association «served by» → FRAME_Physical_Data_Flow5"  # {927EF270-6D89-45d6-B031-C4B17AB00DDC} → {B15DEDC4-E1DA-4326-BE19-6EAF316FBCAA}
+  - name: "FRAME_Physical_Data_Flow1"
+    guid: "{8283B714-3705-4215-A817-E838AE54B3F5}"
+    type: "Interface"
+    stereotype: "FRAME_Physical_Data_Flow"
+    keywords: "C-ITS Messages"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      This data flow transfers all C-ITS messages I2V and V2I, and includes security headers and message identifiers.
+      For every message type a low lewel data flow is defined with the references to specific standards.
+    links:
+      - "Association «contains» → CAM Message"  # {C1ED441E-CE59-40ec-B48B-5F6ABACBDF04} → {25368D50-DB2B-4ed3-987B-BA9C989B114B}
+      - "Association «contains» → DENM Message"  # {45E75906-153D-4060-A153-40082CECAFAC} → {F5ABC980-47C8-42ae-AEC1-8A12A3AAF9EF}
+      - "Association «contains» → IVIM Message"  # {984BD0DE-FEEF-427a-884C-0A149C834C7B} → {58B0957B-E92B-4465-A244-34E57B1E6EC6}
+      - "Association «contains» → MAPEM Message"  # {A111225A-966E-4c4d-9345-EB7BEE519DCA} → {10037F98-ED5C-4c7a-B3B3-F80B7A711A71}
+      - "Association «contains» → SPATEM Message"  # {264F52CC-B8D9-4da3-B464-A09DA784A47B} → {08F1F819-81D5-4986-9281-F0D02DE17306}
+      - "Association «use» → I2V - V2I Interface"  # {5677B31D-09CD-4d66-9A4D-30D092CA1D07} → {CC29E521-3562-43ca-A32B-59024B2903C4}
+  - name: "FRAME_Physical_Data_Flow2"
+    guid: "{1A91349A-1DEE-469c-B7BB-EBE8107FADE3}"
+    type: "Interface"
+    stereotype: "FRAME_Physical_Data_Flow"
+    keywords: "I2V V2I"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      This data flow transfers all C-ITS messages I2V and V2I, and includes security headers and message identifiers.
+      For every message type a low lewel data flow is defined with the references to specific standards.
+    links:
+      - "Association «contains» → CAM Message"  # {42483B5B-DE3E-40ec-9E44-7CF73EFA13B6} → {25368D50-DB2B-4ed3-987B-BA9C989B114B}
+      - "Association «contains» → DENM Message"  # {0B1373AF-C40B-40e2-8ADA-9EB725CF6691} → {F5ABC980-47C8-42ae-AEC1-8A12A3AAF9EF}
+      - "Association «contains» → IVIM Message"  # {5B4E1633-B0F7-4fd4-977E-634A17E63B7A} → {58B0957B-E92B-4465-A244-34E57B1E6EC6}
+      - "Association «contains» → MAPEM Message"  # {C014EEEF-41AB-489b-AB94-4CCDE44AF4F4} → {10037F98-ED5C-4c7a-B3B3-F80B7A711A71}
+      - "Association «contains» → SPATEM Message"  # {BC5090D5-1F2C-4513-B97E-F502E9DF6068} → {08F1F819-81D5-4986-9281-F0D02DE17306}
+      - "Association «use» → I2V - V2I Interface"  # {1AA01463-4EDB-4b68-B172-444DDACD52FF} → {78A4A59A-331A-4ca2-82C3-F9CEC659C003}
+  - name: "FRAME_Physical_Data_Flow3"
+    guid: "{F069E848-D7B5-46dc-B135-7B52376E5D04}"
+    type: "Interface"
+    stereotype: "FRAME_Physical_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «contains» → CAM Message"  # {78AA17A4-1AB3-4010-8130-D168AFD076D5} → {25368D50-DB2B-4ed3-987B-BA9C989B114B}
+      - "Association «contains» → DENM Message"  # {20E00818-7B80-4b9a-93D4-B8AC7472925F} → {F5ABC980-47C8-42ae-AEC1-8A12A3AAF9EF}
+      - "Association «contains» → IVIM Message"  # {03789D64-925E-46d1-BEF7-5AB21D544645} → {58B0957B-E92B-4465-A244-34E57B1E6EC6}
+      - "Association «contains» → MAPEM Message"  # {85915AD6-217F-4736-8AEF-1C23808C074F} → {10037F98-ED5C-4c7a-B3B3-F80B7A711A71}
+      - "Association «contains» → SPATEM Message"  # {BE541951-C45E-4483-ADBD-7FCDF1693320} → {08F1F819-81D5-4986-9281-F0D02DE17306}
+      - "Association «use» → BI  - Basic Interface specification"  # {8ED90FA0-F1E5-4e52-AC99-EA044EA321A6} → {88F19296-B6FB-42a8-8E42-0F6E3B071E66}
+  - name: "FRAME_Physical_Data_Flow4"
+    guid: "{BA9666D8-2AB1-4708-ADD8-3BFB462F6B66}"
+    type: "Interface"
+    stereotype: "FRAME_Physical_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «contains» → CAM Message"  # {A7C76E97-20CF-47c2-A3B5-E20430D02526} → {25368D50-DB2B-4ed3-987B-BA9C989B114B}
+      - "Association «contains» → DENM Message"  # {021AD8D0-0F19-4151-8D42-5BF93CB2D2BA} → {F5ABC980-47C8-42ae-AEC1-8A12A3AAF9EF}
+      - "Association «contains» → IVIM Message"  # {289999AF-2A56-4736-8721-07B554952C31} → {58B0957B-E92B-4465-A244-34E57B1E6EC6}
+      - "Association «contains» → MAPEM Message"  # {2EF7E752-3794-4b4f-98A4-DD08339E68CD} → {10037F98-ED5C-4c7a-B3B3-F80B7A711A71}
+      - "Association «contains» → SPATEM Message"  # {169EA477-E920-4048-A8B7-8B06182D3CDC} → {08F1F819-81D5-4986-9281-F0D02DE17306}
+      - "Association «use» → Roadside standard interface"  # {88E04FBE-D457-4271-A111-8224D44F9CE2} → {70B68EFC-4337-4fa1-BBAA-8875FE692C5B}
+      - "Usage → C-ITS Roadside Station (1 of many)"  # {DE810B25-E642-4c95-8BF0-614FC936394B} → {9A324D4E-58E2-444d-9E05-C572271259F5}
+  - name: "FRAME_Physical_Data_Flow5"
+    guid: "{B15DEDC4-E1DA-4326-BE19-6EAF316FBCAA}"
+    type: "Interface"
+    stereotype: "FRAME_Physical_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «contains» → CAM Message"  # {284C49B4-DD38-4de8-9D34-6B9DD2253E92} → {25368D50-DB2B-4ed3-987B-BA9C989B114B}
+      - "Association «contains» → DENM Message"  # {A7D9988A-AC3F-4233-9A6F-47A6BE9646FE} → {F5ABC980-47C8-42ae-AEC1-8A12A3AAF9EF}
+      - "Association «contains» → IVIM Message"  # {14DCD597-073E-41e6-BD69-5335863F59C4} → {58B0957B-E92B-4465-A244-34E57B1E6EC6}
+      - "Association «contains» → MAPEM Message"  # {CAEC2845-3FF0-4014-9B4D-8CCF13FA4A6C} → {10037F98-ED5C-4c7a-B3B3-F80B7A711A71}
+      - "Association «contains» → SPATEM Message"  # {11105378-D4A0-4689-95B2-6E688425643A} → {08F1F819-81D5-4986-9281-F0D02DE17306}
+      - "Association «use» → In vehicle standard interface"  # {5C263BAD-2E35-4362-808A-B8A45C6C2230} → {CBEC1D64-D92F-41fc-8DF3-4905195D44D4}
+      - "Usage → C-ITS Vehicle Station (1 of many)"  # {BCC2FDE4-7D53-47ed-9417-7D8A6469700D} → {7F84A398-1885-4e5e-9E0C-6E497C2EBBDF}
+  - name: "Signal Phase and Timing"
+    guid: "{227CCDC3-C4EB-48f1-8D67-08FC3031BAC5}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      This Low Level data flow contains Signal Phase and Timing information of Intersections in short SPATEM. . .
+    links:
+      - "Association «served by» → FRAME_Physical_Data_Flow1"  # {E55AEC6F-0161-4c06-BBC8-0149F8496A5A} → {8283B714-3705-4215-A817-E838AE54B3F5}
+      - "Association «served by» → FRAME_Physical_Data_Flow2"  # {7FB551B9-942B-4e26-8F60-8C3A445C45CF} → {1A91349A-1DEE-469c-B7BB-EBE8107FADE3}
+      - "Association «served by» → FRAME_Physical_Data_Flow3"  # {8AA702B5-4E01-4de3-9704-67A023E2BABA} → {F069E848-D7B5-46dc-B135-7B52376E5D04}
+      - "Association «served by» → FRAME_Physical_Data_Flow4"  # {51BD4F58-CEBF-4d0a-93D2-10F655C1C445} → {BA9666D8-2AB1-4708-ADD8-3BFB462F6B66}
+      - "Association «served by» → FRAME_Physical_Data_Flow5"  # {EE202296-AE61-4956-8FB7-8C2CF12703EE} → {B15DEDC4-E1DA-4326-BE19-6EAF316FBCAA}

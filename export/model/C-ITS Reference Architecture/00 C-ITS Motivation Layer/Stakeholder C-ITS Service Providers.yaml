@@ -1,0 +1,32 @@
+package: "C-ITS Reference Architecture/00 C-ITS Motivation Layer/Stakeholder C-ITS Service Providers"
+guid: "{03D0AC3E-64B2-4461-9852-A667822F6D6C}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "C-ITS Service provider"
+    guid: "{3013F2AA-5BC3-4d57-8AFA-790BBA733C21}"
+    type: "Actor"
+    stereotype: "FRAME_Stakeholder"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      C-ITS Service providers (e.g. mobile network operators, traffic information service providers, ITS service providers . . .)  contribute to the content and distribution network of C-ITS messages, and combine it with C-ITS stations and services
+    links:
+      - "Association «defines» → eCall Vision"  # {00D99523-F7E3-4386-B17F-86F6DED78772} → {7EF14ABB-8BB1-457c-AA34-2C2E87E4192A}
+      - "Association «fulfilled by» → Fullfillment of C-ITS related standards"  # {E55C9D0A-B295-4e94-BD80-5794E8019513} → {AFF20E0F-FAF3-40e4-9BEB-CE9311A11A56}
+      - "Association «has» → C-ITS Service provider and high information quality"  # {074EE270-E735-4860-9FE8-CCF5BA8D68C6} → {0886BE5F-2EBC-492a-B15F-B0B3150CADD1}
+  - name: "C-ITS personal node or station"
+    guid: "{63DB03B4-5BB5-4072-A1F5-016DA4FAB6ED}"
+    type: "Actor"
+    stereotype: "FRAME_Actor"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Personal C-ITS station implemented on a personal or professional device with full access and communication details of the C-ITS network, via short range and / or long range communication channels and protocols.
+    links:
+      - "Abstraction → C-ITS Service provider"  # {AC56DB75-E711-4cfe-93A2-ADF4A25BFA75} → {3013F2AA-5BC3-4d57-8AFA-790BBA733C21}
+      - "Abstraction → EU Citizen in one of the member states"  # {A9994F60-A133-43f8-B792-C7C7DC70C8AB} → {E8695FF6-1351-4508-97CF-980CF0604B41}
+      - "Realisation → Policy Authority"  # {46358558-1C14-43f4-B1C7-D26F279E03D1} → {43FC96D4-0EC2-4547-AF9E-35CF41527D97}

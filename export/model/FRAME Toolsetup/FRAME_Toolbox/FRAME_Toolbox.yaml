@@ -1,0 +1,55 @@
+package: "FRAME Toolsetup/FRAME_Toolbox/FRAME_Toolbox"
+guid: "{04319BFC-C078-45d5-B06C-DE46F002F10F}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "FRAME - Advanced"
+    guid: "{EC73C1AF-1CA0-40bd-8901-6EFF4ED973E1}"
+    type: "Class"
+    stereotype: "stereotype"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      For changing FRAME Repository
+    links:
+      - "Extension → ToolboxPage"  # {35CCB327-40FC-4d5b-8709-C3417C9FF486} → {97AA7303-60A4-4792-8A04-55B90E276AC2}
+  - name: "FRAME - Artefacts"
+    guid: "{8ECF6B2C-D4CD-4275-8114-7AE37E27ACFC}"
+    type: "Class"
+    stereotype: "stereotype"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Extension → ToolboxPage"  # {94D7C0F7-210F-473b-A982-B41731FEA487} → {97AA7303-60A4-4792-8A04-55B90E276AC2}
+  - name: "FRAME - Specification"
+    guid: "{84846D59-73F4-4f3d-A654-F20D773C7A2C}"
+    type: "Class"
+    stereotype: "stereotype"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Extension → ToolboxPage"  # {8F2A7F14-CEAA-40d3-8C0A-B478A99DD1B7} → {97AA7303-60A4-4792-8A04-55B90E276AC2}
+  - name: "FRAME Connectors"
+    guid: "{0642386F-2EA7-43a8-B64B-F8F199D478D1}"
+    type: "Class"
+    stereotype: "stereotype"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Extension → ToolboxPage"  # {93CF113C-B602-4397-A1E6-9AEDFF8492F4} → {97AA7303-60A4-4792-8A04-55B90E276AC2}
+  - name: "ToolboxPage"
+    guid: "{97AA7303-60A4-4792-8A04-55B90E276AC2}"
+    type: "Class"
+    stereotype: "metaclass"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""

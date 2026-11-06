@@ -1,0 +1,448 @@
+package: "Frame Repository/Frame Functional View/Functionality/Functional Area F2 - Provide Safety and Emergency Facilities"
+guid: "{9C04AEC0-67FA-45e8-9910-34D8AD3CABFF}"
+alias: ""
+version: "5.0"
+note: ""
+elements:
+  - name: "F2. Provide Safety and Emergency Facilities"
+    guid: "{06D291DE-AA10-4891-8C30-E42616CA8483}"
+    type: "Activity"
+    stereotype: "FRAME_Functional_Area"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Functional Area shall provide functionality that enables the Emergency Services to respond to incidents.  The Functions in this Area shall have links with the Manage Traffic Functional Area (F3) to enable the detection and reporting of incidents, the management of their impacts and the granting of priority to Emergency Vehicles, plus links with the Provide Support for Host Vehicle Systems Functional Area (F5) to enable eCall messages from Vehicles to be received, processed and responses sent back to the Vehicle.  It shall be possible for priority to be provided either locally at each controlled point on the road network, or as a "route" through the network.  There shall be links to the Provide Traveller Journey Assistance Functional Area (F6) to enable priority routes for Emergency Vehicles to be created.  In addition this Functional Area shall provide facilities to enable the theft of vehicles to be managed.
+      
+      Mnemonic: psef
+    links:
+      - "Aggregation «componentof» → System"  # {BF17531F-3AF6-4f25-86C4-47988C208478} → {A7365472-4893-4994-9241-EEED83ABEF7D}
+      - "Association «IN» → To External Service Provider"  # {892F3E94-F2C5-4d13-AC86-091BCB13C665} → {CB0E5267-0EB0-4bc5-979C-11C135689F57}
+      - "Association «IN» → To Operator"  # {154C39DE-80AE-41f3-A6AF-68E475A01738} → {BED224D6-0F6C-4a10-9057-54D9140F33F4}
+      - "Association «IN» → To Other Related System"  # {8F3403DC-5408-485a-95AA-9CCB9BFF8A4D} → {B211B65C-3E19-4618-8019-7D7744237A96}
+      - "Association «IN» → To Traveller"  # {352092EB-27F0-4119-B1DA-03B75FE3F2A4} → {0F2BCEB7-7EEB-46f9-B031-5D3328B73E67}
+      - "Association «IN» → fesp-data_for_emergency_reponse"  # {43F82053-A04A-4311-B272-753A80AC30B2} → {5625F9D5-024F-4607-ADA3-2D98F45B86D2}
+      - "Association «IN» → psef.mpto_alarm_acknowledgements"  # {0412FA29-7559-4a6c-822F-74F23FD2A828} → {30ACB7F9-C191-4da3-B8DB-B449165DA087}
+      - "Association «IN» → psef.mt_data_and_priority_requests"  # {4FDD0682-C28D-4553-AFC4-8444F84F72DB} → {91E02601-6D4A-4fd5-835E-87F62AEE08F4}
+      - "Association «IN» → psef.pshvs_eCall_arcknowledgements"  # {22A5AE3D-AE23-4e14-A09A-F9A0CE0AF906} → {19376C6E-B525-4090-AF64-7A18742D0408}
+      - "Association «IN» → psef.pshvs_vehicle_data"  # {09224307-60B1-4dc7-9F40-3F030352584B} → {F3228A49-E421-400a-92FC-477724EF38E9}
+      - "Association «IN» → psef.ptja_emergency_intervention_route_request"  # {FB7E7377-CB0A-4f31-8D13-9A8F8139B440} → {693947FA-6394-4c20-A3E2-A0AA5982C715}
+      - "Association «IN» → psef.ptja_route_refresh_request"  # {78F12FFE-64B8-4668-8668-93D60E675F22} → {0466EFD2-2719-466f-9CEE-822010B047BA}
+      - "Association «IN» → psef.ptja_route_requests"  # {E4CB57C2-B8A4-4bbf-B7C3-4D18EE9FAA3B} → {C264D52F-36DF-49a5-A8E5-23F768E19C15}
+      - "Association «IN» → td-psef_outputs"  # {6EEBE3A6-63E4-43f5-BA7B-C948A395EFAC} → {FBAF0D02-C9A0-4cab-B5D5-7B9EF17F3D9A}
+      - "Association «IN» → tes-psef_outputs"  # {8BA61ACD-826D-4830-8416-7876FFFC33B3} → {80B0522E-6D13-432e-B1D0-FD62C0275F0F}
+      - "Association «IN» → tesp-psef_outputs"  # {E901BE3B-F64E-423d-B422-DBAEBDEF697B} → {9ED6428E-B7EF-40bd-B15E-2CE36ACC1260}
+      - "Association «IN» → to-psef_outputs"  # {96E7FC74-09B9-4a5c-A10E-44AC857981B5} → {B6A1DBF2-90E6-46c1-B634-556319D151A0}
+      - "Association «IN» → tors-psef_outputs"  # {4826FD55-BD36-47d0-8F95-241BC3CA0202} → {87B7F1B7-3D63-456f-AB4C-95B0F27076BD}
+      - "Association «IN» → tt-psef_outputs"  # {1BDA118B-07C3-4d35-A70E-123EF2EF0863} → {A7706390-3C70-45b9-A324-45A56C2FEE03}
+  - name: "F2.1 Manage Emergencies"
+    guid: "{8B0A6367-E6D7-47e2-9086-81FB2C700C13}"
+    type: "Activity"
+    stereotype: "FRAME_High_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This High-level Function shall include all functionality related to the detection and reporting of accidents and incidents involving users of the road network and the responses to them provided by the Emergency Services.  It shall enable accidents and incidents to be managed so that the responses from the Emergency Services are provided in a timely manner, in an appropriate way and with the minimum of impact on other users of the road network.  Links to functionality in the Manage Traffic Functional Area shall be provided to enable traffic using the road network to be managed in a way that minimises disruption but enables the accidents and incidents to be dealt with in a timely way.
+    links:
+      - "Aggregation «componentof» → F2. Provide Safety and Emergency Facilities"  # {7809F8D0-1DD1-49ea-AF59-F1E8BB0A4CA9} → {06D291DE-AA10-4891-8C30-E42616CA8483}
+      - "Association «IN» → fd.evd-deploy_virtual_cones"  # {C5E52396-8F75-49ee-8CB5-0E4E23359892} → {BE4E25D8-5FFD-4dab-8C51-5755D0B6F050}
+      - "Association «IN» → fesp.g-digital_map_data_for_emergency_vehicle"  # {0B541D1C-E224-4596-9116-B9421DC807F6} → {09864EC8-2CD8-4f9d-B575-A94EBFEE3A3F}
+      - "Association «IN» → psef.mpto_alarm_acknowledgements"  # {B7572FB0-B297-4603-988D-718719FEDBB8} → {30ACB7F9-C191-4da3-B8DB-B449165DA087}
+      - "Association «IN» → psef.mt_emergency_local_priority_request"  # {40969CE9-ED80-4c34-828A-9DD287887142} → {3BC4E7BD-6296-48bf-AD7C-21913311F63E}
+      - "Association «IN» → psef.mt_emergency_request"  # {397476F1-787D-4da1-8875-A4742E2C47A0} → {3F63EF26-6AD4-4ab8-8685-9AF1F5A74B4A}
+      - "Association «IN» → psef.mt_incident"  # {1F547A7C-9DCA-4f8f-9973-B73827EA33A5} → {441913C9-C52C-43c2-984B-5ECF6B3D2ECC}
+      - "Association «IN» → psef.mt_inter-urban_emergency_route_request"  # {7353BE84-6614-4b71-9482-9E8541BB5D5A} → {3F9E57FB-0758-4bce-8E1A-45619BA4B6F2}
+      - "Association «IN» → psef.mt_inter-urban_virtual_coned_area_request"  # {371032E3-C793-4025-A5B8-755D5C9C300B} → {759B3F3D-E001-4876-91FE-092F27563A37}
+      - "Association «IN» → psef.mt_urban_virtual_coned_area_request"  # {6970471D-44FD-4a8b-8B01-B98D39E80324} → {664CDD6A-BAD5-471b-B09A-900C5A997A43}
+      - "Association «IN» → psef.mt_virtual_coned_area_requests"  # {0DF31A6B-6CFE-4f07-9444-3A4E2AE1F185} → {02C5C69E-2B7E-45e2-BE05-BEA0A25FFF49}
+      - "Association «IN» → psef.pshvs_eCall_arcknowledgements"  # {6A0E0900-9890-462d-928B-D2B1B3481B46} → {19376C6E-B525-4090-AF64-7A18742D0408}
+      - "Association «IN» → psef.pshvs_emergency_vehicle_approaching"  # {89D07F00-614F-422e-9CF9-D6C8D2AAEAB1} → {861F5013-8200-4026-9DA5-60DA1706BBE4}
+      - "Association «IN» → psef.ptja_emergency_intervention_route_request"  # {B280B3D4-5D63-4eb0-9F9A-4911BB244D3F} → {693947FA-6394-4c20-A3E2-A0AA5982C715}
+      - "Association «IN» → psef.ptja_route_refresh_request"  # {EEF1511A-D448-410c-86A2-6304C6587A81} → {0466EFD2-2719-466f-9CEE-822010B047BA}
+      - "Association «IN» → psef.ptja_route_requests"  # {CE841AC5-8450-4e35-B0F1-A0C469D23954} → {C264D52F-36DF-49a5-A8E5-23F768E19C15}
+      - "Association «IN» → td.evd-emergency_route_guidance"  # {11C0AEE9-CA06-4a88-86B2-716878031F7E} → {6D4BFE49-7698-4391-9B6E-C2B8A401BC37}
+      - "Association «IN» → tes-global_progress_report"  # {BB70A328-736D-4116-9114-03B7BAFF8DC7} → {9713D0FB-5CE1-453d-A261-2313A89CC5CB}
+      - "Association «IN» → tes-intervention_request"  # {B54B9CED-9CF6-4b8a-ADE5-46B73E7AE4D2} → {77C0667C-7356-4422-9873-14833FF8025F}
+      - "Association «IN» → tesp.dvip-request_for_identification"  # {7733D73D-B472-4390-816A-C60784EA1B58} → {E64D8346-4F81-4d51-9917-A93A8FA0DF28}
+      - "Association «IN» → to.co-PSAP_data_output"  # {4A8F365D-D594-4332-BF24-563BF40ABAB4} → {31D33510-3E71-4c48-B0A2-76672DE2B622}
+      - "Association «IN» → to.eo-response"  # {A5C9207A-9DC5-4dd4-B9B1-52CFCB0B11D7} → {DCE8CA27-DE46-47cb-BE43-402705EFF93C}
+      - "Association «IN» → to.eo-statistical_report_response"  # {7D96474B-5298-4e2f-A321-4493FBBFB995} → {84ECBB5A-57B6-4b4b-9F96-BE2F417BFDA2}
+      - "Association «IN» → tors.ems-emergency_or_incident_notification"  # {7168FD4C-1917-432b-93AC-4A5903DECFD7} → {C0DC6263-A6A1-498d-A81F-734D4D28E929}
+      - "Association «IN» → tt.p-emergency_call_responses"  # {9F4D6507-BBEE-4e7f-861B-1C7B72F393F4} → {0FF8D084-E51B-41a7-9AA5-1728EE205BEA}
+  - name: "F2.1.11.1 Manage eCall Message Transmission"
+    guid: "{E3715257-281B-407c-BEC6-DE27BD1C0AAC}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to receive eCall messages being sent from Vehicles that are operating in the road network.
+      (2) The ability to request other functionality to provide details of how to communicate with the most appropriate Public Safety Answering Point (PSAP) provider which can respond to and service the eCall message.
+      (3) The ability to pass on the eCall message to the most appropriate PSAP once the details of how to connect to it have been provided.
+      (4) The ability to keep the communication channel between the Host Vehicle and the PSAP open.
+      (5) The ability to pass through eCall response messages from the PSAP to the Host Vehicle and to send reports of the status of the eCall message response to other functionality.
+      (6) The ability to periodically communicate with all available PSAP's and to update their status depending on the availability that they each report.
+      (7) If the connection with the Vehicle is lost the ability to request the previously used contact detains from the Manage PSAP Data Stores function.
+    links:
+      - "Aggregation «componentof» → F2.1.11 Manage eCall Messages"  # {6359D382-0503-4a8d-A2A5-263EA8073D4F} → {89ADDE3A-4642-4d57-A89E-BFAE05F44CF1}
+      - "Association «IN» → psef.pshvs_eCall_first_acknowledgement"  # {B3A6E75D-8FF8-49fb-BA8B-240F56E93A2A} → {29DB4CF8-A297-45a0-B72E-4680559E617A}
+      - "Association «IN» → psef.pshvs_eCall_responses"  # {EF158D4F-6252-40a0-97FE-29923C982506} → {0457673A-639F-498a-8845-4631B8AC8DAF}
+      - "Association «IN» → psef_eCall_data"  # {1BAF7201-C13C-4211-8B85-A145EFBEE705} → {1CC7D5C6-A84C-4682-B3A5-35923A265B64}
+      - "Association «IN» → psef_request_PSAP_data_for_eCall"  # {4428DBF2-6EF9-45ba-9DB8-410CB839081E} → {AF4AD0A8-3D43-4ae3-AEC9-65E8F09A508D}
+      - "Association «instants of» → psef.pshvs_eCall_message_failure"  # {FB61E776-FFA8-4ac4-94ED-AE6F273DADD2} → {BB30A190-F437-44eb-9F15-4CBF5EB3FBCE}
+      - "Association «instants of» → psef_PSAP_status_request"  # {E56C47C9-5ADA-49ea-9562-F710015D52E2} → {6236D5B9-EFDE-44b9-854A-25A97D8D72DE}
+      - "Association «instants of» → psef_available_PSAP_list"  # {22D21BE6-F445-4f7d-B819-47FBA45B387F} → {A21AA3B3-45DE-4a79-88B4-A0334994DF57}
+      - "Association «instants of» → psef_eCall_message_status"  # {D7444DE6-9051-4992-B433-38DFBD7CA2E0} → {9881CB6C-616A-4500-B42E-6F29D6554FB2}
+      - "Realisation → Send redirected eCall to PSAP"  # {3DBA58E6-067F-4a30-BF6F-48E51037144A} → {2954E06D-E862-4126-AF72-7DBFEDA85BB1}
+      - "Realisation → Transfer eCall Call"  # {77A2B3B9-99A4-4b91-B0E6-BD50EB1D0E6B} → {DA9D57B4-40D9-4313-B8A8-C84349046257}
+  - name: "F2.1.11.2 Manage PSAP Data Stores"
+    guid: "{6409319D-AAE4-46c0-A424-EBA90DE58004}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to receive from the Manage eCall Message Detection function details of each eCall message that has been sent from Vehicles, including the location of the Vehicle at the time the message was sent.
+      (2) The ability to access the store of  Public Safety Answering Point (PSAP) Operational Data to find the PSAP that is the most appropriate to respond to the eCall message.
+      (3) The ability to extract the details of how to communicate with the most appropriate PSAP and send them back to the Manage eCall Message Detection function.
+      (4) The ability to provide contact information for all PSAP's that have that information stored on request from the Manage eCall Message Detection function.
+      (5) The ability to update the content of the store of PSAP Operational Data whenever such input is received from the Provide PSAP Data Operator Interface.
+      (6) The ability to extract contact details for the Vehicle from which an eCall message has been received and load them into the store of PSAP eCall Session Data (D2.4).
+      (7) The ability to update D2.4 every time a notification is received from the Manage eCall Message Detection function that response is received from the PSAP to an eCall message and to delete all records of the Vehicle and the messages that it has received, when the response is finished.
+      (8) The ability to provide details of the current content of the store of PSAP Operational Data whenever a request is received from the Provide PSAP Data Operator Interface.
+    links:
+      - "Aggregation «componentof» → F2.1.11 Manage eCall Messages"  # {2875DF9F-3079-4b58-97E9-525FAF19EE5D} → {89ADDE3A-4642-4d57-A89E-BFAE05F44CF1}
+      - "Association «IN» → psef_load_PSAP_data"  # {F3544D05-DD66-45a3-9085-81D1205B5A5F} → {4C6B496B-3873-4e9d-A80C-4D0F6AE1B2DC}
+      - "Association «IN» → psef_requested_PSAP_data"  # {20C95B85-B374-4171-B5EF-378155FCF116} → {770A0C6F-0465-471e-AB0C-68C603E37AA7}
+      - "Association «IN» → psef_requested_PSAP_data_for_eCall"  # {2BDBF759-5CE9-41bc-8F23-23CF4C0DF8B0} → {6C1C3E64-823E-42e4-A399-2087B60E799A}
+      - "Association «instants of» → psef_load_eCall_data"  # {F365B20F-D572-42b6-8BB5-02658F8D4188} → {10B104F4-BD25-4f56-B421-11C017C805DE}
+      - "Realisation → Allocate eCall to PSAP"  # {4FE6AF1F-FEB2-420d-B291-90B535964600} → {5050AC90-0C7B-48f2-B878-1AF265702584}
+  - name: "F2.1.11.3 Provide PSAP Data Operator Interface"
+    guid: "{7E3A2A8A-CD9E-44a7-94B3-209769E6BBDB}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1)The provision of the HMI for the Communications Operator so that the content of the store of  Public Safety Answering Point (PSAP) Operational Data can be managed.
+      (2) Enable the Communications Operator to be able to both load new details of a PSAP, or update the existing details of a PSAP in the store of PSAP Operational Data.
+      (3) Enable the Communications Operator to request and have output to them the details contained in the store of PSAP Operational Data for one or more PSAP's.
+    links:
+      - "Aggregation «componentof» → F2.1.11 Manage eCall Messages"  # {1673498D-0F7D-42b1-8EE9-A534AB94B50B} → {89ADDE3A-4642-4d57-A89E-BFAE05F44CF1}
+      - "Association «IN» → psef_new_PSAP_data"  # {B3493F82-17B3-4ad2-B353-1B72E358CF27} → {7C449A8F-D864-46f9-A2CF-5539FA133237}
+      - "Association «IN» → psef_request_PSAP_data"  # {3D5FC677-0FAB-4dd8-83C3-B030640B86B8} → {700FB26F-F21A-47fb-9540-0ED0EA14556A}
+      - "Association «IN» → to.co-PSAP_data_output"  # {5F34DCB3-7772-4738-96C9-32E9878180CA} → {31D33510-3E71-4c48-B0A2-76672DE2B622}
+  - name: "F2.1.2.1 Identify and Classify Emergencies"
+    guid: "{0CE226C4-3FE8-48de-A914-6ADAD5CABBBA}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to collect incident notifications from a variety of sources.
+      (2) The capability to filter and obtain associated information (e.g. location, cargo status, Vehicle identification, Traveller identification) to produce the data needed for the planning of the appropriate response from the Emergency Services.
+      (3) The ability to provide an acknowledgement of incident notification to its source, e.g. from a Pedestrian and to follow this up with reports of progress with providing an appropriate response.
+      (4) The ability to respond in a timely manner to requests for status updates from the eCall Message Management functionality
+      (5) The ability to respond instantly to the receipt of eCall messages.
+      (6) The ability to classify incidents and to provide data about them to other functionality so that the appropriate response can be planned and implemented and the appropriate traffic management action can be taken.
+    links:
+      - "Aggregation «componentof» → F2.1.2 Manage Emergency Intervention"  # {03DC2B46-2F3D-4d4b-BE66-4A1D85B4C7B8} → {C982E490-F99F-42a0-BFE6-1F230467AB2C}
+      - "Association «IN» → psef.mpto_PT_stop_alarm_acknowledgement"  # {ED7329D4-2817-4a56-B991-9694BB9F07C5} → {F3AAAF57-08E2-436e-8FB2-C1BD096B805D}
+      - "Association «IN» → psef.mpto_alarm_notification_acknowledgement"  # {BF3B23C6-8769-44a9-8B54-797D5C56AEE7} → {8164EFBF-792E-47fd-9E43-2E504C1B5B45}
+      - "Association «IN» → psef.mt_incident_data"  # {906135DF-8B2D-4b5e-B394-FDF7F3841C44} → {A70690B8-B6E3-4944-B1C8-438CB511ABE4}
+      - "Association «IN» → psef_control_identity_and_clarification_response"  # {C163A911-236F-4262-B750-B0F3728D6AE1} → {2C521B14-449F-4f09-9DF0-B815ED157C03}
+      - "Association «IN» → psef_emergency_description_to_manage_information"  # {F00E4238-966F-49c6-AAC5-F26647B78626} → {DC6855F2-B9BB-4241-9883-B129E2FF44A5}
+      - "Association «IN» → psef_emergency_id_for_planning"  # {F0CEC950-899D-44f7-9BE5-C2359F5A5B3C} → {46989015-8836-4cc9-9C96-352B2D16C84F}
+      - "Association «IN» → psef_incident_description_to_manage_information"  # {71F6CB80-8596-41dc-845C-E8D065F3D8DF} → {AF4BE3F3-B1BA-44af-A361-2E4611797FE5}
+      - "Association «IN» → psef_roadside_emergency_call_first_response"  # {09233B7D-B2F8-4d00-9697-DA8B9BDA2F14} → {B2B80A50-14FF-4617-97A6-552EA6CB1939}
+      - "Association «IN» → tesp.dvip-request_for_identification"  # {D989ADD7-38A8-42b0-AEAA-151732FA64DA} → {E64D8346-4F81-4d51-9917-A93A8FA0DF28}
+      - "Association «IN» → tors.ems-emergency_or_incident_notification"  # {F7E3E2EC-F586-49bf-93AD-E99AA851E04C} → {C0DC6263-A6A1-498d-A81F-734D4D28E929}
+      - "Association «instants of» → psef_PSAP_status_response"  # {559ABAD9-5BA9-4f91-A8A1-DF68C2CE5A5F} → {B0E56139-96C6-49d2-A319-8FE0DCDCE779}
+      - "Realisation → Receive and acknowledge eCall"  # {9EF5E384-0BE7-4513-8224-B3B366C55ED5} → {09A99A14-880A-40c5-B499-1A0C61A4B32B}
+  - name: "F2.1.2.3 Plan Emergency Intervention"
+    guid: "{9036B791-30B0-42db-9FF7-7545507EEA79}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to define and/or build the emergency plan that defines how the Emergency Services will respond a particular incident.
+      (2) As part of the definition of the emergency plan, be able to select the required emergency services, use pre-defined response procedures, request (green wave) routes for Emergency Vehicles and request that the routes are implemented.
+      (3) The ability to contact the required emergency services and establish with them the action plans.
+    links:
+      - "Aggregation «componentof» → F2.1.2 Manage Emergency Intervention"  # {3721B4F8-F370-4be7-A9E8-295E13873162} → {C982E490-F99F-42a0-BFE6-1F230467AB2C}
+      - "Association «IN» → psef.mt_inter-urban_emergency_route_request"  # {C22881E0-9F3F-453c-AE4F-117C82400B43} → {3F9E57FB-0758-4bce-8E1A-45619BA4B6F2}
+      - "Association «IN» → psef.mt_urban_emergency_route_request"  # {B0A645C6-BC2D-40a9-B268-91A4B932CBF1} → {01C6D6B9-E132-49a5-B35D-D74AF8EF84A4}
+      - "Association «IN» → psef.ptja_emergency_intervention_route_request"  # {C4FF827D-EF7C-4eed-9EE3-146E706D1CDB} → {693947FA-6394-4c20-A3E2-A0AA5982C715}
+      - "Association «IN» → psef_control_intervention_planning_response"  # {9515F1F4-0DA7-4434-A66E-820CC06ED08F} → {70DA15FB-6EB1-4593-882E-A03F53585468}
+      - "Association «IN» → psef_emergency_id_for_processing"  # {1E53DE23-609C-447f-B72C-522840636B06} → {C2497EE5-DCCA-4a61-BF4C-31933F627A45}
+      - "Association «IN» → psef_planned_emergency_route"  # {FD59F6F9-E4D4-4c46-8966-843E9634ACAA} → {5B712EFA-4746-4563-977C-DAC54DF8C952}
+      - "Association «IN» → psef_selected_emergency_plan_description"  # {00EC3A27-2D64-4f7b-8394-D40BC2343D2C} → {6489B1BA-9749-4ce2-B36C-8E13FB2FDE71}
+      - "Association «IN» → tes-intervention_request"  # {B189F674-5DC1-43fd-996B-7ED2EF4C08FD} → {77C0667C-7356-4422-9873-14833FF8025F}
+      - "Realisation → Perform all steps of emergency service according process definitions"  # {B82732F3-9D72-47b5-933C-8B72D6CAF82D} → {9CF756D0-97AF-4106-B093-4E0DFE7D1291}
+  - name: "F2.1.2.4 Process Emergency Progress Reports"
+    guid: "{7443D6A6-AA11-42ea-B337-29DCFD2CF0DC}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to provide the full acknowledgement of the response to incidents to the originators.
+      (2) The ability to prepare reports about the current progress with the response to incidents, i.e. how the emergency plan is being implemented.
+      (3) The ability to provide updates to the functionality that provides the management of road traffic in the geographic area where the incident occurred.
+    links:
+      - "Aggregation «componentof» → F2.1.2 Manage Emergency Intervention"  # {3E9EA492-3093-49f0-8020-A9D421E01564} → {C982E490-F99F-42a0-BFE6-1F230467AB2C}
+      - "Association «IN» → psef.mt_incident_data_update"  # {0795B9F8-E7CC-475f-875B-E765BC4A328E} → {B59995BA-C55C-40f6-AE06-5DB72187206B}
+      - "Association «IN» → psef_control_progress_report_processing_response"  # {D7D99C0C-FC2C-4682-A670-85925483DCA5} → {D97FD8CC-EBC1-435e-94A7-4E8C5BE1A3A5}
+      - "Association «IN» → psef_eCall_responses"  # {53AA8D49-1382-4f22-8EB6-1150F22E2732} → {4EF81730-96DF-40a0-B391-84FFCCE8A347}
+      - "Association «IN» → psef_emergency_id_for_re-classification"  # {F3E1909F-B5B0-4e8c-9E8C-27E97E9FB72C} → {50B75C8D-1823-4403-8F23-2DEE53DFD940}
+      - "Association «IN» → psef_emergency_id_for_re-planning"  # {B45CC9AF-5D90-4d9e-9B40-3B054E548C52} → {A70B21DD-9D86-433f-8E42-61D816FFAE91}
+      - "Association «IN» → psef_emergency_processing_information"  # {BD2A000C-7541-4326-83D7-DBDCDF46AF9E} → {1B050A44-CE24-487a-8380-B2F7A24763E1}
+      - "Association «IN» → psef_global_emergency_progress_report"  # {0414F793-9223-4d62-A79C-45B33E240AA4} → {A93397D4-0E79-4758-A31D-25831F9B09D9}
+      - "Association «IN» → psef_roadside_emergency_call_full_response"  # {BE3BA9A9-B241-414b-9E36-62C16DE954B9} → {7EA19AD9-CCB7-47de-8A2C-255020016FA9}
+      - "Association «IN» → tes-global_progress_report"  # {367002B8-345D-49a5-B9AC-C23FAED97EF3} → {9713D0FB-5CE1-453d-A261-2313A89CC5CB}
+      - "Realisation → Perform all steps of emergency service according process definitions"  # {84DB119E-E66D-41cb-91A8-7970C2838F01} → {9CF756D0-97AF-4106-B093-4E0DFE7D1291}
+  - name: "F2.1.2.5 Manage Incident and Emergency Data"
+    guid: "{40CC5547-4CEA-41d7-ABB9-A29DE6E7BB46}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to manage the contents of the Store of Incident and Emergency Data.
+      (2) The ability to receive data about incidents and the way that their responses are being processed (emergency plans) and update them in the Store of Incident and Emergency Data.
+      (3) The ability to pass on incident descriptions when they are received to the functionality for planning emergency interventions.
+    links:
+      - "Aggregation «componentof» → F2.1.2 Manage Emergency Intervention"  # {DAFDAC5A-0A9D-426a-9BC9-DBF0C88F5E8F} → {C982E490-F99F-42a0-BFE6-1F230467AB2C}
+      - "Association «IN» → psef_description_of_emergency_for_classification"  # {240619D8-7227-4752-8463-C1791439FCA7} → {5032987D-BDED-4b34-861F-EF18F156E03D}
+      - "Association «IN» → psef_emergency_data_for_planning_intervention"  # {BDD66C61-B3D1-4938-AA10-9F243902CE50} → {0206BDD7-13AC-47a1-A219-940BDEA69A30}
+      - "Association «IN» → psef_emergency_description_for_progress_reports"  # {906F5F33-AEDB-4716-ABAF-6A207F3388C2} → {C9893C0B-F423-425e-B3AB-4B458AC26D45}
+      - "Association «IN» → psef_emergency_response_statistics_response"  # {EB4989C7-39E8-494c-8A4F-1F8902BED903} → {6F1F1CA3-4844-4e50-8900-CA7CBDD91A35}
+      - "Association «IN» → psef_incident_description_for_classification"  # {913FCD38-667B-4d1b-A1E7-A5AC675C8B1D} → {91A9A3C3-70AF-41d7-9586-A3583E7BE7E0}
+      - "Association «IN» → psef_load_emergency_data"  # {5AF102E0-FE9D-4be9-8347-27FCFB1F562C} → {BBBF5156-A240-4351-9646-556DB03022AD}
+      - "Realisation → Perform all steps of emergency service according process definitions"  # {CD5B0923-C3E6-401e-95A0-601D37CFB6A3} → {9CF756D0-97AF-4106-B093-4E0DFE7D1291}
+  - name: "F2.1.5 Provide Access and Maintain Data for Emergency"
+    guid: "{16BA29E6-CDB1-43a3-80EE-773D6C13C67F}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The maintenance of a Data Store containing data that is used during the processing of an incident or an emergency.
+      (2) The ability to send requests for updates (refresh) of the route previously provided for an Emergency Vehicle based on new data, or input from the Emergency Operator received from the Operator Interface Function.
+      (3) The provision of data to the Emergency Operator following a specific request made through the Operator Interface Function.
+      (4) The ability to receive data about an incident or emergency from the Emergency Services.
+      (5) The ability to receive updated map data for use in the response to the incident or emergency.
+      (6) The provision of common data for use in creating emergency intervention plans and classifying emergencies that has been.
+    links:
+      - "Aggregation «componentof» → F2.1 Manage Emergencies"  # {1F409A04-B61B-4a81-A439-693009509F23} → {8B0A6367-E6D7-47e2-9086-81FB2C700C13}
+      - "Association «IN» → psef.ptja_route_refresh_request"  # {4F6E9BB0-2CE0-4b24-BDBB-1A282DA8D9B8} → {0466EFD2-2719-466f-9CEE-822010B047BA}
+      - "Association «IN» → psef_common_data_for_emergency_classification"  # {ADC9E4DE-6C9B-4a90-A913-509B7DF05C36} → {EE56E885-114F-4b7a-9F4E-D9B526B8D61E}
+      - "Association «IN» → psef_common_data_for_emergency_intervention_plans"  # {016C6C9C-B949-41e8-9AE4-ACACC27E38AA} → {B95A09AC-A960-4bf4-9F1B-2AB52D7DAB5B}
+      - "Association «IN» → psef_load_common_emergency_data"  # {958AD2CC-CEA0-4c5d-80D2-7631925319E0} → {8BD8C26F-A5AA-4669-9310-8EDD90234B3F}
+      - "Association «IN» → psef_maintain_emergency_data_response"  # {26845776-9295-47a5-A89C-181EC7496A60} → {EE12B5E8-508A-468b-ACF0-33BA7B069304}
+      - "Realisation → Perform all steps of emergency service according process definitions"  # {9B2406C1-12D7-4808-999C-471BE3610BB8} → {9CF756D0-97AF-4106-B093-4E0DFE7D1291}
+  - name: "F2.1.7 Manage use of Emergency Vehicle"
+    guid: "{5B46BB1A-BDD0-4baf-AF81-95C9D0184287}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The provision of a HMI through which the Emergency Vehicle Driver can be presented with details of the route to be followed by the Emergency Vehicle.
+      (2) The ability to receive data from other functionality about the route that the Emergency Vehicle is to follow.
+      (3) The ability to request that traffic signal intersection controllers provide local priority to the Emergency Vehicle in accordance with a route provided by the Emergency Vehicle Driver.
+      (4) The ability to maintain the up to date details of the current location of the Emergency Vehicle for use in local priority requests.
+      (5) The ability to request the deployment of "virtual cones" at an incident location, following a command from the Emergency Vehicle Driver.
+      (6) The ability to inform other suitably equipped Vehicles that an Emergency Vehicle is approaching.
+    links:
+      - "Aggregation «componentof» → F2.1 Manage Emergencies"  # {5CC59D8A-E356-48ef-BF0A-E3DD6EBA2E67} → {8B0A6367-E6D7-47e2-9086-81FB2C700C13}
+      - "Association «IN» → psef.mt_emergency_local_priority_request"  # {E6281F43-0870-4a1b-8BA6-EB40B63EF8B1} → {3BC4E7BD-6296-48bf-AD7C-21913311F63E}
+      - "Association «IN» → psef.mt_inter-urban_virtual_coned_area_request"  # {3DA8CE42-CE6E-49d5-B4F6-669076249AA1} → {759B3F3D-E001-4876-91FE-092F27563A37}
+      - "Association «IN» → psef.mt_urban_virtual_coned_area_request"  # {AA6AD8CA-ACB0-4a2e-91E3-BEB7CD218DE5} → {664CDD6A-BAD5-471b-B09A-900C5A997A43}
+      - "Association «IN» → psef.pshvs_emergency_vehicle_approaching"  # {A5C2E12B-5BEF-4110-A6BE-F23F59262911} → {861F5013-8200-4026-9DA5-60DA1706BBE4}
+      - "Association «IN» → psef_individual_emergency_progress_report"  # {762BC755-E3B7-4e17-A6C6-707994468D7B} → {D7026EBF-7FED-4925-B3F3-6CCBBD965878}
+      - "Association «IN» → td.evd-emergency_route_guidance"  # {ED74BF94-4C28-4e14-8310-A13484FE13F6} → {6D4BFE49-7698-4391-9B6E-C2B8A401BC37}
+      - "Association «IN» → td.evd-global_emergency"  # {E246D0B8-0032-44d6-8941-95936A98BAB7} → {55B4E5E7-380B-486a-98E3-148D9276274E}
+  - name: "F2.1.9 Provide Emergency Operator Interface"
+    guid: "{4DC02A8C-F802-4f2e-A6F6-FBF6A5F3D194}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The provision of the HMI for the Emergency Operator so that emergencies and all related information can be managed.
+      (2) Enable the Emergency Operator to manage the processing, classification and response to incidents or emergencies through Data Flow interfaces to other functionality.
+      (3) Enable the Emergency Operator to request statistics about the occurrence of incidents and the responses to them.
+    links:
+      - "Aggregation «componentof» → F2.1 Manage Emergencies"  # {D9F423F8-8A91-4533-9A85-B0DFC8963F01} → {8B0A6367-E6D7-47e2-9086-81FB2C700C13}
+      - "Association «IN» → psef_control_identity_and_clarification_request"  # {3FBDF3D2-A90C-429e-8ED8-82363ADEADE5} → {40119A3E-1A4F-4530-BDD4-CF26BB2299A9}
+      - "Association «IN» → psef_control_intervention_planning"  # {F5A67F66-61D4-45a9-888A-B79970B340D6} → {DFDDF2BA-0EA4-4b1c-89BF-7E99C1DDB409}
+      - "Association «IN» → psef_control_progress_report_processing"  # {675B50C2-5872-4925-99EE-C9BD170A820E} → {F6F07ABA-BDAB-40b2-BA5E-9C075BF978F2}
+      - "Association «IN» → psef_maintain_emergency_data_operator_request"  # {EB58981B-273D-4c99-BCEC-1E8854150D33} → {5B5FBCA0-8FA1-40f2-87D0-E2D8606942FB}
+      - "Association «IN» → psef_request_emergency_response_statistics"  # {B896F7D8-F10B-482f-95A4-4ED174EB0047} → {0E2B0290-43A2-4947-B100-0ECCBE988CEE}
+      - "Association «IN» → to.eo-response"  # {B9E894EB-B89F-4c7e-9A0D-88CABFC7BAF2} → {DCE8CA27-DE46-47cb-BE43-402705EFF93C}
+      - "Association «IN» → to.eo-statistical_report_response"  # {9236ECC0-B64D-44e1-A3A8-9F7ED768809B} → {84ECBB5A-57B6-4b4b-9F96-BE2F417BFDA2}
+      - "Realisation → Contact eCall Source"  # {8F6A7D96-DA82-4892-B60B-3AB1A949E440} → {78C85328-12AF-4ad4-B463-7CA76BA13CEF}
+  - name: "F2.2 Manage Stolen Vehicle Notification"
+    guid: "{1510BFFC-B1DA-4b9b-8A6A-1A127E307272}"
+    type: "Activity"
+    stereotype: "FRAME_High_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This High-level Function shall manage the notification that a Vehicle has been stolen.  It shall take the data objects sent to it by the actual stolen vehicle and forward them to the Emergency Operator Terminator and Emergency System Terminator.  As part of the forwarding process, any re-formatting that is need to enable the data objects to be sent to either Terminator shall be performed.  Some form of alarm indication shall be provided by the Function to highlight the fact that a Vehicle has been stolen.  Similar action shall be taken when the vehicle stolen notification is cancelled by data objects received from the Vehicle.
+    links:
+      - "Aggregation «componentof» → F2. Provide Safety and Emergency Facilities"  # {EE678C7C-2DBA-42fd-85CA-8B88DB0FFD6A} → {06D291DE-AA10-4891-8C30-E42616CA8483}
+      - "Association «IN» → psef.pshvs_stolen_vehicle_stop_message"  # {110FDE09-611D-4c9a-9545-F295FE66EFEC} → {7DFAFBCD-1388-4716-83E4-D966D8FF5557}
+      - "Association «IN» → psef_send_stop_stolen_vehicle_message"  # {AB02D16E-EAAD-4379-BEEB-942DECEEAEA8} → {BB7BD73D-F1FE-40b9-AB99-B6D0BEC67F5E}
+      - "Association «IN» → pshvs_stolen_vehicle_data_for_emergency_operator"  # {8797005E-CD6C-46dd-B9FE-0EC1EA7B5D79} → {F1B94216-51F5-46ac-AB97-ABB73D41977B}
+      - "Association «IN» → pshvs_stolen_vehicle_data_for_emergency_services"  # {F89E49E0-FB70-4c73-99E6-55DB124D8F1C} → {9B06A4DD-35DA-4a7c-A51B-996184D5B8DB}
+      - "Association «IN» → tes-stolen_vehicle_information"  # {63798229-26F9-40a3-ACE4-AC206909CBFA} → {F740B901-6073-43eb-8F0E-6D0A79F353C4}
+      - "Association «IN» → to.eo-stolen_vehicles_information"  # {78A9352D-9742-4a4c-80A5-DC44C15B574A} → {0D7C0692-3B19-4f1c-82B2-A6BB60D244C9}
+  - name: "F2.2.1 Manage Stolen Vehicle Actions"
+    guid: "{3AAC81A3-55B5-460e-8271-C3613C9CA55B}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to collect the data sent to it by the actual stolen vehicle and forward it to other functionality that will send it to both the Emergency Operator and the Emergency System.
+      (2) The ability to issue cancellation of the stolen Vehicle report when the appropriate data is received from the Vehicle.
+    links:
+      - "Aggregation «componentof» → F2.2 Manage Stolen Vehicle Notification"  # {16C98D3D-671D-46d6-89F3-113414989695} → {1510BFFC-B1DA-4b9b-8A6A-1A127E307272}
+      - "Association «IN» → psef.pshvs_stolen_vehicle_stop_message"  # {FB5885AA-A3E3-46a1-9173-3F98B4A6B3F2} → {7DFAFBCD-1388-4716-83E4-D966D8FF5557}
+      - "Association «IN» → pshvs_stolen_vehicle_data_for_emergency_operator"  # {B528A213-2B32-41e2-B035-291364477566} → {F1B94216-51F5-46ac-AB97-ABB73D41977B}
+      - "Association «IN» → pshvs_stolen_vehicle_data_for_emergency_services"  # {AEADB623-CFFB-4aee-9067-65CAA645ADC7} → {9B06A4DD-35DA-4a7c-A51B-996184D5B8DB}
+  - name: "F2.2.2 Manage Stolen Vehicle Emergency Services Interface"
+    guid: "{E7D14CCD-DA68-40f0-8AB8-BBC12E12815E}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) An appropriate link to communicate to the Emergency Services the notification that a Vehicle has been stolen has been received.
+      (2) The ability for the link to provide some form of alarm indication to draw the attention of the Emergency Services to the fact that a Vehicle has been stolen.
+      (3) An appropriate link to communicate to the Emergency Services the notification that the stolen notification for a Vehicle has been cancelled, with again some form of alarm indication to draw the attention to the new status.
+    links:
+      - "Aggregation «componentof» → F2.2 Manage Stolen Vehicle Notification"  # {446DA165-2E59-4fc0-968D-CCA0E4BB6E19} → {1510BFFC-B1DA-4b9b-8A6A-1A127E307272}
+      - "Association «IN» → tes-stolen_vehicle_information"  # {1791FEB6-C75A-4fe2-9D7D-CBC87E963585} → {F740B901-6073-43eb-8F0E-6D0A79F353C4}
+  - name: "F2.2.3 Manage Stolen Vehicle Emergency Operator Interface"
+    guid: "{79D33215-E0CB-4b5f-A3ED-F7D3E64D1247}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) An appropriate HMI to communicate to the Emergency Services Operator the notification that a Vehicle has been stolen has been received.
+      (2) The ability for the HMI to provide some form of alarm indication to draw the attention of the Emergency Operator to the fact that a Vehicle has been stolen.
+      (3) An appropriate HMI to communicate to the Emergency Services Operator the notification that the stolen notification for a Vehicle has been cancelled, with again some form of alarm indication to draw the attention to the new status.
+    links:
+      - "Aggregation «componentof» → F2.2 Manage Stolen Vehicle Notification"  # {D81E037E-83C8-4d2b-B9F4-C09C25D2C252} → {1510BFFC-B1DA-4b9b-8A6A-1A127E307272}
+      - "Association «IN» → psef_send_stop_stolen_vehicle_message"  # {4B5BCB29-8F5C-4964-8CAF-D22C020474E4} → {BB7BD73D-F1FE-40b9-AB99-B6D0BEC67F5E}
+      - "Association «IN» → to.eo-stolen_vehicles_information"  # {5AA64E68-518E-4cf2-B183-0654D406A43D} → {0D7C0692-3B19-4f1c-82B2-A6BB60D244C9}
+  - name: "F2.1.2 Manage Emergency Intervention"
+    guid: "{C982E490-F99F-42a0-BFE6-1F230467AB2C}"
+    type: "Activity"
+    stereotype: "FRAME_High_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 1
+    note: |
+      This High-level Function shall include functionality for the processing of reports about accidents and incidents.  This includes managing the responses to eCall messages received from Vehicles and reports of accidents and incidents from other sources.  In managing the response to eCall messages, the Function will perform the role of a Public Safety Answering Point (PSAP)   It shall receive and analyse the reports so that it can classify accidents and incidents to enable the most appropriate responses to be provided.  It shall initiate these responses and manage the use of the required facilities, providing progress updates to the sources of the accident and incident reports.
+    links:
+      - "Aggregation «componentof» → F2.1 Manage Emergencies"  # {FA9B4ABE-7AE4-432f-A66D-B732927FDD31} → {8B0A6367-E6D7-47e2-9086-81FB2C700C13}
+      - "Association «IN» → psef.mpto_alarm_acknowledgements"  # {2AF923D1-BC97-4d0d-A35D-D862BC537AAF} → {30ACB7F9-C191-4da3-B8DB-B449165DA087}
+      - "Association «IN» → psef.mpto_alarm_notification_acknowledgement"  # {CF184476-0490-436d-B35F-18268C3AE7E4} → {8164EFBF-792E-47fd-9E43-2E504C1B5B45}
+      - "Association «IN» → psef.mt_emergency_request"  # {BB83867F-BAB9-4f69-B062-E2BADED431E6} → {3F63EF26-6AD4-4ab8-8685-9AF1F5A74B4A}
+      - "Association «IN» → psef.mt_incident"  # {E5635BFB-8E12-42ee-A07D-F3CD8F1162C4} → {441913C9-C52C-43c2-984B-5ECF6B3D2ECC}
+      - "Association «IN» → psef.pshvs_eCall_arcknowledgements"  # {B103618F-EF36-4b5b-8C5E-8C4E9997020C} → {19376C6E-B525-4090-AF64-7A18742D0408}
+      - "Association «IN» → psef.ptja_emergency_intervention_route_request"  # {80A525AA-33E0-4639-AD0A-845708F18DD8} → {693947FA-6394-4c20-A3E2-A0AA5982C715}
+      - "Association «IN» → psef_control_identity_and_clarification_response"  # {94659F27-C87E-4fec-9E45-6101B4982ED6} → {2C521B14-449F-4f09-9DF0-B815ED157C03}
+      - "Association «IN» → psef_control_intervention_planning_response"  # {6C233F6B-2FDD-44b4-B736-167EBBF21194} → {70DA15FB-6EB1-4593-882E-A03F53585468}
+      - "Association «IN» → psef_control_progress_report_processing_response"  # {89A4A2D0-F8C6-4bb2-A4BE-F2AE8732D5FD} → {D97FD8CC-EBC1-435e-94A7-4E8C5BE1A3A5}
+      - "Association «IN» → psef_eCall_responses"  # {9826BF80-D5D0-4453-A2CE-79BD86CEF984} → {4EF81730-96DF-40a0-B391-84FFCCE8A347}
+      - "Association «IN» → psef_emergency_response_statistics_response"  # {0B78500F-EFAD-43a5-9A89-82EE8DC1459A} → {6F1F1CA3-4844-4e50-8900-CA7CBDD91A35}
+      - "Association «IN» → psef_global_emergency_progress_report"  # {F7F7525A-2348-4e36-8F7A-67842B9E0457} → {A93397D4-0E79-4758-A31D-25831F9B09D9}
+      - "Association «IN» → psef_planned_emergency_route"  # {318E0D11-F9C8-4461-B395-F9FFB5C24C41} → {5B712EFA-4746-4563-977C-DAC54DF8C952}
+      - "Association «IN» → psef_roadside_emergency_call_first_response"  # {CF18727D-33B6-47c2-B022-F1C19993C043} → {B2B80A50-14FF-4617-97A6-552EA6CB1939}
+      - "Association «IN» → psef_roadside_emergency_call_full_response"  # {BFB47C22-75E1-446e-AC80-11E2FF4E5DF4} → {7EA19AD9-CCB7-47de-8A2C-255020016FA9}
+      - "Association «IN» → tes-global_progress_report"  # {CEBBE789-1F9D-452d-A2E3-FB5184C29567} → {9713D0FB-5CE1-453d-A261-2313A89CC5CB}
+      - "Association «IN» → tes-intervention_request"  # {3BA21868-D84A-40bf-8A2C-5BF43E4141EE} → {77C0667C-7356-4422-9873-14833FF8025F}
+      - "Association «IN» → tesp.dvip-request_for_identification"  # {B89CFB01-C13E-4c8a-8F21-17266F971685} → {E64D8346-4F81-4d51-9917-A93A8FA0DF28}
+      - "Association «IN» → tors.ems-emergency_or_incident_notification"  # {C38EFD8E-AC2A-4b4a-A70C-B2D8F7F40430} → {C0DC6263-A6A1-498d-A81F-734D4D28E929}
+      - "Association «instants of» → psef_PSAP_status_response"  # {A3B45780-C481-4152-A0BE-A991C728C3CA} → {B0E56139-96C6-49d2-A319-8FE0DCDCE779}
+  - name: "F2.1.10 Accept Roadside Emergency Call"
+    guid: "{C793F840-EF4D-433e-BE41-346972E00C28}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 5
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) Enable a Pedestrian to send an emergency call from a location that is at the roadside.
+      (2) Provide the Pedestrian with the acknowledgement for the emergency call sent in (1).
+      (3) Include suitable HMI's the Pedestrian at the roadside.
+    links:
+      - "Aggregation «componentof» → F2.1 Manage Emergencies"  # {F0504A18-25F7-48e5-A6E0-09CCC58D2AF0} → {8B0A6367-E6D7-47e2-9086-81FB2C700C13}
+      - "Association «IN» → psef_emergency_call_from_roadside"  # {AE44DD6D-9567-4e3d-91A7-A7109D4AE547} → {E8960515-75BE-4801-87FF-23DCAD3B9395}
+      - "Association «IN» → tt.p-emergency_call_responses"  # {0D26BC67-C1B6-413f-9DB0-DE309E3FAE01} → {0FF8D084-E51B-41a7-9AA5-1728EE205BEA}
+      - "Realisation → Recieve eCall Call"  # {EF68C157-9649-4d30-B5AF-8964D651FA54} → {2AEA5AED-AB2C-4ad1-AE38-9A5A0DFAFE7E}
+  - name: "F2.1.11 Manage eCall Messages"
+    guid: "{89ADDE3A-4642-4d57-A89E-BFAE05F44CF1}"
+    type: "Activity"
+    stereotype: "FRAME_High_Level_Function"
+    status: "Proposed"
+    version: "1.0"
+    order: 6
+    note: |
+      This High-level Function shall enable eCall messages to be received from Vehicles and sent to the most appropriate Public Safety Answering Point (PSAP).  The most appropriate PSAP shall be determined by a combination of the nearest to the location from which the eCall message was sent, the availability status of each PSAP and the number of eCalls sent to each PSAP in the last period.  It shall also enable the communications links between Vehicles sending eCall messages and the PSAP's that received them to be kept open until processing of the eCall messages is complete.  It shall provide Facilities shall also be provided to enable a Communications Operator (a member of staff from the Network Operator) to maintain the list of available PSAP's and to display that list if needed.
+    links:
+      - "Aggregation «componentof» → F2.1 Manage Emergencies"  # {A8D12CD6-40C7-42ac-B348-144037B40547} → {8B0A6367-E6D7-47e2-9086-81FB2C700C13}
+      - "Association «IN» → psef.pshvs_eCall_first_acknowledgement"  # {D91F2BC8-47C9-470f-8F57-42DF0B3B3795} → {29DB4CF8-A297-45a0-B72E-4680559E617A}
+      - "Association «IN» → psef_eCall_data"  # {1348061D-50A3-4c19-9447-8A3F42880A62} → {1CC7D5C6-A84C-4682-B3A5-35923A265B64}
+      - "Association «IN» → to.co-PSAP_data_output"  # {F0A7A799-DB37-4e5a-B8E0-3CD7F1AEF04F} → {31D33510-3E71-4c48-B0A2-76672DE2B622}
+      - "Association «instants of» → psef_PSAP_status_request"  # {D3572A2C-BBE1-4200-B4B3-0579F0776E3B} → {6236D5B9-EFDE-44b9-854A-25A97D8D72DE}

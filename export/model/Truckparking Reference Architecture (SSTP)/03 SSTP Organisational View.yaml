@@ -1,0 +1,43 @@
+package: "Truckparking Reference Architecture (SSTP)/03 SSTP Organisational View"
+guid: "{839847DB-97DB-4ba7-85B8-474FBB129467}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: ""
+    guid: "{5611A6C0-4ABC-4fc4-82D8-8902E6C5CCA1}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "ProxyConnector"
+    guid: "{1AF10ADF-D5DC-45fb-9308-E21E1162975C}"
+    type: "ProxyConnector"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association → Park Operator Service Provision Agreement"  # {F0BB0847-B847-4723-ABF6-BC4F2FEE56E7} → {7CC13E8C-99BE-46b6-9AF3-CBBE4F468C8F}
+  - name: "ProxyConnector"
+    guid: "{3FAADC15-8D01-4578-9F8D-DA7C64DF9872}"
+    type: "ProxyConnector"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "ProxyConnector"
+    guid: "{89F517D2-344B-429d-AB7C-26C922E988C9}"
+    type: "ProxyConnector"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "ProxyConnector"
+    guid: "{B7A4DB00-E4E1-4bc8-AF46-87E91DF0E082}"
+    type: "ProxyConnector"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""

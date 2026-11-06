@@ -1,0 +1,86 @@
+package: "Truckparking Reference Architecture (SSTP)/02 SSTP Functional View/SSTPIS High Level Data Flows"
+guid: "{97008D1B-E378-4081-9318-E943B4BA0BE8}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "fNAP-tSSPIS"
+    guid: "{6240ECF3-E711-4dc1-9E26-5479DFBF3481}"
+    type: "Interface"
+    stereotype: "FRAME_High_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 4
+    note: ""
+    links:
+      - "Association «OUT» → Information Service"  # {A0DB486E-1493-4694-9164-A7B1EBAEDA8D} → {4E2FCC27-369E-40b8-BD84-07B3967CA13E}
+  - name: "fo.po-tNAP"
+    guid: "{A4951824-CCD7-40e8-8FB8-C62DDBD17C63}"
+    type: "Interface"
+    stereotype: "FRAME_High_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 5
+    note: ""
+    links:
+      - "Association «OUT» → NAP"  # {378805D6-AEA9-4300-90AF-1644133AB4AC} → {51D57A0F-2C2F-443f-9B12-4BB129325648}
+  - name: "fo.po-tPAM"
+    guid: "{B759FD5B-F946-41ad-9BC7-14BD382D26E1}"
+    type: "Interface"
+    stereotype: "FRAME_High_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 6
+    note: ""
+    links:
+      - "Association «OUT» → Parking Area Management"  # {499AA3BA-9533-4d5a-B5E5-58304904D503} → {8DE27522-3716-477e-B08C-3BAAC7A52E94}
+  - name: "fSSPS-tNAP"
+    guid: "{BB5DAB8B-D77C-478d-A35B-5D2F5EEA5822}"
+    type: "Interface"
+    stereotype: "FRAME_High_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 14
+    note: ""
+    links:
+      - "Association «OUT» → NAP"  # {69E3745A-113F-4823-B6B1-9CEDF4722721} → {51D57A0F-2C2F-443f-9B12-4BB129325648}
+  - name: "fSSTIS-td"
+    guid: "{35D2614C-D570-42a4-9F7E-7D61EB239ADB}"
+    type: "Interface"
+    stereotype: "FRAME_High_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 15
+    note: ""
+    links:
+      - "Association «OUT» → Driver"  # {63808AC3-224C-4ce3-8071-3EB9732185F1} → {0C560BF0-702E-48c1-B7F0-69F55BF03556}
+  - name: "to.po-fNAP"
+    guid: "{86449B9F-A106-4d81-A124-0D356CE690ED}"
+    type: "Interface"
+    stereotype: "FRAME_High_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 18
+    note: ""
+    links:
+      - "Association «OUT» → Parking Operator"  # {34C626F3-A0AA-4e54-A860-029DE2EA8E8A} → {1839AD47-F336-4a43-AF40-5A0A45E882C1}
+  - name: "to.po-fPAM"
+    guid: "{C68B7F62-97F0-47c6-986B-839ED5F9BBC5}"
+    type: "Interface"
+    stereotype: "FRAME_High_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 19
+    note: ""
+    links:
+      - "Association «OUT» → Parking Operator"  # {E6632A24-AE31-4943-BA37-402D321054A0} → {1839AD47-F336-4a43-AF40-5A0A45E882C1}
+  - name: "tSSTIS-fd"
+    guid: "{1E792568-4CE7-4339-9045-D7AFFCE9A398}"
+    type: "Interface"
+    stereotype: "FRAME_High_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 20
+    note: ""
+    links:
+      - "Association «OUT» → Information Service"  # {1F7A922F-81A8-45da-B840-E3DF502520F7} → {4E2FCC27-369E-40b8-BD84-07B3967CA13E}

@@ -1,0 +1,25 @@
+package: "FRAME Toolsetup/FRAME_Toolbox/FRAME_Diagram"
+guid: "{9AC3D2CE-222A-4fc0-9AFD-2F5C307C5673}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "Diagram_Logical"
+    guid: "{6BDCBFEB-68BE-494d-B7B5-96A8BEA4C20F}"
+    type: "Class"
+    stereotype: "metaclass"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "FRAME_Diagram"
+    guid: "{B4868EE4-5B41-44f5-8A1E-B8B9ACD59F26}"
+    type: "Class"
+    stereotype: "stereotype"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The FRAME diagramm enables all FRAME objects through the FRAME Toolbox
+    links:
+      - "Extension → Diagram_Logical"  # {023E5482-F117-42d7-9235-2DE0C1288017} → {6BDCBFEB-68BE-494d-B7B5-96A8BEA4C20F}

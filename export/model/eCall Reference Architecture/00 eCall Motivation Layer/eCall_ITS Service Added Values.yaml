@@ -1,0 +1,159 @@
+package: "eCall Reference Architecture/00 eCall Motivation Layer/eCall_ITS Service Added Values"
+guid: "{45F96807-40E2-404a-8C6F-AD11C03D6E3D}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "Centralized per region"
+    guid: "{011194E7-8518-4f6f-9705-A4FA0229F433}"
+    type: "Class"
+    stereotype: "ITS_Service_Added_Value"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "ITS Added Value Type": ""
+    note: ""
+    links:
+      - "Association «defines» → eCall PSAP Operator"  # {C6B4005A-EC54-4c50-93D4-C1044FBDF25B} → {6C6C2F43-F7FF-479b-A712-DD7400ABAC61}
+  - name: "Comparison of MS Systems"
+    guid: "{3EBC2CD8-FAB2-471b-9DF6-DA5E83ED61F9}"
+    type: "Class"
+    stereotype: "FRAME_ITS_Service_Added_Value"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "ITS Added Value Type": ""
+    note: |
+      The ITS Architecture supports the comparison of sytems and services involved in the EU.
+    links:
+      - "Usage «Instantiate» → Member State"  # {0187829F-5BE9-40ec-93EA-B60CB5E63B05} → {F726C13D-F0ED-43f5-8A86-D764CBB69491}
+  - name: "Efficency"
+    guid: "{067A7D8D-777E-47ec-8703-04F6A92EFF84}"
+    type: "Class"
+    stereotype: "ITS_Service_Added_Value"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "ITS Added Value Type": "efficiency"
+    note: |
+      - Reduced time to mobile passenger after an accident, =>risk of death or high vulnerability decreases.
+      	- Faster clearance of accident scenes on the road.
+      	- Organisation of PSAP´s can be organised better. Higher numbers of interventions with the same staff can be handled.
+  - name: "Efficient support of passengers"
+    guid: "{F300CBBA-A8D2-4453-9E12-3349E7482672}"
+    type: "Class"
+    stereotype: "ITS_Service_Added_Value"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "ITS Added Value Type": ""
+    note: ""
+    links:
+      - "Association «defines» → eCall In Vehicle System"  # {C5FA46CD-0D98-4c57-A5F2-5FD84E732A13} → {6BD43EDE-C6BB-4b9a-9F42-5E58564320F4}
+  - name: "Environmental impact"
+    guid: "{612946C9-6DC4-4675-94D4-690AE570B07E}"
+    type: "Class"
+    stereotype: "ITS_Service_Added_Value"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "ITS Added Value Type": ""
+    note: |
+      - Environmental gains are a secondary effect of the faster clearance of accident scenes. Traffic becomes fluent again, faster.
+  - name: "Establishing standardized emercency channel"
+    guid: "{97613E06-EEDB-4b8f-85B3-462432E4C029}"
+    type: "Class"
+    stereotype: "ITS_Service_Added_Value"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "ITS Added Value Type": ""
+    note: ""
+  - name: "High Priority for MSD"
+    guid: "{0A25C5B7-A945-43b2-89C5-8E352527C6E6}"
+    type: "Class"
+    stereotype: "FRAME_ITS_Service_Added_Value"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "ITS Added Value Type": ""
+    note: |
+      Pass MSD data with highest priority in Telecom networks and check implementation.
+  - name: "Other Benefits"
+    guid: "{FB384F5B-886E-4235-ACFC-2D19D83EC817}"
+    type: "Class"
+    stereotype: "ITS_Service_Added_Value"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "ITS Added Value Type": "other"
+    note: |
+      - The whole society saves high cost´s for passenger treatments after accidents.
+      	- Secondary effect for travellers in the "vicinity of an accident location"
+  - name: "Public authority organized"
+    guid: "{CA1E293F-E172-4c7a-B542-1BEE69A74F05}"
+    type: "Class"
+    stereotype: "ITS_Service_Added_Value"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "ITS Added Value Type": ""
+    note: ""
+    links:
+      - "Association «defines» → eCall PSAP Operator"  # {018A257F-21CC-4c28-979B-F3A338855693} → {6C6C2F43-F7FF-479b-A712-DD7400ABAC61}
+  - name: "Reduce the reaction times"
+    guid: "{D28F059B-1191-4837-AD21-014B13ABAB4B}"
+    type: "Class"
+    stereotype: "FRAME_ITS_Service_Added_Value"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "ITS Added Value Type": ""
+    note: |
+      Reduce the reaction times of road accidents in general in Europe for fast medical response and the overall reduction of road deaths.
+  - name: "Road Safety"
+    guid: "{8299CEC4-F20B-45c9-A648-6F068C789B60}"
+    type: "Class"
+    stereotype: "ITS_Service_Added_Value"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "ITS Added Value Type": "safety"
+    note: |
+      - Road safety gains because after accidents passengers are supported faster and more efficient.
+      	- Follow up accidents rates are reduced on roads with high occupancy
+      	- Public services are more efficient and of the same quality in all MS, because PSAP´s are certified.
+  - name: "Standardized Interface"
+    guid: "{A9CE6627-6A2F-4b81-AE57-0B6A5EF0A959}"
+    type: "Class"
+    stereotype: "ITS_Service_Added_Value"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "ITS Added Value Type": ""
+    note: |
+      Identical onboard system independent on vehicle brand
+    links:
+      - "Association «defines» → eCall In Vehicle System"  # {F2454EAB-094B-450d-BE7E-027800A54C41} → {6BD43EDE-C6BB-4b9a-9F42-5E58564320F4}
+  - name: "Standardized Messsage Protocol"
+    guid: "{B2990C18-6EF8-4ef3-AACC-80C9EE5B36FD}"
+    type: "Class"
+    stereotype: "ITS_Service_Added_Value"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "ITS Added Value Type": ""
+    note: ""

@@ -1,0 +1,113 @@
+package: "eCall Reference Architecture/00 eCall Motivation Layer/eCall Other Elements"
+guid: "{8DB2BFE4-5BE5-4395-84AA-181B8F58ED57}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "Business_Expectation1"
+    guid: "{52A4FFD8-8D07-442c-80B6-555A44E493B6}"
+    type: "Artifact"
+    stereotype: "Business_Expectation"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association → C-ITS Enhancing road safety"  # {D3649191-6711-4025-A96D-67932DF295C7} → {6659C076-2560-445f-862A-8829F47486E0}
+      - "Association → Providing eCall Service"  # {89737820-3998-4490-AEB6-32B187B991C8} → {4FCAA52B-25D3-4721-BCE8-A0F45E8DC202}
+  - name: "Global Task - Business Rule: Project related expectations/benefits (Shortterm)"
+    guid: "{6757FDF9-CD2F-4705-AC83-36BB8AC0A916}"
+    type: "Class"
+    stereotype: "MissionStatement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Consequences for travelers involved in road accidents are much lower, when the time to be treated by medical assistance is lowered. This reduces the number of traffic deaths and the consequences of accidents.
+      Traffic gets fluent faster after the first road accidents at a specific place is cleared faster, by getting to the road site faster and more informed about the vehicles and travelers involved.
+      
+      
+      	- Traveler wants to be reached fastest after an accident happened.
+      	- transfer all accident related MSD´s to the PSAP data interface in all member states with minimal delay times.
+      	- Public authority operates PSAP for all activated eCalls in the area.
+    links:
+      - "Usage «Instantiate» → eCall_ITS_Service"  # {07375DDA-03D4-474e-91BF-2EF149684F27} → {654604A4-BE3A-422d-8705-DA008C3D7942}
+  - name: "Providing eCall Service"
+    guid: "{4FCAA52B-25D3-4721-BCE8-A0F45E8DC202}"
+    type: "Class"
+    stereotype: "Mission_Statement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Commission Recommendation 2011/750/EU (4) on support for an EU-wide eCall service in electronic communication networks for the transmission of in-vehicle emergency calls based on 112 (‘eCalls’) advises Member States to indicate the eCall PSAP to route eCalls and to ensure that mobile network operators handle eCalls properly.
+    links:
+      - "Association «defines» → eCall_ITS_Service"  # {46C0A86C-6D57-4bdd-8924-5970276EB4BB} → {654604A4-BE3A-422d-8705-DA008C3D7942}
+  - name: "Road Transport: All types of roads"
+    guid: "{B4EE6A55-C6DA-46b0-827B-BAB42124C180}"
+    type: "Artifact"
+    stereotype: "ITS_Domain"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "eCall - Business expectations of an actor involved in the ITS-Service"
+    guid: "{8877D6F9-B43C-461e-9EDB-89CCFA573AD3}"
+    type: "Artifact"
+    stereotype: "Business_Expectation"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      - Traveler wants to be reached fastest after an accident happened.
+      	- transfer all accident related MSD´s to the PSAP data interface in all member states with minimal delay times.
+      	- Public authority operates PSAP for all activated eCalls in the area.
+    links:
+      - "Association → C-ITS Enhancing road safety"  # {BF129E8F-289D-4f2d-86FD-B0125255A8F5} → {6659C076-2560-445f-862A-8829F47486E0}
+  - name: "eCall Vision"
+    guid: "{7EF14ABB-8BB1-457c-AA34-2C2E87E4192A}"
+    type: "Class"
+    stereotype: "ITS_Vision"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Article 26 of Directive 2002/22/EC of the European Parliament and of the Council of 7 March 2002 on universal service and users’ rights relating to electronic communications networks and services (Universal Service Directive) (2) requires that calls to the single European emergency call number 112 are answered appropriately and handled in a manner that is best suited to the national organisation of emergency systems, including the emergency call response centres (public safety answering points).
+      
+      According to Article 3(d) of Directive 2010/40/EU, the harmonised provision for an interoperable EU-wide eCall service shall constitute a priority action. The Commission should, therefore, adopt the necessary specifications in this field.
+      
+      ‘eCall’ (referred to in Directive 2010/40/EU as ‘interoperable EU-wide eCall’) means an in-vehicle emergency call to 112, made either automatically by means of the activation of in-vehicle sensors or manually, which carries a standardised minimum set of data and establishes an audio channel between the vehicle and the eCall PSAP via public mobile wireless communications networks;
+    links:
+      - "Association «associate» → C-ITS Enhancing road safety"  # {237B7513-E09E-4956-9B86-F82237823415} → {6659C076-2560-445f-862A-8829F47486E0}
+      - "Association «associate» → C-ITS reduces the number of traffic deaths on the road"  # {004F25FA-399F-4622-B66A-B1A04E47CD17} → {56820047-0844-473d-ACBE-9E3AAA85B01B}
+      - "Association «associate» → Providing eCall Service"  # {A1D12D7B-BEAA-4d47-A490-E5BEF28DF80C} → {4FCAA52B-25D3-4721-BCE8-A0F45E8DC202}
+      - "Association «associate» → reduces the number of traffic deaths"  # {EE78CDCF-0D6E-40ce-94EA-AEF361FE8B7A} → {8CFCEA4D-3D5E-4d79-BC22-BF788DD44EE7}
+      - "Usage «Instantiate» → Global Task - Business Rule: Project related expectations/benefits (Shortterm)"  # {00254519-A2BB-40ce-9BC8-E036F72CC861} → {6757FDF9-CD2F-4705-AC83-36BB8AC0A916}
+  - name: "emergency service"
+    guid: "{31398867-7151-47f8-94FE-05BFC63A61FC}"
+    type: "Class"
+    stereotype: "FRAME_ITS_Service"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Field of Application": ""
+    note: |
+      ‘emergency service’ means a service, recognised as such by the Member State, that provides immediate and rapid assistance in situations where there is, in particular, a direct risk to life or limb, to individual or public health or safety, to private or public property, or to the environment, in accordance with national legislation;
+  - name: "reduces the number of traffic deaths"
+    guid: "{8CFCEA4D-3D5E-4d79-BC22-BF788DD44EE7}"
+    type: "Class"
+    stereotype: "Mission_Statement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Consequences for travelers involved in road accidents are much lower, when the time to be treated by medical assistance is lowered. This reduces the number of traffic deaths and the consequences of accidents.
+      Traffic gets fluent faster after the first road accidents at a specific place is cleared faster, by getting to the road site faster and more informed about the vehicles and travelers involved.
+      
+      
+      	- Traveler wants to be reached fastest after an accident happened.
+      	- transfer all accident related MSD´s to the PSAP data interface in all member states with minimal delay times.
+      	- Public authority operates PSAP for all activated eCalls in the area.
+    links:
+      - "Association «defines» → eCall_ITS_Service"  # {1B3B0D46-DD49-4f99-917D-793162F9A2A2} → {654604A4-BE3A-422d-8705-DA008C3D7942}

@@ -1,0 +1,27 @@
+package: "eCall Reference Architecture/Supplements"
+guid: "{22C3F8AC-5512-4d53-9F0B-4B0975649545}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: ""
+    guid: "{1724E175-87AA-4cb9-BBFC-A48F51A7DE8C}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: ""
+    guid: "{296562AE-04A9-4cc4-B9E9-2225689A5651}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: ""
+    guid: "{8B2D587B-00E5-4226-B1A9-E4C93C390ED6}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""

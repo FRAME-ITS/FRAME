@@ -1,0 +1,37 @@
+package: "NAP Reference Architecture/05 NAP Communication View"
+guid: "{A1024383-16F4-4ec8-B6E0-1F4E421F7C74}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "Automatic provision of metadata vie machine to machine interface"
+    guid: "{70F2112F-B845-4d29-AECD-17CD9D7B4B7D}"
+    type: "Interface"
+    stereotype: "FRAME_Interface"
+    keywords: "optional; "
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Optional": "True"
+    note: ""
+  - name: "FRAME_Physical_Data_Flow1"
+    guid: "{A75E9CBB-5B13-4249-B1EE-F51C9EC0BD9D}"
+    type: "Interface"
+    stereotype: "FRAME_Physical_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «use» → Automatic provision of metadata vie machine to machine interface"  # {A882EB72-EB69-4e54-B517-9192FEBEFB02} → {70F2112F-B845-4d29-AECD-17CD9D7B4B7D}
+  - name: "Metadata Provision System"
+    guid: "{0DEEF50F-C3BA-4005-A27B-57A30C4C009C}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Usage → FRAME_Physical_Data_Flow1"  # {F9F3EF83-D101-4772-BEA5-D749FBE6652A} → {A75E9CBB-5B13-4249-B1EE-F51C9EC0BD9D}

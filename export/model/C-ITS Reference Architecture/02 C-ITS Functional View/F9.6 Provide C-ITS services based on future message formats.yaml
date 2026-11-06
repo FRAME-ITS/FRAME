@@ -1,0 +1,27 @@
+package: "C-ITS Reference Architecture/02 C-ITS Functional View/F9.6 Provide C-ITS services based on future message formats"
+guid: "{13059727-10E8-4516-85DB-71E7467D29DF}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "F9.6 - Future messages and C-ITS services"
+    guid: "{3D97D2EF-56EE-4cb5-962D-CC9A4E6F052A}"
+    type: "Activity"
+    stereotype: "FRAME_High_Level_Function"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      This high level function provides C-ITS functionalities based on future message formats to be defined as standards.
+      E.g. CPM - Collaborative Perception Message or others
+    links:
+      - "Aggregation «component of» → F9.6.1"  # {BA8F59E4-7C0E-4164-8120-01CB6C96FC15} → {C7ABB704-36E5-491f-B2C2-22A68B596285}
+  - name: "F9.6.1"
+    guid: "{C7ABB704-36E5-491f-B2C2-22A68B596285}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      This low level function provides functionalities defined in the CPM message standard.

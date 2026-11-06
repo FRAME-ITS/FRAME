@@ -1,0 +1,34 @@
+package: "National Body Reference Architecture/00 NB Motivational Layer"
+guid: "{5BB11B5F-DD5A-4750-B3D2-F3EDD1ECDEA3}"
+alias: ""
+version: "1.0"
+note: |
+  The motivational layer shows the initial position of the system development, the involved stakeholders as well
+  as the expected added values and desired business goals. These inputs result in the service description of the
+  National Body or Competent Authority (NB/CA). However, national bodies are established by the government
+  or recognised by authorities to oversee, manage, regulate, or represent various aspects of national affairs.
+  Therefore, the motivational layer should represent the motivational aspects of the ITS directive 2010/40/EU
+  related roles in a general way.
+  The motivational layer enables the user to see the overarching picture of a system at once including all relevant stakeholders, main goals and the general context.
+elements:
+  - name: ""
+    guid: "{B3210DF3-828A-4585-A05B-A5628E6390E7}"
+    type: "Text"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "Link to other Views"
+    guid: "{C1874C54-6007-4434-BB70-C539C94F0804}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "Link to other views"
+    guid: "{D3B4C28E-2831-4c83-BC98-15E8C8B45891}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""

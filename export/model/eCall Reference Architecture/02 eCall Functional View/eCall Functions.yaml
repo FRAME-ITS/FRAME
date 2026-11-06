@@ -1,0 +1,7 @@
+package: "eCall Reference Architecture/02 eCall Functional View/eCall Functions"
+guid: "{747F1FE5-700F-44f3-98AC-BC557E364781}"
+alias: ""
+version: "1.0"
+note: |
+  Defines needed Functions for eCall service
+elements: []

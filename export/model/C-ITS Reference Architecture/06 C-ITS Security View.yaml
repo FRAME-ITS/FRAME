@@ -1,0 +1,102 @@
+package: "C-ITS Reference Architecture/06 C-ITS Security View"
+guid: "{95BFC09C-3DA4-435e-AB50-80FC0A58976B}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: ""
+    guid: "{7A6D5228-0DA2-4753-A020-14E90437EF66}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "EU Root CA - Certificate Authority"
+    guid: "{382A18C3-34F8-4e60-BC2E-9CF27784CA1A}"
+    type: "Object"
+    stereotype: "FRAME_Role"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Key Issue": ""
+      "Role Part Of Value Chain": ""
+      "Role Value": ""
+      "Role View": ""
+    note: |
+      The CA consist´s of
+      EE - Enrolment authority and
+      AA - Authorisation Authority,
+      and these can be at European Level or from Member States or also from private C-ITS actors.
+  - name: "PKI Service provider 1 (one of many)"
+    guid: "{04B92ABB-9322-4888-B5FC-122CB8EF9E4B}"
+    type: "Actor"
+    stereotype: "FRAME_Actor"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Organisation that provides security related services to operators of C-ITS stations in the network and has the responsibility to list all active stations in the single EU C-ITS trust domain in order to exchange trusted data communication between all stakeholders.
+    links:
+      - "Realisation → Root CA  - Certificate Authority 2"  # {FC0546BD-FC21-4842-90C3-49B7CD51EC4A} → {8585C2EC-0782-40cf-B8E4-21C9365A34E8}
+  - name: "Policy Authority"
+    guid: "{43FC96D4-0EC2-4547-AF9E-35CF41527D97}"
+    type: "Actor"
+    stereotype: "FRAME_Actor"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The main decision body in the EU CCMS, consisting of public and private members with active C-ITS stations operating in the C-ITS network and taking the strategic decisions for the further development of the security and the network development.
+    links:
+      - "Usage → EU CCMS Provider"  # {828D94E7-12CE-4434-8D3C-E9EA85DE9200} → {141D71A7-ABA6-4d67-80D8-8BD1B412CBA9}
+  - name: "Root CA  - Certificate Authority 1"
+    guid: "{3B9C07FE-7D8D-4a2c-8C15-D2FACABD863A}"
+    type: "Object"
+    stereotype: "FRAME_Role"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Key Issue": ""
+      "Role Part Of Value Chain": ""
+      "Role Value": ""
+      "Role View": ""
+    note: |
+      From EU Member state authorities or private organisations providing certificates to specific C-ITS users, Group 1.
+  - name: "Root CA  - Certificate Authority 2"
+    guid: "{8585C2EC-0782-40cf-B8E4-21C9365A34E8}"
+    type: "Object"
+    stereotype: "FRAME_Role"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Key Issue": ""
+      "Role Part Of Value Chain": ""
+      "Role Value": ""
+      "Role View": ""
+    note: |
+      From EU Member state authorities or private organisations providing certificates to specific C-ITS users, Group 1.
+  - name: "Trust List Manager"
+    guid: "{B983EA30-7513-47bd-88FA-2F7CE5575F4A}"
+    type: "Object"
+    stereotype: "FRAME_Role"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Key Issue": ""
+      "Role Part Of Value Chain": ""
+      "Role Value": ""
+      "Role View": ""
+    note: |
+      Manages the members of the C-ITS Network, and distributes the valid certificates and publishes the ECTL as C-ITS Central Point of Contact.
+      
+      The latest list of all participants in the EU single trust domain, the ECTL is published at: https://cpoc.jrc.ec.europa.eu/ECTL.html
+      
+      The certificates of the TLM are published at: https://cpoc.jrc.ec.europa.eu/TLMCertificates.html
+    links:
+      - "Realisation → EU Root CA - Certificate Authority"  # {26F26B67-581A-4605-8415-0B5870FFD21E} → {382A18C3-34F8-4e60-BC2E-9CF27784CA1A}
+      - "Realisation → Root CA  - Certificate Authority 1"  # {0BE708E1-2640-43d7-99F9-483B0BB3320C} → {3B9C07FE-7D8D-4a2c-8C15-D2FACABD863A}
+      - "Realisation → Root CA  - Certificate Authority 2"  # {3EBCB178-A5C5-4c0c-8CAC-C7ACDB2C740D} → {8585C2EC-0782-40cf-B8E4-21C9365A34E8}

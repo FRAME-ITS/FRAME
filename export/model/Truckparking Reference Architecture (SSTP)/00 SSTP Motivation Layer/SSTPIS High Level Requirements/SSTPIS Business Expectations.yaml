@@ -1,0 +1,51 @@
+package: "Truckparking Reference Architecture (SSTP)/00 SSTP Motivation Layer/SSTPIS High Level Requirements/SSTPIS Business Expectations"
+guid: "{04989465-0311-4861-9786-001D0EB2642F}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "EC expects project to be completed as cheap as possible"
+    guid: "{1D5F1BD0-F70D-43b1-8859-902EBF49E32E}"
+    type: "Artifact"
+    stereotype: "Business_Expectation"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      EC expects project to be completed as cheap as possible
+  - name: "park operator expects to earn money for their services"
+    guid: "{0D562072-01CC-4bcf-BE4D-79CF511D3411}"
+    type: "Artifact"
+    stereotype: "Business_Expectation"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      park operator expects to earn money for their services
+  - name: "service provider expects to profit from the service provided"
+    guid: "{BFD383C6-2A1D-482c-AD38-A97644D20A8F}"
+    type: "Artifact"
+    stereotype: "Business_Expectation"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      service provider expects to profit from the service provided
+  - name: "transport company expects facilities to be available"
+    guid: "{8DEA5A3E-B9A3-4476-BFAB-A8ACF31CC25D}"
+    type: "Artifact"
+    stereotype: "Business_Expectation"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      transport company expects facilities to be available
+  - name: "user expects access to be free"
+    guid: "{BD7F80A8-F0B7-4ee1-BC62-9BAEE7591C8D}"
+    type: "Artifact"
+    stereotype: "Business_Expectation"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      user expects access to be free

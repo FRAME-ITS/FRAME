@@ -1,0 +1,15 @@
+package: "User Architecture Template/02 New Architecture Subset Functional View"
+guid: "{CDA7F17A-1E31-4ebb-BE4A-2D42187BF89E}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: ""
+    guid: "{0761DF70-CEAF-4997-8C74-3475F14B48DB}"
+    type: "Text"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      ➢ Start with building the Functional View using the Insert Related Elements function on the User Needs
+            or by selecting the Low Level Functions, Data Stores or Terminators from the "FRAME Repository"

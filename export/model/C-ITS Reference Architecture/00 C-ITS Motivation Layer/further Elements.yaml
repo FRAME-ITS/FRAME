@@ -1,0 +1,109 @@
+package: "C-ITS Reference Architecture/00 C-ITS Motivation Layer/further Elements"
+guid: "{96D4078B-9DEB-45c4-A530-77EA643E9D14}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "C-ITS_Domain"
+    guid: "{96EE23FD-F903-4ff7-A94C-A7B3DA9D5022}"
+    type: "Artifact"
+    stereotype: "FRAME_ITS_Domain"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      All types of roads, starting on TEN-T motorway networks and expanding to urban areas and intersections
+  - name: "C-ITS_Services day one"
+    guid: "{76D644F1-2C02-44c8-8E75-93CBE23BBEC2}"
+    type: "Class"
+    stereotype: "FRAME_ITS_Service"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Field of Application": ""
+    note: |
+      Day one C-ITS services are based on standardised messages and agreed and defined communication profiles for interoperable services in Europe.
+      The messages are:
+      - DENM
+      - CAM
+      - IVIM
+      - SPAT/MAP
+      - SSEM/SREM
+      please see standards and specifications in the "supplements section" below.
+    links:
+      - "Association «defines» → 11.1.1.1"  # {1ABDF3F2-1EB3-45c2-860C-40116AE866F6} → {F478FAD8-3D5F-4ba4-B59B-E2A27C5707AF}
+      - "Association «defines» → 11.1.1.10"  # {8FF6809A-17D4-46cd-A2F1-7981963C3536} → {C1FE101D-64CF-40a9-A99B-61A084E03F7B}
+      - "Association «defines» → 11.1.1.11"  # {A79E34E0-F623-4775-B4BF-33565606E1DD} → {637B19FE-CADE-4a67-9EE0-8592A2537563}
+      - "Association «defines» → 11.1.1.12"  # {D887B93A-1CBA-43eb-B25D-0358C888A590} → {CB5DB899-91F1-4141-AA3A-93E1B3558173}
+      - "Association «defines» → 11.1.1.13"  # {ACAF186D-0DB2-46ea-9B4B-846E1E916960} → {0A1CEF5C-17C1-4291-966D-AE8820124012}
+      - "Association «defines» → 11.1.1.14"  # {8A903824-BBA5-4308-B505-2587E5CFCDB1} → {15DA4E80-2A76-4c49-B76A-3ECE92C978E8}
+      - "Association «defines» → 11.1.1.15"  # {72D07784-34B0-46fa-9D02-3FDFBEBC2B94} → {A88AE8D3-EEE9-411b-B08C-B15275660E96}
+      - "Association «defines» → 11.1.1.2"  # {439B9A67-EB2F-49e5-9815-6DC3F38F3CA7} → {07C5570F-1773-42a6-BA32-A8CABA96039B}
+      - "Association «defines» → 11.1.1.3"  # {7911DD21-177B-4eb8-8FE4-DE0BB3A5E732} → {89EA95BB-4CE6-41f5-83CB-2977E929813B}
+      - "Association «defines» → 11.1.1.4"  # {E432B7BB-E817-4b74-B7A2-20E11DB5B4EF} → {53B78A45-4DEC-499c-9680-184A13C1B6E0}
+      - "Association «defines» → 11.1.1.5"  # {D92F49E9-F8E2-4ec3-8B2B-E8CF27156F21} → {E42E9C7B-6EE3-432e-8538-57C9BB15DE21}
+      - "Association «defines» → 11.1.1.6"  # {20857EDB-07CF-4b55-BCAA-AE8BAD8E6CC6} → {0A0ED720-E250-479b-81F3-2767D175B940}
+      - "Association «defines» → 11.1.1.7"  # {234F8E40-7DFB-4231-9F1D-85ECAFAA1B30} → {F4F92AD3-35A4-4c8b-A772-B577BAC092F7}
+      - "Association «defines» → 11.1.1.8"  # {C4B5E4A4-2C36-4941-A7BE-185CB3B036E1} → {BB4EE6FC-2CB7-407d-B671-8D007644FE3F}
+      - "Association «defines» → 11.1.1.9"  # {E4D01B12-C057-40b2-8414-BC5FCB1A2253} → {66531B77-5323-48d1-B689-48BBC5FD4FF9}
+      - "Association «defines» → 11.1.2.1"  # {9D6CD375-115F-4a98-AFC6-C6D9146E3494} → {E7DEED82-A5C1-4893-9C19-57850FD37F02}
+      - "Association «defines» → 11.1.2.10"  # {EF727A1D-DF44-486f-8BB5-F667C572C8AB} → {FE2AEAA8-D6FD-4e83-BD90-F8734D28393C}
+      - "Association «defines» → 11.1.2.11"  # {65CF9D3C-8C03-4110-A634-8B2E8DD18962} → {1466AFAE-1EDF-4934-91D5-A0A822B57402}
+      - "Association «defines» → 11.1.2.2"  # {DCC2979A-CFA2-4455-9ABA-5523341F26A2} → {ECBE2EB5-0BC8-4414-A2A8-ED70C75AC56A}
+      - "Association «defines» → 11.1.2.3"  # {F235888B-1CB6-46e2-BE9F-789F52ED7BB8} → {F83CC4AC-FBB2-428b-B7DE-D733F23713AE}
+      - "Association «defines» → 11.1.2.4"  # {41E4DA28-CE39-4b4f-9BCC-C1B076F537DE} → {10B39FFC-D82F-4ce9-B8FE-0CC57DC0F250}
+      - "Association «defines» → 11.1.2.5"  # {19792942-65CB-42f0-9C9B-51E5E6A3CEEC} → {A3B828A5-AB0A-46ae-B81B-D13AF78204E3}
+      - "Association «defines» → 11.1.2.6"  # {20E9B0D3-9CFB-482f-A849-BD8111121242} → {2363668B-9537-4a53-99DE-58596F53F705}
+      - "Association «defines» → 11.1.2.7"  # {B5D219FE-9D9E-4c8e-8115-13975ADD8692} → {4B6D14AF-63AB-49fb-8C5E-58FCF8E79CFF}
+      - "Association «defines» → 11.1.2.8"  # {F6AAF9DA-B3B7-44c5-8CB1-DDE5660F4C64} → {3EB194FA-6F40-4129-B783-9759C359E752}
+      - "Association «defines» → 11.1.2.9"  # {15E53FDB-C793-4fce-B8A4-20BF6AFB828D} → {9BDD1FB0-FAD1-4afb-AAB1-42F6C1B6E6ED}
+      - "Association «defines» → 11.1.3.1"  # {C84B082A-240E-438d-B9B3-AC141FB0CBE8} → {F124163A-04C8-4b17-A9C1-05025EAD440C}
+      - "Association «defines» → 11.1.3.2"  # {D74B8D23-B79D-46f3-A841-366BDBC52120} → {327661E8-A79C-4b23-A437-841A9A93FEFF}
+      - "Association «defines» → 11.1.4.1"  # {AD2528AC-C62D-4e82-8086-3795D13400E0} → {D639FA90-0A07-40d5-A7DA-30C610216C5D}
+      - "Association «defines» → 11.1.4.2"  # {5059341E-386E-43ce-BC6B-BDBAAD3A00E7} → {B4ABB4F8-33ED-4af6-B1C8-CB6783BDB2AB}
+      - "Association «defines» → 11.1.4.3"  # {39EF56F3-738F-489e-B2D2-0469191FDB4D} → {AAF5BA3D-A8E1-474e-9006-16F250AB80C9}
+      - "Association «defines» → 11.1.4.4"  # {E4643BB1-52F4-43e0-AD0F-EE6ABF3A6531} → {1A3CCA9B-0C58-41ed-A886-2BC1BC2A5913}
+      - "Association «defines» → 11.1.4.6"  # {F3F68F8C-783A-455a-A87A-B7AACD9A664C} → {9C0FE0FC-ADB7-4a16-9C8F-9C1428FDFD99}
+      - "Association «defines» → 11.1.4.7"  # {45C39D01-9422-4636-8BB5-2F4379EB7A04} → {3299BF22-4349-4b9d-979C-BD63AB3F87CF}
+      - "Association «defines» → 11.1.4.8"  # {BB05E4E6-1016-4094-98E7-AB91E8DD6660} → {9AF8D858-6D71-406c-A9AD-F349A47555B1}
+      - "Association «defines» → 11.1.4.9"  # {136F6A02-8727-4656-B42C-310F03E131F7} → {107B26AD-B83E-4aee-B456-C7D5A34D0D76}
+      - "Association «defines» → 11.1.5.1"  # {A8005ED3-DBE0-4ee6-8FC7-11415012618B} → {159FAE41-53DC-4633-9EAB-187BA2207820}
+      - "Association «defines» → 11.1.6.1"  # {3B47748E-B551-4476-892F-2C90A2964457} → {A268BBBA-79CC-4032-9688-CF6E1E8D1590}
+      - "Association «defines» → 11.2.1.1"  # {C7703135-97A9-4355-83AD-0FEE175CE93A} → {19C19F0C-CD68-4189-9F7D-2CFDB28672A5}
+      - "Association «defines» → 11.2.4.1"  # {C21244F9-1B4B-44f6-AA96-98394CD2E00A} → {87917A51-EBC7-4212-A114-A3B36A741A8A}
+      - "Association «defines» → 11.2.4.2"  # {0DDEC3C9-43C5-4719-83A7-12425018CD47} → {2809968A-BA4A-4059-8158-C2EA685DFD61}
+      - "Association «defines» → 11.2.4.3"  # {2FA8F083-80BE-405b-B11C-61F3B8CACD2F} → {6F651EBC-516E-49eb-908E-4030281B1304}
+      - "Association «defines» → 11.2.4.4"  # {C186A444-A5E1-4eb7-A571-4C4F654D4378} → {97E06842-433B-4683-BF01-87F831DF2713}
+      - "Association «defines» → 11.2.4.5"  # {15B0F351-67A0-4578-83C7-FB3BE585C350} → {CD31F139-3993-4c61-9710-4B1316AF8A9F}
+      - "Association «defines» → 11.3.4.1"  # {17EE4918-4D05-4b4b-B4F9-5AF221A2620E} → {5DC53393-B59B-4c4e-B501-DE79A80A3C20}
+      - "Association «defines» → C-ITS_Service_Process based on CAM"  # {35502E2A-1C3E-4493-BBFB-F3A3C6E6F89A} → {C251FAD1-FA0B-4d9e-9FCF-7005B804E1AF}
+      - "Association «defines» → C-ITS_Service_Process based on DENM"  # {E2174820-4644-4ec0-88B6-E2E4683B4E3C} → {13434962-74A0-48e7-95B1-5857FBD29BE5}
+      - "Association «defines» → C-ITS_Service_Process based on IVIM"  # {D510C6B3-CBF3-44ed-8B9A-DE303B3513F5} → {CDFB55F6-9A53-44a3-B07E-C74342812D9A}
+      - "Association «defines» → C-ITS_Service_Process based on SPAT/MAP"  # {01737D64-9E4F-445d-A065-C246CA19C953} → {7D262436-85BD-4688-8B05-4E0F67F5BF5D}
+      - "Association «defines» → C-ITS_System Service_Process for all messages"  # {7344CBA7-DE05-4a42-B525-AFF1D46FB582} → {43CC99D2-CAB1-4961-B3CF-14163FA8ED0F}
+      - "Association «defines» → FRAME_ITS_Service_Process based on future message formats"  # {2C0A8651-2D2D-4dbc-A3B9-36769FBCB725} → {8C19B3E6-98FC-4b84-9712-287141FB26C7}
+      - "Association «has» → C-ITS_Domain"  # {F0F4119F-6FED-4e3a-8771-CEBB57F03A5E} → {96EE23FD-F903-4ff7-A94C-A7B3DA9D5022}
+  - name: "Fullfillment of C-ITS related standards"
+    guid: "{AFF20E0F-FAF3-40e4-9BEB-CE9311A11A56}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      C-ITS is based on standards from ISO, CEN, and ETSI, and the respective communication profiles from road infrastructure defined in C-Roads and from vehicle stations, defined in the C2C CC BSP.
+  - name: "List of Elements in Package Standards and specifications"
+    guid: "{18817591-BCA3-4f66-916B-396349C47940}"
+    type: "Class"
+    stereotype: "ModelView"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "ViewProperties": "<memo>"
+    note: ""
+    links:
+      - "Usage → Fullfillment of C-ITS related standards"  # {2FC0F846-596A-4de0-984E-A7DE460DC937} → {AFF20E0F-FAF3-40e4-9BEB-CE9311A11A56}

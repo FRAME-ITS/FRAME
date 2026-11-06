@@ -1,0 +1,41 @@
+package: "C-ITS Reference Architecture/01 C-ITS User Needs/User needs topic 6 - future messages"
+guid: "{18C6CB8E-B11C-4ea7-A0D4-DD61B49AC153}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "11.1.6.1"
+    guid: "{A268BBBA-79CC-4032-9688-CF6E1E8D1590}"
+    type: "Requirement"
+    stereotype: "FRAME_User_Need"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The System shall provide informations for vehicles in future to be defined message formats.
+  - name: "FRAME_ITS_Service_Process based on future message formats"
+    guid: "{8C19B3E6-98FC-4b84-9712-287141FB26C7}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      C-ITS Services based on future basic message standards, and specifications of roadside communication profile.
+  - name: "FRAME_User_Needs topic 6 Future Message"
+    guid: "{F581827D-6BA9-49fd-AE76-72404E2157D4}"
+    type: "Requirement"
+    stereotype: "FRAME_User_Need"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      User Need Topics are defined as follows:
+      1 - C-ITS SYSTEM related
+      2 - DENM related
+      3 - CAM related
+      4 - IVIM related
+      5 - SPAT/MAP related
+      6 -for future messages to be defined
+    links:
+      - "Abstraction → 11.1.6.1"  # {03E86837-25C7-43f1-8FA1-B98E86BDD048} → {A268BBBA-79CC-4032-9688-CF6E1E8D1590}

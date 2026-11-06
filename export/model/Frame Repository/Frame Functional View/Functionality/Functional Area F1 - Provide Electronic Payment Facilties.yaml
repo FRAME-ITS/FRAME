@@ -1,0 +1,563 @@
+package: "Frame Repository/Frame Functional View/Functionality/Functional Area F1 - Provide Electronic Payment Facilties"
+guid: "{66F6FBC7-4AB6-419f-9FA1-D165EBE8E023}"
+alias: ""
+version: "5.0"
+note: ""
+elements:
+  - name: "F1. Provide Electronic Payment Facilities"
+    guid: "{B98FD399-70DD-4ab3-92FB-F2F1B1C6B2C9}"
+    type: "Activity"
+    stereotype: "FRAME_Functional_Area"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Functional Area shall provide functionality that enables the acceptance of payment for services provided by other Functional Areas within the Architecture. It shall have an interface with the Financial Clearinghouse to enable actual payment transactions to be made. If incorrect payments (frauds) are detected, any details that are available shall be passed to functionality in the Law Enforcement Area.
+      
+      Mnemonic: pepf
+    links:
+      - "Aggregation «componentof» → System"  # {9A98146E-F583-4b9f-BB48-33A2C4D76308} → {A7365472-4893-4994-9241-EEED83ABEF7D}
+      - "Association «IN» → To External Service Provider"  # {2F691BF2-3049-4d08-8332-51AA60E386C7} → {CB0E5267-0EB0-4bc5-979C-11C135689F57}
+      - "Association «IN» → To Operator"  # {A9704633-7D5F-4575-9496-A17166EB2DBA} → {BED224D6-0F6C-4a10-9057-54D9140F33F4}
+      - "Association «IN» → To Traveller"  # {3BEEA583-B158-447f-9189-A0063EEDD8E9} → {0F2BCEB7-7EEB-46f9-B031-5D3328B73E67}
+      - "Association «IN» → pepf.mt_information_and_acceptance"  # {91F1E1FF-90B0-4be3-B83A-74F334F3C8BE} → {94BCA5CE-86F0-47f6-9518-4BAA1773EDC6}
+      - "Association «IN» → pepf.psle_notifications"  # {4BB08C23-E5E4-4ca7-9801-9820136BBB2D} → {E4D2C02E-E1A4-43b5-A429-F73789FA65BB}
+      - "Association «IN» → td-pepf_outputs"  # {47B4719F-8A52-49b9-8CCA-F33E2385A23A} → {71F6D358-B8A5-4aea-928D-B9FD0C9FB9AE}
+      - "Association «IN» → tesp-pepf_outputs"  # {D8A4F03B-FFD3-4eee-9B45-7BCB78F49F67} → {C32D70FF-3CBB-4b30-832C-539B8DB9535A}
+      - "Association «IN» → tfc-pepf_outputs"  # {841CA110-BCE3-4484-AFDF-CB01DA85FBCC} → {D0ADC429-0B3D-464c-BF04-B74E7BECB1CF}
+      - "Association «IN» → to-pepf_outputs"  # {F8EFB61E-D291-4381-BB3B-4E400200F890} → {144FCDBD-C8DB-4b1f-94C6-6E9D44147785}
+      - "Association «IN» → tt-pepf_outputs"  # {4AAA4E97-A6D5-4395-9BCB-52D52B2460A1} → {73825CA8-DA60-4d61-ADF3-000E5332F9BE}
+  - name: "F1.1.1 Create EP Contract"
+    guid: "{E16ADC9D-3B05-4160-B14A-9456218F4885}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) A HMI through which the Traveller can establish a contract with the provider of ITS Services to be used during the implementation of a trip plan.
+      (2) The HMI shall present the Traveller with information about the different types of ITS Services available, and record the choices that they make for use by other functionality.
+    links:
+      - "Aggregation «componentof» → F1. Provide Electronic Payment Facilities"  # {DF644C52-9730-4f0e-98C0-10E3067B5C03} → {B98FD399-70DD-4ab3-92FB-F2F1B1C6B2C9}
+      - "Aggregation «componentof» → F1.1 Set up Contract"  # {EBA72F97-792B-49f8-A48F-3933DB8CB5DA} → {F0DFD6A9-0F96-4a24-84F4-6381EADD1242}
+      - "Association «IN» → pepf_load_contract_details"  # {72755FCE-BF13-4b7f-968E-FE97E69EB963} → {A9F5F8D5-7DC4-4ba2-8F01-6A57353109A5}
+      - "Association «IN» → pepf_request_service_data"  # {97BCE485-710E-49c9-B2A7-788025C64B5D} → {7697193A-4353-471e-B571-AFBB773E4819}
+      - "Association «IN» → tt-pepf_contract"  # {D6A5C4EF-40F0-4208-8B89-54B21CCF0C9F} → {EA54C8F7-ACFE-44ab-9E84-DB58EEF15000}
+      - "Association «IN» → tt-pepf_service_information"  # {1912F57A-4537-4ffc-9648-78CD7994B1D4} → {BE47D537-9258-4c5e-9A98-86B7CB8CBEC3}
+  - name: "F1.1.2 Establish Contract Statistics"
+    guid: "{F8DAF14F-D832-4892-A0B9-42A85AA02490}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to process the different contracts made by the Travellers to produce statistical information for the corresponding Electronic Fee Collection Operators, or Service Providers.
+      (2) The ability to respond to requests from ITS Service providers for statistical reports about the contracts that the Traveller has set up for their services.
+      (3) The ability to provide a HMI through which the Electronic Payments Operator can request a statistical report for all of the contracts.
+    links:
+      - "Aggregation «componentof» → F1. Provide Electronic Payment Facilities"  # {38145F04-99CD-4c96-AE1A-E2F06A7CA36E} → {B98FD399-70DD-4ab3-92FB-F2F1B1C6B2C9}
+      - "Aggregation «componentof» → F1.1 Set up Contract"  # {0AE84C11-10C4-4726-B6A6-3FBC80AD2E35} → {F0DFD6A9-0F96-4a24-84F4-6381EADD1242}
+      - "Association «IN» → tesp.gip-contract statistics"  # {F2F21FF5-AE73-40d3-8500-0A269639BAD4} → {8C2C2E36-BB50-469f-86A8-3DE5BE4E28D0}
+      - "Association «IN» → tesp.mmtip-contract_statistics"  # {753A8362-05D5-4b9b-AF80-0C640DB73FA0} → {BE7D58F9-C108-46ec-98DF-1F23D9744272}
+      - "Association «IN» → tesp.ttip-contract_statistics"  # {1004DF83-7CC6-48ec-8B85-2338ED4C079D} → {5B939053-D95A-4e3a-BC55-8E58893B3F34}
+      - "Association «IN» → to.epo-pepf_contract_statistics"  # {4241C7C9-F37E-4d3f-83EA-7791646BC4A6} → {39678124-3BB5-47b1-99B8-B6625EAE043C}
+  - name: "F1.1.3 Manage Service Data"
+    guid: "{FFDE2739-9338-47a2-8A36-CBE393CEB1C8}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    tags:
+      "Functionnal Requirements": "<memo>"
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to manage the content of the store of Service Information Data (D1.3).
+      (2) The management of the store shall enable the Electronic Payments Operator to review the contents of the store.
+      (3) The management of the store shall also enable the contents of the store to be updated by Service Providers.
+      (4) The ability to provide details of services on request to the Create EP Contract function.
+    links:
+      - "Aggregation «componentof» → F1. Provide Electronic Payment Facilities"  # {57B73F76-4DFD-4369-A970-F6C1A152165A} → {B98FD399-70DD-4ab3-92FB-F2F1B1C6B2C9}
+      - "Aggregation «componentof» → F1.1 Set up Contract"  # {4E5FB18D-3A48-48a5-929D-800B61709E0E} → {F0DFD6A9-0F96-4a24-84F4-6381EADD1242}
+      - "Association «IN» → pepf_available_service_data"  # {6249AF1F-DBC0-4016-8A7C-1EDA3F9D006D} → {DE1B7282-1C7E-4e67-B979-D442EA9224B4}
+      - "Association «IN» → pepf_changed_service_information"  # {B20E24FE-6674-43d3-801E-2D22624AFBCC} → {4A6591DC-D006-4030-898E-10740F10B0F4}
+      - "Association «IN» → to.epo-pepf_service_data"  # {1FFCEA21-BF14-4696-BA50-03ABDECB9C97} → {4F7EFC1B-916F-4c2b-A7B5-358BCE505C22}
+  - name: "F1.2.1 Load User's Account"
+    guid: "{6A0D0638-C2FC-42c1-9E7F-89DF0C2F736E}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) A HMI that provides the Traveller with the ability to credit their Electronic Payment account.
+      (2) The HMI shall also include the ability to display to the Traveller the different contracts available to that person, read the information related to the desired transaction.
+      (3) In addition to the HMI, the ability to check the credit rating of the source account and if credit worthy, credit the Electronic Payment account, plus notify this to the Financial Clearinghouse terminator, and to the store of Transaction Data.
+      (4) The ability to also check the amount that is being credited to an account previously included in the black list, and if the new balance is sufficient, send a message to the  Credit Control  Function to remove this account from the black-list.
+    links:
+      - "Aggregation «componentof» → F1. Provide Electronic Payment Facilities"  # {946912D8-26E9-4c8f-BE92-DBEE6FD67F5D} → {B98FD399-70DD-4ab3-92FB-F2F1B1C6B2C9}
+      - "Aggregation «componentof» → F1.2 Manage User's Account"  # {D05CDC68-DF89-4126-B404-D0A342A1A9F7} → {E8991130-B33A-46c9-BEA0-6D7D3E42AB9E}
+      - "Association «IN» → pepf_load_account_order_for_user"  # {0F769EBB-41CD-4712-A776-504EC01BE965} → {AE49FE8E-5E2A-434b-8608-2706E25381F0}
+      - "Association «IN» → pepf_load_account_order_transactions"  # {9AD001A5-1D9E-4256-B71B-CB6706BEA185} → {A0244F0B-A90A-43d2-835B-F924C8627CDC}
+      - "Association «IN» → pepf_supplied_account"  # {50912487-4761-4983-B558-FB2FE6A55724} → {95A3C17D-C82B-4c46-883B-865988609783}
+      - "Association «IN» → tfc-pepf_account_status_request"  # {140A803A-9A3F-47e1-ADC0-107565D8C0A8} → {8BDAB54B-ADB5-478e-9E6C-06C59D933E8B}
+      - "Association «IN» → tfc-pepf_load_account_order"  # {7B1E2168-7B17-466e-8C61-7CEF26489089} → {E993EFD7-8E60-43b8-B719-D88D1BF5EE1A}
+      - "Association «IN» → tt-pepf_account_loading_problem"  # {80E5DDAE-3795-4e5f-826F-DD75B18B9AD5} → {5AA99541-B765-4106-A341-79F738DAD5D6}
+      - "Association «IN» → tt-pepf_contract_list"  # {1B5CB8A3-32DD-44ab-B8A9-761E32198238} → {7118382C-56AA-45d5-8787-219DEBBA1A58}
+  - name: "F1.2.2 Debit User's Account"
+    guid: "{447BA7D2-14DE-4022-BC4A-B7E4E0E406AE}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to debit the Traveller's Electronic Payment account as the result of the recently performed transaction.
+      (2) If the Traveller's account becomes overdrawn the ability to send a message highlighting this situation to the Credit Control function.
+    links:
+      - "Aggregation «componentof» → F1. Provide Electronic Payment Facilities"  # {56DDB06A-603E-461b-B27A-FEBEE2B7D749} → {B98FD399-70DD-4ab3-92FB-F2F1B1C6B2C9}
+      - "Aggregation «componentof» → F1.2 Manage User's Account"  # {091FB2D2-E2AA-42d8-A726-0BFEAC8DF2DF} → {E8991130-B33A-46c9-BEA0-6D7D3E42AB9E}
+      - "Association «IN» → pepf_debit_account_order_for_user"  # {77E4B803-B118-49c8-90DC-F4B1B22935B7} → {17204FE3-BCC8-4d3b-BD63-37145E9EB632}
+      - "Association «IN» → pepf_debit_account_order_transactions"  # {B41DBE7B-7661-4c09-86CC-921CBDC9CA17} → {95E5C696-E1A0-44da-8B2F-309486517CDB}
+      - "Association «IN» → pepf_overdraft_notification"  # {643E5162-F72C-4184-A5AA-E7C33F2AF084} → {10FF471E-4B0B-4743-A2C2-911AF8BF97F9}
+      - "Association «IN» → tt-pepf_overdraft_notification"  # {D223D2EA-F2C1-4643-8372-7879B658EB13} → {82EA7309-A58E-464b-BFD4-D33244403F61}
+  - name: "F1.2.3 Inform Users on Transactions"
+    guid: "{BF2D0CB4-D17E-4627-B0C4-0FFDB73D877F}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) A HMI through which the Traveller can be provided with a list of the transactions they have performed.
+      (2) The HMI shall also provide the Traveller with the status of their Electronic Payment account(s).
+      (3) Also the HMI shall only provide both types of information following a specific request from the Traveller and shall only provide information that is directly relevant to that Traveller.
+    links:
+      - "Aggregation «componentof» → F1. Provide Electronic Payment Facilities"  # {DFB56ABF-755A-4210-93FC-5DF58C2E9D3C} → {B98FD399-70DD-4ab3-92FB-F2F1B1C6B2C9}
+      - "Aggregation «componentof» → F1.2 Manage User's Account"  # {B0DCF372-E41A-4b10-8309-7A5462B2BC1F} → {E8991130-B33A-46c9-BEA0-6D7D3E42AB9E}
+      - "Association «IN» → tt-pepf_account_status"  # {27D6C675-9ED6-4e08-9678-807EEF4D6359} → {5002E7E7-ED28-420f-86A1-03D9C7650AD4}
+      - "Association «IN» → tt-pepf_transaction_history"  # {238403EA-590E-4e2f-A2D2-9FF94D077267} → {CA9347EC-8F15-422b-8C4B-A3E74AF87973}
+  - name: "F1.3.1 Detect User"
+    guid: "{B35E4311-49AB-4f06-A5D5-919270033E5B}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to detect the approach of a Traveller or Vehicle.
+      (2) When detected, the ability to trigger the other functionality in the Provide Electronic Payment Facilities Area.
+    links:
+      - "Aggregation «componentof» → F1. Provide Electronic Payment Facilities"  # {5357D68B-E9ED-4aa3-9068-2F64811BD152} → {B98FD399-70DD-4ab3-92FB-F2F1B1C6B2C9}
+      - "Aggregation «componentof» → F1.3 Perform Electronic Payment Transaction"  # {2FF69761-597E-4d76-8710-DF2DF6C42745} → {45635CAE-7C40-4bbd-BA22-9472B0BE8B47}
+      - "Association «IN» → pepf_user_detection"  # {EF345C44-4C98-4b11-ABEE-098B5C8B1555} → {3D1100FA-9C9A-4bd3-B8DA-C1A8C3109327}
+      - "Association «IN» → pepf_vehicle_detection"  # {1A9E19C0-3B09-4211-80CD-B8EDECFB7AEB} → {6D3B81AE-839A-4cff-A93A-6CE2EBF02300}
+  - name: "F1.3.2 Identify User"
+    guid: "{B0D446A9-EC3D-4a40-9472-08F3F49B13DB}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to identify the Traveller, Driver or the Vehicle.
+      (2) Having completed the identification, the ability to inform other functionality about the use that is being made of various parts of the road transport infrastructure, e.g. parking occupancy, time of travel between toll gates, etc.
+    links:
+      - "Aggregation «componentof» → F1. Provide Electronic Payment Facilities"  # {CCEF0E20-4CC8-4c06-AF69-7FFF48231E76} → {B98FD399-70DD-4ab3-92FB-F2F1B1C6B2C9}
+      - "Aggregation «componentof» → F1.3 Perform Electronic Payment Transaction"  # {9343FA5B-01C3-4754-9BE9-328EFE694703} → {45635CAE-7C40-4bbd-BA22-9472B0BE8B47}
+      - "Association «IN» → pepf.mt_infra_usage_info"  # {77CAD845-AC0F-444b-B264-624C63D65351} → {123A8742-6CD4-481d-A0B1-F34C9EAFA4A5}
+      - "Association «IN» → pepf.mt_inter-urban_infra_usage_info"  # {78092A29-DF69-4efa-8556-DA7822859074} → {F1224329-169D-421f-B706-044498919551}
+      - "Association «IN» → pepf.mt_urban_infrastructure_usage_data"  # {41E8A20E-E37D-4cd7-AB04-750B8E5D7951} → {9176F1FD-4F2B-4694-913C-288751D6C226}
+      - "Association «IN» → pepf.pshvs_vehicle_ID_request"  # {81DEEC81-EAA9-4c1f-897D-7E335AE29076} → {5A5C760C-22F2-4317-9659-F060EB949B4F}
+      - "Association «IN» → pepf_pass_record"  # {89BAE105-C59E-4c79-BF29-5F968B4F0D1A} → {5431F726-7000-421e-B383-9CE24087D2D2}
+      - "Association «IN» → pepf_user_ID_for_rights_check"  # {EB4BF25B-2016-4d1d-8FDF-D3827B830998} → {9BB807EB-E0EB-41f8-818B-3B6ED19A7915}
+      - "Association «IN» → pepf_vehicle_data_for_rights_check"  # {203AC165-CB4D-4ec9-82DF-8F6947E2D177} → {E6500BB7-0A04-4ce2-A278-C89344BA0B76}
+      - "Association «IN» → td-pepf_ID_request"  # {CA172F37-8DB0-4ace-9FDD-3CC0666CB8E7} → {EE3069B7-AABB-405d-918A-FC4FB4F50BFB}
+      - "Association «IN» → tt-pepf_ID_request"  # {2B127847-E351-4146-8A05-923C80BDFC6D} → {C5EDA1BE-2CDF-421a-A392-21DECE1B2C09}
+  - name: "F1.3.3 Check User's Contract"
+    guid: "{160C0D1A-0777-42fd-8D2D-AED24EE8C2F6}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to read the corresponding contracts, and verify the access rights, based on the user's ID.
+      (2) If there is a "free ride" request, the ability to cancel the rest of the transaction.
+    links:
+      - "Aggregation «componentof» → F1. Provide Electronic Payment Facilities"  # {A26DA2DC-29D5-4b5a-A271-21CC1FEBADEF} → {B98FD399-70DD-4ab3-92FB-F2F1B1C6B2C9}
+      - "Aggregation «componentof» → F1.3 Perform Electronic Payment Transaction"  # {00CD53B3-47FC-47af-A16E-7B20B3706DAE} → {45635CAE-7C40-4bbd-BA22-9472B0BE8B47}
+      - "Association «IN» → pepf_contract_DIP"  # {7698C9A8-E58D-4cab-882F-C49C1EF86EB8} → {7F6ED30D-AAAA-4bda-BAE4-27C4CAB16C37}
+      - "Association «IN» → pepf_contract_IGU"  # {063AAB8C-3E26-4eba-BEE5-7E5841C567CF} → {2406E2AD-76EA-4d0f-AF9E-0BE18FDD70EF}
+      - "Association «IN» → pepf_illegal_action_notification_DAV2"  # {7DAD71F5-F94D-437d-804A-E494036B50E2} → {305A564C-077A-4eed-8747-83A8A40E05D2}
+      - "Association «IN» → pepf_service_ID_CUR"  # {EC707F1F-6C9D-411b-A3BA-D83C571B3734} → {116A1701-B735-43bf-8744-3EE00A6BBAD5}
+      - "Association «IN» → pepf_user_ID_DIP"  # {8CA1B441-8892-4053-AE7F-7274F2EEF6EB} → {5943BF15-E275-4d82-AC01-2470F1B3BF91}
+      - "Association «IN» → pepf_vehicle_data_CUR"  # {1A9D5C5C-0E97-4f2c-9978-C660349EAE46} → {655A374E-1A61-4644-AED2-BA50A1B658E8}
+  - name: "F1.3.4 Inform and Guide User"
+    guid: "{DD8C0DBD-4E6C-41cf-BDF7-2D1034AF47A8}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) A HMI through which the Traveller or Driver can be guided to provide the precise definition of the service that they want, and the way that they wish to pay for it.
+      (2) The HMI shall also enable the Traveller or Driver to select the appropriate contract, inform them about their rights to use the service, and display the associated price.
+      (3) The ability for the Function to be activated by functionality in the Provide Traveller Journey Assistance Area, or even directly for simple operations.
+      (4) The ability to ask for a credit check to be done on the Traveller or Driver and also to check to see whether an advance payment has been made.
+      (5) The ability to initiate the recovery of any advanced payment, or else initiate the computation of the fee.
+    links:
+      - "Aggregation «componentof» → F1. Provide Electronic Payment Facilities"  # {24D2AA14-EA28-4eb3-8180-808664C07293} → {B98FD399-70DD-4ab3-92FB-F2F1B1C6B2C9}
+      - "Aggregation «componentof» → F1.3 Perform Electronic Payment Transaction"  # {969C0B5B-D7D8-4803-BAB8-44D0C395C7DA} → {45635CAE-7C40-4bbd-BA22-9472B0BE8B47}
+      - "Association «IN» → pepf_agreement_IGU"  # {B099A982-81EA-44bf-A87A-D0F7D3100842} → {F1A9F5E5-8154-41ab-927D-EBC58353CDA8}
+      - "Association «IN» → pepf_contract_CAP"  # {B9F77BD8-F040-4faa-BE15-EF37E1DD9833} → {8E1A6EFE-A23D-43be-B466-CF7017EAD0F2}
+      - "Association «IN» → pepf_contract_CSF"  # {4262B3C8-5275-4398-BAD1-C1CB1F077F60} → {6D02FDDD-A50B-4cc3-9160-10C3696B71E8}
+      - "Association «IN» → pepf_contract_RF"  # {7D9BE1AA-48C6-44f2-A5EE-C9CE58CE20A2} → {4604C014-EF75-4b45-B09A-F89D722F2567}
+      - "Association «IN» → pepf_illegal_action_notification_DAV"  # {20B5A9D0-5172-4ca6-B0F6-42D19C03864E} → {2059C97D-D505-437b-89CB-33A0C20756DA}
+      - "Association «IN» → pepf_selected_service_data_CAP"  # {9ADBDD30-26DE-4baa-A3BA-96F2A8773349} → {71C27330-ABB8-4a26-AB9C-F90B286B5C08}
+      - "Association «IN» → pepf_selected_service_data_CSF"  # {B0D7E5FE-E665-4834-94DC-49B7C5D157CE} → {8E747C21-846F-44d0-BE2B-8FA0D5578834}
+      - "Association «IN» → pepf_service_ID_DIP"  # {46BA3042-AD6E-4391-AA04-1B3B01FD03A6} → {57A00ABB-C3D1-469c-A969-405C8DCF0235}
+      - "Association «IN» → pepf_service_fee_IGU"  # {F4925B1A-3E0B-4c44-8821-2A00F3A377EC} → {0A0154F4-969F-47cb-BEE9-58F72F2C0767}
+      - "Association «IN» → pepf_user_ID_for_guidance"  # {EF4A310F-EB63-4338-97D1-8FD376BD7CDD} → {FF1DC032-58A3-43d3-B362-1D87A0BE222D}
+      - "Association «IN» → pepf_vehicle_data_IGU"  # {241BEAB6-B7E5-470a-8153-D640A182A783} → {236193F1-59CB-4bc2-BA66-6BAA83447D53}
+      - "Association «IN» → td-pepf_payment_info_guidance"  # {E1317E02-4591-4a74-99C6-AA5DAAA57A1A} → {DF84064E-2DE1-494b-A724-4497B9244FC5}
+      - "Association «IN» → tt-pepf_payment_info_guidance"  # {F23CE5D1-30C0-4141-9CEB-851CD9E66FD5} → {C539FF3B-1272-4945-8B81-320738F2B41B}
+  - name: "F1.3.5 Compute Service Fee"
+    guid: "{ADA1ACF5-CDE6-4755-B06B-A327F9F45B22}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to calculate the fee corresponding to the service required by the user (Traveller or Driver), based on the characteristics of this service, and on the contract established by the user.
+      (2) The ability to use the general tariffs for the service that are held in a store of Tariffs Data.
+      (3) The ability to vary the fee depending on the current situation.
+    links:
+      - "Aggregation «componentof» → F1. Provide Electronic Payment Facilities"  # {4FC8E9F5-B515-400b-AFE0-C96BEF22F5B5} → {B98FD399-70DD-4ab3-92FB-F2F1B1C6B2C9}
+      - "Aggregation «componentof» → F1.3 Perform Electronic Payment Transaction"  # {E7C41743-79EA-4856-A493-660AF71FD749} → {45635CAE-7C40-4bbd-BA22-9472B0BE8B47}
+      - "Association «IN» → pepf_service_fee_CSF"  # {93FD4E06-3A8F-49fb-AE97-77AE7B01B7B8} → {2DA2D6C2-574E-4e95-8ABA-692378C27CE1}
+  - name: "F1.3.6 Check Advanced Payment"
+    guid: "{8C10B42E-FB51-45fa-B169-445CEFE93527}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to verify whether the service required by the user (Traveller or Driver) has been paid for in advance.
+      (2) The ability for the advanced payment to have covered the total amount required as payment for the service, or to have covered just part of the amount.
+    links:
+      - "Aggregation «componentof» → F1. Provide Electronic Payment Facilities"  # {FA4F9AF4-20E0-4502-9258-A09071C8BCFE} → {B98FD399-70DD-4ab3-92FB-F2F1B1C6B2C9}
+      - "Aggregation «componentof» → F1.3 Perform Electronic Payment Transaction"  # {32597023-053A-4350-A8A4-37F74D4AB17E} → {45635CAE-7C40-4bbd-BA22-9472B0BE8B47}
+      - "Association «IN» → pepf_payment_status"  # {6E7C294D-B736-4a73-8CFC-B68DB21A9F2C} → {31622315-CA0E-48a8-B558-5B03BADF64A2}
+  - name: "F1.3.7 Recover Fee"
+    guid: "{75B030D5-769E-4ba2-B4C7-7117682BB621}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) A HMI through which it shall be possible to ask the Traveller or Driver for payment for the selected service.
+      (2) Once the Traveller or Driver has responded to the request for payment, the ability to check with Credit Control for the transaction to be validated.
+      (3) If the transaction is not valid for some reason the ability to register it as an incorrect payment (fraud).
+    links:
+      - "Aggregation «componentof» → F1. Provide Electronic Payment Facilities"  # {6E0BD6B2-3138-45c2-8514-F070737C846B} → {B98FD399-70DD-4ab3-92FB-F2F1B1C6B2C9}
+      - "Aggregation «componentof» → F1.3 Perform Electronic Payment Transaction"  # {0AF1A969-7F71-4847-9B7C-86B99FA83259} → {45635CAE-7C40-4bbd-BA22-9472B0BE8B47}
+      - "Aggregation «componentof» → F1.3 Perform Electronic Payment Transaction"  # {32959E8C-1DD5-4d93-BFC3-F475D2B42367} → {45635CAE-7C40-4bbd-BA22-9472B0BE8B47}
+      - "Association «IN» → pepf_agreement_RF"  # {D5C13570-C66A-459b-8CFB-23877C3088C7} → {75C4C455-A7B8-4974-BFDB-1685BC038C5D}
+      - "Association «IN» → pepf_illegal_action_notification_DPV"  # {ABE076AD-70A3-4466-8068-59CDB314F8D8} → {25982FDD-22D9-471b-8A33-165A90A34186}
+      - "Association «IN» → pepf_transaction_details"  # {A51A77B8-07A9-4408-A8EC-79FD92EF92E9} → {BC99561E-CB55-41b9-94B2-C41BC108D0C1}
+      - "Association «IN» → pepf_transaction_details_load"  # {3241819E-7C8B-457f-BC96-FA9DF700A1F9} → {979673BC-F139-479f-8517-05F2AFAC1A15}
+      - "Association «IN» → td-pepf_payment_acceptance"  # {CD92BE2C-69EC-40c8-9EB3-4D7C75064946} → {EF9D2604-CCDC-4f72-B512-82ED246D85BB}
+      - "Association «IN» → td-pepf_payment_request"  # {A7BDB53A-4CF3-4d78-A097-5115FD9F86B3} → {2322F7B2-CD85-4139-AA76-9E210B21AE4B}
+      - "Association «IN» → tt-pepf_payment_acceptance"  # {E7F772AE-AB59-4390-8E14-B8D3AC739600} → {2DC53C7F-1AF8-488d-93DB-63235C45E779}
+      - "Association «IN» → tt-pepf_payment_request"  # {91E31315-9A51-4fe2-BBE4-0451DC105AB5} → {59347046-6FDE-4217-BA79-673EDBDC9C31}
+  - name: "F1.4.1 Distribute Fees Revenue"
+    guid: "{FF382021-DE35-4d7d-9FD6-98CEFD6E044B}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to apportion the payments received amongst the operators according to rules defined in the store of Service Information Data.
+      (2) The ability to send the apportioned payment details to the functionality for crediting Service Operators' accounts.
+    links:
+      - "Aggregation «componentof» → F1. Provide Electronic Payment Facilities"  # {4767988B-D8E2-40c8-AE86-B3B019A90193} → {B98FD399-70DD-4ab3-92FB-F2F1B1C6B2C9}
+      - "Aggregation «componentof» → F1.4 Manage Operators' Revenue"  # {289A1FE5-11F4-45c4-A63D-D5EBCC111ABC} → {F08657CA-C46C-4690-B21A-277021DF88E8}
+      - "Association «IN» → pepf_operator_revenue"  # {38C0CD03-7782-4478-BCDA-56CA67A8DE41} → {75305FF6-8945-4ab3-9240-E59EFFC78797}
+  - name: "F1.4.2 Credit Operator's Account"
+    guid: "{510D1CC0-BA22-4b88-A1E0-B508C8384BD1}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to credit the accounts of the Service Operators by the amount that has already been calculated.
+      (2) The ability to receive the calculated credit amount from the functionality that distributes fees revenue.
+    links:
+      - "Aggregation «componentof» → F1. Provide Electronic Payment Facilities"  # {78B0135C-C887-4a30-BF4D-C59091548A6D} → {B98FD399-70DD-4ab3-92FB-F2F1B1C6B2C9}
+      - "Aggregation «componentof» → F1.4 Manage Operators' Revenue"  # {D17D004B-B4F9-489d-B3C1-C81C36740820} → {F08657CA-C46C-4690-B21A-277021DF88E8}
+      - "Association «IN» → pepf_credit_operator_transaction_order_L"  # {CBCBA63A-67DB-4f64-B8F1-B530261155C3} → {FB587B1A-BD3C-4143-8C25-B3B04A82AC45}
+      - "Association «IN» → tfc-pepf_transaction"  # {F9391BDA-2406-44d0-959C-5F5695E1F56A} → {840A2A99-CCA2-4c61-99F8-B9568B4B9056}
+  - name: "F1.4.3 Inform Operators on Transactions"
+    guid: "{B2BAEF1B-2309-4411-B7C4-0D76A21C76AE}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) An interface that enables for the Operators and Service Providers to view all the transactions concerning the services that they provide.
+      (2) The ability for the interface to only provide information to Operators and External Service Providers on request.
+      (3) The interface shall only have the ability to provide information to External Service Providers that is relevant to them and not information that is relevant to other Service Providers.
+    links:
+      - "Aggregation «componentof» → F1. Provide Electronic Payment Facilities"  # {43FF3BF0-6C9B-4ef5-B6B3-671ACF159DD7} → {B98FD399-70DD-4ab3-92FB-F2F1B1C6B2C9}
+      - "Aggregation «componentof» → F1.4 Manage Operators' Revenue"  # {4AF7DA84-1402-425f-A555-59A60104956E} → {F08657CA-C46C-4690-B21A-277021DF88E8}
+      - "Association «IN» → tesp.gip-pepf_transaction_analysis"  # {1C06BF9F-3742-436b-B647-3271206D5455} → {ED5B5CDA-FF2E-488f-B959-98B2C37B8851}
+      - "Association «IN» → tesp.mmtip-pepf_transaction_analysis"  # {66C4E13A-CF2D-4e87-BCAE-B6814E2E5CB1} → {722352C3-70C4-49f0-9E8D-443F2E88E0EC}
+      - "Association «IN» → tesp.ttip-transaction_analysis"  # {C63B01B8-3737-4093-AB5E-A802DBD0A38F} → {86A9421C-3E19-4695-8A08-4A2D1153D447}
+      - "Association «IN» → to.epo-pepf_transaction_analysis"  # {CB578B12-CE5E-455f-9634-29F49E2DE41E} → {D4BEEA5B-A569-4357-AC23-C355208555B7}
+  - name: "F1.5.1 Check User's Rights"
+    guid: "{214E1817-6A11-43e7-96ED-05CBA0F11672}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to determine the access rights of users (Travellers and Drivers) to the service(s) that they have requested.
+      (2) The ability to use the ID of the user, or the characteristics of the Vehicle they are using, and traffic conditions in comparison with the access criteria obtained from the store of Access Rights Data to determine the users' access rights.
+      (3) The ability to send the result of the access rights determination to the Inform and Guide User and/or the Check User's Contract functions, depending on the origin of the request.
+    links:
+      - "Aggregation «componentof» → F1. Provide Electronic Payment Facilities"  # {63A0835C-5353-4528-9B38-C5AE4C9B5528} → {B98FD399-70DD-4ab3-92FB-F2F1B1C6B2C9}
+      - "Aggregation «componentof» → F1.5 Access and Credit Control"  # {F3FC822A-2143-4751-A3DC-D766082DFFE5} → {9185B6A6-837C-4e6f-A8F1-3AACFF0CA5C0}
+      - "Association «IN» → pepf_checked_user_access_rights"  # {7A31D070-C72E-4a21-995D-23402111BAAF} → {1CCAC050-C6D1-49dc-A85F-340788920352}
+      - "Association «IN» → pepf_user_access_rights_CUC"  # {31407ABB-951A-4710-808D-52DD2465DB93} → {8ACC220B-F729-429f-BC5D-86DB62C7CD02}
+  - name: "F1.5.2 Detect Incorrect Payments"
+    guid: "{C3000BBF-780E-4e7f-8B89-8CB12561AF70}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to check the status of a user s (Traveller or Driver) account.
+      (2) If an overdraft notification has been received for this account (or for several different accounts with the same owner), the ability to include the account(s) in the "black list", which means that the user shall not be allowed to use this account until sufficient funds have been provided to rectify the situation, unless an  agreement  message has been received.
+    links:
+      - "Aggregation «componentof» → F1. Provide Electronic Payment Facilities"  # {3CD6EFF9-57B9-4e5c-8602-4452CDDBB1DD} → {B98FD399-70DD-4ab3-92FB-F2F1B1C6B2C9}
+      - "Aggregation «componentof» → F1.5 Access and Credit Control"  # {A06295CC-9B48-42fb-AF3F-B2168386C78E} → {9185B6A6-837C-4e6f-A8F1-3AACFF0CA5C0}
+      - "Association «IN» → pepf.psle_incorrect_payment_notification"  # {FE359493-1FD8-4ab3-B4DC-DFDFF8ECCE7B} → {6D87D345-3564-4e28-B906-5CC24A38AF6B}
+      - "Association «IN» → pepf_access_refused"  # {BD77B40E-FEDA-4e06-A4CD-C02D7D58CE9B} → {AB90B7BA-E490-4f21-B86D-B51AB6B3A780}
+      - "Association «IN» → pepf_black_list_update"  # {A0A156D7-C4E8-45b3-A752-BD8C87B0792A} → {E980A07C-8474-4a69-BC2F-5F92F2D23AD1}
+      - "Association «IN» → pepf_block_free_command_DPV"  # {B05B5D57-DEF5-4f1e-AC90-2C62180F09F9} → {9E999CA2-A3E3-4d9f-B853-3BAAD4B71E38}
+      - "Association «IN» → pepf_incorrect_payment_notification_L2"  # {86334679-C556-43b8-8C54-C4F1CBCB45BC} → {CFB3E454-BAAC-4578-AD7F-589D282501FC}
+      - "Association «IN» → td-pepf_violation_detection"  # {1B47EBFF-B857-41f4-83FA-40ABBC0D5849} → {4751201C-A71E-4b0c-852C-6A51F31699BE}
+  - name: "F1.5.3 Detect Access Violations"
+    guid: "{E94C10E7-D164-4b51-877B-11C9E43CDF57}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to register all attempts to use a service without having first fulfilled the required conditions.
+      (2) If attempts have been made, the ability to block on the use of the service via the block access functionality and to register the offence in the store of Incorrect Payment Data.
+    links:
+      - "Aggregation «componentof» → F1. Provide Electronic Payment Facilities"  # {C8B76C48-D835-4d52-80ED-3ACF7D441066} → {B98FD399-70DD-4ab3-92FB-F2F1B1C6B2C9}
+      - "Aggregation «componentof» → F1.5 Access and Credit Control"  # {90D4CE4F-EF52-4207-AC5B-764AD237CF6C} → {9185B6A6-837C-4e6f-A8F1-3AACFF0CA5C0}
+      - "Association «IN» → pepf.psle_access_violation_notification"  # {ADE859AA-59B8-4553-9AE2-D0C8E61B7F92} → {7DEB08C0-86BC-4a75-950B-014A5964AB66}
+      - "Association «IN» → pepf_black_list_request"  # {8C72DF98-0983-4782-A4E8-E2C471594E3F} → {E509BD09-6C21-4556-B529-2085E7F78177}
+      - "Association «IN» → pepf_block_free_command_DAV"  # {34C5F74A-9FFC-40d3-9A97-C492B9151525} → {6E01E452-600B-4928-8DD4-9AADCCCCF4E2}
+      - "Association «IN» → pepf_incorrect_payment_notification_L1"  # {BD435191-4BB0-4492-AAFF-CF4784A79B2F} → {B926C429-FEA3-4a57-A4C9-0EAF8090CDC8}
+  - name: "F1.5.5 Block Access to Service"
+    guid: "{4EF30323-C651-4795-8CA3-D4FECE28B4C5}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to control the access of a user (Traveller or Driver) to the requested service.
+      (2) Upon detection of an incorrect payment (fraud), the ability to send a message to the Detect Access Violations function.
+      (3) If an accident has been detected, the ability to send a warning to functionality in the Manage Traffic Functional Area.
+      (4) The ability to let the user proceed upon receipt of an agreement message from the Detect Access Violations function.
+      (5) A HMI through which the user can be informed about whether or not access to the requested service has been granted.
+    links:
+      - "Aggregation «componentof» → F1. Provide Electronic Payment Facilities"  # {E06D54D7-8A2D-4e00-AD1E-854A0E067407} → {B98FD399-70DD-4ab3-92FB-F2F1B1C6B2C9}
+      - "Aggregation «componentof» → F1.5 Access and Credit Control"  # {AD1DA45A-E65D-4240-8AFB-9B43F606747C} → {9185B6A6-837C-4e6f-A8F1-3AACFF0CA5C0}
+      - "Association «IN» → pepf.mt_accident_warning"  # {BAC6DD75-EC2E-4e88-A971-96DC660DF575} → {25D6EFB6-E525-44b9-AD2A-5611D05B6B5E}
+      - "Association «IN» → pepf_trespas_fraud_detection"  # {5BA5C416-3DF5-4d54-BCF9-02352035ADFD} → {9AEC8E50-4105-4411-900D-AD3611FC8F7E}
+      - "Association «IN» → td-pepf_stop_command"  # {2DF23A20-297A-42cc-874C-63381002B6AB} → {EA001B5C-CE12-4e69-9FE6-4E3216263FFC}
+      - "Association «IN» → tt-service_access_denied"  # {8362079E-ED51-43e1-AA8F-9D444BAC4132} → {1AC7BDF6-613E-48d3-B007-97F37F41305E}
+  - name: "F1.6.1 Manage Tariffs"
+    guid: "{C7A999EF-DAA2-4cb1-A521-B375BC7314FE}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to manage the store of "tariffs" Data.
+      (2) The ability to load the store with details of PT fares received from functionality in the Manage Public Transport Functional Area and/or details of charges for road use from functionality in the Manage Traffic Functional Area.
+      (3) The ability to define within the store, the structure in which the "tariffs" data will be stored, with different structures being possible for PT fares and charges for road use.
+    links:
+      - "Aggregation «componentof» → F1. Provide Electronic Payment Facilities"  # {94A7B528-317F-4760-8DA9-EE6013EDC5B7} → {B98FD399-70DD-4ab3-92FB-F2F1B1C6B2C9}
+      - "Aggregation «componentof» → F1.6 Manage Tariffs and Access Rights"  # {EDDD8FA5-9A19-4a20-9C20-E58A7E8E8ED0} → {F5490EAA-AD62-4dc4-895D-AE6062A8EA6D}
+      - "Association «IN» → pepf_tariff_grids"  # {A3168680-9C94-42d8-B429-F167A949BA99} → {92ADDA1A-ED6C-462e-ACDB-D71F3F4A8939}
+  - name: "F1.6.2 Manage Access Rights"
+    guid: "{41E1F18B-826C-4732-A16D-7AA14C909551}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to manage the store of "access rights" Data.
+      (2) The ability to load the store with criteria for access parts of the road network that can only be used if some form of charge is paid.
+    links:
+      - "Aggregation «componentof» → F1. Provide Electronic Payment Facilities"  # {9C7E0D3E-A2AC-4a76-89EF-836A424C2219} → {B98FD399-70DD-4ab3-92FB-F2F1B1C6B2C9}
+      - "Aggregation «componentof» → F1.6 Manage Tariffs and Access Rights"  # {A8EA3835-910F-4f73-9EAF-9C6EADC5956A} → {F5490EAA-AD62-4dc4-895D-AE6062A8EA6D}
+      - "Association «IN» → pepf_access_criteria_load"  # {D39E8872-8180-46dc-8205-78BC0EFB89F4} → {587B1B9D-CF34-440c-8C23-37036C3C6D6A}
+  - name: "F1.1 Set up Contract"
+    guid: "{F0DFD6A9-0F96-4a24-84F4-6381EADD1242}"
+    type: "Activity"
+    stereotype: "FRAME_High_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 1
+    note: |
+      This High-level Function shall establish the contracts between the users of the different services and the operators providing these services. These contracts shall define the rights of the user, his or her access to the different services, and the way the user will pay for them.  The Function shall also provide the Operators with statistical data about the contracts covering their services.
+    links:
+      - "Aggregation «componentof» → F1. Provide Electronic Payment Facilities"  # {CD0413FC-3786-418f-BE2D-2B723DF711A3} → {B98FD399-70DD-4ab3-92FB-F2F1B1C6B2C9}
+      - "Association «IN» → pepf_load_contract_details"  # {2B58500C-5320-48be-9DC5-1FD90C60CC6F} → {A9F5F8D5-7DC4-4ba2-8F01-6A57353109A5}
+      - "Association «IN» → tesp-pepf_contract_statistics"  # {EDF7F002-9AB8-407c-B7E3-0F09F09B842C} → {F38FBEFC-EE94-4bbc-B5AC-9FB285D63F65}
+      - "Association «IN» → to.epo-pepf_contract_statistics"  # {080C4046-73F9-4d2d-8633-8CAF5A288A97} → {39678124-3BB5-47b1-99B8-B6625EAE043C}
+      - "Association «IN» → to.epo-pepf_service_data"  # {619DEBD8-814A-42cd-AC97-3112D5B3C187} → {4F7EFC1B-916F-4c2b-A7B5-358BCE505C22}
+      - "Association «IN» → tt-pepf_information"  # {B76E923E-9C79-4ba5-9E6F-4164ACED7827} → {993D84A4-426D-4e64-B418-02FBE73BC7C5}
+  - name: "F1.2 Manage User's Account"
+    guid: "{E8991130-B33A-46c9-BEA0-6D7D3E42AB9E}"
+    type: "Activity"
+    stereotype: "FRAME_High_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 2
+    note: |
+      This High-level Function shall manage the electronic payment account used by the user.  It shall allow the user to credit his or her electronic payment account.  The Function shall debit the account according to the different transactions accomplished.  It shall also provide the user with information about the transactions that he or she has performed.
+    links:
+      - "Aggregation «componentof» → F1. Provide Electronic Payment Facilities"  # {5F89E5E2-2E48-4a05-98D6-36DFEC5D185C} → {B98FD399-70DD-4ab3-92FB-F2F1B1C6B2C9}
+      - "Association «IN» → pepf_credit_operator_transaction_order"  # {D2241AD5-4C14-4a24-9F2A-B9D26F7ACBB2} → {49455530-DE3E-4f66-A6AC-E854549342F2}
+      - "Association «IN» → pepf_overdraft_notification"  # {A683DA7A-CF9D-4e33-AFA6-435733423485} → {10FF471E-4B0B-4743-A2C2-911AF8BF97F9}
+      - "Association «IN» → pepf_supplied_account"  # {87DB95D6-0BC7-45e2-949D-64A1B13611F9} → {95A3C17D-C82B-4c46-883B-865988609783}
+      - "Association «IN» → tfc-pepf_account_commands"  # {5C291A64-150F-4ff5-A311-C6F85947397A} → {32962CE2-894A-4a19-9878-723C053DB726}
+      - "Association «IN» → tt-pepf_payment_data"  # {A804F595-48C8-4ee1-B2E8-F111B948E93D} → {9BD02AF6-E4B6-4852-A37D-1BD04534F661}
+  - name: "F1.3 Perform Electronic Payment Transaction"
+    guid: "{45635CAE-7C40-4bbd-BA22-9472B0BE8B47}"
+    type: "Activity"
+    stereotype: "FRAME_High_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 3
+    note: |
+      This High-level Function shall process the transaction.  It shall identify the user, check the contract he or she has with the EFC Operator, and then guides him or her through the transaction.  The Function shall compute the corresponding fee, and, after checking that advanced payment hasn't been made, recover it.
+    links:
+      - "Aggregation «componentof» → F1. Provide Electronic Payment Facilities"  # {8EE450E7-5E10-40d9-ACF2-27D47CDD692A} → {B98FD399-70DD-4ab3-92FB-F2F1B1C6B2C9}
+      - "Association «IN» → pepf.mt_infra_usage_info"  # {E3BBBF03-7B49-44f0-884F-95D23F65C23F} → {123A8742-6CD4-481d-A0B1-F34C9EAFA4A5}
+      - "Association «IN» → pepf.mt_road_infra_usage_info"  # {9F8D53ED-1F78-4675-89F7-60949C56CE22} → {5ACB5EA1-51B4-4478-AD91-C4CA7D19F885}
+      - "Association «IN» → pepf_incorrect_transaction_input"  # {CC30C27C-81BF-4d87-9AE4-F5354EC7CE1E} → {AA865DBD-8D06-433f-84FE-A2845751814D}
+      - "Association «IN» → pepf_transaction_details"  # {B67D742B-E4D4-4021-8D3F-6153321D04A2} → {BC99561E-CB55-41b9-94B2-C41BC108D0C1}
+      - "Association «IN» → pepf_transaction_details_load"  # {FABB91B9-CFBD-40b4-A9E1-44D57B5B2F75} → {979673BC-F139-479f-8517-05F2AFAC1A15}
+      - "Association «IN» → td-pepf_payment_output"  # {F5F99C66-91AE-471d-BA6F-3586CC172B12} → {87627BC1-18DC-4419-9CF3-55BA4ED93008}
+      - "Association «IN» → tt-pepf_payment_output"  # {41216A9F-BDD1-464d-99DA-E7CB36F5F854} → {BCA10E34-FC83-4f51-BA43-7E097EBEC7EE}
+  - name: "F1.4 Manage Operators' Revenue"
+    guid: "{F08657CA-C46C-4690-B21A-277021DF88E8}"
+    type: "Activity"
+    stereotype: "FRAME_High_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 4
+    note: |
+      This High-level Function shall credit the account of the different Operators according to the transactions that have been made.  It shall apportion their revenue according to established rules.  The Function shall also enable Operators and Service Providers to have a clear view of the transactions that have been performed that are relevant to them.
+    links:
+      - "Aggregation «componentof» → F1. Provide Electronic Payment Facilities"  # {FF08ADDB-9808-4a54-820A-969873EABECA} → {B98FD399-70DD-4ab3-92FB-F2F1B1C6B2C9}
+      - "Association «IN» → tesp-pepf_transaction_analysis"  # {027979BE-C9BA-443f-A1D6-DCC5DD4CCDF3} → {F2480349-ECF7-43fa-B288-313A36092C2B}
+      - "Association «IN» → tfc-pepf_transaction"  # {667B76B4-C36F-46ae-BB54-C8C0D6501A3F} → {840A2A99-CCA2-4c61-99F8-B9568B4B9056}
+      - "Association «IN» → to.epo-pepf_transaction_analysis"  # {BE0B25EA-9703-41af-A08D-FE6D2BA0FB21} → {D4BEEA5B-A569-4357-AC23-C355208555B7}
+  - name: "F1.5 Access and Credit Control"
+    guid: "{9185B6A6-837C-4e6f-A8F1-3AACFF0CA5C0}"
+    type: "Activity"
+    stereotype: "FRAME_High_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 5
+    note: |
+      This High-level Function shall check that the user actually is allowed to perform the required transaction.  It shall check the access rights, the presence of the user on black lists, and if no incorrect payment (fraud) is detected, shall permit the transaction to take place and enable the user to continue to use the service.  The Function shall also record all the attempts to use a service without either funds or permission.
+    links:
+      - "Aggregation «componentof» → F1. Provide Electronic Payment Facilities"  # {27C4F303-4921-462a-9816-42BB29954B7D} → {B98FD399-70DD-4ab3-92FB-F2F1B1C6B2C9}
+      - "Association «IN» → pepf.mt_accident_warning"  # {58D3D50E-56A2-4242-BA8D-69D24E1B8806} → {25D6EFB6-E525-44b9-AD2A-5611D05B6B5E}
+      - "Association «IN» → pepf.psle_access_violation_notification"  # {38998855-B5B1-4cc8-8A73-F066AAC21E6C} → {7DEB08C0-86BC-4a75-950B-014A5964AB66}
+      - "Association «IN» → pepf.psle_incorrect_payment_notification"  # {89264EEF-161E-4884-97E3-E02BCBCB2FB4} → {6D87D345-3564-4e28-B906-5CC24A38AF6B}
+      - "Association «IN» → pepf_incorrect_payment_output"  # {F9735BDA-B335-417c-BE4E-5A32382844E3} → {7D00E1ED-3F4D-4d59-AB75-B76B965DC409}
+      - "Association «IN» → td-pepf_stop_command"  # {EDA1DFB6-CCDB-4af3-89CB-DC436B49A268} → {EA001B5C-CE12-4e69-9FE6-4E3216263FFC}
+      - "Association «IN» → td-pepf_violation_detection"  # {17210C63-16D4-46a6-B1B5-A173A5CC14BA} → {4751201C-A71E-4b0c-852C-6A51F31699BE}
+      - "Association «IN» → tt-service_access_denied"  # {2F96DB24-CF1E-41b0-92DF-A0D69E79788E} → {1AC7BDF6-613E-48d3-B007-97F37F41305E}
+  - name: "F1.6 Manage Tariffs and Access Rights"
+    guid: "{F5490EAA-AD62-4dc4-895D-AE6062A8EA6D}"
+    type: "Activity"
+    stereotype: "FRAME_High_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 6
+    note: |
+      This High-level Function shall be responsible for the update of the Access Rights and Tariffs Data Stores.  It shall perform the updates using data coming from the various sources of such information.
+    links:
+      - "Aggregation «componentof» → F1. Provide Electronic Payment Facilities"  # {91F3D124-1A42-49a3-8278-C607897207F4} → {B98FD399-70DD-4ab3-92FB-F2F1B1C6B2C9}
+      - "Association «IN» → pepf_access_criteria_load"  # {2550905B-36E4-4cc1-B14D-2569CEE73F5E} → {587B1B9D-CF34-440c-8C23-37036C3C6D6A}
+      - "Association «IN» → pepf_tariff_grids"  # {3F1F5DC9-6BA0-48b1-98A7-5006549F7505} → {92ADDA1A-ED6C-462e-ACDB-D71F3F4A8939}

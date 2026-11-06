@@ -1,0 +1,17 @@
+package: "Truckparking Reference Architecture (SSTP)/00 SSTP Motivation Layer/SSTPIS High Level Requirements/SSTPIS Domain"
+guid: "{4286B1AF-EDD3-4860-BABB-C211780471A2}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "Trans-European Transport Network (TEN-T)"
+    guid: "{34516717-0650-478f-BFBF-E2DF7ECED973}"
+    type: "Artifact"
+    stereotype: "ITS_Domain"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Trans-European Transport Network (TEN-T)
+    links:
+      - "Association → Safe amd Secure Truck Parking Information Service"  # {8A0531B0-9615-461f-913E-65D8563E67DD} → {33781BF1-9091-4275-AD48-509C4D253D92}

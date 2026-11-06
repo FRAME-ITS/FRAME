@@ -1,0 +1,843 @@
+package: "Frame Repository/Frame Functional View/Functionality/Functional Area F6 - Provide Traveller Journey Assistance"
+guid: "{0B25AE20-A1A6-46b1-A397-FC5D7C68260B}"
+alias: ""
+version: "5.0"
+note: ""
+elements:
+  - name: "F6. Provide Traveller Journey Assistance"
+    guid: "{910E7108-BA0F-478e-BF7A-5197C2E6F477}"
+    type: "Activity"
+    stereotype: "FRAME_Functional_Area"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Functional Area shall provide functionality that enables the provision of information to all types of Travellers about traffic conditions and about other modes of transport.  The functionality shall also provide pre-trip journey planning, including special routes for Emergency Vehicles and Freight Vehicles.  On-trip route guidance shall also be provided, together with the ability to change a trip itinerary due to Traveller input, or the occurrence of events that affect the flow of Vehicles through the road network or other factors that will affect the successful implementation of the trip plan that the Traveller has prepared.  As part of the trip planning process, the functionality shall provide the Traveller with access to other services such as accommodation, the location of points of interest that may be relevant to the prepared route and enable the use of other non-road based modes of transport as part of the trip plan.
+      
+      Mnemonic: ptja
+    links:
+      - "Aggregation «componentof» → System"  # {FF0480CD-B3CA-4779-9359-468A353863C5} → {A7365472-4893-4994-9241-EEED83ABEF7D}
+      - "Association «IN» → To Operator"  # {94DBDF9B-9B8E-4485-BAD4-BC0BC4E39989} → {BED224D6-0F6C-4a10-9057-54D9140F33F4}
+      - "Association «IN» → To Traveller"  # {F3B1C0FB-2C84-41a5-A723-DA6F25872318} → {0F2BCEB7-7EEB-46f9-B031-5D3328B73E67}
+      - "Association «IN» → fo.tio-travel_information_inputs"  # {46A0269A-4DE9-4695-9E50-455783591EFA} → {D7EEB826-8F53-445b-8DD6-C6ACBB13FF08}
+      - "Association «IN» → ft-trip_plan_imlpementation_commands"  # {71D5479F-B3DE-406c-9A08-844D3796DA4F} → {1AD453C5-12A1-4797-B9CC-5809D5C09A0D}
+      - "Association «IN» → mpto.ptja_service_information_for_trip_planning"  # {39D53C0E-F318-4e5d-9EB0-E5080424FE3F} → {38566B2D-B17A-4313-A6A4-E1B43E03E88A}
+      - "Association «IN» → mt.ptja_environmental_inputs_for_trip_planning"  # {20735E57-6EEB-4681-B478-6ED02D9C0064} → {1B1DEF1A-98FA-45c2-B0E7-71D3B4A36B93}
+      - "Association «IN» → ptja.mt_road_use_data_from_trip"  # {CC9524FD-0E42-4f9b-8399-4523D21344B8} → {7E62B4AD-0C46-437b-B3ED-083EDA529060}
+      - "Association «IN» → ptja.mt_traffic_data"  # {B4F652D4-4993-4c74-B5BD-AFCDAD838936} → {FDFDDF39-3470-4801-BDDE-D1149EA99E1E}
+      - "Association «IN» → ptja.pepf_service_information"  # {C018244A-FC7F-46e5-9FE7-E65DDD1BAAF7} → {072F0CD4-30AE-4c8e-B80E-0DF66F6A75C1}
+      - "Association «IN» → ptja.pscs_green_wave_route"  # {810B4286-3FAA-42d5-884E-9BF06DE9D9A6} → {50C22F9F-BA6E-463a-B991-4F6AB054A848}
+      - "Association «IN» → ptja.psef_emergency_route_plan"  # {AAA592AC-1E4B-4837-B2BE-53F651D895BD} → {FEFD8014-7A1C-45f7-9294-E6C8039BC3FE}
+      - "Association «IN» → ptja.pshvs_vehicle_trip_plan_responses"  # {D619327A-0C7D-4b78-85A4-BEA5B81654B7} → {C1C15386-FFCB-43d4-8A17-C0CD316D64CA}
+      - "Association «IN» → ptja_extra_data_for_travel_information"  # {D21FE37C-09B1-4605-A56B-E1914A183646} → {DBCA4AC3-660D-4602-88A4-54E3B69288BF}
+      - "Association «IN» → tesp-ptja_outputs"  # {D2BE4488-69A0-45f4-AA40-5D4A194F65D5} → {C28D09A2-BC08-413e-B4FC-D4FF0617AC9E}
+      - "Association «IN» → tfc-ptja_outputs"  # {848D1276-2DA0-4590-81DD-30D83E6A4F46} → {51C79A56-D4AB-4f50-BC0B-A0504C2F573C}
+      - "Association «IN» → to-ptja_outputs"  # {64C29EF5-7933-44c4-80F9-566E0C8AC4A7} → {C0EA82A5-2A01-4f60-B9ED-632FBB0CF36D}
+      - "Association «IN» → to.tio_travel_information_outputs"  # {B788A74E-31E1-4141-932B-3B56962A0F3E} → {EA2F9698-5083-45ae-A3A2-5C9777E2B9B5}
+      - "Association «IN» → tors-ptja_outputs"  # {BC57504F-61DD-451c-BE36-D0BB5AC99D79} → {0A8D45D9-F5AA-4799-BB6B-C7D467D779FA}
+      - "Association «IN» → tt-ptja_outputs"  # {2D57F1D3-A568-489e-A7B9-5809271FC689} → {451E672F-6AB2-4dac-B6CE-73398822B4C8}
+      - "Association «IN» → tt-travel_information_messages"  # {5BF63E27-6220-4a0b-A05E-10C714BFC90E} → {78093E3B-F90D-4df9-9359-60ACF8B374C5}
+      - "Association «IN» → tt-trip_information"  # {3CA74105-B7C8-49de-AE99-5D0F415A2B49} → {85B587E9-8AB0-4e9a-AB95-552B8FD092CA}
+  - name: "F6.3 Support Trip"
+    guid: "{5443746E-DAB0-49fb-9EB8-533BFD7558A7}"
+    type: "Activity"
+    stereotype: "FRAME_High_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This High-level Function shall provide support for the implementation of a trip plan by a Traveller.  This support shall include providing actual "guidance" to the Traveller about what to do, regardless of the transport being used.  Progress with the implementation shall be monitored and checked for compliance with the trip plan, e.g. will the Traveller arrive at the destination at the expected time.  If not it shall be possible for a revised trip plan to be created for immediate implementation if accepted by the Traveller.  During the implementation of the trip plan travel conditions may change that may influence the ability to complete the trip in the manner required by the Traveller when the trip was planned. Using the trip itinerary the consequences of these changes shall be evaluated and a revised trip plan suggested to the Traveller for immediate implementation once accepted.
+    links:
+      - "Aggregation «componentof» → F6. Provide Traveller Journey Assistance"  # {F8BFDB19-3A10-40ef-8EC9-A637086AA698} → {910E7108-BA0F-478e-BF7A-5197C2E6F477}
+      - "Association «IN» → fesp.g-trip_plan_implementation_map_data"  # {E548B382-0F54-402f-92D1-D7C148D19916} → {DB9CE253-AB12-4bdf-97B7-82EEFB3A00E0}
+      - "Association «IN» → ft-GTP_data_updates"  # {158A7B42-6093-4da6-898E-78E7750B38DA} → {91107C14-1F8C-4f3f-AB80-5254DB1EF1A9}
+      - "Association «IN» → ft-request_trip_plan_implementation"  # {98E05D06-B7EC-42a8-A0C5-BFA7FD667257} → {D2FEE271-C7AE-4c1a-AF3E-A1E6CFB2CC93}
+      - "Association «IN» → ft-requested_implementing_trip_plan_change"  # {777F84B7-A76C-4f7e-9E05-B38A83F7B7B8} → {831AE13E-0B0C-4b24-9F8B-A16A3957D056}
+      - "Association «IN» → ptja.mt_inter-urban_road_use_data_from_trip"  # {01CFD5D0-CD41-403d-90D3-370B9FB31605} → {26A0798C-AD1D-4a08-B0BA-11E8C2A7C666}
+      - "Association «IN» → ptja.mt_road_use_data_from_trip"  # {FD53D762-E965-4ae4-89BA-AEC074024731} → {7E62B4AD-0C46-437b-B3ED-083EDA529060}
+      - "Association «IN» → ptja.mt_traffic_data"  # {C7B2E8E1-6CD0-4196-BF7E-A0AB55D529C7} → {FDFDDF39-3470-4801-BDDE-D1149EA99E1E}
+      - "Association «IN» → ptja.mt_trip_plan_o-d_data"  # {2C69DF36-AAA0-41c6-9719-A9A2EC131587} → {C313BAD7-0C0C-4431-8C12-CEF4DE8A9560}
+      - "Association «IN» → ptja.mt_urban_road_use_data_from_trip"  # {E8C8E2CB-C518-435c-A392-3C701DA71D2A} → {1A5DF9D0-2713-4980-A37C-95F79A310551}
+      - "Association «IN» → ptja_imlpement_updated_trip_plan"  # {26207A9F-30F2-44f2-8B74-403EEADB5064} → {335153CD-927D-47d6-8C11-ED8BD30156DD}
+      - "Association «IN» → ptja_implement_trip_plan"  # {83F8D5E5-5D66-407c-9466-25E04EFE33C3} → {1AFD4EF7-AC29-4b02-9ED9-91FE2C5B12B0}
+      - "Association «IN» → ptja_post_trip_data"  # {E8B9C9A4-A934-4db2-8F04-DE90EAA5A3D7} → {68975543-E552-48c7-991E-5848D5C65D56}
+      - "Association «IN» → ptja_revise_trip_plan_request"  # {3724A33D-37C6-4e1c-9BCE-95A29BA48D0D} → {7F66184C-723A-48ad-B521-15208699EB3C}
+      - "Association «IN» → ptja_revised_trip_plan_after_traveller_approval"  # {20B68AC4-F5DA-49f8-91FB-D450EC2F956B} → {8AB76742-2D67-43ad-BEEE-32E5CA352C10}
+      - "Association «IN» → ptja_revised_trip_plan_requirements"  # {AB0177FF-30EB-4fc6-A5F9-2AAF1572B09F} → {5D3760A0-67D1-413d-8EBA-EAB09F8F1580}
+      - "Association «IN» → ptja_trip_completion_report_for_evaluation"  # {E0C0208E-08F3-46c7-9EEE-EE1AFD338180} → {5A4B75BA-3851-40c7-84E1-3E2486D61B6A}
+      - "Association «IN» → ptja_trip_guidance_instructions"  # {916A6301-3F92-497c-8C78-70815A36517D} → {34785BED-F16C-4297-B15E-70E4AB1D2568}
+      - "Association «IN» → ptja_trip_plan_changes_for_traveller"  # {D39CF17A-37EE-460b-8D29-1E5028D813C0} → {2A415C55-051F-4732-ACB6-3535790C5D43}
+      - "Association «IN» → ptja_trip_plan_changes_request"  # {480C1F7A-2DDE-45e2-9C56-2DCF2F392AB3} → {FA21982A-CB58-46a3-AE8D-EDE475C3032D}
+      - "Association «IN» → ptja_trip_plan_changes_response"  # {BA71AEB2-3816-4fad-A0B6-3E5945534BB2} → {6A8040D3-6D97-4117-BFE3-31816D59923E}
+      - "Association «IN» → ptja_trip_plan_for_implementation"  # {FF62CD71-5EAF-4718-B4A6-D5C9116EFED4} → {AB2375F6-DB51-4276-8A73-FD3EA32709EC}
+      - "Association «IN» → ptja_trip_plan_for_monitoring"  # {C967FD1D-9FC0-4e9e-91E2-10198898A5DF} → {EADA48BB-DC54-4ddf-B52D-4EB01A7AB80E}
+      - "Association «IN» → tt-predicted_arrival_times_for_trip_plan"  # {9D91947A-51AA-453b-AF65-DE5D397A6CA4} → {7D87C9A1-8100-4f02-AD92-3F9E60748B41}
+      - "Association «IN» → tt-trip_information"  # {219308A2-5096-4347-8504-423C4B5CAFB7} → {85B587E9-8AB0-4e9a-AB95-552B8FD092CA}
+  - name: "F6.3.10 Implement Trip Plan and Track Traveller"
+    guid: "{7830030F-1C15-4442-8195-D147AE326966}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to follow the progress of the Traveller as they move along the previously planned and requested trip and implement each part of the trip plan using the stored plan data.
+      (2) The ability to use a variety of tracking methods to determine the actual location of the Traveller.
+      (3) The ability to follow the time schedule in the trip plan, i.e. use a form of dead reckoning, if no suitable tracking method is available.
+      (4) If required by the trip plan, the ability to provide detailed route guidance which it shall send to the Traveller Interface Function for output to the Traveller.
+      (5) If the a revised version of the trip plan currently being implemented is received, the ability to stop current trip plan and commence implementing the revised one from the current location of the Traveller.
+      (6) The ability to use a previously created trip plan to follow and provide guidance to the Traveller, even when their location moves outside the geographic area covered by the service provider that created the trip plan.
+    links:
+      - "Aggregation «componentof» → F6. Provide Traveller Journey Assistance"  # {5617AB0E-49AB-4da6-98FA-65D311F151AF} → {910E7108-BA0F-478e-BF7A-5197C2E6F477}
+      - "Aggregation «componentof» → F6.3 Support Trip"  # {D66BAE75-C7CE-4420-8D8B-ABEB124D0965} → {5443746E-DAB0-49fb-9EB8-533BFD7558A7}
+      - "Association «IN» → ptja_traveller_location_for_trip_monitoring"  # {570325BB-F624-4f8a-BE87-D87F2A2B21E2} → {A47A2B29-E0BD-400c-8CEA-998C7FC77202}
+      - "Association «IN» → ptja_trip_guidance_instructions"  # {2E7947F1-01EC-4cae-B12F-B6C2F1FA7181} → {34785BED-F16C-4297-B15E-70E4AB1D2568}
+  - name: "F6.3.11 Monitor Trip Plan Implementation for Traveller"
+    guid: "{5E4985B8-7E3A-4d93-B710-136DEB7E8EE6}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to receive data about the current location of the Traveller so that progress with the current trip plan can be monitored until either the trip is completed, or a new trip plan is produced.
+      (2) The ability to continuously evaluate the data that is received about travel conditions such as current and predicted traffic flows, road works, weather, incidents and PT services.
+      (3) The ability to use the results of the evaluation of travel conditions and the current location of the Traveller to determine if there will be benefit to the Traveller from changing the trip plan and to request that a new trip plan is produced if such a benefit is found.
+      (4) The ability to collect O-D and journey time data for the road network segments that are used in the trip plan and send them to the Inter-urban and Urban Traffic Data Collection functionality.
+      (5) At the end of the trip, the ability to collect the data about the complete performance of the trip and send it to the Performance Evaluation functionality.
+    links:
+      - "Aggregation «componentof» → F6. Provide Traveller Journey Assistance"  # {BF3848F0-B6AC-4c60-875A-E6DF2AE63442} → {910E7108-BA0F-478e-BF7A-5197C2E6F477}
+      - "Aggregation «componentof» → F6.3 Support Trip"  # {D79AEF31-2C81-4193-BA84-744D110DB742} → {5443746E-DAB0-49fb-9EB8-533BFD7558A7}
+      - "Association «IN» → ptja.mt_inter-urban_road_use_data_from_trip"  # {C109B4CA-A131-4537-BECD-3E21A513119E} → {26A0798C-AD1D-4a08-B0BA-11E8C2A7C666}
+      - "Association «IN» → ptja.mt_trip_plan_o-d_data"  # {853C0EB8-30EC-4663-B235-D8BA2BE67DF6} → {C313BAD7-0C0C-4431-8C12-CEF4DE8A9560}
+      - "Association «IN» → ptja.mt_urban_road_use_data_from_trip"  # {59848247-7200-4167-8BF3-FB0CF322617B} → {1A5DF9D0-2713-4980-A37C-95F79A310551}
+      - "Association «IN» → ptja_revise_trip_plan_request"  # {2FF9485E-C109-412a-855A-A74AFDC888DA} → {7F66184C-723A-48ad-B521-15208699EB3C}
+      - "Association «IN» → ptja_trip_completion_report_for_evaluation"  # {8ECE24A1-E2DF-4e46-BFD0-615D7E449FCE} → {5A4B75BA-3851-40c7-84E1-3E2486D61B6A}
+  - name: "F6.3.12 Manage Revised Trip Plan Creation for Traveller"
+    guid: "{4F81FF83-2D7E-4cae-9DC4-51BA7980B248}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to manage the production of revised trip plans whenever a change becomes necessary to the trip plan that is currently being implemented.
+      (2) The ability to request changes to the trip plan either because it is not providing the best possible trip for the Traveller, or because the Traveller requests the change.
+      (3) Once the request has been received, the ability to send it to the Trip Planning functionality for the creation of a new trip plan that starts from the last known location of the Traveller.
+      (4) When the revised trip plan is received, the ability to use the Provide Traveller Trip Interface Function to establish that either the Traveller accepts the revised trip plan, or wishes to have further changes made.
+      (5) Once the revised trip plan has been accepted, the ability to send it to the Manage Store of Trip Plan Data Function and to inform the Implement Trip Plan and Track Traveller Function that a revised trip plan is about to be provided.
+    links:
+      - "Aggregation «componentof» → F6. Provide Traveller Journey Assistance"  # {F4D28B7B-8CCC-4577-9353-12F1DE4576D7} → {910E7108-BA0F-478e-BF7A-5197C2E6F477}
+      - "Aggregation «componentof» → F6.3 Support Trip"  # {B87A921F-674D-4cf5-BAC2-512E76A84E9F} → {5443746E-DAB0-49fb-9EB8-533BFD7558A7}
+      - "Association «IN» → ptja_imlpement_updated_trip_plan"  # {C4C88666-0330-4d97-942A-1515BB5DC3A5} → {335153CD-927D-47d6-8C11-ED8BD30156DD}
+      - "Association «IN» → ptja_revised_trip_plan_after_traveller_approval"  # {45D1C4EA-DF9C-40fd-B792-4BCC82509C06} → {8AB76742-2D67-43ad-BEEE-32E5CA352C10}
+      - "Association «IN» → ptja_revised_trip_plan_requirements"  # {C69165BE-9811-4462-A20F-4C5BAC78349F} → {5D3760A0-67D1-413d-8EBA-EAB09F8F1580}
+      - "Association «IN» → ptja_trip_plan_changes_for_traveller"  # {02A5B1DC-32A3-4003-923D-05E8F2FBA3AD} → {2A415C55-051F-4732-ACB6-3535790C5D43}
+  - name: "F6.3.13 Provide Traveller Trip Interface"
+    guid: "{43F1DFB0-6524-4e76-819F-84B874AF51C2}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) A HMI through which the Traveller can request the implementation of a trip plan, be given trip navigation instructions or manage changes to the trip plan that is currently being implemented.
+      (2) The ability for the HMI to output in whatever form best suits the Traveller the instructions for implementing the trip plan that are provided by the Implement Trip Plan and Track Traveller function.
+      (3) If a proposal is received for revising the trip plan that is being implemented, the ability of the HMI to display details of the proposed changes to the Traveller and send back the response that is received to the Manage Revised Trip Plan Creation for Traveller function.
+      (4) The ability for the HMI to receive requests for changes to the trip plan from the Traveller and also send them to the Manage Revised Trip Plan Creation for Traveller function.
+    links:
+      - "Aggregation «componentof» → F6. Provide Traveller Journey Assistance"  # {B8353330-9C0A-4f7a-840D-3213DBAD203A} → {910E7108-BA0F-478e-BF7A-5197C2E6F477}
+      - "Aggregation «componentof» → F6.3 Support Trip"  # {249136DD-A88F-4643-AE1A-6857D38D6542} → {5443746E-DAB0-49fb-9EB8-533BFD7558A7}
+      - "Association «IN» → ptja_implement_trip_plan"  # {A910D66A-D5DD-4771-8F48-B32C5A44EE42} → {1AFD4EF7-AC29-4b02-9ED9-91FE2C5B12B0}
+      - "Association «IN» → ptja_trip_plan_changes_request"  # {480E48DB-59C9-41b2-A362-75C0AE0DBC72} → {FA21982A-CB58-46a3-AE8D-EDE475C3032D}
+      - "Association «IN» → ptja_trip_plan_changes_response"  # {EB4832CE-D5A8-4a61-B985-ECA94576D6A6} → {6A8040D3-6D97-4117-BFE3-31816D59923E}
+      - "Association «IN» → ptja_trip_results_from_traveller"  # {8C1B4371-1BD6-4301-9FF6-122B45AE2EE9} → {C1F3C32A-2A9D-4d30-9F5E-63FCBD52B24D}
+      - "Association «IN» → tt-implemented_trip_plan_changes"  # {36D60181-9497-47a2-A152-495C720D2BDB} → {D3752BD5-E517-49fd-9BCA-388323026EBD}
+      - "Association «IN» → tt-predicted_arrival_times_for_trip_plan"  # {24C5A261-6276-4666-9601-DB1AA61B6934} → {7D87C9A1-8100-4f02-AD92-3F9E60748B41}
+      - "Association «IN» → tt-route_guidance_information"  # {D0CB4857-98BE-4e17-AAFF-3C4F51496617} → {0B2F4452-1E11-401e-8230-55437D0B3059}
+  - name: "F6.5 Prepare Trip Plan"
+    guid: "{AA1602B6-7456-4fd1-98CC-6CA7DD14285B}"
+    type: "Activity"
+    stereotype: "FRAME_High_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This High-level Function shall include facilities to enable the preparation of trip plans by the Traveller, and for other functionality, e.g. the Emergency Services and Freight Operations.  The preparation of trip plans shall take into account all kinds of factors such as when the Traveller wants to travel, the transport modes the Traveller is able to use and the duration of the trip.  The functionality shall be provided with up to date information about transport conditions, including PT Services, and shall be able to obtain details of the services provided by other transport modes.  This information shall be stored for use until it is updated again following changes detected by functionality in other Functional Areas.  In any trip plans created by the Traveller the functionality shall also be able to include such items as personal services (e.g. hotels and restaurants) and points of interest (e.g. tourist sites) and enable any required bookings to be made.  These shall not be included in trip plans for the Emergency Services and Freight Operations.  The functionality shall also provide the option for a charge to be made for creating trip plans.
+    links:
+      - "Aggregation «componentof» → F6. Provide Traveller Journey Assistance"  # {222DF18B-9925-4b84-9816-F9C3E2DBE637} → {910E7108-BA0F-478e-BF7A-5197C2E6F477}
+      - "Association «IN» → ffc-payment_for_trip_planning_response"  # {851005B5-F27F-456c-9BBC-462A7F3413A9} → {5D47869D-117A-4798-965C-898C8A7F67CF}
+      - "Association «IN» → ffc-trip_planning_service_payment_response"  # {254842B8-8667-4158-A60D-98DD303D5A2B} → {939A7415-7C69-404b-BDBF-34E271F06CC5}
+      - "Association «IN» → fo.tio-trip_planning_data_inputs"  # {AC2D0E48-A1C3-4106-8FD2-DDF407FCD8F1} → {7AB5C640-796E-46e5-9378-A164667B9A97}
+      - "Association «IN» → ft.ptt-additional_trip_parameters"  # {B9A0A75A-08EC-420c-ABB2-759EFB4B16D3} → {958D7BA6-A5D4-49ba-97C1-4559E9C79A01}
+      - "Association «IN» → ptja.pepf_service_information"  # {83EC8014-2F19-4bb7-828B-C26867CD1CF8} → {072F0CD4-30AE-4c8e-B80E-0DF66F6A75C1}
+      - "Association «IN» → ptja.pscs_green_wave_route"  # {784AA605-2354-43a4-8A9C-BCCE9B3CECF1} → {50C22F9F-BA6E-463a-B991-4F6AB054A848}
+      - "Association «IN» → ptja.psef_emergency_route_plan"  # {2362D15D-7689-4461-AB92-B33E17BE7DBE} → {FEFD8014-7A1C-45f7-9294-E6C8039BC3FE}
+      - "Association «IN» → ptja.pshvs_vehicle_trip_plan_responses"  # {D43D6B22-B09F-4b2d-8A6E-9B28EA057EE0} → {C1C15386-FFCB-43d4-8A17-C0CD316D64CA}
+      - "Association «IN» → ptja_PT_information"  # {56E9367A-6C9A-467c-8178-F982F816AB9B} → {1759C26C-4D28-4a84-8A8F-2A95C0FD8AF3}
+      - "Association «IN» → ptja_advanced_payment_needed"  # {A13F309A-90AE-4c31-883A-8CC675695380} → {EA003A97-2DF2-4e67-9869-BEA0C63F14E8}
+      - "Association «IN» → ptja_booking_approved"  # {71E19D97-ADD1-44bd-9CB8-87AF76BFF5E9} → {85DC359E-7AA6-430d-90FE-BB6B33DAD828}
+      - "Association «IN» → ptja_booking_mishap"  # {2426677D-058C-425a-BA32-82EB966C1046} → {F6F0A375-8162-4b51-BB13-8BE5F5F21A39}
+      - "Association «IN» → ptja_cancel_bookings_for_trip"  # {F99D68B2-E285-411e-B776-330F714FF564} → {860EB399-0ED7-4a6d-B584-05ED4FF6A3D6}
+      - "Association «IN» → ptja_extra_data_for_travel_information"  # {467EC3AB-5F54-476a-BB88-C4ABC6D4B6C6} → {DBCA4AC3-660D-4602-88A4-54E3B69288BF}
+      - "Association «IN» → ptja_full_trip_description_with_bookings"  # {E4A84A0E-49DC-42e1-BD9D-8ADD321B02F1} → {06660E45-561A-4818-B917-5029C68AFBA8}
+      - "Association «IN» → ptja_request_applicable_GTP_parameters"  # {F0945E48-017A-4fe1-B9A2-163FEE01596C} → {C35CFF92-D6E2-437e-87B1-0BD80AC5BD25}
+      - "Association «IN» → ptja_request_trip_planning_payment"  # {E7623F00-C89A-4820-AD7C-01832A202848} → {3D40CBD7-9791-4285-980A-F38EE870290F}
+      - "Association «IN» → ptja_revised_trip_plan_for_approval"  # {E40417F2-B057-4869-8A48-E76F5509CE57} → {7CD5CE2D-EC53-475f-8CED-518A1A9BA572}
+      - "Association «IN» → ptja_road_information"  # {F0A0C891-C651-43b5-BB23-9BDCD6B795B6} → {051B0368-E564-49b4-8037-8B31F1E25C50}
+      - "Association «IN» → ptja_trip_plan_ready_for_implementation"  # {FC914A48-BD8A-4192-90CA-D7755F5F47C4} → {7F5AB754-6338-454b-B515-0F30BD269E57}
+      - "Association «IN» → ptja_trip_planning_payment"  # {3435EA81-4E02-46db-87B7-77C5AAD866E0} → {1FA0750D-AD96-4e19-A8B2-F027B15C7CD2}
+      - "Association «IN» → tesp.bsp-request_bookable_service_information"  # {1D62BBAA-6B74-4416-961E-8B078B7ABFB6} → {CDC1A42F-65ED-41f4-9950-E22B48EC8DA2}
+      - "Association «IN» → tesp.gip-request_poi_information"  # {9F38133E-06A1-46b9-859E-9762C4C9C6DD} → {B91150F0-9CCF-465e-8284-8289C0B608B9}
+      - "Association «IN» → tesp.gip-request_ps_information"  # {225C437B-9D42-4ff6-A443-5AC6F1CC4263} → {50B0D5BA-B772-463f-B765-2565F8934CB4}
+      - "Association «IN» → tesp.mmtip-request_travel_information"  # {A04BA306-EB5E-4145-A8A9-DD62BFC5A2EA} → {AD7C8AED-9D63-4bba-95E8-1D848A9F6C4A}
+      - "Association «IN» → tfc-request_payment_for_trip_planning"  # {6B2EF8C0-9436-4227-95DF-088B322AD824} → {AD763C5F-C581-43bc-8BCA-4CC7F1B8C625}
+      - "Association «IN» → tfc-trip_planning_payment_requests"  # {0F97A57B-1929-4f83-862B-0EBEFCA3350D} → {0CC33048-BC64-4e6e-BE48-B28AA6EC4C25}
+      - "Association «IN» → tfc-trip_planning_service_payment_request"  # {03B5F35B-802B-4759-AB9D-F8598D4C8567} → {FF55DF8A-D9B4-4c8e-95A9-D0BD458173A0}
+      - "Association «IN» → to.tio-trip_planning_data_responses"  # {32418A3B-204E-4eea-996B-8EAD6E6E0679} → {7123C890-1EFB-4428-AF97-EEFE09B00B1A}
+      - "Association «IN» → to.tio-trip_planning_outputs"  # {5123066D-1A13-413e-B12E-D4FAC1D00B61} → {F95CA274-B87B-441b-8AAC-A46D603AB38E}
+      - "Association «IN» → tors.ond-traffic_data"  # {4A766FC4-B1C3-4270-A2F9-BFBE525D5B7B} → {F8161422-CC22-4764-AB29-869F6B669D7A}
+      - "Association «IN» → tt.ptt-advanced_payment_needed_by_trip_plan"  # {DACEFF2C-6720-4b0f-8AFD-E5CEF84A7248} → {FF2D8A6A-1615-4df8-AAAB-6A62FA66D3AB}
+      - "Association «IN» → tt.ptt-initial_trip_plan"  # {D94CDEC5-524E-4d04-B6A9-F668628A6A74} → {5E888152-59A0-478e-8E56-C5CFFAD5DC91}
+      - "Association «IN» → tt.ptt-select_trip"  # {301F9FB7-2052-4f95-85F7-EC9408903E76} → {20E8CEA5-7A05-4541-BE15-87AB7C4A29C2}
+      - "Association «IN» → tt.ptt-trip_planning_information"  # {CA070E9E-AC07-4683-8FDD-890D4CF5BE0B} → {9F5971B0-2E71-45dc-A27B-7EFEDBED4C17}
+  - name: "F6.6 Provide Traveller Information"
+    guid: "{DF3C13ED-BE7F-403d-B88A-1E0B0C89E01A}"
+    type: "Activity"
+    stereotype: "FRAME_High_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This High-level Function shall provide facilities that enable information to be provided to Travellers, either at the roadside, or by other means.  Information about traffic conditions shall be provided at the roadside, but other forms of information, e.g. about Points of Interest, shall be available to Travellers through other mechanisms, e.g. a nomadic device.
+    links:
+      - "Aggregation «componentof» → F6. Provide Traveller Journey Assistance"  # {372BDCB2-6201-4ef6-8458-7B6A21747393} → {910E7108-BA0F-478e-BF7A-5197C2E6F477}
+      - "Association «IN» → fesp.g-map_data_for_travel_information"  # {C20C5AE7-B0E8-4822-9190-AFD42174DD6E} → {38DC5897-4C88-4f47-BF1E-7C2F49ECCB80}
+      - "Association «IN» → flds-ptja_location_for_information"  # {D6A86612-483E-470f-8084-05CD246A2C65} → {59754BDE-F64F-4c3c-B292-C1932334CE02}
+      - "Association «IN» → fo.tio-current_travel_information_request"  # {82418028-F5CB-4ead-8F57-6C393E44AD56} → {6E0B8EC5-927E-4e8d-9963-6E1EE21DA7BF}
+      - "Association «IN» → fo.tio-output_travel_information_request"  # {0CBBB8CC-F836-4342-BFF9-3ABA180E5231} → {DEA9BA95-0583-4ad0-BE08-57E5B420EBA9}
+      - "Association «IN» → fo.tio-travel_information_filter_request"  # {C9230077-342D-49d1-947F-AC7664E0AD21} → {21EC9116-527F-4c1e-B6AF-03322DBD2359}
+      - "Association «IN» → fo.tio-travel_information_filter_updates"  # {880A7604-6C5F-498b-BFBE-8733EC13C0F7} → {852B97DA-CA46-4332-BAC0-1E7D67235AAD}
+      - "Association «IN» → ft-traveller_information_request"  # {716AA83E-DB37-4782-9FE3-49D8D5BA611B} → {EA55917C-44C9-4a36-91CE-A933772504DC}
+      - "Association «IN» → ptja_load_travel_information"  # {7C6229FA-B4ED-4766-9401-E619913D4E6F} → {D303770F-7B37-4308-93D5-0F758434DBB2}
+      - "Association «IN» → ptja_output_travel_information"  # {D9C45FDE-AFD9-40c5-A9A9-1A41D98D6A39} → {6CB2AE21-4356-4da5-9414-F921B6E73F75}
+      - "Association «IN» → ptja_request_current_travel_information"  # {5F7ED164-2C06-4410-B2F7-2DBFBB9DEE45} → {1CEAE9B8-5CF5-4978-867E-484B531ABAD1}
+      - "Association «IN» → ptja_request_travel_information"  # {D07792C4-9D75-41fd-A816-08229E6133F0} → {555DDC3D-64F0-4a7d-8A7D-2B7481D858DA}
+      - "Association «IN» → ptja_request_travel_information_filters"  # {16127A24-6569-42b9-B880-0F42A7B26BD1} → {C1CF59B9-2B92-4a9d-BED6-A4B4074855AB}
+      - "Association «IN» → ptja_requested_current_travel_information"  # {D78A8E69-E35A-43ee-A4FF-FC4732FE1985} → {9EC3D05E-9CA2-4736-88DA-FA33E2037071}
+      - "Association «IN» → ptja_requested_travel_information_filters"  # {407010AF-5F3F-4a96-9512-CF984B0F82F8} → {FE2EA7F7-CB22-4ff7-8170-69C91B2E3799}
+      - "Association «IN» → ptja_travel_information_for_output"  # {37768559-E75E-4167-84C2-96BDAE5F87B8} → {BD9C3C78-FB0F-4e56-8173-9F2A541E4546}
+      - "Association «IN» → ptja_travel_information_response"  # {E9306899-ACBD-416c-BE4E-5F9A2A76CE03} → {9A2F31BB-5E93-4cf1-AC4F-3289AE7459E7}
+      - "Association «IN» → ptja_updated_travel_information"  # {601FB5D3-44A0-4fb8-807C-0627E0CA9CF3} → {CE124510-7934-4fa1-9994-B13369BEAAE5}
+      - "Association «IN» → ptja_updated_travel_information_filters"  # {666EB1A2-4426-4e03-A42E-11C3007A440A} → {82A58B4C-5620-4907-9B5A-91F9B9450BFF}
+      - "Association «IN» → to.tio-current_other_travel_data"  # {375C1D49-EF27-49fe-A650-3945FFF307FF} → {472D317D-BF2D-4eff-A558-7A568F3D3DAC}
+      - "Association «IN» → to.tio-current_travel_information"  # {DC8A9754-1D4D-4f31-AE14-41C7FCD8E8F7} → {B11CEB42-EA8A-48ba-BFBA-FD4676B02C84}
+      - "Association «IN» → to.tio-travel_information_filters"  # {CA4747C6-CD3B-40f2-80B8-EE248515F0B3} → {E00A78A0-68A9-4bba-A396-E559EF65BB14}
+      - "Association «IN» → to.tio_travel_information_outputs"  # {4D7DB077-1525-468b-9F0E-31D5CE99F680} → {EA2F9698-5083-45ae-A3A2-5C9777E2B9B5}
+      - "Association «IN» → tt-requested_travel_information"  # {154D8F9C-2DF1-458a-812E-12D052EB5466} → {6E2D7940-04B2-4990-8F8F-AB87A535F818}
+      - "Association «IN» → tt-travel_information"  # {9437EFD6-8A62-4630-B73A-800CAF1E0C08} → {3B865BE0-4565-4392-986B-AC3E465F0382}
+      - "Association «IN» → tt-travel_information_messages"  # {4DD6F892-3742-4204-9C44-8DC50B5B2DE1} → {78093E3B-F90D-4df9-9359-60ACF8B374C5}
+  - name: "F6.6.1 Provide Traveller Information Interface"
+    guid: "{B75EAEB5-F795-4a15-967E-82ACB4FBE1D5}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) A HMI through which the Traveller may obtain information about travel conditions.
+      (2) The ability to provide information for all current modes of travel in the geographic area relevant to the current location of the Traveller, including information about other modes of transport, e.g. heavy rail, air and maritime.
+      (3) The HMI shall enable the Traveller to request output of information and if desired may select criteria for its output.
+      (4) The HMI shall not enable information to be output without a request from the Traveller.
+      (5) The ability to obtain the relevant information from the store of Travel Information Data through its management Function.
+      (6) If the current location of the Traveller is known then the ability to filter the information from the store of Travel Information Data to that which is location specific before output, although the filtering criteria shall be configurable by the Traveller.
+      (7) The HMI shall enable the Traveller to configure the output so that it can be provided against a map background, or in different languages.
+      (8) The HMI shall generate the output in a form that is easy to understand and be suitable for those with disabilities.
+    links:
+      - "Aggregation «componentof» → F6. Provide Traveller Journey Assistance"  # {6D45E4C1-C841-4b83-9964-957AB7E6A6BB} → {910E7108-BA0F-478e-BF7A-5197C2E6F477}
+      - "Aggregation «componentof» → F6.6 Provide Traveller Information"  # {E8327674-5B97-4924-A59A-C5EC750E0E14} → {DF3C13ED-BE7F-403d-B88A-1E0B0C89E01A}
+      - "Association «IN» → ptja_request_travel_information"  # {6DD23D3E-095B-4269-B9EB-AF945E17E38A} → {555DDC3D-64F0-4a7d-8A7D-2B7481D858DA}
+      - "Association «IN» → tt-requested_travel_information"  # {67E4C3C7-FE89-47f4-B21A-50C9E46DCF6A} → {6E2D7940-04B2-4990-8F8F-AB87A535F818}
+  - name: "F6.6.2 Produce Travel Information"
+    guid: "{F838CC43-0D6E-41b4-BBA4-609BDDD519A9}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to produce travel information using inputs it receives from other Functional Areas.
+      (2) The ability to modify the inputs according to filters set by the Travel Information Operator to reflect policy and other factors, so that for example information about certain types of services, travel modes, Personal Services, or Points of Interest are not included in what is sent for output to the Traveller.
+      (3)  When the information is ready, the ability to respond to the Function that manages the store of Travel Information Data for use by the Provide Traveller Information Interface Function when the Traveller requests travel information.
+    links:
+      - "Aggregation «componentof» → F6. Provide Traveller Journey Assistance"  # {E6657741-C137-4af0-BAB2-267CBC2B84EE} → {910E7108-BA0F-478e-BF7A-5197C2E6F477}
+      - "Aggregation «componentof» → F6.6 Provide Traveller Information"  # {5A88D2CF-3631-4979-8C95-9C98A5EEFE29} → {DF3C13ED-BE7F-403d-B88A-1E0B0C89E01A}
+      - "Association «IN» → ptja_requested_travel_information_filters"  # {629ECB29-8A95-4b03-8043-5B1744E4846C} → {FE2EA7F7-CB22-4ff7-8170-69C91B2E3799}
+      - "Association «IN» → ptja_updated_travel_information"  # {E544B303-F83C-41d1-AEB9-52D3F8770419} → {CE124510-7934-4fa1-9994-B13369BEAAE5}
+  - name: "F6.6.3 Output Travel Information"
+    guid: "{DE34B244-80C9-47a9-A085-69FE421F36AF}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to take responsibility for the output of information about road conditions, PT services, conditions of other transport modes, Points of Interest (POI) and Personal Services (PS) to Travellers.
+      (2) The information output to the Traveller shall be provided by the Travel Information Operator through the Manage Traveller Information Data Store Function.
+      (3) The ability to output the information in a form that is easy to understand and be suitable for those with disabilities.
+      (4) The ability to continuously display the particular information that is being output until replaced by other information or the output is cancelled by the Operator.
+    links:
+      - "Aggregation «componentof» → F6. Provide Traveller Journey Assistance"  # {E2CB1FD2-B5C1-4c4f-B9D3-37D212185B25} → {910E7108-BA0F-478e-BF7A-5197C2E6F477}
+      - "Aggregation «componentof» → F6.6 Provide Traveller Information"  # {42DF7FC3-0C89-43ae-AB36-6E76F9B1BDCD} → {DF3C13ED-BE7F-403d-B88A-1E0B0C89E01A}
+      - "Association «IN» → tt-travel_information"  # {554920A0-8C78-4957-9B37-562EF2B14553} → {3B865BE0-4565-4392-986B-AC3E465F0382}
+  - name: "F6.6.4 Manage Travel Information Data Store"
+    guid: "{A237E3C3-342A-4236-83B7-C53E1093C98D}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to take responsibility for maintaining the store of Travel Information Data.
+      (2) The ability to update the store contents with data that is received from the Produce Travel Information Function and the Travel Information Operator through the Provide Travel Information Operator Interface Function.
+      (3) The ability to output travel information to Travellers when a request is received through the Provide Traveller Information Interface Function.
+      (4) The ability to output travel information to the Output Travel Information Function at the request of the Travel Information Operator.
+      (5) The ability to provide data from the store to the Provide Travel Information Operator Interface Function as a result of a request from the Travel Information Operator.
+    links:
+      - "Aggregation «componentof» → F6. Provide Traveller Journey Assistance"  # {5F538B49-6DC3-4a20-BB6F-3F5A201E9304} → {910E7108-BA0F-478e-BF7A-5197C2E6F477}
+      - "Aggregation «componentof» → F6.6 Provide Traveller Information"  # {92939E7B-1AF4-4c84-B4D7-BE39F5AC34A9} → {DF3C13ED-BE7F-403d-B88A-1E0B0C89E01A}
+      - "Association «IN» → ptja_load_travel_information"  # {E71FF0E8-27C3-4f31-A3FA-4F8F703743F7} → {D303770F-7B37-4308-93D5-0F758434DBB2}
+      - "Association «IN» → ptja_requested_current_travel_information"  # {B839CC2E-DB10-4cbf-A8D5-E132EEFEAD3A} → {9EC3D05E-9CA2-4736-88DA-FA33E2037071}
+      - "Association «IN» → ptja_travel_information_for_output"  # {713C190D-646E-4c39-9409-CD1225318F50} → {BD9C3C78-FB0F-4e56-8173-9F2A541E4546}
+      - "Association «IN» → ptja_travel_information_response"  # {0418D3BC-37D3-459f-AFB1-2F4846080D86} → {9A2F31BB-5E93-4cf1-AC4F-3289AE7459E7}
+  - name: "F6.6.5 Provide Travel Information Operator Interface"
+    guid: "{F698E055-B3E6-4782-B7AF-59B974052062}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) A HMI through which the Travel Information Operator can monitor the provision of information to Travellers.
+      (2) The HMI shall enable the Operator to update the information, amend the criteria used to filter the information that is to be provided, to obtain a copy of the current information and to direct that some of the information be directly output to Travellers.
+    links:
+      - "Aggregation «componentof» → F6. Provide Traveller Journey Assistance"  # {C672BACC-F5EF-48c7-ACEA-0CAA2F557DE8} → {910E7108-BA0F-478e-BF7A-5197C2E6F477}
+      - "Aggregation «componentof» → F6.6 Provide Traveller Information"  # {7C2017ED-3371-40b7-9CB1-2A20F1AE76A2} → {DF3C13ED-BE7F-403d-B88A-1E0B0C89E01A}
+      - "Association «IN» → ptja_output_travel_information"  # {025CC2D2-94D9-47b5-9AB2-CF420646C970} → {6CB2AE21-4356-4da5-9414-F921B6E73F75}
+      - "Association «IN» → ptja_request_current_travel_information"  # {E51D8B58-E11F-408a-94D0-0D4E1A200A95} → {1CEAE9B8-5CF5-4978-867E-484B531ABAD1}
+      - "Association «IN» → ptja_request_travel_information_filters"  # {CE3DB87A-96C8-49a0-8D36-29511FB73EBC} → {C1CF59B9-2B92-4a9d-BED6-A4B4074855AB}
+      - "Association «IN» → ptja_updated_travel_information_filters"  # {3B5B56F2-C65D-485f-BA9F-DB198813D6C7} → {82A58B4C-5620-4907-9B5A-91F9B9450BFF}
+      - "Association «IN» → to.tio-current_travel_information"  # {4BDF500A-8A53-4b7c-968E-DEA748D4AE39} → {B11CEB42-EA8A-48ba-BFBA-FD4676B02C84}
+      - "Association «IN» → to.tio-travel_information_filters"  # {DABDDD9B-691B-46e3-8BF5-AA9E834170C0} → {E00A78A0-68A9-4bba-A396-E559EF65BB14}
+  - name: "F6.7 Manage General Trip Preferences"
+    guid: "{2AD1FA74-EBF5-4acd-A621-280B2766DB9B}"
+    type: "Activity"
+    stereotype: "FRAME_High_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This High-level Function shall be responsible for the management of the store of General Trip Preferences (GTP) that the Traveller specifies for use in every trip plan that they create.  It shall enable the Traveller to set up these preferences and for the Travel Information Operator to be able to view them in an anonymous way, i.e. without knowing the identity of any of the Travellers to which they belong.  The Function shall also enable the Traveller to modify their preferences as a result of completing the implementation of a trip plan and for a report about the performance of the trip plan to be automatically provided to the Travel Information Operator.
+    links:
+      - "Aggregation «componentof» → F6. Provide Traveller Journey Assistance"  # {DAFEEBF9-9285-478b-ADCE-4271C5A479EC} → {910E7108-BA0F-478e-BF7A-5197C2E6F477}
+      - "Association «IN» → ft-request_general_trip_preferences"  # {327EC957-92B8-4203-A3B0-CD7B82D5F12B} → {5BD958A3-E860-4fdd-9C33-616864C65A7D}
+      - "Association «IN» → ptja_load_GTP_data"  # {74AD594F-FAD7-4de3-97DB-70F8220892D8} → {7C8E80C5-63E6-4393-840D-AA2862A2AD17}
+      - "Association «IN» → ptja_post_trip_preferences"  # {80A14626-87A6-4852-BADC-373021357AAD} → {738C1041-53EB-4601-B392-391E6D6EA351}
+      - "Association «IN» → ptja_read_GTP_data"  # {C5F8D638-8E4B-48f9-8BA6-EC95CEBB51CA} → {4072B3F5-4D6B-4f01-AE87-1ECA97EFFF83}
+      - "Association «IN» → ptja_request_applicable_GTP_parameters"  # {F02D7C72-B309-4537-BAF4-ECFA96D325CC} → {C35CFF92-D6E2-437e-87B1-0BD80AC5BD25}
+      - "Association «IN» → ptja_request_copy_of_GTP_data"  # {69E73F63-62A9-4310-A935-F6E8C19A17C0} → {E44FFE91-4F1A-4bb8-BDE4-FEFEC1083E92}
+      - "Association «IN» → ptja_request_post_trip_preferences"  # {34C20AAD-3FDC-4732-B3F0-A61AEA2DFC2D} → {B667B94C-D61D-4329-BC09-E48F4AB65EE3}
+      - "Association «IN» → ptja_requested_GTP_data"  # {881C5321-90EB-4d96-8431-AF7E0456D066} → {CEDF1284-44F8-46dc-8C44-BACB54EEBC9E}
+      - "Association «IN» → ptja_requested_applicable_GTP_parameters"  # {B4449FCE-C031-46b6-AA64-62BA25B04149} → {D064ED88-8C8A-47dc-A0F8-440D561EDAD7}
+      - "Association «IN» → ptja_requested_copy_of_GTP_data"  # {7ABEEF20-73D7-4c77-BEE3-D34874A47522} → {A43C79E0-9BDE-42f9-B547-6F9C5D188C30}
+      - "Association «IN» → ptja_trip_evaluation_report_for_output"  # {E53E3541-E7DA-4395-9C70-454EA55322F7} → {E40AAD22-3274-487d-BDEE-6EDDDD3FA87F}
+      - "Association «IN» → to.tio-GTP_responses"  # {E6441D05-AAEB-4799-8A96-93A0DE152285} → {8C281A29-5AC3-411c-AC4B-3A9A6A47EDA4}
+      - "Association «IN» → to.tio-trip_performance_evaluation_report"  # {01D04BC6-F268-45cf-B097-2738EA1EACD9} → {5E3D4562-BD55-460e-AECC-C8C0B7885CCD}
+      - "Association «IN» → tt-output_GTP_data"  # {A2C53051-78CA-4d95-BF3E-F38BAE45268F} → {9478EFED-D991-4754-9900-C4D1727A7C4E}
+      - "Association «IN» → tt-post_trip_preferences_request"  # {F1E7F631-7D11-440f-B2D1-B10D86BE94BB} → {A98B7B64-58D3-4cdc-9633-742AD99D09E4}
+  - name: "F6.7.1 Define Traveller's General Trip Preferences"
+    guid: "{D788A7A9-9F84-42b8-913D-4AB9C1AECFBC}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability for the Traveller to specify a set of factual data to be used as General Trip Preferences (GTP) for use each time they want to plan a trip.
+      (2) There shall be no requirement for the Traveller to do this more than once and the data shall be used as a preparation to full personalisation.
+      (3) Once a planned trip has been completed, the ability to ask the Traveller for any comments on the performance of the trip and any changes that are needed to the GTP data.
+      (4) The ability to enable the Traveller to receive an output of their current GTP data and to amend that data, even if this is not the result of the performance of a planned trip.
+      (5) All input from and outputs to the Traveller must be protected against unauthorised access and privacy must be assured in accordance with any data protection laws operating in the area where this functionality is implemented.
+    links:
+      - "Aggregation «componentof» → F6. Provide Traveller Journey Assistance"  # {790C6C36-5E33-4cf7-9DBA-C9C85EFEAE15} → {910E7108-BA0F-478e-BF7A-5197C2E6F477}
+      - "Aggregation «componentof» → F6.7 Manage General Trip Preferences"  # {1AB8F133-F0BD-4799-A436-470D829EF504} → {2AD1FA74-EBF5-4acd-A621-280B2766DB9B}
+      - "Association «IN» → ptja_GTP_data"  # {92D4BFF1-3365-4624-B995-7DFF404D59AD} → {6FC37FAB-6B73-403d-960A-B6060C7B9EBC}
+      - "Association «IN» → ptja_GTP_update"  # {FF8F14D8-D44A-445f-B354-5C587FE7AAB2} → {FEE8D1CA-668C-4886-BDC2-22B13D71B065}
+      - "Association «IN» → ptja_post_trip_preferences"  # {4A9C29E5-89D3-4a4c-AF11-C92407D4C6E5} → {738C1041-53EB-4601-B392-391E6D6EA351}
+      - "Association «IN» → tt-output_GTP_data"  # {ABB9269B-6475-45ce-B11B-7E31E147B9BF} → {9478EFED-D991-4754-9900-C4D1727A7C4E}
+      - "Association «IN» → tt-post_trip_preferences_request"  # {0C591F5B-E3EC-4b78-A6E2-C01572DC16F6} → {A98B7B64-58D3-4cdc-9633-742AD99D09E4}
+  - name: "F6.7.2 Evaluate Trip After Completion"
+    guid: "{160BF34B-D137-4f2e-B422-009D9FF501A7}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to evaluate the success of the trip plan implementation.
+      (2) The evaluation shall be based on data provided by the Support Trip functionality and optional input from the Traveller collected after the trip has been completed.
+      (3) The ability to collect any required input as comments on the trip and on the support given using the Define Traveller's General Trip Preferences functionality.
+      (4) The ability to send the results of the analysis of the trip performance for output to the Travel Information Operator through the Enable Operator Access to General Trip Preferences functionality.
+    links:
+      - "Aggregation «componentof» → F6. Provide Traveller Journey Assistance"  # {ED1D7B13-5F92-4974-B6AC-DFA005AE2526} → {910E7108-BA0F-478e-BF7A-5197C2E6F477}
+      - "Aggregation «componentof» → F6.7 Manage General Trip Preferences"  # {9FDF794C-42E8-4910-98F5-661611E560DF} → {2AD1FA74-EBF5-4acd-A621-280B2766DB9B}
+      - "Association «IN» → ptja_request_post_trip_preferences"  # {A4906DEA-A304-4c59-A270-EB0533DD54D9} → {B667B94C-D61D-4329-BC09-E48F4AB65EE3}
+      - "Association «IN» → ptja_trip_evaluation_report_for_output"  # {08868619-153C-44c3-BBC7-938600AA67A8} → {E40AAD22-3274-487d-BDEE-6EDDDD3FA87F}
+  - name: "F6.7.3 Enable Operator Access to Trip Information"
+    guid: "{77B43759-6BFD-4938-B31C-B06E9FB5A407}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) A HMI that enables the Travel Information Operator to have access to the contents of the General Trip Preferences (GTP) Data Store.
+      (2) The HMI shall enable the Travel Information Operator to output reports on the performance of planned trips.
+      (3) The reports shall be produced so that the GTP data that contain will be anonymized in accordance with any data protection laws operating in the area where this functionality is implemented, e.g. the European GDPR regulations.
+    links:
+      - "Aggregation «componentof» → F6. Provide Traveller Journey Assistance"  # {8A3FF4D0-B53D-48a6-B88D-0ED55776F8EE} → {910E7108-BA0F-478e-BF7A-5197C2E6F477}
+      - "Aggregation «componentof» → F6.7 Manage General Trip Preferences"  # {8DE32EBC-F1AA-4699-96A8-6CB164A72B5C} → {2AD1FA74-EBF5-4acd-A621-280B2766DB9B}
+      - "Association «IN» → ptja_request_copy_of_GTP_data"  # {276D9E18-8E88-4a50-BA05-045C05ACC1BF} → {E44FFE91-4F1A-4bb8-BDE4-FEFEC1083E92}
+      - "Association «IN» → to.tio-GTP_responses"  # {D03D7D0C-3A3A-41f7-83EE-1F30EF04F024} → {8C281A29-5AC3-411c-AC4B-3A9A6A47EDA4}
+      - "Association «IN» → to.tio-trip_performance_evaluation_report"  # {9B923954-95F9-4925-80E0-5AF1FE2DDC21} → {5E3D4562-BD55-460e-AECC-C8C0B7885CCD}
+  - name: "F6.7.4 Manage General Trip Preferences Storage"
+    guid: "{3A5E1BBC-F5A0-4565-B80B-9BE41575CAD5}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to manage the store of General Trip Preferences (GTP) Data.
+      (2) The data in this store shall be available for Travellers to use for every trip that they plan.
+      (3) The ability to keep the preferences for each Traveller separate and only allow the data for each Traveller to be entered, accessed and updated by the Traveller that owns it.
+      (4) The ability to respond to any request from the Travel Information Operator for a copy of the data in the store of General Trip Preferences (GTP) Data with all of it, but with the identity of each Traveller and other personal data (e.g. payment details, contact information) removed in order to comply with the relevant EU Data Protection directives.
+    links:
+      - "Aggregation «componentof» → F6. Provide Traveller Journey Assistance"  # {059F09E0-8D57-4f02-8ECB-67BD4291E176} → {910E7108-BA0F-478e-BF7A-5197C2E6F477}
+      - "Aggregation «componentof» → F6.7 Manage General Trip Preferences"  # {F07CC7CF-B542-4d07-8B98-048690F30480} → {2AD1FA74-EBF5-4acd-A621-280B2766DB9B}
+      - "Association «IN» → ptja_load_GTP_data"  # {B41D7051-63D3-4f50-97CF-B6321402B242} → {7C8E80C5-63E6-4393-840D-AA2862A2AD17}
+      - "Association «IN» → ptja_requested_GTP_data"  # {F90B51B8-0C5A-4686-B2C7-999AAB4E99FB} → {CEDF1284-44F8-46dc-8C44-BACB54EEBC9E}
+      - "Association «IN» → ptja_requested_applicable_GTP_parameters"  # {3B362782-B225-4afe-849F-25C72F5BBFB5} → {D064ED88-8C8A-47dc-A0F8-440D561EDAD7}
+      - "Association «IN» → ptja_requested_copy_of_GTP_data"  # {AE5DAAF7-2792-4737-9342-A7E8352D47CA} → {A43C79E0-9BDE-42f9-B547-6F9C5D188C30}
+  - name: "F6.8 Manage Trip Plans"
+    guid: "{9D1C2B60-FD20-4212-9A9D-C9EF0D73D114}"
+    type: "Activity"
+    stereotype: "FRAME_High_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This High-level Function shall provide facilities for the management of the store pf Private Trip Plan Data.  It shall be able to accept data objects provided by the functionality to enable the trip plan created by the Traveller to be stored.  When the Traveller requests that a previously prepared trip plan is implemented, this Function shall ensure that it is correctly provided to the trip plan implementation and monitoring functionality.
+    links:
+      - "Aggregation «componentof» → F6. Provide Traveller Journey Assistance"  # {448ADA25-E958-45de-B9A7-BA1A7BB7815D} → {910E7108-BA0F-478e-BF7A-5197C2E6F477}
+      - "Association «IN» → ptja_load_trip_plan_data"  # {F261F08A-E1DA-40d0-B450-C4CE0F1906AF} → {BC838641-6BBC-4f2e-A750-3323BA894D4B}
+      - "Association «IN» → ptja_read_trip_plan_data"  # {66A30A6F-D3F0-4e56-8C9F-BEF56897B204} → {B4A6029E-BF65-4fa8-B23A-72772FFDCF91}
+      - "Association «IN» → ptja_trip_plan_for_implementation"  # {390FBE8D-BC71-45d1-9716-3824D53A0760} → {AB2375F6-DB51-4276-8A73-FD3EA32709EC}
+      - "Association «IN» → ptja_trip_plan_for_monitoring"  # {990AA346-07CB-40f7-BDE0-937A1B36B9EE} → {EADA48BB-DC54-4ddf-B52D-4EB01A7AB80E}
+      - "Association «IN» → to.tio-trip_plan_management_report"  # {E7725572-9FC7-499f-B863-FC9B81FC97CB} → {64DF7F48-0949-457c-A3AB-877E32A2345B}
+  - name: "F6.8.1 Manage Store of Trip Plan Data"
+    guid: "{D86ACD6E-DD67-474b-9A7E-07B97B575CA3}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to manage the store of Private Trip Plan Data.
+      (2) The store shall contain descriptions of all of the trip plans produced by each Traveller.
+      (3) The ability to update the store contents whenever a Traveller prepares and finally accepts a new trip plan.
+      (4) The ability to retrieve a prepared trip plan whenever the Traveller decides to implement a trip.
+      (5) When a trip plan is retrieved for implementation, or updated, its description shall be sent to the Implement Trip Plan and Track Traveller Function and to the Monitor Trip Plan Implementation for Traveller Function.
+    links:
+      - "Aggregation «componentof» → F6. Provide Traveller Journey Assistance"  # {00637342-82AF-42e1-BE7A-00B47E0F25B2} → {910E7108-BA0F-478e-BF7A-5197C2E6F477}
+      - "Aggregation «componentof» → F6.8 Manage Trip Plans"  # {7505ACD7-A234-4ce1-811A-EA54DEF92A79} → {9D1C2B60-FD20-4212-9A9D-C9EF0D73D114}
+      - "Association «IN» → ptja_load_trip_plan_data"  # {947BD44A-9159-4ea4-A221-7FFA89BA8155} → {BC838641-6BBC-4f2e-A750-3323BA894D4B}
+      - "Association «IN» → ptja_trip_plan_data_output"  # {06A2029C-9487-4054-A325-335852D58709} → {DF63CD75-8773-4b5c-B102-9B8648D7FF4E}
+      - "Association «IN» → ptja_trip_plan_for_implementation"  # {29921547-C2C9-43d1-B33A-AA715A91536D} → {AB2375F6-DB51-4276-8A73-FD3EA32709EC}
+      - "Association «IN» → ptja_trip_plan_for_monitoring"  # {E345A2CE-B114-4a38-8ABD-59AEFEB09DBD} → {EADA48BB-DC54-4ddf-B52D-4EB01A7AB80E}
+  - name: "F6.8.2 Provide Trip Plan Management Operator Interface"
+    guid: "{7BC115F3-CCC9-4428-B99C-97C7D2DFF329}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 0
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) A HMI for the Travel Information Operator.
+      (2) The HMI shall enable the Operator to collect data from the store of Private Trip Plan Data about the content of the trip plans that are being produced.
+      (3) The HMI shall have the ability to format and present the collected data to the Operator as a management report, with the identities and other personal details about the Travellers removed.
+    links:
+      - "Aggregation «componentof» → F6. Provide Traveller Journey Assistance"  # {6D0FB28E-2F0D-4b0b-A5CD-A00C8DD898A8} → {910E7108-BA0F-478e-BF7A-5197C2E6F477}
+      - "Aggregation «componentof» → F6.8 Manage Trip Plans"  # {D8BCB37A-1638-4839-8303-3E5F57F66812} → {9D1C2B60-FD20-4212-9A9D-C9EF0D73D114}
+      - "Association «IN» → ptja_trip_plan_data_request"  # {409AB3B4-BE59-4bfc-BD9A-AE05A213930F} → {864A7790-5A75-428c-9446-386D6DA3487E}
+      - "Association «IN» → to.tio-trip_plan_management_report"  # {4B05F52A-C846-4f9c-A7AC-C60EF31246B0} → {64DF7F48-0949-457c-A3AB-877E32A2345B}
+  - name: "F6.5.3 Trip Planning"
+    guid: "{6F340DB9-BA19-42ef-9A31-CB4E2C70AFAE}"
+    type: "Activity"
+    stereotype: "FRAME_High_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 1
+    note: |
+      This High-level Function shall plan the road based portions of trips.  It shall use up to date information about road network and PT Services, plus changes to weather and traffic conditions. These shall be stored and continue to be used until updated.  If the trip plan is for a Vehicle carrying freight the functionality shall take into account route restrictions due to the size and type freight, e.g. some types of freight cannot use tunnels or pass through residential areas and the need to driver rest stops.  Trip plans for use by the Emergency Services shall be created with a detailed route through the road network with point to point timings in the form of a 'green wave'.  The creation of trip plans for Travellers that only specify cycling and/or walking as permitted transport modes shall use the road network data but can ignore some road traffic incidents because the Travellers will be able to use routes that are not available to road Vehicles such as cars and vans.  Trip plans for Travellers can also include information about personal services (e.g. hotels and restaurants) and points-of-interest (e.g. tourist sites) and can take account of the forecast availability of parking spaces both at the destination and at way points along the route.  The information used to create trip plans will also be provided to High-level Function F6.6 for use in creating travel information that can be accessed by and displayed to Travellers.
+    links:
+      - "Aggregation «componentof» → F6. Provide Traveller Journey Assistance"  # {DF9CCF96-DE64-4328-BAFD-1681E8F02666} → {910E7108-BA0F-478e-BF7A-5197C2E6F477}
+      - "Aggregation «componentof» → F6.5 Prepare Trip Plan"  # {C25DDCEF-3B02-4835-9B48-022C95BE6E94} → {AA1602B6-7456-4fd1-98CC-6CA7DD14285B}
+      - "Association «IN» → fesp.bsp-bookable_service_information"  # {1717B797-B77F-429b-8EA1-0C9AB2330497} → {EE9123A0-6E79-4686-B6D2-0931651A7677}
+      - "Association «IN» → fesp.gip-ps_information"  # {832D8DFA-80DA-4ffd-B2C2-DABCBACC1872} → {19914E0F-1A6C-4231-B7A0-280CCE9C0B20}
+      - "Association «IN» → fo.tio-inter-urban_road_network_data_update"  # {6D1A90BD-0D8E-4d8d-BB34-3BF8E6DDB8B8} → {4A00540A-3BAE-40ee-851C-AFE3171867C4}
+      - "Association «IN» → fo.tio-request_trip_planning_criteria"  # {F3BBA8A4-00C5-4258-8752-2DA2FC228199} → {44CA61F6-0AEF-4e03-9A62-1A3E6B82CFFC}
+      - "Association «IN» → fo.tio-update_trip_planning_criteria"  # {B0863D27-A1C1-4f5e-A5D4-76918E93A09F} → {320E758B-76A8-4930-986A-4ED84A0B51DC}
+      - "Association «IN» → fo.tio-urban_road_network_data_update"  # {EEFCF744-531A-402b-AE7A-B7A62CB151AC} → {C824184D-7257-4782-9B02-611510E48D6C}
+      - "Association «IN» → mt.ptja_inter-urban_recommended_routes"  # {8E5C7D64-9023-41ce-82F3-3456B29D372A} → {8FD72146-447E-4af5-B93C-F7389F66D7D9}
+      - "Association «IN» → mt.ptja_urban_recommended_routes"  # {CF12D604-BF18-41b4-9A5C-26CA6A93FFB2} → {94E960D6-A577-4c3b-93AA-27E1C94BA29A}
+      - "Association «IN» → ptja.pepf_service_contract_info"  # {E0956646-CD1C-4808-A9F6-C419D44BAB50} → {73F7BCA6-896D-4e70-9B40-03957B23C93F}
+      - "Association «IN» → ptja.pscs_green_wave_route"  # {1221A368-B8FE-42f6-A70F-2A61232A918F} → {50C22F9F-BA6E-463a-B991-4F6AB054A848}
+      - "Association «IN» → ptja.psef_emergency_route_plan"  # {F5815D80-6C49-4c5e-AC88-A6E164058CF4} → {FEFD8014-7A1C-45f7-9294-E6C8039BC3FE}
+      - "Association «IN» → ptja.pshvs_vehicle_trip_plan_responses"  # {B60EDBEC-0464-4220-AD92-DBC5ACC33EA9} → {C1C15386-FFCB-43d4-8A17-C0CD316D64CA}
+      - "Association «IN» → ptja_PT_information"  # {5CC544B7-9A06-4242-8F4B-A08BCFE4B01C} → {1759C26C-4D28-4a84-8A8F-2A95C0FD8AF3}
+      - "Association «IN» → ptja_extra_data_for_travel_information"  # {2F0C260B-6CF2-4dad-9432-3408F5D9DB77} → {DBCA4AC3-660D-4602-88A4-54E3B69288BF}
+      - "Association «IN» → ptja_other_mode_data_for_travel_information"  # {97E9D49E-8FB0-4bf7-A496-0197735913E1} → {DDC7EC32-86DC-498f-9BD7-0BECE0C0B678}
+      - "Association «IN» → ptja_poi/ps_data_for_travel_information"  # {68B64609-C3B8-4594-91AD-DB6263A4CCAB} → {7E4C0F15-F65F-43ba-A24B-91D8AA92A59C}
+      - "Association «IN» → ptja_request_trip_planning_criteria"  # {D5CF10FF-70C6-4987-BECD-74D3628D389E} → {1897B176-8E31-44f8-A3AB-5411566FD143}
+      - "Association «IN» → ptja_requested_trip_planning_criteria"  # {44217944-2C19-400a-B1E5-3CA915485A71} → {76F482DF-579E-4add-9D10-065B9E601CD9}
+      - "Association «IN» → ptja_retrieved_PT_data_for_travel_information"  # {0A093B43-B675-4fbc-ADAA-B96BE8B855EB} → {ED149279-1474-41c7-B521-DA5F88BAE09D}
+      - "Association «IN» → ptja_revised_trip_plan_for_approval"  # {7453B4E5-0D29-4173-A1BD-382F8F3E45A2} → {7CD5CE2D-EC53-475f-8CED-518A1A9BA572}
+      - "Association «IN» → ptja_road_data_for_travel_information"  # {2AC7F754-AE56-4c27-9EBD-46F7D41EBAB2} → {86EEA80E-B89B-46c4-8EFD-D4F1FD4CC9ED}
+      - "Association «IN» → ptja_road_information"  # {1FEBC60C-06F2-4b85-93DB-1E03ECFB5764} → {051B0368-E564-49b4-8037-8B31F1E25C50}
+      - "Association «IN» → ptja_toll_data_for_travel_information"  # {37CA66BE-11C1-46ab-B591-FB128EB28C70} → {06152FCD-5B01-4f7a-B600-2DCABBA61DBD}
+      - "Association «IN» → ptja_traveller_trip_description"  # {21657DA6-0C6C-4e50-AF3F-1436C535F346} → {B8492DC8-BC35-478a-B399-B9C4AB80D844}
+      - "Association «IN» → ptja_update_trip_planning_criteria"  # {B12C5BE0-F1E1-483d-BEB0-22463880DDFE} → {8DE40A0A-775B-4566-B60A-F8BB593BCD5A}
+      - "Association «IN» → tesp.bsp-request_bookable_service_information"  # {AA0D48CA-47A8-40b5-90CC-9D9780D4D126} → {CDC1A42F-65ED-41f4-9950-E22B48EC8DA2}
+      - "Association «IN» → tesp.gip-request_poi_information"  # {4262D721-4C0C-43fd-B621-73C7EB399D72} → {B91150F0-9CCF-465e-8284-8289C0B608B9}
+      - "Association «IN» → tesp.gip-request_ps_information"  # {C876DD7F-E6AD-4f7e-A0E3-3590960ACC33} → {50B0D5BA-B772-463f-B765-2565F8934CB4}
+      - "Association «IN» → tesp.mmtip-request_travel_information"  # {0C311D55-1935-4854-B32C-FE0EEC543486} → {AD7C8AED-9D63-4bba-95E8-1D848A9F6C4A}
+      - "Association «IN» → to.tio-output_trip_planning_criteria"  # {CC6A359D-8A64-4c56-9697-56BF78A64C5F} → {EDE75EEC-1BDB-4b2e-86DB-6281C158D74C}
+      - "Association «IN» → to.tio-trip_planning_data_responses"  # {93CDCB03-13D5-41f6-983C-147699BBA50C} → {7123C890-1EFB-4428-AF97-EEFE09B00B1A}
+      - "Association «IN» → to.tio-trip_planning_outputs"  # {613E929C-A30C-41b8-BAD6-05B2C2D52C7C} → {F95CA274-B87B-441b-8AAC-A46D603AB38E}
+      - "Association «IN» → tors.ond-traffic_data"  # {2793D379-99E4-4a66-8FA2-C9BEA790B4BB} → {F8161422-CC22-4764-AB29-869F6B669D7A}
+  - name: "F6.5.3.3 Collect PT Data"
+    guid: "{FB50713A-1AA2-44e1-B553-B1030CE28A07}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 1
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to collect Public Transport travel data for use in the preparation of trip plans for Travellers.
+      (2) The ability to collect the data as it arrives from functionality in the Manage Public Transport Operations Functional Area.
+      (3) The ability to load the data that has been collected into the store of PT Trip Planning Data and to manage all of the data in that store.
+    links:
+      - "Aggregation «componentof» → F6.5.3 Trip Planning"  # {C5536D51-AE5C-47cf-BD34-1CEA487F6C08} → {6F340DB9-BA19-42ef-9A31-CB4E2C70AFAE}
+      - "Association «IN» → ptja_store_PT_trip_planning_data"  # {AA08C796-A9E4-4ccc-9F22-AA4D734A7C82} → {D3F44DBF-5326-4588-8A95-2F21076F262F}
+  - name: "F6.5.3.7 Enable Operator Access to Tip Planning Data"
+    guid: "{3C500E63-6292-4411-A5B8-9BEFF108F7F6}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 1
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) A HMI that enables the Travel Information Operator to have access to the contents of the stores of Road Trip Planning Data and PT Trip Planning Data.
+      (2) The ability for the Operator to review and update the data in the stores including the provision of static data for the urban and inter-urban road networks car parks and service areas, where this is not available from the Manage Traffic Functional Area.
+      (3) The ability for the Operator to obtain reports on the current contents of the stores, including in particular details of any active events or incidents that are affecting Travellers' trip plans.
+    links:
+      - "Aggregation «componentof» → F6.5.3 Trip Planning"  # {18F3ACDE-D633-45b4-A31E-2E222148C8AA} → {6F340DB9-BA19-42ef-9A31-CB4E2C70AFAE}
+      - "Association «IN» → ptja_request_PT_Data_Store_content"  # {227AA710-3FC5-407a-9CD0-5F4FFF409B66} → {2CB0F4AB-605D-4d54-B4E8-F6B837470E78}
+      - "Association «IN» → ptja_request_road_trip_planning_data"  # {CD24DA33-7D08-4321-BFCC-5F3E7B29D26D} → {EDEB95A5-7AFE-4ade-A698-6D5F13679046}
+      - "Association «IN» → ptja_update_PT_trip_planning_data"  # {6DF31910-625C-4137-84CE-128B24F99B25} → {1A253DF8-04CB-412d-A369-F7A5687E9FD9}
+      - "Association «IN» → ptja_update_road_trip_planning_data"  # {06197627-AA1C-4801-9076-B6BE94913905} → {A5456B99-E9FA-4412-9728-5B79AB56A605}
+      - "Association «IN» → to.tio-trip_planning_data_responses"  # {503F645F-9D4F-45e4-801D-8D15428FD41C} → {7123C890-1EFB-4428-AF97-EEFE09B00B1A}
+  - name: "F6.5.3.8 Collect Data About Road Traffic"
+    guid: "{E760E206-1ADE-4073-9B46-B41DE0B93BD0}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 2
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to collect road based travel data for use in the preparation of trip plans for Travellers, as well as for Freight and Emergency Vehicles.
+      (2) The ability to collect the data as it arrives from functionality in the Manage Traffic Functional Area.
+      (3) The ability to load the collected data into the store of Road Trip Planning Data and to manage all of the data in that store.
+    links:
+      - "Aggregation «componentof» → F6.5.3 Trip Planning"  # {F9718010-C28D-454c-A5DD-9DB9AA73BCF5} → {6F340DB9-BA19-42ef-9A31-CB4E2C70AFAE}
+      - "Association «IN» → mffo_load_road_network_data"  # {98ADDF57-6967-488e-87CD-1F14A76EBADA} → {DB72E233-C39D-4000-84E7-21E33E3BB625}
+      - "Association «IN» → ptja_store_road_trip_planning_data"  # {9BF7B784-7C75-44c9-9CAD-937C2E11EE5B} → {C14DDD5D-A570-4448-8C01-8D8107BF7797}
+      - "Association «IN» → tors.ond-traffic_data"  # {B6FCED91-D6E4-42a0-B709-6AD56703B24D} → {F8161422-CC22-4764-AB29-869F6B669D7A}
+  - name: "F6.5.8 Enable Final Approval of Trip Plan"
+    guid: "{C9B427C7-4C4F-4385-A282-F2850E00E673}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 2
+    note: |
+      This Function shall capable of providing the following facilities:
+      
+      (1) The ability to enable the Pre-Trip Traveller to give final approval to the trip plan that has just been prepared.
+      (2) The ability to provide the Pre-Trip Traveller with the trip itinerary encompassing travel modes, schedules, bookings, payments made and further information coming out of the Trip Planning functionality.
+      (3) If so desired by the Pre-Trip Traveller, the ability to include any maps for road trips or route descriptions, as well as safety advice concerning all conditions that are likely to be encountered by following the route that have been produced as part of the trip planning process.
+      (4) The ability for the Pre-Trip Traveller to give final approval to the trip plan after which it will be sent to the Manage Store of Trip Plan Data for implementation when so requested by the Pre-Trip Traveller.
+      (5) The ability for the Pre-Trip Traveller to cancel the trip at this stage, in which case a "cancel bookings" command shall be sent to the Make Bookings and Payments for Trip Function and the trip planning process will be implemented again from the beginning.
+  - name: "F6.5.9 Make Trip Bookings and Payments"
+    guid: "{B6BC0B65-1756-480e-82A4-9208F43777FE}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 3
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to make any bookings for services that are needed as part of a trip, or to make payment for the use of the actual trip planning service itself.
+      (2) For bookings of services that are needed as part of a trip, the ability to select the best choice of services to be booked based on what they provide and the price to be paid, i.e. obtain the best value for money.
+      (3) If the best choice cannot be used, the ability to suggest possible alternatives to the Traveller by sending their details to the Provide Traveller Trip Planning interface.
+      (4) The ability to initiate any necessary payment action by sending the details to the Financial Clearinghouse for processing and waiting for receipt of confirmation that payment has successfully been made.
+      (5) The ability to cancel all of the bookings made for a previous trip and send a confirmation message to the Provide Traveller Trip Planning interface when a "cancel bookings" request is received.
+    links:
+      - "Aggregation «componentof» → F6. Provide Traveller Journey Assistance"  # {16FD4351-7CD1-4292-9C21-918409493600} → {910E7108-BA0F-478e-BF7A-5197C2E6F477}
+      - "Aggregation «componentof» → F6.5 Prepare Trip Plan"  # {57CDEC57-0353-4af2-8D68-7744566D604F} → {AA1602B6-7456-4fd1-98CC-6CA7DD14285B}
+      - "Association «IN» → ptja_advanced_payment_needed"  # {30566897-8623-4863-BA27-EB38E567795B} → {EA003A97-2DF2-4e67-9869-BEA0C63F14E8}
+      - "Association «IN» → ptja_booking_mishap"  # {51C42410-B094-4ce6-AC28-41D78E75621C} → {F6F0A375-8162-4b51-BB13-8BE5F5F21A39}
+      - "Association «IN» → ptja_full_trip_description_with_bookings"  # {B0113099-CAAA-41e5-9696-EDED3ACB76C7} → {06660E45-561A-4818-B917-5029C68AFBA8}
+      - "Association «IN» → ptja_request_trip_planning_payment"  # {48F090D7-7664-4e31-9F76-6849AD10A6E7} → {3D40CBD7-9791-4285-980A-F38EE870290F}
+      - "Association «IN» → tfc-request_payment_for_trip_planning"  # {712E92CB-B1DD-4120-9802-0B9E4A02D324} → {AD763C5F-C581-43bc-8BCA-4CC7F1B8C625}
+      - "Association «IN» → tfc-trip_planning_service_payment_request"  # {374EC5B4-84B5-44bb-B103-5AD4B216AB39} → {FF55DF8A-D9B4-4c8e-95A9-D0BD458173A0}
+  - name: "F6.5.10 Provide Traveller Trip Planning Interface"
+    guid: "{A73D8E6A-B8FD-4acc-AD2F-E6A619A7DEF3}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 4
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) A HMI through which the Traveller can initiate and manage the trip planning process.
+      (2) Using the HMI, the ability of the Traveller to define the parameters that are to be used to plan a trip, including origin, destination, places to be visited during the trip before the destination is reached (way points, transport modes to be used, departure time, arrival time, services to be booked, and whatever else is deemed interesting for trip satisfaction.
+      (3) The ability for the Traveller to use the HMI to request that these parameters are entered into the store of General Trip Preferences Data or to use data in this store to supplement that being provided for a particular trip.
+      (4) When complete, the ability to send the requirements to the Trip Planning functionality so that the trip plan can be prepared.
+      (5) The ability to use the HMI to present the prepared trip plan to the Traveller and for the Traveller to be able to refine any of the requirements and re-plan the trip until it fulfils their needs in an iterative way.
+      (6) The ability to store successive trip plans internally so that they can be re-called by the Traveller if later versions turn out to be unsatisfactory.
+      (7)  Once a trip plan has been accepted by the Traveller, the Function shall send the details to the Function responsible for producing the travel itinerary or to the Function responsible for making any bookings that are included in the trip plan and/or paying for the trip planning process.
+      (8) The ability for the Traveller to use the HMI to reject a trip plan and close the trip planning activity at any time and to delete any requirements that have been provided.
+      (9) The ability for the Traveller to be informed through the HMI about any payments that are needed, either for the trip planning process itself, or for services that the Traveller has specified for inclusion in the trip.
+      (10) It shall be possible for the Traveller to be asked to pay for the trip planning process either before it starts, or once a successful trip plan has been produced.
+      (11) The ability of the Traveller to use the HMI to initiate payment for the trip planning service and/or any services that are required as part of the trip, and to be informed of the success or failure of the payment process.
+      (12) If the payment process fails, the ability to cancel the trip(s) that have been planned and to inform the Traveller of this through the HMI.
+    links:
+      - "Aggregation «componentof» → F6. Provide Traveller Journey Assistance"  # {E7614237-5B45-4179-A934-747461E574FF} → {910E7108-BA0F-478e-BF7A-5197C2E6F477}
+      - "Aggregation «componentof» → F6.5 Prepare Trip Plan"  # {59E83025-B35D-4a1f-8303-BF7CB79F28B5} → {AA1602B6-7456-4fd1-98CC-6CA7DD14285B}
+      - "Association «IN» → ptja_booking_approved"  # {3B677C35-8EDC-43ee-80BC-D921E0878126} → {85DC359E-7AA6-430d-90FE-BB6B33DAD828}
+      - "Association «IN» → ptja_cancel_bookings_for_trip"  # {47C5784F-7FA0-4d7e-A35B-4549641CDD03} → {860EB399-0ED7-4a6d-B584-05ED4FF6A3D6}
+      - "Association «IN» → ptja_full_trip_description_for_bookings"  # {8AF1A2E2-39A6-4eb9-A331-8B5F417BBDD4} → {4515F101-5CBF-4b56-A621-AC5B96A00550}
+      - "Association «IN» → ptja_modified_trip_plan_requirements"  # {50DA0B7B-15C8-4c8f-A9A2-B9D5B72450EC} → {529E21DB-340B-4190-B1A3-B6E3D01EBADB}
+      - "Association «IN» → ptja_request_applicable_GTP_parameters"  # {82F34249-9DDE-4f0a-AF77-5ED637C1F4D9} → {C35CFF92-D6E2-437e-87B1-0BD80AC5BD25}
+      - "Association «IN» → ptja_traveller_trip_requirement"  # {1730F8F7-0A4C-416a-945A-6CB6285BE2FE} → {70FAB187-A208-4e80-ABC3-513B023D2D8A}
+      - "Association «IN» → ptja_trip_plan_ready_for_implementation"  # {86184FC9-C5FA-4eef-9711-885A43039A32} → {7F5AB754-6338-454b-B515-0F30BD269E57}
+      - "Association «IN» → ptja_trip_planning_payment"  # {E6381414-8BF3-4f99-A326-6F05E7E46260} → {1FA0750D-AD96-4e19-A8B2-F027B15C7CD2}
+      - "Association «IN» → tt.ptt-advanced_payment_needed_by_trip_plan"  # {7EE100D5-8DFF-48f6-9E21-445609C7F3D2} → {FF2D8A6A-1615-4df8-AAAB-6A62FA66D3AB}
+      - "Association «IN» → tt.ptt-booking_mishap"  # {9FB10E2D-BE1F-42db-96DE-BBFFE7E9A341} → {3E0637A9-C243-4305-8A5E-6C1CF72C890F}
+      - "Association «IN» → tt.ptt-initial_trip_plan"  # {F011710E-C92E-4641-B560-16522782ED76} → {5E888152-59A0-478e-8E56-C5CFFAD5DC91}
+      - "Association «IN» → tt.ptt-itinerary_initial"  # {590C7AE9-6718-468f-AF6A-D85576440BF7} → {E754B826-5936-464f-968E-6E0AD88B67CA}
+      - "Association «IN» → tt.ptt-request_preferences"  # {ED772CB4-A66E-488b-ABAA-1F7788B83256} → {00502FB1-59FF-44c0-85BF-E90F524E582B}
+      - "Association «IN» → tt.ptt-request_trip_planing_payment"  # {7BCFC3BE-37D5-43eb-A295-EB82C420AF0F} → {8D11AB47-EF64-428e-A169-4FD070348043}
+      - "Association «IN» → tt.ptt-select_trip"  # {132FBDB9-C5CD-4bbd-9E73-5A277E8F8561} → {20E8CEA5-7A05-4541-BE15-87AB7C4A29C2}
+      - "Association «IN» → tt.ptt-trip_alternatives"  # {ECEC10A7-81CD-4dea-9BC2-66910C99C676} → {63CFB129-E3BB-415b-8AF2-2FA1D66751FE}
+  - name: "F6.5.3.9 Plan Trip Details"
+    guid: "{2AB906E1-0864-4458-9917-F8388133E990}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 4
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to manage the production of trip plans based on data provided by the Traveller through functionality in other parts of the system.
+      (2) The ability to prepare trip plans for journeys that are either one way,  or for a return trip (including weeks/months ahead), and that take advantage of late opening hours, special facilities etc.
+      (3) The ability to check the criteria provided by the Traveller and obtain information for the specified modes to be used in the requested trip, but taking account of the trip planning criteria that have been set up by the Travel Information Operator.
+      (4) The ability to use data from the store of Road Trip Planning Data and/or the store of PT Trip Planning Data, plus also to collect information about Points of Interest (POI) and Personal Services (PS) from External Service Providers.
+      (5) Where specified by the Traveller the ability to request information about the services provided by other transport modes, tolls plus other charges if they will need to be paid in order to complete the proposed trip, and to pass all of this information on to the Provide Traveller Information functionality.
+      (6) The ability to create trip plans for cyclists and pedestrians using the road network data and related perturbations, but disregarding traffic incident information.
+      (7) The ability to revise a part completed trip plan when a Traveller departs in any way from its contents, or travel conditions change, starting from the current Traveller location and mode of travel.
+      (8) The ability to exchange journey time data for each segment of the road network with its implementation in other devices and to plan trips when the only traffic related data that is available this journey time data.
+    links:
+      - "Aggregation «componentof» → F6.5.3 Trip Planning"  # {2232A970-233D-44e4-BCA5-91789A573ED3} → {6F340DB9-BA19-42ef-9A31-CB4E2C70AFAE}
+      - "Association «IN» → ptja.pepf_service_contract_info"  # {BCAE6CE0-01AE-4822-83A3-B561967367FD} → {73F7BCA6-896D-4e70-9B40-03957B23C93F}
+      - "Association «IN» → ptja.pepf_service_data"  # {BC4520C4-C1A5-4873-94C9-DE573C3AFB8C} → {4B13D842-692B-45d0-AFF0-39CC1C6FE93F}
+      - "Association «IN» → ptja.pshvs_revised_vehicle_trip_plan_for_approval"  # {C5EDFFF7-667B-47d5-A1CE-DB733D98A48D} → {F03F7F1B-1E61-48ce-AD2A-B428179DDF07}
+      - "Association «IN» → ptja.pshvs_vehicle_trip_plan_response"  # {5C6B7662-101E-41bf-99D1-A1BC6164342C} → {3359A706-A0FF-40cb-919A-F0C206BF0C8B}
+      - "Association «IN» → ptja_other_mode_data_for_travel_information"  # {788CA7EA-60E8-4655-9E14-F7D26E994AC3} → {DDC7EC32-86DC-498f-9BD7-0BECE0C0B678}
+      - "Association «IN» → ptja_poi/ps_data_for_travel_information"  # {EDC62238-464C-4a3a-87EB-A5F2206181AF} → {7E4C0F15-F65F-43ba-A24B-91D8AA92A59C}
+      - "Association «IN» → ptja_request_PT_trip_planning_data"  # {9AD3BA63-B8F9-4af0-BED7-71136B4D2B83} → {E700CB22-619B-4bb5-8CBA-1378C2835D54}
+      - "Association «IN» → ptja_requested_trip_planning_criteria"  # {ADA22DFF-F770-465f-B329-3BD3DFD44D39} → {76F482DF-579E-4add-9D10-065B9E601CD9}
+      - "Association «IN» → ptja_revised_trip_plan_for_approval"  # {06BA64D0-3B8E-4dbe-92FF-A151D3AB1D10} → {7CD5CE2D-EC53-475f-8CED-518A1A9BA572}
+      - "Association «IN» → ptja_road_trip_planning_data_request"  # {F13234CE-459D-4d40-9398-DB2B7AD5A73A} → {EFE506AD-55EB-401c-AC31-D594A336AE62}
+      - "Association «IN» → ptja_toll_data_for_travel_information"  # {2CDD1AE8-5799-44f3-A046-9221BC790F48} → {06152FCD-5B01-4f7a-B600-2DCABBA61DBD}
+      - "Association «IN» → ptja_traveller_trip_description"  # {0699C860-3FBC-4285-8FA4-0503EE85665E} → {B8492DC8-BC35-478a-B399-B9C4AB80D844}
+      - "Association «IN» → tesp.bsp-request_bookable_service_information"  # {442EA0B1-F43B-4c7c-BA49-EADD28995B47} → {CDC1A42F-65ED-41f4-9950-E22B48EC8DA2}
+      - "Association «IN» → tesp.gip-request_poi_information"  # {0318B2D1-4D81-4ac9-83D1-935635E9E43F} → {B91150F0-9CCF-465e-8284-8289C0B608B9}
+      - "Association «IN» → tesp.gip-request_ps_information"  # {1B5A2321-5275-4bc5-B662-93686C365CBA} → {50B0D5BA-B772-463f-B765-2565F8934CB4}
+      - "Association «IN» → tesp.mmtip-request_travel_information"  # {F0032161-6588-460a-8BCD-06360A620CE4} → {AD7C8AED-9D63-4bba-95E8-1D848A9F6C4A}
+  - name: "F6.5.3.10 Obtain Data for Traveller Information"
+    guid: "{38B82A58-F629-4b25-A4B9-D3E2D7533399}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 5
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to obtain data for use in the provision of information to Travellers that will be provided by the Traveller Information functionality.
+      (2) The ability to periodically pass to Traveller Information functionality the data that it has obtained from the store of Road Trip Planning Data and the store of PT Trip Planning Data, plus data about Points of Interest (POI) and Personal Services (PS) that it has been provided to it by the Plan Traveller Trip Function.
+    links:
+      - "Aggregation «componentof» → F6.5.3 Trip Planning"  # {9E71F2C0-0B99-49a8-8732-40BB297814C1} → {6F340DB9-BA19-42ef-9A31-CB4E2C70AFAE}
+      - "Association «IN» → ptja_PT_information"  # {C4D11C1C-A051-4028-82F3-459DA46B8BE3} → {1759C26C-4D28-4a84-8A8F-2A95C0FD8AF3}
+      - "Association «IN» → ptja_request_travel_information_road_data"  # {FF8D25C9-1F1C-4585-9DA9-173206726F30} → {BA930E05-831E-43d6-8799-BB583695E3CD}
+      - "Association «IN» → ptja_requested_PT_data_for_travel_information"  # {A9AAB06D-0864-4bc1-B000-17F4970FC80A} → {44CC87C0-98E4-43d6-B078-1CCDF165BD6E}
+      - "Association «IN» → ptja_road_information"  # {43CEF25D-DCE0-44cb-8D32-1D2D52AD3BAF} → {051B0368-E564-49b4-8037-8B31F1E25C50}
+  - name: "F6.5.3.11 Provide Green Wave Routes"
+    guid: "{F3931589-B20B-46e1-811D-EE2F7FDD8E56}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 6
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to produce routes for Emergency Service and Other Vehicles as a result of specific requests.
+      (2) For Emergency Vehicles, the ability to produce routes that enable them to reach the scene of an incident in the shortest possible time.
+      (3) The purposes of the routes for Other Vehicles will be varied but must enable them to get from their current location to the specified destination in the shortest possible time.
+      (4)  Routes for both types of Vehicles shall take account of the current and predicted traffic conditions and the times of the relevant green phases at all the signalised road junctions along the route.
+      (5) Data about the routes shall include the identities of all the junctions and include the required average speed for each segment.
+      (6) In some cases, the route may only contain one signalised road junction, in which case the objective of the route shall be achieved using local priority at the junction.
+    links:
+      - "Aggregation «componentof» → F6.5.3 Trip Planning"  # {BC4320E3-CBC5-4679-8E57-1D49CEE1B663} → {6F340DB9-BA19-42ef-9A31-CB4E2C70AFAE}
+      - "Association «IN» → ptja.pscs_green_wave_route"  # {0C07D002-C4F3-4f12-BB4C-006E572F0222} → {50C22F9F-BA6E-463a-B991-4F6AB054A848}
+      - "Association «IN» → ptja.psef_emergency_route_plan"  # {00970841-FB81-417d-A7EA-A7B77FB11FEA} → {FEFD8014-7A1C-45f7-9294-E6C8039BC3FE}
+      - "Association «IN» → ptja_request_psef_route_planning_data"  # {EE1C5BCB-6A85-430b-B642-3D942AC2D509} → {F619D2BD-58D1-4687-B55C-D3E16A35F3A2}
+  - name: "F6.5.3.12 Provide Trip Planning Operator Interface"
+    guid: "{8984B4EF-3E8D-4ee8-B776-C6DDF843AC80}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 7
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) A HMI through which the Travel Information Operator can set up, view and modify criteria used to prepare and/or modify trip plans requested by Travellers.
+      (2) It shall be possible for these criteria to ensure that all trip plans conform to travel and traffic management policies (if any) for the road network and the appropriate use of the available transport modes.
+      (3) The HMI shall not enable the Operator to have access to the personal data about Travellers or Freight Vehicle Drivers who either have made, or are in the process of creating trip plans, or to be able to identify which Travellers or Freight Vehicle Drivers are currently preparing particular trip plans.
+    links:
+      - "Aggregation «componentof» → F6.5.3 Trip Planning"  # {BA64BFD2-BF3B-49db-ACCE-675AB1AA2394} → {6F340DB9-BA19-42ef-9A31-CB4E2C70AFAE}
+      - "Association «IN» → ptja_request_trip_planning_criteria"  # {1D538386-3237-4f50-8664-DC19CE27C6C6} → {1897B176-8E31-44f8-A3AB-5411566FD143}
+      - "Association «IN» → ptja_update_trip_planning_criteria"  # {1D55491F-4EE0-4b97-A17C-2C9FCBE1998E} → {8DE40A0A-775B-4566-B60A-F8BB593BCD5A}
+      - "Association «IN» → to.tio-output_trip_planning_criteria"  # {049F3A06-A5ED-4198-B12B-05D116FD0DE8} → {EDE75EEC-1BDB-4b2e-86DB-6281C158D74C}
+  - name: "F6.5.3.14 Manage PT Trip Planning Data Store"
+    guid: "{01A6DFAE-8061-4e5d-9368-3787625BF06C}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 8
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) Manage the contents of the PT Trip Planning Data Store.
+      (2) Enable data objects containing PT trip planning such as routes, schedules and fares that are received to be loaded into the Data Store in a way that does not interfere with the data reading process and fuses it with data objects already in the Store.
+      (3) Enable data objects containing PT trip planning to be retrieved from the Data Store on request in an orderly manner that does not interfere with the data loading process.
+    links:
+      - "Aggregation «componentof» → F6.5.3 Trip Planning"  # {4A22FD84-EE3A-453a-BDE3-C49A3CD9F9D1} → {6F340DB9-BA19-42ef-9A31-CB4E2C70AFAE}
+      - "Association «IN» → ptja_load_PT_trip_planning_data"  # {85C191D7-D79F-4e6e-BA13-5784EC66E907} → {8632E2C9-C974-4673-B774-5518A9A26F4A}
+      - "Association «IN» → ptja_requested_PT_Data_Store_content"  # {367D0C4D-3F89-45e7-A426-1482A479BD36} → {0497F88A-FDCC-4839-827F-213F32D63B78}
+      - "Association «IN» → ptja_retrieved_PT_data_for_travel_information"  # {3FAF431E-4FB6-4700-9A06-347374916DD1} → {ED149279-1474-41c7-B521-DA5F88BAE09D}
+      - "Association «IN» → ptja_retrieved_PT_trip_planning_data"  # {5A13FAA7-2F05-438b-A054-06A17FA79B6E} → {7AD2EC25-8173-49f9-A615-2CD35478566A}
+  - name: "F6.5.3.15 Manage Road Trip Planning Data Store"
+    guid: "{0C965EBF-DEC9-4d2d-862D-B76DCA20C84E}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 9
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) Manage the contents of the Road Trip Planning Data Store.
+      (2) Enable data objects containing road trip planning such as road geometry that are received to be loaded into the Data Store in a way that does not interfere with the data reading process and fuses it with data objects already in the Store.
+      (3) Enable data objects containing road trip planning to be retrieved from the Data Store on request in an orderly manner that does not interfere with the data loading process.
+    links:
+      - "Aggregation «componentof» → F6.5.3 Trip Planning"  # {96479782-2AAD-466e-BF18-A50C359AD0D3} → {6F340DB9-BA19-42ef-9A31-CB4E2C70AFAE}
+      - "Association «IN» → ptja_load_road_trip_planning_data"  # {402C5030-A170-40dc-BD74-5F2128A3D78D} → {0320C890-CD47-4950-A27B-28F5DE679835}
+      - "Association «IN» → ptja_requested_road_trip_planning_data"  # {50593283-308F-45ab-8F0C-F0EB437990B6} → {0733C9A2-2A7B-4ddf-AF1F-B25501F857C4}
+      - "Association «IN» → ptja_retrieve_ffm_route_planning_data"  # {9EFA7A7A-9714-44f3-A1DC-6F2A04973087} → {55C18AC4-6BDB-4021-934D-0D426D98C965}
+      - "Association «IN» → ptja_retrieve_road_situation_data"  # {E3FEC09D-8D2E-43ce-A664-AA48F1042B89} → {F859B30B-A48E-4c09-96C7-58568CB6C533}
+      - "Association «IN» → ptja_retrieved_psef_route_planning_data"  # {7F882D10-ACDC-424e-8DA6-739D90E691C0} → {35BD9486-2581-4508-8961-95244E191BDA}
+      - "Association «IN» → ptja_retrieved_road_trip_planning_data"  # {F0B9DA8C-06AB-4839-B3A2-975C697716AF} → {F7EDB17A-1419-4251-BEA0-1DACF04D2DDE}
+      - "Association «IN» → ptja_road_data_for_travel_information"  # {39C74861-313A-4409-8466-3FFD90459103} → {86EEA80E-B89B-46c4-8EFD-D4F1FD4CC9ED}
+  - name: "F6.5.3.16 Provide Routes to Hazardous Goods Vehicle Drivers"
+    guid: "{9FE32F0A-E479-4800-A3D3-50150B8CE725}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 10
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to provide data objects containing trip plans functionality serving drivers of Vehicles carrying hazardous goods at their request.
+      (2) The ability for the content of the trip plans created for Vehicles carrying hazardous goods to contribute information about trip plans that may be relevant to general trip planning.
+      (3) On request from functionality connected to the drivers of Vehicles carrying hazardous goods the ability to prepare routes using the parameters provided in the request and data from the store of Road Trip Planning Data.
+    links:
+      - "Aggregation «componentof» → F6.5.3 Trip Planning"  # {CB126D57-4E49-4c92-B791-934914A3158B} → {6F340DB9-BA19-42ef-9A31-CB4E2C70AFAE}
+      - "Association «IN» → ptja.pscs_hazardous_goods_vehicle_route_response"  # {6A3D9639-F904-4c13-9E12-8708F20A1F6B} → {DC3D8DFB-C2BC-43ad-876B-AA2DF94A8B03}
+      - "Association «IN» → ptja_store_ffm_and_hazardous_goods_data"  # {A0C9E0A5-BC8B-46e0-9823-F8F8093BF54C} → {3D8F5950-6D50-418e-BD11-561F91E054D7}

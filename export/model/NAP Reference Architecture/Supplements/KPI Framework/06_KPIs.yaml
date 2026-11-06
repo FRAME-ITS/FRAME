@@ -1,0 +1,51 @@
+package: "NAP Reference Architecture/Supplements/KPI Framework/06_KPIs"
+guid: "{63EF43BA-E16E-4dea-9C19-6367676030C5}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "KPI 6.1 Metadata specification"
+    guid: "{808C630F-74B1-46ed-91AF-3A16E94E6616}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      “Metadata Catalogue (CMC)” KPI indicates whether a NAP’s metadata follow the specifications set by the CMC (or not). It gets a value equal to 0 when there is lack of CMC adoption, a value equal to 1 when metadata slightly deviates from CMC’s specifications, and a value equal to 2 when metadata are completely compliant with CMC. It is assumed that a NAP shall have at least partially adopted the CMC for achieving a minimum acceptable level of service.
+      
+      Has the NAP adopted the Coordinated Metadata Catalogue or the mobilityDCAT-AP?
+      
+      0: The NAP did not consider suggestions from the mobilityDCAT-AP,
+      1: The NAP considered suggestions from the mobilityDCAT-AP, but the available metadata deviates – to some extent – from that specification (e.g., NAPs that had partial or full adoption of the EU-EIP specification – the Coordinated Metadata Catalogue)
+      2: Full compliance/adoption with the MobilityDCAT-AP specification
+      
+      Minimum acceptable value for interoperability: 2
+    links:
+      - "Association «fulfilled by» → Metadata Management Module"  # {F8E99E35-DCF8-481e-B350-443A77F4AAD1} → {4C1A7740-ADB9-4654-9703-57AC92DD6D54}
+  - name: "KPI 6.2 Harvesting functionalities"
+    guid: "{3031B4C2-3C66-4139-BC26-B3914F8D3146}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      Link to NAR: Functionality is missing
+      
+      “Harvesting functionalities” KPI aims to assess the potential of a NAP to index datasets of other data portals and platforms and the potential of its datasets to be indexed in other portals or platforms as well (i.e., data harvesting). A value equal to 0 points out the absence of any harvesting functionalities. On the other hand, a value equal to 1 indicates the support of one-way harvesting functionalities, while a value equal to 2 indicates the support of two-way harvesting functionalities. Although this KPI is not associated with the minimum level of service of a NAP, the existence of harvesting functionalities declares an advanced level of service.
+      
+      Does the NAP support harvesting functionalities?
+      
+      0: Absence of harvesting functionalities
+      0: Support of harvesting functionalities
+      Value+1 (for each of the following options): Which kind of support is provided? You can select more options:
+      a. Provision of metadata for harvesting interface of other NAPs (i.e., machine-to-machine readable metadata as Linked Data)
+      b. Existence of harvesting interface for integration (e.g., indexing) of data sets from other portals
+      
+      
+      Minimum acceptable value for interoperability: 1

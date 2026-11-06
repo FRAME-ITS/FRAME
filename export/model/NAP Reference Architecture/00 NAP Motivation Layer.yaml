@@ -1,0 +1,21 @@
+package: "NAP Reference Architecture/00 NAP Motivation Layer"
+guid: "{4C40A73D-B8F9-4e96-BBB3-00352EB54506}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "Link to other Views"
+    guid: "{45D559B7-AE71-4d6c-8390-4097F909D94C}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      This box represents visual grouping of the actors linked from the organizational view.
+  - name: "Link to other views"
+    guid: "{FDBDEE53-E1EB-42ae-AC04-CA3F094E7003}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""

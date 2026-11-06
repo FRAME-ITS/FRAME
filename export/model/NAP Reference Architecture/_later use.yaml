@@ -1,0 +1,29 @@
+package: "NAP Reference Architecture/_later use"
+guid: "{0811E748-F577-4cb3-A60D-F6157B39F3CE}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "Data standards"
+    guid: "{1B302230-1CFA-4cde-9B0E-98FADAD0E79E}"
+    type: "UMLDiagram"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "Data standards"
+    guid: "{57867B55-2B7A-4b36-997A-74748D87D5AA}"
+    type: "UMLDiagram"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "ID verification result"
+    guid: "{E0E881DF-430D-4e3e-9A82-094FCA6B6E53}"
+    type: "DataType"
+    stereotype: "FRAME_Data_Object"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The ID verification result can either be successful, resulting in the NAP user being provided with authorisation credentials, or unsuccessful, resulting in the NAP user request being rejected.

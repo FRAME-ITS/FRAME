@@ -1,0 +1,37 @@
+package: "FRAME Meta Model"
+elements:
+  - name: "Application"
+    guid: "{C47C30AA-F69B-4d65-B6EC-C53724B72EAF}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "Business"
+    guid: "{408801D4-493F-4370-B418-C783476E187D}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "Data"
+    guid: "{E9470000-85FE-42d8-B3F3-4CD10D599FC8}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "External"
+    guid: "{66398EDE-F66D-40d1-BC32-4EACFD5C5E08}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "Motivational"
+    guid: "{77310516-2413-43a8-BDBC-A9F24593A1AD}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""

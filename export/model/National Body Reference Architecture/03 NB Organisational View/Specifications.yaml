@@ -1,0 +1,91 @@
+package: "National Body Reference Architecture/03 NB Organisational View/Specifications"
+guid: "{57522110-54AA-43d6-8F37-AD43F6D68D72}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "Acompanying Documents"
+    guid: "{E658AAFB-2923-41e3-BFA8-0B79A2B57C3D}"
+    type: "DeploymentSpecification"
+    stereotype: "FRAME_Specification"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "Directive (EU) 2023/2661"
+    guid: "{C3C38386-12EB-44c2-8976-75E3D86C7AD2}"
+    type: "DeploymentSpecification"
+    stereotype: "FRAME_Specification"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Directive (EU) 2023/2661 of the European Parliament and of the Council of 22 November 2023 amending Directive 2010/40/EU on the framework for the deployment of Intelligent Transport Systems in the field of road transport and for interfaces with other modes of transport
+      
+      https://eur-lex.europa.eu/legal-content/en/TXT/?uri=CELEX:32023L2661
+    links:
+      - "Usage «Instantiate» → Fulfilling National Body activities and reliabilities according to ITS directive 2010/EU/40"  # {9BF48855-99EF-4499-871F-AA074F60C4AC} → {01809F43-C4B8-4445-BF4A-91BFA2C95612}
+  - name: "Guidline and Timelines"
+    guid: "{80021436-2426-48b8-924C-F76DC5D338BC}"
+    type: "DeploymentSpecification"
+    stereotype: "FRAME_Specification"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Indication of time line
+      Information time point for stakeholder
+      Dates and Timelines of Delegated Acts
+      Timeframe for Assessment, Reception and answers
+      Time horizon for validity for a self declaration
+      Time horizon for validity for a compliance assessment results
+  - name: "ITS directive 2010/EU/40"
+    guid: "{838FF400-30C2-465b-A815-907FD87D213B}"
+    type: "DeploymentSpecification"
+    stereotype: "FRAME_Specification"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Directive 2010/40/EU of the European Parliament and of the Council of 7 July 2010 on the framework for the deployment of Intelligent Transport Systems in the field of road transport and for interfaces with other modes of transport Text with EEA relevance
+      
+      https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32010L0040
+    links:
+      - "Usage «Instantiate» → Fulfilling National Body activities and reliabilities according to ITS directive 2010/EU/40"  # {BBA497D6-543F-439b-9F59-7F5B8057135D} → {01809F43-C4B8-4445-BF4A-91BFA2C95612}
+  - name: "Template for EU reporting"
+    guid: "{931FCB16-30EE-46d1-A710-1551EE357C47}"
+    type: "DeploymentSpecification"
+    stereotype: "FRAME_Specification"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "Template for Self Declaration"
+    guid: "{7D17E92C-40B9-4747-8B9D-5D52B942D18F}"
+    type: "DeploymentSpecification"
+    stereotype: "FRAME_Specification"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      NAPCORE developed a harmonized Self Declaration form witch can be found here: https://napcore.eu/material-hub/
+  - name: "Template for compliance Assessment"
+    guid: "{44D1CCEA-5154-46a4-804A-E19E0A79FC2B}"
+    type: "DeploymentSpecification"
+    stereotype: "FRAME_Specification"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      NAPCORE developed a harmonized Accompanaying documents form witch can be found here: https://napcore.eu/material-hub/
+  - name: "Template for national reporting"
+    guid: "{82FF01BC-5818-40e7-A1AC-5BA1B47FA5DF}"
+    type: "DeploymentSpecification"
+    stereotype: "FRAME_Specification"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      https://rupprechtconsultde.sharepoint.com/:w:/r/sites/NAPCOREallpartners/Shared%20Documents/WG5/WG%205.2%20-%20Forms%20%26%20CA%20Processes/WG5.2_Reporting%20process%20and%20templates/NAPCORE_WG5_Reporting%20templates%20to%20MS%26EC_v1.docx?d=w1fd077eb74c246a08034482843931cf6&csf=1&web=1&e=P9Y3fI
+      
+      Need to be approved und published by WG5

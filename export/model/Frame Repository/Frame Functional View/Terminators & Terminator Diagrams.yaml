@@ -1,0 +1,7 @@
+package: "Frame Repository/Frame Functional View/Terminators & Terminator Diagrams"
+guid: "{33B8E251-670A-4e10-B44A-0339FD95B928}"
+alias: ""
+version: "1.0"
+note: |
+  This package contains descriptions of all the Terminators and diagrams showing how some of them are specific instances of others, e.g. the Public Transport Vehicle is a specific instance of the Vehicle.
+elements: []

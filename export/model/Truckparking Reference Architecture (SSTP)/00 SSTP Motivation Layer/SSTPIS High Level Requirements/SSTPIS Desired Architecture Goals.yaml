@@ -1,0 +1,33 @@
+package: "Truckparking Reference Architecture (SSTP)/00 SSTP Motivation Layer/SSTPIS High Level Requirements/SSTPIS Desired Architecture Goals"
+guid: "{5D932F34-8732-469c-AC03-C5C0736DB781}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "to have a reusable and extendible architecture"
+    guid: "{80637236-B55A-47b1-8F8D-9522B7C41A7C}"
+    type: "Artifact"
+    stereotype: "Desired_Architecture_Goals"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      to have a reusable and extendible architecture
+  - name: "to have clear road map for deployment of truck parking information services"
+    guid: "{D421617A-1187-40d3-8473-A8E8F9284ACB}"
+    type: "Artifact"
+    stereotype: "Desired_Architecture_Goals"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      to have clear road map for deployment of truck parking information services
+  - name: "to produce reliable descriptions"
+    guid: "{90D05C77-1810-4797-990A-5631EFD52718}"
+    type: "Artifact"
+    stereotype: "FRAME_Desired_Architecture_Goals"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      to produce reliable system / component / role / agreement descriptions to be used in development / procurement stages

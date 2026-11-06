@@ -1,0 +1,99 @@
+package: "eCall Reference Architecture/02 eCall Functional View/eCall Terminator"
+guid: "{417F8486-E7E9-4969-9590-23F888FDA96F}"
+alias: ""
+version: "1.0"
+note: |
+  As Terminator in eCall are defined:
+  
+  	- Objects or Person who activate an eCall in the vehicle
+  
+  
+  	- Organizations (MNO's) which transfer the MSD to the next relevant PSAP
+  
+  
+  	- Organization, application or person who close an eCall
+elements:
+  - name: "Automatically triggerd eCall"
+    guid: "{0A6CCF7B-02A3-4d11-AAFE-50BCAD221A74}"
+    type: "Actor"
+    stereotype: "Terminator"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Set of sensors who have to be activated to trigger an eCall.
+    links:
+      - "Association → Vehicle"  # {37911BC6-1F13-4602-98A7-63E22C8AB10E} → {9021465A-4479-4fa8-B8DB-3481C001B9C3}
+      - "Association → eCall Onboard Unit"  # {04CEBA63-4E5A-4697-B653-1965F1CDDA08} → {3244E2A9-F15D-4568-9A9D-EBAD4BE0DD8C}
+  - name: "Invehicle unit activate an eCall in the vehicle"
+    guid: "{F797A83B-C7D0-4357-AE44-5506824AF610}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "Mobile Network"
+    guid: "{A0D2C1CB-45DC-4aba-913F-D75B88204146}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "PSAP's"
+    guid: "{7E45ACC3-A978-49ab-8E59-9663BF53E8D3}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "Person who manually triggerd eCall (via Button)"
+    guid: "{D597BCA2-E358-44bd-94EA-AB30C07F72AC}"
+    type: "Actor"
+    stereotype: "Terminator"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association → eCall Onboard Unit"  # {1528D670-8982-41ae-97B9-DB9DD70085D3} → {3244E2A9-F15D-4568-9A9D-EBAD4BE0DD8C}
+  - name: "Termination of eCall"
+    guid: "{90BCF67C-D8CB-456a-81F8-79294F9D33CE}"
+    type: "Actor"
+    stereotype: "Terminator"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      successful transfer of MSD to relevant PSAP interface for fast emergency intervention
+      
+      Unexpected termination of eCall for technical reasons:
+      
+      	- Network connectivity Loss
+      	- Package loss or eCall not recognize (eCall Flag)
+      	- Transmission network delay
+      	- wrong PSAP interface
+    links:
+      - "Association → PSAP eCall Modem Server"  # {39C8DF9F-9A96-4f60-9787-73BB7A3F777A} → {56CFDFDB-8969-43ad-B329-1CA7CD510A4F}
+  - name: "eCall terminated incompletly"
+    guid: "{2B02D05B-1674-4146-BCB0-A3456046E53E}"
+    type: "Actor"
+    stereotype: "Terminator"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      - received MSD incomplete
+      	- not recognized as eCall
+      	- ...
+    links:
+      - "Association → Public Land Mobile Network"  # {AB874839-1189-4b46-A08C-3F9EFF906EF1} → {B5308147-42F5-4b91-817C-2BBAFA39A178}
+  - name: "successful transfer of MSD to relevant PSAP interface for fast emergency intervention"
+    guid: "{4713CCE7-2131-4fbb-8435-94CD3B62C262}"
+    type: "Actor"
+    stereotype: "Terminator"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association → Public Land Mobile Network"  # {F7771FE6-6E77-42e4-9A4F-4685545ED89F} → {B5308147-42F5-4b91-817C-2BBAFA39A178}

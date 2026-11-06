@@ -1,0 +1,27 @@
+package: "National Body Reference Architecture/Supplements"
+guid: "{FA6ABAC4-ECD0-465e-9044-BC4EAD44226A}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "Compliance Assement process states"
+    guid: "{6613CB3D-B2B1-4cef-B5D9-43CBB8A27AB2}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "Non Compliance Process"
+    guid: "{59704189-CB78-4455-AF14-87411286BB13}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "Self Declaration Reception Process"
+    guid: "{321824CC-69DD-4714-800E-7526E7E8CCAC}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""

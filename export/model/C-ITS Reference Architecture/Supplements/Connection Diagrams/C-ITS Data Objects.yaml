@@ -1,0 +1,243 @@
+package: "C-ITS Reference Architecture/Supplements/Connection Diagrams/C-ITS Data Objects"
+guid: "{E54C8D74-9B46-4d04-9023-9FEFF620B113}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "A - la Carte Container - Optional"
+    guid: "{CE96A4E4-251E-471e-AAB4-1E50557E9D0A}"
+    type: "Object"
+    stereotype: "FRAME_Data_Object"
+    keywords: "DENM"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      insert data elements
+  - name: "Application Container (General IVI Container)"
+    guid: "{02BFC7AE-024A-4347-AA59-219020EA9C5A}"
+    type: "Object"
+    stereotype: "FRAME_Data_Object"
+    keywords: "IVI Message"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The Application Container provides the IVI information to be processed by vehicles. This information refers to location information for its spatial validity.
+  - name: "Basic Container"
+    guid: "{8EF708C4-5616-4478-847D-19304529B92D}"
+    type: "Object"
+    stereotype: "FRAME_Data_Object"
+    keywords: "CAM"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      insert example in XML . .
+  - name: "HF Container"
+    guid: "{E769249C-BEAF-433c-8171-6F576BCA5C53}"
+    type: "Object"
+    stereotype: "FRAME_Data_Object"
+    keywords: "CAM"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Consist´s of the Vehicle HF Container
+      
+      or Other Containers
+  - name: "ITS PDU Header"
+    guid: "{0F2090CE-4D50-4d7b-A22F-DB66608D1B99}"
+    type: "Object"
+    stereotype: "FRAME_Data_Object"
+    keywords: "CAM"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Part of the CAM message
+  - name: "ITS PDU Header"
+    guid: "{264937E8-2368-46b1-B32C-18D275CB1271}"
+    type: "Object"
+    stereotype: "FRAME_Data_Object"
+    keywords: "DENM"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      DENM Message Frame encoded in XML:
+      insert Header . . .
+  - name: "ITS PDU Header"
+    guid: "{A0AAE980-B58E-464f-B776-CBD4EA8984AB}"
+    type: "Object"
+    stereotype: "FRAME_Data_Object"
+    keywords: "CAM"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "auditing": ""
+      "categoryValue": ""
+      "dataInOut": "None"
+      "dataObjectRef": ""
+      "dataState": ""
+      "documentation": ""
+      "isCollection": "false"
+      "itemSubjectRef": ""
+      "monitoring": ""
+      "structure": ""
+      "structureRef": ""
+    note: |
+      First part of the CAm message,
+      
+      insert XML . . .example
+  - name: "ITS PDU Header"
+    guid: "{A9535EC6-0E64-4da1-90A4-1DD40C4347E2}"
+    type: "Object"
+    stereotype: "FRAME_Data_Object"
+    keywords: "SPAT/ MAP"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      This is the first header of the messages and then follows the SPAT content.
+  - name: "IVI Management Container"
+    guid: "{BA46FAE1-39A1-417a-83DD-1829CC2CB34C}"
+    type: "Object"
+    stereotype: "FRAME_Data_Object"
+    keywords: "IVI Message"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      It is mandatory and provides the receiving vehicle with enough information to handle the entire IVI message and decide on its further processing
+  - name: "LF Container  - optional"
+    guid: "{78034C39-ADFE-4adc-9E1D-CA2B456110CB}"
+    type: "Object"
+    stereotype: "FRAME_Data_Object"
+    keywords: "CAM "
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Consist´s of the vehicle LF Container
+      
+      or other Containers (not yet defined)
+  - name: "Location Container"
+    guid: "{D76B64C8-A68E-4ff1-B081-12CF567E7B8A}"
+    type: "Object"
+    stereotype: "FRAME_Data_Object"
+    keywords: "IVI Message"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The Location Container describes the essential information for receiving vehicles to understand where and how the information provided in the IVI Application Container applies.
+      
+      This container contains the detection zone and the relevance zone of the traffic sign information.
+  - name: "Location Container - Optional"
+    guid: "{36F5B030-8EA5-47e3-BA6C-9FCA83DFC675}"
+    type: "Object"
+    stereotype: "FRAME_Data_Object"
+    keywords: "DENM"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "Management Container"
+    guid: "{944DBCD4-F1F7-41af-99B7-C294E4F0F1CA}"
+    type: "Object"
+    stereotype: "FRAME_Data_Object"
+    keywords: "DENM"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      insert  . . .
+  - name: "Manouver Assist"
+    guid: "{E703C97A-1CE0-42a8-90AB-B16719F85F44}"
+    type: "Object"
+    stereotype: "FRAME_Data_Object"
+    keywords: "SPAT"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "Movement Event"
+    guid: "{7BF06A19-FC7D-4c76-B779-90FA756F1751}"
+    type: "Object"
+    stereotype: "FRAME_Data_Object"
+    keywords: "SPAT"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Indicates the possible movements for a specific time and traffic lane (entry or exit, ingress or egress)
+    links:
+      - "Realisation → Speeds"  # {38480AEF-B573-4f9e-A1BC-C4BD84898B1F} → {6DC68672-304C-44c0-8CD1-1B978068E096}
+      - "Realisation → Timing"  # {2400A259-979C-4af3-B020-90968F95ECBE} → {040EDC7D-B622-47b4-A473-EE10AAC6091A}
+  - name: "SPAT Intersection Contents"
+    guid: "{98CFAFD3-D029-4191-B584-A258AC09FB12}"
+    type: "Object"
+    stereotype: "FRAME_Data_Object"
+    keywords: "SPAT"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Content elements as defined in SAE J2735_201603, Dedicated Short Range Communications (DSRC) Message Set Dictionary, March 2016
+    links:
+      - "Realisation → Signal States"  # {43FFA340-2D88-4f23-A89D-79D90BC57C4C} → {ECC22D92-268A-4818-848E-B7710306840F}
+  - name: "Signal States"
+    guid: "{ECC22D92-268A-4818-848E-B7710306840F}"
+    type: "Object"
+    stereotype: "FRAME_Data_Object"
+    keywords: "SPAT"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Contains the signal states of the interesections signal groups.
+    links:
+      - "Realisation → Manouver Assist"  # {C542F469-7137-4142-A8B3-60F90F64A0C1} → {E703C97A-1CE0-42a8-90AB-B16719F85F44}
+      - "Realisation → Movement Event"  # {63AC4D15-1874-4b02-95CC-C60A78B1BAA0} → {7BF06A19-FC7D-4c76-B779-90FA756F1751}
+  - name: "Situation Container - Optional"
+    guid: "{911320AB-82C4-4d3e-8058-79C018A11AA1}"
+    type: "Object"
+    stereotype: "FRAME_Data_Object"
+    keywords: "DENM"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      insert data elements . .
+  - name: "Special Vehicle Container - optional"
+    guid: "{E51961A3-6627-45ce-9557-C41BF976DC25}"
+    type: "Object"
+    stereotype: "FRAME_Data_Object"
+    keywords: "CAM"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Consist´s of
+      - the Public Transport Container or
+      - Special Transport Container
+  - name: "Speeds"
+    guid: "{6DC68672-304C-44c0-8CD1-1B978068E096}"
+    type: "Object"
+    stereotype: "FRAME_Data_Object"
+    keywords: "SPAT"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "Timing"
+    guid: "{040EDC7D-B622-47b4-A473-EE10AAC6091A}"
+    type: "Object"
+    stereotype: "FRAME_Data_Object"
+    keywords: "SPAT"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""

@@ -1,0 +1,103 @@
+package: "eCall Reference Architecture/03 eCall Organisational View/eCall Stakeholder"
+guid: "{898CEE64-3AED-4beb-8E28-39C195A91BC8}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "Member State"
+    guid: "{F726C13D-F0ED-43f5-8A86-D764CBB69491}"
+    type: "Actor"
+    stereotype: "FRAME_Stakeholder"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      This stakeholder is reliable for the implementation and national enforcement of the delegated regulation and nomination of the organisations to handle eCall properly.
+      
+      Commission Recommendation 2011/750/EU (4) on support for an EU-wide eCall service in electronic communication networks for the transmission of in-vehicle emergency calls based on 112 (‘eCalls’) advises Member States to indicate the eCall PSAP to route eCalls and to ensure that mobile network operators handle eCalls properly.
+      
+      Without prejudice to Directive 95/46/EC, Member States shall take into account, when deploying the eCall PSAPs infrastructure, the ‘Working document on data protection and privacy implications in eCall initiative’ adopted by the Article 29 Working Party on 26 September 2006 (1609/06/EN — WP 125).
+      
+      Member States shall designate the authorities that are competent for assessing the conformity of the operations of the eCall PSAPs with the requirements listed in Article 3 and shall notify them to the Commission. Conformity assessment shall be based on the part of the standard ‘Intelligent transport systems — eSafety — eCall end to end conformance testing’ (EN 16454) that relates to PSAPs conformance to pan-European eCall.
+    links:
+      - "Abstraction → Working document on data protection and privacy implications in eCall initiative"  # {800F5EC2-6A5E-4402-BFA2-52A10830C344} → {BEF04FC0-F222-4887-8DF7-EE4DF627B208}
+      - "Abstraction → common technical solutions and practices for the provision of emergency call service"  # {E6D984D7-F1DE-4b8d-A877-D677515EC8EE} → {CEE4B317-9A0B-4bfb-B8BB-59CD62826F24}
+      - "Abstraction → ensure that personal data are protected against misuse"  # {1DEB9987-2A91-4ca3-9F91-8F4CE10384B7} → {980598AE-9786-4caf-919D-C4859E02A826}
+      - "Abstraction → ensure that personal data are protected against misuse"  # {871277CB-C7EF-457f-B2A3-9F5AF280C13A} → {6DD77BEA-3E65-4aa2-A4AA-07FA3581A921}
+      - "Association «defines» → eCall Vision"  # {3C6D9D7E-1F2D-4b2f-B43F-BB3484258602} → {7EF14ABB-8BB1-457c-AA34-2C2E87E4192A}
+  - name: "Mobile Network Operators"
+    guid: "{05CCCCC2-B6E8-4f4b-9ABB-BA3D1828BFD1}"
+    type: "Actor"
+    stereotype: "FRAME_Stakeholder"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Article 26 of Directive 2002/22/EC of the European Parliament and of the Council of 7 March 2002 on universal service and users’ rights relating to electronic communications networks and services (Universal Service Directive) (2) requires that calls to the single European emergency call number 112 are answered appropriately and handled in a manner that is best suited to the national organisation of emergency systems, including the emergency call response centres (public safety answering points).
+      
+      
+      
+      ‘mobile wireless communications network’ means wireless communications network with homogeneous handover between network access points;
+      
+      ‘public mobile wireless communications network’ means mobile wireless communications network available to the public in accordance with Directive 2002/22/EC and with Directive 2002/21/EC of the European Parliament and of the Council (7);
+    links:
+      - "Abstraction → Termination of eCall"  # {AF95D827-0EF7-401d-97F9-B0FF4889AD02} → {90BCF67C-D8CB-456a-81F8-79294F9D33CE}
+      - "Abstraction → successful transfer of MSD to relevant PSAP interface for fast emergency intervention"  # {0D4DCD49-FCE1-4e32-AFB7-7A965473D206} → {4713CCE7-2131-4fbb-8435-94CD3B62C262}
+      - "Association «defines» → eCall Vision"  # {6137B70B-54AF-44a4-B34E-B912E074B418} → {7EF14ABB-8BB1-457c-AA34-2C2E87E4192A}
+      - "Realisation → Answering eCall appropiately"  # {1A1DC263-9668-44f9-9CFD-89EF253A7522} → {7D545615-3677-45b7-87AF-8AFA11CCC94E}
+      - "Realisation → Fullfillment of ETSI and CEN Standards"  # {A7813F2D-3EBB-48b4-A288-21276DB978D2} → {B2EA89F7-CA6D-478c-9349-74F7E3CF01E1}
+  - name: "PSAP organisation"
+    guid: "{DBADB9C8-A6F4-41da-AB2B-2AC1523AEECC}"
+    type: "Actor"
+    stereotype: "FRAME_Stakeholder"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      public safety answering point’ (PSAP) means a physical location where emergency calls are first received under the responsibility of a public authority or a private organisation recognised by the Member State;
+      
+      
+      ‘most appropriate PSAP’ means a PSAP defined beforehand by responsible authorities to cover emergency calls from a certain area or for emergency calls of a certain type;
+      
+      ‘eCall PSAP’ means a most appropriate PSAP defined beforehand by the authorities to first receive and handle the eCalls;
+      
+      
+      ‘emergency control centre’ means a facility used by one or more emergency services to handle emergency calls;
+    links:
+      - "Abstraction → eCall terminated incompletly"  # {2A03D831-C821-4e73-B0C7-85FC7ED1A2D9} → {2B02D05B-1674-4146-BCB0-A3456046E53E}
+      - "Association «defines» → eCall Vision"  # {92884281-4ADC-496d-B3BB-7BF2FF2BC4E6} → {7EF14ABB-8BB1-457c-AA34-2C2E87E4192A}
+      - "Realisation → Answering eCall appropiately"  # {E09AF531-B2E2-403b-B47B-27A4BE844F92} → {7D545615-3677-45b7-87AF-8AFA11CCC94E}
+      - "Realisation → Establishing Connection"  # {C6CE258C-5888-4301-B0F5-B0823A8C210F} → {AB274972-EFCB-4d03-B4B1-A51C9ADF0BFB}
+      - "Realisation → FRAME_Requirement1"  # {15FE6676-738B-4544-A199-FD7033458856} → {34E84BA9-3CEB-4f27-B293-9A012D848D12}
+      - "Realisation → Fullfillment of ETSI and CEN Standards"  # {5EFC182D-8B33-48b6-A57A-D7F56A92B0B1} → {B2EA89F7-CA6D-478c-9349-74F7E3CF01E1}
+      - "Realisation → Identifing Position"  # {FC787A23-807E-4420-B05B-DE21FBED470C} → {4CCB9798-CF89-467c-BE34-8F0BD6810F7E}
+      - "Realisation → Processing personal Data and protect individuals"  # {1F84D332-4AED-4dbb-B0E5-8C6506E4BACE} → {53B4AA3B-D7CF-486b-B91D-6638D6A5CCBD}
+      - "Realisation → Recieve eCalls"  # {00F0257A-B96D-4ff8-8FDF-E59EB3D5EB58} → {D9B246FB-6731-4d5d-B9E6-D9CE978A10FB}
+      - "Realisation → eCall PSAP is equipped"  # {A55D7971-1399-4b20-9437-F88632A53579} → {9401FA04-5A9B-4462-8A81-BF8796A14B22}
+      - "Realisation → handle eCalls"  # {3F81C02D-AF56-4b28-B2FF-A434AE9C89DE} → {23AE145A-58C5-41aa-A029-060941CFC778}
+  - name: "Traveller"
+    guid: "{F99548B5-0442-4ca8-82CD-3BE31596F247}"
+    type: "Actor"
+    stereotype: "FRAME_Stakeholder"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      e.g. buyer and owner of the vehicle; user of the vehicle with eCall
+    links:
+      - "Abstraction → Automatically triggerd eCall"  # {C5ECEE7C-7DBB-4f01-8F48-B25072680940} → {0A6CCF7B-02A3-4d11-AAFE-50BCAD221A74}
+      - "Abstraction → Person who manually triggerd eCall (via Button)"  # {2A535F20-CB7B-41ba-B663-A0E82034A126} → {D597BCA2-E358-44bd-94EA-AB30C07F72AC}
+      - "Association «defines» → eCall Vision"  # {D98A1BAC-184D-4a29-B27B-3A8AE378BD9C} → {7EF14ABB-8BB1-457c-AA34-2C2E87E4192A}
+  - name: "Vehicle Manufacturior - OEM"
+    guid: "{0762B970-CBFF-4c6b-AFA6-021812C3AB10}"
+    type: "Actor"
+    stereotype: "FRAME_Stakeholder"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Association «defines» → eCall Vision"  # {D20F9DCC-B899-48e3-9192-6CBA464532CF} → {7EF14ABB-8BB1-457c-AA34-2C2E87E4192A}
+      - "Realisation → Fullfillment of ETSI and CEN Standards"  # {678AD6E5-1789-4692-922D-98F0A136A1A8} → {B2EA89F7-CA6D-478c-9349-74F7E3CF01E1}
+      - "Realisation → Vehicles equipped with eCall in-vehicle equipment shall not be traceable in their normal operational status"  # {AE522FA0-D46C-47e3-8BE1-EA74081552E6} → {004FEFE0-5DB4-490c-9236-374D2F3FF51C}
+      - "Usage «Instantiate» → eCall vehicle driver"  # {C682840E-B07F-411c-938F-FA3E9CD85046} → {C55ED064-85A8-4550-A20C-7DD49679AFF5}

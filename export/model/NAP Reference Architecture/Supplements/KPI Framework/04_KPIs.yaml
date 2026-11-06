@@ -1,0 +1,74 @@
+package: "NAP Reference Architecture/Supplements/KPI Framework/04_KPIs"
+guid: "{FA7A1405-B9BD-40ba-9227-CB9A02C71762}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "KPI 4.1 IT services"
+    guid: "{074C6AF9-ECAC-4279-AFF2-82CE9E415FE6}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      “IT services” KPI assesses whether there are established responsibilities for resolving as quickly as possible technical issues that may affect the operation of a NAP (both software- and hardware-related issues are encompassed). A value equal to 1 indicates that there are established agreements for the provision of relevant IT services, while a value equal to 2 indicates that there are also established measures assuring the operational continuity of NAP services that can be financially supported in the long run. It is assumed that a minimum acceptable level of service is associated with the existence of established agreements for the provision of IT services.
+      
+      How is a NAP continuity guaranteed?
+      
+      0: Responsibilities not established for the NAP services (system, software and hardware) maintenance and updates, backups, and hosting
+      1: Common responsibilities established (signed SLA with IT company(s)) for the NAP services (system, software and hardware) maintenance and updates, backups, and hosting
+      2: Measures for the NAP services continuity in the long term and subsequent funding are foreseen
+      
+      Minimum acceptable value for interoperability: 1
+    links:
+      - "Association «fulfilled by» → IT-operation contract (NO to NIT)"  # {9700B0E7-262B-4dca-958F-BA4D41088107} → {A4F1EAAE-9BC4-407b-BD46-63A87F19C315}
+  - name: "KPI 4.2 Content and metadata"
+    guid: "{0C2EEA46-1380-4551-AA7C-0AADCB4E42ED}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      “Content and metadata” KPI assesses the existence of predetermined processes and responsibilities among NAP operators, data suppliers, and data publishers for controlling the quality and maintaining up to date NAP datasets on a regular basis. The difference between the values that the specific KPI may obtain relates to the frequency with which the quality of data and metadata are evaluated.
+      
+      How has the NAP guaranteed that the links are not broken and (meta)data is up-to-date?
+      
+      0: Procedures not established for maintenance of data and metadata on a regular basis or for checking links
+      1: Common responsibilities and procedures for the NAP content and metadata maintenance and updates established on a regular basis between NAP operators, data suppliers and data publishers: Keeping the data up-to date by systematically assessing data quality. For data and metadata resources – at least once a year; checking if links are still functioning (to and from datasets) – at least once every six months
+      2: Common responsibilities and procedures for the NAP content and metadata maintenance and updates established on a regular basis between NAP operators, data suppliers and data publishers: Keeping the data up-to date by systematically assessing data quality. For data and metadata resources – at least every six months; checking if links are still functioning (to and from datasets) – at least once every three months
+      
+      
+      
+      Minimum acceptable value for interoperability: 1
+    links:
+      - "Association «fulfilled by» → Metadata Management Module"  # {08007CC1-4999-4f69-805E-A2D84FEAD63E} → {4C1A7740-ADB9-4654-9703-57AC92DD6D54}
+  - name: "KPI 4.3 Monitoring and evaluation"
+    guid: "{56CF5FF2-7112-4bd3-9E60-B10AE222362F}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      Not connected to NAR
+      
+      “Monitoring and evaluation” KPI assesses whether a NAP has defined procedures for monitoring and evaluating its content. The value of this KPI is increased by 1, when a NAP complies with each one of the following parameters. The first parameter involves the monitoring of the visibility of a NAP web page and the number of subscribers. The second one involves the collection of statistics regarding the visibility and usage of the datasets. The third one involves the measurement of the performance of the system (e.g., downtime, consequences for other systems, etc.), while the final one involves the assessment of the usefulness of a NAP (e.g., qualitative feedback, re-use rating of quality, surveys, etc.). It is assumed that the current KPI is not related to the minimum acceptable level of service of a NAP.
+      Have procedures been established to monitor and evaluate the success and impact of the NAP?
+      
+      0: No
+      0: Yes
+      Value+1 (for each of the following options): Which procedures are established to monitor and evaluate the success and impact of the NAP? You can select more options:
+      a. Counting of the access to the NAP or subscriber
+      b. Collecting statistics on the consumption of datasets (e.g., downloads, page views, re-use)
+      c. Measuring performance of the system (e.g., downtime, consequences for other systems, etc.)
+      d. Measuring usefulness of the NAP (e.g., qualitative feedback, re-use, rating of quality, surveys, etc.)
+      
+      Minimum acceptable value for interoperability: 1

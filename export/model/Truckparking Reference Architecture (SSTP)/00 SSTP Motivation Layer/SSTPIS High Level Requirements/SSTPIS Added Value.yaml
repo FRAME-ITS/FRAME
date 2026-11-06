@@ -1,0 +1,83 @@
+package: "Truckparking Reference Architecture (SSTP)/00 SSTP Motivation Layer/SSTPIS High Level Requirements/SSTPIS Added Value"
+guid: "{49FABD7D-7F15-4a94-AC45-6218211179AF}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "adhering to driving hours"
+    guid: "{95734C41-1D86-4c69-9D64-308616F38E63}"
+    type: "Class"
+    stereotype: "FRAME_ITS_Service_Added_Value"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "ITS Added Value Type": ""
+    note: |
+      increased road safety due to adhering driving hours, drivers fit to drive
+  - name: "better jobs"
+    guid: "{24B99CAF-64AE-4b73-A62C-C27D53B0C5F3}"
+    type: "Class"
+    stereotype: "FRAME_ITS_Service_Added_Value"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "ITS Added Value Type": ""
+    note: |
+      lower job stress for the driver, well rested journeys, safe and secure, according to their job and requirements
+  - name: "better use of current capacity"
+    guid: "{A67DA457-FEF5-4a1a-87C8-9461D8BFB277}"
+    type: "Class"
+    stereotype: "FRAME_ITS_Service_Added_Value"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "ITS Added Value Type": ""
+    note: |
+      increased efficiency of use of current capacity will reduce need for building new rest areas
+  - name: "decrease crime  rates"
+    guid: "{2706207B-8A5D-499d-AD53-AEF1705FA53A}"
+    type: "Class"
+    stereotype: "FRAME_ITS_Service_Added_Value"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "ITS Added Value Type": ""
+    note: |
+      increased safety security, decrease road related crime due to use of correct rest areas
+  - name: "economic value"
+    guid: "{8639A6FC-BEDD-4411-8556-2C98C7210FA3}"
+    type: "Class"
+    stereotype: "FRAME_ITS_Service_Added_Value"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "ITS Added Value Type": ""
+    note: |
+      economic added value to transport company, less traffic fines, less accidents
+  - name: "eliminating faulty parking"
+    guid: "{0438993A-D49A-443f-94A9-DDDCC79E7BAC}"
+    type: "Class"
+    stereotype: "FRAME_ITS_Service_Added_Value"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "ITS Added Value Type": ""
+    note: |
+      increased road safety due to eliminating faulty parking
+  - name: "traffic management"
+    guid: "{8D169706-00F4-4dad-AD44-D170A4D33F59}"
+    type: "Class"
+    stereotype: "FRAME_ITS_Service_Added_Value"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "ITS Added Value Type": ""
+    note: |
+      efficient city / interurban traffic management, less congestion, economic added value

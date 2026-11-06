@@ -1,0 +1,88 @@
+package: "eCall Reference Architecture"
+elements:
+  - name: ""
+    guid: "{432C6FE0-AF11-4677-8BA1-DC29E9744B51}"
+    type: "Text"
+    stereotype: "NavigationCell"
+    alias: "03 eCall Organisational View"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: ""
+    guid: "{5B479357-7581-40f0-B251-DF0DD7F65491}"
+    type: "Text"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Official Document:
+      https://www.etsi.org/deliver/etsi_ts/103400_103499/103428/01.01.01_60/ts_103428v010101p.pdf
+      
+      ECall standard CEN PR 15722
+      https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:32015R0758
+      
+      REGULATION (EU) 2015/758 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 29 April 2015 concerning type-approval requirements for the deployment of the eCall in-vehicle system based on the 112 service and amending Directive 2007/46/EC
+      
+      The suite of eCall standards deliverables (2018)
+      https://www.itsstandards.eu/25-2/wp-5-2/
+  - name: ""
+    guid: "{68E0F83A-398B-4fb8-9DC1-8C6A1ACA1B1B}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: ""
+    guid: "{8EFED456-6971-4e21-A890-07811556DC33}"
+    type: "Text"
+    stereotype: "NavigationCell"
+    alias: "01 eCall User Needs"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: ""
+    guid: "{A938931E-EABF-4f1e-BCAE-186573525157}"
+    type: "Text"
+    stereotype: "NavigationCell"
+    alias: "00 eCall Motivation Layer"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: ""
+    guid: "{D8A3CEA0-BFF8-49c7-85B7-C9BCC4472F7C}"
+    type: "Text"
+    stereotype: "NavigationCell"
+    alias: "04 eCall Physical View"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: ""
+    guid: "{E4E915BE-E00F-40f7-A3C1-A503D311F842}"
+    type: "Text"
+    stereotype: "NavigationCell"
+    alias: "02 eCall Functional View"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: ""
+    guid: "{E854CF7F-4213-46a4-8DC3-FB5B93B1CB23}"
+    type: "Text"
+    stereotype: "NavigationCell"
+    alias: "05 eCall Communication View"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "Text"
+    guid: "{E322035B-BB16-4975-BD94-E16D727446F2}"
+    type: "Text"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      eCall Reference Architecture V1.0 based on DR 2015/758

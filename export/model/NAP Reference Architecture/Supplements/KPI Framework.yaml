@@ -1,0 +1,48 @@
+package: "NAP Reference Architecture/Supplements/KPI Framework"
+guid: "{D8FE367F-943D-4534-9390-BE3D63506234}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: ""
+    guid: "{6487F01B-7965-42bf-8723-0F4FD07289A0}"
+    type: "Text"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The KPI framework V 0.5
+  - name: ""
+    guid: "{9DD7E342-2FB4-4a20-B2EF-867B641E5455}"
+    type: "Text"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Document Link
+  - name: ""
+    guid: "{D22271DF-9051-4990-9963-F155FA643DCF}"
+    type: "Note"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      To assess a NAP LoS based on a framework of Key Performance Indicators (KPIs) related to the offered NAP interoperability features and services. The tool is called “NAP LoS KPI Framework tool” (NLKF) and it is used by NAP operators as a self-assessment survey in periodic (yearly) scoring exercises (starting in spring 2023). NLKF helps NAP harmonization activities such as:
+      
+      	- Supporting the NAP operators with insights on current state and gaps on existing and new potential NAP features, that can be added to its roadmap in order to increase performance to a desired level;
+      	- Supporting supervising bodies of European or national regulations and agreements;
+      	- Creating NAP European benchmark reference based on the minimum, average and other statistic scores of all Member states.
+      
+      NLKF is as bottom-up principle, as a state of practice in Europe going from individual KPIs. NLKF includes both quantitative and qualitative KPIs and differentiates the provided answers when a different platform (2 types) is operated for one or more Delegated Regulations supplementing the ITS Directive (2010/40/EC). The aggregated results for feature categories or for a NAP as a whole are expressed in quantitative manner (Grade of Achievement, GA) or qualitative (Maturity Level, LoS 1 to 5).
+  - name: "NKLF Reference"
+    guid: "{59A6F03D-0C0D-499f-9EA2-C27F5EE60D17}"
+    type: "Note"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Creation Date: 29.07.2024
+      
+      KPI Version: 2024 v0.5
+      
+      Dokument_link: https://rupprechtconsultde.sharepoint.com/:w:/r/sites/NAPCOREallpartners/_layouts/15/Doc.aspx?sourcedoc=%7B7476787F-B2DF-472B-ADC5-5F98B8F5E1AE%7D&file=NLKF%20tables%202024%20v0.2_subset%20KPI%20descritpion.docx&action=default&mobileredirect=true

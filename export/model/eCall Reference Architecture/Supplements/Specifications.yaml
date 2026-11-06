@@ -1,0 +1,82 @@
+package: "eCall Reference Architecture/Supplements/Specifications"
+guid: "{481EF3DA-CF55-42d6-BE90-8EA51FC41784}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "Directive 2002/22/EC"
+    guid: "{797B49FE-3C4A-4d4e-9A6B-625A961980F2}"
+    type: "DeploymentSpecification"
+    stereotype: "FRAME_Specification"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "Directive 2002/58/EC"
+    guid: "{59D553D1-1868-410d-B176-30159D4ADE3A}"
+    type: "DeploymentSpecification"
+    stereotype: "FRAME_Specification"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "Directive 95/46/EC"
+    guid: "{154BD9A2-57AE-4747-886B-D3FBA0FDCC43}"
+    type: "DeploymentSpecification"
+    stereotype: "FRAME_Specification"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "EN 16062"
+    guid: "{A674B408-41A8-4beb-9C17-47A5A5AF37FC}"
+    type: "DeploymentSpecification"
+    stereotype: "FRAME_Specification"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Call High Level Application Requirements (HLAP)
+  - name: "EN 16072"
+    guid: "{1B95C17E-F8C0-45bc-81B0-BF70012D03CB}"
+    type: "DeploymentSpecification"
+    stereotype: "FRAME_Specification"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      eSafety — PanEuropean eCall-Operating requirements
+  - name: "FRAME_Specification1"
+    guid: "{A7637BF3-80BC-4483-99DC-B1B3DF59C196}"
+    type: "DeploymentSpecification"
+    stereotype: "FRAME_Specification"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "VIN"
+    guid: "{9302E488-A9B5-4acf-A71E-0D93A472D46F}"
+    type: "DeploymentSpecification"
+    stereotype: "FRAME_Specification"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      ‘Vehicle Identification Number (VIN)’ means the alphanumeric code assigned to a vehicle by the manufacturer in order to ensure proper identification of every vehicle, as described in ISO standard 3779;
+  - name: "Working document on data protection and privacy implications in eCall initiative’, adopted on 26 September 2006 (1609/06/EN — WP 125)"
+    guid: "{6716A1D7-C6EE-4fad-BB41-41734D79D509}"
+    type: "DeploymentSpecification"
+    stereotype: "FRAME_Specification"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "minimum set of data"
+    guid: "{8188ACBF-5355-4bad-A1BC-D70050F97EDE}"
+    type: "DeploymentSpecification"
+    stereotype: "FRAME_Specification"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      ‘minimum set of data’ (MSD) means the information defined by the standard ‘Road transport and traffic telematics — eSafety — eCall minimum set of data (MSD)’ (EN 15722) which is sent to the eCall PSAP;

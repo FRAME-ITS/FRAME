@@ -1,0 +1,64 @@
+package: "National Body Reference Architecture/00 NB Motivational Layer/Business Expectations"
+guid: "{A5823C66-53E9-4a12-B24C-E7D63763F03E}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "Guideline for a harmonised NB / CA setup"
+    guid: "{BC7D188D-EF51-432d-98F0-DCFFBC7DD15D}"
+    type: "Artifact"
+    stereotype: "FRAME_Business_Expectation"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      A guideline and documentation on how to set up functional and organisational elements which are needed for the NB/CA operating in a harmonized way.
+    links:
+      - "Realisation → National Body Mission_Statement"  # {0386095C-E0FD-483d-8B91-DDB65B0E469B} → {19CCAB3F-C533-4107-9E55-E64EF97E7204}
+  - name: "Guideline for operation of National Bodies"
+    guid: "{5E9DF39C-6000-43d3-9226-88DCD911CCC0}"
+    type: "Artifact"
+    stereotype: "FRAME_Business_Expectation"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      A clear guideline how to act as National Body / Competent Authority in a harmonized EU-wide NB environment.
+    links:
+      - "Realisation → National Body Mission_Statement"  # {EE88339E-7184-4f1c-9A42-26B100A39877} → {19CCAB3F-C533-4107-9E55-E64EF97E7204}
+  - name: "Obligations and Interactions"
+    guid: "{4355144F-8BD4-4b25-94CB-E69C5B98871A}"
+    type: "Artifact"
+    stereotype: "FRAME_Business_Expectation"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The Stakeholders expect information about obligations and deadlines to fulfill the requirements from the delegated acts.
+      They also need the information about possible consequences if not fulfilling the requirements from the delegated acts.
+      Furthermore, the stakeholders expect advice and instructions from the NB/CA in any part of the fulfillment process
+    links:
+      - "Realisation → National Body Mission_Statement"  # {46292DE4-F728-4257-9D2A-8D7F6436D90F} → {19CCAB3F-C533-4107-9E55-E64EF97E7204}
+  - name: "Requirements"
+    guid: "{A25E0F1A-B731-4e92-B10F-C75E52119119}"
+    type: "Artifact"
+    stereotype: "FRAME_Business_Expectation"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The NAP and the NB/CA are in direct relation.
+      The NAP needs to know the requirements for the provision of Data and Metadata. The NB/CA needs to know how to access the descriptions of Data and Metadata.
+    links:
+      - "Realisation → National Body Mission_Statement"  # {7070F885-6331-4380-B72A-E1AED571C741} → {19CCAB3F-C533-4107-9E55-E64EF97E7204}
+  - name: "facilitate a harmonized implementation"
+    guid: "{01EE4DC2-403A-4982-AD07-A61EEB10017F}"
+    type: "Artifact"
+    stereotype: "FRAME_Business_Expectation"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The architecture is an enabler for EU-wide harmonized implementation of National Bodies and Competent Authorities.
+    links:
+      - "Realisation → National Body Mission_Statement"  # {73D89ECE-CF41-4052-975B-3E8414237460} → {19CCAB3F-C533-4107-9E55-E64EF97E7204}

@@ -1,0 +1,125 @@
+package: "eCall Reference Architecture/01 eCall User Needs/eCall Requirements"
+guid: "{1E023F0F-80E0-4c9a-A8F0-68D2A6C7F81E}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "Answering eCall appropiately"
+    guid: "{7D545615-3677-45b7-87AF-8AFA11CCC94E}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      Article 26 of Directive 2002/22/EC of the European Parliament and of the Council of 7 March 2002 on universal service and users’ rights relating to electronic communications networks and services (Universal Service Directive) (2) requires that calls to the single European emergency call number 112 are answered appropriately and handled in a manner that is best suited to the national organisation of emergency systems, including the emergency call response centres (public safety answering points).
+    links:
+      - "Association → Directive 2002/22/EC"  # {F19244CD-92D8-46e9-887A-F0A43AC1BBD3} → {797B49FE-3C4A-4d4e-9A6B-625A961980F2}
+  - name: "Establishing Connection"
+    guid: "{AB274972-EFCB-4d03-B4B1-A51C9ADF0BFB}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      The eCall PSAP (initially receiving the eCall) shall establish audio communication with the vehicle and handle the eCall data; if necessary, the eCall PSAP may reroute the call and MSD data to another PSAP, emergency control centre or service partner according to national procedures determined by the national authority. Rerouting may be done via data or audio connection, or, preferably, both.
+  - name: "FRAME_Requirement1"
+    guid: "{34E84BA9-3CEB-4f27-B293-9A012D848D12}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: ""
+  - name: "Fullfillment of ETSI and CEN Standards"
+    guid: "{B2EA89F7-CA6D-478c-9349-74F7E3CF01E1}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      The European Standardisation Organisations, ETSI and CEN, have developed common standards for the deployment of a pan-European eCall service, which the present Regulation makes the reference to
+  - name: "Identifing Position"
+    guid: "{4CCB9798-CF89-467c-BE34-8F0BD6810F7E}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      The eCall PSAP shall have access to an appropriate Geographical Information System (GIS) or an equivalent system allowing the eCall PSAP operator to identify the position and heading of the vehicle to a minimum degree of accuracy as defined in EN 15722 for the MSD coordinates
+  - name: "Processing personal Data and protect individuals"
+    guid: "{53B4AA3B-D7CF-486b-B91D-6638D6A5CCBD}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      The processing of personal data in the context of the handling of eCalls by the PSAPs, the emergency services and service partners is performed in accordance with Directive 95/46/EC of the European Parliament and of the Council of 24 October 1995 on the protection of individuals with regard to the processing of personal data and on the free movement of such data (5) and Directive 2002/58/EC of the European Parliament and of the Council of 12 July 2002 concerning the processing of personal data and the protection of privacy in the electronic communications sector (Directive on privacy and electronic communications) (6). Member States shall ensure that this compliance is demonstrated, with national data protection authorities, either during a priori control procedures, such as prior notifications or a posteriori checks, such as in the course of complaints and investigations.
+    links:
+      - "Association → Directive 2002/58/EC"  # {8B749B7B-826A-482d-9B5A-DDFA0D8BBE7A} → {59D553D1-1868-410d-B176-30159D4ADE3A}
+      - "Association → Directive 95/46/EC"  # {A086EC76-026A-41c3-A088-6D9EC3FC1AED} → {154BD9A2-57AE-4747-886B-D3FBA0FDCC43}
+  - name: "Recieve eCalls"
+    guid: "{D9B246FB-6731-4d5d-B9E6-D9CE978A10FB}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      The eCall PSAP shall be able to receive the data contents of the MSD and present them to the eCall PSAP operator clearly and understandably.
+  - name: "Vehicles equipped with eCall in-vehicle equipment shall not be traceable in their normal operational status"
+    guid: "{004FEFE0-5DB4-490c-9236-374D2F3FF51C}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      The interoperable EU-wide eCall service follows the recommendations made by the Article 29 Data Protection Working Party and contained in the ‘Working document on data protection and privacy implications in eCall initiative’, adopted on 26 September 2006 (1609/06/EN — WP 125). Vehicles equipped with eCall in-vehicle equipment shall not be traceable in their normal operational status. The minimum set of data sent by the eCall in-vehicle equipment (i.e. when triggered) shall include the minimum information required for the appropriate handling of emergency calls.
+    links:
+      - "Association → Working document on data protection and privacy implications in eCall initiative’, adopted on 26 September 2006 (1609/06/EN — WP 125)"  # {D27997FD-7C03-4c5b-8C08-D6D00234A129} → {6716A1D7-C6EE-4fad-BB41-41734D79D509}
+  - name: "eCall PSAP is equipped"
+    guid: "{9401FA04-5A9B-4462-8A81-BF8796A14B22}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      Member States shall ensure that any eCall PSAP is equipped to handle eCalls and receive the MSD originating from the in-vehicle equipment according to the standards ‘Intelligent transport system — eSafety — PanEuropean eCall-Operating requirements’ (EN 16072) and ‘Intelligent transport systems — eSafety — eCall High Level Application Requirements (HLAP)’ (EN 16062).
+    links:
+      - "Association → EN 16062"  # {B30EDC9F-3247-48e6-BB2E-23F377A0F3F1} → {A674B408-41A8-4beb-9C17-47A5A5AF37FC}
+      - "Association → EN 16072"  # {C64CEEA1-AF8A-491a-8BDB-DAF0C5685930} → {1B95C17E-F8C0-45bc-81B0-BF70012D03CB}
+  - name: "handle eCalls"
+    guid: "{23AE145A-58C5-41aa-A029-060941CFC778}"
+    type: "Requirement"
+    stereotype: "FRAME_Requirement"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Requirement Category": ""
+    note: |
+      The eCall PSAP shall handle eCalls as expeditiously and effectively as any other call made to the single European emergency number 112. The eCall PSAP shall process eCalls in line with the requirements of national regulations for emergency call processing.

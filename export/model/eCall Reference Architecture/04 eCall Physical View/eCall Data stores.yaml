@@ -1,0 +1,34 @@
+package: "eCall Reference Architecture/04 eCall Physical View/eCall Data stores"
+guid: "{4E3FE75C-594A-4eb5-8329-C7CBD69A4AE9}"
+alias: ""
+version: "1.0"
+note: |
+  eCall Data stores defines used data stores add description.
+elements:
+  - name: "Network Operators"
+    guid: "{831A9CEB-598B-4f92-B54C-77015FC8C2D3}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Für NMO umschreiben
+      
+      This Data Store shall be used within the Provide Security and Emergency Facilities Functional Area.  It shall contain information objects that provide details of each Public Service Access Point (PSAP) that is able to respond to eCall messages from Vehicles.
+      
+      Each information object in the store shall contain the following data objects:
+      (1) PSAP name (character string),
+      (2) PSAP identity (number - optional),
+      (3) geographic location of the PSAP (co-ordinates),
+      (4) geographic area from which the PSAP can respond to eCall messages (co-ordinates),
+      (5) type(s) of service available from the PSAP,
+      (6) communication information for the PSAP.
+  - name: "eCall Sessions status"
+    guid: "{1819AB9A-709B-4475-B9AD-9280E89E5A89}"
+    type: "Object"
+    stereotype: "FRAME_Datastore"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
