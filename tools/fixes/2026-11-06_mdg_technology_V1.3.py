@@ -1,7 +1,7 @@
 """Build the corrected FRAME MDG technology V1.3 from the V1.2 embedded in the model.
 
 usage: python tools/fixes/2026-11-06_mdg_technology_V1.3.py [model/FRAME.qea] [out.xml] [changes.md] [--embed model-copy.qea]
-Base: technology V1.2 stored in the model (tools/mdg.py). Changes:
+Base: technology V1.2 as it was stored in the model (drafts/latest/toolbox/FRAME_Technology_V1.2_embedded.xml). Changes:
   1. Quick Linker rules (stereotypedrelationship) that point the opposite way to the model are reversed
      (function hierarchy «component of», user-need hierarchy «belongs to», «associate» Mission Statement – ITS Vision).
      Rules added for patterns the FRAME Repository uses throughout (sub-terminator, HL function in HL function,
@@ -11,6 +11,7 @@ Base: technology V1.2 stored in the model (tools/mdg.py). Changes:
   3. Stereotype names unified (not used by any connector in the model): «Impacts» → «impacts», «deliverd by» → «delivered by».
   4. Model images of the published V1.0 file (start-page images) added, so that a new project gets them too.
   6. Quick Linker shows only the FRAME relationships for the core FRAME Repository stereotypes (_HideUmlLinks).
+  7. Diagram type FRAME_Diagram refers to its toolbox as FRAME::FRAME_Toolbox (opens with the diagram).
   5. Version V1.3 (technology, FRAME_Profile, FRAME_Toolbox, FRAME_Diagram).
 """
 import sys, os, re, sqlite3
@@ -21,7 +22,8 @@ model = argv[1] if len(argv) > 1 else 'model/FRAME.qea'
 out = argv[2] if len(argv) > 2 else 'drafts/latest/toolbox/FRAME_Technology_V1.3.xml'
 rep = argv[3] if len(argv) > 3 else 'drafts/latest/toolbox/FRAME_Technology_V1.3_changes.md'
 V10 = 'drafts/latest/toolbox/FRAME_V1_MTS.xml'
-_, x = technology(model)
+BASE = 'drafts/latest/toolbox/FRAME_Technology_V1.2_embedded.xml'   # V1.2 as it was embedded in the model
+x = open(BASE, encoding='utf-8').read()
 log = []
 P = 'FRAME_Profile::'
 
@@ -120,6 +122,11 @@ for name in CORE:
     prof = prof[:m.start()] + b2 + prof[m.end():]
 log.append('Quick Linker: UML links hidden (_HideUmlLinks) for ' + ', '.join(n[6:] for n in CORE))
 x = x[:s0] + prof + x[s1:]
+
+# 7. FRAME diagrams open the FRAME toolbox: the diagram type needs the qualified toolbox name <technology>::<toolbox profile>
+n = x.count('<Property name="toolbox" value="FRAME_Toolbox"/>')
+x = x.replace('<Property name="toolbox" value="FRAME_Toolbox"/>', '<Property name="toolbox" value="FRAME::FRAME_Toolbox"/>')
+log.append(f'diagram type FRAME_Diagram: toolbox "FRAME_Toolbox" → "FRAME::FRAME_Toolbox" ({n}), so the FRAME toolbox opens with the diagram')
 
 # 4. model images from V1.0
 v10 = open(V10, encoding='cp1252').read()

@@ -16,7 +16,9 @@ What V1.3 changes against V1.2 (details in the changes file):
   «deliverd by» → «delivered by» (neither is used by a connector in the model).
 - For the core FRAME Repository stereotypes (functional area, functions, data flows, terminator, data store, system, user needs)
   the Quick Linker offers only the FRAME relationships (`_HideUmlLinks`); plain UML links can still be drawn from the toolbox.
-  The FRAME relationships appear when the FRAME toolbox is active, which FRAME diagrams (diagram type `FRAME_Diagram`) open automatically.
+  The FRAME relationships appear when the FRAME toolbox is active (Quick Linker option *Filter to Toolbox*). Diagrams of type
+  `FRAME_Diagram` open the FRAME toolbox automatically – the diagram type now refers to it as `FRAME::FRAME_Toolbox`; all FRAME
+  diagrams of the model have this type (`tools/fixes/2026-11-06_diagram_type_FRAME.py`).
 - The start-page images of V1.0 included, so a new project gets them too.
 
 `python tools/mdg.py model/FRAME.qea reports/mdg_technology_V1.3.md --tech drafts/latest/toolbox/FRAME_Technology_V1.3.xml`

@@ -35,4 +35,5 @@ Built by `tools/fixes/2026-11-06_mdg_technology_V1.3.py`.
 - Quick Linker: User_Need – 4 rules merged into 3
 - Quick Linker: TDF_LowLevelFunction – 4 rules merged into 3
 - Quick Linker: UML links hidden (_HideUmlLinks) for Functional_Area, High_Level_Function, Low_Level_Function, High_Level_Data_Flow, Low_Level_Data_Flow, Terminator, Datastore, System, User_Need, User_Need_Topic, User_Need_Service, User_Need_Group
+- diagram type FRAME_Diagram: toolbox "FRAME_Toolbox" → "FRAME::FRAME_Toolbox" (1), so the FRAME toolbox opens with the diagram
 - model images added from V1.0: 7 (start-page images)
