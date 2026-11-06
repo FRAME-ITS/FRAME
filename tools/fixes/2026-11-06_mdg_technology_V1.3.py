@@ -18,6 +18,7 @@ Base: technology V1.2 as it was stored in the model (drafts/latest/toolbox/FRAME
   4. Model images of the published V1.0 file (start-page images) added, so that a new project gets them too.
   6. Quick Linker shows only the FRAME relationships for the core FRAME Repository stereotypes (_HideUmlLinks).
   7. Diagram type FRAME_Diagram refers to its toolbox as FRAME::FRAME_Toolbox (opens with the diagram).
+  8. Toolbox labels Sub-system (FRAME_Component) and Module (FRAME_Application); Actor «performs» Role replaces Role «defines» Actor.
   5. Version V1.3 (technology, FRAME_Profile, FRAME_Toolbox, FRAME_Diagram).
 """
 import sys, os, re, sqlite3
@@ -41,7 +42,7 @@ for old, new in (('Impacts', 'impacts'), ('deliverd by', 'delivered by')):
     log.append(f'stereotype «{old}» renamed «{new}» ({n} occurrences)')
 # 3b. new connector stereotypes (decided 2026-11-06): «delivers value to» (ITS Service Added Value → Stakeholder, was «defines»)
 #     and «triggers» (process → process); defined like «use» (Association, Source -> Destination) and added to the toolbox page
-for st in ('delivers value to', 'triggers', 'implements'):
+for st in ('delivers value to', 'triggers', 'implements', 'performs'):
     if f'<Stereotype name="{st}"' in x: continue
     use = re.search(r'<Stereotype name="use" metatype="use".*?</Stereotype>', x, re.S).group(0)
     x = x.replace(use, use + '\n\t\t\t\t\t' + use.replace('name="use" metatype="use"', f'name="{st}" metatype="{st}"'), 1)
@@ -122,9 +123,12 @@ ADD = [('component of', 'FRAME_Terminator', 'FRAME_Terminator'),            # su
        ('use', 'FRAME_Agreement', 'FRAME_Specification'), ('defines', 'FRAME_Specification', 'FRAME_Agreement'),
        ('implements', 'FRAME_Actor', 'FRAME_Desired_Architecture_Goals'), ('adheres to', 'FRAME_Terminator', 'FRAME_Agreement'),
        # FRAME Meta Model (decided 2026-11-06)
-       ('owned by', 'FRAME_Component', 'FRAME_Role'), ('adheres to', 'FRAME_Data_Object', 'FRAME_Specification')]
+       ('owned by', 'FRAME_Component', 'FRAME_Role'), ('adheres to', 'FRAME_Data_Object', 'FRAME_Specification'),
+       # NRA article (decided 2026-11-06)
+       ('defines', 'FRAME_Business_Expectation', 'FRAME_ITS_Service'), ('owned by', 'FRAME_Application', 'FRAME_Role'),
+       ('performs', 'FRAME_Actor', 'FRAME_Role')]
 # rules replaced by the above
-DROP = [('defines', 'FRAME_ITS_Service_Added_Value', 'FRAME_Stakeholder')]
+DROP = [('defines', 'FRAME_ITS_Service_Added_Value', 'FRAME_Stakeholder'), ('defines', 'FRAME_Role', 'FRAME_Actor')]
 for st, src, tgt in DROP:
     edit_rules(src, st, lambda t: [c for c in t if c != P + tgt])
     log.append(f'Quick Linker removed: «{st}» {src[6:]} → {tgt[6:]}')
@@ -165,6 +169,13 @@ x = x[:s0] + prof + x[s1:]
 n = x.count('<Property name="toolbox" value="FRAME_Toolbox"/>')
 x = x.replace('<Property name="toolbox" value="FRAME_Toolbox"/>', '<Property name="toolbox" value="FRAME::FRAME_Toolbox"/>')
 log.append(f'diagram type FRAME_Diagram: toolbox "FRAME_Toolbox" → "FRAME::FRAME_Toolbox" ({n}), so the FRAME toolbox opens with the diagram')
+
+# 8. toolbox labels as in D4.2 and the documentation: Component → Sub-system, Application → Module (stereotype names unchanged)
+for st, old, new in (('FRAME_Component', 'Component', 'Sub-system'), ('FRAME_Application', 'Application', 'Module')):
+    t = f'<Tag name="FRAME_Profile::{st}(UML::'
+    n = len(re.findall(re.escape(t) + r'[^)]*\)" type="" description="" unit="" values="" default="' + old + '"', x))
+    x = re.sub('(' + re.escape(t) + r'[^)]*\)" type="" description="" unit="" values="" default=")' + old + '"', r'\g<1>' + new + '"', x)
+    log.append(f'toolbox label {st}: "{old}" → "{new}" ({n})')
 
 # 4. model images from V1.0
 v10 = open(V10, encoding='cp1252').read()

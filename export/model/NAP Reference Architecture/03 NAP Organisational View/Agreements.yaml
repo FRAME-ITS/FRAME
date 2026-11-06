@@ -103,7 +103,7 @@ elements:
       
       TODO: give examples of how it is done (link to the document elaborating what has a country done, or link to already prepared documents by NAPCORE elaborating on it)
     links:
-      - "Association «adheres to» → European Commision (EC)"  # {1AE20DDE-EF46-446c-A3B8-86A03512E887} → {1BC0C89E-82C2-4b54-8EF3-C2F663049E05}
+      - "Association «adheres to» → European Commission (EC)"  # {1AE20DDE-EF46-446c-A3B8-86A03512E887} → {1BC0C89E-82C2-4b54-8EF3-C2F663049E05}
       - "Association «adheres to» → Member State (MS)"  # {0F7F15F5-0720-43ea-B61D-65884FEA72C6} → {6F6F2869-325C-42f0-BF2D-A1998A4C3C70}
   - name: "European or national law (MS to CC)"
     guid: "{C7C1A638-F3DE-4b70-9BD0-F24DB573079A}"
@@ -149,7 +149,7 @@ elements:
       	- (a) it shall be provided in such a way as to ensure the widest reach of end users concerned by the given event or condition referred to in Article 3;
       	- (b) it shall be made available by public and/or private road operators and/or service providers and/or broadcasters dedicated to traffic information, where possible free of charge to end users.
     links:
-      - "Association «adheres to» → European Commision (EC)"  # {78812407-1D34-408f-A5F5-64A7D44D0184} → {1BC0C89E-82C2-4b54-8EF3-C2F663049E05}
+      - "Association «adheres to» → European Commission (EC)"  # {78812407-1D34-408f-A5F5-64A7D44D0184} → {1BC0C89E-82C2-4b54-8EF3-C2F663049E05}
       - "Association «adheres to» → NAP Content Consumer (CC)"  # {1EF25969-71EB-40a8-B349-A9F0E36138C9} → {D6B4B664-6BE7-4041-8FFE-448812935D1D}
   - name: "European or national law (MS to CP)"
     guid: "{E3368E4F-07D4-4e14-9043-DE0ED31E471E}"

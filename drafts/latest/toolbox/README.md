@@ -18,6 +18,9 @@ What V1.3 changes against V1.2 (details in the changes file):
   data flow; LL data flow «contains» Information Object; Component / Terminator «use» Physical Data Flow (one link for both
   directions); new stereotype «triggers» for ITS Service Process → Process and ITS Business Process → Process;
   Specification «defines» Requirement; new stereotype «delivers value to» for ITS Service Added Value → Stakeholder (was «defines»).
+- NRA article (decided 2026-11-06): Business Expectation «defines» ITS Service; Application «owned by» Role; new stereotype
+  «performs» – Actor «performs» Role replaces Role «defines» Actor; toolbox labels *Sub-system* (FRAME_Component) and
+  *Module* (FRAME_Application), as in D4.2 and the documentation (stereotype names unchanged).
 - Quick Linker references to undefined names fixed (Component of, Defines, instant of, associated); «Impacts» → «impacts»,
   «deliverd by» → «delivered by» (neither is used by a connector in the model).
 - For the core FRAME Repository stereotypes (functional area, functions, data flows, terminator, data store, system, user needs)

@@ -73,6 +73,7 @@
 					</Stereotype>
 					<Stereotype name="FRAME_Actor" metatype="FRAME_Actor" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 						<stereotypedrelationships>
+							<stereotypedrelationship stereotype="FRAME_Profile::performs" constraint="FRAME_Profile::FRAME_Role"/>
 							<stereotypedrelationship stereotype="FRAME_Profile::implements" constraint="FRAME_Profile::FRAME_Desired_Architecture_Goals"/>
 							<stereotypedrelationship stereotype="FRAME_Profile::defines" constraint="FRAME_Profile::FRAME_Requirement;FRAME_Profile::FRAME_Requirement"/>
 							<stereotypedrelationship stereotype="FRAME_Profile::is Type of" constraint="FRAME_Profile::FRAME_Stakeholder;FRAME_Profile::FRAME_Terminator"/>
@@ -106,6 +107,7 @@ AAAAAHN0ci5kYXRVVAUAB0VI119QSwUGAAAAAAEAAQA+AAAAXgIAAAAA</Image>
 					</Stereotype>
 					<Stereotype name="FRAME_Application" metatype="FRAME_Application" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" generalizes="ArchiMate3::ArchiMate_ApplicationComponent" baseStereotypes="ArchiMate3::ArchiMate_ApplicationComponent">
 						<stereotypedrelationships>
+							<stereotypedrelationship stereotype="FRAME_Profile::owned by" constraint="FRAME_Profile::FRAME_Role"/>
 							<stereotypedrelationship stereotype="FRAME_Profile::contains" constraint="FRAME_Profile::FRAME_Low_Level_Function;FRAME_Profile::FRAME_Datastore;FRAME_Profile::FRAME_Physical_Data_Flow"/>
 							<stereotypedrelationship stereotype="FRAME_Profile::adheres to" constraint="FRAME_Profile::FRAME_Specification"/>
 							<stereotypedrelationship stereotype="FRAME_Profile::defines" constraint="FRAME_Profile::FRAME_Requirement;FRAME_Profile::FRAME_Information_Object;FRAME_Profile::FRAME_Interface"/>
@@ -132,7 +134,7 @@ gAAAAABzdHIuZGF0VVQFAAfP7klgUEsFBgAAAAABAAEAPgAAACkCAAAAAA==</Image>
 					</Stereotype>
 					<Stereotype name="FRAME_Business_Expectation" metatype="FRAME_Business_Expectation" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 						<stereotypedrelationships>
-							<stereotypedrelationship stereotype="FRAME_Profile::defines" constraint="FRAME_Profile::FRAME_Requirement;FRAME_Profile::FRAME_Mission_Statement"/>
+							<stereotypedrelationship stereotype="FRAME_Profile::defines" constraint="FRAME_Profile::FRAME_Requirement;FRAME_Profile::FRAME_Mission_Statement;FRAME_Profile::FRAME_ITS_Service"/>
 						</stereotypedrelationships>
 						<AppliesTo>
 							<Apply type="Artifact">
@@ -626,7 +628,7 @@ AA==</Image>
 						<stereotypedrelationships>
 							<stereotypedrelationship stereotype="FRAME_Profile::accepted by" constraint="FRAME_Profile::FRAME_Agreement"/>
 							<stereotypedrelationship stereotype="FRAME_Profile::associate" constraint="FRAME_Profile::FRAME_Component"/>
-							<stereotypedrelationship stereotype="FRAME_Profile::defines" constraint="FRAME_Profile::FRAME_Requirement;FRAME_Profile::FRAME_Actor;FRAME_Profile::FRAME_Organisation;FRAME_Profile::FRAME_User_Need"/>
+							<stereotypedrelationship stereotype="FRAME_Profile::defines" constraint="FRAME_Profile::FRAME_Requirement;FRAME_Profile::FRAME_Organisation;FRAME_Profile::FRAME_User_Need"/>
 						</stereotypedrelationships>
 						<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAMhoBFEWhKuuNgIAAGgJAAAHABEAc3RyLmRhdFVUDQAHXF0pX1xdKV9cXSlf
 tVbbTsJAEJ1XTPwHoy+Y8CDe0Bge/QI/wKAt0MgtpUjU+O+eM9tx6bK1eAvpdi9nz8zOnJ2y
@@ -1009,6 +1011,15 @@ AAAAAHN0ci5kYXRVVAUAB8zldV9QSwUGAAAAAAEAAQA+AAAAUAEAAAAA</Image>
 						</AppliesTo>
 					</Stereotype>
 					<Stereotype name="use" metatype="use" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+						<AppliesTo>
+							<Apply type="Association">
+								<Property name="_lineStyle" value="auto"/>
+								<Property name="compositionKind" value="none"/>
+								<Property name="direction" value="Source -&gt; Destination"/>
+							</Apply>
+						</AppliesTo>
+					</Stereotype>
+					<Stereotype name="performs" metatype="performs" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 						<AppliesTo>
 							<Apply type="Association">
 								<Property name="_lineStyle" value="auto"/>
@@ -10796,8 +10807,8 @@ wQ3VtVk7wLDOVf+pnl9N9R+vHq1OjeEfN/T5+d8BAFS2xVKKLKxzAAAAAElFTkSuQmCC
 						<TaggedValues>
 							<Tag name="FRAME_Profile::FRAME_Actor(UML::Actor)" type="" description="" unit="" values="" default="Actor"/>
 							<Tag name="FRAME_Profile::FRAME_Agreement(UML::Collaboration)" type="" description="" unit="" values="" default="Agreement"/>
-							<Tag name="FRAME_Profile::FRAME_Application(UML::Object)" type="" description="" unit="" values="" default="Application"/>
-							<Tag name="FRAME_Profile::FRAME_Component(UML::Component)" type="" description="" unit="" values="" default="Component"/>
+							<Tag name="FRAME_Profile::FRAME_Application(UML::Object)" type="" description="" unit="" values="" default="Module"/>
+							<Tag name="FRAME_Profile::FRAME_Component(UML::Component)" type="" description="" unit="" values="" default="Sub-system"/>
 							<Tag name="FRAME_Profile::FRAME_Data_Object(UML::Object)" type="" description="" unit="" values="" default="Data_Object"/>
 							<Tag name="FRAME_Profile::FRAME_Datastore(UML::DataStore)" type="" description="" unit="" values="" default="Datastore"/>
 							<Tag name="FRAME_Profile::FRAME_Functional_Area(UML::Activity)" type="" description="" unit="" values="" default="Functional Area"/>
@@ -10859,6 +10870,7 @@ wQ3VtVk7wLDOVf+pnl9N9R+vHq1OjeEfN/T5+d8BAFS2xVKKLKxzAAAAAElFTkSuQmCC
 							<Tag name="FRAME_Profile::served by(UML::Association)" type="" description="" unit="" values="" default="served by"/>
 							<Tag name="FRAME_Profile::stored in(UML::Association)" type="" description="" unit="" values="" default="stored in"/>
 							<Tag name="FRAME_Profile::use(UML::Association)" type="" description="" unit="" values="" default="use"/>
+							<Tag name="FRAME_Profile::performs(UML::Association)" type="" description="" unit="" values="" default="performs"/>
 							<Tag name="FRAME_Profile::implements(UML::Association)" type="" description="" unit="" values="" default="implements"/>
 							<Tag name="FRAME_Profile::triggers(UML::Association)" type="" description="" unit="" values="" default="triggers"/>
 							<Tag name="FRAME_Profile::delivers value to(UML::Association)" type="" description="" unit="" values="" default="delivers value to"/>

@@ -34,8 +34,22 @@ elements:
       	- transport on-demand service providers
       	- infrastructure managers
       	- data users, any public or private entity or any other entity using data listed in the Delegated Regulations
+      
+      
+      This Generic Actor Role Content Consumer shall represent any interested entity in traffic and transport data and functions as a Terminator. The Content Consumer can find available data via the NAP. Therefore Function F3.6.4 Provide Access for NAP Meta-Data Retrieval offers an interface (typically a graphical user interface freely accessible via the Internet) to search the meta-data in D3.15 NAP Meta-Data
+      
+      Key issue: Request high quality services; provide feedback about relevant content
+      
+      Area of responsibility: Be compliant to the agreement with content provider
+      
+      Tasks: Receive content
+      
+      Mnemonic: nap.cc
     links:
       - "Abstraction «is Type of» → Content consumers"  # {CE250A94-50C3-4082-A073-5ADA4F4062DA} → {77E9CEBA-B991-4860-A6D3-952CAD1B776E}
+      - "Abstraction «is Type of» → NAP Content Consumer"  # {28711A35-9939-4a77-B31E-04E144E6E664} → {A8478CF0-37A0-4638-BECC-CBB89B7519C6}
+      - "Abstraction «is Type of» → NAP Content Consumer"  # {D8AF9E54-38F1-4853-860B-BA52A4FEE4E0} → {6713B765-606E-4208-8FE8-99B0D50851A5}
+      - "Association «performs» → NAP Content Consumer (CC)"  # {23DC667E-8339-4648-BFBC-B3033D35B957} → {D6B4B664-6BE7-4041-8FFE-448812935D1D}
   - name: "Content Provider"
     guid: "{3F2BCF06-A0E6-4aac-BD7A-3395E43C395B}"
     type: "Actor"
@@ -83,8 +97,25 @@ elements:
       	- static, historic and observed travel and traffic data: transport authorities, transport operators, infrastructure managers, transport on demand service providers
       	- dynamic travel and traffic data: see above
       	- linking travel information services: travel information service provider
+      
+      
+      This Generic Actor Role Content Provider shall represent any provider of traffic and transport data.
+      
+      The Content Provider describes this data with meta-data on the NAP (to be stored in D3.15 NAP Meta-Data). Information about the Content Provider, such as contact details, shall be kept in D3.17 NAP Content Providers.
+      Content Providers are for example public and private road operators, road authorities, service providers, transport authorities, transport operators, infrastructure managers, transport on-demand service providers. The obligations to make contents accessible via the NAP mainly depends on the type of data according to the Delegated Regulations 885/2013, 886/2013, 962/2015, 1926/2017
+      
+      Key issue: Provide and publish content (to which he has the legal rights to publish); collect content
+      
+      Area of responsibility: Provide timely and accurate traffic data
+      
+      Tasks: Provide content relevant to the ITS domain and according to contracts with the NAP and content consumers
+      
+      Mnemonic: nap.cp
     links:
       - "Abstraction «is Type of» → Content Providers"  # {6713994B-EE24-4267-951F-331B46283827} → {4D7E0B7A-7D34-400b-AE00-68E04F93B7BA}
+      - "Abstraction «is Type of» → NAP Content Provider"  # {1445DBA7-FD63-4455-B839-F1DF95303420} → {48698837-F8BB-4dca-BBDB-736CF23C778C}
+      - "Abstraction «is Type of» → NAP Content Provider"  # {A77C8414-147A-45eb-A6EF-50AA5AD66B10} → {7F7723C2-1334-495d-8C3F-1CA486951DD2}
+      - "Association «performs» → NAP Content Provider (CP)"  # {0060CFED-7AF7-428d-A308-4FBC3DF99B90} → {0BAD153C-6775-4495-9098-8C8115DD8867}
   - name: "European Commission"
     guid: "{142DFBFF-40C1-4f03-A7A7-E5125A5DE9FE}"
     type: "Actor"
@@ -100,6 +131,7 @@ elements:
       The European Commission.
     links:
       - "Abstraction «is Type of» → European Commission"  # {D25C0173-B953-4d03-9869-C45A656FC8AB} → {26DD1383-1637-4356-B2EF-7671DCA5C5BC}
+      - "Association «performs» → European Commission (EC)"  # {FABB6D0D-EDF9-4fcc-894C-C1A8379FCCA0} → {1BC0C89E-82C2-4b54-8EF3-C2F663049E05}
   - name: "Member State"
     guid: "{28852F78-1BF6-4858-8E67-E45CF403D4E7}"
     type: "Actor"
@@ -115,49 +147,7 @@ elements:
       Usually, the MS through the Ministry responsible for the transport area.
     links:
       - "Abstraction «is Type of» → Member State"  # {BDED0935-D7D2-4ea3-A61B-2C699E88A9C5} → {2DC22194-A127-42ba-9AEA-E8CBDD2EC795}
-  - name: "NAP Content Consumer"
-    guid: "{4D826F97-C464-4e69-A523-2A280EC033DB}"
-    type: "Actor"
-    stereotype: "FRAME_Actor"
-    status: "Proposed"
-    version: "1.0"
-    order: 0
-    note: |
-      This Generic Actor Role Content Consumer shall represent any interested entity in traffic and transport data and functions as a Terminator. The Content Consumer can find available data via the NAP. Therefore Function F3.6.4 Provide Access for NAP Meta-Data Retrieval offers an interface (typically a graphical user interface freely accessible via the Internet) to search the meta-data in D3.15 NAP Meta-Data
-      
-      Key issue: Request high quality services; provide feedback about relevant content
-      
-      Area of responsibility: Be compliant to the agreement with content provider
-      
-      Tasks: Receive content
-      
-      Mnemonic: nap.cc
-    links:
-      - "Abstraction «is Type of» → NAP Content Consumer"  # {28711A35-9939-4a77-B31E-04E144E6E664} → {A8478CF0-37A0-4638-BECC-CBB89B7519C6}
-      - "Abstraction «is Type of» → NAP Content Consumer"  # {D8AF9E54-38F1-4853-860B-BA52A4FEE4E0} → {6713B765-606E-4208-8FE8-99B0D50851A5}
-  - name: "NAP Content Provider"
-    guid: "{CE0842A5-FDE5-4907-9C1D-1892DF6D7A08}"
-    type: "Actor"
-    stereotype: "FRAME_Actor"
-    status: "Proposed"
-    version: "1.0"
-    order: 0
-    note: |
-      This Generic Actor Role Content Provider shall represent any provider of traffic and transport data.
-      
-      The Content Provider describes this data with meta-data on the NAP (to be stored in D3.15 NAP Meta-Data). Information about the Content Provider, such as contact details, shall be kept in D3.17 NAP Content Providers.
-      Content Providers are for example public and private road operators, road authorities, service providers, transport authorities, transport operators, infrastructure managers, transport on-demand service providers. The obligations to make contents accessible via the NAP mainly depends on the type of data according to the Delegated Regulations 885/2013, 886/2013, 962/2015, 1926/2017
-      
-      Key issue: Provide and publish content (to which he has the legal rights to publish); collect content
-      
-      Area of responsibility: Provide timely and accurate traffic data
-      
-      Tasks: Provide content relevant to the ITS domain and according to contracts with the NAP and content consumers
-      
-      Mnemonic: nap.cp
-    links:
-      - "Abstraction «is Type of» → NAP Content Provider"  # {1445DBA7-FD63-4455-B839-F1DF95303420} → {48698837-F8BB-4dca-BBDB-736CF23C778C}
-      - "Abstraction «is Type of» → NAP Content Provider"  # {A77C8414-147A-45eb-A6EF-50AA5AD66B10} → {7F7723C2-1334-495d-8C3F-1CA486951DD2}
+      - "Association «performs» → Member State (MS)"  # {4AD33F01-41A5-46f8-8719-A3B81DC3D610} → {6F6F2869-325C-42f0-BF2D-A1998A4C3C70}
   - name: "NAP Operator"
     guid: "{B0B3260D-C376-4e8f-A620-72BC71353D5D}"
     type: "Actor"
@@ -173,8 +163,9 @@ elements:
       Represented by:
       Usually, a department of the MS relevant Ministry (responsible for Transport matters), a state-owned organization, or a research organization. Usually, based on the explicit stating of the entity in the national law.
     links:
-      - "Abstraction «is Type of» → NAP"  # {CD946FB0-3E47-4c15-A6DC-D9975F422C80} → {872B10AE-A464-430f-AC5D-4D944C75532F}
       - "Abstraction «is Type of» → NAP Operator"  # {1DF4BB96-2848-4dee-AF41-9340F2D054B0} → {4B4D9772-CCE6-459c-B5E0-80E3C5C32674}
+      - "Association «performs» → NAP IT Provider (NIT)"  # {B6A9B3DF-79AD-49c7-9ED6-CA76F11BA4C0} → {273E7961-AD50-416e-AC9A-92FA926DD4A7}
+      - "Association «performs» → NAP Operator (NO)"  # {1CB68449-7ACE-4e3e-9944-8C06841BEAC7} → {234C8914-6D8F-43fd-B3A7-34118A92FBA3}
   - name: "National Body / Competent Authority"
     guid: "{B4E9C168-C4F3-4026-B334-9511627C14AC}"
     type: "Actor"
@@ -190,3 +181,4 @@ elements:
       Usually, a department of the MS Ministry of Transport and an independent body. Based on the explicit naming of the entity in the national law. The NB/CA shall be independent of CPs and NOs since it checks its compliance.
     links:
       - "Abstraction «is Type of» → Competent Authority / National Body"  # {B77330A7-30F9-4348-AD41-1C78FB74E173} → {60AC1314-7147-4d43-89C6-2CD3B26BDEBE}
+      - "Association «performs» → National Body / Competent Authority (NB/CA)"  # {1998DB38-9322-4fcd-9B7A-ED577A680474} → {43A7EC8B-5AD2-462b-8F3A-F564FD31B71C}

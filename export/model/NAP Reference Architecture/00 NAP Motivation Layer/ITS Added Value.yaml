@@ -42,7 +42,6 @@ elements:
     note: |
       By introducing a legal and operational framework by the Member State when implementing the ITS Directive the nominated NAP Operator gets a clear set of requirements and obligations and practices to operate NAP as set up by the legal framework.
     links:
-      - "Association «delivers value to» → NAP"  # {755EDBA6-D00E-4666-B2C4-6B7CD9873922} → {872B10AE-A464-430f-AC5D-4D944C75532F}
       - "Association «delivers value to» → NAP Operator"  # {D7CC07EC-A62D-4460-8DD6-B8F49F9C93E8} → {4B4D9772-CCE6-459c-B5E0-80E3C5C32674}
   - name: "Better oversight on the ITS Directive implementation"
     guid: "{A714C199-95DF-45f6-8CD4-8777446E0378}"

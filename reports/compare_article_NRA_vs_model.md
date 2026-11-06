@@ -78,7 +78,7 @@ In the NAP RA these are written into the element notes.
 | 6 interfaces for the metadata directory | 12 interfaces in total (typo *…metadata vie machine to machine…*) |
 | standards linked to interfaces | 26 specifications, incl. placeholders *FRAME_Specification1*, *Specification tbd* |
 
-## Proposed decisions
+## Proposed decisions (all applied 2026-11-06: reports/fix_2026-11-06_article_alignment.md; 3 = Actor «performs» Role)
 1. Add **Business Expectation «defines» ITS Service** to the MDG and the Meta Model (the gap named in the article).
 2. Meta Model: add ITS Service «delivered by» Added Value, Terminator «use» Physical Data Flow, Interface «defines» Requirement.
 3. **Actor – Role direction**: keep Role «defines» Actor (MDG, Meta Model, now also the RAs) and adjust the article figure, or

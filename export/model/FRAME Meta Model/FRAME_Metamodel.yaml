@@ -16,6 +16,7 @@ elements:
     links:
       - "Abstraction «is Type of» → Stakeholder"  # {F8082342-A3D2-43c0-8298-9E95A5F1A4B6} → {D8941B60-3EFA-422b-93B5-1F7FDFB18CFF}
       - "Abstraction «is Type of» → Terminator/ Subterminator"  # {DB9664B0-F2CB-4bef-B81F-DC63B7EBA2AB} → {C619D94C-1176-4bee-86C2-D8C4FF8FB634}
+      - "Association «performs» → Role"  # {01753DD3-F870-468a-B4DE-0A1932C6AFD5} → {6919B163-FD91-4478-B0D6-0A11A723D27B}
   - name: "Agreement"
     guid: "{59AC1C75-662C-4f63-B4A9-8E075FE15BE4}"
     type: "Collaboration"
@@ -42,6 +43,7 @@ elements:
       - "Association «contains» → Low Level Function"  # {D42F79EB-128B-4820-BD89-AB9BE6C0F700} → {568A327F-EB2D-468d-9FA6-3CD9714EE807}
       - "Association «contains» → Physical Dataflow"  # {054583DA-096F-49f0-8BBF-C9134A9A17E4} → {AC1DD116-B224-4693-B0FE-4AD1D8B1246C}
       - "Association «hosted by» → Component"  # {37910D96-8C5F-4a9c-8A20-37D996DC82D7} → {A3ECE56A-3A44-4971-9CEC-0D092A4DB634}
+      - "Association «owned by» → Role"  # {12AC94F6-DDD9-4DED-9612-29B0232EA841} → {6919B163-FD91-4478-B0D6-0A11A723D27B}
   - name: "Business_Expectation"
     guid: "{76442EA5-1026-40ac-9827-10B79B425CD5}"
     type: "Artifact"
@@ -52,6 +54,7 @@ elements:
     note: |
       Business expectations of an actor involved in the ITS Service is an ITS architecture building block, which formulates the economic added value for an institution/company associated with an ITS service as a goal.
     links:
+      - "Association «defines» → ITS_Service"  # {74E6BE36-188E-43CB-A9B1-E8F38A2F01AE} → {7153E4F6-663F-4457-B65B-207E5B95ED99}
       - "Association «defines» → Mission Statement"  # {9D522F03-A7F7-43d7-8628-1027FB273E45} → {B3A79F6B-D9C7-45e4-9E34-B1F4A73D19DC}
   - name: "Component"
     guid: "{A3ECE56A-3A44-4971-9CEC-0D092A4DB634}"
@@ -192,6 +195,7 @@ elements:
       - "Association «defines» → ITS_ServiceProcess"  # {FDD7EA6E-EE4C-4061-9133-1FC46B4555AC} → {AAE8BD5C-8D68-412e-AD63-C049013FCE0B}
       - "Association «defines» → Requirement"  # {23673D85-0AB3-43ce-B706-2E082F72B857} → {C94C247E-3F93-47ee-AA0A-75C521916D0A}
       - "Association «defines» → User_Need"  # {199F747E-D68F-4829-932D-5CB583632930} → {AAD160FE-1FEE-4cea-93C1-A68DDAE1E0CD}
+      - "Association «delivered by» → ITS_Service_Added_Value"  # {F50D00FC-C881-4287-B438-DA9BEAB31FD8} → {5973109B-76D5-4860-B8E0-E70ADB5483C0}
       - "Association «has» → ITS_Domain"  # {FA55D340-4A76-4440-9CF1-DFD2EFBC7D78} → {1A23C9AA-C9E1-4572-9F33-D101F6A2937D}
   - name: "ITS_ServiceProcess"
     guid: "{AAE8BD5C-8D68-412e-AD63-C049013FCE0B}"
@@ -271,6 +275,7 @@ elements:
       An ITS Interface is an ITS architecture building block that serves the exchange of information between systems. It corresponds to an interface specification consisting of the definition of a protocol and a data model and is used and implemented by ITS applications.
     links:
       - "Association «adheres to» → Specification"  # {80CE5958-AF33-437b-B8C0-32774BAB6673} → {32E1A53D-B9C9-4180-BD66-998E967D5E33}
+      - "Association «defines» → Requirement"  # {50365A83-D2B0-4368-B7C8-4554B09B4F37} → {C94C247E-3F93-47ee-AA0A-75C521916D0A}
       - "Association «use» → InformationObject"  # {1CDB2350-94A6-4bff-BCF1-4A23825AB8A7} → {23EBC3DA-D923-4f06-8F70-6D29A77E7973}
   - name: "Low Level Function"
     guid: "{568A327F-EB2D-468d-9FA6-3CD9714EE807}"
@@ -363,7 +368,6 @@ elements:
       The ITS Role is an architectural artifact that defines and semantically describes the stereotypes of ITS responsibilities, tasks, and capabilities that are typical and necessary for the value creation of ITS services. It is a significant component of ITS value-added chains for ITS information logistics and is taken by ITS actors and stakeholders depending on the requirements of the ITS service to be implemented. A single ITS actor or stakeholder can occupy one or more ITS roles. The role operates its capabilities, responsibilities, and tasks in the form of activities which, together with the activities of other ITS roles, constitute the ITS business process of an ITS service.
     links:
       - "Association «accepted by» → Agreement"  # {322AA2AB-0141-4586-86D8-50EFCA83FB3E} → {59AC1C75-662C-4f63-B4A9-8E075FE15BE4}
-      - "Association «defines» → Actor"  # {01753DD3-F870-468a-B4DE-0A1932C6AFD5} → {E9485972-884F-42d6-A74B-D8D874B6CA2D}
       - "Association «defines» → Organisation"  # {61F2CD8B-AE8F-4060-BD2D-970E315C7B1C} → {FAB885FE-E93D-4446-B40C-9C8CD237440F}
   - name: "Specification"
     guid: "{32E1A53D-B9C9-4180-BD66-998E967D5E33}"
@@ -414,6 +418,7 @@ elements:
       - "Association «IN» → FRAME_High_Level_Data_Flow"  # {570C2EDF-9B4F-43ae-A3E8-299C858444EF} → {35F631D7-65CE-4df9-A861-1B12E39AC463}
       - "Association «IN» → FRAME_Low_Level_Data_Flow"  # {219589AF-C19C-4aee-BB75-E387E78846D7} → {3DA4C5ED-3529-4c62-BB04-DBC9641EA039}
       - "Association «defines» → Application"  # {F4449BB0-FFFB-4ebf-8177-03B4B201D828} → {9E05B1AE-4239-4341-BCF2-010BB287A0BB}
+      - "Association «use» → Physical Dataflow"  # {3D4FB729-DA77-4681-9123-36A663DEF980} → {AC1DD116-B224-4693-B0FE-4AD1D8B1246C}
   - name: "UserNeedGroup"
     guid: "{356C4C7D-2D63-439e-BD9F-8DC379AD68B9}"
     type: "Requirement"

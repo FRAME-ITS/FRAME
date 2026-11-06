@@ -39,7 +39,7 @@ for old, new in RENAME_ST.items():
         log.append(f'toolbox entry {a["Name"]} → {new}')
 
 # new connector stereotypes of V1.3: cloned from «use» (class, attributes, Extension to Association, diagram object, toolbox entry)
-for st in ('delivers value to', 'triggers', 'implements'):
+for st in ('delivers value to', 'triggers', 'implements', 'performs'):
     if c.execute('select 1 from t_object where Package_ID=? and Name=?', (P, st)).fetchone(): continue
     u = dict(c.execute("select * from t_object where Package_ID=? and Name='use'", (P,)).fetchone()); uid = u.pop('Object_ID')
     u.update(Name=st, ea_guid=guid()); new = c.execute(ins('t_object', u), list(u.values())).lastrowid
@@ -50,7 +50,7 @@ for st in ('delivers value to', 'triggers', 'implements'):
     for k in c.execute("select * from t_connector where Start_Object_ID=? and Connector_Type='Extension'", (uid,)).fetchall():
         k = dict(k); k.pop('Connector_ID'); k.update(Start_Object_ID=new, ea_guid=guid()); c.execute(ins('t_connector', k), list(k.values()))
     for d in c.execute('select * from t_diagramobjects where Object_ID=?', (uid,)).fetchall():
-        d = dict(d); d.pop('Instance_ID'); off = {'triggers': 60, 'delivers value to': 120, 'implements': 180}[st]
+        d = dict(d); d.pop('Instance_ID'); off = {'triggers': 60, 'delivers value to': 120, 'implements': 180, 'performs': 240}[st]
         d.update(Object_ID=new, RectTop=d['RectTop'] - off, RectBottom=d['RectBottom'] - off,
                  ObjectStyle=re.sub(r'DUID=[0-9A-F]{8}', 'DUID=' + uuid.uuid4().hex[:8].upper(), d['ObjectStyle'] or ''))
         c.execute(ins('t_diagramobjects', d), list(d.values()))
@@ -131,6 +131,12 @@ for k, tag in rels():
         log.append(f'rule removed (not in V1.3): «{tag["VALUE"]}» {name[k["s"]]} → {name[k["t"]]}')
 have = {(tag['VALUE'], name[k['s']], name[k['t']]) for k, tag in rels() if tag}
 extra = sorted(have - want, key=str)
+
+# toolbox labels Sub-system / Module
+for st, old, new in (('FRAME_Component', 'Component', 'Sub-system'), ('FRAME_Application', 'Application', 'Module')):
+    n = c.execute(f"update t_attribute set \"Default\"=? where Object_ID in (select Object_ID from t_object where Package_ID={PT}) and Name like ? and \"Default\"=?",
+                  (new, f'FRAME_Profile::{st}(%', old)).rowcount
+    if n: log.append(f'toolbox label {st}: "{old}" → "{new}"')
 
 # _HideUmlLinks
 CORE = ('FRAME_Functional_Area', 'FRAME_High_Level_Function', 'FRAME_Low_Level_Function', 'FRAME_High_Level_Data_Flow',

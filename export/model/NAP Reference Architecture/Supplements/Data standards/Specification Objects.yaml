@@ -4,6 +4,17 @@ alias: ""
 version: "1.0"
 note: ""
 elements:
+  - name: "Content Consumer data retrieval specifications"
+    guid: "{8C9538D0-640C-48ba-A4FD-615ACD5EEB23}"
+    type: "DeploymentSpecification"
+    stereotype: "FRAME_Specification"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      There are several specifications, please double click to see all.
+    links:
+      - "Association → specification for Content Consumer data retrieval interface"  # {560F29DA-72EE-4fa3-89FD-5E970C71F11A} → {69695A87-EBC5-47cf-BE97-A9B8E9483960}
   - name: "DATEX II"
     guid: "{F9A9AFD3-AF4D-4391-9AE4-2FB290C7C9F9}"
     type: "DeploymentSpecification"
@@ -17,17 +28,6 @@ elements:
       
       The wizard to generate the DATEX II profiles is available at:
       https://webtool.datex2.eu/wizard/
-  - name: "FRAME_Specification1"
-    guid: "{8C9538D0-640C-48ba-A4FD-615ACD5EEB23}"
-    type: "DeploymentSpecification"
-    stereotype: "FRAME_Specification"
-    status: "Proposed"
-    version: "1.0"
-    order: 0
-    note: |
-      There are several specifications, please double click to see all.
-    links:
-      - "Association → specification for Content Consumer data retrieval interface"  # {560F29DA-72EE-4fa3-89FD-5E970C71F11A} → {69695A87-EBC5-47cf-BE97-A9B8E9483960}
   - name: "IATA SSIM"
     guid: "{EEC79522-E329-4da9-89B6-82617E53E335}"
     type: "DeploymentSpecification"

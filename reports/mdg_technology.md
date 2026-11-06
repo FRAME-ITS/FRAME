@@ -1,6 +1,6 @@
 # MDG technology embedded in FRAME.qea compared with FRAME.qea
 
-Technology **FRAME** – FRAME Architecture V1.3; profile FRAME_Profile defines 62 stereotypes.
+Technology **FRAME** – FRAME Architecture V1.3; profile FRAME_Profile defines 63 stereotypes.
 
 ## Quick Linker rules vs. use in the model
 
@@ -70,6 +70,7 @@ For each rule (source → target) the number of connectors drawn in that directi
 | «defines» | Application | Information_Object | 0 | 0 |
 | «defines» | Application | Interface | 10 | 0 |
 | «defines» | Application | Requirement | 0 | 0 |
+| «defines» | Business_Expectation | ITS_Service | 1 | 0 |
 | «defines» | Business_Expectation | Mission_Statement | 13 | 0 |
 | «defines» | Business_Expectation | Requirement | 0 | 0 |
 | «defines» | Component | Requirement | 0 | 0 |
@@ -92,7 +93,7 @@ For each rule (source → target) the number of connectors drawn in that directi
 | «defines» | ITS_Vision | Requirement | 1 | 0 |
 | «defines» | ITS_Vision | User_Need | 0 | 0 |
 | «defines» | Information_Object | Requirement | 0 | 0 |
-| «defines» | Interface | Requirement | 0 | 0 |
+| «defines» | Interface | Requirement | 1 | 0 |
 | «defines» | Low_Level_Data_Flow | Functionality | 0 | 0 |
 | «defines» | Low_Level_Data_Flow | Requirement | 0 | 0 |
 | «defines» | Low_Level_Function | Functionality | 0 | 0 |
@@ -102,7 +103,6 @@ For each rule (source → target) the number of connectors drawn in that directi
 | «defines» | Mission_Statement | User_Need | 0 | 0 |
 | «defines» | Organisation | Requirement | 0 | 0 |
 | «defines» | Physical_Data_Flow | Requirement | 0 | 0 |
-| «defines» | Role | Actor | 33 | 0 |
 | «defines» | Role | Organisation | 1 | 0 |
 | «defines» | Role | Requirement | 0 | 0 |
 | «defines» | Role | User_Need | 0 | 0 |
@@ -116,8 +116,8 @@ For each rule (source → target) the number of connectors drawn in that directi
 | «defines» | User_Need | Functionality | 0 | 0 |
 | «defines» | User_Need | Requirement | 1 | 0 |
 | «defines» | User_Need_Topic | Requirement | 0 | 0 |
-| «delivered by» | ITS_Service | ITS_Service_Added_Value | 0 | 0 |
-| «delivers value to» | ITS_Service_Added_Value | Stakeholder | 52 | 0 |
+| «delivered by» | ITS_Service | ITS_Service_Added_Value | 1 | 0 |
+| «delivers value to» | ITS_Service_Added_Value | Stakeholder | 51 | 0 |
 | «fulfilled by» | Requirement | Actor | 0 | 0 |
 | «fulfilled by» | Requirement | Agreement | 1 | 0 |
 | «fulfilled by» | Requirement | Application | 24 | 0 |
@@ -145,7 +145,7 @@ For each rule (source → target) the number of connectors drawn in that directi
 | «fulfilled by» | Stakeholder | Requirement | 6 | 0 |
 | «has» | ITS_Service | ITS_Domain | 4 | 0 |
 | «has» | Organisation | ITS_Business_Process | 1 | 0 |
-| «has» | Stakeholder | Business_Expectation | 13 | 0 |
+| «has» | Stakeholder | Business_Expectation | 12 | 0 |
 | «has» | Stakeholder | Desired_Architecture_Goals | 14 | 0 |
 | «hosted by» | Application | Component | 13 | 0 |
 | «impacts» | High_Level_Function | Functional_Area | 0 | 0 |
@@ -153,11 +153,13 @@ For each rule (source → target) the number of connectors drawn in that directi
 | «impacts» | Low_Level_Function | High_Level_Function | 0 | 0 |
 | «implements» | Actor | Desired_Architecture_Goals | 3 | 0 |
 | «instants of» | Stakeholder | Organisation | 0 | 0 |
-| «is Type of» | Actor | Stakeholder | 29 | 0 |
+| «is Type of» | Actor | Stakeholder | 28 | 0 |
 | «is Type of» | Actor | Terminator | 12 | 0 |
 | «is Type of» | Datastore | Component | 1 | 0 |
 | «is Type of» | Terminator | Terminator | 1 | 1 |
+| «owned by» | Application | Role | 1 | 0 |
 | «owned by» | Component | Role | 1 | 0 |
+| «performs» | Actor | Role | 31 | 0 |
 | «served by» | ITS_Service_Process | Low_Level_Function | 45 | 0 |
 | «served by» | Low_Level_Data_Flow | Physical_Data_Flow | 60 | 0 |
 | «served by» | User_Need | Low_Level_Function | 1785 | 0 |
@@ -168,7 +170,7 @@ For each rule (source → target) the number of connectors drawn in that directi
 | «use» | Component | Physical_Data_Flow | 25 | 0 |
 | «use» | Interface | Information_Object | 12 | 0 |
 | «use» | Physical_Data_Flow | Interface | 22 | 0 |
-| «use» | Terminator | Physical_Data_Flow | 12 | 0 |
+| «use» | Terminator | Physical_Data_Flow | 13 | 0 |
 
 ## Connector stereotypes used in the model but not defined in the technology
 

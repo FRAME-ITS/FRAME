@@ -505,6 +505,7 @@ elements:
     links:
       - "Dependency «stereotyped relationship» → FRAME_Desired_Architecture_Goals"  # {2CE73E08-D303-4714-9540-FE186CFDBA4F} → {6D2830EA-49F3-4e3e-9739-0D133649711B}
       - "Dependency «stereotyped relationship» → FRAME_Requirement"  # {6C45DFC9-7809-4c06-BCDC-4062841226B0} → {AEE79FAA-7700-45ad-8E09-D35B1F39DD5A}
+      - "Dependency «stereotyped relationship» → FRAME_Role"  # {7605059D-0818-4860-BC8B-9E05D98F6679} → {8E2EF45B-FD45-417c-9E26-96C6F78A82C0}
       - "Dependency «stereotyped relationship» → FRAME_Stakeholder"  # {F311DB40-7BE7-4ac1-A4BB-322871DFB32F} → {1D9C9DEE-24BC-44aa-85BD-8CA8BC3CC0DA}
       - "Dependency «stereotyped relationship» → FRAME_Terminator"  # {78980F11-5665-4290-9EAC-102A7F55E7C5} → {924DB332-8016-4030-B48A-73EA46503F2E}
       - "Extension → Actor"  # {82684D6D-CD0A-483b-96D5-36B89FCF290D} → {BB0E3CE3-B809-439a-8E09-D9CB1617104E}
@@ -537,6 +538,7 @@ elements:
       - "Dependency «stereotyped relationship» → FRAME_Low_Level_Function"  # {45813340-013E-402C-A844-945454456D86} → {E7C4405D-7536-4094-B54F-2798F7745293}
       - "Dependency «stereotyped relationship» → FRAME_Physical_Data_Flow"  # {DCC617B5-9A64-44B5-9591-5B49C8BB3F5C} → {D4B39B79-3440-41a8-B438-75EB7B8AC1F9}
       - "Dependency «stereotyped relationship» → FRAME_Requirement"  # {AB596917-88BF-4457-8262-A79B35AFD9B7} → {AEE79FAA-7700-45ad-8E09-D35B1F39DD5A}
+      - "Dependency «stereotyped relationship» → FRAME_Role"  # {A0A882C1-7F71-4F1A-A766-C84F3BBAC66A} → {8E2EF45B-FD45-417c-9E26-96C6F78A82C0}
       - "Dependency «stereotyped relationship» → FRAME_Specification"  # {615E53D2-D288-47b1-ADAD-5354B76C4E9D} → {A91B0704-2E6F-449c-BA75-85536AC7256A}
       - "Extension → Object"  # {3EE17FD8-0D84-473a-8494-3FE660699CF5} → {45FBE772-95C5-444a-93F9-057750D8F6C2}
       - "Generalization → ArchiMate3::ArchiMate_ApplicationComponent"  # {8AFC11CA-4B90-481d-8199-023E9899C955} → {1CFB44BC-C9BC-4a8c-82B9-237DFC3A1F4E}
@@ -549,6 +551,7 @@ elements:
     order: 0
     note: ""
     links:
+      - "Dependency «stereotyped relationship» → FRAME_ITS_Service"  # {15BC8150-8462-418F-B14B-541171693C5E} → {FCEB1C62-8A70-4531-9031-30A832D81525}
       - "Dependency «stereotyped relationship» → FRAME_Mission_Statement"  # {CFC9F655-80F4-4D97-968E-2403E31D6C31} → {812A32B4-DD36-4524-BB97-C3612332D599}
       - "Dependency «stereotyped relationship» → FRAME_Requirement"  # {72AAB70D-0DA8-484a-9196-98F5E725133A} → {AEE79FAA-7700-45ad-8E09-D35B1F39DD5A}
       - "Extension → Artifact"  # {225EBAD1-5D9B-4751-ADA8-23DA475D7B38} → {E5286C98-6322-4eaa-9053-835CC5EAF3D2}
@@ -906,7 +909,6 @@ elements:
     order: 0
     note: ""
     links:
-      - "Dependency «stereotyped relationship» → FRAME_Actor"  # {242BAF01-C4A9-44ee-BC6B-1C907C6581ED} → {C72E35A3-9A83-40d3-A7BC-5006AAAB0FD4}
       - "Dependency «stereotyped relationship» → FRAME_Agreement"  # {6ED2C4D9-BB9B-43bf-8404-13B7C262DB5E} → {E591D718-076A-41bd-A6C2-117748CF08BB}
       - "Dependency «stereotyped relationship» → FRAME_Component"  # {367ABE48-66F2-40d7-AAA3-780FB9936A99} → {B9980277-BF27-4a72-9016-B12E681D7202}
       - "Dependency «stereotyped relationship» → FRAME_Organisation"  # {479E50CC-66AF-4b4f-A255-24B2292E068C} → {E74F6159-061F-43de-8EB5-AAC09D0D3B67}
@@ -1426,6 +1428,16 @@ elements:
     note: ""
     links:
       - "Extension → Association"  # {C41C201C-0D57-43c8-A9EC-B13CE504B615} → {1A5FEF97-0378-4b33-9D2C-7759CD7E575D}
+  - name: "performs"
+    guid: "{C90D5BFD-403F-406D-B83C-3D955D7A0365}"
+    type: "Class"
+    stereotype: "stereotype"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Extension → Association"  # {C4FEC546-0D6A-4CEB-AED8-B792531837C1} → {DE6FC006-93D9-4e08-81AB-D48D1213701E}
   - name: "served by"
     guid: "{43687538-1E1F-4966-9868-E888ABD1250A}"
     type: "Class"

@@ -59,7 +59,6 @@ elements:
       
       the percentage of parking places providing dynamic information on the availability of parking spaces and the priority zones to the Commission.
     links:
-      - "Association «defines» → Member State"  # {77C9CBD1-187C-40a2-A9BF-C21EAF0C2CD0} → {01E62626-859C-49bf-9BE4-453AB23EAA08}
       - "Dependency → "  # {BC65C41E-DADC-4ba0-AEFA-02FA8F7C5C90} → {5611A6C0-4ABC-4fc4-82D8-8902E6C5CCA1}
   - name: "Park Operator"
     guid: "{F889E587-63FF-4ed3-A1DA-3B5232BCD976}"
@@ -79,8 +78,6 @@ elements:
       If the Parking Area is in priority zone, responsible of setting infrastructure for provision of dynamic information
       
       maintain relations with service provider and nap administrator
-    links:
-      - "Association «defines» → Park Operator"  # {392BD421-7AC9-41a6-A6A3-66703F87A26C} → {298178F1-9F8A-417b-8C32-39AD98C40BEF}
   - name: "Service Provider"
     guid: "{56E95060-70F8-4023-9557-1EE0A92B253B}"
     type: "Object"
@@ -99,8 +96,6 @@ elements:
       Responsible manage organizational, legal, financial aspect of service provided, maintain relations with other Actors of SSTPIS
       
       Responsible to provide support to user.
-    links:
-      - "Association «defines» → Service Provider"  # {84C8E8DD-1739-48d3-B5F4-249508B1B482} → {77671F5E-0E92-443f-B0D1-B5D8C79DBBD8}
   - name: "User"
     guid: "{9887014B-F428-4c13-82F6-E9513B4B18AB}"
     type: "Object"
@@ -114,5 +109,3 @@ elements:
       "Role Value": ""
       "Role View": ""
     note: ""
-    links:
-      - "Association «defines» → User"  # {58B657D0-1249-42ea-B9AE-C57812DCAA5B} → {95ADC0BD-DDDA-435e-8BAB-3481CF87D1C6}

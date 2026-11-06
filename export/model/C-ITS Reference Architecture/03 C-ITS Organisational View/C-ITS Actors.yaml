@@ -20,6 +20,7 @@ elements:
       following the latest C-Roads specifications for harmonized day one C-ITS Services in Europe.
     links:
       - "Abstraction «is Type of» → Motorway operators and city public authorities"  # {ED21AAE7-42F5-40bc-8DA9-BAAE18097882} → {2E3B8D29-8DDA-48a6-AA48-C0060AEC0A2D}
+      - "Association «performs» → Road Operators/ Public Authorities and/or C-ITS station operator"  # {4A6D80C5-BF5D-467a-B215-0E127E911C98} → {C061FEFD-582E-4a59-A8E0-DD69B853371A}
   - name: "OEM and mobile C-ITS stations operator"
     guid: "{0B92BE20-A211-4709-8222-8B3CAEAF3DFC}"
     type: "Actor"
@@ -33,6 +34,7 @@ elements:
       If this actor has also the role of "security provider" in the EU CCMS for his mobile C-ITS stations, these roles should be generated additionally.
     links:
       - "Abstraction «is Type of» → Vehicle Manufacturors - OEM´s"  # {B64495B1-E1EB-4924-8235-0116F58188C5} → {ED38DEDB-53CC-42c9-9686-EF58A2EB5744}
+      - "Association «performs» → Vehicle Manufacturer and C-ITS station operator"  # {F17EF16B-4823-46e5-8482-016E9FA00C84} → {0F3BBA70-5E3D-4c2a-B68F-961BDC0B1885}
   - name: "3rd party service provider"
     guid: "{CB3A280B-2F50-4a35-9603-8BD95D127A4F}"
     type: "Actor"
@@ -44,6 +46,8 @@ elements:
       This actor can be a C-ITS station operator, a security service provider, a communication service provider or cover another role in the C-ITS context . . .
     links:
       - "Abstraction «is Type of» → C-ITS Service provider"  # {BB12416C-4854-477a-862C-F0A5C5AC8F96} → {3013F2AA-5BC3-4d57-8AFA-790BBA733C21}
+      - "Association «performs» → Mobile Network and /or C-ITS Station Operator"  # {2BE57848-7B71-4a95-AF2A-178994349D4C} → {33AD0518-4548-44f9-A965-2C67CAE83B41}
+      - "Association «performs» → Third party service provider and/or C-ITS station operator"  # {BF091DF4-16AF-47fb-94EF-6C74A7C7F429} → {22EE9EE9-F3FE-4b6d-A8E6-328F73E45192}
   - name: "EU Citizen"
     guid: "{5584CEC2-2AC4-4b1e-AC7A-65E352398E8C}"
     type: "Actor"
@@ -55,3 +59,5 @@ elements:
       EU Citizen in one of the member states, and most probably mobile in all modes of transport and in more than member state in different transport environments.
     links:
       - "Abstraction «is Type of» → EU Citizen in one of the member states"  # {A4555F37-1A9D-4a04-BD72-18DD12FD3D70} → {E8695FF6-1351-4508-97CF-980CF0604B41}
+      - "Association «performs» → Driver"  # {3ACABEFA-DBAB-4b87-84BC-2EC0BB72BE63} → {D96513DF-8F0C-41e0-A1AE-3B65A11CC4AE}
+      - "Association «performs» → Mobile Traveller"  # {9140C313-F243-41fc-AC9B-827E6DD3C95D} → {89E1E006-9E0D-46f8-A64F-1D158457BCB0}

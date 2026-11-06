@@ -4,7 +4,7 @@ alias: ""
 version: "1.0"
 note: ""
 elements:
-  - name: "Automatic provision of metadata vie machine to machine interface"
+  - name: "Automatic provision of metadata via machine to machine interface"
     guid: "{70F2112F-B845-4d29-AECD-17CD9D7B4B7D}"
     type: "Interface"
     stereotype: "FRAME_Interface"
@@ -24,7 +24,7 @@ elements:
     order: 0
     note: ""
     links:
-      - "Association «use» → Automatic provision of metadata vie machine to machine interface"  # {A882EB72-EB69-4e54-B517-9192FEBEFB02} → {70F2112F-B845-4d29-AECD-17CD9D7B4B7D}
+      - "Association «use» → Automatic provision of metadata via machine to machine interface"  # {A882EB72-EB69-4e54-B517-9192FEBEFB02} → {70F2112F-B845-4d29-AECD-17CD9D7B4B7D}
   - name: "Metadata Provision System"
     guid: "{0DEEF50F-C3BA-4005-A27B-57A30C4C009C}"
     type: "Actor"

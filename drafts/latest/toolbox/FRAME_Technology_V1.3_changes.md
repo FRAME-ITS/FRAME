@@ -7,6 +7,7 @@ Built by `tools/fixes/2026-11-06_mdg_technology_V1.3.py`.
 - new stereotype «delivers value to» (Association) with toolbox entry
 - new stereotype «triggers» (Association) with toolbox entry
 - new stereotype «implements» (Association) with toolbox entry
+- new stereotype «performs» (Association) with toolbox entry
 - Quick Linker: «Component of» → «component of» (3 rules)
 - Quick Linker: «Defines» → «defines» (13 rules)
 - Quick Linker: «instant of» → «instants of» (1 rules)
@@ -19,6 +20,7 @@ Built by `tools/fixes/2026-11-06_mdg_technology_V1.3.py`.
 - Quick Linker reversed: «belongs to» User_Need_Topic → User_Need  becomes  User_Need → User_Need_Topic
 - Quick Linker reversed: «associate» Mission_Statement → ITS_Vision  becomes  ITS_Vision → Mission_Statement
 - Quick Linker removed: «defines» ITS_Service_Added_Value → Stakeholder
+- Quick Linker removed: «defines» Role → Actor
 - Quick Linker added: «component of» Terminator → Terminator
 - Quick Linker added: «component of» High_Level_Function → High_Level_Function
 - Quick Linker added: «component of» Functional_Area → System
@@ -44,7 +46,10 @@ Built by `tools/fixes/2026-11-06_mdg_technology_V1.3.py`.
 - Quick Linker added: «adheres to» Terminator → Agreement
 - Quick Linker added: «owned by» Component → Role
 - Quick Linker added: «adheres to» Data_Object → Specification
-- Quick Linker: Application – 5 rules merged into 4
+- Quick Linker added: «defines» Business_Expectation → ITS_Service
+- Quick Linker added: «owned by» Application → Role
+- Quick Linker added: «performs» Actor → Role
+- Quick Linker: Application – 6 rules merged into 5
 - Quick Linker: ITS_Service – 5 rules merged into 4
 - Quick Linker: ITS_Service_Added_Value – 3 rules merged into 2
 - Quick Linker: ITS_Service_Process – 5 rules merged into 4
@@ -58,4 +63,6 @@ Built by `tools/fixes/2026-11-06_mdg_technology_V1.3.py`.
 - Quick Linker: TDF_LowLevelFunction – 4 rules merged into 3
 - Quick Linker: UML links hidden (_HideUmlLinks) for Functional_Area, High_Level_Function, Low_Level_Function, High_Level_Data_Flow, Low_Level_Data_Flow, Terminator, Datastore, System, User_Need, User_Need_Topic, User_Need_Service, User_Need_Group
 - diagram type FRAME_Diagram: toolbox "FRAME_Toolbox" → "FRAME::FRAME_Toolbox" (1), so the FRAME toolbox opens with the diagram
+- toolbox label FRAME_Component: "Component" → "Sub-system" (1)
+- toolbox label FRAME_Application: "Application" → "Module" (1)
 - model images added from V1.0: 7 (start-page images)

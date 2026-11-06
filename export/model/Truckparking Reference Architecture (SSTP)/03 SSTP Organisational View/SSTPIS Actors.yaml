@@ -13,6 +13,8 @@ elements:
     order: 0
     note: |
       Member States of the European Union
+    links:
+      - "Association «performs» → National Assessment Body"  # {77C9CBD1-187C-40a2-A9BF-C21EAF0C2CD0} → {F4F3F882-DD54-42d6-B45A-ED3C6FB1985E}
   - name: "NAP Administrator"
     guid: "{42F53F52-7779-44b2-85AF-026AE11834EF}"
     type: "Actor"
@@ -22,6 +24,8 @@ elements:
     order: 0
     note: |
       NAP provides help facilities for data publishers to register, add data / metadata.
+    links:
+      - "Association «performs» → NAP Operator (NO)"  # {95D72A93-DF45-4636-BAD2-563F4F9129AA} → {234C8914-6D8F-43fd-B3A7-34118A92FBA3}
   - name: "Park Operator"
     guid: "{298178F1-9F8A-417b-8C32-39AD98C40BEF}"
     type: "Actor"
@@ -31,6 +35,8 @@ elements:
     order: 0
     note: |
       public and private operators of safe secure parking places
+    links:
+      - "Association «performs» → Park Operator"  # {392BD421-7AC9-41a6-A6A3-66703F87A26C} → {F889E587-63FF-4ed3-A1DA-3B5232BCD976}
   - name: "Service Provider"
     guid: "{77671F5E-0E92-443f-B0D1-B5D8C79DBBD8}"
     type: "Actor"
@@ -40,6 +46,8 @@ elements:
     order: 0
     note: |
       ‘service provider’ means any public or private body that provides the information service to users
+    links:
+      - "Association «performs» → Service Provider"  # {84C8E8DD-1739-48d3-B5F4-249508B1B482} → {56E95060-70F8-4023-9557-1EE0A92B253B}
   - name: "User"
     guid: "{95ADC0BD-DDDA-435e-8BAB-3481CF87D1C6}"
     type: "Actor"
@@ -49,3 +57,5 @@ elements:
     order: 0
     note: |
       ‘user’ means any truck or commercial vehicle driver, dispatcher, haulier, traffic management body, or any other body such as cargo owners, insurance companies, road authorities, and police forces. They should obtain the information from the service providers
+    links:
+      - "Association «performs» → User"  # {58B657D0-1249-42ea-B9AE-C57812DCAA5B} → {9887014B-F428-4c13-82F6-E9513B4B18AB}
