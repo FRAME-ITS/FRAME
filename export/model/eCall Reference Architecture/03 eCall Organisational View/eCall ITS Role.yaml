@@ -19,7 +19,6 @@ elements:
       "Role View": ""
     note: ""
     links:
-      - "Association → Third Party Service Provider"  # {4707AB6C-BE39-4e08-BFFB-738DEC1D0C58} → {B95642FE-BB74-481c-9923-249609098B53}
       - "Association «accepted by» → Network Usage Contract"  # {77D2DFC3-0C62-4e35-B87E-AF63CA47734A} → {7798C178-BD30-4830-B7D4-16A395506D5F}
       - "Association «accepted by» → eCall Delegated Regulation Mobile Network Systems"  # {36061676-A498-4773-AD44-D77CD5182F8F} → {1B607CF4-214F-469e-A7F0-5327CE16574D}
       - "Association «defines» → eCall transaction"  # {D074461B-CCF5-498a-90F9-335F36786C4E} → {67CE4961-3F29-4c10-8D52-C5CBEC5BC70D}
@@ -67,7 +66,6 @@ elements:
     note: |
       Optional: Organization which separates real eCalls from other requests from driver.
     links:
-      - "Association → PSAP Operator"  # {F1570283-132B-4f6a-9174-8B5CB7233046} → {C1ADF028-16CF-46c1-B6F5-8C88B29DD830}
       - "Association «accepted by» → eCall additional Service"  # {9D045BF3-5D40-4f3f-BA5C-4F231544C18F} → {7FAE0707-8124-469e-B459-1941A7BD00E7}
       - "Association «defines» → Service Partner"  # {CCC48418-00A8-4913-9A26-67A5C73B907C} → {44E8AD11-AAE1-4778-9C5F-B4DCC4F12477}
   - name: "Vehicle Manufacturer"

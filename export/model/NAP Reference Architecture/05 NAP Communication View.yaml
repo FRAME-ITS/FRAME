@@ -34,4 +34,4 @@ elements:
     order: 0
     note: ""
     links:
-      - "Usage → FRAME_Physical_Data_Flow1"  # {F9F3EF83-D101-4772-BEA5-D749FBE6652A} → {A75E9CBB-5B13-4249-B1EE-F51C9EC0BD9D}
+      - "Association «use» → FRAME_Physical_Data_Flow1"  # {F9F3EF83-D101-4772-BEA5-D749FBE6652A} → {A75E9CBB-5B13-4249-B1EE-F51C9EC0BD9D}

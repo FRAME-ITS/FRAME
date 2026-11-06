@@ -16,7 +16,6 @@ elements:
     links:
       - "Abstraction → Use C-ITS central station for all messages and road network types"  # {0E52A9EE-44B7-47d4-95F4-3FB8190D3743} → {365D5500-D776-4136-91FB-56DB960294CD}
       - "Abstraction «is Type of» → Motorway operators and city public authorities"  # {4B165F8A-25C5-46ca-B924-E3B25BBD02F1} → {2E3B8D29-8DDA-48a6-AA48-C0060AEC0A2D}
-      - "Realisation → Policy Authority"  # {15D87D12-8329-48dc-AF45-6097CEF38E94} → {43FC96D4-0EC2-4547-AF9E-35CF41527D97}
   - name: "C-ITS Roadside node or station"
     guid: "{F6423E2B-6982-413d-9D13-34670A5A9E8E}"
     type: "Actor"
@@ -30,7 +29,6 @@ elements:
       - mobile station, placed in a mobile roadworks trailer or in a road operator traffic manager vehicle.
     links:
       - "Abstraction «is Type of» → Motorway operators and city public authorities"  # {3E8E49B4-14CF-4b6d-8DB3-8BD8DB7026C3} → {2E3B8D29-8DDA-48a6-AA48-C0060AEC0A2D}
-      - "Realisation → Policy Authority"  # {851020BF-43AF-41c7-8C43-619B04D60441} → {43FC96D4-0EC2-4547-AF9E-35CF41527D97}
   - name: "C-ITS central node or station"
     guid: "{BD2B2264-28E9-48c2-B372-8AB31108F105}"
     type: "Actor"

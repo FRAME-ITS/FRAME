@@ -227,8 +227,8 @@ elements:
     note: |
       The ITS Service added value is created when end-users are given access to ITS information within application processes via easily accessible service access points, enabling them to make their own ITS decisions safely, reliably, quickly, and effectively.
     links:
-      - "Association «defines» → Stakeholder"  # {4B664570-26A6-4bef-B256-CFF93DFEA378} → {D8941B60-3EFA-422b-93B5-1F7FDFB18CFF}
       - "Association «defines» → User_Need"  # {F130565C-2FFB-4856-B394-B37D02B40C7E} → {AAD160FE-1FEE-4cea-93C1-A68DDAE1E0CD}
+      - "Association «delivers value to» → Stakeholder"  # {4B664570-26A6-4bef-B256-CFF93DFEA378} → {D8941B60-3EFA-422b-93B5-1F7FDFB18CFF}
   - name: "ITS_Vision"
     guid: "{EEBB0D81-284E-4b97-B8DB-21FC225173BC}"
     type: "Class"

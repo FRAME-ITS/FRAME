@@ -133,7 +133,6 @@ elements:
       - "Association «contains» → MAPEM Message"  # {2EF7E752-3794-4b4f-98A4-DD08339E68CD} → {10037F98-ED5C-4c7a-B3B3-F80B7A711A71}
       - "Association «contains» → SPATEM Message"  # {169EA477-E920-4048-A8B7-8B06182D3CDC} → {08F1F819-81D5-4986-9281-F0D02DE17306}
       - "Association «use» → Roadside standard interface"  # {88E04FBE-D457-4271-A111-8224D44F9CE2} → {70B68EFC-4337-4fa1-BBAA-8875FE692C5B}
-      - "Usage → C-ITS Roadside Station (1 of many)"  # {DE810B25-E642-4c95-8BF0-614FC936394B} → {9A324D4E-58E2-444d-9E05-C572271259F5}
   - name: "FRAME_Physical_Data_Flow5"
     guid: "{B15DEDC4-E1DA-4326-BE19-6EAF316FBCAA}"
     type: "Interface"
@@ -149,7 +148,6 @@ elements:
       - "Association «contains» → MAPEM Message"  # {CAEC2845-3FF0-4014-9B4D-8CCF13FA4A6C} → {10037F98-ED5C-4c7a-B3B3-F80B7A711A71}
       - "Association «contains» → SPATEM Message"  # {11105378-D4A0-4689-95B2-6E688425643A} → {08F1F819-81D5-4986-9281-F0D02DE17306}
       - "Association «use» → In vehicle standard interface"  # {5C263BAD-2E35-4362-808A-B8A45C6C2230} → {CBEC1D64-D92F-41fc-8DF3-4905195D44D4}
-      - "Usage → C-ITS Vehicle Station (1 of many)"  # {BCC2FDE4-7D53-47ed-9417-7D8A6469700D} → {7F84A398-1885-4e5e-9E0C-6E497C2EBBDF}
   - name: "Signal Phase and Timing"
     guid: "{227CCDC3-C4EB-48f1-8D67-08FC3031BAC5}"
     type: "Interface"

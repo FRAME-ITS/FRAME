@@ -49,7 +49,6 @@ elements:
       and the links to the documents at: https://cpoc.jrc.ec.europa.eu/ECTL.html
     links:
       - "Association «defines» → Policy Authority"  # {828D94E7-12CE-4434-8D3C-E9EA85DE9200} → {43FC96D4-0EC2-4547-AF9E-35CF41527D97}
-      - "Dependency → Trust List Manager"  # {04C453C7-CFE6-48d7-B9F4-925FAC875B78} → {B983EA30-7513-47bd-88FA-2F7CE5575F4A}
   - name: "Vehicle Manufacturer and C-ITS station operator"
     guid: "{0F3BBA70-5E3D-4c2a-B68F-961BDC0B1885}"
     type: "Object"

@@ -17030,6 +17030,7 @@ elements:
       - "Association «OUT» → F2.1 Manage Emergencies"  # {50C839E7-2047-4eb3-A982-D46F3F7C55D7} → {8B0A6367-E6D7-47e2-9086-81FB2C700C13}
       - "Association «OUT» → F2.1.2 Manage Emergency Intervention"  # {B2CD0B6E-0B84-4b0a-8806-37B6B347020B} → {C982E490-F99F-42a0-BFE6-1F230467AB2C}
       - "Association «OUT» → F2.1.2.1 Identify and Classify Emergencies"  # {52D2BF18-A225-454e-AE1A-12DAF0936271} → {0CE226C4-3FE8-48de-A914-6ADAD5CABBBA}
+      - "Association «contains» → eCall MSD"  # {087436CB-D507-44f8-A1C5-FBBC552B88D0} → {D07C7A79-526F-4c46-9D16-6C6B148356B2}
   - name: "psef_eCall_data_from_store"
     guid: "{8F7FDE8D-E199-40d5-B785-3FD0876038F6}"
     type: "Interface"

@@ -28,7 +28,7 @@ elements:
     note: |
       The ITS Architecture supports the comparison of sytems and services involved in the EU.
     links:
-      - "Usage «Instantiate» → Member State"  # {0187829F-5BE9-40ec-93EA-B60CB5E63B05} → {F726C13D-F0ED-43f5-8A86-D764CBB69491}
+      - "Association «delivers value to» → Member State"  # {0187829F-5BE9-40ec-93EA-B60CB5E63B05} → {F726C13D-F0ED-43f5-8A86-D764CBB69491}
   - name: "Efficency"
     guid: "{067A7D8D-777E-47ec-8703-04F6A92EFF84}"
     type: "Class"

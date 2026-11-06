@@ -13,7 +13,7 @@ elements:
     order: 0
     note: ""
     links:
-      - "Dependency → Self-declaration within comliance assement process"  # {6632EA15-E83E-41d5-A0C4-EDD823F7868D} → {ED0BE400-2DC9-4b70-9244-686D28656E99}
+      - "Association «triggers» → Self-declaration within comliance assement process"  # {6632EA15-E83E-41d5-A0C4-EDD823F7868D} → {ED0BE400-2DC9-4b70-9244-686D28656E99}
   - name: "Not Accepted SD"
     guid: "{A226A946-1E9C-495c-8CA7-6364661A18E3}"
     type: "Class"
@@ -31,8 +31,8 @@ elements:
     order: 0
     note: ""
     links:
-      - "Dependency → Not Accepted SD"  # {577C8313-3033-43a5-B477-0E5109F3F779} → {A226A946-1E9C-495c-8CA7-6364661A18E3}
-      - "Dependency → SD within Completness Check"  # {FA7991A5-ADFE-43e7-A405-BB8BF26D2728} → {10691DD9-32C2-4ef5-B89F-D12BE7A3F183}
+      - "Association «triggers» → Not Accepted SD"  # {577C8313-3033-43a5-B477-0E5109F3F779} → {A226A946-1E9C-495c-8CA7-6364661A18E3}
+      - "Association «triggers» → SD within Completness Check"  # {FA7991A5-ADFE-43e7-A405-BB8BF26D2728} → {10691DD9-32C2-4ef5-B89F-D12BE7A3F183}
   - name: "Rejected due to sontact details check"
     guid: "{428C2621-12D1-438c-BD2B-28EA4B67CE7B}"
     type: "Class"
@@ -42,8 +42,8 @@ elements:
     order: 0
     note: ""
     links:
-      - "Dependency → Not Accepted SD"  # {F796CA91-C544-43c5-83C8-3E73D0D317C5} → {A226A946-1E9C-495c-8CA7-6364661A18E3}
-      - "Dependency → SD within contact check procedure"  # {174EB18C-55FF-41da-AF82-2244AB49A24E} → {70C7A260-AA12-4e1d-B3C4-91D01E4B377A}
+      - "Association «triggers» → Not Accepted SD"  # {F796CA91-C544-43c5-83C8-3E73D0D317C5} → {A226A946-1E9C-495c-8CA7-6364661A18E3}
+      - "Association «triggers» → SD within contact check procedure"  # {174EB18C-55FF-41da-AF82-2244AB49A24E} → {70C7A260-AA12-4e1d-B3C4-91D01E4B377A}
   - name: "SD could not be revalidated"
     guid: "{7E2606A4-065C-4a0f-B00A-1DDB94A7EBFA}"
     type: "Class"
@@ -53,7 +53,7 @@ elements:
     order: 0
     note: ""
     links:
-      - "Dependency → SD inactivated"  # {B6AE8429-61E8-4d3f-BF62-B1E67DE543A4} → {D9F3364C-1A82-4d90-8D7F-EF57FA4E60B6}
+      - "Association «triggers» → SD inactivated"  # {B6AE8429-61E8-4d3f-BF62-B1E67DE543A4} → {D9F3364C-1A82-4d90-8D7F-EF57FA4E60B6}
   - name: "SD didn't pass compliance assement"
     guid: "{368086E6-09E5-43c3-9327-AC7600477E13}"
     type: "Class"
@@ -63,8 +63,8 @@ elements:
     order: 0
     note: ""
     links:
-      - "Dependency → SD is under appeal"  # {C3F16FFD-358D-4e2a-8E64-1668C44509D1} → {34E25076-A094-4227-8876-80E7D6202806}
-      - "Dependency → Self-declaration is within Non-Compliance process"  # {1602B630-9A0C-48b5-A340-6A01EE64BCA9} → {A8B262D2-DDDB-4234-8D31-2B6803F4AF68}
+      - "Association «triggers» → SD is under appeal"  # {C3F16FFD-358D-4e2a-8E64-1668C44509D1} → {34E25076-A094-4227-8876-80E7D6202806}
+      - "Association «triggers» → Self-declaration is within Non-Compliance process"  # {1602B630-9A0C-48b5-A340-6A01EE64BCA9} → {A8B262D2-DDDB-4234-8D31-2B6803F4AF68}
   - name: "SD inactivated"
     guid: "{D9F3364C-1A82-4d90-8D7F-EF57FA4E60B6}"
     type: "Class"
@@ -74,7 +74,7 @@ elements:
     order: 0
     note: ""
     links:
-      - "Dependency → SD is under appeal"  # {9FF5563F-D704-45dc-A14A-9D7A94BD1F6F} → {E66F6793-E261-4862-AE44-1A4CBD4556E8}
+      - "Association «triggers» → SD is under appeal"  # {9FF5563F-D704-45dc-A14A-9D7A94BD1F6F} → {E66F6793-E261-4862-AE44-1A4CBD4556E8}
   - name: "SD is under appeal"
     guid: "{34E25076-A094-4227-8876-80E7D6202806}"
     type: "Class"
@@ -84,7 +84,7 @@ elements:
     order: 0
     note: ""
     links:
-      - "Dependency → Self-declaration within comliance assement process"  # {03590A61-BC5A-4491-B506-ECF6307D4587} → {ED0BE400-2DC9-4b70-9244-686D28656E99}
+      - "Association «triggers» → Self-declaration within comliance assement process"  # {03590A61-BC5A-4491-B506-ECF6307D4587} → {ED0BE400-2DC9-4b70-9244-686D28656E99}
   - name: "SD is under appeal"
     guid: "{E66F6793-E261-4862-AE44-1A4CBD4556E8}"
     type: "Class"
@@ -94,7 +94,7 @@ elements:
     order: 0
     note: ""
     links:
-      - "Dependency → Self-declaration is within Non-Compliance process"  # {3075382A-9AD5-489c-A41B-9A5A5B97D188} → {A8B262D2-DDDB-4234-8D31-2B6803F4AF68}
+      - "Association «triggers» → Self-declaration is within Non-Compliance process"  # {3075382A-9AD5-489c-A41B-9A5A5B97D188} → {A8B262D2-DDDB-4234-8D31-2B6803F4AF68}
   - name: "SD is valid for next compliance assessment selection"
     guid: "{F59E6F9B-6647-4389-A948-4A958BBDDF90}"
     type: "Class"
@@ -104,7 +104,7 @@ elements:
     order: 0
     note: ""
     links:
-      - "Dependency → Accepted and stored self-declaration"  # {7E088D10-83CD-4680-A0BB-D7B8D14FBBE3} → {F6AD5280-746D-47a2-97EB-132D8A0FF4AC}
+      - "Association «triggers» → Accepted and stored self-declaration"  # {7E088D10-83CD-4680-A0BB-D7B8D14FBBE3} → {F6AD5280-746D-47a2-97EB-132D8A0FF4AC}
   - name: "SD passed compliance accessment"
     guid: "{F92A1B2F-89C6-4e57-A2BD-8960465435CF}"
     type: "Class"
@@ -114,7 +114,7 @@ elements:
     order: 0
     note: ""
     links:
-      - "Dependency → SD is valid for next compliance assessment selection"  # {4D028046-39DF-4535-9970-BFC0F047AB8D} → {F59E6F9B-6647-4389-A948-4A958BBDDF90}
+      - "Association «triggers» → SD is valid for next compliance assessment selection"  # {4D028046-39DF-4535-9970-BFC0F047AB8D} → {F59E6F9B-6647-4389-A948-4A958BBDDF90}
   - name: "SD within Completness Check"
     guid: "{10691DD9-32C2-4ef5-B89F-D12BE7A3F183}"
     type: "Class"
@@ -124,8 +124,8 @@ elements:
     order: 0
     note: ""
     links:
-      - "Dependency → Accepted and stored self-declaration"  # {D3B4BE66-7B17-436b-BA70-CAA1BAEDAC34} → {F6AD5280-746D-47a2-97EB-132D8A0FF4AC}
-      - "Dependency → Rejected due to incompletness check"  # {DE8CB75F-A7FC-464c-99C9-9E26E2092AF8} → {F41152B9-9434-400b-9AD5-58B75CA06FDB}
+      - "Association «triggers» → Accepted and stored self-declaration"  # {D3B4BE66-7B17-436b-BA70-CAA1BAEDAC34} → {F6AD5280-746D-47a2-97EB-132D8A0FF4AC}
+      - "Association «triggers» → Rejected due to incompletness check"  # {DE8CB75F-A7FC-464c-99C9-9E26E2092AF8} → {F41152B9-9434-400b-9AD5-58B75CA06FDB}
   - name: "SD within contact check procedure"
     guid: "{70C7A260-AA12-4e1d-B3C4-91D01E4B377A}"
     type: "Class"
@@ -135,8 +135,8 @@ elements:
     order: 0
     note: ""
     links:
-      - "Dependency → Rejected due to sontact details check"  # {025967C3-7447-4b75-AEA8-989DD94F3374} → {428C2621-12D1-438c-BD2B-28EA4B67CE7B}
-      - "Dependency → SD within Completness Check"  # {1D5ABFFB-B9B6-47ba-8EF5-D15EF099EFAF} → {10691DD9-32C2-4ef5-B89F-D12BE7A3F183}
+      - "Association «triggers» → Rejected due to sontact details check"  # {025967C3-7447-4b75-AEA8-989DD94F3374} → {428C2621-12D1-438c-BD2B-28EA4B67CE7B}
+      - "Association «triggers» → SD within Completness Check"  # {1D5ABFFB-B9B6-47ba-8EF5-D15EF099EFAF} → {10691DD9-32C2-4ef5-B89F-D12BE7A3F183}
   - name: "Self-declaration is within Non-Compliance process"
     guid: "{A8B262D2-DDDB-4234-8D31-2B6803F4AF68}"
     type: "Class"
@@ -146,8 +146,8 @@ elements:
     order: 0
     note: ""
     links:
-      - "Dependency → SD could not be revalidated"  # {58675E9E-C757-4570-BC87-CF61897333BF} → {7E2606A4-065C-4a0f-B00A-1DDB94A7EBFA}
-      - "Dependency → Self-declaration valid and stored"  # {1A476D35-F4BC-4b3c-8FE0-97D4B2006A29} → {A354892E-9CB6-4ae0-A468-51CDD570B10F}
+      - "Association «triggers» → SD could not be revalidated"  # {58675E9E-C757-4570-BC87-CF61897333BF} → {7E2606A4-065C-4a0f-B00A-1DDB94A7EBFA}
+      - "Association «triggers» → Self-declaration valid and stored"  # {1A476D35-F4BC-4b3c-8FE0-97D4B2006A29} → {A354892E-9CB6-4ae0-A468-51CDD570B10F}
   - name: "Self-declaration valid and stored"
     guid: "{A354892E-9CB6-4ae0-A468-51CDD570B10F}"
     type: "Class"
@@ -157,7 +157,7 @@ elements:
     order: 0
     note: ""
     links:
-      - "Dependency → Accepted and stored self-declaration"  # {0C05D85F-E652-42a6-8938-0C4A812995F7} → {F6AD5280-746D-47a2-97EB-132D8A0FF4AC}
+      - "Association «triggers» → Accepted and stored self-declaration"  # {0C05D85F-E652-42a6-8938-0C4A812995F7} → {F6AD5280-746D-47a2-97EB-132D8A0FF4AC}
   - name: "Self-declaration within comliance assement process"
     guid: "{ED0BE400-2DC9-4b70-9244-686D28656E99}"
     type: "Class"
@@ -167,8 +167,8 @@ elements:
     order: 0
     note: ""
     links:
-      - "Dependency → SD didn't pass compliance assement"  # {A9CBEC46-5094-4c3c-9EDE-EE49DFD33B65} → {368086E6-09E5-43c3-9327-AC7600477E13}
-      - "Dependency → SD passed compliance accessment"  # {7E92BDF5-8B9E-4d4f-B494-7EFEA282D3BA} → {F92A1B2F-89C6-4e57-A2BD-8960465435CF}
+      - "Association «triggers» → SD didn't pass compliance assement"  # {A9CBEC46-5094-4c3c-9EDE-EE49DFD33B65} → {368086E6-09E5-43c3-9327-AC7600477E13}
+      - "Association «triggers» → SD passed compliance accessment"  # {7E92BDF5-8B9E-4d4f-B494-7EFEA282D3BA} → {F92A1B2F-89C6-4e57-A2BD-8960465435CF}
   - name: "Submitted Draft self-declaration"
     guid: "{A873CB1D-4170-4716-91F1-41D6366B835C}"
     type: "Class"
@@ -178,4 +178,4 @@ elements:
     order: 0
     note: ""
     links:
-      - "Dependency → SD within contact check procedure"  # {F63B01CD-D907-4de5-8518-4F18D9C3022D} → {70C7A260-AA12-4e1d-B3C4-91D01E4B377A}
+      - "Association «triggers» → SD within contact check procedure"  # {F63B01CD-D907-4de5-8518-4F18D9C3022D} → {70C7A260-AA12-4e1d-B3C4-91D01E4B377A}

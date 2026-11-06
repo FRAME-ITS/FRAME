@@ -15,7 +15,6 @@ elements:
       By providing the central elements of the EU CCMS System, the secure operations of C-ITS systems in Europe are supported.
     links:
       - "Abstraction «is Type of» → European Commision"  # {ED145BA9-E8CD-4546-A504-6D156B006D3A} → {B9CE1396-B9B1-4962-91B3-E8C98AFCCA1D}
-      - "Realisation → Policy Authority"  # {A22EBBA2-0DC3-4e81-ABC1-A227A261F705} → {43FC96D4-0EC2-4547-AF9E-35CF41527D97}
       - "Realisation → Secure and reliable data communication infrastructure for Europe"  # {A99E4121-8BD4-4e4d-9C9B-1DED565989DB} → {75335A61-BA26-4372-80C5-8FAF2B1B8BB1}
   - name: "EU Member states, public authorities"
     guid: "{07E0D60C-2D04-4079-A5AF-99126D64B7DF}"

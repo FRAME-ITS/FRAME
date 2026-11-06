@@ -37,5 +37,3 @@ elements:
       4 - IVIM related
       5 - SPAT/MAP related
       6 -for future messages to be defined
-    links:
-      - "Abstraction → 11.1.6.1"  # {03E86837-25C7-43f1-8FA1-B98E86BDD048} → {A268BBBA-79CC-4032-9688-CF6E1E8D1590}

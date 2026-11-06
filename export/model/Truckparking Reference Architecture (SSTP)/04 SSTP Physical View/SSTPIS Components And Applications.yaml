@@ -16,8 +16,10 @@ elements:
       "Standrdization": ""
     note: ""
     links:
-      - "Association «IN» → fNAP-tParkCent"  # {CABABF47-3605-4a6d-8CCE-1CB4C6C5CA40} → {A74C9B05-3821-45be-A374-113860628790}
-      - "Association «IN» → fNAP-tSerPro"  # {6F873446-A798-4a86-B467-70039869C057} → {687ACDCC-F476-4916-98BC-DDDA166B98F8}
+      - "Association «use» → fNAP-tParkCent"  # {CABABF47-3605-4a6d-8CCE-1CB4C6C5CA40} → {A74C9B05-3821-45be-A374-113860628790}
+      - "Association «use» → fNAP-tSerPro"  # {6F873446-A798-4a86-B467-70039869C057} → {687ACDCC-F476-4916-98BC-DDDA166B98F8}
+      - "Association «use» → fParkCet-tNAP"  # {7F7CC4E6-B6B1-4c38-8602-EE7B5995D728} → {4C787B39-8BD3-49d4-951D-80A965AE782F}
+      - "Association «use» → fSerPro-tNAP"  # {6515DD1C-1969-4a3a-8159-6B2C3492B54A} → {3A72D078-D04E-42c7-B096-BB906E2CC828}
   - name: "NAP Content Provider Application"
     guid: "{9D9DEAFB-7B63-41bb-B460-EDEF2367FB6C}"
     type: "Object"
@@ -29,11 +31,11 @@ elements:
       "App_Environment": ""
     note: ""
     links:
+      - "Association «contains» → F3.6.2 Manage Registrations and Provide Authorisation Service"  # {833FCEE5-5ABE-4b90-A0EB-D49BDF30119F} → {B032435E-6A52-4920-97B0-C13BB3E8BFC7}
+      - "Association «contains» → F3.6.3 Manage Content Providers Metadata"  # {BF99B676-CCC8-4f12-BD8F-262D3D25E997} → {B623B347-AA95-44be-9043-55050E3CFC41}
+      - "Association «contains» → F3.6.5 Provide NAP User Support"  # {7D74F891-A331-4b27-8310-8AE2BCD2C40B} → {0CFE2A7A-AD32-4068-BDC5-AF0F18B6D99B}
+      - "Association «contains» → F3.6.8 Manage Data Input"  # {CF310B5A-6E1F-4f4f-84EF-008C7AA7A71A} → {5B4F357F-A164-4a3f-8909-C370F4C0615F}
       - "Association «defines» → NAP Content Provider Interface"  # {956F549B-8F29-4921-B2AB-D2872F760F52} → {3B50B232-DAE0-40af-8FF0-FDCE34205EBE}
-      - "Usage → F3.6.2 Manage Registrations and Provide Authorisation Service"  # {833FCEE5-5ABE-4b90-A0EB-D49BDF30119F} → {B032435E-6A52-4920-97B0-C13BB3E8BFC7}
-      - "Usage → F3.6.3 Manage Content Providers Metadata"  # {BF99B676-CCC8-4f12-BD8F-262D3D25E997} → {B623B347-AA95-44be-9043-55050E3CFC41}
-      - "Usage → F3.6.5 Provide NAP User Support"  # {7D74F891-A331-4b27-8310-8AE2BCD2C40B} → {0CFE2A7A-AD32-4068-BDC5-AF0F18B6D99B}
-      - "Usage → F3.6.8 Manage Data Input"  # {CF310B5A-6E1F-4f4f-84EF-008C7AA7A71A} → {5B4F357F-A164-4a3f-8909-C370F4C0615F}
   - name: "Park Management Center"
     guid: "{6E45DF73-1572-42d2-AF0D-CFC9275BDF26}"
     type: "Component"
@@ -46,8 +48,10 @@ elements:
       "Standrdization": ""
     note: ""
     links:
-      - "Association «IN» → fParkCent-tParkEq"  # {7B970CDE-86E9-4a87-B7D7-FDC1D0A40249} → {54A3522B-DBAB-4524-B4F4-C9D69BECB5E5}
-      - "Association «IN» → fParkCet-tNAP"  # {0B04B6CF-9A9E-483c-998E-0BB6F4E8A896} → {4C787B39-8BD3-49d4-951D-80A965AE782F}
+      - "Association «use» → fNAP-tParkCent"  # {D18FB952-CB00-40fd-A4F1-8255E9861B28} → {A74C9B05-3821-45be-A374-113860628790}
+      - "Association «use» → fParkCent-tParkEq"  # {7B970CDE-86E9-4a87-B7D7-FDC1D0A40249} → {54A3522B-DBAB-4524-B4F4-C9D69BECB5E5}
+      - "Association «use» → fParkCet-tNAP"  # {0B04B6CF-9A9E-483c-998E-0BB6F4E8A896} → {4C787B39-8BD3-49d4-951D-80A965AE782F}
+      - "Association «use» → fParkEq-tParkCent"  # {4FF0BCD3-4E3D-495b-B219-082CBDC8564C} → {58B6A29A-5D03-4cbf-B262-A9986BBBAFE2}
   - name: "Park Operator Application"
     guid: "{61B85395-4759-4f77-83E2-C9E902E8C2B4}"
     type: "Object"
@@ -59,10 +63,9 @@ elements:
       "App_Environment": ""
     note: ""
     links:
+      - "Association «contains» → F3.1.5.4 Provide Operator Interface to Manage Service Areas"  # {B28F9912-0FA5-4543-BFCE-7FB4FE513C0A} → {ED74FF4E-DBB2-4eeb-AF2F-23B358DCE4D4}
       - "Association «defines» → Park Area Equipment - Park Operator Interface"  # {581EB53C-386F-4e71-8298-65263A2481CF} → {86396C30-47CC-480e-A8D1-D07BE1ACE308}
       - "Association «hosted by» → Park Management Center"  # {3D5E8F9D-FAE9-4b44-A45F-DB0A23AF4043} → {6E45DF73-1572-42d2-AF0D-CFC9275BDF26}
-      - "Usage → F3.1.5.4 Provide Operator Interface to Manage Service Areas"  # {5E0A1127-6891-4002-B371-CD447CA18C04} → {ED74FF4E-DBB2-4eeb-AF2F-23B358DCE4D4}
-      - "Usage → F3.1.5.4 Provide Operator Interface to Manage Service Areas"  # {B28F9912-0FA5-4543-BFCE-7FB4FE513C0A} → {ED74FF4E-DBB2-4eeb-AF2F-23B358DCE4D4}
   - name: "Parking Area Equipment"
     guid: "{AD0930DA-45BB-4e9e-B704-094B15EE8ECC}"
     type: "Component"
@@ -75,8 +78,10 @@ elements:
       "Standrdization": ""
     note: ""
     links:
-      - "Association «IN» → fParkEq-tParkCent"  # {84CCB076-ABF5-4f04-A1E8-ED1DF0D144D7} → {58B6A29A-5D03-4cbf-B262-A9986BBBAFE2}
-      - "Association «IN» → fParkEq-tSerPro"  # {4C7636F4-CED2-4399-993B-ABB550038690} → {8B367654-53D2-404d-9769-4CBBEFB18186}
+      - "Association «use» → fParkCent-tParkEq"  # {A35F4288-C800-460a-A2FD-BC3B5A89419F} → {54A3522B-DBAB-4524-B4F4-C9D69BECB5E5}
+      - "Association «use» → fParkEq-tParkCent"  # {84CCB076-ABF5-4f04-A1E8-ED1DF0D144D7} → {58B6A29A-5D03-4cbf-B262-A9986BBBAFE2}
+      - "Association «use» → fParkEq-tSerPro"  # {4C7636F4-CED2-4399-993B-ABB550038690} → {8B367654-53D2-404d-9769-4CBBEFB18186}
+      - "Association «use» → fSerPro-tParkEq"  # {9E9DC3D0-FC2F-4233-BEFF-2925F77EFBA0} → {60EA9D83-D040-413d-BA8B-D2A585D32E1E}
   - name: "Personal Information Device / In Vehicle Component"
     guid: "{FA430332-D5C4-44f4-941F-363E1D17521B}"
     type: "Component"
@@ -89,7 +94,8 @@ elements:
       "Standrdization": ""
     note: ""
     links:
-      - "Association «IN» → fPerDev-tSerPro"  # {063CC423-279D-47ae-94B3-396699934794} → {2BDA9EBA-F9A5-40a3-B5E9-9D1B6044CD30}
+      - "Association «use» → fPerDev-tSerPro"  # {063CC423-279D-47ae-94B3-396699934794} → {2BDA9EBA-F9A5-40a3-B5E9-9D1B6044CD30}
+      - "Association «use» → fSerPro-tPerDev"  # {D27A615A-C6AF-4cbb-90B7-1E72A574B5D7} → {B2CBF2BA-60DC-4931-A79D-A2FE60469814}
       - "Usage → Geographic Information Provider"  # {EB0F3C18-BA80-4fe8-BDDD-C7463B4A4ADF} → {35686FDB-AF89-41d3-B16B-2506BC4F27E1}
       - "Usage → Location Data Source"  # {BFCE4D51-AB5B-4b18-BF44-1A0579FFBC31} → {F5718DD4-62B6-430b-98EE-99E0720703B3}
   - name: "SSTPIS End User Application"
@@ -103,10 +109,10 @@ elements:
       "App_Environment": ""
     note: ""
     links:
+      - "Association «contains» → F5.14.1 Provide Driver Interface for Trip Planning"  # {AC113966-AE1D-40c8-A4AE-0EE4BC11A1F9} → {31A36D82-88DF-43bb-9D3A-BF5F2B9FECEF}
+      - "Association «contains» → F5.14.12.2 Find Suitable Rest Areas"  # {F706B57A-A296-456f-9E2A-C196A33E453F} → {82F75F74-2552-4594-8875-37A215852C9F}
       - "Association «defines» → Service Provider - Personal Device Interface"  # {48DC296D-AAFA-4285-B8A7-912F6BC6704D} → {4F2B4690-DEA5-4f66-A37E-EBD2E0ECDE30}
       - "Association «hosted by» → Personal Information Device / In Vehicle Component"  # {968C5128-08BE-4104-96AC-6A9322042FC9} → {FA430332-D5C4-44f4-941F-363E1D17521B}
-      - "Usage → F5.14.1 Provide Driver Interface for Trip Planning"  # {AC113966-AE1D-40c8-A4AE-0EE4BC11A1F9} → {31A36D82-88DF-43bb-9D3A-BF5F2B9FECEF}
-      - "Usage → F5.14.12.2 Find Suitable Rest Areas"  # {F706B57A-A296-456f-9E2A-C196A33E453F} → {82F75F74-2552-4594-8875-37A215852C9F}
   - name: "Service Provider Main Application"
     guid: "{4A7F8C7C-9CEC-47d8-815F-7CBA3572E4FA}"
     type: "Object"
@@ -118,17 +124,16 @@ elements:
       "App_Environment": ""
     note: ""
     links:
+      - "Association «contains» → D5.4 Vehicle Trip Plans Data"  # {26CB9234-9CEA-45a5-B126-622F3168318E} → {D2766B6C-BE45-4f36-857D-C34AA6BA7DCA}
+      - "Association «contains» → F5.14.1 Provide Driver Interface for Trip Planning"  # {0212A7BF-D824-446c-9B2D-D1A994CF5349} → {31A36D82-88DF-43bb-9D3A-BF5F2B9FECEF}
+      - "Association «contains» → F5.14.13 Monitor Vehicle Trip Plan"  # {152982A8-343F-4875-9745-1CA7629B208E} → {DCC203C7-2676-497a-8CD3-9E5FDF0C9A17}
+      - "Association «contains» → F5.14.17 Prepare and Amend Trip Plans"  # {5C64D3F4-4108-47e3-A15D-35CD3CF570D0} → {635F7A9D-F419-43a6-A58C-CD756C0AA250}
+      - "Association «contains» → F5.14.4 Implement Vehicle Trip Plan and Track Vehicle"  # {0F1489D7-67B3-47cf-81CC-590573C1DE8F} → {9779C21E-F3B1-4389-BE4B-AD3FB28B3BF6}
+      - "Association «contains» → F5.14.7 Manage Store of Vehicle Trip Plans"  # {9DAF2E84-1257-4c46-9537-229DA2D87FFB} → {134BBE01-7F43-4f1f-8CF8-00003820AA47}
+      - "Association «contains» → F6.5.3.9 Plan Trip Details"  # {5CCADE9E-B870-45e2-BF09-399D9B76D1C6} → {2AB906E1-0864-4458-9917-F8388133E990}
       - "Association «defines» → Parking Area - Sevice Provider Interface"  # {DA33EA4A-5F3D-43b8-B2A2-728118448F38} → {245C2C82-B2DC-4296-9883-5C3056A9E479}
       - "Association «defines» → Service Provider - Personal Device Interface"  # {A72C23EF-5CC0-4c29-A1E3-C14D78954290} → {4F2B4690-DEA5-4f66-A37E-EBD2E0ECDE30}
       - "Association «hosted by» → Personal Information Device / In Vehicle Component"  # {C99F4D3B-E7D8-4614-A884-E4AF74905FCE} → {FA430332-D5C4-44f4-941F-363E1D17521B}
-      - "Usage → D5.4 Vehicle Trip Plans Data"  # {26CB9234-9CEA-45a5-B126-622F3168318E} → {D2766B6C-BE45-4f36-857D-C34AA6BA7DCA}
-      - "Usage → F5.14.1 Provide Driver Interface for Trip Planning"  # {0212A7BF-D824-446c-9B2D-D1A994CF5349} → {31A36D82-88DF-43bb-9D3A-BF5F2B9FECEF}
-      - "Usage → F5.14.13 Monitor Vehicle Trip Plan"  # {152982A8-343F-4875-9745-1CA7629B208E} → {DCC203C7-2676-497a-8CD3-9E5FDF0C9A17}
-      - "Usage → F5.14.17 Prepare and Amend Trip Plans"  # {410A10A0-8EF2-41a8-82B2-B2F0F71FCCFB} → {635F7A9D-F419-43a6-A58C-CD756C0AA250}
-      - "Usage → F5.14.17 Prepare and Amend Trip Plans"  # {5C64D3F4-4108-47e3-A15D-35CD3CF570D0} → {635F7A9D-F419-43a6-A58C-CD756C0AA250}
-      - "Usage → F5.14.4 Implement Vehicle Trip Plan and Track Vehicle"  # {0F1489D7-67B3-47cf-81CC-590573C1DE8F} → {9779C21E-F3B1-4389-BE4B-AD3FB28B3BF6}
-      - "Usage → F5.14.7 Manage Store of Vehicle Trip Plans"  # {9DAF2E84-1257-4c46-9537-229DA2D87FFB} → {134BBE01-7F43-4f1f-8CF8-00003820AA47}
-      - "Usage → F6.5.3.9 Plan Trip Details"  # {5CCADE9E-B870-45e2-BF09-399D9B76D1C6} → {2AB906E1-0864-4458-9917-F8388133E990}
   - name: "Service Provider NAP Application"
     guid: "{B65CA88A-A210-4128-A40B-FAEAB0476D73}"
     type: "Object"
@@ -140,10 +145,10 @@ elements:
       "App_Environment": ""
     note: ""
     links:
+      - "Association «contains» → F3.6.4 Manage Metadata Retrieval"  # {467B7DAB-2B51-46b3-AF46-0F465F1C04D5} → {D9EFBB62-DD12-4dd1-A835-DF560A82A1AD}
+      - "Association «contains» → F3.6.5 Provide NAP User Support"  # {754D76B9-3586-466c-9D3A-238386D3FF5A} → {0CFE2A7A-AD32-4068-BDC5-AF0F18B6D99B}
+      - "Association «contains» → F3.6.9 Manage NAP Data Retrieval"  # {DEB458C8-89A3-441f-B3E4-1DC6F44F47D6} → {A3764B72-97E2-400c-81B8-C945964F9E0D}
       - "Association «defines» → NAP Content Consumer Interface"  # {7722C52A-643E-4f09-9AA3-5C15A250F9B8} → {20BD348A-7AAF-4123-9F93-A1112E750F64}
-      - "Usage → F3.6.4 Manage Metadata Retrieval"  # {467B7DAB-2B51-46b3-AF46-0F465F1C04D5} → {D9EFBB62-DD12-4dd1-A835-DF560A82A1AD}
-      - "Usage → F3.6.5 Provide NAP User Support"  # {754D76B9-3586-466c-9D3A-238386D3FF5A} → {0CFE2A7A-AD32-4068-BDC5-AF0F18B6D99B}
-      - "Usage → F3.6.9 Manage NAP Data Retrieval"  # {DEB458C8-89A3-441f-B3E4-1DC6F44F47D6} → {A3764B72-97E2-400c-81B8-C945964F9E0D}
   - name: "EU NAP Central Application"
     guid: "{DFB1B518-8950-49a9-85CA-95D7174C25BD}"
     type: "Object"
@@ -155,19 +160,19 @@ elements:
       "App_Environment": ""
     note: ""
     links:
+      - "Association «contains» → D3.15 NAP Metadata"  # {DD06EA9C-D39C-4ebe-A7BF-AF2F30A2FFB8} → {7A7B38A3-E097-4a2f-AEB6-7C204435B35E}
+      - "Association «contains» → D3.17 NAP Users"  # {E0287584-FE93-4a98-84D0-9F6472E9B0D8} → {DEABFE3A-CF27-4232-83E9-D03599E58AC3}
+      - "Association «contains» → D3.18 NAP Data"  # {6662D66A-94DB-40c4-A416-F1FC992B6AF7} → {B1156E38-B7ED-4dcd-BD87-C003C660A85A}
+      - "Association «contains» → F3.6.1 Manage NAP Metadata Repository"  # {07E07B63-4185-4e23-AE51-EBA9071AD351} → {FC985F0E-26B3-41e8-847E-A71AA3290132}
+      - "Association «contains» → F3.6.2 Manage Registrations and Provide Authorisation Service"  # {112A57A8-52BA-4762-9E4A-FEB5AB30DAB9} → {B032435E-6A52-4920-97B0-C13BB3E8BFC7}
+      - "Association «contains» → F3.6.3 Manage Content Providers Metadata"  # {87878519-7BEA-4ceb-BA73-30ADFC57D40B} → {B623B347-AA95-44be-9043-55050E3CFC41}
+      - "Association «contains» → F3.6.4 Manage Metadata Retrieval"  # {297806B6-E053-4d6c-BC9E-BA9B6A5C54F6} → {D9EFBB62-DD12-4dd1-A835-DF560A82A1AD}
+      - "Association «contains» → F3.6.5 Provide NAP User Support"  # {275883D3-D67C-4c42-A3CB-3C10FA2A0D34} → {0CFE2A7A-AD32-4068-BDC5-AF0F18B6D99B}
+      - "Association «contains» → F3.6.8 Manage Data Input"  # {A0F78C7C-A55D-4041-AD0E-48554F709CDB} → {5B4F357F-A164-4a3f-8909-C370F4C0615F}
+      - "Association «contains» → F3.6.9 Manage NAP Data Retrieval"  # {BC431C91-1B8C-4be2-9B44-9CFB9C39A507} → {A3764B72-97E2-400c-81B8-C945964F9E0D}
       - "Association «defines» → NAP Content Consumer Interface"  # {57338F89-4241-4901-8A9B-A8246EF7F277} → {20BD348A-7AAF-4123-9F93-A1112E750F64}
       - "Association «defines» → NAP Content Provider Interface"  # {4405242F-E65F-428f-9EB5-A5B015451D6F} → {3B50B232-DAE0-40af-8FF0-FDCE34205EBE}
       - "Association «hosted by» → EU NAP Central"  # {300B030C-6EF0-48eb-ADF0-7C61989A9EF1} → {B347CC5F-562A-4cf3-81D9-8750F1833797}
-      - "Usage → D3.15 NAP Metadata"  # {DD06EA9C-D39C-4ebe-A7BF-AF2F30A2FFB8} → {7A7B38A3-E097-4a2f-AEB6-7C204435B35E}
-      - "Usage → D3.17 NAP Users"  # {E0287584-FE93-4a98-84D0-9F6472E9B0D8} → {DEABFE3A-CF27-4232-83E9-D03599E58AC3}
-      - "Usage → D3.18 NAP Data"  # {6662D66A-94DB-40c4-A416-F1FC992B6AF7} → {B1156E38-B7ED-4dcd-BD87-C003C660A85A}
-      - "Usage → F3.6.1 Manage NAP Metadata Repository"  # {07E07B63-4185-4e23-AE51-EBA9071AD351} → {FC985F0E-26B3-41e8-847E-A71AA3290132}
-      - "Usage → F3.6.2 Manage Registrations and Provide Authorisation Service"  # {112A57A8-52BA-4762-9E4A-FEB5AB30DAB9} → {B032435E-6A52-4920-97B0-C13BB3E8BFC7}
-      - "Usage → F3.6.3 Manage Content Providers Metadata"  # {87878519-7BEA-4ceb-BA73-30ADFC57D40B} → {B623B347-AA95-44be-9043-55050E3CFC41}
-      - "Usage → F3.6.4 Manage Metadata Retrieval"  # {297806B6-E053-4d6c-BC9E-BA9B6A5C54F6} → {D9EFBB62-DD12-4dd1-A835-DF560A82A1AD}
-      - "Usage → F3.6.5 Provide NAP User Support"  # {275883D3-D67C-4c42-A3CB-3C10FA2A0D34} → {0CFE2A7A-AD32-4068-BDC5-AF0F18B6D99B}
-      - "Usage → F3.6.8 Manage Data Input"  # {A0F78C7C-A55D-4041-AD0E-48554F709CDB} → {5B4F357F-A164-4a3f-8909-C370F4C0615F}
-      - "Usage → F3.6.9 Manage NAP Data Retrieval"  # {BC431C91-1B8C-4be2-9B44-9CFB9C39A507} → {A3764B72-97E2-400c-81B8-C945964F9E0D}
   - name: "Park Area Monitoring Application"
     guid: "{CA900076-ABDD-4e6b-82A3-087F8825C88B}"
     type: "Object"
@@ -179,14 +184,14 @@ elements:
       "App_Environment": ""
     note: ""
     links:
+      - "Association «contains» → D3.10 Inter-urban Service Area Data"  # {17557823-2824-404f-A96D-589D041E0BAD} → {ACD78063-0815-45b6-BA8F-22C9D3336EAD}
+      - "Association «contains» → F3.1.5.1 Monitor Service Area Vehicle Occupation"  # {0380AB2F-08C6-4715-B5FF-DD69D69E0299} → {0E5602CA-D10F-4daa-91FB-20F4304238A3}
+      - "Association «contains» → F3.1.5.10 Manage Rest Area Usage"  # {E9A9DCD1-D79E-4f3b-92A1-5818BA6BDCF6} → {BD05A124-5086-481a-8850-7D5AC404685F}
+      - "Association «contains» → F3.1.5.2 Calculate Service Area Occupancy and Status"  # {A4CCC852-881D-4f2e-AF56-118C5BEF07F2} → {462B415A-6B6D-4fd2-B79A-6CBA18BC3CEE}
+      - "Association «contains» → F3.1.5.4 Provide Operator Interface to Manage Service Areas"  # {83D2BC82-EE28-4575-9078-B527DEAD2C84} → {ED74FF4E-DBB2-4eeb-AF2F-23B358DCE4D4}
+      - "Association «contains» → F3.1.5.5 Manage Inter-Urban Service Area Data Store"  # {8A01444C-D6D0-481f-8B1B-3070ED18D4D7} → {9F4D68BB-0EAF-491c-BC30-6393C7DFA6E9}
       - "Association «defines» → Park Area Equipment - Park Operator Interface"  # {359D67F3-5435-44f4-A218-940196E5BB58} → {86396C30-47CC-480e-A8D1-D07BE1ACE308}
       - "Association «defines» → Parking Area - Sevice Provider Interface"  # {D874E72A-E53B-46d3-89F3-636A91B78448} → {245C2C82-B2DC-4296-9883-5C3056A9E479}
-      - "Usage → D3.10 Inter-urban Service Area Data"  # {17557823-2824-404f-A96D-589D041E0BAD} → {ACD78063-0815-45b6-BA8F-22C9D3336EAD}
-      - "Usage → F3.1.5.1 Monitor Service Area Vehicle Occupation"  # {0380AB2F-08C6-4715-B5FF-DD69D69E0299} → {0E5602CA-D10F-4daa-91FB-20F4304238A3}
-      - "Usage → F3.1.5.10 Manage Rest Area Usage"  # {E9A9DCD1-D79E-4f3b-92A1-5818BA6BDCF6} → {BD05A124-5086-481a-8850-7D5AC404685F}
-      - "Usage → F3.1.5.2 Calculate Service Area Occupancy and Status"  # {A4CCC852-881D-4f2e-AF56-118C5BEF07F2} → {462B415A-6B6D-4fd2-B79A-6CBA18BC3CEE}
-      - "Usage → F3.1.5.4 Provide Operator Interface to Manage Service Areas"  # {83D2BC82-EE28-4575-9078-B527DEAD2C84} → {ED74FF4E-DBB2-4eeb-AF2F-23B358DCE4D4}
-      - "Usage → F3.1.5.5 Manage Inter-Urban Service Area Data Store"  # {8A01444C-D6D0-481f-8B1B-3070ED18D4D7} → {9F4D68BB-0EAF-491c-BC30-6393C7DFA6E9}
   - name: "Service Provider Central"
     guid: "{CB931E5C-62B0-4a1a-BE6D-D27FFFA2F6FB}"
     type: "Component"
@@ -199,6 +204,9 @@ elements:
       "Standrdization": ""
     note: ""
     links:
-      - "Association «IN» → fSerPro-tNAP"  # {563F6026-C12D-452d-A55E-9D659D047AFB} → {3A72D078-D04E-42c7-B096-BB906E2CC828}
-      - "Association «IN» → fSerPro-tParkEq"  # {9C25CDC7-0DFC-4eae-9148-24C0AFAA6F38} → {60EA9D83-D040-413d-BA8B-D2A585D32E1E}
-      - "Association «IN» → fSerPro-tPerDev"  # {A36AC68B-47A8-429f-A67B-524D61AF7286} → {B2CBF2BA-60DC-4931-A79D-A2FE60469814}
+      - "Association «use» → fNAP-tSerPro"  # {B844BA5D-28FB-4a99-8521-8549CDFFD917} → {687ACDCC-F476-4916-98BC-DDDA166B98F8}
+      - "Association «use» → fParkEq-tSerPro"  # {98FD9217-6DA0-49d1-896B-CDCA9F8447F6} → {8B367654-53D2-404d-9769-4CBBEFB18186}
+      - "Association «use» → fPerDev-tSerPro"  # {D42755EA-487E-43ef-8173-6CF51C7C00C9} → {2BDA9EBA-F9A5-40a3-B5E9-9D1B6044CD30}
+      - "Association «use» → fSerPro-tNAP"  # {563F6026-C12D-452d-A55E-9D659D047AFB} → {3A72D078-D04E-42c7-B096-BB906E2CC828}
+      - "Association «use» → fSerPro-tParkEq"  # {9C25CDC7-0DFC-4eae-9148-24C0AFAA6F38} → {60EA9D83-D040-413d-BA8B-D2A585D32E1E}
+      - "Association «use» → fSerPro-tPerDev"  # {A36AC68B-47A8-429f-A67B-524D61AF7286} → {B2CBF2BA-60DC-4931-A79D-A2FE60469814}

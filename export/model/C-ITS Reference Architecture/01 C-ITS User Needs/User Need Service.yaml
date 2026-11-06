@@ -14,7 +14,6 @@ elements:
     note: |
       Road Safety related services are in user need service 1
     links:
-      - "Abstraction → FRAME_User_Needs topic 6 Future Message"  # {74AE77B4-DC3B-45a4-95EC-ABDE52811473} → {F581827D-6BA9-49fd-AE76-72404E2157D4}
       - "Association «belongs to» → FRAME_User_Need_Topic1 C-ITS System"  # {6B47F471-5BB5-4da5-B5BB-D74E95D63DE9} → {D06129C3-AA43-483b-85AF-87DB2C48E04C}
       - "Association «belongs to» → FRAME_User_Need_Topic2 DENM Messages"  # {93677914-8E50-4cb3-8D3F-0264385B4B9B} → {1587EDF5-B476-4260-9601-37050417B274}
       - "Association «belongs to» → FRAME_User_Need_Topic3 CAM Messages"  # {C7D55375-4443-48da-8375-4355F267168D} → {C56A9710-EDCF-4768-8784-867E07406042}
@@ -30,7 +29,6 @@ elements:
     note: |
       Traffic Efficiency related services are in User need service 2
     links:
-      - "Abstraction → FRAME_User_Needs topic 6 Future Message"  # {0DCF0906-B6D4-41bd-8CC5-4EDABAEFA0F4} → {F581827D-6BA9-49fd-AE76-72404E2157D4}
       - "Association «belongs to» → FRAME_User_Need_Topic1 C-ITS System"  # {AA08E472-F2E7-4fc3-8A38-4E91CC1B1813} → {D06129C3-AA43-483b-85AF-87DB2C48E04C}
       - "Association «belongs to» → FRAME_User_Need_Topic2 DENM Messages"  # {44F6E389-1B58-4464-BA72-A6A5E2FFE1F9} → {1587EDF5-B476-4260-9601-37050417B274}
       - "Association «belongs to» → FRAME_User_Need_Topic3 CAM Messages"  # {255C5A16-E57B-41da-8736-B2C059EFED8F} → {C56A9710-EDCF-4768-8784-867E07406042}
@@ -46,5 +44,3 @@ elements:
     order: 32
     note: |
       Driving Comfort related services are in User need service 3
-    links:
-      - "Abstraction → FRAME_User_Needs topic 6 Future Message"  # {BB438E9D-0AA5-40b0-BA72-DF6FACB5A417} → {F581827D-6BA9-49fd-AE76-72404E2157D4}

@@ -13,7 +13,7 @@ elements:
     order: 0
     note: ""
     links:
-      - "Dependency → Identify possible actions which are proportional to the objectives when applied individually or as a package"  # {64833DFB-6AB2-487b-ADD5-0D4513C63468} → {7615DF18-80CE-44f4-A8A0-6AC788682D66}
+      - "Association «triggers» → Identify possible actions which are proportional to the objectives when applied individually or as a package"  # {64833DFB-6AB2-487b-ADD5-0D4513C63468} → {7615DF18-80CE-44f4-A8A0-6AC788682D66}
   - name: "Detects a non-compliance and request a investigation"
     guid: "{BFBE5607-B5E9-467c-B966-ED0BBD6200CF}"
     type: "Activity"
@@ -30,7 +30,7 @@ elements:
       	- inconsistent data
       	- data of poor quality (e.g. missing or wrong values)
     links:
-      - "Dependency → Information on potential non-compliance has been identifyed"  # {DAAC3530-5842-4bce-91E8-4B318C06B064} → {17EBAC7E-E847-47d1-9515-E747B015C202}
+      - "Association «triggers» → Information on potential non-compliance has been identifyed"  # {DAAC3530-5842-4bce-91E8-4B318C06B064} → {17EBAC7E-E847-47d1-9515-E747B015C202}
   - name: "Document the decision on non-compliance and the consequences of non-compliance"
     guid: "{6B336EE1-25C0-4087-9D25-CE72AF9D5730}"
     type: "Activity"
@@ -40,8 +40,8 @@ elements:
     order: 0
     note: ""
     links:
-      - "Dependency → Initiate the actions prescribed in the decision on non-compliance and consequences of non-compliance"  # {9AC8232F-12D7-4e4d-B58E-F272131EB15A} → {77E39EED-5D44-4837-86A7-1D4FE22A5348}
-      - "Dependency → Receives administrative decision on non-compliance"  # {17A541BC-210D-4313-9A72-667EC1627798} → {2D10B3DF-27FC-434a-B27C-1DBEC025DFA4}
+      - "Association «triggers» → Initiate the actions prescribed in the decision on non-compliance and consequences of non-compliance"  # {9AC8232F-12D7-4e4d-B58E-F272131EB15A} → {77E39EED-5D44-4837-86A7-1D4FE22A5348}
+      - "Association «triggers» → Receives administrative decision on non-compliance"  # {17A541BC-210D-4313-9A72-667EC1627798} → {2D10B3DF-27FC-434a-B27C-1DBEC025DFA4}
   - name: "Identify non-compliance to individual articles of the applicable delegated act"
     guid: "{3C58CE28-9384-47b8-AC17-414A0B505D90}"
     type: "Activity"
@@ -65,11 +65,11 @@ elements:
       In EU law, the public authority has the burden of proof that a violation has occurred when applying administrative sanctions (de Moor van Vugt 2012). In national law, the rules regarding the burden of proof and the standard of proof required in administrative process differ between Member States.
       Legal certainty is one of the principles of EU law but its interpretation in practical situations may be complex (Van Meerbeeck 2016). Due to the principle of legal certainty, it can be argued that the obligations of a subject have to be foreseeable. Regarding legal certainty, the European Court of Justice has concluded: "the effect of community legislation must be clear and predictable for those who are subject to it" (ECJ, 212 to 217/80, Amministrazione delle finanze dello Stato v. SRL Meridionale Industria Salumi and Other).
     links:
-      - "Dependency → Collect possible other information related to identified non-compliance."  # {04071978-49C6-4205-9870-761BE6B34006} → {30A34EAE-AB95-4169-900E-BCE47DE46558}
-      - "Dependency → Identify objectives of the applicable delegated act of the ITS directive by non-compliance"  # {D91B4367-510E-4952-B977-52072512E7DE} → {51BC8E5A-6E2C-4209-8131-7AF457A731E9}
-      - "Dependency → Identify relevant stakeholder characteristics and cintextual factors related to non-complaint."  # {A44C75BB-1966-4879-A947-37C7F07174CC} → {F6C45D87-E8EA-4ada-B52C-10DF47119321}
-      - "Dependency → Optional: request further information from the stakeholder"  # {884AD2FA-23D2-45cf-8A8E-E47426F1DE9C} → {72D6074D-100F-45cc-967D-B8D5A4B6F924}
-      - "Dependency → Receives administrative decision on compliance"  # {D76B3DC3-7400-4d25-B184-206522B525DB} → {8C585B95-F1E0-488d-8095-B8C9D04ADE68}
+      - "Association «triggers» → Collect possible other information related to identified non-compliance."  # {04071978-49C6-4205-9870-761BE6B34006} → {30A34EAE-AB95-4169-900E-BCE47DE46558}
+      - "Association «triggers» → Identify objectives of the applicable delegated act of the ITS directive by non-compliance"  # {D91B4367-510E-4952-B977-52072512E7DE} → {51BC8E5A-6E2C-4209-8131-7AF457A731E9}
+      - "Association «triggers» → Identify relevant stakeholder characteristics and cintextual factors related to non-complaint."  # {A44C75BB-1966-4879-A947-37C7F07174CC} → {F6C45D87-E8EA-4ada-B52C-10DF47119321}
+      - "Association «triggers» → Optional: request further information from the stakeholder"  # {884AD2FA-23D2-45cf-8A8E-E47426F1DE9C} → {72D6074D-100F-45cc-967D-B8D5A4B6F924}
+      - "Association «triggers» → Receives administrative decision on compliance"  # {D76B3DC3-7400-4d25-B184-206522B525DB} → {8C585B95-F1E0-488d-8095-B8C9D04ADE68}
   - name: "Identify objectives of the applicable delegated act of the ITS directive by non-compliance"
     guid: "{51BC8E5A-6E2C-4209-8131-7AF457A731E9}"
     type: "Activity"
@@ -79,7 +79,7 @@ elements:
     order: 0
     note: ""
     links:
-      - "Dependency → Identify possible actions which are proportional to the objectives when applied individually or as a package"  # {7B1C8570-63FD-4688-9370-985F59D44EAB} → {7615DF18-80CE-44f4-A8A0-6AC788682D66}
+      - "Association «triggers» → Identify possible actions which are proportional to the objectives when applied individually or as a package"  # {7B1C8570-63FD-4688-9370-985F59D44EAB} → {7615DF18-80CE-44f4-A8A0-6AC788682D66}
   - name: "Identify possible actions which are proportional to the objectives when applied individually or as a package"
     guid: "{7615DF18-80CE-44f4-A8A0-6AC788682D66}"
     type: "Activity"
@@ -100,7 +100,7 @@ elements:
       	- Run thorough compliance assessment based on random selection of datasets that are registered on the NAP
       	- Investigate complaints from data re-users about data on the NAP (or complaints about data that should be on the NAP but is not or complaints from data-owners about incorrect re-use of their data).
     links:
-      - "Dependency → Select the action or a combination of actions which corresponds best to the objectives of national laws, the delegated acts and the ITS directive."  # {7D357C2A-20DB-4382-BAA8-20DBEA3AEE6D} → {24A1FBF5-07C2-46c6-BA46-73BC353DA4ED}
+      - "Association «triggers» → Select the action or a combination of actions which corresponds best to the objectives of national laws, the delegated acts and the ITS directive."  # {7D357C2A-20DB-4382-BAA8-20DBEA3AEE6D} → {24A1FBF5-07C2-46c6-BA46-73BC353DA4ED}
   - name: "Identify relevant stakeholder characteristics and cintextual factors related to non-complaint."
     guid: "{F6C45D87-E8EA-4ada-B52C-10DF47119321}"
     type: "Activity"
@@ -110,7 +110,7 @@ elements:
     order: 0
     note: ""
     links:
-      - "Dependency → Identify possible actions which are proportional to the objectives when applied individually or as a package"  # {E545FF63-3D6E-4c4c-AC21-5E69C89C0B79} → {7615DF18-80CE-44f4-A8A0-6AC788682D66}
+      - "Association «triggers» → Identify possible actions which are proportional to the objectives when applied individually or as a package"  # {E545FF63-3D6E-4c4c-AC21-5E69C89C0B79} → {7615DF18-80CE-44f4-A8A0-6AC788682D66}
   - name: "Information on potential non-compliance has been identifyed"
     guid: "{17EBAC7E-E847-47d1-9515-E747B015C202}"
     type: "Activity"
@@ -121,7 +121,7 @@ elements:
     note: |
       When reporting a non-compliance, the data users should be urged to provide a clear description of the non-compliance case they have identified, providing as much information as possible. Their own contact details should also be available to the NAP operator so that they can be reached if additional information is needed or even for a follow-up communication about the treatment of the non-compliance case, depending on the communication policy of each NAP. The NB should support the data users for reporting complaints by having a help center (including info, FAQs, helpdesk etc) operating within the NAP.
     links:
-      - "Dependency → Investigate whether non-compliance has likely occurred"  # {50E0C10C-07C0-49c5-85D7-9869C016884F} → {A7F694D0-3401-4f76-937D-CBB2750B11BF}
+      - "Association «triggers» → Investigate whether non-compliance has likely occurred"  # {50E0C10C-07C0-49c5-85D7-9869C016884F} → {A7F694D0-3401-4f76-937D-CBB2750B11BF}
   - name: "Initiate the actions prescribed in the decision on non-compliance and consequences of non-compliance"
     guid: "{77E39EED-5D44-4837-86A7-1D4FE22A5348}"
     type: "Activity"
@@ -145,8 +145,8 @@ elements:
       After a first investigation of the complaint by the NB depending on the resources available, the complaint could be further reported to the national authorities.
       All reported types of non-compliance should be recorded by the NB so as other data sets or services by the same or a different provider can also be checked against similar non-compliance issues.
     links:
-      - "Dependency → Identify non-compliance to individual articles of the applicable delegated act"  # {7C0B40F8-1D22-4d30-B3BA-E7794254BE80} → {3C58CE28-9384-47b8-AC17-414A0B505D90}
-      - "Dependency → No reason to expect non-compliance"  # {58D5BCD3-B901-4239-A842-26A3BE9E5B8E} → {325F0B4B-A215-4be2-958B-FE3ABFFDEF1A}
+      - "Association «triggers» → Identify non-compliance to individual articles of the applicable delegated act"  # {7C0B40F8-1D22-4d30-B3BA-E7794254BE80} → {3C58CE28-9384-47b8-AC17-414A0B505D90}
+      - "Association «triggers» → No reason to expect non-compliance"  # {58D5BCD3-B901-4239-A842-26A3BE9E5B8E} → {325F0B4B-A215-4be2-958B-FE3ABFFDEF1A}
   - name: "May appeals result"
     guid: "{0F014357-0944-4afd-BF33-3432540FEC30}"
     type: "Activity"
@@ -157,7 +157,7 @@ elements:
     note: |
       The data or service provider may appeal the decision of the national body regarding the outcome of the random inspection according to procedures specified in national legislation.
     links:
-      - "Dependency → Process appeals made by the stakeholder"  # {FDD55C27-3CB9-404e-A398-FADA16C6CA84} → {9F4D540F-34D7-418e-B561-42E8C5D180F4}
+      - "Association «triggers» → Process appeals made by the stakeholder"  # {FDD55C27-3CB9-404e-A398-FADA16C6CA84} → {9F4D540F-34D7-418e-B561-42E8C5D180F4}
   - name: "No reason to expect non-compliance"
     guid: "{325F0B4B-A215-4be2-958B-FE3ABFFDEF1A}"
     type: "Activity"
@@ -177,7 +177,7 @@ elements:
     note: |
       e.g. whether the stakeholder considers the data or service non-compliant, reasons for non-compliance
     links:
-      - "Dependency → Identify possible actions which are proportional to the objectives when applied individually or as a package"  # {6E1BDB58-6DFC-4c00-84CE-346A511A358F} → {7615DF18-80CE-44f4-A8A0-6AC788682D66}
+      - "Association «triggers» → Identify possible actions which are proportional to the objectives when applied individually or as a package"  # {6E1BDB58-6DFC-4c00-84CE-346A511A358F} → {7615DF18-80CE-44f4-A8A0-6AC788682D66}
   - name: "Process appeals made by the stakeholder"
     guid: "{9F4D540F-34D7-418e-B561-42E8C5D180F4}"
     type: "Activity"
@@ -190,8 +190,8 @@ elements:
       In their current form, the Delegated Regulations require Member States to assess compliance by receiving self-declarations and performing random inspections of the self-declarations. By definition, the selection of self-declarations for inspection is a random selection. Random inspections are therefore not a procedure which would be suitable as such for identifying repetitive or persistent non-compliance.
       Gradually increasing the consequences for non-compliance is a strategy that could be followed in case of repetitive non-compliance. In the case of non-compliance identified through random inspections, the strategy of gradually increasing the consequences for non-compliance is feasible only when the identification of a data set or service as non-compliant in the random inspection leads to follow-up inspection. However, the Delegated Regulations are not clear about organizing a follow-up inspection. Such a procedure is not described in the Delegated Regulations but could be proposed as an extension of a random inspection. National regulations or changes in the Delegated Regulations may be needed to address the gap. The use of follow-up inspections is closely linked to the strategy of the national body to increase the level of compliance, national legislation on enforcement of administrative decisions and the actions selected by the National Body in an individual case of non-compliance. Follow-up inspections may be carried out to monitor the status of the data publications and services provided by the stakeholder and to provide instructions and guidance to the stakeholder. Follow-up inspections may also be required in a process in which administrative sanctions are applied (e.g. a conditional fine). The National Body should consider whether to accept a new self-declaration from a stakeholder which has earlier been found to be not in compliance with the requirements of the delegated act. The National Body may perform a follow-up inspection to resolve the conflict between the results of an earlier compliance assessment and the new self-declaration.
     links:
-      - "Dependency → Document the decision on non-compliance and the consequences of non-compliance"  # {8033F76D-6406-4dc6-AACD-1654E45C7A74} → {6B336EE1-25C0-4087-9D25-CE72AF9D5730}
-      - "Dependency → Initiate the actions prescribed in the decision on non-compliance and consequences of non-compliance"  # {B76EA9F3-288F-4c8d-92EA-B22CD64FB4DC} → {77E39EED-5D44-4837-86A7-1D4FE22A5348}
+      - "Association «triggers» → Document the decision on non-compliance and the consequences of non-compliance"  # {8033F76D-6406-4dc6-AACD-1654E45C7A74} → {6B336EE1-25C0-4087-9D25-CE72AF9D5730}
+      - "Association «triggers» → Initiate the actions prescribed in the decision on non-compliance and consequences of non-compliance"  # {B76EA9F3-288F-4c8d-92EA-B22CD64FB4DC} → {77E39EED-5D44-4837-86A7-1D4FE22A5348}
   - name: "Random inspection of the self-declaration or the accompanying documents indicates non-compliance"
     guid: "{0B142C7E-8FB3-4b74-B4FA-E7FE2D238380}"
     type: "Activity"
@@ -234,7 +234,7 @@ elements:
       The Delegated Regulations enacted under the European ITS Directive define obligations for several stakeholder groups to register data or services on the National Access Point, otherwise make it available and establish other obligations related to services and data (e.g. to provide data in a standardised format). It is possible that the National Body encounters situations in which the stakeholder does not make the data or service available as required by the applicable Delegated Regulation or does not register it to the NAP. In these cases, the stakeholder will most likely not have submitted a self-declaration to the National Body.
       The task of the National Body to request a self-declaration and the obligation of a service provider, data provider or other stakeholder to submit a self-declaration have been expressed in different ways in the Delegated Regulations on RTTI, SRTI, MMTIS and SSTP. The Delegated Regulations use different wordings regarding compliance assessment, provision of self-declaration and processing the self-declaration.
     links:
-      - "Dependency → Identify non-compliance to individual articles of the applicable delegated act"  # {CDC56108-286F-4edc-9A34-9422D94DDDB8} → {3C58CE28-9384-47b8-AC17-414A0B505D90}
+      - "Association «triggers» → Identify non-compliance to individual articles of the applicable delegated act"  # {CDC56108-286F-4edc-9A34-9422D94DDDB8} → {3C58CE28-9384-47b8-AC17-414A0B505D90}
   - name: "Receives administrative decision on compliance"
     guid: "{8C585B95-F1E0-488d-8095-B8C9D04ADE68}"
     type: "Activity"
@@ -254,8 +254,8 @@ elements:
     note: |
       The service or data provider will receive an administrative decision on non-compliance.
     links:
-      - "Dependency → May appeals result"  # {7A484AB6-0DC9-4ccf-A89F-0FD810DF3E4A} → {0F014357-0944-4afd-BF33-3432540FEC30}
-      - "Dependency → change documents, data or services according to  requested actions"  # {6DD4A898-E2A4-4243-ABEE-79877EA48A7C} → {0D6C06EB-41CC-48c1-86E9-5288373F3611}
+      - "Association «triggers» → May appeals result"  # {7A484AB6-0DC9-4ccf-A89F-0FD810DF3E4A} → {0F014357-0944-4afd-BF33-3432540FEC30}
+      - "Association «triggers» → change documents, data or services according to  requested actions"  # {6DD4A898-E2A4-4243-ABEE-79877EA48A7C} → {0D6C06EB-41CC-48c1-86E9-5288373F3611}
   - name: "Select the action or a combination of actions which corresponds best to the objectives of national laws, the delegated acts and the ITS directive."
     guid: "{24A1FBF5-07C2-46c6-BA46-73BC353DA4ED}"
     type: "Activity"
@@ -265,7 +265,7 @@ elements:
     order: 0
     note: ""
     links:
-      - "Dependency → Document the decision on non-compliance and the consequences of non-compliance"  # {D73849BE-0C14-45bf-8081-7E05AEC0579B} → {6B336EE1-25C0-4087-9D25-CE72AF9D5730}
+      - "Association «triggers» → Document the decision on non-compliance and the consequences of non-compliance"  # {D73849BE-0C14-45bf-8081-7E05AEC0579B} → {6B336EE1-25C0-4087-9D25-CE72AF9D5730}
   - name: "change documents, data or services according to  requested actions"
     guid: "{0D6C06EB-41CC-48c1-86E9-5288373F3611}"
     type: "Activity"
@@ -276,4 +276,4 @@ elements:
     note: |
       The affected stakeholder solves the reported issues according to the non-compliance documentation.
     links:
-      - "Dependency → Identify non-compliance to individual articles of the applicable delegated act"  # {3AF6904B-44A6-487c-9B0A-FA2A075927E9} → {3C58CE28-9384-47b8-AC17-414A0B505D90}
+      - "Association «triggers» → Identify non-compliance to individual articles of the applicable delegated act"  # {3AF6904B-44A6-487c-9B0A-FA2A075927E9} → {3C58CE28-9384-47b8-AC17-414A0B505D90}

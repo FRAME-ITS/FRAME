@@ -31,8 +31,6 @@ elements:
       "structure": ""
       "structureRef": ""
     note: ""
-    links:
-      - "Usage → PSAP Operational List"  # {876D3C8B-D447-4b60-B0E9-E7D594FE0142} → {CCF6217F-455E-4f0f-9629-4BF63CF55A0F}
   - name: "List of Emergency Operators"
     guid: "{5CCD93D2-D3DC-4676-A108-4318AB1178BD}"
     type: "Object"
@@ -111,8 +109,6 @@ elements:
       "structure": ""
       "structureRef": ""
     note: ""
-    links:
-      - "Usage → PSAP Operational List"  # {0042D018-DE0F-47ee-992E-A08CD2FCEF0E} → {CCF6217F-455E-4f0f-9629-4BF63CF55A0F}
   - name: "PSAP Operational List"
     guid: "{CCF6217F-455E-4f0f-9629-4BF63CF55A0F}"
     type: "Object"
@@ -165,8 +161,6 @@ elements:
       "structure": ""
       "structureRef": ""
     note: ""
-    links:
-      - "Usage → eCall MSD"  # {484530DB-A96B-45cd-AEBA-BDA672AB57E0} → {D07C7A79-526F-4c46-9D16-6C6B148356B2}
   - name: "automatic Activation"
     guid: "{3F6D4400-1271-4c25-A5AF-5A56A9853C53}"
     type: "Object"
@@ -194,8 +188,6 @@ elements:
       "structureRef": ""
     note: |
       Indicates whether a call was automatically or manually triggered
-    links:
-      - "Usage → eCall MSD"  # {A47C2C91-5E97-460c-A16F-036C86AE5513} → {D07C7A79-526F-4c46-9D16-6C6B148356B2}
   - name: "eCall MSD"
     guid: "{D07C7A79-526F-4c46-9D16-6C6B148356B2}"
     type: "Object"
@@ -235,8 +227,6 @@ elements:
       positionLatitude
       positionLongitude
       vehicleDirection
-    links:
-      - "Abstraction → psef_eCall_data"  # {087436CB-D507-44f8-A1C5-FBBC552B88D0} → {1CC7D5C6-A84C-4682-B3A5-35923A265B64}
   - name: "positionCanBeTrusted"
     guid: "{57E14140-6963-49ea-A17D-3691FB7B958E}"
     type: "Object"
@@ -264,8 +254,6 @@ elements:
       "structureRef": ""
     note: |
       Indicates whether the position given in the position elements can be trusted or has only low confidence
-    links:
-      - "Usage → eCall MSD"  # {4E77F709-1934-467a-B966-BBE7BAC7E857} → {D07C7A79-526F-4c46-9D16-6C6B148356B2}
   - name: "positionLatitude"
     guid: "{742B75BF-8BE9-40fa-9B06-DC7ABFFF5A73}"
     type: "Object"
@@ -293,8 +281,6 @@ elements:
       "structureRef": ""
     note: |
       The last known vehicle Latitude position determined at the latest moment possible before message generation
-    links:
-      - "Usage → eCall MSD"  # {9CBFDA7B-F9FB-4b34-B79D-0BD496F88A2B} → {D07C7A79-526F-4c46-9D16-6C6B148356B2}
   - name: "positionLongitude"
     guid: "{8C053042-13A8-4803-B2D1-314F5BBBEAB1}"
     type: "Object"
@@ -322,8 +308,6 @@ elements:
       "structureRef": ""
     note: |
       The last known vehicle Longitude position determined at the latest moment possible before message generation
-    links:
-      - "Usage → eCall MSD"  # {44BA386A-FD40-4934-8FBF-FD1822759AAB} → {D07C7A79-526F-4c46-9D16-6C6B148356B2}
   - name: "test Call"
     guid: "{D0987DFD-B868-4dd6-AFC3-5B576D538B59}"
     type: "Object"
@@ -351,8 +335,6 @@ elements:
       "structureRef": ""
     note: |
       Indicates whether the call is a test call or a real emergency call
-    links:
-      - "Usage → eCall MSD"  # {E4579A76-99AE-4918-8D4E-53B9BA77FDB2} → {D07C7A79-526F-4c46-9D16-6C6B148356B2}
   - name: "timeStamp"
     guid: "{949A9624-6642-431b-8518-4897CC56A485}"
     type: "Object"
@@ -380,8 +362,6 @@ elements:
       "structureRef": ""
     note: |
       Timestamp of the initial data message generation within the current eCall incident event
-    links:
-      - "Usage → eCall MSD"  # {5A6CA548-9775-4d15-88CF-4A83DC2AEB32} → {D07C7A79-526F-4c46-9D16-6C6B148356B2}
   - name: "vehicleDirection"
     guid: "{B127C821-1166-42ee-B883-19F5309D3BBA}"
     type: "Object"
@@ -409,8 +389,6 @@ elements:
       "structureRef": ""
     note: |
       The vehicle’s last known real direction of travel determined at the latest moment possible before message generation.
-    links:
-      - "Usage → eCall MSD"  # {F8D1E15C-01E9-4603-8C89-B03170565108} → {D07C7A79-526F-4c46-9D16-6C6B148356B2}
   - name: "vehicleType"
     guid: "{1B5630C6-5A45-46f7-8B75-2E70787FAAC0}"
     type: "Object"
@@ -438,5 +416,3 @@ elements:
       "structureRef": ""
     note: |
       Provides a vehicle type
-    links:
-      - "Usage → eCall MSD"  # {8637451A-A5EB-47c1-8744-36A577426865} → {D07C7A79-526F-4c46-9D16-6C6B148356B2}

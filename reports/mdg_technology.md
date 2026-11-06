@@ -56,12 +56,12 @@ For each rule (source → target) the number of connectors drawn in that directi
 | «component of» | Low_Level_Function | Functional_Area | 117 | 0 |
 | «component of» | Low_Level_Function | High_Level_Function | 347 | 0 |
 | «component of» | Terminator | Terminator | 69 | 69 |
-| «contains» | Application | Datastore | 0 | 0 |
-| «contains» | Application | Low_Level_Function | 0 | 0 |
-| «contains» | Application | Physical_Data_Flow | 0 | 0 |
+| «contains» | Application | Datastore | 8 | 0 |
+| «contains» | Application | Low_Level_Function | 38 | 0 |
+| «contains» | Application | Physical_Data_Flow | 22 | 0 |
 | «contains» | Information_Object | Data_Object | 16 | 0 |
 | «contains» | Low_Level_Data_Flow | Data_Object | 3 | 0 |
-| «contains» | Low_Level_Data_Flow | Information_Object | 0 | 0 |
+| «contains» | Low_Level_Data_Flow | Information_Object | 13 | 0 |
 | «contains» | Physical_Data_Flow | Information_Object | 26 | 0 |
 | «defines» | Actor | Requirement | 0 | 0 |
 | «defines» | Agreement | Requirement | 0 | 0 |
@@ -104,7 +104,7 @@ For each rule (source → target) the number of connectors drawn in that directi
 | «defines» | Role | Organisation | 1 | 0 |
 | «defines» | Role | Requirement | 0 | 0 |
 | «defines» | Role | User_Need | 0 | 0 |
-| «defines» | Specification | Requirement | 0 | 0 |
+| «defines» | Specification | Requirement | 6 | 0 |
 | «defines» | Stakeholder | ITS_Vision | 2 | 0 |
 | «defines» | Stakeholder | Requirement | 13 | 0 |
 | «defines» | System | Requirement | 0 | 0 |
@@ -114,7 +114,7 @@ For each rule (source → target) the number of connectors drawn in that directi
 | «defines» | User_Need | Requirement | 1 | 0 |
 | «defines» | User_Need_Topic | Requirement | 0 | 0 |
 | «delivered by» | ITS_Service | ITS_Service_Added_Value | 0 | 0 |
-| «delivers value to» | ITS_Service_Added_Value | Stakeholder | 0 | 0 |
+| «delivers value to» | ITS_Service_Added_Value | Stakeholder | 52 | 0 |
 | «fulfilled by» | Requirement | Actor | 0 | 0 |
 | «fulfilled by» | Requirement | Agreement | 1 | 0 |
 | «fulfilled by» | Requirement | Application | 24 | 0 |
@@ -157,12 +157,12 @@ For each rule (source → target) the number of connectors drawn in that directi
 | «served by» | Low_Level_Data_Flow | Physical_Data_Flow | 60 | 0 |
 | «served by» | User_Need | Low_Level_Function | 1785 | 0 |
 | «stored in» | Information_Object | Datastore | 3 | 0 |
-| «triggers» | ITS_Business_Process | ITS_Business_Process | 0 | 0 |
-| «triggers» | ITS_Service_Process | ITS_Service_Process | 0 | 0 |
-| «use» | Component | Physical_Data_Flow | 0 | 0 |
+| «triggers» | ITS_Business_Process | ITS_Business_Process | 23 | 23 |
+| «triggers» | ITS_Service_Process | ITS_Service_Process | 55 | 55 |
+| «use» | Component | Physical_Data_Flow | 24 | 0 |
 | «use» | Interface | Information_Object | 12 | 0 |
 | «use» | Physical_Data_Flow | Interface | 22 | 0 |
-| «use» | Terminator | Physical_Data_Flow | 0 | 0 |
+| «use» | Terminator | Physical_Data_Flow | 12 | 0 |
 
 ## Connector stereotypes used in the model but not defined in the technology
 

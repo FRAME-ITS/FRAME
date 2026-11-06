@@ -94,7 +94,3 @@ elements:
       The latest list of all participants in the EU single trust domain, the ECTL is published at: https://cpoc.jrc.ec.europa.eu/ECTL.html
       
       The certificates of the TLM are published at: https://cpoc.jrc.ec.europa.eu/TLMCertificates.html
-    links:
-      - "Realisation → EU Root CA - Certificate Authority"  # {26F26B67-581A-4605-8415-0B5870FFD21E} → {382A18C3-34F8-4e60-BC2E-9CF27784CA1A}
-      - "Realisation → Root CA  - Certificate Authority 1"  # {0BE708E1-2640-43d7-99F9-483B0BB3320C} → {3B9C07FE-7D8D-4a2c-8C15-D2FACABD863A}
-      - "Realisation → Root CA  - Certificate Authority 2"  # {3EBCB178-A5C5-4c0c-8CAC-C7ACDB2C740D} → {8585C2EC-0782-40cf-B8E4-21C9365A34E8}

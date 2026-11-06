@@ -14,7 +14,7 @@ elements:
     note: |
       Service or data provider fills in a NAPCORE harmonized self-declaration form.
     links:
-      - "Usage «Call» → Submit NAPCORE self-declaration form"  # {460F4E37-4635-4f4f-A63C-DA075B8D4292} → {1C797A58-9B2E-4a26-91AA-118A6AD4BE65}
+      - "Association «triggers» → Submit NAPCORE self-declaration form"  # {460F4E37-4635-4f4f-A63C-DA075B8D4292} → {1C797A58-9B2E-4a26-91AA-118A6AD4BE65}
   - name: "Hosting metadata of service or data set"
     guid: "{37633241-ECB4-4e36-B8CE-1A367B786FA9}"
     type: "Activity"
@@ -29,7 +29,7 @@ elements:
       
       The NAP has to made the description and/or data accessible to the NB/CA.
     links:
-      - "Dependency → Publish information about service and data set"  # {78BDB29D-12FB-40f6-BF4C-BA60CA03B53F} → {EEEAD142-5CAF-4c12-BD1F-F23BAC12B31F}
+      - "Association «triggers» → Publish information about service and data set"  # {78BDB29D-12FB-40f6-BF4C-BA60CA03B53F} → {EEEAD142-5CAF-4c12-BD1F-F23BAC12B31F}
   - name: "Optional: Generate digital self-declaration"
     guid: "{1CBCF3DF-D807-4382-B235-54BC9911CEC5}"
     type: "Activity"
@@ -40,7 +40,7 @@ elements:
     note: |
       If the NAP supports the generation of digital self-declaration based on the organisation or individual data description, it can be provided to the National Body /competent authority
     links:
-      - "Dependency → The NB is receiving the self-declaration"  # {DA8777AC-2A05-46bb-B353-5E10A2C7DC3A} → {EBF2FCE9-7013-4b62-8356-BF4F38EFC1DD}
+      - "Association «triggers» → The NB is receiving the self-declaration"  # {DA8777AC-2A05-46bb-B353-5E10A2C7DC3A} → {EBF2FCE9-7013-4b62-8356-BF4F38EFC1DD}
   - name: "Processing feedback and correction of self-declaration"
     guid: "{F3FAC284-6AB7-4dff-91BF-30E676B4F449}"
     type: "Activity"
@@ -51,7 +51,7 @@ elements:
     note: |
       If the stakeholder has to correct the self-declaration, the necessary changes are figured out and corrected.
     links:
-      - "Dependency → Receiving updated self-declaration"  # {7E73BA38-CF66-4b58-895C-4B622B2BC046} → {52A1D0E9-18F4-447f-9FAE-D82C183E31AC}
+      - "Association «triggers» → Receiving updated self-declaration"  # {7E73BA38-CF66-4b58-895C-4B622B2BC046} → {52A1D0E9-18F4-447f-9FAE-D82C183E31AC}
   - name: "Provides information for potential applicants"
     guid: "{511629E8-2B64-44be-AD7E-5B0D536AF7E0}"
     type: "Activity"
@@ -62,7 +62,7 @@ elements:
     note: |
       National Body provides information for potential applicants, according to national regulations including relevant document templates, and minimum quality requirements (link to document)
     links:
-      - "Usage «Instantiate» → Fill in harmonized NAPCORE self-declaration form"  # {E53C6806-361B-4974-83E6-DDAC2F491DE0} → {AFAD8CA3-653B-40c4-8DA4-3FA1210DC161}
+      - "Association «triggers» → Fill in harmonized NAPCORE self-declaration form"  # {E53C6806-361B-4974-83E6-DDAC2F491DE0} → {AFAD8CA3-653B-40c4-8DA4-3FA1210DC161}
   - name: "Publish information about service and data set"
     guid: "{EEEAD142-5CAF-4c12-BD1F-F23BAC12B31F}"
     type: "Activity"
@@ -72,8 +72,8 @@ elements:
     order: 0
     note: ""
     links:
-      - "Dependency → Optional: Generate digital self-declaration"  # {15D2AD02-1BDC-4a03-B60C-F29D90E9C93D} → {1CBCF3DF-D807-4382-B235-54BC9911CEC5}
-      - "Usage «Call» → Receiving information about a DR relevant service or data set"  # {CB43FB5F-6875-4345-8523-B24228F29325} → {AD70904D-2757-48d6-8694-EB8A81FF4B5C}
+      - "Association «triggers» → Optional: Generate digital self-declaration"  # {15D2AD02-1BDC-4a03-B60C-F29D90E9C93D} → {1CBCF3DF-D807-4382-B235-54BC9911CEC5}
+      - "Association «triggers» → Receiving information about a DR relevant service or data set"  # {CB43FB5F-6875-4345-8523-B24228F29325} → {AD70904D-2757-48d6-8694-EB8A81FF4B5C}
   - name: "Receiving feedback about the status, correctness and time line"
     guid: "{857D8A5A-25DE-4a3b-B540-111B66E86B0A}"
     type: "Activity"
@@ -86,7 +86,7 @@ elements:
       If there is a lack of completeness or any other obvious issue, the stakeholder will be asked for a correction of the self-declaration.
       If there is no issue found, the stakeholder will be informed that the self-declaration is accepted and that the self-declaration is in the pool for compliance assessments.
     links:
-      - "Usage «Call» → Processing feedback and correction of self-declaration"  # {7992B117-08A9-494f-8432-5375B848843D} → {F3FAC284-6AB7-4dff-91BF-30E676B4F449}
+      - "Association «triggers» → Processing feedback and correction of self-declaration"  # {7992B117-08A9-494f-8432-5375B848843D} → {F3FAC284-6AB7-4dff-91BF-30E676B4F449}
   - name: "Receiving information about a DR relevant service or data set"
     guid: "{AD70904D-2757-48d6-8694-EB8A81FF4B5C}"
     type: "Activity"
@@ -96,7 +96,7 @@ elements:
     order: 0
     note: ""
     links:
-      - "Usage «Instantiate» → Provides information for potential applicants"  # {8604039E-0F1C-4772-848C-FBD18857D697} → {511629E8-2B64-44be-AD7E-5B0D536AF7E0}
+      - "Association «triggers» → Provides information for potential applicants"  # {8604039E-0F1C-4772-848C-FBD18857D697} → {511629E8-2B64-44be-AD7E-5B0D536AF7E0}
   - name: "Receiving updated self-declaration"
     guid: "{52A1D0E9-18F4-447f-9FAE-D82C183E31AC}"
     type: "Activity"
@@ -107,7 +107,7 @@ elements:
     note: |
       The corrected self-declaration is sent to the National Body for a new approval.
     links:
-      - "Dependency → The NB performs initial check of the self-declaration"  # {B66A44E9-E7D1-4945-9549-85E832ECF51B} → {C786EAA8-695A-4db8-8B91-A185468C996F}
+      - "Association «triggers» → The NB performs initial check of the self-declaration"  # {B66A44E9-E7D1-4945-9549-85E832ECF51B} → {C786EAA8-695A-4db8-8B91-A185468C996F}
   - name: "Submit NAPCORE self-declaration form"
     guid: "{1C797A58-9B2E-4a26-91AA-118A6AD4BE65}"
     type: "Activity"
@@ -118,7 +118,7 @@ elements:
     note: |
       Service or data provider submits a self-declaration form.
     links:
-      - "Usage «Instantiate» → The NB is receiving the self-declaration"  # {07430208-BE9B-4a6c-99A2-953B916D4512} → {EBF2FCE9-7013-4b62-8356-BF4F38EFC1DD}
+      - "Association «triggers» → The NB is receiving the self-declaration"  # {07430208-BE9B-4a6c-99A2-953B916D4512} → {EBF2FCE9-7013-4b62-8356-BF4F38EFC1DD}
   - name: "Submits service or data set description to national access point"
     guid: "{7B02B177-D0AC-4386-992A-752FF35B1A89}"
     type: "Activity"
@@ -130,7 +130,7 @@ elements:
       Service or data provider submits service or data set description to the national access point, international access
       point or content access point as required by applicable delegated regulation
     links:
-      - "Usage «Call» → Hosting metadata of service or data set"  # {DD3020F9-132E-403c-BF19-B09A2882A56C} → {37633241-ECB4-4e36-B8CE-1A367B786FA9}
+      - "Association «triggers» → Hosting metadata of service or data set"  # {DD3020F9-132E-403c-BF19-B09A2882A56C} → {37633241-ECB4-4e36-B8CE-1A367B786FA9}
   - name: "The NB is receiving the self-declaration"
     guid: "{EBF2FCE9-7013-4b62-8356-BF4F38EFC1DD}"
     type: "Activity"
@@ -141,7 +141,7 @@ elements:
     note: |
       The National Body receives the self-declaration in a harmonised format from the stakeholder or through the NAP.
     links:
-      - "Usage «Call» → The NB performs initial check of the self-declaration"  # {EF3F9221-89E6-41a5-9DF2-6D0F58BE162F} → {C786EAA8-695A-4db8-8B91-A185468C996F}
+      - "Association «triggers» → The NB performs initial check of the self-declaration"  # {EF3F9221-89E6-41a5-9DF2-6D0F58BE162F} → {C786EAA8-695A-4db8-8B91-A185468C996F}
   - name: "The NB performs initial check of the self-declaration"
     guid: "{C786EAA8-695A-4db8-8B91-A185468C996F}"
     type: "Activity"
@@ -152,4 +152,4 @@ elements:
     note: |
       Within an initial check the completeness of the SD and the correctness of the contact information are proven.
     links:
-      - "Dependency → Receiving feedback about the status, correctness and time line"  # {967A0250-5D59-4b94-A94D-CF440474DC78} → {857D8A5A-25DE-4a3b-B540-111B66E86B0A}
+      - "Association «triggers» → Receiving feedback about the status, correctness and time line"  # {967A0250-5D59-4b94-A94D-CF440474DC78} → {857D8A5A-25DE-4a3b-B540-111B66E86B0A}
