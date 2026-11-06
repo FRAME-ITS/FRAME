@@ -60,6 +60,12 @@ for st in ('delivers value to', 'triggers', 'implements', 'performs'):
         c.execute(ins('t_attribute', a), list(a.values()))
     log.append(f'new stereotype class «{st}» (copy of «use») with toolbox entry')
 
+# stereotype classes need the «stereotype» xref (EA shows them as plain classes without it)
+uxr = c.execute("select x.* from t_xref x join t_object o on x.Client=o.ea_guid where o.Package_ID=? and o.Name='use' and x.Name='Stereotypes'", (P,)).fetchone()
+for k in c.execute("select Name, ea_guid from t_object where Package_ID=? and Stereotype='stereotype' and ea_guid not in (select Client from t_xref where Name='Stereotypes')", (P,)).fetchall():
+    x = dict(uxr); x.update(XrefID=guid(), Client=k['ea_guid']); c.execute(ins('t_xref', x), list(x.values()))
+    log.append(f'stereotype class «{k["Name"]}»: «stereotype» xref added')
+
 name = {r[0]: r[1] for r in c.execute('select Object_ID, Name from t_object where Package_ID=?', (P,))}
 oid = {v: k for k, v in name.items()}
 def rels():
