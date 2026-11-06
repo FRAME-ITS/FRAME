@@ -133,11 +133,11 @@ elements:
       Data Flows are the movements of data between different components of the system. There are three types of data flows. The first type is data flows between Low-Level Functions. The second type is data flows between Low-Level Functions and Data Stores The third type is data flows between Low-Level Functions and Terminators/Actors.
     links:
       - "Aggregation «component of» → FRAME_High_Level_Data_Flow"  # {1155A96F-421E-4c3d-86AD-18654A211DAB} → {35F631D7-65CE-4df9-A861-1B12E39AC463}
-      - "Association «IN» → Terminator/ Subterminator"  # {219589AF-C19C-4aee-BB75-E387E78846D7} → {C619D94C-1176-4bee-86C2-D8C4FF8FB634}
       - "Association «OUT» → FRAME_Datastore"  # {884EDFC3-124A-494c-B636-61A9BF9705E9} → {C16508B8-537D-40cd-B45A-513529E5781C}
       - "Association «OUT» → High Level Function"  # {71574DF3-38AA-42ee-BB91-976994E7B5FC} → {5C69204E-D06E-4f2c-8AB9-1E1F6C08EE5C}
       - "Association «OUT» → Low Level Function"  # {F8FB90EF-15B0-4f01-9464-95B0EF89ED92} → {568A327F-EB2D-468d-9FA6-3CD9714EE807}
       - "Association «OUT» → System"  # {4A991BEB-39D8-4a5b-B6EB-B36E3C518C54} → {DFDAD014-1425-41e4-A8A2-F8A960161987}
+      - "Association «OUT» → Terminator/ Subterminator"  # {9BB07876-E49C-4d52-BCFC-B78344600B1C} → {C619D94C-1176-4bee-86C2-D8C4FF8FB634}
       - "Association «contains» → Data_Object"  # {18873814-9EEF-440d-9DBF-93114AE3C72F} → {D9D08334-9438-4292-8CF0-B0B048CA8A3C}
       - "Association «defines» → DataObject"  # {5819AC30-5FF2-4731-955F-B470972C00A3} → {55575BA9-439F-41d2-9C92-F2E3A2A0AEBF}
       - "Association «served by» → Physical Dataflow"  # {B985BBE5-C2CE-4fbd-B90E-73981FABBC40} → {AC1DD116-B224-4693-B0FE-4AD1D8B1246C}
@@ -152,8 +152,6 @@ elements:
     note: |
       A Function, also known as a “process”, is an action that involves receiving or processing input data. This data is then either passed on to another function or sent out as information or control instructions to an external entity. Functions are categorized into different levels: High-Level Functions (HLF) and Low-Level Functions (LLF). HLFs contain a group of functions concerned with a specific part of data processing and always have component LLFs. LLFs, on the other hand, perform a specific part of the data input, process, or information output process and have no component functions. User needs are allocated to LLFs, which are the only functions used in the FRAME Methodology.
     links:
-      - "Aggregation «component of» → High Level Function"  # {A1D60A93-0F3E-4de3-82A3-281A28EA097B} → {5C69204E-D06E-4f2c-8AB9-1E1F6C08EE5C}
-      - "Aggregation «component of» → Low Level Function"  # {9FE60D0E-1C0A-426c-B956-80C7599B510E} → {568A327F-EB2D-468d-9FA6-3CD9714EE807}
       - "Association «IN» → FRAME_High_Level_Data_Flow"  # {1C951316-4B3B-4080-9683-9892CB98BFF7} → {35F631D7-65CE-4df9-A861-1B12E39AC463}
   - name: "High Level Function"
     guid: "{5C69204E-D06E-4f2c-8AB9-1E1F6C08EE5C}"
@@ -165,7 +163,7 @@ elements:
     note: |
       A Function, also known as a “process”, is an action that involves receiving or processing input data. This data is then either passed on to another function or sent out as information or control instructions to an external entity. Functions are categorized into different levels: High-Level Functions (HLF) and Low-Level Functions (LLF). HLFs contain a group of functions concerned with a specific part of data processing and always have component LLFs. LLFs, on the other hand, perform a specific part of the data input, process, or information output process and have no component functions. User needs are allocated to LLFs, which are the only functions used in the FRAME Methodology.
     links:
-      - "Aggregation «component of» → Low Level Function"  # {821C625A-B952-4199-A329-7D03C9FBE62F} → {568A327F-EB2D-468d-9FA6-3CD9714EE807}
+      - "Aggregation «component of» → Fuctional Area"  # {A1D60A93-0F3E-4de3-82A3-281A28EA097B} → {21EEE2BA-B8F1-4519-AC3F-C983FE93983E}
       - "Association «IN» → FRAME_High_Level_Data_Flow"  # {9DA03636-1979-4267-88E0-4A33BD2C4AFB} → {35F631D7-65CE-4df9-A861-1B12E39AC463}
       - "Association «IN» → FRAME_Low_Level_Data_Flow"  # {9C081F45-C397-4c78-8146-0A0179FCFC39} → {3DA4C5ED-3529-4c62-BB04-DBC9641EA039}
   - name: "ITSBusinessProcess"
@@ -296,6 +294,8 @@ elements:
     note: |
       A Function, also known as a “process”, is an action that involves receiving or processing input data. This data is then either passed on to another function or sent out as information or control instructions to an external entity. Functions are categorized into different levels: High-Level Functions (HLF) and Low-Level Functions (LLF). HLFs contain a group of functions concerned with a specific part of data processing and always have component LLFs. LLFs, on the other hand, perform a specific part of the data input, process, or information output process and have no component functions. User needs are allocated to LLFs, which are the only functions used in the FRAME Methodology.
     links:
+      - "Aggregation «component of» → Fuctional Area"  # {9FE60D0E-1C0A-426c-B956-80C7599B510E} → {21EEE2BA-B8F1-4519-AC3F-C983FE93983E}
+      - "Aggregation «component of» → High Level Function"  # {821C625A-B952-4199-A329-7D03C9FBE62F} → {5C69204E-D06E-4f2c-8AB9-1E1F6C08EE5C}
       - "Association «IN» → FRAME_Low_Level_Data_Flow"  # {83E2A392-0C84-40bf-91A9-1B230785F875} → {3DA4C5ED-3529-4c62-BB04-DBC9641EA039}
       - "Association «adheres to» → Specification"  # {1CBB1B95-7458-4201-8E24-B09C00D10839} → {32E1A53D-B9C9-4180-BD66-998E967D5E33}
       - "Usage «Call» → Component"  # {4FFE32DD-1A06-4580-89D4-ACD40CF32E1E} → {A3ECE56A-3A44-4971-9CEC-0D092A4DB634}
@@ -336,7 +336,7 @@ elements:
   - name: "Requirement"
     guid: "{C94C247E-3F93-47ee-AA0A-75C521916D0A}"
     type: "Requirement"
-    stereotype: "FRAME_Reqirement"
+    stereotype: "FRAME_Requirement"
     status: "Proposed"
     version: "1.0"
     order: 0
@@ -425,7 +425,7 @@ elements:
     links:
       - "Abstraction «is Type of» → Terminator/ Subterminator"  # {A9E89699-D75A-4567-AB30-91C9EDF973E8} → {C619D94C-1176-4bee-86C2-D8C4FF8FB634}
       - "Association «IN» → FRAME_High_Level_Data_Flow"  # {570C2EDF-9B4F-43ae-A3E8-299C858444EF} → {35F631D7-65CE-4df9-A861-1B12E39AC463}
-      - "Association «OUT» → FRAME_Low_Level_Data_Flow"  # {9BB07876-E49C-4d52-BCFC-B78344600B1C} → {3DA4C5ED-3529-4c62-BB04-DBC9641EA039}
+      - "Association «IN» → FRAME_Low_Level_Data_Flow"  # {219589AF-C19C-4aee-BB75-E387E78846D7} → {3DA4C5ED-3529-4c62-BB04-DBC9641EA039}
       - "Usage → Application"  # {F4449BB0-FFFB-4ebf-8177-03B4B201D828} → {9E05B1AE-4239-4341-BCF2-010BB287A0BB}
       - "Usage «Instantiate» → Terminator/ Subterminator"  # {FC6C9DC5-A966-4558-99DD-EBA63703D50A} → {C619D94C-1176-4bee-86C2-D8C4FF8FB634}
   - name: "UserNeedGroup"
@@ -436,8 +436,6 @@ elements:
     version: "1.0"
     order: 0
     note: ""
-    links:
-      - "Association «belongs to» → UserNeedService"  # {7628E5C6-6B96-42b7-8551-98202D05BA7D} → {E9D42249-DF2D-4a10-B040-E82833F8CDE7}
   - name: "UserNeedService"
     guid: "{E9D42249-DF2D-4a10-B040-E82833F8CDE7}"
     type: "Requirement"
@@ -447,7 +445,7 @@ elements:
     order: 0
     note: ""
     links:
-      - "Association «belongs to» → UserNeedTopic"  # {859EDC0F-997A-4c22-A4C7-59B3B3ED5463} → {6D83289F-659C-4dca-919B-E662EA23B3AC}
+      - "Association «belongs to» → UserNeedGroup"  # {7628E5C6-6B96-42b7-8551-98202D05BA7D} → {356C4C7D-2D63-439e-BD9F-8DC379AD68B9}
   - name: "UserNeedTopic"
     guid: "{6D83289F-659C-4dca-919B-E662EA23B3AC}"
     type: "Requirement"
@@ -456,6 +454,8 @@ elements:
     version: "1.0"
     order: 0
     note: ""
+    links:
+      - "Association «belongs to» → UserNeedService"  # {859EDC0F-997A-4c22-A4C7-59B3B3ED5463} → {E9D42249-DF2D-4a10-B040-E82833F8CDE7}
   - name: "User_Need"
     guid: "{AAD160FE-1FEE-4cea-93C1-A68DDAE1E0CD}"
     type: "Requirement"
@@ -465,6 +465,6 @@ elements:
     order: 0
     note: ""
     links:
-      - "Association → UserNeedTopic"  # {E18ED45A-2476-4b80-8037-D30080DB6307} → {6D83289F-659C-4dca-919B-E662EA23B3AC}
+      - "Association «belongs to» → UserNeedTopic"  # {E18ED45A-2476-4b80-8037-D30080DB6307} → {6D83289F-659C-4dca-919B-E662EA23B3AC}
       - "Association «defines» → Requirement"  # {8BFAD281-2AB8-4d0c-91A1-6CCE54C48F70} → {C94C247E-3F93-47ee-AA0A-75C521916D0A}
       - "Association «served by» → Low Level Function"  # {44AD17F1-EF70-443d-8300-C78E44D1A707} → {568A327F-EB2D-468d-9FA6-3CD9714EE807}
