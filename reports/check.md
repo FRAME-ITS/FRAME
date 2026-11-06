@@ -1,6 +1,6 @@
 # Model check – FRAME.qea
 
-**39 errors, 66 warnings**
+**39 errors, 63 warnings**
 
 | Rule | Related issue | Errors | Warnings |
 |---|---|---|---|
@@ -9,8 +9,6 @@
 | duplicate |  | 0 | 2 |
 | function-flows |  | 0 | 1 |
 | in-out | #69 | 28 | 0 |
-| release-hygiene |  | 0 | 1 |
-| self-reference | #62 | 0 | 2 |
 | servedby |  | 3 | 5 |
 | stereotype-spelling | #86 | 0 | 1 |
 | unused-flow | #76 | 0 | 11 |
@@ -136,19 +134,6 @@
 <details><summary><b>function-flows</b> (1)</summary>
 
 - Low_Level_Function **F6.5.8 Enable Final Approval of Trip Plan** (Frame Repository) has no IN and OUT data flows
-
-</details>
-
-<details><summary><b>release-hygiene</b> (1)</summary>
-
-- top-level package **Test Package** looks like a test package – remove before a release
-
-</details>
-
-<details><summary><b>self-reference</b> (2)</summary>
-
-- High_Level_Data_Flow **FRAME_High_Level_Data_Flow1** (Test Package) has a Aggregation «component of» to itself
-- Terminator **FRAME_Terminator1** (Test Package) has a Abstraction «is Type of» to itself
 
 </details>
 

@@ -18,3 +18,27 @@ Agreed by the git maintainer. Script: `tools/fixes/2026-11-06_direct_fixes.py` (
 - Usage → «served by»: 11.2.4.1 → F5.16.2 Output Commands and Dynamic Warnings
 - Usage → «served by»: 11.1.1.6 → F5.16.2 Output Commands and Dynamic Warnings
 - Usage → «served by»: 11.1.1.6 → F5.16.1 Manage Communication from Vehicle to Driver
+
+## Remove the Test Package
+
+- package Test Package: 20 elements, 27 connectors, 1 diagram
+- FRAME_Actor1
+- FRAME_Role1
+- FRAME_Agreement1
+- FRAME_Organisation1
+- ITS_Business_Process1
+- FRAME_ITS_Service_Process1
+- FRAME_ITS_Service1
+- FRAME_Terminator1
+- FRAME_Application1
+- FRAME_High_Level_Data_Flow1
+- FRAME_Low_Level_Data_Flow1
+- FRAME_Low_Level_Function1
+- FRAME_User_Need1
+- FRAME_ITS_Service_Process2
+- FRAME_Information_Object1
+- FRAME_Datastore1
+- FRAME_Component1
+- FRAME_Interface1
+- FRAME_Data_Object1
+- FRAME_Physical_Data_Flow1
