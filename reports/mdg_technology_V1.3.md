@@ -30,7 +30,7 @@ For each rule (source → target) the number of connectors drawn in that directi
 | «OUT» | Low_Level_Data_Flow | System | 1 | 0 |
 | «OUT» | Low_Level_Data_Flow | Terminator | 347 | 0 |
 | «OUT» | Terminator | TDF_HighLevelFunction | 0 | 0 |
-| «accepted by» | Agreement | Role | 33 | 0 |
+| «accepted by» | Agreement | Role | 22 | 0 |
 | «adheres to» | Application | Specification | 4 | 0 |
 | «adheres to» | Component | Specification | 7 | 0 |
 | «adheres to» | Data_Object | Specification | 1 | 0 |
@@ -42,7 +42,7 @@ For each rule (source → target) the number of connectors drawn in that directi
 | «adheres to» | Low_Level_Data_Flow | Specification | 0 | 0 |
 | «adheres to» | Low_Level_Function | Specification | 5 | 0 |
 | «adheres to» | Physical_Data_Flow | Specification | 0 | 0 |
-| «adheres to» | Role | Agreement | 15 | 0 |
+| «adheres to» | Role | Agreement | 26 | 0 |
 | «adheres to» | System | Specification | 1 | 0 |
 | «adheres to» | Terminator | Agreement | 2 | 0 |
 | «associate» | ITS_Vision | Mission_Statement | 3 | 0 |

@@ -18,6 +18,8 @@ elements:
       "Role View": ""
     note: |
       Actor "Data or service provider" refers to any stakeholder who has an ITS service or a data publication covered by any of the delegated acts enacted under the European ITS Directive and therefore has an obligation to submit a self-declaration.
+    links:
+      - "Association «adheres to» → Self-declaration"  # {DF960F1A-E6C7-4f5f-8E28-7FEDC920B026} → {EB8F2E83-0D00-458a-8C55-0EB4EC40B71C}
   - name: "European Commission"
     guid: "{1EC60CD8-B204-450d-9238-47BEC17A4785}"
     type: "Object"
@@ -32,6 +34,8 @@ elements:
       "Role View": ""
     note: |
       The European Commission may adopt delegated acts under the scope of the European ITS Directive (Directive 2010/40/EU). The Commission may adopt specifications to ensure compatibility, interoperability and continuity of services, especially for the priority actions and priority areas defined in the directive. The Commission shall establish a working program indicating the specifications to be developed and data types to be made available by Member States. The Commission also receives reports from Member States on the implementation of the Directive and related delegated acts and provides templates to be used in reporting from Member States to the Commission.
+    links:
+      - "Association «adheres to» → Delegated Regulation"  # {E4C3597D-44EA-430d-B102-91408E7CE724} → {18BED502-4259-4737-9DD1-6B52EBF5BA0F}
   - name: "General Public"
     guid: "{BBDE56DE-DE8B-4a1d-AC6F-9E35202ED36D}"
     type: "Object"
@@ -60,7 +64,8 @@ elements:
     note: |
       The Member State
     links:
-      - "Association «adheres to» → Delegated Regulation"  # {62282D12-F895-4243-9078-44A8020F702D} → {18BED502-4259-4737-9DD1-6B52EBF5BA0F}
+      - "Association «adheres to» → National Law or Contract MS - NAP"  # {D8CBE71D-1200-4e63-8CAB-7E36429C1D83} → {9A594D51-2CA2-4048-B043-981F4DF70F2D}
+      - "Association «adheres to» → National Law or Contract MS - NB"  # {9DBCE9C0-5D00-4d58-9470-C8AEC4F18E0E} → {0BDE8A5E-CC0E-4fa9-89DD-1DCD42A5AA0B}
   - name: "National Access Point"
     guid: "{98435A5F-0A74-4cea-BA8E-AE02988208EE}"
     type: "Object"
@@ -75,8 +80,6 @@ elements:
       "Role View": ""
     note: |
       Link to the NAP Reference Architecture
-    links:
-      - "Association «adheres to» → National Law or Contract MS - NAP"  # {D23CE465-5F09-4cd4-AA70-6AC6D569DC12} → {9A594D51-2CA2-4048-B043-981F4DF70F2D}
   - name: "National Body / Competent Authority"
     guid: "{DB0FFB19-1B79-4dbd-9F2B-5B224D345C66}"
     type: "Object"
@@ -96,4 +99,4 @@ elements:
       
       Member States shall notify the national bodies to the Commission.
     links:
-      - "Association «adheres to» → National Law or Contract MS - NB"  # {42960C0A-0DC1-4547-ACBC-12E42B467A9D} → {0BDE8A5E-CC0E-4fa9-89DD-1DCD42A5AA0B}
+      - "Association «adheres to» → Self-declaration"  # {DA7A9FC1-AB99-4413-A33A-8D890B5A523C} → {EB8F2E83-0D00-458a-8C55-0EB4EC40B71C}

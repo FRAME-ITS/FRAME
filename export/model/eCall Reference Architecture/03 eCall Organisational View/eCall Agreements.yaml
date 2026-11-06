@@ -13,6 +13,7 @@ elements:
     order: 0
     note: ""
     links:
+      - "Association «accepted by» → Mobile Network Operator"  # {77D2DFC3-0C62-4e35-B87E-AF63CA47734A} → {81045AAD-B99C-4577-8259-A8FA6025FF44}
       - "Association «accepted by» → Vehicle Manufacturer"  # {316F2F11-535B-4d88-A94E-BF38EC25DD59} → {2B124BA8-846E-41d9-B4E4-51DF61F59E6D}
   - name: "PSAP eCall Interfaces Contract"
     guid: "{D0227B3E-F938-4650-99E4-61A6286C9678}"
@@ -56,7 +57,7 @@ elements:
     order: 0
     note: ""
     links:
-      - "Association «accepted by» → Public Authorithy - EU Member States"  # {01AE3A90-59A8-463f-A275-77EDD1A83EA4} → {96C28E87-6CE7-4957-950A-ACD1C313C7D7}
+      - "Association «accepted by» → Vehicle Manufacturer"  # {F18E745E-F8E2-4232-802A-24C5F04EC0B7} → {2B124BA8-846E-41d9-B4E4-51DF61F59E6D}
   - name: "eCall Delegated Regulation Mobile Network Systems"
     guid: "{1B607CF4-214F-469e-A7F0-5327CE16574D}"
     type: "Collaboration"
@@ -66,7 +67,7 @@ elements:
     order: 0
     note: ""
     links:
-      - "Association «accepted by» → Public Authorithy - EU Member States"  # {57A0C6D6-BAA5-4f07-B633-B54E7BF953AB} → {96C28E87-6CE7-4957-950A-ACD1C313C7D7}
+      - "Association «accepted by» → Mobile Network Operator"  # {36061676-A498-4773-AD44-D77CD5182F8F} → {81045AAD-B99C-4577-8259-A8FA6025FF44}
   - name: "eCall Delegated Regulation Public Service Answering Point - PSAP Systems"
     guid: "{82173E21-2622-48bb-9D3D-246516F61B6D}"
     type: "Collaboration"
@@ -76,7 +77,7 @@ elements:
     order: 0
     note: ""
     links:
-      - "Association «accepted by» → Public Authorithy - EU Member States"  # {A0521499-F0E9-4560-9F64-40235F6A16B3} → {96C28E87-6CE7-4957-950A-ACD1C313C7D7}
+      - "Association «accepted by» → PSAP Operator"  # {009163AF-759C-4edc-A39C-429D6983C209} → {C1ADF028-16CF-46c1-B6F5-8C88B29DD830}
   - name: "eCall additional Service"
     guid: "{7FAE0707-8124-469e-B459-1941A7BD00E7}"
     type: "Collaboration"

@@ -1,7 +1,8 @@
 """Issues decided by the git maintainer on 2026-11-07 (model part; the MDG part is in 2026-11-06_mdg_technology_V1.3.py).
 
-#82  Role ↔ Agreement: the names were the opposite of the direction. Role → Agreement becomes «adheres to»,
-     Agreement → Role becomes «accepted by» (connector ends and diagram geometry unchanged, only the name is swapped).
+#82  Role ↔ Agreement: the names were the opposite of the direction. Role → Agreement is «adheres to», Agreement → Role is
+     «accepted by». Links drawn 'Destination -> Source' (arrow at the stored source) get their ends swapped first, so the
+     arrow on the diagrams stays where it was and only the label changes where it was wrong.
 #85  motivation layer of the Meta Model:
      connector 1 Business Expectation «defines» Mission Statement removed; replaced (connector 2) by Business Expectation
        «defines» ITS Service for each ITS Service the Mission Statement defines in the same architecture;
@@ -12,7 +13,7 @@
 
 usage: python tools/fixes/2026-11-07_issues_82_84_85_87.py model.qea report.md [--apply]
 """
-import sys, sqlite3, uuid
+import sys, re, sqlite3, uuid
 path, rep = sys.argv[1:3]; APPLY = '--apply' in sys.argv
 c = sqlite3.connect(path); c.row_factory = sqlite3.Row
 guid = lambda: '{' + str(uuid.uuid4()).upper() + '}'
@@ -38,15 +39,37 @@ def top(pid):
         if not r or r[0] in (0, 1) or c.execute('select Parent_ID from t_package where Package_ID=?', (r[0],)).fetchone()[0] == 0: return pid
         pid = r[0]
 
-# #82
+# #82  (idempotent: the name follows the ends; links drawn 'Destination -> Source' get their ends swapped first, so that
+#       the stored source is where the arrow starts and the arrow on the diagrams stays as it was)
+def swap_geom(g):
+    d = dict(re.findall(r'(SX|SY|EX|EY)=(-?\d+)', g or ''))
+    if not d: return g
+    r = {'SX': d.get('EX', '0'), 'SY': d.get('EY', '0'), 'EX': d.get('SX', '0'), 'EY': d.get('SY', '0')}
+    g = re.sub(r'\b(SX|SY|EX|EY)=(-?\d+)', lambda m: f'{m.group(1)}={r[m.group(1)]}', g)
+    return re.sub(r'EDGE=(\d)', lambda m: 'EDGE=' + {'1': '3', '3': '1', '2': '4', '4': '2'}.get(m.group(1), m.group(1)), g, 1)
+def reverse(k):
+    c.execute('''update t_connector set Start_Object_ID=End_Object_ID, End_Object_ID=Start_Object_ID, Start_Edge=End_Edge, End_Edge=Start_Edge,
+                 PtStartX=PtEndX, PtEndX=PtStartX, PtStartY=PtEndY, PtEndY=PtStartY, SourceStyle=DestStyle, DestStyle=SourceStyle,
+                 SourceIsNavigable=DestIsNavigable, DestIsNavigable=SourceIsNavigable, SourceRole=DestRole, DestRole=SourceRole,
+                 SourceCard=DestCard, DestCard=SourceCard, Direction='Source -> Destination' where Connector_ID=?''', (k,))
+    for dl in c.execute('select Instance_ID, Geometry, Style, Path from t_diagramlinks where ConnectorID=?', (k,)).fetchall():
+        st = dl['Style'] or ''
+        so, eo = re.search(r'SOID=([^;]*);', st), re.search(r'EOID=([^;]*);', st)
+        if so and eo:
+            st = st.replace(f'SOID={so.group(1)};', 'SOID=@@;').replace(f'EOID={eo.group(1)};', f'EOID={so.group(1)};').replace('SOID=@@;', f'SOID={eo.group(1)};')
+        p = dl['Path']; p = ';'.join(reversed([x for x in p.split(';') if x])) + ';' if p else p
+        c.execute('update t_diagramlinks set Geometry=?, Style=?, Path=? where Instance_ID=?', (swap_geom(dl['Geometry']), st, p, dl['Instance_ID']))
 log.append('## #82 Role ↔ Agreement\n')
 ROLE, AGR = ('FRAME_Role',), ('FRAME_Agreement', 'Agreement')
 for k in c.execute(f"select * from t_connector where Stereotype in ('adheres to','accepted by') and Start_Object_ID not in (select Object_ID from t_object where Package_ID in {TOOLSETUP})").fetchall():
     s, t = ends(k)
-    if s['Stereotype'] in ROLE and t['Stereotype'] in AGR and k['Stereotype'] == 'accepted by': new = 'adheres to'
-    elif s['Stereotype'] in AGR and t['Stereotype'] in ROLE and k['Stereotype'] == 'adheres to': new = 'accepted by'
-    else: continue
-    set_stereo(k, new); log.append(f'- {s["Name"]} → {t["Name"]}: «{k["Stereotype"]}» → «{new}»')
+    if not ({s['Stereotype'], t['Stereotype']} & set(ROLE) and {s['Stereotype'], t['Stereotype']} & set(AGR)): continue
+    note = ''
+    if k['Direction'] == 'Destination -> Source':
+        reverse(k['Connector_ID']); s, t = t, s; note = ' (ends swapped, was drawn Destination -> Source)'
+    new = 'adheres to' if s['Stereotype'] in ROLE else 'accepted by'
+    if new != k['Stereotype'] or note:
+        set_stereo(k, new); log.append(f'- {s["Name"]} «{new}» {t["Name"]} (was «{k["Stereotype"]}»){note}')
 
 # #85
 log.append('\n## #85 motivation layer\n')

@@ -18,9 +18,6 @@ elements:
       "Role Value": ""
       "Role View": ""
     note: ""
-    links:
-      - "Association «adheres to» → Network Usage Contract"  # {77D2DFC3-0C62-4e35-B87E-AF63CA47734A} → {7798C178-BD30-4830-B7D4-16A395506D5F}
-      - "Association «adheres to» → eCall Delegated Regulation Mobile Network Systems"  # {36061676-A498-4773-AD44-D77CD5182F8F} → {1B607CF4-214F-469e-A7F0-5327CE16574D}
   - name: "PSAP Operator"
     guid: "{C1ADF028-16CF-46c1-B6F5-8C88B29DD830}"
     type: "Object"
@@ -34,8 +31,6 @@ elements:
       "Role Value": ""
       "Role View": ""
     note: ""
-    links:
-      - "Association «adheres to» → eCall Delegated Regulation Public Service Answering Point - PSAP Systems"  # {009163AF-759C-4edc-A39C-429D6983C209} → {82173E21-2622-48bb-9D3D-246516F61B6D}
   - name: "Public Authorithy - EU Member States"
     guid: "{96C28E87-6CE7-4957-950A-ACD1C313C7D7}"
     type: "Object"
@@ -49,6 +44,10 @@ elements:
       "Role Value": ""
       "Role View": ""
     note: ""
+    links:
+      - "Association «adheres to» → eCall Delegated Regulation In Vehicle Systems"  # {01AE3A90-59A8-463f-A275-77EDD1A83EA4} → {DA146232-5A97-481d-A114-3A383988E3C2}
+      - "Association «adheres to» → eCall Delegated Regulation Mobile Network Systems"  # {57A0C6D6-BAA5-4f07-B633-B54E7BF953AB} → {1B607CF4-214F-469e-A7F0-5327CE16574D}
+      - "Association «adheres to» → eCall Delegated Regulation Public Service Answering Point - PSAP Systems"  # {A0521499-F0E9-4560-9F64-40235F6A16B3} → {82173E21-2622-48bb-9D3D-246516F61B6D}
   - name: "Third Party Service Provider"
     guid: "{B95642FE-BB74-481c-9923-249609098B53}"
     type: "Object"
@@ -78,8 +77,6 @@ elements:
       "Role Value": ""
       "Role View": ""
     note: ""
-    links:
-      - "Association «adheres to» → eCall Delegated Regulation In Vehicle Systems"  # {F18E745E-F8E2-4232-802A-24C5F04EC0B7} → {DA146232-5A97-481d-A114-3A383988E3C2}
   - name: "eCall - Generator"
     guid: "{A9B47171-ABC4-4e66-859E-5C320E6FC5DB}"
     type: "Object"
