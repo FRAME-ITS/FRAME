@@ -1,6 +1,6 @@
 # Model check – FRAME.qea
 
-**48 errors, 73 warnings**
+**45 errors, 73 warnings**
 
 | Rule | Related issue | Errors | Warnings |
 |---|---|---|---|
@@ -9,7 +9,7 @@
 | duplicate |  | 0 | 2 |
 | function-flows |  | 0 | 1 |
 | function-parent |  | 0 | 5 |
-| in-out | #69 | 31 | 0 |
+| in-out | #69 | 28 | 0 |
 | release-hygiene |  | 0 | 1 |
 | self-reference | #62 | 0 | 2 |
 | servedby |  | 9 | 5 |
@@ -31,14 +31,11 @@
 
 </details>
 
-<details><summary><b>in-out</b> (31)</summary>
+<details><summary><b>in-out</b> (28)</summary>
 
 - «IN» Low_Level_Data_Flow **fft.ftom-incident_responses** (Frame Repository) → F8.6.5 Provide FTOM Interface for FTEP Monitoring: expected «OUT» for this direction (or reverse the connector)
 - «IN» Low_Level_Data_Flow **fft.ftom-prepare_new_FTEP** (Frame Repository) → F8.4.3 Provide Freight Transport Operations Manager Interface: expected «OUT» for this direction (or reverse the connector)
 - «IN» Low_Level_Data_Flow **fft.ftom-request_existing_FTEP** (Frame Repository) → F8.4.3 Provide Freight Transport Operations Manager Interface: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fmms.mmc-inter-urban_crossing_request** (Frame Repository) → F3.1.2.14 Implement Inter-urban Management Traffic Strategy: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fmms.mms-data_for_demand_services** (Frame Repository) → F4.7 Provide On-demand Services: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fmms.mms-service_details_response** (Frame Repository) → F4.6 Provide Facilities for Vehicle Sharing: expected «OUT» for this direction (or reverse the connector)
 - «IN» Low_Level_Data_Flow **mpto_current_driver_availability** (Frame Repository) → F4.4 Control PT Fleet: expected «OUT» for this direction (or reverse the connector)
 - «IN» Low_Level_Data_Flow **mpto_demand_vehicle_repaired** (Frame Repository) → F4.7 Provide On-demand Services: expected «OUT» for this direction (or reverse the connector)
 - «IN» Low_Level_Data_Flow **mpto_fare_scheme_for_PT_driver** (Frame Repository) → F4.2 Plan PT Service: expected «OUT» for this direction (or reverse the connector)

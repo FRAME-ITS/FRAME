@@ -4,20 +4,16 @@ Convention (prevailing use in V5.2): **«IN» producer → data flow**, **«OUT�
 For every deviating connector the role of the function/terminator is derived from the data flow naming convention
 (`f<terminator>-…` from, `t<terminator>-…` to a terminator, `abc.def-…` from area abc to area def) and from the other links of the same flow.
 
-33 connectors. **No change has been made yet** – group B is applied only after review.
+30 connectors. **No change has been made yet** – group B is applied only after review.
 
 | Scope | Confidence | Proposed action | Count |
 |---|---|---|---|
 | FRAME Repository | conflict | review | 7 |
-| FRAME Repository | medium | relabel | 3 |
 | FRAME Repository | unknown | review | 21 |
 | Reference architectures | unknown | review | 2 |
 
 | Scope | Flow | Endpoint | Now | Proposed | Confidence | Evidence |
 |---|---|---|---|---|---|---|
-| FRAME Repository | fmms.mmc-inter-urban_crossing_request | F3.1.2.14 Implement Inter-urban Management Traffic Strategy | «IN» flow→High_Level_Function | relabel «IN» → «OUT» | medium | flow "fmms.mmc-int…" from a terminator into the system |
-| FRAME Repository | fmms.mms-data_for_demand_services | F4.7 Provide On-demand Services | «IN» flow→High_Level_Function | relabel «IN» → «OUT» | medium | flow "fmms.mms-dat…" from a terminator into the system |
-| FRAME Repository | fmms.mms-service_details_response | F4.6 Provide Facilities for Vehicle Sharing | «IN» flow→High_Level_Function | relabel «IN» → «OUT» | medium | flow "fmms.mms-ser…" from a terminator into the system |
 | FRAME Repository | fft.ftom-incident_responses | F8.6.5 Provide FTOM Interface for FTEP Monitoring | «IN» flow→Low_Level_Function | review in EA | conflict | flow "fft.ftom-inc…" from a terminator into the system; flow already has a consumer |
 | FRAME Repository | fft.ftom-prepare_new_FTEP | F8.4.3 Provide Freight Transport Operations Manager Interface | «IN» flow→Low_Level_Function | review in EA | conflict | flow "fft.ftom-pre…" from a terminator into the system; flow already has a consumer |
 | FRAME Repository | fft.ftom-request_existing_FTEP | F8.4.3 Provide Freight Transport Operations Manager Interface | «IN» flow→Low_Level_Function | review in EA | conflict | flow "fft.ftom-req…" from a terminator into the system; flow already has a consumer |

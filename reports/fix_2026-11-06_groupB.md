@@ -166,3 +166,16 @@
 - «OUT» pshvs.mt_rest_area_parking_request → F3.1.5.10 Manage Rest Area Usage `{E3AD8B34-87F8-44a1-B78E-B197013162EF}` removed (diagram links moved to kept connector: 0)
 - «OUT» frp-guidance_data → F5.12.12 Collect Road Network Information `{3AE92658-B8CF-457f-8290-C6DFADB593E8}` removed (diagram links moved to kept connector: 0)
 - «IN» Road Network Operator → fo.rno-demand_management_inputs `{1818A7C7-842F-40de-B7EC-AC13D56A2DFF}` removed (diagram links moved to kept connector: 0)
+
+## Second pass (new evidence after the first pass)
+
+| View | Changes |
+|---|---|
+| Frame Repository / Frame Functional View | 3 |
+
+## Frame Repository / Frame Functional View
+
+### Frame Repository/Frame Functional View/Data Flows/Low Level Data Flows
+- connection changed: ~~fmms.mmc-inter-urban_crossing_request → F3.1.2.14 Implement Inter-urban Management Traffic Strategy (Association «IN»)~~ → **fmms.mmc-inter-urban_crossing_request → F3.1.2.14 Implement Inter-urban Management Traffic Strategy (Association «OUT»)**
+- connection changed: ~~fmms.mms-data_for_demand_services → F4.7 Provide On-demand Services (Association «IN»)~~ → **fmms.mms-data_for_demand_services → F4.7 Provide On-demand Services (Association «OUT»)**
+- connection changed: ~~fmms.mms-service_details_response → F4.6 Provide Facilities for Vehicle Sharing (Association «IN»)~~ → **fmms.mms-service_details_response → F4.6 Provide Facilities for Vehicle Sharing (Association «OUT»)**

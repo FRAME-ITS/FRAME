@@ -2213,8 +2213,8 @@ elements:
     links:
       - "Aggregation «Componentof» → From Multi-Modal System"  # {A04B173E-09C6-408f-8BA1-CC378B35862B} → {4E4D632B-D78C-4196-BEAF-D829B099E7AF}
       - "Aggregation «Componentof» → fmms.mmc-crossing_request"  # {8E4A773D-AD82-48cb-AB85-A81DB86A402F} → {5BB90974-ECDD-49cc-82E5-FEE837E2B46D}
-      - "Association «IN» → F3.1.2.14 Implement Inter-urban Management Traffic Strategy"  # {62ABDD4E-57BF-46ff-A402-13268DFE4B18} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
       - "Association «OUT» → F3.1.2 Provide Inter-urban Traffic Management"  # {75C5843A-5ECE-4bf5-BF92-2E30CA786291} → {2EE2E618-41FE-4ac5-9413-C23D9DAF7E9E}
+      - "Association «OUT» → F3.1.2.14 Implement Inter-urban Management Traffic Strategy"  # {62ABDD4E-57BF-46ff-A402-13268DFE4B18} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
       - "Association «OUT» → F3.1.2.14.2 Output c&i to Drivers using Inter-urban Roads"  # {08030246-D93D-4a85-8A5B-1A3A5D0D6786} → {22A5DE67-505F-47ab-B208-CA8C3B51B67C}
   - name: "fmms.mmc-urban_crossing_command"
     guid: "{AD6488D6-CAE0-471d-A000-70EE2F2BC85C}"
@@ -2288,7 +2288,7 @@ elements:
     links:
       - "Aggregation «Componentof» → From Multi-Modal System"  # {5DD96225-EE58-45a0-8428-FF9CA1CC8718} → {4E4D632B-D78C-4196-BEAF-D829B099E7AF}
       - "Aggregation «Componentof» → fmms-mpto_inputs"  # {C12B5F2D-A44D-4646-84D4-A2F6980E552B} → {714B23EA-171C-4f7a-AC44-9264DED78AFB}
-      - "Association «IN» → F4.7 Provide On-demand Services"  # {4A0F9CD0-398E-4917-BFE0-16799F60D56F} → {ED1680A0-3B04-41e7-84AF-855C767F8066}
+      - "Association «OUT» → F4.7 Provide On-demand Services"  # {4A0F9CD0-398E-4917-BFE0-16799F60D56F} → {ED1680A0-3B04-41e7-84AF-855C767F8066}
       - "Association «OUT» → F4.7.2 Plan On-Demand Services"  # {D93597D9-CBFF-4c56-AAD5-990C435FEB72} → {C62A6214-31B0-4554-9747-556EAFA428F0}
   - name: "fmms.mms-ferry_service_information"
     guid: "{37B1BA05-449C-4c65-AA29-6A5FBD84FF58}"
@@ -2363,7 +2363,7 @@ elements:
       It consists of inputs from the Multi-Modal Systems containing data objects that provide the requested information about the services currently available from non-road based travel modes and is for use by functionality in the Manage Public Transport Operations Functional Area.
     links:
       - "Aggregation «Componentof» → fmms-mpto_inputs"  # {9E5FF382-56C6-49a4-B4AC-E0C6B4826F1A} → {714B23EA-171C-4f7a-AC44-9264DED78AFB}
-      - "Association «IN» → F4.6 Provide Facilities for Vehicle Sharing"  # {0D3BC996-0EFA-4c76-8595-38F939DF6CA7} → {A8C5BEF7-4F95-43ce-9B22-C4329AFFB177}
+      - "Association «OUT» → F4.6 Provide Facilities for Vehicle Sharing"  # {0D3BC996-0EFA-4c76-8595-38F939DF6CA7} → {A8C5BEF7-4F95-43ce-9B22-C4329AFFB177}
       - "Association «OUT» → F4.6.2 Create Travel Plans for Vehicle Sharing"  # {00E79FA3-11B4-40b6-8910-2A5C1A75F77E} → {B7D57CA7-84EE-403f-8C46-3D00AA7F7E52}
   - name: "fmms.mms-strike_details"
     guid: "{53BD6F2F-7590-4c93-9FA7-1CA430C58361}"
