@@ -138,6 +138,13 @@ for st, old, new in (('FRAME_Component', 'Component', 'Sub-system'), ('FRAME_App
                   (new, f'FRAME_Profile::{st}(%', old)).rowcount
     if n: log.append(f'toolbox label {st}: "{old}" → "{new}"')
 
+# connector name = rule stereotype (the profile diagram shows the name; renamed or cloned rules kept an old one)
+n = c.execute(f"""update t_connector set Name=(select VALUE from t_connectortag t where t.ElementID=t_connector.Connector_ID and t.Property='stereotype')
+                  where Stereotype='stereotyped relationship' and Start_Object_ID in (select Object_ID from t_object where Package_ID={P})
+                  and exists(select 1 from t_connectortag t where t.ElementID=t_connector.Connector_ID and t.Property='stereotype' and t.VALUE is not null)
+                  and ifnull(Name,'') <> (select VALUE from t_connectortag t where t.ElementID=t_connector.Connector_ID and t.Property='stereotype')""").rowcount
+if n: log.append(f'{n} rule connectors: name set to the rule stereotype')
+
 # _HideUmlLinks
 CORE = ('FRAME_Functional_Area', 'FRAME_High_Level_Function', 'FRAME_Low_Level_Function', 'FRAME_High_Level_Data_Flow',
         'FRAME_Low_Level_Data_Flow', 'FRAME_Terminator', 'FRAME_Datastore', 'FRAME_System', 'FRAME_User_Need',

@@ -78,6 +78,8 @@ elements:
       If the Parking Area is in priority zone, responsible of setting infrastructure for provision of dynamic information
       
       maintain relations with service provider and nap administrator
+    links:
+      - "Association «ArchiMate_Association» → NAP Operator (NO)"  # {69B230F7-A7B9-4f3e-9A11-438ABC562FBF} → {234C8914-6D8F-43fd-B3A7-34118A92FBA3}
   - name: "Service Provider"
     guid: "{56E95060-70F8-4023-9557-1EE0A92B253B}"
     type: "Object"
@@ -96,6 +98,10 @@ elements:
       Responsible manage organizational, legal, financial aspect of service provided, maintain relations with other Actors of SSTPIS
       
       Responsible to provide support to user.
+    links:
+      - "Association → NAP Operator (NO)"  # {F8C934D1-69A1-4470-A54D-6E13704F39C3} → {234C8914-6D8F-43fd-B3A7-34118A92FBA3}
+      - "Association → Park Operator"  # {E18E34C4-ED4B-4076-8C2C-144E68D5EF50} → {F889E587-63FF-4ed3-A1DA-3B5232BCD976}
+      - "Association «ArchiMate_Association» → User"  # {741EF9FE-3964-49be-8270-ED80CD62AC22} → {9887014B-F428-4c13-82F6-E9513B4B18AB}
   - name: "User"
     guid: "{9887014B-F428-4c13-82F6-E9513B4B18AB}"
     type: "Object"
