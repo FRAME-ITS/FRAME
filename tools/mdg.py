@@ -1,6 +1,7 @@
 """Extract the MDG technology embedded in the model and report its connector rules (Quick Linker) against the model.
 
-Usage:  python tools/mdg.py [model/FRAME.qea] [report.md] [--xml FRAME_technology.xml]
+Usage:  python tools/mdg.py [model/FRAME.qea] [report.md] [--xml FRAME_technology.xml] [--tech technology.xml]
+        --tech compares a technology file (e.g. a new toolbox version) with the model instead of the embedded one
 The model carries the FRAME technology itself (Import to Model, t_document DocType TECHNOLOGY). This is the version
 Enterprise Architect uses for the model, independent of any toolbox file imported by the user.
 """
@@ -30,7 +31,12 @@ def main(argv):
     args = [a for a in argv if a != '--xml' and a != xml_out]
     model = args[0] if args else MODEL
     out = args[1] if len(args) > 1 else None
-    name, xml = technology(model)
+    if '--tech' in argv:
+        f = argv[argv.index('--tech') + 1]; args = [a for a in args if a not in ('--tech', f)]
+        model = args[0] if args else MODEL; out = args[1] if len(args) > 1 else None
+        raw = open(f, 'rb').read(); xml = raw.decode('cp1252'); name = os.path.basename(f)
+    else:
+        name, xml = technology(model)
     if xml_out:
         open(xml_out, 'w', encoding='utf-8', newline='\n').write(xml)
     ver = re.search(r'<Documentation id="[^"]*" name="([^"]*)" version="([^"]*)"', xml)
@@ -40,7 +46,7 @@ def main(argv):
     used = Counter()
     for s, t, cs in c.execute('select Start_Object_ID, End_Object_ID, Stereotype from t_connector where Stereotype is not null'):
         used[(cs, st.get(s, ''), st.get(t, ''))] += 1
-    md = [f'# MDG technology embedded in {os.path.basename(model)}', '',
+    md = [f'# MDG technology {"file " + name if "--tech" in argv else "embedded in " + os.path.basename(model)} compared with {os.path.basename(model)}', '',
           f'Technology **{name}** – {ver.group(1)} {ver.group(2)}; profile FRAME_Profile defines {len(defined)} stereotypes.', '',
           '## Quick Linker rules vs. use in the model', '',
           'For each rule (source → target) the number of connectors drawn in that direction and in the opposite direction.', '',
