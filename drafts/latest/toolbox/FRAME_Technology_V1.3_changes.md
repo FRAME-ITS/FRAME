@@ -22,8 +22,10 @@ Built by `tools/fixes/2026-11-06_mdg_technology_V1.3.py`.
 - Quick Linker added: «OUT» High_Level_Data_Flow → System
 - Quick Linker added: «IN» Functional_Area → Low_Level_Data_Flow
 - Quick Linker added: «OUT» Low_Level_Data_Flow → Functional_Area
+- Quick Linker added: «defines» Business_Expectation → Mission_Statement
+- Quick Linker added: «adheres to» ITS_Service → Specification
 - Quick Linker: Application – 4 rules merged into 3
-- Quick Linker: ITS_Service – 4 rules merged into 3
+- Quick Linker: ITS_Service – 5 rules merged into 4
 - Quick Linker: ITS_Service_Added_Value – 2 rules merged into 1
 - Quick Linker: ITS_Service_Process – 4 rules merged into 3
 - Quick Linker: ITS_Vision – 3 rules merged into 2

@@ -35,6 +35,7 @@ For each rule (source → target) the number of connectors drawn in that directi
 | «adheres to» | Application | Specification | 4 | 0 |
 | «adheres to» | Component | Specification | 7 | 0 |
 | «adheres to» | Datastore | Specification | 1 | 0 |
+| «adheres to» | ITS_Service | Specification | 0 | 0 |
 | «adheres to» | ITS_Service_Process | Specification | 10 | 0 |
 | «adheres to» | Information_Object | Specification | 16 | 0 |
 | «adheres to» | Interface | Specification | 22 | 0 |
@@ -63,6 +64,7 @@ For each rule (source → target) the number of connectors drawn in that directi
 | «defines» | Application | Information_Object | 0 | 0 |
 | «defines» | Application | Interface | 0 | 0 |
 | «defines» | Application | Requirement | 0 | 0 |
+| «defines» | Business_Expectation | Mission_Statement | 1 | 0 |
 | «defines» | Business_Expectation | Requirement | 0 | 0 |
 | «defines» | Component | Requirement | 0 | 0 |
 | «defines» | Datastore | Requirement | 0 | 0 |

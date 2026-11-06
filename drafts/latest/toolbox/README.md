@@ -12,6 +12,8 @@ What V1.3 changes against V1.2 (details in the changes file):
   hierarchy («belongs to» user need → topic → service → group) now point the same way as the model (part → whole).
 - Rules added for patterns used throughout the FRAME Repository (sub-terminator, HL function in HL function, functional area in system,
   IN/OUT of System and functional areas).
+- Motivation layer: Business Expectation «defines» Mission Statement (as in the FRAME Meta Model) and ITS Service «adheres to»
+  Specification added – the NAP, National Body and C-ITS reference architectures had to draw these as plain UML links.
 - Quick Linker references to undefined names fixed (Component of, Defines, instant of, associated); «Impacts» → «impacts»,
   «deliverd by» → «delivered by» (neither is used by a connector in the model).
 - For the core FRAME Repository stereotypes (functional area, functions, data flows, terminator, data store, system, user needs)

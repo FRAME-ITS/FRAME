@@ -5,7 +5,8 @@ Base: technology V1.2 as it was stored in the model (drafts/latest/toolbox/FRAME
   1. Quick Linker rules (stereotypedrelationship) that point the opposite way to the model are reversed
      (function hierarchy «component of», user-need hierarchy «belongs to», «associate» Mission Statement – ITS Vision).
      Rules added for patterns the FRAME Repository uses throughout (sub-terminator, HL function in HL function,
-     functional area in system, IN/OUT of System and functional areas in the Context / functional-area diagrams).
+     functional area in system, IN/OUT of System and functional areas in the Context / functional-area diagrams) and, in the
+     motivation layer, Business Expectation «defines» Mission Statement (FRAME Meta Model) and ITS Service «adheres to» Specification.
   2. Quick Linker references to stereotypes that the profile does not define are mapped to the defined name
      (Component of, Defines, instant of, associated).
   3. Stereotype names unified (not used by any connector in the model): «Impacts» → «impacts», «deliverd by» → «delivered by».
@@ -89,7 +90,11 @@ ADD = [('component of', 'FRAME_Terminator', 'FRAME_Terminator'),            # su
        ('component of', 'FRAME_High_Level_Function', 'FRAME_High_Level_Function'),
        ('component of', 'FRAME_Functional_Area', 'FRAME_System'),
        ('IN', 'FRAME_System', 'FRAME_High_Level_Data_Flow'), ('OUT', 'FRAME_High_Level_Data_Flow', 'FRAME_System'),   # Context Diagram
-       ('IN', 'FRAME_Functional_Area', 'FRAME_Low_Level_Data_Flow'), ('OUT', 'FRAME_Low_Level_Data_Flow', 'FRAME_Functional_Area')]
+       ('IN', 'FRAME_Functional_Area', 'FRAME_Low_Level_Data_Flow'), ('OUT', 'FRAME_Low_Level_Data_Flow', 'FRAME_Functional_Area'),
+       # motivation layer: relationships of the FRAME Meta Model that the reference architectures (NAP, NB, C-ITS) had to draw as
+       # plain UML Realisation/Instantiate links because the technology did not offer them
+       ('defines', 'FRAME_Business_Expectation', 'FRAME_Mission_Statement'),
+       ('adheres to', 'FRAME_ITS_Service', 'FRAME_Specification')]
 for st, src, tgt in ADD:
     edit_rules(src, st, lambda t: t + [P + tgt] if P + tgt not in t else t)
     log.append(f'Quick Linker added: «{st}» {src[6:]} → {tgt[6:]}')

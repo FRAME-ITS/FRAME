@@ -129,7 +129,7 @@ gAAAAABzdHIuZGF0VVQFAAfP7klgUEsFBgAAAAABAAEAPgAAACkCAAAAAA==</Image>
 					</Stereotype>
 					<Stereotype name="FRAME_Business_Expectation" metatype="FRAME_Business_Expectation" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 						<stereotypedrelationships>
-							<stereotypedrelationship stereotype="FRAME_Profile::defines" constraint="FRAME_Profile::FRAME_Requirement"/>
+							<stereotypedrelationship stereotype="FRAME_Profile::defines" constraint="FRAME_Profile::FRAME_Requirement;FRAME_Profile::FRAME_Mission_Statement"/>
 						</stereotypedrelationships>
 						<AppliesTo>
 							<Apply type="Artifact">
@@ -386,6 +386,7 @@ CQAAAAAAAAAAAACAAAAAAHN0ci5kYXRVVAUABwZgKV9QSwUGAAAAAAEAAQA+AAAAagIAAAAA
 					</Stereotype>
 					<Stereotype name="FRAME_ITS_Service" metatype="FRAME_ITS_Service" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" generalizes="ArchiMate3::ArchiMate_Meaning" baseStereotypes="ArchiMate3::ArchiMate_Meaning">
 						<stereotypedrelationships>
+							<stereotypedrelationship stereotype="FRAME_Profile::adheres to" constraint="FRAME_Profile::FRAME_Specification"/>
 							<stereotypedrelationship stereotype="FRAME_Profile::defines" constraint="FRAME_Profile::FRAME_Requirement;FRAME_Profile::FRAME_ITS_Business_Process;FRAME_Profile::FRAME_ITS_Service_Process;FRAME_Profile::FRAME_User_Need"/>
 							<stereotypedrelationship stereotype="FRAME_Profile::delivered by" constraint="FRAME_Profile::FRAME_ITS_Service_Added_Value"/>
 							<stereotypedrelationship stereotype="FRAME_Profile::has" constraint="FRAME_Profile::FRAME_ITS_Domain"/>
