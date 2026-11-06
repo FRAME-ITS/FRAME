@@ -62,7 +62,16 @@ for k, tag in rels():
             if so and eo:
                 st = st.replace(f'SOID={so.group(1)};', 'SOID=@@;').replace(f'EOID={eo.group(1)};', f'EOID={so.group(1)};').replace('SOID=@@;', f'SOID={eo.group(1)};')
             c.execute('update t_diagramlinks set Style=?, Geometry=? where Instance_ID=?', (st, 'SX=0;SY=0;EX=0;EY=0;', dl['Instance_ID']))
+        flip_direction(k['Connector_ID'])
         log.append(f'rule reversed: «{v}» {name[k["s"]]} → {name[k["t"]]}  becomes  {name[k["t"]]} → {name[k["s"]]}')
+
+def flip_direction(k):
+    # a connector drawn 'Destination -> Source' shows its arrow at the start; after swapping the ends the arrow must stay at the
+    # (new) end, so direction and end styles are swapped as well
+    r = c.execute('select Direction, SourceStyle, DestStyle, SourceIsNavigable, DestIsNavigable from t_connector where Connector_ID=?', (k,)).fetchone()
+    if r[0] == 'Destination -> Source':
+        c.execute('update t_connector set Direction=?, SourceStyle=?, DestStyle=?, SourceIsNavigable=?, DestIsNavigable=? where Connector_ID=?',
+                  ('Source -> Destination', r[2], r[1], r[4], r[3], k))
 
 # duplicates
 seen = set()

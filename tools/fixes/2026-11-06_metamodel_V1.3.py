@@ -39,6 +39,14 @@ def reverse(k):
         p = dl['Path']; p = ';'.join(reversed([x for x in p.split(';') if x])) + ';' if p else p
         c.execute('update t_diagramlinks set Geometry=?, Style=?, Path=? where Instance_ID=?', (swap_geom(dl['Geometry']), st, p, dl['Instance_ID']))
 
+def flip_direction(k):
+    # a connector drawn 'Destination -> Source' shows its arrow at the start; after swapping the ends the arrow must stay at the
+    # (new) end, so direction and end styles are swapped as well
+    r = c.execute('select Direction, SourceStyle, DestStyle, SourceIsNavigable, DestIsNavigable from t_connector where Connector_ID=?', (k,)).fetchone()
+    if r[0] == 'Destination -> Source':
+        c.execute('update t_connector set Direction=?, SourceStyle=?, DestStyle=?, SourceIsNavigable=?, DestIsNavigable=? where Connector_ID=?',
+                  ('Source -> Destination', r[2], r[1], r[4], r[3], k))
+
 T_BEL = c.execute("""select k.* from t_connector k join t_object a on a.Object_ID=k.Start_Object_ID join t_object b on b.Object_ID=k.End_Object_ID
                      where k.Stereotype='belongs to' and a.Stereotype='FRAME_User_Need' and b.Stereotype='FRAME_User_Need_Topic' limit 1""").fetchone()
 xd = c.execute("select Description from t_xref where Client=? and Name='Stereotypes'", (T_BEL['ea_guid'],)).fetchone()[0]
@@ -49,7 +57,7 @@ for k in c.execute(f"""select k.Connector_ID, k.ea_guid, k.Connector_Type ty, k.
     st, a, b = k['st'], k['a'], k['b']
     if (st, a, b) in R: continue
     if (st, b, a) in R:
-        reverse(k['Connector_ID']); log.append(f'reversed: «{st}» {k["an"]} → {k["bn"]}  becomes  {k["bn"]} → {k["an"]}'); continue
+        reverse(k['Connector_ID']); flip_direction(k['Connector_ID']); log.append(f'reversed: «{st}» {k["an"]} → {k["bn"]}  becomes  {k["bn"]} → {k["an"]}'); continue
     if not st and k['ty'] == 'Association' and ('belongs to', a, b) in R:
         c.execute('update t_connector set Stereotype=?, Btm_Mid_Label=?, Direction=?, SourceStyle=?, DestStyle=? where Connector_ID=?',
                   ('belongs to', T_BEL['Btm_Mid_Label'], T_BEL['Direction'], T_BEL['SourceStyle'], T_BEL['DestStyle'], k['Connector_ID']))
