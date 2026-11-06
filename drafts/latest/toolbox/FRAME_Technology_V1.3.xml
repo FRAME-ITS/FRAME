@@ -185,7 +185,7 @@ agM55aIjWUZmTmzB1fBvES+d9nm0h5vtUn2PN1bkRBTEyL8Xzu2UI2r9FSkTy7sYdWXS954E
 PrhZz/gGUEsBAhcLFAAAAAgAWk4TUS5pNSlKAQAAJgQAAAcACQAAAAAAAAAAAACAAAAAAHN0
 ci5kYXRVVAUAB/X1PF9QSwUGAAAAAAEAAQA+AAAAgAEAAAAA</Image>
 						<AppliesTo>
-							<Apply type="DataStore"/>
+							<Apply type="DataStore"><Property name="_HideUmlLinks" value="True"/></Apply>
 						</AppliesTo>
 						<TaggedValues>
 							<Tag name="DataStore_SecurityLevel" type="" description="" unit="" values="" default="None"/>
@@ -232,7 +232,7 @@ XHdYV8XqOtX8uFIM34h2b9u7WMWU/f0NUEsBAhcLFAAAAAgA9lUTUZzk6oX+AQAAHggAAAcA
 CQAAAAAAAAAAAACAAAAAAHN0ci5kYXRVVAUABz8DPV9QSwUGAAAAAAEAAQA+AAAANAIAAAAA
 </Image>
 						<AppliesTo>
-							<Apply type="Activity"/>
+							<Apply type="Activity"><Property name="_HideUmlLinks" value="True"/></Apply>
 						</AppliesTo>
 					</Stereotype>
 					<Stereotype name="FRAME_Functionality" metatype="FRAME_Functionality" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" generalizes="BPMN2.0::Activity" baseStereotypes="BPMN2.0::Activity">
@@ -273,7 +273,7 @@ RRimoLJ/C5gx1d7luXZXTZw7BqqaX5xEpjykAha222S306N1dOU4aVyK7Bs+vSzkj3G5tq/y
 GUuH8j6W8t/ub9XxAlBLAQIXCxQAAAAIAMBTBlPpvZjXrwAAAKABAAAHAAkAAAAAAAAAAAAA
 gAAAAABzdHIuZGF0VVQFAAdYDw1hUEsFBgAAAAABAAEAPgAAAOUAAAAAAA==</Image>
 						<AppliesTo>
-							<Apply type="Interface"/>
+							<Apply type="Interface"><Property name="_HideUmlLinks" value="True"/></Apply>
 						</AppliesTo>
 					</Stereotype>
 					<Stereotype name="FRAME_High_Level_Function" metatype="FRAME_High_Level_Function" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
@@ -296,7 +296,7 @@ z3WHdVWsqVPPjyvF8I1o97a9i3WM8/c3UEsBAhcLFAAAAAgAcm4EUTTATJL+AQAAGggAAAcA
 CQAAAAAAAAAAAACAAAAAAHN0ci5kYXRVVAUAB+1nKV9QSwUGAAAAAAEAAQA+AAAANAIAAAAA
 </Image>
 						<AppliesTo>
-							<Apply type="Activity"/>
+							<Apply type="Activity"><Property name="_HideUmlLinks" value="True"/></Apply>
 						</AppliesTo>
 					</Stereotype>
 					<Stereotype name="FRAME_Information_Object" metatype="FRAME_Information_Object" instanceType="Object" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" generalizes="BPMN2.0::DataObject" baseStereotypes="BPMN2.0::DataObject">
@@ -492,7 +492,7 @@ RRimoLJ/C5gx1d7luXZXTZw7BqqaX5xEpjykAha222S306N1dOU4aVyK7Bs+vSzkj3G5tq/y
 GUuH8j6W8t/ub9XxAlBLAQIXCxQAAAAIANpRa1LpvZjXrwAAAKABAAAHAAkAAAAAAAAAAAAA
 gAAAAABzdHIuZGF0VVQFAAd17UlgUEsFBgAAAAABAAEAPgAAAOUAAAAAAA==</Image>
 						<AppliesTo>
-							<Apply type="Interface"/>
+							<Apply type="Interface"><Property name="_HideUmlLinks" value="True"/></Apply>
 						</AppliesTo>
 					</Stereotype>
 					<Stereotype name="FRAME_Low_Level_Function" metatype="FRAME_Low_Level_Function" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
@@ -518,7 +518,7 @@ z3WHdVWsqVPPjyvF8I1o97a9i3WM8/c3UEsBAhcLFAAAAAgA8m4EUTTATJL+AQAAGggAAAcA
 CQAAAAAAAAAAAACAAAAAAHN0ci5kYXRVVAUAB91oKV9QSwUGAAAAAAEAAQA+AAAANAIAAAAA
 </Image>
 						<AppliesTo>
-							<Apply type="Activity"/>
+							<Apply type="Activity"><Property name="_HideUmlLinks" value="True"/></Apply>
 						</AppliesTo>
 					</Stereotype>
 					<Stereotype name="FRAME_Mission_Statement" metatype="FRAME_Mission_Statement" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" generalizes="ArchiMate3::ArchiMate_Principle" baseStereotypes="ArchiMate3::ArchiMate_Principle">
@@ -679,7 +679,7 @@ r4rnucVazdR9qjowWpqenZ5RXRVj+/0DUEsBAhcLFAAAAAgAvFJrUtKNMNX+AQAAMggAAAcA
 CQAAAAAAAAAAAACAAAAAAHN0ci5kYXRVVAUABzrvSWBQSwUGAAAAAAEAAQA+AAAANAIAAAAA
 </Image>
 						<AppliesTo>
-							<Apply type="Object"/>
+							<Apply type="Object"><Property name="_HideUmlLinks" value="True"/></Apply>
 						</AppliesTo>
 					</Stereotype>
 					<Stereotype name="FRAME_TDF_HighLevelFunction" metatype="FRAME_TDF_HighLevelFunction" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
@@ -721,7 +721,7 @@ PB3ENufwWZ5KOWzKXoL5fSXLmPvz1uVtP/IuFq692Yt8Fc91h3V3qb+nGm/L7eF/gWW97l+w
 kS9QSwECFwsUAAAACAD4UaxSNNtwKx4CAACqCAAABwAJAAAAAAAAAAAAAIAAAAAAc3RyLmRh
 dFVUBQAHwKqbYFBLBQYAAAAAAQABAD4AAABUAgAAAAA=</Image>
 						<AppliesTo>
-							<Apply type="Actor"/>
+							<Apply type="Actor"><Property name="_HideUmlLinks" value="True"/></Apply>
 						</AppliesTo>
 					</Stereotype>
 					<Stereotype name="FRAME_User_Need" metatype="FRAME_User_Need" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
@@ -751,7 +751,7 @@ r0Jhdf07XS1gxzjsO2RfVZlmyC1vKB93hqhpDU683BmCiiNi1y3J0+lTjK1TUade7l0M3IHa
 AAkAAAAAAAAAAAAAgAAAAABzdHIuZGF0VVQFAAdofidhUEsFBgAAAAABAAEAPgAAAK8DAAAA
 AA==</Image>
 						<AppliesTo>
-							<Apply type="Requirement"/>
+							<Apply type="Requirement"><Property name="_HideUmlLinks" value="True"/></Apply>
 						</AppliesTo>
 					</Stereotype>
 					<Stereotype name="FRAME_User_Need_Group" metatype="FRAME_User_Need_Group" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
@@ -776,7 +776,7 @@ r0Jhdf07XS1gxzjsO2RfVZlmyC1vKB93hqhpDU683BmCiiNi1y3J0+lTjK1TUade7l0M3IHa
 AAkAAAAAAAAAAAAAgAAAAABzdHIuZGF0VVQFAAeQkSpgUEsFBgAAAAABAAEAPgAAAK8DAAAA
 AA==</Image>
 						<AppliesTo>
-							<Apply type="Requirement"/>
+							<Apply type="Requirement"><Property name="_HideUmlLinks" value="True"/></Apply>
 						</AppliesTo>
 					</Stereotype>
 					<Stereotype name="FRAME_User_Need_Service" metatype="FRAME_User_Need_Service" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
@@ -804,7 +804,7 @@ r0Jhdf07XS1gxzjsO2RfVZlmyC1vKB93hqhpDU683BmCiiNi1y3J0+lTjK1TUade7l0M3IHa
 AAkAAAAAAAAAAAAAgAAAAABzdHIuZGF0VVQFAAd3kSpgUEsFBgAAAAABAAEAPgAAAK8DAAAA
 AA==</Image>
 						<AppliesTo>
-							<Apply type="Requirement"/>
+							<Apply type="Requirement"><Property name="_HideUmlLinks" value="True"/></Apply>
 						</AppliesTo>
 					</Stereotype>
 					<Stereotype name="FRAME_User_Need_Topic" metatype="FRAME_User_Need_Topic" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
@@ -833,7 +833,7 @@ r0Jhdf07XS1gxzjsO2RfVZlmyC1vKB93hqhpDU683BmCiiNi1y3J0+lTjK1TUade7l0M3IHa
 AAkAAAAAAAAAAAAAgAAAAABzdHIuZGF0VVQFAAdokSpgUEsFBgAAAAABAAEAPgAAAK8DAAAA
 AA==</Image>
 						<AppliesTo>
-							<Apply type="Requirement"/>
+							<Apply type="Requirement"><Property name="_HideUmlLinks" value="True"/></Apply>
 						</AppliesTo>
 					</Stereotype>
 					<Stereotype name="fulfilled by" metatype="fulfilled by" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">

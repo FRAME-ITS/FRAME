@@ -10,6 +10,7 @@ Base: technology V1.2 stored in the model (tools/mdg.py). Changes:
      (Component of, Defines, instant of, associated).
   3. Stereotype names unified (not used by any connector in the model): «Impacts» → «impacts», «deliverd by» → «delivered by».
   4. Model images of the published V1.0 file (start-page images) added, so that a new project gets them too.
+  6. Quick Linker shows only the FRAME relationships for the core FRAME Repository stereotypes (_HideUmlLinks).
   5. Version V1.3 (technology, FRAME_Profile, FRAME_Toolbox, FRAME_Diagram).
 """
 import sys, os, re, sqlite3
@@ -107,6 +108,17 @@ def merge(m):
         return ''.join(f'{r.group(1)}<stereotypedrelationship stereotype="{k}" constraint="{";".join(seen[k])}"/>' for k in order)
     return REL.sub(sub, b)
 prof = re.sub(r'<Stereotype name="([^"]*)"[^>]*>.*?</Stereotype>', merge, prof, flags=re.S)
+# 6. Quick Linker offers only the FRAME relationships for the core FRAME Repository stereotypes (_HideUmlLinks on the metaclass)
+CORE = ('FRAME_Functional_Area', 'FRAME_High_Level_Function', 'FRAME_Low_Level_Function', 'FRAME_High_Level_Data_Flow',
+        'FRAME_Low_Level_Data_Flow', 'FRAME_Terminator', 'FRAME_Datastore', 'FRAME_System', 'FRAME_User_Need',
+        'FRAME_User_Need_Topic', 'FRAME_User_Need_Service', 'FRAME_User_Need_Group')
+for name in CORE:
+    m = block(prof, name); b = m.group(0)
+    if '_HideUmlLinks' in b: continue
+    b2, n = re.subn(r'<Apply type="([^"]+)"\s*/>', r'<Apply type="\1"><Property name="_HideUmlLinks" value="True"/></Apply>', b)
+    if not n: sys.exit(f'{name}: no metaclass (Apply) found')
+    prof = prof[:m.start()] + b2 + prof[m.end():]
+log.append('Quick Linker: UML links hidden (_HideUmlLinks) for ' + ', '.join(n[6:] for n in CORE))
 x = x[:s0] + prof + x[s1:]
 
 # 4. model images from V1.0
