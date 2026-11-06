@@ -39,9 +39,9 @@ elements:
       An ITS Application (or module) is an ITS architecture building block and consists of a computer program or system of computer programs that automate or implement useful functions. It uses ITS interfaces for communication with other ITS applications and realises technical activities in an ITS business process.
     links:
       - "Association «adheres to» → Specification"  # {A40EA1B2-C603-4fc3-9668-E6EC6BB94AA7} → {32E1A53D-B9C9-4180-BD66-998E967D5E33}
+      - "Association «contains» → Low Level Function"  # {D42F79EB-128B-4820-BD89-AB9BE6C0F700} → {568A327F-EB2D-468d-9FA6-3CD9714EE807}
+      - "Association «contains» → Physical Dataflow"  # {054583DA-096F-49f0-8BBF-C9134A9A17E4} → {AC1DD116-B224-4693-B0FE-4AD1D8B1246C}
       - "Association «hosted by» → Component"  # {37910D96-8C5F-4a9c-8A20-37D996DC82D7} → {A3ECE56A-3A44-4971-9CEC-0D092A4DB634}
-      - "Usage → Low Level Function"  # {D42F79EB-128B-4820-BD89-AB9BE6C0F700} → {568A327F-EB2D-468d-9FA6-3CD9714EE807}
-      - "Usage → Physical Dataflow"  # {054583DA-096F-49f0-8BBF-C9134A9A17E4} → {AC1DD116-B224-4693-B0FE-4AD1D8B1246C}
   - name: "Business_Expectation"
     guid: "{76442EA5-1026-40ac-9827-10B79B425CD5}"
     type: "Artifact"
@@ -67,7 +67,7 @@ elements:
       Components describes all subsystems, hardware and software
     links:
       - "Association «adheres to» → Specification"  # {02BA6521-94A3-47c7-892F-DF8754992ED5} → {32E1A53D-B9C9-4180-BD66-998E967D5E33}
-      - "Usage → Physical Dataflow"  # {FCAC2E88-13FE-4faa-872B-54A34C982F28} → {AC1DD116-B224-4693-B0FE-4AD1D8B1246C}
+      - "Association «use» → Physical Dataflow"  # {FCAC2E88-13FE-4faa-872B-54A34C982F28} → {AC1DD116-B224-4693-B0FE-4AD1D8B1246C}
   - name: "DataObject"
     guid: "{55575BA9-439F-41d2-9C92-F2E3A2A0AEBF}"
     type: "DataType"
@@ -138,8 +138,8 @@ elements:
       - "Association «OUT» → Low Level Function"  # {F8FB90EF-15B0-4f01-9464-95B0EF89ED92} → {568A327F-EB2D-468d-9FA6-3CD9714EE807}
       - "Association «OUT» → System"  # {4A991BEB-39D8-4a5b-B6EB-B36E3C518C54} → {DFDAD014-1425-41e4-A8A2-F8A960161987}
       - "Association «OUT» → Terminator/ Subterminator"  # {9BB07876-E49C-4d52-BCFC-B78344600B1C} → {C619D94C-1176-4bee-86C2-D8C4FF8FB634}
+      - "Association «contains» → DataObject"  # {5819AC30-5FF2-4731-955F-B470972C00A3} → {55575BA9-439F-41d2-9C92-F2E3A2A0AEBF}
       - "Association «contains» → Data_Object"  # {18873814-9EEF-440d-9DBF-93114AE3C72F} → {D9D08334-9438-4292-8CF0-B0B048CA8A3C}
-      - "Association «defines» → DataObject"  # {5819AC30-5FF2-4731-955F-B470972C00A3} → {55575BA9-439F-41d2-9C92-F2E3A2A0AEBF}
       - "Association «served by» → Physical Dataflow"  # {B985BBE5-C2CE-4fbd-B90E-73981FABBC40} → {AC1DD116-B224-4693-B0FE-4AD1D8B1246C}
       - "Usage → Interface"  # {EF8EBCBF-6A8D-4d7b-A6E0-441A5BA6D0C4} → {31C82DE5-89C7-493b-96A7-4E257321F468}
   - name: "Fuctional Area"
@@ -270,7 +270,6 @@ elements:
     links:
       - "Association «contains» → Data_Object"  # {18E1E28E-39EF-47cd-B7E2-7C4BE905A0A3} → {D9D08334-9438-4292-8CF0-B0B048CA8A3C}
       - "Association «stored in» → FRAME_Datastore"  # {48050D9B-96A7-4f15-B680-1F297E5B0B42} → {C16508B8-537D-40cd-B45A-513529E5781C}
-      - "Usage → InformationObject"  # {7E178259-42FB-43d8-83F5-D21545877AE0} → {23EBC3DA-D923-4f06-8F70-6D29A77E7973}
   - name: "Interface"
     guid: "{31C82DE5-89C7-493b-96A7-4E257321F468}"
     type: "Interface"
@@ -353,7 +352,6 @@ elements:
       
       Specific high level R. - Security: In terms of secure data and functionality.
     links:
-      - "Abstraction → Specification"  # {09120566-4BC3-4580-9922-889375D076D5} → {32E1A53D-B9C9-4180-BD66-998E967D5E33}
       - "Association «fulfilled by» → Application"  # {4DDD0A8F-6394-40d9-9B4F-A65906FD246E} → {9E05B1AE-4239-4341-BCF2-010BB287A0BB}
       - "Association «fulfilled by» → Component"  # {03AE6B03-89A8-4ad9-961D-18FA35787AAD} → {A3ECE56A-3A44-4971-9CEC-0D092A4DB634}
       - "Association «fulfilled by» → Interface"  # {0C99C3FD-2BC8-4238-965C-C4A050920FA0} → {31C82DE5-89C7-493b-96A7-4E257321F468}
@@ -389,6 +387,8 @@ elements:
     version: "1.0"
     order: 0
     note: ""
+    links:
+      - "Association «defines» → Requirement"  # {09120566-4BC3-4580-9922-889375D076D5} → {C94C247E-3F93-47ee-AA0A-75C521916D0A}
   - name: "Stakeholder"
     guid: "{D8941B60-3EFA-422b-93B5-1F7FDFB18CFF}"
     type: "Actor"
