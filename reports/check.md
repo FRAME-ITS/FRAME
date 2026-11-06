@@ -1,6 +1,6 @@
 # Model check – FRAME.qea
 
-**45 errors, 71 warnings**
+**45 errors, 66 warnings**
 
 | Rule | Related issue | Errors | Warnings |
 |---|---|---|---|
@@ -8,7 +8,6 @@
 | context-diagram | #91 | 0 | 1 |
 | duplicate |  | 0 | 2 |
 | function-flows |  | 0 | 1 |
-| function-parent |  | 0 | 5 |
 | in-out | #69 | 28 | 0 |
 | release-hygiene |  | 0 | 1 |
 | self-reference | #62 | 0 | 2 |
@@ -143,16 +142,6 @@
 <details><summary><b>function-flows</b> (1)</summary>
 
 - Low_Level_Function **F6.5.8 Enable Final Approval of Trip Plan** (Frame Repository) has no IN and OUT data flows
-
-</details>
-
-<details><summary><b>function-parent</b> (5)</summary>
-
-- Low_Level_Function **F3.1.1.5.11 Monitor Access to Urban Zones** (Frame Repository) is not «Componentof» a high-level function or functional area
-- Low_Level_Function **F3.1.1.5.12 Prevent Access to Urban Zones** (Frame Repository) is not «Componentof» a high-level function or functional area
-- Low_Level_Function **F3.1.1.5.21 Send Messages to Approaching Urban Vehicles** (Frame Repository) is not «Componentof» a high-level function or functional area
-- Low_Level_Function **F3.1.2.14.6 Send Messages to Approaching Inter-urban Vehicles** (Frame Repository) is not «Componentof» a high-level function or functional area
-- Low_Level_Function **F6.5.8 Enable Final Approval of Trip Plan** (Frame Repository) is not «Componentof» a high-level function or functional area
 
 </details>
 

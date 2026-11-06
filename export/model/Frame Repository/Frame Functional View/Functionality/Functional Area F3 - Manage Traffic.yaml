@@ -579,6 +579,7 @@ elements:
       (3) When an approaching Vehicle is detected, the ability to output to it the data for information and warning messages plus commands relevant to the management of traffic using the inter-urban road network.
       (4) The ability to continue with the output to approaching Vehicles, changing the data every time it is changed, and stopping output if there is no data to transmit.
     links:
+      - "Aggregation «component of» → F3.1.2.14 Implement Inter-urban Management Traffic Strategy"  # {5ED6273A-C899-4519-8EFE-7992CAE1D5B4} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
       - "Association «IN» → mt.pshvs_approaching_vehicles_inter-urban_messages"  # {08FC3B0F-8F89-4858-A14C-53EB116C1496} → {E97124E0-93F0-4805-904F-365E4F228219}
   - name: "F3.1.4 Provide Management of Car Parks"
     guid: "{CFC380C7-2010-46fb-9DE1-6BF39DBDA8B0}"
@@ -2271,6 +2272,7 @@ elements:
       (4) The output of a warning message of no entry permission for display to Drivers of detected Vehicles whose identities do not match those on the permitted list.
       (5) The output of data about the detected Vehicle to the Manage Vehicle Access to Sensitive Areas Function.
     links:
+      - "Aggregation «component of» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {DBB2E4A6-6E89-4174-A7D7-D83B48F8016B} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
       - "Association «IN» → mt.pscs_vehicle_nearing_urban_sensitive_area"  # {FA55A9E6-B103-4517-A249-C0EFD4821955} → {A46E1454-31DE-4cfb-AE64-9ACED7743619}
       - "Association «IN» → mt_urban_zone_vehicle_identity"  # {2DBC5205-36E3-4ad5-A131-68B355973517} → {6866A359-9B7C-492a-B5F2-7926C4419B65}
       - "Association «IN» → td-approaching_urban_zone"  # {B7561945-AFA7-4020-8432-D8DC03DCCD10} → {8040FD8A-C054-4504-A2C4-3098338E358D}
@@ -2478,6 +2480,7 @@ elements:
       (3) The output of a warning message to Drivers of Vehicles that do not have permission to enter the zone that a physical barrier may prevent them driving their Vehicles into the zone.
       (4) The provision of data to functionality in the Provide Support for Law Enforcement Functional Area about un-permitted Vehicles that have entered the zone so that if necessary prosecution can take place.
     links:
+      - "Aggregation «component of» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {1F313B62-CF9C-4BD0-8A16-832B6F0BB31F} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
       - "Association «IN» → mt.psle_vehicle_entering_urban_zone"  # {4034C586-2B17-4faa-B230-44458E334410} → {35E26B7A-4225-4a93-888B-F5C3CEEDD2C5}
       - "Association «IN» → td-enterring_urban_zone"  # {35E47CBB-535A-4ab4-8EA1-F96D318DFFE0} → {075B6F0B-636E-4fbb-BDAF-FED4BA2C83AC}
   - name: "F3.1.2.11 Provide Updated Inter-urban data for Digital Maps"
@@ -3065,6 +3068,7 @@ elements:
       (3) When an approaching Vehicle is detected, the ability to output to it the data for information and warning messages plus commands relevant to the management of traffic using the urban road network.
       (4) The ability to continue with the output to approaching Vehicles, changing the data every time it is changed, and stopping output if there is no data to transmit.
     links:
+      - "Aggregation «component of» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {63F346CC-744F-49D1-AF92-70BB3F86CE9B} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
       - "Association «IN» → mt.pshvs_approaching_vehicles_urban_messages"  # {3F2E5D4C-AD80-4c97-9457-79825F9CA7AE} → {E053CAEF-4BF1-4f30-ADAB-C482DD247589}
   - name: "F3.1.2.15 Predict Short & Medium Term Inter-urban Conditions"
     guid: "{D9FC2D84-84DD-4618-9B04-0ED445C214FF}"

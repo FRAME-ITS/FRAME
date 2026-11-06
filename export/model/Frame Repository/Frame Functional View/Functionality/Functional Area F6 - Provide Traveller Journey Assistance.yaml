@@ -625,6 +625,8 @@ elements:
       (3) If so desired by the Pre-Trip Traveller, the ability to include any maps for road trips or route descriptions, as well as safety advice concerning all conditions that are likely to be encountered by following the route that have been produced as part of the trip planning process.
       (4) The ability for the Pre-Trip Traveller to give final approval to the trip plan after which it will be sent to the Manage Store of Trip Plan Data for implementation when so requested by the Pre-Trip Traveller.
       (5) The ability for the Pre-Trip Traveller to cancel the trip at this stage, in which case a "cancel bookings" command shall be sent to the Make Bookings and Payments for Trip Function and the trip planning process will be implemented again from the beginning.
+    links:
+      - "Aggregation «component of» → F6.5 Prepare Trip Plan"  # {5AB99D96-99D0-4CA4-A6AC-0D93D4AF28B7} → {AA1602B6-7456-4fd1-98CC-6CA7DD14285B}
   - name: "F6.5.9 Make Trip Bookings and Payments"
     guid: "{B6BC0B65-1756-480e-82A4-9208F43777FE}"
     type: "Activity"
