@@ -563,6 +563,7 @@ elements:
     links:
       - "Dependency «stereotyped relationship» → FRAME_Physical_Data_Flow"  # {A946A264-67C5-431E-AE78-62A9ED0F25B9} → {D4B39B79-3440-41a8-B438-75EB7B8AC1F9}
       - "Dependency «stereotyped relationship» → FRAME_Requirement"  # {D5ADF063-A2B7-43f8-800E-48AAE0DBDCBE} → {AEE79FAA-7700-45ad-8E09-D35B1F39DD5A}
+      - "Dependency «stereotyped relationship» → FRAME_Role"  # {A226A677-3445-4529-88D8-2EADAFA5F992} → {8E2EF45B-FD45-417c-9E26-96C6F78A82C0}
       - "Dependency «stereotyped relationship» → FRAME_Specification"  # {81BD86E0-E54F-4dbd-B8FB-2B504C1CC514} → {A91B0704-2E6F-449c-BA75-85536AC7256A}
       - "Extension → Component"  # {5CF27EA4-9538-4a0c-A242-6DA65D8A2C16} → {1BFE4889-5A06-44a7-846C-E79E61AC6C21}
   - name: "FRAME_Data_Object"
@@ -574,6 +575,7 @@ elements:
     order: 0
     note: ""
     links:
+      - "Dependency «stereotyped relationship» → FRAME_Specification"  # {4AA0EBC0-074B-4E4D-B595-6E8FB1713912} → {A91B0704-2E6F-449c-BA75-85536AC7256A}
       - "Extension → Object"  # {EDED1399-8B56-4957-9A08-BC8DE6DE8478} → {A7D3978D-4B35-49c2-A2FC-505C846DBE92}
   - name: "FRAME_Datastore"
     guid: "{2F437CA9-C0FF-41f3-9525-AE9C5C17757B}"

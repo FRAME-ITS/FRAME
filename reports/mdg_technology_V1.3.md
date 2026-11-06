@@ -34,6 +34,7 @@ For each rule (source → target) the number of connectors drawn in that directi
 | «adheres to» | Agreement | Role | 33 | 0 |
 | «adheres to» | Application | Specification | 4 | 0 |
 | «adheres to» | Component | Specification | 7 | 0 |
+| «adheres to» | Data_Object | Specification | 1 | 0 |
 | «adheres to» | Datastore | Specification | 1 | 0 |
 | «adheres to» | ITS_Service | Specification | 5 | 0 |
 | «adheres to» | ITS_Service_Process | Specification | 10 | 0 |
@@ -56,12 +57,12 @@ For each rule (source → target) the number of connectors drawn in that directi
 | «component of» | Low_Level_Data_Flow | High_Level_Data_Flow | 1530 | 0 |
 | «component of» | Low_Level_Function | Functional_Area | 117 | 0 |
 | «component of» | Low_Level_Function | High_Level_Function | 347 | 0 |
-| «component of» | Terminator | Terminator | 69 | 69 |
+| «component of» | Terminator | Terminator | 70 | 70 |
 | «contains» | Application | Datastore | 8 | 0 |
 | «contains» | Application | Low_Level_Function | 39 | 0 |
 | «contains» | Application | Physical_Data_Flow | 23 | 0 |
 | «contains» | Information_Object | Data_Object | 16 | 0 |
-| «contains» | Low_Level_Data_Flow | Data_Object | 4 | 0 |
+| «contains» | Low_Level_Data_Flow | Data_Object | 3 | 0 |
 | «contains» | Low_Level_Data_Flow | Information_Object | 13 | 0 |
 | «contains» | Physical_Data_Flow | Information_Object | 26 | 0 |
 | «defines» | Actor | Requirement | 0 | 0 |
@@ -110,7 +111,7 @@ For each rule (source → target) the number of connectors drawn in that directi
 | «defines» | Stakeholder | ITS_Vision | 2 | 0 |
 | «defines» | Stakeholder | Requirement | 13 | 0 |
 | «defines» | System | Requirement | 0 | 0 |
-| «defines» | Terminator | Application | 1 | 0 |
+| «defines» | Terminator | Application | 2 | 0 |
 | «defines» | Terminator | Requirement | 0 | 0 |
 | «defines» | User_Need | Functionality | 0 | 0 |
 | «defines» | User_Need | Requirement | 1 | 0 |
@@ -156,6 +157,7 @@ For each rule (source → target) the number of connectors drawn in that directi
 | «is Type of» | Actor | Terminator | 12 | 0 |
 | «is Type of» | Datastore | Component | 1 | 0 |
 | «is Type of» | Terminator | Terminator | 1 | 1 |
+| «owned by» | Component | Role | 1 | 0 |
 | «served by» | ITS_Service_Process | Low_Level_Function | 45 | 0 |
 | «served by» | Low_Level_Data_Flow | Physical_Data_Flow | 60 | 0 |
 | «served by» | User_Need | Low_Level_Function | 1785 | 0 |

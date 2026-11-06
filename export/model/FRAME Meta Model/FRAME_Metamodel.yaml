@@ -67,18 +67,8 @@ elements:
       Components describes all subsystems, hardware and software
     links:
       - "Association «adheres to» → Specification"  # {02BA6521-94A3-47c7-892F-DF8754992ED5} → {32E1A53D-B9C9-4180-BD66-998E967D5E33}
+      - "Association «owned by» → Role"  # {883DD431-0B62-4eb8-AC30-E2DAD1EAE9F5} → {6919B163-FD91-4478-B0D6-0A11A723D27B}
       - "Association «use» → Physical Dataflow"  # {FCAC2E88-13FE-4faa-872B-54A34C982F28} → {AC1DD116-B224-4693-B0FE-4AD1D8B1246C}
-  - name: "DataObject"
-    guid: "{55575BA9-439F-41d2-9C92-F2E3A2A0AEBF}"
-    type: "DataType"
-    stereotype: "FRAME_Data_Object"
-    status: "Proposed"
-    version: "1.0"
-    order: 0
-    note: ""
-    links:
-      - "Association «adheres to» → Specification"  # {3D29F3D1-F6CC-4f36-B50A-01D8A2C63313} → {32E1A53D-B9C9-4180-BD66-998E967D5E33}
-      - "Usage → InformationObject"  # {6E17BB3C-03A4-4f00-9B88-6505ED9DE343} → {23EBC3DA-D923-4f06-8F70-6D29A77E7973}
   - name: "Data_Object"
     guid: "{D9D08334-9438-4292-8CF0-B0B048CA8A3C}"
     type: "Object"
@@ -88,6 +78,8 @@ elements:
     order: 0
     note: |
       The ITS Data object is an ITS architecture building block that contains ITS information objects and uses ITS references to describe locations. It is used in ITS interfaces.
+    links:
+      - "Association «adheres to» → Specification"  # {3D29F3D1-F6CC-4f36-B50A-01D8A2C63313} → {32E1A53D-B9C9-4180-BD66-998E967D5E33}
   - name: "Desired_Architecture_Goals"
     guid: "{7E0FAD8F-0BA7-468d-AF74-828588DA2AF9}"
     type: "Artifact"
@@ -138,10 +130,8 @@ elements:
       - "Association «OUT» → Low Level Function"  # {F8FB90EF-15B0-4f01-9464-95B0EF89ED92} → {568A327F-EB2D-468d-9FA6-3CD9714EE807}
       - "Association «OUT» → System"  # {4A991BEB-39D8-4a5b-B6EB-B36E3C518C54} → {DFDAD014-1425-41e4-A8A2-F8A960161987}
       - "Association «OUT» → Terminator/ Subterminator"  # {9BB07876-E49C-4d52-BCFC-B78344600B1C} → {C619D94C-1176-4bee-86C2-D8C4FF8FB634}
-      - "Association «contains» → DataObject"  # {5819AC30-5FF2-4731-955F-B470972C00A3} → {55575BA9-439F-41d2-9C92-F2E3A2A0AEBF}
       - "Association «contains» → Data_Object"  # {18873814-9EEF-440d-9DBF-93114AE3C72F} → {D9D08334-9438-4292-8CF0-B0B048CA8A3C}
       - "Association «served by» → Physical Dataflow"  # {B985BBE5-C2CE-4fbd-B90E-73981FABBC40} → {AC1DD116-B224-4693-B0FE-4AD1D8B1246C}
-      - "Usage → Interface"  # {EF8EBCBF-6A8D-4d7b-A6E0-441A5BA6D0C4} → {31C82DE5-89C7-493b-96A7-4E257321F468}
   - name: "Fuctional Area"
     guid: "{21EEE2BA-B8F1-4519-AC3F-C983FE93983E}"
     type: "Activity"
@@ -282,7 +272,6 @@ elements:
     links:
       - "Association «adheres to» → Specification"  # {80CE5958-AF33-437b-B8C0-32774BAB6673} → {32E1A53D-B9C9-4180-BD66-998E967D5E33}
       - "Association «use» → InformationObject"  # {1CDB2350-94A6-4bff-BCF1-4A23825AB8A7} → {23EBC3DA-D923-4f06-8F70-6D29A77E7973}
-      - "Usage «Instantiate» → FRAME_Low_Level_Data_Flow"  # {B86EE178-250B-49cf-B47C-4B387E950208} → {3DA4C5ED-3529-4c62-BB04-DBC9641EA039}
   - name: "Low Level Function"
     guid: "{568A327F-EB2D-468d-9FA6-3CD9714EE807}"
     type: "Activity"
@@ -297,7 +286,6 @@ elements:
       - "Aggregation «component of» → High Level Function"  # {821C625A-B952-4199-A329-7D03C9FBE62F} → {5C69204E-D06E-4f2c-8AB9-1E1F6C08EE5C}
       - "Association «IN» → FRAME_Low_Level_Data_Flow"  # {83E2A392-0C84-40bf-91A9-1B230785F875} → {3DA4C5ED-3529-4c62-BB04-DBC9641EA039}
       - "Association «adheres to» → Specification"  # {1CBB1B95-7458-4201-8E24-B09C00D10839} → {32E1A53D-B9C9-4180-BD66-998E967D5E33}
-      - "Usage «Call» → Component"  # {4FFE32DD-1A06-4580-89D4-ACD40CF32E1E} → {A3ECE56A-3A44-4971-9CEC-0D092A4DB634}
   - name: "Mission Statement"
     guid: "{B3A79F6B-D9C7-45e4-9E34-B1F4A73D19DC}"
     type: "Class"
@@ -374,11 +362,9 @@ elements:
       Part of the ITS service chain, (partners contributing to the service delivery)
       The ITS Role is an architectural artifact that defines and semantically describes the stereotypes of ITS responsibilities, tasks, and capabilities that are typical and necessary for the value creation of ITS services. It is a significant component of ITS value-added chains for ITS information logistics and is taken by ITS actors and stakeholders depending on the requirements of the ITS service to be implemented. A single ITS actor or stakeholder can occupy one or more ITS roles. The role operates its capabilities, responsibilities, and tasks in the form of activities which, together with the activities of other ITS roles, constitute the ITS business process of an ITS service.
     links:
-      - "Abstraction → ITS_Service"  # {7A2564F0-1333-40b8-AE61-5A7C0C184ADE} → {7153E4F6-663F-4457-B65B-207E5B95ED99}
       - "Association «accepted by» → Agreement"  # {322AA2AB-0141-4586-86D8-50EFCA83FB3E} → {59AC1C75-662C-4f63-B4A9-8E075FE15BE4}
       - "Association «defines» → Actor"  # {01753DD3-F870-468a-B4DE-0A1932C6AFD5} → {E9485972-884F-42d6-A74B-D8D874B6CA2D}
       - "Association «defines» → Organisation"  # {61F2CD8B-AE8F-4060-BD2D-970E315C7B1C} → {FAB885FE-E93D-4446-B40C-9C8CD237440F}
-      - "Usage → Component"  # {883DD431-0B62-4eb8-AC30-E2DAD1EAE9F5} → {A3ECE56A-3A44-4971-9CEC-0D092A4DB634}
   - name: "Specification"
     guid: "{32E1A53D-B9C9-4180-BD66-998E967D5E33}"
     type: "DeploymentSpecification"
@@ -424,10 +410,10 @@ elements:
       Terminators/Actors define the world outside the FRAME Architecture, i.e. artefacts that are not modelled within it. Actors are used to identify particular variants of a Terminator, e.g. different types of vehicle and drivers, or the different roles that a traveller may take during a trip.
     links:
       - "Abstraction «is Type of» → Terminator/ Subterminator"  # {A9E89699-D75A-4567-AB30-91C9EDF973E8} → {C619D94C-1176-4bee-86C2-D8C4FF8FB634}
+      - "Aggregation «component of» → Terminator/ Subterminator"  # {FC6C9DC5-A966-4558-99DD-EBA63703D50A} → {C619D94C-1176-4bee-86C2-D8C4FF8FB634}
       - "Association «IN» → FRAME_High_Level_Data_Flow"  # {570C2EDF-9B4F-43ae-A3E8-299C858444EF} → {35F631D7-65CE-4df9-A861-1B12E39AC463}
       - "Association «IN» → FRAME_Low_Level_Data_Flow"  # {219589AF-C19C-4aee-BB75-E387E78846D7} → {3DA4C5ED-3529-4c62-BB04-DBC9641EA039}
-      - "Usage → Application"  # {F4449BB0-FFFB-4ebf-8177-03B4B201D828} → {9E05B1AE-4239-4341-BCF2-010BB287A0BB}
-      - "Usage «Instantiate» → Terminator/ Subterminator"  # {FC6C9DC5-A966-4558-99DD-EBA63703D50A} → {C619D94C-1176-4bee-86C2-D8C4FF8FB634}
+      - "Association «defines» → Application"  # {F4449BB0-FFFB-4ebf-8177-03B4B201D828} → {9E05B1AE-4239-4341-BCF2-010BB287A0BB}
   - name: "UserNeedGroup"
     guid: "{356C4C7D-2D63-439e-BD9F-8DC379AD68B9}"
     type: "Requirement"

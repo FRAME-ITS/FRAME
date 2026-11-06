@@ -10,7 +10,8 @@ Base: technology V1.2 as it was stored in the model (drafts/latest/toolbox/FRAME
      physical/functional/communication views: Application «contains» LL function / data store / physical data flow,
      LL data flow «contains» Information Object, Component/Terminator «use» Physical Data Flow, process «triggers» process,
      Specification «defines» Requirement, Agreement «use» Specification, Specification «defines» Agreement,
-     Actor «implements» Desired Architecture Goals (new stereotype), Terminator «adheres to» Agreement; ITS Service Added Value «delivers value to» Stakeholder replaces «defines».
+     Actor «implements» Desired Architecture Goals (new stereotype), Terminator «adheres to» Agreement, Component «owned by» Role, Data Object «adheres to» Specification;
+     ITS Service Added Value «delivers value to» Stakeholder replaces «defines».
   2. Quick Linker references to stereotypes that the profile does not define are mapped to the defined name
      (Component of, Defines, instant of, associated).
   3. Stereotype names unified (not used by any connector in the model): «Impacts» → «impacts», «deliverd by» → «delivered by».
@@ -119,7 +120,9 @@ ADD = [('component of', 'FRAME_Terminator', 'FRAME_Terminator'),            # su
        ('defines', 'FRAME_Specification', 'FRAME_Requirement'),
        # decided 2026-11-06 (second round)
        ('use', 'FRAME_Agreement', 'FRAME_Specification'), ('defines', 'FRAME_Specification', 'FRAME_Agreement'),
-       ('implements', 'FRAME_Actor', 'FRAME_Desired_Architecture_Goals'), ('adheres to', 'FRAME_Terminator', 'FRAME_Agreement')]
+       ('implements', 'FRAME_Actor', 'FRAME_Desired_Architecture_Goals'), ('adheres to', 'FRAME_Terminator', 'FRAME_Agreement'),
+       # FRAME Meta Model (decided 2026-11-06)
+       ('owned by', 'FRAME_Component', 'FRAME_Role'), ('adheres to', 'FRAME_Data_Object', 'FRAME_Specification')]
 # rules replaced by the above
 DROP = [('defines', 'FRAME_ITS_Service_Added_Value', 'FRAME_Stakeholder')]
 for st, src, tgt in DROP:

@@ -42,6 +42,8 @@ Built by `tools/fixes/2026-11-06_mdg_technology_V1.3.py`.
 - Quick Linker added: «defines» Specification → Agreement
 - Quick Linker added: «implements» Actor → Desired_Architecture_Goals
 - Quick Linker added: «adheres to» Terminator → Agreement
+- Quick Linker added: «owned by» Component → Role
+- Quick Linker added: «adheres to» Data_Object → Specification
 - Quick Linker: Application – 5 rules merged into 4
 - Quick Linker: ITS_Service – 5 rules merged into 4
 - Quick Linker: ITS_Service_Added_Value – 3 rules merged into 2

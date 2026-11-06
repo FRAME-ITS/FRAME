@@ -142,6 +142,7 @@ gAAAAABzdHIuZGF0VVQFAAfP7klgUEsFBgAAAAABAAEAPgAAACkCAAAAAA==</Image>
 					</Stereotype>
 					<Stereotype name="FRAME_Component" metatype="FRAME_Component" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 						<stereotypedrelationships>
+							<stereotypedrelationship stereotype="FRAME_Profile::owned by" constraint="FRAME_Profile::FRAME_Role"/>
 							<stereotypedrelationship stereotype="FRAME_Profile::use" constraint="FRAME_Profile::FRAME_Physical_Data_Flow"/>
 							<stereotypedrelationship stereotype="FRAME_Profile::adheres to" constraint="FRAME_Profile::FRAME_Specification"/>
 							<stereotypedrelationship stereotype="FRAME_Profile::defines" constraint="FRAME_Profile::FRAME_Requirement"/>
@@ -168,6 +169,9 @@ AQA+AAAAQAIAAAAA</Image>
 						</TaggedValues>
 					</Stereotype>
 					<Stereotype name="FRAME_Data_Object" metatype="FRAME_Data_Object" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+						<stereotypedrelationships>
+							<stereotypedrelationship stereotype="FRAME_Profile::adheres to" constraint="FRAME_Profile::FRAME_Specification"/>
+						</stereotypedrelationships>
 						<AppliesTo>
 							<Apply type="Object"/>
 						</AppliesTo>
