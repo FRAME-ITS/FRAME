@@ -1,28 +1,13 @@
 package: "Truckparking Reference Architecture (SSTP)"
 elements:
   - name: ""
-    guid: "{1320AAC6-8CEF-4cf4-980C-9DFB256ED4E7}"
-    type: "Text"
-    status: "Proposed"
-    version: "1.0"
-    order: 0
-    note: |
-      Welcome to the Landing Page of National Body Reference Architecture.
-      
-      The Architecture will show common functionalities and processes of National Bodies in Europe.
-      
-      The Architecture will be developed within the ongoing project NAPCORE (https://napcore.eu)
-      
-      If issues, problems or mistakes are found, please report it under:
-      https://github.com/NAPCORE/NB-Reference-Architecture
-  - name: ""
     guid: "{39B059ED-E746-444e-8C5A-45F7F18C7198}"
     type: "Text"
     status: "Proposed"
     version: "1.0"
     order: 0
     note: |
-      National Access Point Reference Architecture by NAPCORE
+      National Body Reference Architecture by NAPCORE
   - name: ""
     guid: "{3B17732D-2526-4b0e-9C21-59432C32DEFF}"
     type: "Text"

@@ -1,0 +1,198 @@
+package: "National Body Reference Architecture/NB Communication View/Compliance assessment/Service Processes"
+guid: "{0185B279-5D3B-4e62-8F32-B14B61417EF5}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "National Body determines the verdict of compliance assessment"
+    guid: "{A6EAA190-A9C2-400e-B625-2608F1B7CA01}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The national body determines the verdict of the compliance assessment based on the results of the theoretical assessment and the content assessment. Determining the verdict of the compliance assessment is explained in NAPCORE milestone report M5.3:
+      
+      "The verdict of the compliance assessment is determined based on the results of theoretical and content assessments. A 'pass' verdict will be assigned if neither the results of the theoretical assessment nor the results of the content assessment indicate non-compliance to the delegated regulation. Otherwise, a 'fail' verdict will be issued. The verdict of the compliance assessment may be worded e.g., as follows: 'the results of random inspection, including a compliance assessment, did / did not reveal non-compliance to the requirements of the delegated regulation'. If the results of the theoretical assessment indicate substantial non-compliance, the National Body may issue a 'fail' verdict without performing a content assessment."
+    links:
+      - "Usage «Call» → National Body informs the service or data provider"  # {20B432C3-BCCB-4527-8EEE-47CECBA4753A} → {4D68A761-475F-419b-A694-674A57AD7A68}
+      - "Usage «Instantiate» → National Body updates documentation and registration of assessment results and carried out random inspections"  # {A7779C26-B93F-4766-B284-D6DD34C9DE6B} → {6E63A273-E997-4476-85F0-B1B3F0D41948}
+  - name: "National Body indicates non-compliance"
+    guid: "{1235A3AD-9772-47a0-A8E7-96CD366C65C9}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The results of the compliance assessment process and documentation related to compliance assessment are the basis of the potential non-compliance process. These include the verdict of the compliance assessment, the compliance assessment form, the self-declaration selected for random inspection and the accompanying documents supplementing the self-declaration.
+    links:
+      - "Dependency → Random inspection of the self-declaration or the accompanying documents indicates non-compliance"  # {78E7A331-F047-43a4-879D-2F32E3F36069} → {0B142C7E-8FB3-4b74-B4FA-E7FE2D238380}
+  - name: "National Body informs the service or data provider"
+    guid: "{4D68A761-475F-419b-A694-674A57AD7A68}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The national body informs the service or data provider of the results of the compliance assessment. If the assessment results indicate non-compliance, the national body shall provide information on the characteristics of the service or data publication identified as non-compliant and the corresponding articles of the applicable delegated act, e.g. by providing the compliance assessment forms documenting the results of compliance assessment.
+    links:
+      - "Usage «Instantiate» → Service or data provider receives assessment results"  # {1F324E4B-D133-4f04-9F66-DEF16AA622F8} → {70D2E98B-A46D-41ef-918C-821C6149B02E}
+  - name: "National Body may receive feedback from the service or data provider"
+    guid: "{5D80C3AA-191A-4be9-AE0B-0359B3961855}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The national body shall be capable of receiving feedback from a service or data provider for which a compliance assessment was carried out.
+    links:
+      - "Usage «Call» → National Body reacting on feedback"  # {4EDFB2C1-1289-4302-82D7-789015E761C6} → {B91A8A84-862E-4e4e-901F-49CED3D4A47F}
+  - name: "National Body performing content assessment"
+    guid: "{809F8DCF-09A1-4a35-8E23-582A648708D7}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The national body performs a content assessment according to the requirements of applicable delegated act and national regulations. It is recommended to use the document templates provided by NAPCORE for content assessment applicable to the delegated act and the stakeholder group.
+      
+      Latest versions of document templates for content assessment are available on the NAPCORE web site:
+      
+      https://napcore.eu/activity-wg5-national-bodies-and-compliance-assessment/
+      
+      The Quality Criteria for content assessment are under development:
+      
+      https://napcore.eu/activity-wg3-nap-content-and-accessibility/
+    links:
+      - "Usage «Call» → National Body determines the verdict of compliance assessment"  # {F7722FBE-9CD4-4ef2-8D7B-1D54BF082948} → {A6EAA190-A9C2-400e-B625-2608F1B7CA01}
+  - name: "National Body performing theoretical inspection"
+    guid: "{7D2FE5AA-F34C-4b2e-891C-12CDB95CB854}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      "In short, the theoretical assessment is a compliance review in which the content of the self-declaration is compared
+      against the compliance requirements derived from the applicable delegated regulation."
+      
+      "-- 'Theoretical assessment', deals with the question of whether formal criteria have been met. Requirements of the delegated regulations can be covered, for example, by indications in the self-declaration forms, by descriptions in the accompanying documents, by entries on the NAP or metadata entries or by provided terms and conditions of the respective entity. The crucial questions here are whether this previously mentioned information is retrievable and available in already provided documentation.
+      - Have accompanying documents with useful information been provided?
+      - Have documents been made available on the National Access Point?
+      - Have requirements or agreements been regulated in the terms of conditions?
+      
+      The theoretical assessment focuses on the flow of information and is thus the preliminary stage to the content review, which ultimately assesses information content for consistency, completeness, validity and conformity. As soon as the theoretical assessment of the respective article can be affirmed, a content assessment is carried out."
+      
+      If the results of theoretical assessment indicate substantial non-compliance, the national body may finish the compliance assessment without performing a content assessment and issue a "fail" verdict.
+    links:
+      - "Usage «Call» → National Body determines the verdict of compliance assessment"  # {5FE2988D-03AC-4d15-BB4B-5051F4C2C61B} → {A6EAA190-A9C2-400e-B625-2608F1B7CA01}
+      - "Usage «Call» → National Body performing content assessment"  # {53AA7F72-25EA-48e7-BC60-C70732F2DC6D} → {809F8DCF-09A1-4a35-8E23-582A648708D7}
+  - name: "National Body reacting on feedback"
+    guid: "{B91A8A84-862E-4e4e-901F-49CED3D4A47F}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Feedback received by the national body from stakeholders may be related to the compliance assessment process established by the national body or the interpretation of the delegated acts, e.g. to results of compliance assessments. Feedback from stakeholders may be used to improve the operations of the national body and to develop improvements to regulation.
+      
+      If the feedback provided by the stakeholder includes a claim that a mistake has occurred in the process of random selection and compliance assessment, the national body shall act according to national legislation.
+    links:
+      - "Usage «Instantiate» → National Body updates documentation and registration of assessment results and carried out random inspections"  # {6BBCE6B1-807F-46a3-A328-CE15BE662F04} → {6E63A273-E997-4476-85F0-B1B3F0D41948}
+  - name: "National Body updates documentation and registration of assessment results and carried out random inspections"
+    guid: "{6E63A273-E997-4476-85F0-B1B3F0D41948}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      After the compliance assessment has been carried out, the national body will document and register the details of the compliance assessment, the verdict of the assessment and the documentation related to the assessment. Relevant documentation includes e.g. the compliance assessment form, the self-declaration selected for random inspection and compliance assessment and the accompanying documents related to the self-declaration.
+      
+      The National Body will update the details of the compliance assessment if the stakeholder appeals the result.
+    links:
+      - "Dependency → National Body indicates non-compliance"  # {400627F5-A189-44ea-BFB5-97590A48D61D} → {1235A3AD-9772-47a0-A8E7-96CD366C65C9}
+  - name: "Provision of relevant information"
+    guid: "{E4F0051F-C913-4413-8AF6-46712CCE0E29}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The Data and Service provider provides service and data descriptions by using harmonized accompanying documents to the National Body.
+    links:
+      - "Usage «Instantiate» → Reception of updated and necessary information"  # {46AD76E5-3B08-4238-949C-F0CBD834AED7} → {9AF2F00D-7E33-4491-84C7-D4B0E1E62235}
+  - name: "Random selection process"
+    guid: "{C6B07CCB-F05A-4574-88E8-2D721FA1CC0F}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The random selection process starts with a pre-selected set of self-declarations. When the number of self-declarations available for selection is known, the national body shall determine the number of self-declarations for which a compliance assessment will be carried out. When selecting the number of compliance assessments to be carried out, the national body usually needs to consider several factors such as the expected impact of compliance assessments and the resources available to the national body.
+      
+      When the random selection is carried out, each self-declaration in the pre-selected set or self-declarations shall have an equal probability of being selected for compliance assessment. The national body will decide how it implements the random selection, e.g. by drawing pieces of paper from a hat or using a random number generator, as this is not described in the delegated acts or the ITS directive.
+    links:
+      - "Usage «Call» → Requesting necessary information from data and service provider"  # {06942C7D-7014-448b-8802-82738F78A489} → {7F23CFE4-500A-4271-9B84-3CA47D3D0129}
+  - name: "Reception of updated and necessary information"
+    guid: "{9AF2F00D-7E33-4491-84C7-D4B0E1E62235}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The National Body receives updated or additional information, necessary for compliance assessment from the Data and Service provider by using harmonised accompanying documents.
+    links:
+      - "Usage «Call» → National Body performing theoretical inspection"  # {B670FA2E-50AA-40b5-A317-EAB5E2F9148D} → {7D2FE5AA-F34C-4b2e-891C-12CDB95CB854}
+  - name: "Requesting necessary information from data and service provider"
+    guid: "{7F23CFE4-500A-4271-9B84-3CA47D3D0129}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The NB is requesting necessary information like accompanying documents from the Data and Service provider and ask for correctness of the Self-declaration form.
+    links:
+      - "Usage «Instantiate» → Provision of relevant information"  # {3040E57A-C152-434c-BF1C-CB6727AF5D11} → {E4F0051F-C913-4413-8AF6-46712CCE0E29}
+  - name: "Select set of self-declaration for random selection"
+    guid: "{E45FA344-8B3C-4004-A1C5-10DB1D60987A}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The selection process starts with listing all the self-declarations submitted to the national body. First, self-declarations which have been withdrawn by the stakeholder or moved to inactive state by the national body will be deselected. Second, the national body may deselect also self-declarations for which a random inspection has been carried out during the previous year or the year before that.
+    links:
+      - "Usage «Call» → Random selection process"  # {6BF067B5-FBE9-4516-B694-DEA8206C0328} → {C6B07CCB-F05A-4574-88E8-2D721FA1CC0F}
+  - name: "Service or data provider may appeal the decision according to national laws, regulations and/or procedures"
+    guid: "{49B7A4CB-3650-45aa-AC5A-DA84600747B5}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      A document shall be submitted to the contact address of the competent authority (National Body, national court, etc.) at the responsibility of the sender.
+    links:
+      - "Usage «Instantiate» → National Body may receive feedback from the service or data provider"  # {1BAC9340-C010-4d1d-BBFD-3B32856A0833} → {5D80C3AA-191A-4be9-AE0B-0359B3961855}
+  - name: "Service or data provider receives assessment results"
+    guid: "{70D2E98B-A46D-41ef-918C-821C6149B02E}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Usage «Call» → Service or data provider may appeal the decision according to national laws, regulations and/or procedures"  # {A1F9CCB5-11FE-466b-94A7-BC36B90DDC1A} → {49B7A4CB-3650-45aa-AC5A-DA84600747B5}

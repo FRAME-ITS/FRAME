@@ -1,18 +1,9 @@
-package: "National Body Reference Architecture/05 NB Communication View"
+package: "National Body Reference Architecture/NB Communication View"
 guid: "{DF3898D8-D408-4513-883C-F2244B8D329C}"
 alias: ""
 version: "1.0"
 note: ""
 elements:
-  - name: ""
-    guid: "{5B9F24BE-3ED2-466f-A1C3-2B339065E177}"
-    type: "Text"
-    stereotype: "NavigationCell"
-    alias: "Random inspection and compliance assessment"
-    status: "Proposed"
-    version: "1.0"
-    order: 0
-    note: ""
   - name: ""
     guid: "{61D5A1D7-B022-4f76-A82B-E651D622BEE0}"
     type: "Text"
@@ -20,12 +11,12 @@ elements:
     version: "1.0"
     order: 0
     note: |
-      There are three processes:
+      In NAPCORE three processes where harmonized and specified:
       (1) Receiving and processing a self-declaration
       (2) Random inspection and compliance assessment
       (3) Procedure for dealing with non-compliance
       
-      and there is the developed state diagram of self declarations.
+      All Processes create a change in the state of a self declaration. Therefore the connecting SD state diagram where created.
   - name: ""
     guid: "{6D0CECC3-63E3-4dd5-ABC3-493985CAE21B}"
     type: "Text"
@@ -43,11 +34,21 @@ elements:
     version: "1.0"
     order: 0
     note: ""
-  - name: "Procedure for dealing with non-compliance"
+  - name: "Compliance assessment"
+    guid: "{5B9F24BE-3ED2-466f-A1C3-2B339065E177}"
+    type: "Text"
+    stereotype: "NavigationCell"
+    alias: "Random inspection and compliance assessment"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Compliance assessment
+  - name: "Handling non-compliance process"
     guid: "{7906ADAE-828B-4cbc-B1CA-A9D1FE27B8DD}"
     type: "Text"
     stereotype: "NavigationCell"
-    alias: "Procedure for dealing with non-compliance"
+    alias: "Handling non-compliance process"
     status: "Proposed"
     version: "1.0"
     order: 0

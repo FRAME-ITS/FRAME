@@ -1,10 +1,10 @@
-package: "National Body Reference Architecture/00 NB Motivational Layer/ITS added Value"
+package: "National Body Reference Architecture/NB Motivational Layer/ITS added Value"
 guid: "{65B6FE48-9CD0-4540-84D0-54C6859CC201}"
 alias: ""
 version: "1.0"
 note: ""
 elements:
-  - name: "Benefit of harmonized data and service provission"
+  - name: "Benefit of harmonized data and service provision"
     guid: "{AD0AB7BA-9057-4189-A00C-62FE78C9D5AE}"
     type: "Class"
     stereotype: "FRAME_ITS_Service_Added_Value"
@@ -14,8 +14,7 @@ elements:
     tags:
       "ITS Added Value Type": ""
     note: |
-      Data and Service providers increase interoperability by providing data and services according to the standards
-      proposed by the delegated acts.
+      Data and service providers increase interoperability by providing data and services according to the standards proposed by the delegated acts.
     links:
       - "Association «defines» → Data and Service provider"  # {E49AEFE2-9939-4a1c-B12B-D14CA50FAB1A} → {18125799-A9C0-4e9d-B88E-C02A31FA9163}
   - name: "Clear set of requirements for interaction with National Body"
@@ -28,9 +27,9 @@ elements:
     tags:
       "ITS Added Value Type": ""
     note: |
-      The architecture shall provide clear communication structure, organizational requirements and clear functional requirements how the NAP needs to act so that the NB/CA can fulfill their obligations.
+      The architecture provides a clear communication structure, organizational requirements and clear functional requirements how the NAP needs to act so that a National Body can fulfill its obligations.
     links:
-      - "Association «defines» → NAP"  # {70127104-64DE-481a-B32A-630F2097799B} → {045541C2-0CC6-4ed9-B36B-9A432B2E67EC}
+      - "Association «defines» → National Access Point"  # {70127104-64DE-481a-B32A-630F2097799B} → {045541C2-0CC6-4ed9-B36B-9A432B2E67EC}
   - name: "EU-wide common understanding of Delegated Regulations"
     guid: "{580E3C77-C562-473c-BBD2-D6585D8DD756}"
     type: "Class"
@@ -41,10 +40,10 @@ elements:
     tags:
       "ITS Added Value Type": ""
     note: |
-      Member States are provided with a specific definition or description how a NB/CA carry out tasks and obligations in a harmonized way.
+      Member States are provided with a specific definition or description how a National Body carries out tasks and obligations in a harmonized way.
     links:
       - "Association «defines» → Member State"  # {A61E1C26-4AC0-48c3-A154-6E14F33BA7A3} → {F67994D2-8F28-40c3-AB94-56CBB3C33B7E}
-  - name: "Enhance compatibility and Interoperability"
+  - name: "Enhance compatibility and interoperability"
     guid: "{8486EBB2-0EEA-436d-A342-48C3BC633C4F}"
     type: "Class"
     stereotype: "FRAME_ITS_Service_Added_Value"
@@ -56,7 +55,7 @@ elements:
     note: |
       The NB/CA receives self-declaration forms and performs random inspections to ensure that data and services follow proposed standards and meet the requirements expressed in the delegated acts.
     links:
-      - "Association «defines» → Competent Authority / National Body"  # {3B95CECD-EA0F-4aba-927A-C787ECE02D00} → {FA078449-0B55-43fd-85F0-BC2273EB6B8F}
+      - "Association «defines» → National Body"  # {3B95CECD-EA0F-4aba-927A-C787ECE02D00} → {FA078449-0B55-43fd-85F0-BC2273EB6B8F}
   - name: "Enhance the findability of data and services"
     guid: "{86293EBE-E7A8-420e-918D-71348D4A2179}"
     type: "Class"
@@ -67,8 +66,8 @@ elements:
     tags:
       "ITS Added Value Type": ""
     note: |
-      The NB/CA receives self-declarations and performs random inspections to ensure correctness of metadata provided at the NAP.
-      NB/CA also validates data and service descriptions to enhance the findability of mobility data and services
+      The NB/CA receives self-declarations and performs random inspections to ensure correctness of meta data provided at the NAP.
+      National Body also validates data and service descriptions to enhance the find ability of mobility data and services.
     links:
       - "Association «defines» → Data and Service provider"  # {0C45D7AE-B64F-4e7c-95B7-551188A7716E} → {18125799-A9C0-4e9d-B88E-C02A31FA9163}
   - name: "Fulfilling National Body activities and reliabilities according to ITS directive 2010/EU/40"
@@ -81,9 +80,9 @@ elements:
     tags:
       "ITS Added Value Type": ""
     note: |
-      The NB/CA of a Member State has specific tasks related to the Delegated Regulations supplementing the ITS Directive 2010/40/EU, which are requested by the European Commission.
-      The NB/CA main task is to ensure the data publishers, data and/or service providers and existing NAPs comply with the articles of each Delegated Regulation
-  - name: "Harmonize the NB/CA services within the EU"
+      The National Body of a Member State has specific tasks related to the Delegated Regulations supplementing the ITS Directive 2010/40/EU, which are requested by the European Commission.
+      The National Body main task is to ensure that the data publishers, data and/or service providers and existing NAPs comply with the articles of each Delegated Regulation
+  - name: "Harmonize the National Body services within the EU"
     guid: "{50BDB632-68AD-4fee-A070-2BFE8F8CB099}"
     type: "Class"
     stereotype: "FRAME_ITS_Service_Added_Value"
@@ -93,9 +92,9 @@ elements:
     tags:
       "ITS Added Value Type": ""
     note: |
-      Harmonized NB/CA services enable the European Commission to compare and combine national reports, make conclusions on progress and to determine inconsistencies
+      Harmonized National Body services enable the European Commission to compare and combine national reports, make conclusions on progress and to determine inconsistencies
     links:
-      - "Association «defines» → European Commision"  # {5D52E942-1E52-499b-AF8A-A58CA758A644} → {09ACD865-46B3-4ea8-A5A9-5D8F4AF58CF6}
+      - "Association «defines» → European Commission"  # {5D52E942-1E52-499b-AF8A-A58CA758A644} → {09ACD865-46B3-4ea8-A5A9-5D8F4AF58CF6}
   - name: "Harmonized approach to engage with international Data and Service provider"
     guid: "{9D476FCC-FC0A-4a0c-BCBF-E471CEB6B2B3}"
     type: "Class"
@@ -106,13 +105,10 @@ elements:
     tags:
       "ITS Added Value Type": ""
     note: |
-      Create a united process to handle international data and service provider.
-      
-      Todo: to be proposed by WG 5.3/5.4 in 2024
-      cross boarder situation
-      Service provider is located outside the EU
+      Aim is to create a united process to handle international data and service provider.
+      Many stakeholders affected by the Delegated Regulations are multinational companies. By working together, National Bodies not only gain more credibility but also strengthen their negotiating power, enabling them to engage effectively with these large multinational entities. Finally, collaboration among National Bodies reduces duplication of efforts, leading to more efficient and consistent compliance assessments, information sharing and stakeholder engagement.
     links:
-      - "Association «defines» → Competent Authority / National Body"  # {8D84A8B2-6BA6-428b-9B0D-83A82E4646F9} → {FA078449-0B55-43fd-85F0-BC2273EB6B8F}
+      - "Association «defines» → National Body"  # {8D84A8B2-6BA6-428b-9B0D-83A82E4646F9} → {FA078449-0B55-43fd-85F0-BC2273EB6B8F}
   - name: "Harmonized self-declaration process for international data and service provider"
     guid: "{4A4D2B0E-B0EE-425a-ABDE-41C38E9D1124}"
     type: "Class"
@@ -123,7 +119,7 @@ elements:
     tags:
       "ITS Added Value Type": ""
     note: |
-      For international data and service providers the harmonized approach of the handling the self-declarations and the compliance assessment procedure will make the procedure much more easy and time efficient.
+      For international data and service providers a harmonized approach for handling of self-declarations and compliance assessment will make the procedures much more easy and time efficient.
     links:
       - "Association «defines» → Data and Service provider"  # {472CA3DD-D519-4847-ABFA-42983029FF1F} → {18125799-A9C0-4e9d-B88E-C02A31FA9163}
   - name: "Increased findability and visibility of data and services EU-wide"
@@ -136,10 +132,9 @@ elements:
     tags:
       "ITS Added Value Type": ""
     note: |
-      As a result of the compliance assessments carried out by the NB / CA, the metadata quality (e.g. completness,
-      correctness and contact details) on the NAP improves, and thanks to this the findability and visibility of data and services on an EU-wide level increases.
+      As result of compliance assessments carried out by the National Body, the metadata quality (e.g. completeness, correctness and contact details) of the datasets on the NAP improves, and thanks to this the find ability and visibility of data and services increases on EU level.
     links:
-      - "Association «defines» → European Commision"  # {806E8486-2CEE-4b2f-83C6-3FF573939BEE} → {09ACD865-46B3-4ea8-A5A9-5D8F4AF58CF6}
+      - "Association «defines» → European Commission"  # {806E8486-2CEE-4b2f-83C6-3FF573939BEE} → {09ACD865-46B3-4ea8-A5A9-5D8F4AF58CF6}
   - name: "Seamless National Body Services"
     guid: "{16E637F0-B3DD-4413-9C65-E245232818AD}"
     type: "Class"
@@ -150,10 +145,10 @@ elements:
     tags:
       "ITS Added Value Type": ""
     note: |
-      International stakeholders are provided with a unified access to National Body services in all Member States.
+      International stakeholders are provided with an unified access to National Body services in all Member States.
     links:
-      - "Association «defines» → European Commision"  # {B28CC1C2-6830-4e0a-B3A9-1571B47ADA67} → {09ACD865-46B3-4ea8-A5A9-5D8F4AF58CF6}
-  - name: "Support for Reporting related to ITS Directive 2010/40/EU"
+      - "Association «defines» → European Commission"  # {B28CC1C2-6830-4e0a-B3A9-1571B47ADA67} → {09ACD865-46B3-4ea8-A5A9-5D8F4AF58CF6}
+  - name: "Support for reporting related to ITS Directive 2010/40/EU"
     guid: "{8AAF2D23-1131-42a5-89A7-087AB2944800}"
     type: "Class"
     stereotype: "FRAME_ITS_Service_Added_Value"
@@ -163,7 +158,6 @@ elements:
     tags:
       "ITS Added Value Type": ""
     note: |
-      To fulfill reporting obligations regarding implementation of the ITS directive (2010/40/EU and their delegated acts,
-      Member States report to European Commission by using harmonized NAPCORE forms.
+      To fulfill reporting obligations regarding implementation of the ITS directive (2010/40/EU) and related Delegated Regulations, Member States report to the European Commission by using harmonized NAPCORE forms.
     links:
       - "Association «defines» → Member State"  # {D0BFFA6C-833F-4706-9636-7ACC05B29452} → {F67994D2-8F28-40c3-AB94-56CBB3C33B7E}

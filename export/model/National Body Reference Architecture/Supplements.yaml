@@ -4,6 +4,21 @@ alias: ""
 version: "1.0"
 note: ""
 elements:
+  - name: ""
+    guid: "{1320AAC6-8CEF-4cf4-980C-9DFB256ED4E7}"
+    type: "Text"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Welcome to the Landing Page of National Body Reference Architecture.
+      
+      The Architecture will show common functionalities and processes of National Bodies in Europe.
+      
+      The Architecture will be developed within the ongoing project NAPCORE (https://napcore.eu)
+      
+      If issues, problems or mistakes are found, please report it under:
+      https://github.com/NAPCORE/NB-Reference-Architecture
   - name: "Compliance Assement process states"
     guid: "{6613CB3D-B2B1-4cef-B5D9-43CBB8A27AB2}"
     type: "Boundary"
@@ -25,3 +40,97 @@ elements:
     version: "1.0"
     order: 0
     note: ""
+  - name: "NB Glossary"
+    guid: "{0396DED8-928E-450d-BC2B-16B42FC84087}"
+    type: "Class"
+    stereotype: "GlossaryEntry"
+    status: "Proposed"
+    version: "1.0"
+    order: 1
+    note: |
+      Abbreviations:
+      
+      NB		National Body
+      
+      CA 		Competent Authority: An authority which is competent and authorized to fulfill this task aligned with the National Body
+      
+      NB /CA 		National Body and Competent authority will be consolidated under National Body in this document
+      
+      DR		Delegated Regulation
+      
+      FRAME		the name commonly used for the European ITS Framework Architecture and is derived from the names 		           of the projects that since 2001 have developed its content and the methodology for its use.
+  - name: "Change History"
+    guid: "{E1490E31-8101-47d1-9D77-AF97D60AFFAD}"
+    type: "Class"
+    stereotype: "model document"
+    status: "Proposed"
+    version: "1.0"
+    order: 2
+    tags:
+      "RTFTemplate": "Model Report"
+      "ReportAlias": ""
+      "ReportAuthor": ""
+      "ReportKeywords": ""
+      "ReportName": ""
+      "ReportStatus": ""
+      "ReportSummary": ""
+      "ReportTitle": ""
+      "ReportVersion": ""
+      "SearchName": ""
+      "SearchValue": ""
+    note: |
+      12.02.2025 Change History V0.1 to 0.2:
+      
+      Landing Page:
+      Create NB Glossary element on landing page
+      Create Change History on landing page
+      Delete Diagram Todos
+      Insert NB-Schema from NAPCORE
+      Move Folder Specification to Supplements because of the use in different Views
+      
+      Motivational Layer
+      
+      Change Object Description "Delegated Regulations of ITS Directive 2010/EU/40" FRAME_ITS_Domain
+      Change Object Description "Harmonized approach to engage with international Data and Service Provider"
+      Change Object Description "Competent Authority / National Body" Stakeholder
+      Change Object Description "European Commission" Stakeholder
+      Change Object Description "Member State" Stakeholder
+      Change Object Description "National Access Point" Stakeholder
+      
+      Functional View
+      
+      Adding Terminator NAP inc. DF
+      Adding Functionality "Handling Non-Compliance" incl. DF
+      Link Functionality "Handling Non-Compliance" to Process-Diagram Non-Compliance Process
+      Rearranging Functional View Elements
+      Change Object Description Datastore Results Compliance Assessment Store
+      Change Object Description Datastore Self Declarations Storage
+      Change Object Description Datastore Stakeholder List
+      Delete Object Dataflow "Request Stakeholder"
+      Change Object Description and Name of Function "Managing Requests"
+      Change Object Description Function Compliance Assessment
+      Change Object Description Function "Managing Stakeholder List"
+      
+      Organisational View
+      
+      Change Object Description Agreement Delegated Regulation
+      Change Object Description Agreement National Law or Contract MS - NAP
+      Change Object Description National Law or Contract MS - NB
+      Change Object Description Specification Template for EU reporting
+      Change Object Description Specification Template for national reporting
+      Change Object Description Specification Template for compliance Assessment
+      Change Object Description Specification Template for Self Declaration
+      
+      Communication View
+      
+      Change introduction text
+      Clean up processes
+      Update textual descriptions according to review 17.04.2025
+  - name: "Issues Tracking and Wiki"
+    guid: "{5615A50E-7D95-4b83-A0CB-74A7443E4075}"
+    type: "Artifact"
+    status: "Proposed"
+    version: "1.0"
+    order: 3
+    note: |
+      https://github.com/NAPCORE/NB-Reference-Architecture

@@ -1,0 +1,13 @@
+package: "National Body Reference Architecture/NB Organisational View"
+guid: "{6F98105C-8282-4fc9-B746-5317AF661808}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: ""
+    guid: "{0DB136F1-4A28-49c4-83CE-26BA1B71D675}"
+    type: "Text"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""

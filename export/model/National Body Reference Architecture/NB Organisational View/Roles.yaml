@@ -1,4 +1,4 @@
-package: "National Body Reference Architecture/03 NB Organisational View/Roles"
+package: "National Body Reference Architecture/NB Organisational View/Roles"
 guid: "{D756E993-3CF4-49fd-BBF5-E6670E55F179}"
 alias: ""
 version: "1.0"
@@ -16,10 +16,11 @@ elements:
       "Role Part Of Value Chain": ""
       "Role Value": ""
       "Role View": ""
-    note: ""
+    note: |
+      Actor "Data or service provider" refers to any stakeholder who has an ITS service or a data publication covered by any of the delegated acts enacted under the European ITS Directive and therefore has an obligation to submit a self-declaration.
     links:
       - "Association «defines» → Data and Service provider"  # {3F562DD1-D50B-4a7a-AFAA-11A8096BC202} → {519E02B4-F4D7-495f-ACC1-B82E0680B31E}
-  - name: "European Commision"
+  - name: "European Commission"
     guid: "{1EC60CD8-B204-450d-9238-47BEC17A4785}"
     type: "Object"
     stereotype: "FRAME_Role"
@@ -31,9 +32,23 @@ elements:
       "Role Part Of Value Chain": ""
       "Role Value": ""
       "Role View": ""
-    note: ""
+    note: |
+      The European Commission may adopt delegated acts under the scope of the European ITS Directive (Directive 2010/40/EU). The Commission may adopt specifications to ensure compatibility, interoperability and continuity of services, especially for the priority actions and priority areas defined in the directive. The Commission shall establish a working program indicating the specifications to be developed and data types to be made available by Member States. The Commission also receives reports from Member States on the implementation of the Directive and related delegated acts and provides templates to be used in reporting from Member States to the Commission.
     links:
-      - "Association «defines» → European Commision"  # {72E4DF77-8400-41d1-BB70-B349D77E8FCF} → {9999A38F-B70B-4274-BB81-5A16EB37D298}
+      - "Association «defines» → European Commission"  # {72E4DF77-8400-41d1-BB70-B349D77E8FCF} → {9999A38F-B70B-4274-BB81-5A16EB37D298}
+  - name: "General Public"
+    guid: "{BBDE56DE-DE8B-4a1d-AC6F-9E35202ED36D}"
+    type: "Object"
+    stereotype: "FRAME_Role"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    tags:
+      "Key Issue": ""
+      "Role Part Of Value Chain": ""
+      "Role Value": ""
+      "Role View": ""
+    note: ""
   - name: "Member State"
     guid: "{06C05CA6-B06C-4ca9-AE2B-B93C77D2BECA}"
     type: "Object"
@@ -49,7 +64,7 @@ elements:
     note: |
       The Member State
     links:
-      - "Association «accepted by» → Delegated Reguation"  # {62282D12-F895-4243-9078-44A8020F702D} → {18BED502-4259-4737-9DD1-6B52EBF5BA0F}
+      - "Association «accepted by» → Delegated Regulation"  # {62282D12-F895-4243-9078-44A8020F702D} → {18BED502-4259-4737-9DD1-6B52EBF5BA0F}
       - "Association «defines» → Member State"  # {4755F94A-B4C9-4219-A277-EDFA6204A540} → {1B1FBA82-B717-4b02-AE66-E1142B61E091}
   - name: "National Access Point"
     guid: "{98435A5F-0A74-4cea-BA8E-AE02988208EE}"
@@ -82,18 +97,10 @@ elements:
       "Role Value": ""
       "Role View": ""
     note: |
-      Todo: check
-      
-      From 2013/886
-      Member States shall designate an impartial and independent national body competent to assess whether the requirements set out in Articles 3 to 8 are fulfilled by public and private road operators and service providers and broadcasters dedicated to traffic information. Two or more Member States may designate a common body competent to assess compliance with these requirements on their territories.
-      
-      Member States shall notify the national bodies to the Commission.
-      
-      From 2017/1926
+      According to the delegated regulations enacted under the ITS Directive 2010/40/EU
       Member States shall designate an impartial and independent national body competent to assess whether the requirements set out in Articles 3 to 8 are fulfilled by public and private road operators and service providers and broadcasters dedicated to traffic information. Two or more Member States may designate a common body competent to assess compliance with these requirements on their territories.
       
       Member States shall notify the national bodies to the Commission.
     links:
       - "Association «accepted by» → National Law or Contract MS - NB"  # {42960C0A-0DC1-4547-ACBC-12E42B467A9D} → {0BDE8A5E-CC0E-4fa9-89DD-1DCD42A5AA0B}
       - "Association «defines» → National Body / Competent Authority"  # {AC4C3FB1-2829-42e5-B51E-AA5B8D8D864B} → {49B680E5-0E20-48ea-8253-4FEEF7CEBB85}
-      - "Usage → Template for compliance Assessment"  # {6434F154-8298-4689-AAC8-5F9616CC5297} → {44D1CCEA-5154-46a4-804A-E19E0A79FC2B}

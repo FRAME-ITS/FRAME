@@ -7,6 +7,13 @@ elements:
     version: "1.0"
     order: 0
     note: ""
+  - name: ""
+    guid: "{F62707EE-4A76-43db-BBED-9CC591F9136E}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
   - name: "00_NB_Motivational View"
     guid: "{87891A57-D401-4153-825F-3E122C1C2583}"
     type: "Text"

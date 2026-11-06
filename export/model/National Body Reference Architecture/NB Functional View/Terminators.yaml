@@ -1,0 +1,56 @@
+package: "National Body Reference Architecture/NB Functional View/Terminators"
+guid: "{87DFD2A8-168C-41d6-ABBC-1355C8C6757F}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "Data- and/or Service provider(s)"
+    guid: "{4BBDECD9-7CB6-4269-9AA6-DE1A948C9995}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The Terminator "Data- and/or Service Provider(s)" represents a real entity which is generating information to start a process or functionality or receives information to end a process or functionality.
+    links:
+      - "Association «IN» → General requests"  # {119C7E30-4093-4f4a-B69D-E604A6CE88D2} → {867F3DE7-6F39-43bf-A1C0-A31185A4482C}
+      - "Association «IN» → Information"  # {CBE71A64-C7AC-43b4-9D62-2EF6BB9F405C} → {795AD710-6C2B-413d-82BC-EEAFA1766EDB}
+      - "Association «IN» → Provide relevant information"  # {3F600C75-3DA7-4cce-9AFE-FF0AF3549AB6} → {1F4A95C9-FA17-476b-9132-B64B2502702F}
+      - "Association «IN» → Provides self-declaration form"  # {440E1F09-B0BF-43cf-9365-DAB16D1D98F7} → {E0D893E9-3F96-49c4-9FBF-48591C8B77A4}
+      - "Association «IN» → Provision of information"  # {357AFDCC-5E2F-4ff0-BD66-E89E1907ABD0} → {355BC2B3-2112-47fb-8CE0-D3677715B5D8}
+  - name: "General Public"
+    guid: "{DEC15748-EB48-4dce-BABA-FDB1698EC9A9}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The “General Public” Terminator represents physical or juridical persons, companies, and authorities which have general interest at the National Body or a related topic.
+    links:
+      - "Association «IN» → Request general information"  # {FD5ABFE0-C6EC-405e-B4B2-FE4C6EED6738} → {2D8D8356-1D5E-42b7-B9BB-BCDFD97F2C95}
+  - name: "Member States"
+    guid: "{E2280DC8-3870-4bca-B9D9-0B0F048FF2BE}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The Terminator "Member States" represents a real entity which is generating information to start a process or
+      functionality or receives information to end a process or functionality.
+    links:
+      - "Association «IN» → Accepted"  # {9D9033E6-89C9-47a2-8702-9D58F39DABB7} → {07E61B1B-8832-4b8a-A195-03143D401995}
+      - "Association «IN» → Request report"  # {E3F2C2DE-6907-43cb-BE5A-443C59AA60DB} → {DF5BDDBC-E821-466c-AB68-27AD7E5038CF}
+  - name: "National Access Point(s)"
+    guid: "{6902FEFA-51CE-4958-A449-99F7F9CA5213}"
+    type: "Actor"
+    stereotype: "FRAME_Terminator"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The Terminator "National Access Point(s)" represents authorized National Access Points (NAPs) for the Delegated Regulations of the ITS Directive 2010/40/EU per Member State. The NAP has to provide information about registered stakeholders, registered data sets and related service publications. In the case that a NAP is a data portal, the NAP has to provide access to data or service content while a compliance assessment is performed.
+    links:
+      - "Association «IN» → Receive information"  # {9ED170EE-97DA-41e0-87A4-ED5A8F2DBE91} → {A7C5E4D2-4C96-488d-9021-DE2192FDD1E3}

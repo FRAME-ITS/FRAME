@@ -1,0 +1,279 @@
+package: "National Body Reference Architecture/NB Communication View/Non Compliance Process/Service Processes"
+guid: "{6B723CBD-DC06-49cd-83F3-3FBB735C17FE}"
+alias: ""
+version: "1.0"
+note: ""
+elements:
+  - name: "Collect possible other information related to identified non-compliance."
+    guid: "{30A34EAE-AB95-4169-900E-BCE47DE46558}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Dependency → Identify possible actions which are proportional to the objectives when applied individually or as a package"  # {64833DFB-6AB2-487b-ADD5-0D4513C63468} → {7615DF18-80CE-44f4-A8A0-6AC788682D66}
+  - name: "Detects a non-compliance and request a investigation"
+    guid: "{BFBE5607-B5E9-467c-B966-ED0BBD6200CF}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Most probably, individual end-users of the NAPs may be able to identify non-compliance on specific data that are more related to their own specific tasks and interests. In order for end-users to be able to make individual complaints and report non-compliance, it is critical that the necessary communication channels between the end-users and the NAP operators are available and properly operating. Such channels should include, a postal address, and/or a phone number, and/or an email address and and/or an on-line communication form.
+      Beyond the official compliance assessment process based on random inspection, non-compliance may also be identified through the actual use of the data or services provided in the NAPs. End users may identify different forms of non-compliance such as:
+      
+      	- lack of specific required data and/or services
+      	- outdated data
+      	- inconsistent data
+      	- data of poor quality (e.g. missing or wrong values)
+    links:
+      - "Dependency → Information on potential non-compliance has been identifyed"  # {DAAC3530-5842-4bce-91E8-4B318C06B064} → {17EBAC7E-E847-47d1-9515-E747B015C202}
+  - name: "Document the decision on non-compliance and the consequences of non-compliance"
+    guid: "{6B336EE1-25C0-4087-9D25-CE72AF9D5730}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Dependency → Initiate the actions prescribed in the decision on non-compliance and consequences of non-compliance"  # {9AC8232F-12D7-4e4d-B58E-F272131EB15A} → {77E39EED-5D44-4837-86A7-1D4FE22A5348}
+      - "Dependency → Receives administrative decision on non-compliance"  # {17A541BC-210D-4313-9A72-667EC1627798} → {2D10B3DF-27FC-434a-B27C-1DBEC025DFA4}
+  - name: "Identify non-compliance to individual articles of the applicable delegated act"
+    guid: "{3C58CE28-9384-47b8-AC17-414A0B505D90}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      All reported types of non-compliance should be recorded by the NB so as other data sets or services by the same or a different provider can also be checked against similar non-compliance issues.
+      
+      Non-provision of data
+      The Delegated Regulations enacted under the European ITS Directive define obligations for several stakeholder groups to register data or services on the National Access Point, otherwise make it available and establish other obligations related to services and data (e.g. to provide data in a standardised format). It is possible that the National Body encounters situations in which the stakeholder does not make the data or service available as required by the applicable Delegated Regulation or does not register it to the NAP. In these cases, the stakeholder will most likely not have submitted a self-declaration to the National Body.
+      The non-compliance treatment procedure described in chapter 8.1 can be applied also in case of non-provision of data. In addition to the articles related to compliance assessment, non-provision of data may violate other articles of the Delegated Regulations. In the Delegated Regulation on MMTIS (2017/1926), article 4 describes obligations to provide static travel and traffic data, and article 5 describes similar obligations for dynamic travel and traffic data. In the Delegated Regulation on RTTI (2017/1926), obligations to provide data are described for different stakeholder groups in articles 4, 5 and 6.
+      
+      Non-provision of self-declaration
+      The task of the National Body to request a self-declaration and the obligation of a service provider, data provider or other stakeholder to submit a self-declaration have been expressed in different ways in the Delegated Regulations on RTTI, SRTI, MMTIS and SSTP. The Delegated Regulations use different wordings regarding compliance assessment, provision of self-declaration and processing the self-declaration. A comparison between the Delegated Regulations is provided in the table below (Table 1).
+      Table 1. Comparison of wording related to compliance assessment, delivery of self-declaration and random inspections between Delegated Regulations on MMTIS, RTTI, SRTI and SSTP (emphasis made by authors).
+      The Delegated Regulations on SRTI and SSTP use modal verb "shall" to describe how self-declaration (declaration of compliance, declaration) is provided to the National Body (designated body). In the technical context, the modal verb "shall" is commonly used to indicate a mandatory feature or system behavior. In legal contexts, "shall" is frequently used to indicate action which is mandatory. The Delegated Regulations on SRTI and SSTP can therefore be interpreted to establish a positive obligation to submit a self-declaration when the conditions for submitting a self-declaration defined in the Delegated Regulation are present. Not submitting a self-declaration when it is required according to the Delegated Regulation would therefore be considered as non-compliance to the requirements of the Delegated Regulation.
+      The Delegated Regulations on MMTIS and RTTI use the modal verb "may" to describe how self-declarations are provided to the National Body. In technical and legal contexts, the modal verb "may" is commonly used to indicate behavior or an activity which is allowed but not mandatory. The Delegated Regulations on RTTI and MMTIS use the wording "competent authorities of Member States may request" which indicates that the National Body is authorised to request self-declarations from stakeholders. The obligation of the stakeholder to answer the request, for example by submitting a self-declaration, has not been codified in the Delegated Regulations on RTTI or MMITS.
+      The Delegated Regulations do not provide a direct answer to the question whether not answering a request to provide a self-declaration would constitute non-compliance or violation of the requirements expressed in the Delegated Regulation on RTTI or MMTIS. In addition to European law, National Bodies interpreting the Delegated Regulations will likely take into account their national legislation and the legal systems of their own member states. It therefore seems possible that public authorities or courts in different EU Member States may arrive to different conclusions in this question.
+      In EU law, the public authority has the burden of proof that a violation has occurred when applying administrative sanctions (de Moor van Vugt 2012). In national law, the rules regarding the burden of proof and the standard of proof required in administrative process differ between Member States.
+      Legal certainty is one of the principles of EU law but its interpretation in practical situations may be complex (Van Meerbeeck 2016). Due to the principle of legal certainty, it can be argued that the obligations of a subject have to be foreseeable. Regarding legal certainty, the European Court of Justice has concluded: "the effect of community legislation must be clear and predictable for those who are subject to it" (ECJ, 212 to 217/80, Amministrazione delle finanze dello Stato v. SRL Meridionale Industria Salumi and Other).
+    links:
+      - "Dependency → Collect possible other information related to identified non-compliance."  # {04071978-49C6-4205-9870-761BE6B34006} → {30A34EAE-AB95-4169-900E-BCE47DE46558}
+      - "Dependency → Identify objectives of the applicable delegated act of the ITS directive by non-compliance"  # {D91B4367-510E-4952-B977-52072512E7DE} → {51BC8E5A-6E2C-4209-8131-7AF457A731E9}
+      - "Dependency → Identify relevant stakeholder characteristics and cintextual factors related to non-complaint."  # {A44C75BB-1966-4879-A947-37C7F07174CC} → {F6C45D87-E8EA-4ada-B52C-10DF47119321}
+      - "Dependency → Optional: request further information from the stakeholder"  # {884AD2FA-23D2-45cf-8A8E-E47426F1DE9C} → {72D6074D-100F-45cc-967D-B8D5A4B6F924}
+      - "Dependency → Receives administrative decision on compliance"  # {D76B3DC3-7400-4d25-B184-206522B525DB} → {8C585B95-F1E0-488d-8095-B8C9D04ADE68}
+  - name: "Identify objectives of the applicable delegated act of the ITS directive by non-compliance"
+    guid: "{51BC8E5A-6E2C-4209-8131-7AF457A731E9}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Dependency → Identify possible actions which are proportional to the objectives when applied individually or as a package"  # {7B1C8570-63FD-4688-9370-985F59D44EAB} → {7615DF18-80CE-44f4-A8A0-6AC788682D66}
+  - name: "Identify possible actions which are proportional to the objectives when applied individually or as a package"
+    guid: "{7615DF18-80CE-44f4-A8A0-6AC788682D66}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      In its current form, the Delegated Regulations or the ITS Directive define no administrative powers for the NB to address non-compliance. Moreover, the Delegated Regulations or the ITS Directive define no procedure for a situation in which the results of compliance assessment (based on random inspections) indicate non-compliance in a service or a data set. The options available to the NB are therefore subject to national regulations. The extent to which the NB is legally authorized to intervene in case of non-compliance and the type of actions it can take (e.g. rejection of submitted self-declarations, monetary penalties, administrative sanctions, recommendations and suggestions) depends on the legal basis of the establishment of each NB. However, such details might not be defined in all Member States.
+      Assuming that the NB has the legal authority to impose sanctions in case of non-compliance, these actions should ideally be based on the assessment of the impact of the specific type of non-compliance. Nevertheless, impact assessment of non-compliance may be very challenging. National Bodies are likely to encounter different types of non-compliance, of various levels, with different causes, in different contexts and with a wide qualitative scope of impacts. The stakeholders may also be very diverse and have varying levels of cooperation with the National Body. In the context of assessing non-compliance, the impacts of non-compliance may have already occurred at the time of compliance assessment or they may occur in future with more or less certainty. In the first case, the NB may have no means to determine with certainty how the world would have evolved had the data or service been compliant (e.g. in a situation in which a compliant service or data set has never been available). In the latter case, the NB will be able to determine the impact and its likelihood to occur but will not know with certainty whether the impact will occur or not.
+      The National Bodies can be expected to be experts in the field and to know and understand the typical use cases for the data and services covered by the Delegated Regulations. On the other hand, it may be unreasonable to assume the NB to have a complete and up to date picture of all possible uses of the data, including the less known users and use cases. Some use cases of the data or services may also be novel and not anticipated or predictable.
+      It should also be noted that the impact of non-compliance is not the only factor that the NB should consider in selecting its actions. In addition, the National Body should consider which action or package of actions best corresponds to the objectives of the Delegated Regulations and the ITS Directive. These considerations can be very practical, e.g. not removing a data set from NAP due to minor quality defects.
+      Actions taken to address non-compliance may differ based on the results of the impact assessment. Reacting the same way to all non-compliance cases might be open to criticism depending on the actions taken. The impact of non-compliance is likely to differ from case to case. The more severe the impact is, the wider scope of actions is likely to be considered as reasonable and proportional for the NB. If the reaction is the same for all instances of non-compliance, the National Body may end up doing "too little" in cases with serious impacts or doing "too much" in case of minor compliance issues.
+      Actions could also gradually increase the consequences for non-compliance depending on the severity and on the repetitiveness of non-compliance.
+      Specifically concerning the treatment of non-provision of data, the same general principles for action apply. As an example, in Belgium, three relevant tasks are defined for the control body:
+      
+      	- Check if everyone that should register data has done so (based on stakeholder list – the difficulty here is to make this list, keep it up to date, have the right contact details etc.)
+      	- Run thorough compliance assessment based on random selection of datasets that are registered on the NAP
+      	- Investigate complaints from data re-users about data on the NAP (or complaints about data that should be on the NAP but is not or complaints from data-owners about incorrect re-use of their data).
+    links:
+      - "Dependency → Select the action or a combination of actions which corresponds best to the objectives of national laws, the delegated acts and the ITS directive."  # {7D357C2A-20DB-4382-BAA8-20DBEA3AEE6D} → {24A1FBF5-07C2-46c6-BA46-73BC353DA4ED}
+  - name: "Identify relevant stakeholder characteristics and cintextual factors related to non-complaint."
+    guid: "{F6C45D87-E8EA-4ada-B52C-10DF47119321}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Dependency → Identify possible actions which are proportional to the objectives when applied individually or as a package"  # {E545FF63-3D6E-4c4c-AC21-5E69C89C0B79} → {7615DF18-80CE-44f4-A8A0-6AC788682D66}
+  - name: "Information on potential non-compliance has been identifyed"
+    guid: "{17EBAC7E-E847-47d1-9515-E747B015C202}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      When reporting a non-compliance, the data users should be urged to provide a clear description of the non-compliance case they have identified, providing as much information as possible. Their own contact details should also be available to the NAP operator so that they can be reached if additional information is needed or even for a follow-up communication about the treatment of the non-compliance case, depending on the communication policy of each NAP. The NB should support the data users for reporting complaints by having a help center (including info, FAQs, helpdesk etc) operating within the NAP.
+    links:
+      - "Dependency → Investigate whether non-compliance has likely occurred"  # {50E0C10C-07C0-49c5-85D7-9869C016884F} → {A7F694D0-3401-4f76-937D-CBB2750B11BF}
+  - name: "Initiate the actions prescribed in the decision on non-compliance and consequences of non-compliance"
+    guid: "{77E39EED-5D44-4837-86A7-1D4FE22A5348}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The actions of the NB should be proportional to the objective and the expected benefit to be achieved with the action. Therefore, increasing consequences should be clearly justified. The societal acceptance of serious consequences such as penalties will likely depend on the expected consequences of violating the applicable Delegated Regulation.
+      It is also important that the consequences of non-compliance are applied in a transparent way, taking into account equal treatment of stakeholders.
+      Penalties or other consequences could be justified e.g. in situations in which the infringement of the Delegated Regulation causes a safety risk for road users, otherwise compromises safety, involves significant negative impact on markets or development of ITS services, or has significant negative impacts on environment.
+      Based on the above, it is preferable to start with educating the stakeholders on the obligation to submit a self-declaration, as many of them may have limited awareness of the Delegated Regulations and their interpretation.
+  - name: "Investigate whether non-compliance has likely occurred"
+    guid: "{A7F694D0-3401-4f76-937D-CBB2750B11BF}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      After a first investigation of the complaint by the NB depending on the resources available, the complaint could be further reported to the national authorities.
+      All reported types of non-compliance should be recorded by the NB so as other data sets or services by the same or a different provider can also be checked against similar non-compliance issues.
+    links:
+      - "Dependency → Identify non-compliance to individual articles of the applicable delegated act"  # {7C0B40F8-1D22-4d30-B3BA-E7794254BE80} → {3C58CE28-9384-47b8-AC17-414A0B505D90}
+      - "Dependency → No reason to expect non-compliance"  # {58D5BCD3-B901-4239-A842-26A3BE9E5B8E} → {325F0B4B-A215-4be2-958B-FE3ABFFDEF1A}
+  - name: "May appeals result"
+    guid: "{0F014357-0944-4afd-BF33-3432540FEC30}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The data or service provider may appeal the decision of the national body regarding the outcome of the random inspection according to procedures specified in national legislation.
+    links:
+      - "Dependency → Process appeals made by the stakeholder"  # {FDD55C27-3CB9-404e-A398-FADA16C6CA84} → {9F4D540F-34D7-418e-B561-42E8C5D180F4}
+  - name: "No reason to expect non-compliance"
+    guid: "{325F0B4B-A215-4be2-958B-FE3ABFFDEF1A}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Results of the thirst investigation will be re-communicate to the requester.
+  - name: "Optional: request further information from the stakeholder"
+    guid: "{72D6074D-100F-45cc-967D-B8D5A4B6F924}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      e.g. whether the stakeholder considers the data or service non-compliant, reasons for non-compliance
+    links:
+      - "Dependency → Identify possible actions which are proportional to the objectives when applied individually or as a package"  # {6E1BDB58-6DFC-4c00-84CE-346A511A358F} → {7615DF18-80CE-44f4-A8A0-6AC788682D66}
+  - name: "Process appeals made by the stakeholder"
+    guid: "{9F4D540F-34D7-418e-B561-42E8C5D180F4}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Persisting non-compliance may be less possible to be identified through random inspections as the possibility to inspect again the same data set is rather low. However, it could be identified through repetitive complaints by data users or through the combination or random inspections and complaints.
+      In their current form, the Delegated Regulations require Member States to assess compliance by receiving self-declarations and performing random inspections of the self-declarations. By definition, the selection of self-declarations for inspection is a random selection. Random inspections are therefore not a procedure which would be suitable as such for identifying repetitive or persistent non-compliance.
+      Gradually increasing the consequences for non-compliance is a strategy that could be followed in case of repetitive non-compliance. In the case of non-compliance identified through random inspections, the strategy of gradually increasing the consequences for non-compliance is feasible only when the identification of a data set or service as non-compliant in the random inspection leads to follow-up inspection. However, the Delegated Regulations are not clear about organizing a follow-up inspection. Such a procedure is not described in the Delegated Regulations but could be proposed as an extension of a random inspection. National regulations or changes in the Delegated Regulations may be needed to address the gap. The use of follow-up inspections is closely linked to the strategy of the national body to increase the level of compliance, national legislation on enforcement of administrative decisions and the actions selected by the National Body in an individual case of non-compliance. Follow-up inspections may be carried out to monitor the status of the data publications and services provided by the stakeholder and to provide instructions and guidance to the stakeholder. Follow-up inspections may also be required in a process in which administrative sanctions are applied (e.g. a conditional fine). The National Body should consider whether to accept a new self-declaration from a stakeholder which has earlier been found to be not in compliance with the requirements of the delegated act. The National Body may perform a follow-up inspection to resolve the conflict between the results of an earlier compliance assessment and the new self-declaration.
+    links:
+      - "Dependency → Document the decision on non-compliance and the consequences of non-compliance"  # {8033F76D-6406-4dc6-AACD-1654E45C7A74} → {6B336EE1-25C0-4087-9D25-CE72AF9D5730}
+      - "Dependency → Initiate the actions prescribed in the decision on non-compliance and consequences of non-compliance"  # {B76EA9F3-288F-4c8d-92EA-B22CD64FB4DC} → {77E39EED-5D44-4837-86A7-1D4FE22A5348}
+  - name: "Random inspection of the self-declaration or the accompanying documents indicates non-compliance"
+    guid: "{0B142C7E-8FB3-4b74-B4FA-E7FE2D238380}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Based on the compliance assessment process as defined in Milestone M5.3, it is clear that the non-compliance process is a follow-up process to the Compliance Assessment rather than an independent process. Specifically, random inspections of submitted self-declarations and the accompanying documents may result in the identification of non-compliance, which is documented through the compliance assessment results form.
+      Based on the defined compliance assessment process, the identification of non-compliance based on random inspections might be the result of the:
+      
+      	- Theoretical assessment (according to compliance assessment form)
+      
+      
+      	-
+      	-
+      	-
+      	-
+      	-
+      	- Self-declaration and accompanying documents check for formal criteria
+      	- National Access Point check for data description
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      	- Content assessment (according to compliance assessment form)
+      
+      i. Content of the provided information check (self-declaration and accompanying documents)
+      ii. Data access on the National Access Point check
+      iii. Data sets regarding the requirements check
+      
+      The Delegated Regulations enacted under the European ITS Directive define obligations for several stakeholder groups to register data or services on the National Access Point, otherwise make it available and establish other obligations related to services and data (e.g. to provide data in a standardised format). It is possible that the National Body encounters situations in which the stakeholder does not make the data or service available as required by the applicable Delegated Regulation or does not register it to the NAP. In these cases, the stakeholder will most likely not have submitted a self-declaration to the National Body.
+      The task of the National Body to request a self-declaration and the obligation of a service provider, data provider or other stakeholder to submit a self-declaration have been expressed in different ways in the Delegated Regulations on RTTI, SRTI, MMTIS and SSTP. The Delegated Regulations use different wordings regarding compliance assessment, provision of self-declaration and processing the self-declaration.
+    links:
+      - "Dependency → Identify non-compliance to individual articles of the applicable delegated act"  # {CDC56108-286F-4edc-9A34-9422D94DDDB8} → {3C58CE28-9384-47b8-AC17-414A0B505D90}
+  - name: "Receives administrative decision on compliance"
+    guid: "{8C585B95-F1E0-488d-8095-B8C9D04ADE68}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      If the non-compliance status is solved, the affected stakeholder is informed about the compliance state.
+  - name: "Receives administrative decision on non-compliance"
+    guid: "{2D10B3DF-27FC-434a-B27C-1DBEC025DFA4}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The service or data provider will receive an administrative decision on non-compliance.
+    links:
+      - "Dependency → May appeals result"  # {7A484AB6-0DC9-4ccf-A89F-0FD810DF3E4A} → {0F014357-0944-4afd-BF33-3432540FEC30}
+      - "Dependency → change documents, data or services according to  requested actions"  # {6DD4A898-E2A4-4243-ABEE-79877EA48A7C} → {0D6C06EB-41CC-48c1-86E9-5288373F3611}
+  - name: "Select the action or a combination of actions which corresponds best to the objectives of national laws, the delegated acts and the ITS directive."
+    guid: "{24A1FBF5-07C2-46c6-BA46-73BC353DA4ED}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Dependency → Document the decision on non-compliance and the consequences of non-compliance"  # {D73849BE-0C14-45bf-8081-7E05AEC0579B} → {6B336EE1-25C0-4087-9D25-CE72AF9D5730}
+  - name: "change documents, data or services according to  requested actions"
+    guid: "{0D6C06EB-41CC-48c1-86E9-5288373F3611}"
+    type: "Activity"
+    stereotype: "FRAME_ITS_Service_Process"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      The affected stakeholder solves the reported issues according to the non-compliance documentation.
+    links:
+      - "Dependency → Identify non-compliance to individual articles of the applicable delegated act"  # {3AF6904B-44A6-487c-9B0A-FA2A075927E9} → {3C58CE28-9384-47b8-AC17-414A0B505D90}

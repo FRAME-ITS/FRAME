@@ -1,0 +1,30 @@
+package: "National Body Reference Architecture/NB Functional View"
+guid: "{A2CCC6DC-AA6F-43ee-963D-F21FE59D4039}"
+alias: ""
+version: "1.0"
+note: |
+  The Functional View of the National Body reference architecture shows the main functionalities and the data flows in between.
+  The included functionalities are defined and harmonized by NAPCORE and they present all necessary functionalities to fulfill the legal tasks defined by the Delegated Regulations.
+  The functionalities can be implemented by the National Body or another authority which is competent and authorized to fulfill this task aligned with the National Body. The left and right Terminators, the entities who start or end processes or functionalities, are connecting the related views.
+elements:
+  - name: ""
+    guid: "{768A73D1-CC4A-4bd5-BD74-7C35BA184B0E}"
+    type: "Text"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "Connection to organisational view and motivational layer"
+    guid: "{28178970-EA02-48a5-914E-FFE695488281}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+  - name: "Connection to organisational view and motivational layer"
+    guid: "{88D8C631-7639-49f0-844E-F0DDA13CF044}"
+    type: "Boundary"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""

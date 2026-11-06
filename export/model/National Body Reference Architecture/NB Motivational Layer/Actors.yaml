@@ -1,4 +1,4 @@
-package: "National Body Reference Architecture/00 NB Motivational Layer/Actors"
+package: "National Body Reference Architecture/NB Motivational Layer/Actors"
 guid: "{CFB13735-5244-4131-BB33-66128934DB41}"
 alias: ""
 version: "1.0"
@@ -16,7 +16,7 @@ elements:
     links:
       - "Abstraction «is Type of» → Data and Service provider"  # {7CA8902B-68B2-41e2-9F6D-BA0624864AB7} → {18125799-A9C0-4e9d-B88E-C02A31FA9163}
       - "Abstraction «is Type of» → Data- and/or Service provider(s)"  # {F584F9CC-174A-4129-B592-8A51EFAC20F7} → {4BBDECD9-7CB6-4269-9AA6-DE1A948C9995}
-  - name: "European Commision"
+  - name: "European Commission"
     guid: "{9999A38F-B70B-4274-BB81-5A16EB37D298}"
     type: "Actor"
     stereotype: "FRAME_Actor"
@@ -24,9 +24,9 @@ elements:
     version: "1.0"
     order: 0
     note: |
-      European Commission actor represents motivational items of the European Commission Stakeholder to the functional and organizational view of the NB reference architecture.
+      The actor “European Commission” represents motivational items of the European Commission linked to the functional and organizational view of the NB Reference Architecture.
     links:
-      - "Abstraction «is Type of» → European Commision"  # {320C1DF4-30FF-4847-96A4-9D317C81D2CF} → {09ACD865-46B3-4ea8-A5A9-5D8F4AF58CF6}
+      - "Abstraction «is Type of» → European Commission"  # {320C1DF4-30FF-4847-96A4-9D317C81D2CF} → {09ACD865-46B3-4ea8-A5A9-5D8F4AF58CF6}
   - name: "Member State"
     guid: "{1B1FBA82-B717-4b02-AE66-E1142B61E091}"
     type: "Actor"
@@ -35,7 +35,7 @@ elements:
     version: "1.0"
     order: 0
     note: |
-      Member State actor represents motivational items of the Member State Stakeholder to the functional and organizational view of the NB reference architecture.
+      The actor “Member State” represents motivational items of the Member State Stakeholder linked to the functional and organizational view of the NB reference architecture.
     links:
       - "Abstraction «is Type of» → Member State"  # {6151A5A2-0AF1-419d-A65B-F8CF7541DB06} → {F67994D2-8F28-40c3-AB94-56CBB3C33B7E}
   - name: "NAP"
@@ -46,10 +46,9 @@ elements:
     version: "1.0"
     order: 0
     note: |
-      The NAP (National Access Point) Actor represents one or more entities who fulfill motivational items of the NAP
-      Stakeholder to the functional and organizational view of the NB reference architecture.
+      The actor “NAP (National Access Point)” represents one or more entities who fulfill motivational items of the NAP Stakeholder linked to the functional and organizational view of the NB reference architecture.
     links:
-      - "Abstraction «is Type of» → NAP"  # {28D1C712-ADD2-404c-B08C-05813B4A3865} → {045541C2-0CC6-4ed9-B36B-9A432B2E67EC}
+      - "Abstraction «is Type of» → National Access Point"  # {28D1C712-ADD2-404c-B08C-05813B4A3865} → {045541C2-0CC6-4ed9-B36B-9A432B2E67EC}
   - name: "National Body / Competent Authority"
     guid: "{49B680E5-0E20-48ea-8253-4FEEF7CEBB85}"
     type: "Actor"
@@ -58,8 +57,6 @@ elements:
     version: "1.0"
     order: 0
     note: |
-      The NB/CA (National Body / Competent Authority) Actor represents one or more entities who fulfill motivational
-      aspects of the NB/CA Stakeholder to the functional and organizational view of the National Body Reference
-      Architecture.
+      The National Body actor represents one or more entities who fulfill motivational aspects of the National Body Stakeholder linked to the functional and organizational view of the NB reference architecture.
     links:
-      - "Abstraction «is Type of» → Competent Authority / National Body"  # {66414DA8-DD76-4c34-B788-5FED3D1EEBA4} → {FA078449-0B55-43fd-85F0-BC2273EB6B8F}
+      - "Abstraction «is Type of» → National Body"  # {66414DA8-DD76-4c34-B788-5FED3D1EEBA4} → {FA078449-0B55-43fd-85F0-BC2273EB6B8F}

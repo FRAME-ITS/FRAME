@@ -1,17 +1,21 @@
-package: "National Body Reference Architecture/03 NB Organisational View/Specifications"
+package: "National Body Reference Architecture/Supplements/Specifications"
 guid: "{57522110-54AA-43d6-8F37-AD43F6D68D72}"
 alias: ""
 version: "1.0"
 note: ""
 elements:
-  - name: "Acompanying Documents"
+  - name: "Accompanying Documents"
     guid: "{E658AAFB-2923-41e3-BFA8-0B79A2B57C3D}"
     type: "DeploymentSpecification"
     stereotype: "FRAME_Specification"
     status: "Proposed"
     version: "1.0"
     order: 0
-    note: ""
+    note: |
+      Accompanying documentation shall be provided by the data/service provider that provides (meta)data in accordance with the respective Delegated Regulations on the NAP. The information in the accompanying documentation shall support the National Body in carrying out the compliance assessment. If existing organisational documents provide answers or information to requested topics, they shall be added to the annex of the accompanying documentation. Per Delegated Regulation one template for the accompanying documentation was prepared within NAPCORE. The templates are linked in the table below.
+      The latest version of the accompanying documents could be found here:
+      
+      https://napcore.eu/national-bodies-3/
   - name: "Directive (EU) 2023/2661"
     guid: "{C3C38386-12EB-44c2-8976-75E3D86C7AD2}"
     type: "DeploymentSpecification"
@@ -33,12 +37,16 @@ elements:
     version: "1.0"
     order: 0
     note: |
-      Indication of time line
+      The timings and other guidelines will be found in the planed handbook published by NAPCORE X.
+      
+      This includes:
+      
+      Indication of a time line
       Information time point for stakeholder
-      Dates and Timelines of Delegated Acts
+      Dates and timelines of Delegated Acts
       Timeframe for Assessment, Reception and answers
-      Time horizon for validity for a self declaration
-      Time horizon for validity for a compliance assessment results
+      Time horizon  for a self-declaration
+      Time horizon for a compliance assessment results
   - name: "ITS directive 2010/EU/40"
     guid: "{838FF400-30C2-465b-A815-907FD87D213B}"
     type: "DeploymentSpecification"
@@ -59,17 +67,12 @@ elements:
     status: "Proposed"
     version: "1.0"
     order: 0
-    note: ""
-  - name: "Template for Self Declaration"
-    guid: "{7D17E92C-40B9-4747-8B9D-5D52B942D18F}"
-    type: "DeploymentSpecification"
-    stereotype: "FRAME_Specification"
-    status: "Proposed"
-    version: "1.0"
-    order: 0
     note: |
-      NAPCORE developed a harmonized Self Declaration form witch can be found here: https://napcore.eu/material-hub/
-  - name: "Template for compliance Assessment"
+      Harmonised forms for EU reporting are available at: https://napcore.eu/material-hub/
+      
+      The latest version of the EU reporting template could be found here:
+      https://napcore.eu/national-bodies-3/
+  - name: "Template for compliance assessment"
     guid: "{44D1CCEA-5154-46a4-804A-E19E0A79FC2B}"
     type: "DeploymentSpecification"
     stereotype: "FRAME_Specification"
@@ -77,7 +80,12 @@ elements:
     version: "1.0"
     order: 0
     note: |
-      NAPCORE developed a harmonized Accompanaying documents form witch can be found here: https://napcore.eu/material-hub/
+      Harmonised forms for provision of accompanying documents are available at: https://napcore.eu/material-hub/
+      
+      The latest version of the accompanying document forms could be found here:
+      https://napcore.eu/national-bodies-3/
+    links:
+      - "Association → Compliance Assessment"  # {5466F625-C047-4733-BFEA-5FBF942A3D17} → {741A6BF3-3785-4285-B769-6E5BA4860A45}
   - name: "Template for national reporting"
     guid: "{82FF01BC-5818-40e7-A1AC-5BA1B47FA5DF}"
     type: "DeploymentSpecification"
@@ -86,6 +94,16 @@ elements:
     version: "1.0"
     order: 0
     note: |
-      https://rupprechtconsultde.sharepoint.com/:w:/r/sites/NAPCOREallpartners/Shared%20Documents/WG5/WG%205.2%20-%20Forms%20%26%20CA%20Processes/WG5.2_Reporting%20process%20and%20templates/NAPCORE_WG5_Reporting%20templates%20to%20MS%26EC_v1.docx?d=w1fd077eb74c246a08034482843931cf6&csf=1&web=1&e=P9Y3fI
+      Harmonised forms for national reporting are available at: https://napcore.eu/material-hub/
       
-      Need to be approved und published by WG5
+      The latest version of the national reporting template could be found here:
+      https://napcore.eu/national-bodies-3/
+  - name: "Template for self-declaration"
+    guid: "{7D17E92C-40B9-4747-8B9D-5D52B942D18F}"
+    type: "DeploymentSpecification"
+    stereotype: "FRAME_Specification"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      NAPCORE developed a harmonized self-declaration form which can be found here: https://napcore.eu/material-hub/

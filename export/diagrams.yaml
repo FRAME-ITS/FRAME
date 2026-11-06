@@ -8134,48 +8134,263 @@
   elements:
     - ""
     - ""
-    - ""
-    - ""
     - "00_NB_Motivational View"
     - "02 National Body Functional View"
     - "03 NB Organisational View"
     - "05 NB Communication View"
-- name: "Todos"
-  guid: "{B845E3BF-467B-4152-8BDE-2348B5FDF159}"
-  package: "National Body Reference Architecture"
+    - "Change History"
+    - "Issues Tracking and Wiki"
+    - "NB Glossary"
+- name: "05 NB Communication View"
+  guid: "{D7F57B7E-40DC-49d3-B8FC-936DAD0D0DF2}"
+  package: "National Body Reference Architecture/NB Communication View"
   type: "Logical"
   note: |
-    MV:
-    ITS Business Expectation: Harmonized approach to engage with international Data and Service provider
-    
-    ITS Domain
+    The Communication View contains the well-defined and in NAPCORE harmonized processes and communication structures.
   elements:
+    - ""
+    - ""
+    - ""
+    - "Compliance assessment"
+    - "Handling non-compliance process"
+    - "Receiving and processing a self-declaration"
+- name: "Compliance assessment"
+  guid: "{0175F026-9952-4588-ACAF-6DA60158B79A}"
+  package: "National Body Reference Architecture/NB Communication View/Compliance assessment"
+  type: "Logical"
+  note: |
+    The process of random inspections starts with listing all valid and active self-declarations per delegated regulation.
+    Based on a pre-determined number of self-declarations, Self-declarations are randomly selected for inspection, no action is taken for self-declarations not selected for inspection.
+    For self-declarations selected for random inspection, a theoretical assessment is carried out.  In short, the theoretical assessment is a compliance review in which the content of the self-declaration is compared against the compliance requirements derived from the applicable delegated regulation. After the theoretical assessment, a content assessment is carried out.  The Member State, taking into consideration the NAPCORE recommendations, decides to which extent the types of assessment (theoretical and content assessment) are carried out by the National Body.). If an organisation registered multiple data sets and services, the National Body can make a limited selection for the content assessment. In this case, the most relevant data sets should be selected. The inspection methods to be applied in content and theoretical assessment need to be suitable for the delegated regulation and the data or service type, and they should preferably be verified in the local context before actual random inspections are started.
+    The verdict of the compliance assessment is determined based on the results of theoretical and content assessments. A “pass” verdict will be assigned if neither the results of the theoretical assessment nor the results of the content assessment indicate non-compliance to the delegated regulation. Otherwise, a “fail” verdict will be issued.
+    
+    Example for national legislation:
+    https://www.finlex.fi/fi/laki/kaannokset/2003/en20030434_20150893.pdf
+  elements:
+    - ""
+    - ""
+    - ""
+    - "Data or Service Provider"
+    - "National Body / Competent Authority"
+    - "National Body determines the verdict of compliance assessment"
+    - "National Body indicates non-compliance"
+    - "National Body informs the service or data provider"
+    - "National Body may receive feedback from the service or data provider"
+    - "National Body performing content assessment"
+    - "National Body performing theoretical inspection"
+    - "National Body reacting on feedback"
+    - "National Body updates documentation and registration of assessment results and carried out random inspections"
+    - "Provision of relevant information"
+    - "Random selection process"
+    - "Reception of updated and necessary information"
+    - "Requesting necessary information from data and service provider"
+    - "Select set of self-declaration for random selection"
+    - "Service or data provider may appeal the decision according to national laws, regulations and/or procedures"
+    - "Service or data provider receives assessment results"
+- name: "Non Compliance Process"
+  guid: "{B8249934-8794-40bc-9887-8DCADA8ADD60}"
+  package: "National Body Reference Architecture/NB Communication View/Non Compliance Process"
+  type: "Logical"
+  note: |
+    The Delegated Regulations on SRTI, (EU) No 886/2013, and SSTP, (EU) No 885/2013 introduce an obligation for Member States to establish a National Body which will be competent to perform compliance assessment. The Delegated Regulations for MMTIS, (EU) 2017/1926 and RTTI, (EU) 2022/670, establish an obligation for Member States to assess the compliance of the stakeholders to the requirements defined in the Delegated Regulations. In practice, the Member State will be represented by a National Body which will be competent to perform a compliance assessment.
+    The compliance assessment performed for a stakeholder who has submitted a self-declaration may result in verdict "pass" or "fail". In practice, the "pass" verdict is given in a situation in which the results of the compliance assessment did not indicate non-compliance of the service or data covered by the assessment.
+    
+    Based on the defined compliance assessment process, the identification of non-compliance based on random inspections might be the result of the:
+    1. Theoretical assessment (according to compliance assessment form)
+          - Check Self-declaration and accompanying documents for formal criteria
+          - Check National Access Point entry for data description
+    
+    
+    2. Content assessment (according to compliance assessment form)
+    i. Check content of the provided information (self-declaration and accompanying documents)
+    ii. Check data access on the National Access Point
+    iii. Check data sets regarding the requirements
+    
+    In its current form, the Delegated Regulations include no obligation to provide guidance regarding an individual data set or a service.
+    
+    Handling non-compliance identified through random inspections and/or based on individual complaints for non-compliant data and/or services, could follow either a positive approach or a stricter one.
+    Generally, the positive approach should be preferred in order to repair non-compliant data or services and further support avoiding non-compliance in the future. A positive approach would comprise:
+    
+    	- supporting the providers in better understanding the requirements of the Delegated Regulations and providing appropriate data and services
+    	- providing technical assistance for appropriately managing and publishing data on the NAP
+    	- friendly communication between the NB or the NAP operators and the non-compliant providers
+    	- recognizing and rewarding the timely response of providers to requests for corrections of data and services in order to become compliant
+    	- By social rewarding (e.g. publishing which data set(s) have received a positive assessment to the larger public. This can be done for example through a newsletter, LinkedIn-post or a label on the NAP).
+    
+    On the other hand, a stricter approach could involve:
+    
+    	- social blaming including publicly announcing non-compliant providers
+    	- administrative sanctions such as exclusion from NAP, potentially limited access to other data/services etc, probably associated with the impact or the repetitiveness of non-compliance
+    	- monetary penalties increasing with the impact of non-compliance or in case of repetition
+    
+    Although the positive approach is strongly recommended, it might be considered less effective. The final decision on how to handle non-compliance strongly depends on:
+    
+    	- the national legislation governing the operation of the NB and the NAP in each Member State
+    	- the existing national enforcement and penalty system in each Member State
+    	- the general approach followed by the competent authorities in each Member State taking into account the local cultural and social characteristics (e.g. Is there a help and support culture? Is social blaming accepted?)
+  elements:
+    - ""
+    - ""
+    - ""
+    - "Collect possible other information related to identified non-compliance."
+    - "Data or Service Provider"
+    - "Detects a non-compliance and request a investigation"
+    - "Document the decision on non-compliance and the consequences of non-compliance"
+    - "General Public"
+    - "Identify non-compliance to individual articles of the applicable delegated act"
+    - "Identify objectives of the applicable delegated act of the ITS directive by non-compliance"
+    - "Identify possible actions which are proportional to the objectives when applied individually or as a package"
+    - "Identify relevant stakeholder characteristics and cintextual factors related to non-complaint."
+    - "Information on potential non-compliance has been identifyed"
+    - "Initiate the actions prescribed in the decision on non-compliance and consequences of non-compliance"
+    - "Investigate whether non-compliance has likely occurred"
+    - "May appeals result"
+    - "National Body / Competent Authority"
+    - "No reason to expect non-compliance"
+    - "Optional: request further information from the stakeholder"
+    - "Process appeals made by the stakeholder"
+    - "Random inspection of the self-declaration or the accompanying documents indicates non-compliance"
+    - "Receives administrative decision on compliance"
+    - "Receives administrative decision on non-compliance"
+    - "Select the action or a combination of actions which corresponds best to the objectives of national laws, the delegated acts and the ITS directive."
+    - "change documents, data or services according to  requested actions"
+- name: "Self Declaration reception process"
+  guid: "{0FEED0F3-BE76-4071-A61B-9421EE88B5C0}"
+  package: "National Body Reference Architecture/NB Communication View/Self-declaration Reception Process"
+  type: "Logical"
+  note: |
+    Member State shall designate an impartial and independent National Body and make sure that this National Body is properly authorised, according to national regulations, to receive and process self-declarations. The National Body will need the following preparation before being ready to receive self-declarations:
+    Identify and organise resources for receiving and processing self-declarations and for performing compliance assessment and random inspections.
+    Develop an internal process for receiving and processing self-declarations, taking into account both European regulation and contextual factors present in the Member State such as the number of service or data providers expected to submit a self-declaration and national administrative law.
+    Develop a plan on how to identify data and service providers covered by the delegated regulation and how the National Body will approach the stakeholders. Provide national templates for self-declarations and accompanying documents.·Compile Member State specific instructions for data and service providers on how to fill in and submit a self-declaration and related accompanying documents. After the National Body has been nominated and necessary preparations have been carried out, it will provide information to potential data and service providers on their obligation to submit a self-declaration and provide instructions on how to fill in and submit a self-declaration. The National Body may inform the stakeholders with different methods such as email campaigns, sending letters, publishing information on the NAP website or arranging workshops. To identify the relevant actors obligated to submit a self-declaration, the National Body may use procedures specific to its Member State. These may include e.g. utilization of the contacts of the NAP operator. Good knowledge of the national mobility landscape is required to identify the stakeholders potentially having an obligation to submit a self-declaration. To increase its knowledge and to build a more complete picture of the mobility landscape, the National Body may collaborate with local or regional transport authorities. When exchanging information between authorities, GDPR compliance is necessary. After being contacted by the National Body, the data or service provider submits a data set or service to the National Access Point (NAP), international access point or content access point as required by the applicable delegated regulation. After submitting the service or data set, the provider fills in and submits the self-declaration form to the National Body. This can take place either electronically (i.e., by email or by indicating compliance via a checkbox) or in paper form. The processing of a self-declaration form starts with verification of the contact details of the data or service provider and checking whether the National Body is responsible and acknowledged for the respective delegated regulation.
+    In case of incomplete or inconsistent contact details, the National Body may request the data or service provider to update its contact details. If the stakeholder does not provide the missing contact details or does not correct erroneous contact details, the National Body may stop processing the self-declaration. After verification of contact details, the National Body verifies the completeness of the self-declaration. In practice, this means checking that all mandatory fields of the self-declaration form have been filled in, and all required accompanying documents have been provided. If needed, the National Body may request the data or service provider to update the self-declaration and complete the missing parts. After a complete self-declaration has been received, the National Body can provide an acknowledgement to the data or service provider. After receiving and processing the self-declaration, the National Body might update the results to a registry/database (which is not compulsory) of processed self-declarations. At the same time, the National Body may also update the registry of compliant services and data sets (optional), if it has been established in the Member State. Contents of these registries will be the basis for periodic reporting related to the ITS Directive and delegated regulations in the Member State and at the European level. The random inspections that are carried out periodically at pre-determined intervals also check the collected self-declarations and descriptions of compliant services and data sets. In the following figures, digital map producers and broadcasters are included in data or service provider
+  elements:
+    - ""
+    - ""
+    - ""
+    - "Data or Service Provider"
+    - "Fill in harmonized NAPCORE self-declaration form"
+    - "Hosting metadata of service or data set"
+    - "National Access Point"
+    - "National Body / Competent Authority"
+    - "Optional: Generate digital self-declaration"
+    - "Processing feedback and correction of self-declaration"
+    - "Provides information for potential applicants"
+    - "Publish information about service and data set"
+    - "Receiving feedback about the status, correctness and time line"
+    - "Receiving information about a DR relevant service or data set"
+    - "Receiving updated self-declaration"
+    - "Submit NAPCORE self-declaration form"
+    - "Submits service or data set description to national access point"
+    - "The NB is receiving the self-declaration"
+    - "The NB performs initial check of the self-declaration"
+- name: "02 National Body Functional View"
+  guid: "{62F6C2C3-7E2A-47d8-8BDF-B2EE2A30426E}"
+  package: "National Body Reference Architecture/NB Functional View"
+  type: "Logical"
+  note: |
+    The functional view diagram shows essential functionalities of the National Body and how they are related. It also shows which terminators set up the boundaries of the National Body system. If additional components like storages are needed they are connected to the related functionalities.
+  elements:
+    - ""
+    - "Accepted"
+    - "Access information"
+    - "Accompanying Documents"
+    - "Compliance Assessment"
+    - "Compliance assessment registry"
+    - "Connection to organisational view and motivational layer"
+    - "Connection to organisational view and motivational layer"
+    - "Data- and/or Service provider(s)"
+    - "General Public"
+    - "General requests"
+    - "Guidline and Timelines"
+    - "Handling Non-Compliance"
+    - "Information"
+    - "Information about SD obligation"
+    - "Information about status"
+    - "Manage Stakeholder List"
+    - "Management of self-declaration"
+    - "Managing general requests regarding self-declaration"
+    - "Member States"
+    - "National Access Point(s)"
+    - "Provide NB support"
+    - "Provide general information"
+    - "Provide information"
+    - "Provide relevant information"
+    - "Provide self-declaration"
+    - "Provide status of SD"
+    - "Provides self-declaration form"
+    - "Provision of information"
+    - "Receive information"
+    - "Receive self-declaration"
+    - "Reporting of self-declaration and compliance assessment results"
+    - "Request"
+    - "Request"
+    - "Request data"
+    - "Request for providing information"
+    - "Request general information"
+    - "Request information"
+    - "Request relevant SD information"
+    - "Request report"
+    - "Request self-declaration"
+    - "Request self-declaration"
+    - "Request status of SD"
+    - "Response"
+    - "Response"
+    - "SD details"
+    - "Self-declaration Journal"
+    - "Self-declaration Storage"
+    - "Self-declaration status"
+    - "Send report"
+    - "Stakeholder List"
+    - "Status SD"
+    - "Status details SD"
+    - "Status of CA"
+    - "Status of CA"
+    - "Status of CA"
+    - "Status of SD"
+    - "Status of request"
+    - "Status of requested SD"
+    - "Status request on SD"
+    - "Status update"
+    - "Store CA result"
+    - "Store CA result"
+    - "Store Information"
+    - "Store registered SD in storage"
+    - "Store self-declaration"
+    - "Store stakeholder information"
+    - "Stores changed self-declaration"
+    - "Template for national reporting"
+    - "Template for self-declaration"
+    - "Update journal information"
+    - "Update journal information"
+    - "Validation of completeness"
+    - "Validation results"
+    - "receives relevant SD information"
 - name: "00_NB_Motivational View"
   guid: "{36AF66EB-9225-4bc5-A6CA-2FA14257DEEA}"
-  package: "National Body Reference Architecture/00 NB Motivational Layer"
+  package: "National Body Reference Architecture/NB Motivational Layer"
   type: "Logical"
   note: |
     The Motivational View shows the initial position of the system development, the involved stakeholders and the
-    expected added values and desired business goals. These inputs result in the service description of the National Body
+    expected added values and desired business goals. These inputs result in the service description of the National Body.
   elements:
     - ""
-    - "Benefit of harmonized data and service provission"
+    - "Benefit of harmonized data and service provision"
     - "Clear set of requirements for interaction with National Body"
-    - "Competent Authority / National Body"
     - "Data and Service provider"
     - "Data and Service provider"
     - "Delegated Regulations of ITS Directive 2010/EU/40"
     - "Directive (EU) 2023/2661"
     - "EU-wide common understanding of Delegated Regulations"
-    - "Enhance compatibility and Interoperability"
+    - "Enhance compatibility and interoperability"
     - "Enhance the findability of data and services"
-    - "European Commision"
-    - "European Commision"
+    - "European Commission"
+    - "European Commission"
     - "Fulfilling National Body activities and reliabilities according to ITS directive 2010/EU/40"
     - "Fulfilling National Body activities and reliabilities according to ITS directive 2010/EU/40"
-    - "Guideline for a harmonised NB / CA setup"
+    - "Guideline for a harmonised National Body setup"
     - "Guideline for operation of National Bodies"
-    - "Harmonize the NB/CA services within the EU"
+    - "Harmonize the National Body services within the EU"
     - "Harmonized approach to engage with international Data and Service provider"
     - "Harmonized self-declaration process for international data and service provider"
     - "ITS directive 2010/EU/40"
@@ -8185,239 +8400,45 @@
     - "Member State"
     - "Member State"
     - "NAP"
-    - "NAP"
+    - "National Access Point"
+    - "National Body"
     - "National Body / Competent Authority"
     - "National Body Mission_Statement"
     - "Obligations and Interactions"
     - "Requirements"
     - "Seamless National Body Services"
-    - "Support for Reporting related to ITS Directive 2010/40/EU"
+    - "Support for reporting related to ITS Directive 2010/40/EU"
     - "facilitate a harmonized implementation"
-- name: "02 National Body Functional View"
-  guid: "{62F6C2C3-7E2A-47d8-8BDF-B2EE2A30426E}"
-  package: "National Body Reference Architecture/02 NB Functional View"
-  type: "Logical"
-  note: |
-    It starts with the terminator “Data and/or Service provider” which is the main contact of the national body and ends with the terminators “general public” and “Member States” as
-    receiver of information. In between, the main and side functionalities are described and connected via data flows.
-  elements:
-    - ""
-    - "Access Information"
-    - "Acompanying Documents"
-    - "Compliance Assessment"
-    - "Connection to organisational view and motivational layer"
-    - "Connection to organisational view and motivational layer"
-    - "Data- and/or Service provider(s)"
-    - "Guidline and Timelines"
-    - "Handling Non-Compliance"
-    - "Information"
-    - "Information about SD obligation"
-    - "Information about status"
-    - "Manage Requests"
-    - "Manage Stakeholder List"
-    - "Management of Self Declaration"
-    - "Member States"
-    - "National Access Point(s)"
-    - "Provide Information"
-    - "Provide NB support"
-    - "Provide Relevant Information"
-    - "Provide general Information"
-    - "Provides Self declaration form"
-    - "Provision of Information"
-    - "Receive Information"
-    - "Receive Self-Declaration"
-    - "Reporting of self declaration and compliance assessment results"
-    - "Request Data"
-    - "Request Self Declaration"
-    - "Request Self Declaration"
-    - "Request Status of SD"
-    - "Request for providing Information"
-    - "Request general Information"
-    - "Request relevant SD information"
-    - "Request stakeholder"
-    - "Results Compliance Assessment Store"
-    - "SD Details"
-    - "Self Declaration Journal"
-    - "Self Declaration status"
-    - "Self Declarations"
-    - "Send Report"
-    - "Stakeholder List"
-    - "Status Details SD"
-    - "Status Update"
-    - "Status of CA"
-    - "Status of SD"
-    - "Status of request"
-    - "Status of requested SD"
-    - "Store CA result"
-    - "Store Self Declaration"
-    - "Store Stakeholder Information"
-    - "Store registered SD in Storage"
-    - "Stores changed Self Declaration"
-    - "Template for national reporting"
-    - "Update Journal Information"
-    - "Validation Results"
-    - "Validation of Completness"
-    - "general Public"
-    - "general requests"
-    - "receivs relevant SD information"
-    - "status of CA"
 - name: "03 NB Organisational View"
   guid: "{5EBBFBEF-A20E-41b1-9B2D-87761D987CC5}"
-  package: "National Body Reference Architecture/03 NB Organisational View"
+  package: "National Body Reference Architecture/NB Organisational View"
   type: "Logical"
   note: |
-    The Organisational View shows the legal framework between the involved Roles (turquoise boxes) by using Agreements (oval orange items) and referencing official specifications (light blue boxes)
+    The Organisational View shows the legal framework between the involved roles (turquoise boxes) by using agreements (oval orange items) and referencing official specifications (light blue boxes)
   elements:
     - ""
-    - "Compliance Assement"
+    - "Compliance Assessment"
     - "Data or Service Provider"
-    - "Delegated Reguation"
-    - "European Commision"
+    - "Delegated Regulation"
+    - "European Commission"
     - "ITS directive 2010/EU/40"
     - "Member State"
     - "National Access Point"
     - "National Body / Competent Authority"
     - "National Law or Contract MS - NAP"
     - "National Law or Contract MS - NB"
-    - "Self Declaration"
+    - "Self-declaration"
     - "Template for EU reporting"
-    - "Template for Self Declaration"
-    - "Template for compliance Assessment"
+    - "Template for compliance assessment"
     - "Template for national reporting"
-- name: "05 NB Communication View"
-  guid: "{D7F57B7E-40DC-49d3-B8FC-936DAD0D0DF2}"
-  package: "National Body Reference Architecture/05 NB Communication View"
-  type: "Logical"
-  note: |
-    Todo:
-    
-    The Communication View contains the well defined and in NAPCORE harmonized processes and communication structures.
-  elements:
-    - ""
-    - ""
-    - ""
-    - ""
-    - "Procedure for dealing with non-compliance"
-    - "Receiving and processing a self-declaration"
-- name: "Compliance assesment"
-  guid: "{0175F026-9952-4588-ACAF-6DA60158B79A}"
-  package: "National Body Reference Architecture/05 NB Communication View/Compliance assesment"
-  type: "Logical"
-  note: |
-    Tpdo Description
-    
-    Compliance assessment includes random inspection
-    
-    
-    What impact do we expect from Random Inspections?
-    Agreed answer: Make organisations make necessary changes to their (meta)data and improve the
-    quality of the NAPs
-  elements:
-    - ""
-    - ""
-    - ""
-    - "Data or Service Provider"
-    - "NB Updates documentation and registration of assessment results and carried out random inspections"
-    - "NB determines the verdict of compliance assement"
-    - "NB indicates non-compliance"
-    - "NB informs the Service or Data provider"
-    - "NB may recieves feedback from the Service or Data provider"
-    - "NB performing content assesment"
-    - "NB performing theoretical inspection"
-    - "NB reacting on feedback"
-    - "National Body / Competent Authority"
-    - "Provission of relevant information"
-    - "Random Selection Process"
-    - "Reception of actualised and necessary information"
-    - "Requesting necessary information from Data and Service Provider"
-    - "Select set of Self-Declaration for random selection"
-    - "Service or Data provider may appeal the decision according to national laws, regulations and/or procedures"
-    - "Service or Data provider receives assessment results"
-- name: "Non Compliance Process"
-  guid: "{B8249934-8794-40bc-9887-8DCADA8ADD60}"
-  package: "National Body Reference Architecture/05 NB Communication View/Non Compliance Process"
-  type: "Logical"
-  note: |
-    todo:
-    Description
-  elements:
-    - ""
-    - ""
-    - ""
-    - "Administrative decision on non-compliance and the consequences of non-compliance"
-    - "Data or Service Provider"
-    - "Identify actions available for the national body to address non-compliance"
-    - "Identify non-compliance to individual articles of"
-    - "Identify objectives of the applicable delegated act or the ITS directive affected by non-compliance"
-    - "Initiate the Actions prescribed in the decision on non-compliance and consequences of non-compliance"
-    - "May appeals result"
-    - "National Body / Competent Authority"
-    - "Process appeals made by"
-    - "Receives administrative decision on non-compliance"
-    - "Select actions which are proportional to the objectives when applied individually or as a package"
-    - "Select the action or a combination of Actions which best corresponds to the objectives of the delegated act and the ITS directive"
-- name: "Self Declaration reception process"
-  guid: "{0FEED0F3-BE76-4071-A61B-9421EE88B5C0}"
-  package: "National Body Reference Architecture/05 NB Communication View/Self Declaration Receiving Process"
-  type: "Logical"
-  note: |
-    Member State shall designate an impartial and independent NB/CA and make sure that this NB/CA is properly authorised, according to national regulations, to receive and process
-    self-declarations. The NB/CA will need the following preparation before being ready to receive self-declarations:· Identify and organise resources for receiving and processing self-
-    declarations and for performing compliance assessment and random inspections. · Develop an internal process for receiving and processing self-declarations, taking into account
-    both European regulation and contextual factors present in the Member State such as the number of service or data providers expected to submit a self-declaration and national
-    administrative law.
-    Develop a plan on how to identify data and service providers covered by the delegated regulation and how the NB/CA will approach the stakeholders. Provide national templates
-    for self-declarations and accompanying documents.· Compile Member State specific instructions for data and service providers on how to fill in and submit a self-declaration and
-    related accompanying documents. After the NB/CA has been nominated and necessary preparations have been carried out, it will provide information to potential data and service
-    providers on their obligation to submit a self-declaration and provide instructions on how to fill in and submit a self-declaration. The NB/CA may inform the stakeholders with
-    different methods such as email campaigns, sending letters, publishing information on the NAP website or arranging workshops. To identify the relevant actors obligated to submit
-    a self-declaration, the NB/CA may use procedures specific to its Member State. These may include e.g., utilisation of the contacts of the NAP operator. Good knowledge of the
-    national mobility landscape is required to identify the stakeholders potentially having an obligation to submit a self-declaration. To increase its knowledge and to build a more
-    complete picture of the mobility landscape, the NB/CA may collaborate with local or regional transport authorities. When exchanging information between authorities, GDPR
-    compliance is necessary. After being contacted by the NB/CA, the data or service provider submits a data set or service to the National Access Point (NAP), international access
-    point or content access point as required by the applicable delegated regulation. After submitting the service or data set, the provider fills in and submits the self-declaration form
-    to the NB/CA. This can take place either electronically (i.e., by email or by indicating compliance via a checkbox) or in paper form. The processing of a self-declaration form starts
-    with verification of the contact details of the data or service provider and checking whether the NB/CA is responsible and acknowledged for the respective delegated regulation. In
-    case of incomplete or inconsistent contact details, the NB/CA may request the data or service provider to update its contact details. If the stakeholder does not provide the missing
-    contact details or does not correct erroneous contact details, the NB/CA may stop processing the self-declaration. After verification of contact details, the NB/CA verifies the
-    completeness of the self-declaration. In practice, this means checking that all mandatory fields of the self-declaration form have been filled in, and all required accompanying
-    documents have been provided. If needed, the NB/CA may request the data or service provider to update the self-declaration and complete the missing parts. After a complete self-
-    declaration has been received, the NB/CA can provide an acknowledgement to the data or service provider. After receiving and processing the self-declaration, the NB/CA might
-    update the results to a registry/database (which is not compulsory) of processed self-declarations. At the same time, the NB/CA may also update the registry of compliant services
-    and data sets (optional), if it has been established in the Member State. Contents of these registries will be the basis for periodic reporting related to the ITS Directive and delegated
-    regulations in the Member State and at the European level. The random inspections that are carried out periodically at pre-determined intervals also check the collected self-
-    declarations and descriptions of compliant services and data sets. In the following figures, digital map producers and broadcasters are included in “data or
-    service provider
-  elements:
-    - ""
-    - ""
-    - ""
-    - "Check completness of the handed in self declaration"
-    - "Correction of Self declaration"
-    - "Data or Service Provider"
-    - "Fill in harmonized NAPCORE self declaration form"
-    - "Fulfilling National Body activities and reliabilities according to ITS directive 2010/EU/40"
-    - "Hosting Meta Data of service or data set"
-    - "National Access Point"
-    - "National Body / Competent Authority"
-    - "Processing feedback of self declaration"
-    - "Provides information for potential applicants"
-    - "Publish information about service and data set"
-    - "Receiving feedback about the status, correctness and time line"
-    - "Receiving updated self declaration"
-    - "Submit NAPCORE self declaration form"
-    - "Submits service or data set description to national access point"
-    - "The NB is checking contact details of service and data provider"
-    - "The NB is receiving the Self declaration"
-    - "has to maybe correct contact details"
-    - "is receiving information about a DR relevant service or data set"
+    - "Template for self-declaration"
 - name: "Self Declaration State Diagram"
   guid: "{16945DA1-4A45-4e1d-8799-0F90BD77D64F}"
   package: "National Body Reference Architecture/Supplements"
   type: "Logical"
   note: ""
   elements:
-    - "Accepted and stored SelfDeclaration"
+    - "Accepted and stored self-declaration"
     - "Compliance Assement process states"
     - "Non Compliance Process"
     - "Not Accepted SD"
@@ -8433,10 +8454,10 @@
     - "SD within Completness Check"
     - "SD within contact check procedure"
     - "Self Declaration Reception Process"
-    - "Self Declaration is within Non-Compliance process"
-    - "Self Declaration valid and stored"
-    - "Self Declaration within comliance assement process"
-    - "Submitted Draft Self Declaration"
+    - "Self-declaration is within Non-Compliance process"
+    - "Self-declaration valid and stored"
+    - "Self-declaration within comliance assement process"
+    - "Submitted Draft self-declaration"
 - name: "Test Package"
   guid: "{BCEC6B8F-B900-48db-BF22-50F1DFC42C06}"
   package: "Test Package"

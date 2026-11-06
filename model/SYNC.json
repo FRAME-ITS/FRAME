@@ -1,0 +1,10 @@
+{
+  "sha256": "1055def650a601c7ab938ceb946cee957e430cc13a1be18adbafc4b2f4d61333",
+  "size": 33796096,
+  "elements": 5665,
+  "direction": "SharePoint -> git",
+  "synced_at": "2026-11-06T18:42:35+00:00",
+  "sharepoint_version": "2026-03-26",
+  "author": "FRAME Maintainers (SharePoint)",
+  "message": "Working model 5.3-dev from SharePoint"
+}

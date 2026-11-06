@@ -1,4 +1,4 @@
-package: "National Body Reference Architecture/05 NB Communication View/Compliance assesment"
+package: "National Body Reference Architecture/NB Communication View/Compliance assessment"
 guid: "{C4D62817-B564-4fbd-BD40-E5AAAABB07FC}"
 alias: ""
 version: "1.0"
@@ -26,13 +26,3 @@ elements:
     version: "1.0"
     order: 0
     note: ""
-  - name: "NB indicates non-compliance"
-    guid: "{1235A3AD-9772-47a0-A8E7-96CD366C65C9}"
-    type: "Activity"
-    stereotype: "FRAME_ITS_Service_Process"
-    status: "Proposed"
-    version: "1.0"
-    order: 0
-    note: ""
-    links:
-      - "Dependency → Identify non-compliance to individual articles of"  # {78E7A331-F047-43a4-879D-2F32E3F36069} → {0B142C7E-8FB3-4b74-B4FA-E7FE2D238380}
