@@ -42,3 +42,9 @@ Agreed by the git maintainer. Script: `tools/fixes/2026-11-06_direct_fixes.py` (
 - FRAME_Interface1
 - FRAME_Data_Object1
 - FRAME_Physical_Data_Flow1
+
+## Show Freight Transport in the FRAME Context Diagram (#91)
+
+- «IN» Freight Transport → From Freight Transport
+- «OUT» To Freight Transport → Freight Transport
+- Freight Transport placed in the FRAME Context Diagram

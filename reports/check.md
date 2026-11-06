@@ -1,11 +1,10 @@
 # Model check – FRAME.qea
 
-**39 errors, 63 warnings**
+**39 errors, 62 warnings**
 
 | Rule | Related issue | Errors | Warnings |
 |---|---|---|---|
 | componentof | #80, #81 | 8 | 42 |
-| context-diagram | #91 | 0 | 1 |
 | duplicate |  | 0 | 2 |
 | function-flows |  | 0 | 1 |
 | in-out | #69 | 28 | 0 |
@@ -115,12 +114,6 @@
 - «component of» High_Level_Function **F9.5 Manage Interurban Urban Traffic Zones** (C-ITS Reference Architecture) → F9.5.7 (Low_Level_Function) runs whole → part
 - «component of» High_Level_Function **F9.5 Manage Interurban Urban Traffic Zones** (C-ITS Reference Architecture) → F9.5.8 (Low_Level_Function) runs whole → part
 - «component of» High_Level_Function **F9.6 - Future messages and C-ITS services** (C-ITS Reference Architecture) → F9.6.1 (Low_Level_Function) runs whole → part
-
-</details>
-
-<details><summary><b>context-diagram</b> (1)</summary>
-
-- Terminator **Freight Transport** (Frame Repository) has high-level data flows but is not in the FRAME Context Diagram
 
 </details>
 

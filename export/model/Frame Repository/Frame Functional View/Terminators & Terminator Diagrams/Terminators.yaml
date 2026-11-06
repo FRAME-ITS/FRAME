@@ -1259,6 +1259,7 @@ elements:
       
       Mnemonic: ft
     links:
+      - "Association «IN» → From Freight Transport"  # {2E0DD328-FDF3-4AC9-A1AC-D0E97DFE28AA} → {C66A4E77-3D47-4827-BE69-9C59396BF77E}
       - "Association «IN» → fft-mffo_inputs"  # {8B97E3E2-43FA-40f7-96B3-D15B3941CB2B} → {5AD13A9F-99E7-42bd-A30B-528626A5B517}
       - "Association «IN» → fft-pscs_inputs"  # {ADC1A9F2-0776-45b4-B9B1-982A005D5FED} → {C6A1E7B1-F11F-4d4b-8B01-62D9EB8ABC44}
       - "Association «IN» → fft-pshvs_inputs"  # {E5633722-DD78-4e29-9146-398B7F25F908} → {2CFEE8C6-E95A-4174-963F-F0E3C2DC2946}
