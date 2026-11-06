@@ -71,6 +71,8 @@ def main():
     sp_changed = sp_hash != last
     git_changed = git_hash != last
     if a.action == 'status':
+        if not last:
+            print('no synchronisation recorded yet (model/SYNC.json missing) – the first import starts the record'); return
         print(f'last sync      : {s.get("synced_at", "never")} ({s.get("direction", "-")}, SharePoint version {s.get("sharepoint_version", "?")})')
         print(f'SharePoint file: {"CHANGED since last sync" if sp_changed else "unchanged"}')
         print(f'git model      : {"CHANGED since last sync" if git_changed else "unchanged"}')
