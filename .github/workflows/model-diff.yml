@@ -21,7 +21,7 @@ jobs:
           python-version: '3.12'
       - name: Fetch LFS objects of the base
         if: github.event_name == 'pull_request'
-        run: git lfs fetch origin ${{ github.base_ref }}
+        run: git lfs fetch origin "origin/${{ github.base_ref }}"   # after checkout the base exists only as a remote-tracking ref
       - name: Check conventions
         run: python tools/check.py model/FRAME.qea check.md
       - name: Change report (pull request)
