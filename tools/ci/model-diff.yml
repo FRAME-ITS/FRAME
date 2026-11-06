@@ -1,0 +1,50 @@
+name: model-diff
+# Posts a model change report and the convention check to every pull request that changes the model.
+on:
+  pull_request:
+    paths: ['model/**']
+  push:
+    tags: ['v*']
+permissions:
+  contents: read
+  pull-requests: write
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Fetch LFS objects of the base
+        if: github.event_name == 'pull_request'
+        run: git lfs fetch origin ${{ github.base_ref }}
+      - name: Check conventions
+        run: python tools/check.py model/FRAME.qea check.md
+      - name: Change report (pull request)
+        if: github.event_name == 'pull_request'
+        run: python tools/diff.py --git origin/${{ github.base_ref }} HEAD diff.md
+      - name: Change report (tag)
+        if: startsWith(github.ref, 'refs/tags/')
+        run: |
+          prev=$(git describe --tags --abbrev=0 "${GITHUB_REF_NAME}^" 2>/dev/null || true)
+          if [ -n "$prev" ]; then python tools/diff.py --git "$prev" "$GITHUB_REF_NAME" diff.md; else echo "first tag" > diff.md; fi
+      - name: Post report to the pull request
+        if: github.event_name == 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          { echo "<!-- model-report -->"; head -c 60000 diff.md; echo; echo "---"; head -c 50000 check.md; } > comment.md
+          id=$(gh api repos/${{ github.repository }}/issues/${{ github.event.pull_request.number }}/comments \
+               --jq '.[] | select(.body | startswith("<!-- model-report -->")) | .id' | head -1)
+          if [ -n "$id" ]; then gh api -X PATCH repos/${{ github.repository }}/issues/comments/$id -F body=@comment.md >/dev/null;
+          else gh pr comment ${{ github.event.pull_request.number }} --body-file comment.md; fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: model-report
+          path: |
+            diff.md
+            check.md

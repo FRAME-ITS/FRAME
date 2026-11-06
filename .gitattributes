@@ -1,0 +1,7 @@
+# Enterprise Architect model: Git LFS, lockable (only one editor at a time)
+model/*.qea   filter=lfs diff=lfs merge=lfs -text lockable
+# Text exports and tools: always LF, so diffs are identical on Windows and Linux
+export/**     text eol=lf
+tools/**      text eol=lf
+reports/**    text eol=lf
+model/SYNC.json text eol=lf

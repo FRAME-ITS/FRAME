@@ -17,6 +17,13 @@ The purpose of FRAME has always been to provide:
 
 Development of the FRAME Architecture and the FRAME Toolbox continues, and this repository is the central place for issues, drafts, and releases.
 
+## 🧩 Model, tools and history
+
+The FRAME Architecture Tool model is kept in `model/FRAME.qea` (Git LFS) with a readable YAML export in `export/`.
+Every model change is a commit; releases are tags (`v5.2.0`, …). Change reports and the convention check are produced by
+the tools in `tools/`. How the Maintainers edit the model in SharePoint and how it is synchronised with this repository
+is described in [MODEL_WORKFLOW.md](MODEL_WORKFLOW.md).
+
 ## 📁 Repository Structure
 
 The repository follows a clear structure to separate **stable releases** from **ongoing development**:
