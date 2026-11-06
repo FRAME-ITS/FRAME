@@ -716,7 +716,7 @@ elements:
       - "Aggregation «component of» → From Driver"  # {B214DB91-4391-4ef3-B1E6-E5FE64D974EE} → {7590C1C5-F94F-4929-8D0C-1EAFBB19AA51}
       - "Aggregation «component of» → fd-pshvs_inputs"  # {AE7D39D4-A373-4686-B5A6-D98EBE0D6869} → {0D7AFA79-BED7-4dc2-AB11-FAAC4615F7A3}
       - "Association «OUT» → F5.14 Provide In-vehicle Trip Planning & Implementation"  # {12E125E1-DB23-48cd-96DA-4822666F0BFE} → {CD0DD7C8-43B3-4a5b-8DD2-AA6DEA02907E}
-  - name: "fes-psef_iputs"
+  - name: "fes-psef_inputs"
     guid: "{B3A98968-71B0-4944-9F49-8FC9CBC8E6FE}"
     type: "Interface"
     stereotype: "FRAME_High_Level_Data_Flow"

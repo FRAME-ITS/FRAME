@@ -1,6 +1,6 @@
 # Model check – FRAME.qea
 
-**3 errors, 62 warnings**
+**3 errors, 61 warnings**
 
 | Rule | Related issue | Errors | Warnings |
 |---|---|---|---|
@@ -8,7 +8,6 @@
 | duplicate |  | 0 | 2 |
 | function-flows |  | 0 | 1 |
 | servedby |  | 3 | 5 |
-| stereotype-spelling | #86 | 0 | 1 |
 | unused-flow | #76 | 0 | 11 |
 
 ## Errors
@@ -93,15 +92,9 @@
 
 </details>
 
-<details><summary><b>stereotype-spelling</b> (1)</summary>
-
-- connector stereotype written in 2 ways: «belongs to» 871×, «belongsto» 1×
-
-</details>
-
 <details><summary><b>unused-flow</b> (11)</summary>
 
-- High_Level_Data_Flow **fes-psef_iputs** (Frame Repository) is not shown in any diagram
+- High_Level_Data_Flow **fes-psef_inputs** (Frame Repository) is not shown in any diagram
 - High_Level_Data_Flow **mpto_route_data_for_planning_&_reports** (Frame Repository) is not shown in any diagram
 - High_Level_Data_Flow **mpto_service_&_scheduling_data** (Frame Repository) is not shown in any diagram
 - High_Level_Data_Flow **tes-psef_outputs** (Frame Repository) is not shown in any diagram

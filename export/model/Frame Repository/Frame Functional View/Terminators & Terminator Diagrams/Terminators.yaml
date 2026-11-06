@@ -1352,7 +1352,7 @@ elements:
       - "Association «IN» → fes-emergency_progress_report"  # {3813A93A-4C73-432f-A446-BC8FFBBAB2B4} → {6A059B5A-8995-40fb-BF23-66A2F1FCD137}
       - "Association «IN» → fes-emergency_services_information"  # {938CA9F2-AB26-417f-930C-33C4770C070F} → {CC4B1FC6-DB60-4573-8512-4561C910BA2A}
       - "Association «IN» → fes-intervention_answer"  # {5F7630A2-B34F-45dd-BF45-15F27D349DAF} → {2767169F-3845-45cd-89BA-4B3DD03CF911}
-      - "Association «IN» → fes-psef_iputs"  # {373BFB12-F376-4204-988F-4D91A98A54C0} → {B3A98968-71B0-4944-9F49-8FC9CBC8E6FE}
+      - "Association «IN» → fes-psef_inputs"  # {373BFB12-F376-4204-988F-4D91A98A54C0} → {B3A98968-71B0-4944-9F49-8FC9CBC8E6FE}
   - name: "External Service Provider"
     guid: "{73960376-E008-4811-B5BB-B58A1E143730}"
     type: "Class"

@@ -8808,7 +8808,7 @@ elements:
     note: |
       These are applications and services that provide eCall, Enhanced Route Guidance and Navigation, Access Control and Service Continuity.  These User Needs are associated with functions that are expected to use V2V and V2I technologies (Cooperative Systems).
     links:
-      - "Abstraction «belongsto» → 7 Traffic Management"  # {94717F8C-A752-493c-86DC-034AD61D0348} → {91DBA149-E681-4282-B9F3-38EB3F165EDC}
+      - "Association «belongs to» → 7 Traffic Management"  # {94717F8C-A752-493c-86DC-034AD61D0348} → {91DBA149-E681-4282-B9F3-38EB3F165EDC}
   - name: "7.6.1 eCall"
     guid: "{7666E4F1-3422-4773-B87E-ACEB9C665F7E}"
     type: "Requirement"
