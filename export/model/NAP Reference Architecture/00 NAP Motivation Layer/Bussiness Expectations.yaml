@@ -14,7 +14,7 @@ elements:
     note: |
       The National Body expects better and easier access to the content providers and their services (with their description and (observed) qualitative parameters) as they are being promoted through NAP, instead of finding and reaching out to the content consumer separately.
     links:
-      - "Realisation → National Access Point mission statement"  # {FA838D35-1CBC-4abe-8876-BA9487463CB8} → {27C3C5F4-664F-4d48-A554-AF601321B267}
+      - "Association «defines» → National Access Point mission statement"  # {FA838D35-1CBC-4abe-8876-BA9487463CB8} → {27C3C5F4-664F-4d48-A554-AF601321B267}
   - name: "Better data visibility and usability"
     guid: "{A74A1B0F-B29F-4ef3-B785-89BF9BED3ACC}"
     type: "Artifact"
@@ -25,7 +25,7 @@ elements:
     note: |
       Data and Service Providers expect fulfilling obligations stipulated by the ITS Directive and related Delegated Regulations and as side effects  increased visibility of their data by publishing them (or respective metadata) at the NAP and increased usability of their data by adopting EU wide recommended standards and profiles.
     links:
-      - "Realisation → National Access Point mission statement"  # {6B0F8045-5F8C-4b09-8D80-A221CA6ECBFE} → {27C3C5F4-664F-4d48-A554-AF601321B267}
+      - "Association «defines» → National Access Point mission statement"  # {6B0F8045-5F8C-4b09-8D80-A221CA6ECBFE} → {27C3C5F4-664F-4d48-A554-AF601321B267}
   - name: "Better mobility services for citizens"
     guid: "{B1BC2597-7347-4c5e-AD8F-54DD1CD5430C}"
     type: "Artifact"
@@ -36,7 +36,7 @@ elements:
     note: |
       Member State  is the main protagonist in creating and implementing European Policy through the European Parliament and legislature development process. It has similar expectations to the European Commission e.g. more efficient transport and less accidents. It also has expectations targeted to increased use of governmental data as well as data from private parties. Better cross-border traffic management and increased MS cooperation.
     links:
-      - "Realisation → National Access Point mission statement"  # {CB0DE30C-8E17-446c-BFE4-25BCEEACDA49} → {27C3C5F4-664F-4d48-A554-AF601321B267}
+      - "Association «defines» → National Access Point mission statement"  # {CB0DE30C-8E17-446c-BFE4-25BCEEACDA49} → {27C3C5F4-664F-4d48-A554-AF601321B267}
   - name: "Clear set of requirements"
     guid: "{C5BF4F37-E65D-4998-BC18-CF0C0F8F8AF9}"
     type: "Artifact"
@@ -47,7 +47,7 @@ elements:
     note: |
       The NAP Operator is the main facilitator of the data and service exchange between provider and consumer. They expect easy / defined operational and legislative environment lay out by Member States.
     links:
-      - "Realisation → National Access Point mission statement"  # {47AC6C75-5C94-46ba-9FBF-4851D0C0131E} → {27C3C5F4-664F-4d48-A554-AF601321B267}
+      - "Association «defines» → National Access Point mission statement"  # {47AC6C75-5C94-46ba-9FBF-4851D0C0131E} → {27C3C5F4-664F-4d48-A554-AF601321B267}
   - name: "EU-wide coverage and harmonized delivery of ITS services"
     guid: "{40E6AD55-91B5-46d0-97FB-DAD263613E62}"
     type: "Artifact"
@@ -58,7 +58,7 @@ elements:
     note: |
       The European Commission is main policy facilitator, it proposes and implements legislation. The EC expectations are stipulated within the EU mobility strategy documents and are ultimately focused on reducing the environmental impact of European transport and reduction of fatalities and accidents on European roads through facilitation of easy to access EU wide harmonized traffic and travel data exchange.
     links:
-      - "Realisation → National Access Point mission statement"  # {5D16C412-51B0-4b70-8C85-6AC905C0266A} → {27C3C5F4-664F-4d48-A554-AF601321B267}
+      - "Association «defines» → National Access Point mission statement"  # {5D16C412-51B0-4b70-8C85-6AC905C0266A} → {27C3C5F4-664F-4d48-A554-AF601321B267}
   - name: "Easy access to harmonized services"
     guid: "{BC8FFFD0-5AB4-49dc-B949-BEB69CF1D447}"
     type: "Artifact"
@@ -69,4 +69,4 @@ elements:
     note: |
       The Content Consumer expects all mobility data or services accessible online at one place (NAP), uniformly described, and with content aligned by recommended standards and/or relevant profiles.
     links:
-      - "Realisation → National Access Point mission statement"  # {C067FDFF-20B3-44e5-9F7D-7E4E9567AE20} → {27C3C5F4-664F-4d48-A554-AF601321B267}
+      - "Association «defines» → National Access Point mission statement"  # {C067FDFF-20B3-44e5-9F7D-7E4E9567AE20} → {27C3C5F4-664F-4d48-A554-AF601321B267}

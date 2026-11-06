@@ -16,8 +16,8 @@ elements:
     note: |
       ‘service partner’ means a public or private organisation recognised by national authorities, that has a role in the handling of incidents related to an eCall (e.g. road operator, assistance service);
     links:
-      - "Abstraction → Emergency Management System"  # {C36A37DE-7E3D-4584-A910-21301B7FA5DB} → {D587C88C-5E83-4466-8537-3E05E9260E50}
-      - "Usage «Instantiate» → PSAP organisation"  # {222359C1-8FD6-4062-AFA2-49543214CCF4} → {DBADB9C8-A6F4-41da-AB2B-2AC1523AEECC}
+      - "Abstraction «is Type of» → Emergency Management System"  # {C36A37DE-7E3D-4584-A910-21301B7FA5DB} → {D587C88C-5E83-4466-8537-3E05E9260E50}
+      - "Abstraction «is Type of» → PSAP organisation"  # {222359C1-8FD6-4062-AFA2-49543214CCF4} → {DBADB9C8-A6F4-41da-AB2B-2AC1523AEECC}
   - name: "eCall In Vehicle System"
     guid: "{6BD43EDE-C6BB-4b9a-9F42-5E58564320F4}"
     type: "Actor"
@@ -28,8 +28,8 @@ elements:
     note: |
       ‘raw MSD’ means a representation of the transmitted minimum set of data before being presented in an intelligible way to the eCall PSAP operator.
     links:
-      - "Abstraction → Vehicle"  # {7607826E-51D5-4219-96DC-29CA5E8E2574} → {9021465A-4479-4fa8-B8DB-3481C001B9C3}
-      - "Usage «Instantiate» → Vehicle Manufacturior - OEM"  # {C341474C-943B-45fe-A45F-EF75E3B0D6B4} → {0762B970-CBFF-4c6b-AFA6-021812C3AB10}
+      - "Abstraction «is Type of» → Vehicle"  # {7607826E-51D5-4219-96DC-29CA5E8E2574} → {9021465A-4479-4fa8-B8DB-3481C001B9C3}
+      - "Abstraction «is Type of» → Vehicle Manufacturior - OEM"  # {C341474C-943B-45fe-A45F-EF75E3B0D6B4} → {0762B970-CBFF-4c6b-AFA6-021812C3AB10}
   - name: "eCall PSAP Operator"
     guid: "{6C6C2F43-F7FF-479b-A712-DD7400ABAC61}"
     type: "Actor"
@@ -40,9 +40,9 @@ elements:
     note: |
       ‘eCall PSAP operator’ means a person in the eCall PSAP receiving and/or handling the emergency calls;
     links:
-      - "Abstraction → Emergency Management System"  # {735DFDDB-1CB7-4248-96E4-FBE50FCBD3EC} → {D587C88C-5E83-4466-8537-3E05E9260E50}
-      - "Abstraction → Emergency Operator"  # {D6622B12-5E6B-4a7e-9000-B3E246DDE904} → {EE00C1D0-4A96-4dc3-BF48-285261D9BB4D}
-      - "Usage «Instantiate» → PSAP organisation"  # {AE0EBF51-C662-471c-84AA-08251D07C7AC} → {DBADB9C8-A6F4-41da-AB2B-2AC1523AEECC}
+      - "Abstraction «is Type of» → Emergency Management System"  # {735DFDDB-1CB7-4248-96E4-FBE50FCBD3EC} → {D587C88C-5E83-4466-8537-3E05E9260E50}
+      - "Abstraction «is Type of» → Emergency Operator"  # {D6622B12-5E6B-4a7e-9000-B3E246DDE904} → {EE00C1D0-4A96-4dc3-BF48-285261D9BB4D}
+      - "Abstraction «is Type of» → PSAP organisation"  # {AE0EBF51-C662-471c-84AA-08251D07C7AC} → {DBADB9C8-A6F4-41da-AB2B-2AC1523AEECC}
   - name: "eCall transaction"
     guid: "{67CE4961-3F29-4c10-8D52-C5CBEC5BC70D}"
     type: "Actor"
@@ -53,8 +53,8 @@ elements:
     note: |
       ‘eCall transaction’ means the establishment of a mobile wireless communications session across a public wireless communications network and the transmission of a minimum set of data from a vehicle to an eCall PSAP and the establishment of an audio channel between the vehicle and the same eCall PSAP;
     links:
-      - "Abstraction → Communications Operator"  # {7BF3F2BA-CCE7-4ac8-AFA6-ED71EBF7E808} → {8C77C811-FB6A-47f1-9CF1-5F59AEDC881D}
-      - "Usage «Instantiate» → Mobile Network Operators"  # {49169A02-73C3-4c2d-846F-C93AC797F941} → {05CCCCC2-B6E8-4f4b-9ABB-BA3D1828BFD1}
+      - "Abstraction «is Type of» → Communications Operator"  # {7BF3F2BA-CCE7-4ac8-AFA6-ED71EBF7E808} → {8C77C811-FB6A-47f1-9CF1-5F59AEDC881D}
+      - "Abstraction «is Type of» → Mobile Network Operators"  # {49169A02-73C3-4c2d-846F-C93AC797F941} → {05CCCCC2-B6E8-4f4b-9ABB-BA3D1828BFD1}
   - name: "eCall vehicle driver"
     guid: "{C55ED064-85A8-4550-A20C-7DD49679AFF5}"
     type: "Actor"
@@ -65,4 +65,5 @@ elements:
     note: |
       Person who drives a eCall equiped vehicle and interact with the eCall interface.
     links:
-      - "Abstraction → Driver"  # {F3B0D44B-AF68-4cd7-909B-80910680F0CE} → {0C560BF0-702E-48c1-B7F0-69F55BF03556}
+      - "Abstraction «is Type of» → Driver"  # {F3B0D44B-AF68-4cd7-909B-80910680F0CE} → {0C560BF0-702E-48c1-B7F0-69F55BF03556}
+      - "Abstraction «is Type of» → Vehicle Manufacturior - OEM"  # {C682840E-B07F-411c-938F-FA3E9CD85046} → {0762B970-CBFF-4c6b-AFA6-021812C3AB10}

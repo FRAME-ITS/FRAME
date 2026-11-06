@@ -25,6 +25,11 @@ elements:
       	- NAP makes data available at standard interfaces and in machine readable formats
       	- NAP data content is extendable to all ITS-directive domains
       	- NAP does not infringe the rights of the data owner for the use of data but can support the exchange (e.g. by a standardized license, agreed terms and conditions, technical support with a machine-readable interface definition.)
+    links:
+      - "Association «adheres to» → ITS Directive (EU) 2023/2661"  # {52C46008-292B-465e-84B5-FFAD81D36502} → {4FEB9792-F5AB-4f30-A299-4A2EB59732D5}
+      - "Association «adheres to» → ITS directive 2010/EU/40"  # {2D88D7F3-6287-47a2-8722-E0CD82555C76} → {16A6F191-FEAD-43db-A673-B04711F39783}
+      - "Association «adheres to» → Open Data Directive (EU) 2019/1024"  # {8F189725-2190-4684-B413-3CF4A13C4930} → {A47BBEAA-7629-4fb8-A2B9-082D024A3B64}
+      - "Association «has» → Traffic and traveller information"  # {B3DB16B7-F14A-4b8e-8A41-FD0AE12F7882} → {8B164E93-51CD-4297-9892-68CF32915834}
   - name: "ITS Directive (EU) 2023/2661"
     guid: "{4FEB9792-F5AB-4f30-A299-4A2EB59732D5}"
     type: "DeploymentSpecification"
@@ -36,8 +41,6 @@ elements:
       Directive (EU) 2023/2661 of the European Parliament and of the Council of 22 November 2023 amending Directive 2010/40/EU on the framework for the deployment of Intelligent Transport Systems in the field of road transport and for interfaces with other modes of transport
       
       https://eur-lex.europa.eu/legal-content/en/TXT/?uri=CELEX:32023L2661
-    links:
-      - "Usage «Instantiate» → Fulfilling National Access Point obligations according to ITS directive"  # {52C46008-292B-465e-84B5-FFAD81D36502} → {5BC72E89-BADD-4468-8CF6-53736DE6B090}
   - name: "ITS directive 2010/EU/40"
     guid: "{16A6F191-FEAD-43db-A673-B04711F39783}"
     type: "DeploymentSpecification"
@@ -49,8 +52,6 @@ elements:
       Directive 2010/40/EU of the European Parliament and of the Council of 7 July 2010 on the framework for the deployment of Intelligent Transport Systems in the field of road transport and for interfaces with other modes of transport Text with EEA relevance
       
       https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32010L0040
-    links:
-      - "Usage «Instantiate» → Fulfilling National Access Point obligations according to ITS directive"  # {2D88D7F3-6287-47a2-8722-E0CD82555C76} → {5BC72E89-BADD-4468-8CF6-53736DE6B090}
   - name: "National Access Point mission statement"
     guid: "{27C3C5F4-664F-4d48-A554-AF601321B267}"
     type: "Class"
@@ -73,19 +74,17 @@ elements:
       Directive (EU) 2019/1024 of the European Parliament and of the Council of 20 June 2019 on open data and the re-use of public sector information (recast), also known as the **Open Data Directive**, has a clear objective: to strengthen the EU's data economy by promoting open data, stimulating digital innovation, and enhancing the re-use of publicly funded information across the European Union.
       
       https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32019L1024
-    links:
-      - "Usage «Instantiate» → Fulfilling National Access Point obligations according to ITS directive"  # {8F189725-2190-4684-B413-3CF4A13C4930} → {5BC72E89-BADD-4468-8CF6-53736DE6B090}
   - name: "Seamless EU-wide provision of data and services"
     guid: "{BFC9524E-A1D0-415a-9CAA-50D01DACE293}"
     type: "Class"
-    stereotype: "FRAME_Vision"
+    stereotype: "FRAME_ITS_Vision"
     status: "Proposed"
     version: "1.0"
     order: 0
     note: |
       To create a Single European Transport Area, underpinned by a digital layer that interlinks all elements of transport. This digital architecture, built on open and common standards and interfaces, will foster an efficient and secure data ecosystem.
     links:
-      - "Association → National Access Point mission statement"  # {54811E2A-AE2F-4828-BC51-FBAF17CA382B} → {27C3C5F4-664F-4d48-A554-AF601321B267}
+      - "Association «associate» → National Access Point mission statement"  # {54811E2A-AE2F-4828-BC51-FBAF17CA382B} → {27C3C5F4-664F-4d48-A554-AF601321B267}
   - name: "Traffic and traveller information"
     guid: "{8B164E93-51CD-4297-9892-68CF32915834}"
     type: "Artifact"
@@ -111,5 +110,3 @@ elements:
       
       Focus
       Cooperations between roles and Information systems, interfaces and standards to foster regular data exchange.
-    links:
-      - "Usage «Instantiate» → Fulfilling National Access Point obligations according to ITS directive"  # {B3DB16B7-F14A-4b8e-8A41-FD0AE12F7882} → {5BC72E89-BADD-4468-8CF6-53736DE6B090}

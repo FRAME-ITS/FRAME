@@ -19,11 +19,6 @@ elements:
       "Role View": ""
     note: ""
     links:
-      - "Abstraction → Allocate eCall to correct PSAP"  # {F53576E9-D557-47ce-BC23-C3CD4AFEF06B} → {38F667E6-9BCB-40cd-B504-74A5F5C8F2BC}
-      - "Abstraction → Forward eCall to selected PSAP"  # {3639CBB5-8725-43c0-A17A-6F12540258EF} → {F9BAA34B-5B75-4b2e-B1EB-B590140474D9}
-      - "Abstraction → Interface to selected PSAP"  # {C70D4F4D-65EC-4ac8-9945-322E1CF79262} → {968FFA03-232F-4bc9-B2D7-5F04A0DD982A}
-      - "Abstraction → Receive eCall"  # {0F91ED2C-AC69-434c-B0B2-3D626E868172} → {6F84C9AE-1460-4f4b-8497-23E18FE2A0FE}
-      - "Abstraction → Setup active communication link"  # {32C45A5E-C17C-44c3-B6EF-07085A3C3740} → {9363B169-BE2F-4453-B81E-3A92E0110536}
       - "Association → Third Party Service Provider"  # {4707AB6C-BE39-4e08-BFFB-738DEC1D0C58} → {B95642FE-BB74-481c-9923-249609098B53}
       - "Association «accepted by» → Network Usage Contract"  # {77D2DFC3-0C62-4e35-B87E-AF63CA47734A} → {7798C178-BD30-4830-B7D4-16A395506D5F}
       - "Association «accepted by» → eCall Delegated Regulation Mobile Network Systems"  # {36061676-A498-4773-AD44-D77CD5182F8F} → {1B607CF4-214F-469e-A7F0-5327CE16574D}
@@ -104,11 +99,6 @@ elements:
       "Role Value": ""
       "Role View": ""
     note: ""
-    links:
-      - "Abstraction → Create eCall"  # {9F6BF2A4-14FF-4685-96BF-F59A12136B20} → {005DBDE4-8B98-4079-966D-1E1AF39FF583}
-      - "Abstraction → Receive PSAP call"  # {BF932CD7-F960-4b05-A544-10AA7B64F418} → {3DF8FBE7-01B9-4828-94A8-A55708FCFF0F}
-      - "Abstraction → Send eCall"  # {C6CCC75C-B439-45a8-8AFC-4EA9415D021D} → {11602949-A865-409d-9F0C-91D7E21C99F0}
-      - "Abstraction → Trigger eCall"  # {32F5CD4D-91D6-4764-8A15-EEB9AB707F26} → {FF0453B6-2A46-4229-9916-F6C48774C162}
   - name: "eCall Driver"
     guid: "{3DDC8409-8542-4fed-AB8E-1E040CF78302}"
     type: "Object"

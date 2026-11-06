@@ -14,7 +14,7 @@ elements:
     note: ""
     links:
       - "Association → Public Land Mobile Network"  # {AAA7FCFB-7C36-448c-B376-01969AE90510} → {B5308147-42F5-4b91-817C-2BBAFA39A178}
-      - "Usage «Instantiate» → eCall IVS Communication Interface"  # {E606EED3-132F-4762-84C1-15152F4392FF} → {E037AEE6-0F39-4472-87B0-993104DF8C65}
+      - "Association «use» → eCall IVS Communication Interface"  # {E606EED3-132F-4762-84C1-15152F4392FF} → {E037AEE6-0F39-4472-87B0-993104DF8C65}
   - name: "eCall MSD"
     guid: "{A1CFA1A2-AFC7-4848-B368-634C9C2D1590}"
     type: "Interface"
@@ -26,7 +26,7 @@ elements:
       eCall Onboard Unit sends out the eCall Minimum Set of Data (MSD) if the driver pushes the eCall button or a emergency is detected. The eCall MSD is sent to the reachable Mobile Netowork Provider.
     links:
       - "Association → Public Land Mobile Network"  # {1FFA5644-4BF6-42c5-A6DF-AFD3974F4523} → {B5308147-42F5-4b91-817C-2BBAFA39A178}
-      - "Usage «Instantiate» → eCall IVS Communication Interface"  # {B13FA73A-0FEC-4048-96FC-8A7CF268BAD9} → {E037AEE6-0F39-4472-87B0-993104DF8C65}
+      - "Association «use» → eCall IVS Communication Interface"  # {B13FA73A-0FEC-4048-96FC-8A7CF268BAD9} → {E037AEE6-0F39-4472-87B0-993104DF8C65}
   - name: "eCall secured Voice Channel"
     guid: "{70BC610C-D747-478b-8EF1-88FF5CD2639D}"
     type: "Interface"
@@ -36,7 +36,7 @@ elements:
     order: 0
     note: ""
     links:
-      - "Usage «Instantiate» → PSAP Communication Interface"  # {81C6FBF9-F64F-4ba4-9CA2-5D04E5FEAE50} → {8AD07FA3-85A0-40ad-BAD8-97C5667995AE}
+      - "Association «use» → PSAP Communication Interface"  # {81C6FBF9-F64F-4ba4-9CA2-5D04E5FEAE50} → {8AD07FA3-85A0-40ad-BAD8-97C5667995AE}
   - name: "redirected eCall MSD"
     guid: "{E34C9682-9FF3-4339-8DF1-ADCB2DF05B13}"
     type: "Interface"
@@ -48,4 +48,4 @@ elements:
     links:
       - "Association → PSAP eCall Modem Server"  # {EB375194-8F4D-484c-95E0-AA9D6AC51049} → {56CFDFDB-8969-43ad-B329-1CA7CD510A4F}
       - "Association «defines» → Public Land Mobile Network"  # {F895804E-7DEA-42b5-A11B-526E9B33E17D} → {B5308147-42F5-4b91-817C-2BBAFA39A178}
-      - "Usage «Instantiate» → PSAP Communication Interface"  # {4EFD202E-BAD4-41da-9F4D-38C65A566C25} → {8AD07FA3-85A0-40ad-BAD8-97C5667995AE}
+      - "Association «use» → PSAP Communication Interface"  # {4EFD202E-BAD4-41da-9F4D-38C65A566C25} → {8AD07FA3-85A0-40ad-BAD8-97C5667995AE}

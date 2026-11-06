@@ -63,6 +63,7 @@ elements:
       - "Association → Park Operator"  # {A0383F2A-D425-42ec-BE41-F9ACE2F444FC} → {F889E587-63FF-4ed3-A1DA-3B5232BCD976}
       - "Association → Service Provider"  # {98094AC1-5269-4438-9EEF-E915C73B65A3} → {56E95060-70F8-4023-9557-1EE0A92B253B}
       - "Association → User"  # {A2C3681A-523D-4e5b-95E3-3DDE3EB9D5DD} → {9887014B-F428-4c13-82F6-E9513B4B18AB}
+      - "Association «defines» → Member State"  # {77C9CBD1-187C-40a2-A9BF-C21EAF0C2CD0} → {01E62626-859C-49bf-9BE4-453AB23EAA08}
       - "Dependency → "  # {BC65C41E-DADC-4ba0-AEFA-02FA8F7C5C90} → {5611A6C0-4ABC-4fc4-82D8-8902E6C5CCA1}
   - name: "Park Operator"
     guid: "{F889E587-63FF-4ed3-A1DA-3B5232BCD976}"
@@ -84,6 +85,7 @@ elements:
       maintain relations with service provider and nap administrator
     links:
       - "Association «ArchiMate_Association» → NAP Operator (NO)"  # {69B230F7-A7B9-4f3e-9A11-438ABC562FBF} → {234C8914-6D8F-43fd-B3A7-34118A92FBA3}
+      - "Association «defines» → Park Operator"  # {392BD421-7AC9-41a6-A6A3-66703F87A26C} → {298178F1-9F8A-417b-8C32-39AD98C40BEF}
   - name: "Service Provider"
     guid: "{56E95060-70F8-4023-9557-1EE0A92B253B}"
     type: "Object"
@@ -106,6 +108,7 @@ elements:
       - "Association → NAP Operator (NO)"  # {F8C934D1-69A1-4470-A54D-6E13704F39C3} → {234C8914-6D8F-43fd-B3A7-34118A92FBA3}
       - "Association → Park Operator"  # {E18E34C4-ED4B-4076-8C2C-144E68D5EF50} → {F889E587-63FF-4ed3-A1DA-3B5232BCD976}
       - "Association «ArchiMate_Association» → User"  # {741EF9FE-3964-49be-8270-ED80CD62AC22} → {9887014B-F428-4c13-82F6-E9513B4B18AB}
+      - "Association «defines» → Service Provider"  # {84C8E8DD-1739-48d3-B5F4-249508B1B482} → {77671F5E-0E92-443f-B0D1-B5D8C79DBBD8}
   - name: "User"
     guid: "{9887014B-F428-4c13-82F6-E9513B4B18AB}"
     type: "Object"
@@ -119,3 +122,5 @@ elements:
       "Role Value": ""
       "Role View": ""
     note: ""
+    links:
+      - "Association «defines» → User"  # {58B657D0-1249-42ea-B9AE-C57812DCAA5B} → {95ADC0BD-DDDA-435e-8BAB-3481CF87D1C6}

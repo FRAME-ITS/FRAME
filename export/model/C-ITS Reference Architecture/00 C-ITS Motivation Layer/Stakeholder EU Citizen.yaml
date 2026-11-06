@@ -27,7 +27,7 @@ elements:
       
       Reduce energy consumption and driving emissions by enhancing attentive driving
     links:
-      - "Association → C-ITS Enhancing road safety"  # {B67BFE0A-79D4-404e-B6AC-D2C72B116E53} → {6659C076-2560-445f-862A-8829F47486E0}
+      - "Association «defines» → C-ITS Enhancing road safety"  # {B67BFE0A-79D4-404e-B6AC-D2C72B116E53} → {6659C076-2560-445f-862A-8829F47486E0}
   - name: "EU Citizen in one of the member states"
     guid: "{E8695FF6-1351-4508-97CF-980CF0604B41}"
     type: "Actor"

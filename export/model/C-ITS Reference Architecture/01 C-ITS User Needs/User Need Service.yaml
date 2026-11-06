@@ -14,12 +14,12 @@ elements:
     note: |
       Road Safety related services are in user need service 1
     links:
-      - "Abstraction → FRAME_User_Need_Topic1 C-ITS System"  # {6B47F471-5BB5-4da5-B5BB-D74E95D63DE9} → {D06129C3-AA43-483b-85AF-87DB2C48E04C}
-      - "Abstraction → FRAME_User_Need_Topic2 DENM Messages"  # {93677914-8E50-4cb3-8D3F-0264385B4B9B} → {1587EDF5-B476-4260-9601-37050417B274}
-      - "Abstraction → FRAME_User_Need_Topic3 CAM Messages"  # {C7D55375-4443-48da-8375-4355F267168D} → {C56A9710-EDCF-4768-8784-867E07406042}
-      - "Abstraction → FRAME_User_Need_Topic4 IVIM Messages"  # {0930B2BA-23A4-434b-AF6F-C8302543154B} → {857CA053-1A9D-4a23-9E1B-0AFA0A439BC4}
-      - "Abstraction → FRAME_User_Need_Topic5 SPAT/MAP Messages"  # {E07BD5D9-119C-4d05-B1E3-5F266C2D3D2D} → {E1094F3C-7DD4-43f9-AFC2-3010DD9A5DF0}
       - "Abstraction → FRAME_User_Needs topic 6 Future Message"  # {74AE77B4-DC3B-45a4-95EC-ABDE52811473} → {F581827D-6BA9-49fd-AE76-72404E2157D4}
+      - "Association «belongs to» → FRAME_User_Need_Topic1 C-ITS System"  # {6B47F471-5BB5-4da5-B5BB-D74E95D63DE9} → {D06129C3-AA43-483b-85AF-87DB2C48E04C}
+      - "Association «belongs to» → FRAME_User_Need_Topic2 DENM Messages"  # {93677914-8E50-4cb3-8D3F-0264385B4B9B} → {1587EDF5-B476-4260-9601-37050417B274}
+      - "Association «belongs to» → FRAME_User_Need_Topic3 CAM Messages"  # {C7D55375-4443-48da-8375-4355F267168D} → {C56A9710-EDCF-4768-8784-867E07406042}
+      - "Association «belongs to» → FRAME_User_Need_Topic4 IVIM Messages"  # {0930B2BA-23A4-434b-AF6F-C8302543154B} → {857CA053-1A9D-4a23-9E1B-0AFA0A439BC4}
+      - "Association «belongs to» → FRAME_User_Need_Topic5 SPAT/MAP Messages"  # {E07BD5D9-119C-4d05-B1E3-5F266C2D3D2D} → {E1094F3C-7DD4-43f9-AFC2-3010DD9A5DF0}
   - name: "FRAME_User_Need_Service 2 Traffic Efficiency"
     guid: "{480CC652-2B60-4e73-A110-454CC58841CD}"
     type: "Requirement"
@@ -30,12 +30,12 @@ elements:
     note: |
       Traffic Efficiency related services are in User need service 2
     links:
-      - "Abstraction → FRAME_User_Need_Topic1 C-ITS System"  # {AA08E472-F2E7-4fc3-8A38-4E91CC1B1813} → {D06129C3-AA43-483b-85AF-87DB2C48E04C}
-      - "Abstraction → FRAME_User_Need_Topic2 DENM Messages"  # {44F6E389-1B58-4464-BA72-A6A5E2FFE1F9} → {1587EDF5-B476-4260-9601-37050417B274}
-      - "Abstraction → FRAME_User_Need_Topic3 CAM Messages"  # {255C5A16-E57B-41da-8736-B2C059EFED8F} → {C56A9710-EDCF-4768-8784-867E07406042}
-      - "Abstraction → FRAME_User_Need_Topic4 IVIM Messages"  # {C645303E-5450-43a6-BA82-A96C08CF755D} → {857CA053-1A9D-4a23-9E1B-0AFA0A439BC4}
-      - "Abstraction → FRAME_User_Need_Topic5 SPAT/MAP Messages"  # {6D816550-4731-4669-93A6-CA4CC82EA256} → {E1094F3C-7DD4-43f9-AFC2-3010DD9A5DF0}
       - "Abstraction → FRAME_User_Needs topic 6 Future Message"  # {0DCF0906-B6D4-41bd-8CC5-4EDABAEFA0F4} → {F581827D-6BA9-49fd-AE76-72404E2157D4}
+      - "Association «belongs to» → FRAME_User_Need_Topic1 C-ITS System"  # {AA08E472-F2E7-4fc3-8A38-4E91CC1B1813} → {D06129C3-AA43-483b-85AF-87DB2C48E04C}
+      - "Association «belongs to» → FRAME_User_Need_Topic2 DENM Messages"  # {44F6E389-1B58-4464-BA72-A6A5E2FFE1F9} → {1587EDF5-B476-4260-9601-37050417B274}
+      - "Association «belongs to» → FRAME_User_Need_Topic3 CAM Messages"  # {255C5A16-E57B-41da-8736-B2C059EFED8F} → {C56A9710-EDCF-4768-8784-867E07406042}
+      - "Association «belongs to» → FRAME_User_Need_Topic4 IVIM Messages"  # {C645303E-5450-43a6-BA82-A96C08CF755D} → {857CA053-1A9D-4a23-9E1B-0AFA0A439BC4}
+      - "Association «belongs to» → FRAME_User_Need_Topic5 SPAT/MAP Messages"  # {6D816550-4731-4669-93A6-CA4CC82EA256} → {E1094F3C-7DD4-43f9-AFC2-3010DD9A5DF0}
   - name: "FRAME_User_Need_Service 3 Driving Comfort"
     guid: "{10E16CB6-028A-4e5c-9528-B7DFC84CB6BE}"
     type: "Requirement"
@@ -47,7 +47,4 @@ elements:
     note: |
       Driving Comfort related services are in User need service 3
     links:
-      - "Abstraction → FRAME_User_Need_Topic1 C-ITS System"  # {1ECC10B7-2337-4d97-925D-781BE929CC27} → {D06129C3-AA43-483b-85AF-87DB2C48E04C}
-      - "Abstraction → FRAME_User_Need_Topic4 IVIM Messages"  # {E4CB896F-B0AA-4c05-A6C2-2A039B8DB580} → {857CA053-1A9D-4a23-9E1B-0AFA0A439BC4}
-      - "Abstraction → FRAME_User_Need_Topic5 SPAT/MAP Messages"  # {0B05B657-DEFA-4cf8-8612-A6AB717A2158} → {E1094F3C-7DD4-43f9-AFC2-3010DD9A5DF0}
       - "Abstraction → FRAME_User_Needs topic 6 Future Message"  # {BB438E9D-0AA5-40b0-BA72-DF6FACB5A417} → {F581827D-6BA9-49fd-AE76-72404E2157D4}

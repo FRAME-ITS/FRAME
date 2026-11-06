@@ -1705,6 +1705,7 @@ elements:
       - "Association «IN» → ftrfc-vehicle_approaching_urban_zone"  # {06C252E1-F458-43bb-8159-9EDD41A5021A} → {7384E254-A72C-4361-AF89-FF8484B90004}
       - "Association «IN» → ftrfc-vehicle_entering_inter-urban_zone"  # {9FE31B81-60E6-416e-AD9F-B556AA1E6D90} → {0007863D-9CAB-4e75-85B8-1DEAF3CEAD13}
       - "Association «IN» → ftrfc-vehicle_entering_urban_zone"  # {CA10C3E3-36A7-4757-BAC8-1A44AD89E67D} → {DD473A09-23B5-448f-BA42-0EAAFE291541}
+      - "Association «defines» → Park Area Monitoring Application"  # {6043FF0C-2AD7-464f-A8C7-1C2DE377A961} → {CA900076-ABDD-4e6b-82A3-087F8825C88B}
   - name: "Transport Planner"
     guid: "{3F15E9CE-9FDB-44df-B977-5E140B660C93}"
     type: "Class"

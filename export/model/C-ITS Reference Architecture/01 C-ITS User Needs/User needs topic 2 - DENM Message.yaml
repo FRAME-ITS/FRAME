@@ -47,19 +47,6 @@ elements:
       4 - IVIM related
       5 - SPAT/MAP related
       6 -for future messages to be defined
-    links:
-      - "Abstraction → 11.1.2.1"  # {79E8EA6B-1D8A-42e0-A02D-5B067278DAFB} → {E7DEED82-A5C1-4893-9C19-57850FD37F02}
-      - "Abstraction → 11.1.2.1"  # {957EF3BD-B1D7-4ed6-A14D-B3DADB3029FD} → {E7DEED82-A5C1-4893-9C19-57850FD37F02}
-      - "Abstraction → 11.1.2.10"  # {29F4377E-2E62-425e-A2AB-29031A755ADD} → {FE2AEAA8-D6FD-4e83-BD90-F8734D28393C}
-      - "Abstraction → 11.1.2.11"  # {7DA6493B-B12E-4305-8E05-3A6C45AC9936} → {1466AFAE-1EDF-4934-91D5-A0A822B57402}
-      - "Abstraction → 11.1.2.2"  # {B76317A5-17CB-4ee6-8E76-10A32F574669} → {ECBE2EB5-0BC8-4414-A2A8-ED70C75AC56A}
-      - "Abstraction → 11.1.2.3"  # {19E66973-3305-4390-97DB-C5CA68A72952} → {F83CC4AC-FBB2-428b-B7DE-D733F23713AE}
-      - "Abstraction → 11.1.2.4"  # {5B641E26-1CE3-4f62-B0BE-E21980301742} → {10B39FFC-D82F-4ce9-B8FE-0CC57DC0F250}
-      - "Abstraction → 11.1.2.5"  # {2C6E1510-9038-42bd-9CCD-BA990F54F3BF} → {A3B828A5-AB0A-46ae-B81B-D13AF78204E3}
-      - "Abstraction → 11.1.2.6"  # {9220F914-4267-4588-981D-E7283DA7BFC4} → {2363668B-9537-4a53-99DE-58596F53F705}
-      - "Abstraction → 11.1.2.7"  # {72E2F6F3-C8FB-42ac-A37D-6770AEF7DD78} → {4B6D14AF-63AB-49fb-8C5E-58FCF8E79CFF}
-      - "Abstraction → 11.1.2.8"  # {E95D2BEC-CEDE-407f-9EE7-18A6BA441762} → {3EB194FA-6F40-4129-B783-9759C359E752}
-      - "Abstraction → 11.1.2.9"  # {1F9D2ACA-5383-4274-9176-B8A8AFA87EC9} → {9BDD1FB0-FAD1-4afb-AAB1-42F6C1B6E6ED}
   - name: "11.1.2.1"
     guid: "{E7DEED82-A5C1-4893-9C19-57850FD37F02}"
     type: "Requirement"
@@ -70,6 +57,8 @@ elements:
     order: 2
     note: |
       The system shall prevent that the attention of the driver can fade with regular or longer road works.
+    links:
+      - "Association «belongs to» → FRAME_User_Need_Topic2 DENM Messages"  # {957EF3BD-B1D7-4ed6-A14D-B3DADB3029FD} → {1587EDF5-B476-4260-9601-37050417B274}
   - name: "11.1.2.2"
     guid: "{ECBE2EB5-0BC8-4414-A2A8-ED70C75AC56A}"
     type: "Requirement"
@@ -80,6 +69,8 @@ elements:
     order: 3
     note: |
       For DENM based use cases involving road operator vehicles the System shall support the safety of the involved road operators and road users. (The road operator vehicles may be salting, ploughing, bypassing towards incidents, protecting an accident zone, or recover a vehicle )
+    links:
+      - "Association «belongs to» → FRAME_User_Need_Topic2 DENM Messages"  # {B76317A5-17CB-4ee6-8E76-10A32F574669} → {1587EDF5-B476-4260-9601-37050417B274}
   - name: "11.1.2.3"
     guid: "{F83CC4AC-FBB2-428b-B7DE-D733F23713AE}"
     type: "Requirement"
@@ -90,6 +81,8 @@ elements:
     order: 4
     note: |
       The system shall enhance more attentive and adjusted driving while approaching and passing a work zone or road operator vehicles in operation by providing in-car information and warnings about road works, changes to the road layout and applicable driving regulations.
+    links:
+      - "Association «belongs to» → FRAME_User_Need_Topic2 DENM Messages"  # {19E66973-3305-4390-97DB-C5CA68A72952} → {1587EDF5-B476-4260-9601-37050417B274}
   - name: "11.1.2.4"
     guid: "{10B39FFC-D82F-4ce9-B8FE-0CC57DC0F250}"
     type: "Requirement"
@@ -100,6 +93,8 @@ elements:
     order: 5
     note: |
       For DENM based use cases of RWW the system shall inform the road user when approaching a work zone and will simultaneously provide information on the changes in the road layout for better traffic flow and less accidents.
+    links:
+      - "Association «belongs to» → FRAME_User_Need_Topic2 DENM Messages"  # {5B641E26-1CE3-4f62-B0BE-E21980301742} → {1587EDF5-B476-4260-9601-37050417B274}
   - name: "11.1.2.5"
     guid: "{A3B828A5-AB0A-46ae-B81B-D13AF78204E3}"
     type: "Requirement"
@@ -110,6 +105,8 @@ elements:
     order: 6
     note: |
       The system shall be able to inform  road users about the closure of lane(s) (without the closure of the entire road).
+    links:
+      - "Association «belongs to» → FRAME_User_Need_Topic2 DENM Messages"  # {2C6E1510-9038-42bd-9CCD-BA990F54F3BF} → {1587EDF5-B476-4260-9601-37050417B274}
   - name: "11.1.2.6"
     guid: "{2363668B-9537-4a53-99DE-58596F53F705}"
     type: "Requirement"
@@ -120,6 +117,8 @@ elements:
     order: 7
     note: |
       The system shall reduce the risk and number of accidents and dangerous situations for road users and workers at RWW sites.
+    links:
+      - "Association «belongs to» → FRAME_User_Need_Topic2 DENM Messages"  # {9220F914-4267-4588-981D-E7283DA7BFC4} → {1587EDF5-B476-4260-9601-37050417B274}
   - name: "11.1.2.7"
     guid: "{4B6D14AF-63AB-49fb-8C5E-58FCF8E79CFF}"
     type: "Requirement"
@@ -130,6 +129,8 @@ elements:
     order: 8
     note: |
       The System shall be applied to Road works equipped with warning beacons / temporary road signs / illuminated lights arrows, on a road with separate carriageways or on a dual carriageway.
+    links:
+      - "Association «belongs to» → FRAME_User_Need_Topic2 DENM Messages"  # {72E2F6F3-C8FB-42ac-A37D-6770AEF7DD78} → {1587EDF5-B476-4260-9601-37050417B274}
   - name: "11.1.2.8"
     guid: "{3EB194FA-6F40-4129-B783-9759C359E752}"
     type: "Requirement"
@@ -143,6 +144,8 @@ elements:
       1.Static planned road works (TOC Triggered):
       2.Stand-Alone Mode:
       3.Augmented (Stand-alone then TOC Triggered):
+    links:
+      - "Association «belongs to» → FRAME_User_Need_Topic2 DENM Messages"  # {E95D2BEC-CEDE-407f-9EE7-18A6BA441762} → {1587EDF5-B476-4260-9601-37050417B274}
   - name: "11.1.2.9"
     guid: "{9BDD1FB0-FAD1-4afb-AAB1-42F6C1B6E6ED}"
     type: "Requirement"
@@ -153,6 +156,8 @@ elements:
     order: 10
     note: |
       The system shall be able to interact with other copies of the same traffic event message and provide consistent information about the same road works event.
+    links:
+      - "Association «belongs to» → FRAME_User_Need_Topic2 DENM Messages"  # {1F9D2ACA-5383-4274-9176-B8A8AFA87EC9} → {1587EDF5-B476-4260-9601-37050417B274}
   - name: "11.1.2.10"
     guid: "{FE2AEAA8-D6FD-4e83-BD90-F8734D28393C}"
     type: "Requirement"
@@ -162,6 +167,8 @@ elements:
     order: 11
     note: |
       For DENM based use cases of RWW the system shall enable the Traffic Manager to send applicable and valid traffic messages for all types  of roads and to all relevant vehicles.
+    links:
+      - "Association «belongs to» → FRAME_User_Need_Topic2 DENM Messages"  # {29F4377E-2E62-425e-A2AB-29031A755ADD} → {1587EDF5-B476-4260-9601-37050417B274}
   - name: "11.1.2.11"
     guid: "{1466AFAE-1EDF-4934-91D5-A0A822B57402}"
     type: "Requirement"
@@ -172,3 +179,5 @@ elements:
     order: 58
     note: |
       The system shall inform the road user about a risk of discomfort on the road (slowing down, manoeuvring)
+    links:
+      - "Association «belongs to» → FRAME_User_Need_Topic2 DENM Messages"  # {7DA6493B-B12E-4305-8E05-3A6C45AC9936} → {1587EDF5-B476-4260-9601-37050417B274}

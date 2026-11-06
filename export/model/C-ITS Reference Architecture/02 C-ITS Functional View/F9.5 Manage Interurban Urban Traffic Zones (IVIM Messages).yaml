@@ -15,15 +15,6 @@ elements:
       This High Level Function provides means to communicate traffic rules and signs (I2V) and is based in IVIM messages.
     links:
       - "Aggregation «component of» → F9. Provide Support for Cooperative Systems"  # {6EA0FEE1-AD1A-425f-8F1A-D95D254BDCC0} → {F0D7E9A8-9F88-4e8f-AF0F-661C1990D546}
-      - "Aggregation «component of» → F9.5.1"  # {4FD429A6-F3B7-4e53-A02E-B1F5A473ECC7} → {562D63E2-2E62-47ee-946A-451EA7841C1B}
-      - "Aggregation «component of» → F9.5.2"  # {DD11C455-CE9A-4bcd-A6BC-557AA79CC541} → {2F5FF087-6A3D-4bdb-9E77-77C02D5C975F}
-      - "Aggregation «component of» → F9.5.3"  # {882D4275-26B2-4633-B74C-B35CF3D74D39} → {7708616F-753A-4f26-97C4-3822F487CF94}
-      - "Aggregation «component of» → F9.5.3"  # {8C43B205-18B2-4eca-AA01-746DCC0729B3} → {7708616F-753A-4f26-97C4-3822F487CF94}
-      - "Aggregation «component of» → F9.5.4"  # {8BF583DD-F53F-4720-96CF-64ED138CE164} → {5D96CDCE-E9BE-4c1d-87A5-062F249E410F}
-      - "Aggregation «component of» → F9.5.5"  # {8808C4A0-3FCB-40fd-9877-ABB9AA69B786} → {304DD7DC-D817-4ddf-B7EA-5FCC0D6E1FBC}
-      - "Aggregation «component of» → F9.5.6"  # {DA19017C-5701-4576-97C7-B28673E17724} → {AE47DC1C-B579-4253-8AEA-6AAEF90B4354}
-      - "Aggregation «component of» → F9.5.7"  # {AB7DB1CF-B8DF-4fa7-9E11-6907A90FBA94} → {FAB8ED1B-031B-4d29-A14B-174C46A20D9E}
-      - "Aggregation «component of» → F9.5.8"  # {246F62E7-245A-47ba-9170-D5C5615F5512} → {BFABD4B6-CD8E-4324-8DAB-9E46716AEA82}
   - name: "F9.5.1"
     guid: "{562D63E2-2E62-47ee-946A-451EA7841C1B}"
     type: "Activity"
@@ -33,6 +24,8 @@ elements:
     order: 0
     note: |
       SSP encoding : For IVI based use cases in ETSI TS 103 301 [11],  the SSPs are encoded in Octets 4-5 within the respective field of the certificate to be used (AT), in addition to the serviceProviderId encoded in Octets 1-3.
+    links:
+      - "Aggregation «component of» → F9.5 Manage Interurban Urban Traffic Zones"  # {4FD429A6-F3B7-4e53-A02E-B1F5A473ECC7} → {0A4E4F63-21D5-403a-BE69-6B7E67348D2B}
   - name: "F9.5.2"
     guid: "{2F5FF087-6A3D-4bdb-9E77-77C02D5C975F}"
     type: "Activity"
@@ -45,6 +38,8 @@ elements:
       •serviceType= IVS-TS
       •messageType = IVIM
       See latest documents at https://www.c-roads.eu/platform/documents.htm
+    links:
+      - "Aggregation «component of» → F9.5 Manage Interurban Urban Traffic Zones"  # {DD11C455-CE9A-4bcd-A6BC-557AA79CC541} → {0A4E4F63-21D5-403a-BE69-6B7E67348D2B}
   - name: "F9.5.3"
     guid: "{7708616F-753A-4f26-97C4-3822F487CF94}"
     type: "Activity"
@@ -55,6 +50,8 @@ elements:
     note: |
       The system shall enable that the IVI message for IVS-TS is profiled in chapter 4.2.2.2 of C-Roads, C-ITS Message Profiles [4]
       See latest documents at https://www.c-roads.eu/platform/documents.htm
+    links:
+      - "Aggregation «component of» → F9.5 Manage Interurban Urban Traffic Zones"  # {8C43B205-18B2-4eca-AA01-746DCC0729B3} → {0A4E4F63-21D5-403a-BE69-6B7E67348D2B}
   - name: "F9.5.4"
     guid: "{5D96CDCE-E9BE-4c1d-87A5-062F249E410F}"
     type: "Activity"
@@ -64,6 +61,8 @@ elements:
     order: 0
     note: |
       The system shall enable that iviStatus shall be used differently, depending on the mechanism for message management used
+    links:
+      - "Aggregation «component of» → F9.5 Manage Interurban Urban Traffic Zones"  # {8BF583DD-F53F-4720-96CF-64ED138CE164} → {0A4E4F63-21D5-403a-BE69-6B7E67348D2B}
   - name: "F9.5.5"
     guid: "{304DD7DC-D817-4ddf-B7EA-5FCC0D6E1FBC}"
     type: "Activity"
@@ -73,6 +72,8 @@ elements:
     order: 0
     note: |
       For IVi based use casestThe system shall encode Text Information without a sign in the TextContainer.
+    links:
+      - "Aggregation «component of» → F9.5 Manage Interurban Urban Traffic Zones"  # {8808C4A0-3FCB-40fd-9877-ABB9AA69B786} → {0A4E4F63-21D5-403a-BE69-6B7E67348D2B}
   - name: "F9.5.6"
     guid: "{AE47DC1C-B579-4253-8AEA-6AAEF90B4354}"
     type: "Activity"
@@ -82,6 +83,8 @@ elements:
     order: 0
     note: |
       For IVi based use cases the system shall enable up to three additonal signs to be associated with the main sign (using DF RSCode).
+    links:
+      - "Aggregation «component of» → F9.5 Manage Interurban Urban Traffic Zones"  # {DA19017C-5701-4576-97C7-B28673E17724} → {0A4E4F63-21D5-403a-BE69-6B7E67348D2B}
   - name: "F9.5.7"
     guid: "{FAB8ED1B-031B-4d29-A14B-174C46A20D9E}"
     type: "Activity"
@@ -91,6 +94,8 @@ elements:
     order: 0
     note: |
       For IVi based Use cases the system shall enable extraText for a road sign to be ordered; if a sign has no extraText then the NULL Character is used.
+    links:
+      - "Aggregation «component of» → F9.5 Manage Interurban Urban Traffic Zones"  # {AB7DB1CF-B8DF-4fa7-9E11-6907A90FBA94} → {0A4E4F63-21D5-403a-BE69-6B7E67348D2B}
   - name: "F9.5.8"
     guid: "{BFABD4B6-CD8E-4324-8DAB-9E46716AEA82}"
     type: "Activity"
@@ -100,3 +105,5 @@ elements:
     order: 0
     note: |
       If all signs in the IVIM are valid for less than all lanes the system shall enable that the RoadConfiguationContainer may be used to describe the driving lane configuration for a zone.
+    links:
+      - "Aggregation «component of» → F9.5 Manage Interurban Urban Traffic Zones"  # {246F62E7-245A-47ba-9170-D5C5615F5512} → {0A4E4F63-21D5-403a-BE69-6B7E67348D2B}

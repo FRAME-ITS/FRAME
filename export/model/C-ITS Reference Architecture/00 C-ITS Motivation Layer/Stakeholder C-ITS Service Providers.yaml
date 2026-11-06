@@ -27,6 +27,6 @@ elements:
     note: |
       Personal C-ITS station implemented on a personal or professional device with full access and communication details of the C-ITS network, via short range and / or long range communication channels and protocols.
     links:
-      - "Abstraction → C-ITS Service provider"  # {AC56DB75-E711-4cfe-93A2-ADF4A25BFA75} → {3013F2AA-5BC3-4d57-8AFA-790BBA733C21}
-      - "Abstraction → EU Citizen in one of the member states"  # {A9994F60-A133-43f8-B792-C7C7DC70C8AB} → {E8695FF6-1351-4508-97CF-980CF0604B41}
+      - "Abstraction «is Type of» → C-ITS Service provider"  # {AC56DB75-E711-4cfe-93A2-ADF4A25BFA75} → {3013F2AA-5BC3-4d57-8AFA-790BBA733C21}
+      - "Abstraction «is Type of» → EU Citizen in one of the member states"  # {A9994F60-A133-43f8-B792-C7C7DC70C8AB} → {E8695FF6-1351-4508-97CF-980CF0604B41}
       - "Realisation → Policy Authority"  # {46358558-1C14-43f4-B1C7-D26F279E03D1} → {43FC96D4-0EC2-4547-AF9E-35CF41527D97}

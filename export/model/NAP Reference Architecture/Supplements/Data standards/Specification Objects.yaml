@@ -27,8 +27,6 @@ elements:
     note: |
       There are several specifications, please double click to see all.
     links:
-      - "Association → Content Consumer data retrieval interface"  # {58F9EDF2-97EB-4a35-A997-70DED749223E} → {46EF7C20-D17A-4964-9EEC-CFC8A2161BB1}
-      - "Association → Interface Data requesting system"  # {26AB31DC-75FD-49d2-995C-8554AC4FEC75} → {B5381D32-D813-436f-8E09-B87BD10B5F64}
       - "Association → specification for Content Consumer data retrieval interface"  # {560F29DA-72EE-4fa3-89FD-5E970C71F11A} → {69695A87-EBC5-47cf-BE97-A9B8E9483960}
   - name: "IATA SSIM"
     guid: "{EEC79522-E329-4da9-89B6-82617E53E335}"

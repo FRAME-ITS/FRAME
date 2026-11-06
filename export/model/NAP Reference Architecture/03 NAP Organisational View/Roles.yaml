@@ -185,6 +185,7 @@ elements:
       NOTE: The organization performing the NAP Operator (NO) role can also perform other roles (i.e. Content Provider and Content Consumer) these roles do not intersect and shall be performed in such a way as to avoid conflict of interest.
     links:
       - "Association «accepted by» → National Law or Contract MS - NAP"  # {BB081BAA-63A7-4879-A9A4-5888E2CE55F9} → {9A594D51-2CA2-4048-B043-981F4DF70F2D}
+      - "Association «defines» → NAP Administrator"  # {95D72A93-DF45-4636-BAD2-563F4F9129AA} → {42F53F52-7779-44b2-85AF-026AE11834EF}
       - "Association «defines» → NAP Operator"  # {1CB68449-7ACE-4e3e-9944-8C06841BEAC7} → {B0B3260D-C376-4e8f-A620-72BC71353D5D}
       - "Dependency → NAP Content Manager"  # {26AEC905-84D0-49f2-B178-DA68D5A8C6BF} → {C38BD0E0-09FA-457c-B964-75087C1C932E}
       - "Dependency → NAP Content Manager Metadata"  # {61E7E000-2D0F-4ef1-8ADE-BB40F9BB68D9} → {D5D05E45-D97D-4db7-BE83-7319DD2CCAEE}

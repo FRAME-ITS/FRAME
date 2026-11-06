@@ -32,8 +32,6 @@ elements:
       • Commission Delegated Regulation (EU) No 885/2013
       • Abbreviation: SSTP
       the provision of information services for safe and secure parking places for trucks and commercial vehicles
-    links:
-      - "Usage «Instantiate» → Fulfilling National Body activities and reliabilities according to ITS directive 2010/EU/40"  # {E8FE3C24-8A83-4a5e-8436-1CE6809238E5} → {01809F43-C4B8-4445-BF4A-91BFA2C95612}
   - name: "Fulfilling National Body activities and reliabilities according to ITS directive 2010/EU/40"
     guid: "{01809F43-C4B8-4445-BF4A-91BFA2C95612}"
     type: "Class"
@@ -46,6 +44,10 @@ elements:
     note: |
       The National Body (NB) of a Member State has specific tasks related to the Delegated Regulations of the ITS Directive 2010/40/EU, which are requested by the European Commission.
        The main task is to ensure that data publishers, service providers and NAP meet the obligations and requirements expressed in the articles of each Delegated Regulation.
+    links:
+      - "Association «adheres to» → Directive (EU) 2023/2661"  # {9BF48855-99EF-4499-871F-AA074F60C4AC} → {C3C38386-12EB-44c2-8976-75E3D86C7AD2}
+      - "Association «adheres to» → ITS directive 2010/EU/40"  # {BBA497D6-543F-439b-9F59-7F5B8057135D} → {838FF400-30C2-465b-A815-907FD87D213B}
+      - "Association «has» → Delegated Regulations of ITS Directive 2010/EU/40"  # {E8FE3C24-8A83-4a5e-8436-1CE6809238E5} → {2C719A1A-9DD9-4d49-B156-FE9A59A7297C}
   - name: "National Body Mission_Statement"
     guid: "{19CCAB3F-C533-4107-9E55-E64EF97E7204}"
     type: "Class"
