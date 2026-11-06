@@ -6,6 +6,7 @@ Built by `tools/fixes/2026-11-06_mdg_technology_V1.3.py`.
 - stereotype «deliverd by» renamed «delivered by» (7 occurrences)
 - new stereotype «delivers value to» (Association) with toolbox entry
 - new stereotype «triggers» (Association) with toolbox entry
+- new stereotype «implements» (Association) with toolbox entry
 - Quick Linker: «Component of» → «component of» (3 rules)
 - Quick Linker: «Defines» → «defines» (13 rules)
 - Quick Linker: «instant of» → «instants of» (1 rules)
@@ -37,6 +38,10 @@ Built by `tools/fixes/2026-11-06_mdg_technology_V1.3.py`.
 - Quick Linker added: «triggers» ITS_Business_Process → ITS_Business_Process
 - Quick Linker added: «delivers value to» ITS_Service_Added_Value → Stakeholder
 - Quick Linker added: «defines» Specification → Requirement
+- Quick Linker added: «use» Agreement → Specification
+- Quick Linker added: «defines» Specification → Agreement
+- Quick Linker added: «implements» Actor → Desired_Architecture_Goals
+- Quick Linker added: «adheres to» Terminator → Agreement
 - Quick Linker: Application – 5 rules merged into 4
 - Quick Linker: ITS_Service – 5 rules merged into 4
 - Quick Linker: ITS_Service_Added_Value – 3 rules merged into 2
@@ -46,7 +51,7 @@ Built by `tools/fixes/2026-11-06_mdg_technology_V1.3.py`.
 - Quick Linker: Low_Level_Function – 8 rules merged into 6
 - Quick Linker: Mission_Statement – 2 rules merged into 1
 - Quick Linker: Role – 4 rules merged into 3
-- Quick Linker: Terminator – 7 rules merged into 6
+- Quick Linker: Terminator – 8 rules merged into 7
 - Quick Linker: User_Need – 4 rules merged into 3
 - Quick Linker: TDF_LowLevelFunction – 4 rules merged into 3
 - Quick Linker: UML links hidden (_HideUmlLinks) for Functional_Area, High_Level_Function, Low_Level_Function, High_Level_Data_Flow, Low_Level_Data_Flow, Terminator, Datastore, System, User_Need, User_Need_Topic, User_Need_Service, User_Need_Group

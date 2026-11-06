@@ -1,23 +1,12 @@
 # Model check – FRAME.qea
 
-**3 errors, 14 warnings**
+**0 errors, 14 warnings**
 
 | Rule | Related issue | Errors | Warnings |
 |---|---|---|---|
 | duplicate |  | 0 | 2 |
 | function-flows |  | 0 | 1 |
-| servedby |  | 3 | 0 |
 | unused-flow | #76 | 0 | 11 |
-
-## Errors
-
-<details><summary><b>servedby</b> (3)</summary>
-
-- User_Need **11.1.1.6** (C-ITS Reference Architecture) → F3.1.1.5 Provide Urban Traffic Management Facilities is Usage «», expected Association «served by»
-- User_Need **11.2.4.1** (C-ITS Reference Architecture) → F3.1 Provide Traffic Control is Usage «», expected Association «served by»
-- User_Need **11.2.4.1** (C-ITS Reference Architecture) → F9.3 Manage Vehicle Access to Sensitive Areas is Usage «», expected Association «served by»
-
-</details>
 
 ## Warnings
 

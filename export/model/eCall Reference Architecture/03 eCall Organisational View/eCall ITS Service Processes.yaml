@@ -14,9 +14,9 @@ elements:
     order: 0
     note: ""
     links:
-      - "Association → Setup active communication link"  # {D206B02D-52B7-40e7-93D3-9D27776A8281} → {9363B169-BE2F-4453-B81E-3A92E0110536}
       - "Association «defines» → Mobile Network Operator"  # {CF21C6B7-3267-4d71-A2DA-517BF1A583AC} → {81045AAD-B99C-4577-8259-A8FA6025FF44}
-      - "Usage «Instantiate» → Forward eCall to selected PSAP"  # {28848139-A539-4aae-919F-DA7CC5DCF2C2} → {F9BAA34B-5B75-4b2e-B1EB-B590140474D9}
+      - "Association «triggers» → Forward eCall to selected PSAP"  # {28848139-A539-4aae-919F-DA7CC5DCF2C2} → {F9BAA34B-5B75-4b2e-B1EB-B590140474D9}
+      - "Association «triggers» → Setup active communication link"  # {D206B02D-52B7-40e7-93D3-9D27776A8281} → {9363B169-BE2F-4453-B81E-3A92E0110536}
   - name: "Call back eCall vehicle"
     guid: "{5A23E337-85A8-4596-89E4-1B061E8D2EB8}"
     type: "Activity"
@@ -27,8 +27,8 @@ elements:
     note: ""
     links:
       - "Association «defines» → PSAP Operator"  # {C197FA77-DB28-4bec-9C33-E1076C7FBDA5} → {C1ADF028-16CF-46c1-B6F5-8C88B29DD830}
-      - "Usage «Instantiate» → Interface to selected PSAP"  # {27DB2BEA-1E64-4031-85C7-91FD9CF35404} → {968FFA03-232F-4bc9-B2D7-5F04A0DD982A}
-      - "Usage «Instantiate» → Manage emergency chain"  # {8623319B-8013-4a60-8A8F-ACB01E829436} → {09033CAA-CB24-4bec-ADF7-01A3A5694534}
+      - "Association «triggers» → Interface to selected PSAP"  # {27DB2BEA-1E64-4031-85C7-91FD9CF35404} → {968FFA03-232F-4bc9-B2D7-5F04A0DD982A}
+      - "Association «triggers» → Manage emergency chain"  # {8623319B-8013-4a60-8A8F-ACB01E829436} → {09033CAA-CB24-4bec-ADF7-01A3A5694534}
   - name: "Create eCall"
     guid: "{005DBDE4-8B98-4079-966D-1E1AF39FF583}"
     type: "Activity"
@@ -39,7 +39,7 @@ elements:
     note: ""
     links:
       - "Association «defines» → eCall - Generator"  # {30040F84-3B08-419f-8B86-E0295433D416} → {A9B47171-ABC4-4e66-859E-5C320E6FC5DB}
-      - "Usage «Instantiate» → Send eCall"  # {226A4EBC-7F05-473a-B63C-6269E4B53108} → {11602949-A865-409d-9F0C-91D7E21C99F0}
+      - "Association «triggers» → Send eCall"  # {226A4EBC-7F05-473a-B63C-6269E4B53108} → {11602949-A865-409d-9F0C-91D7E21C99F0}
   - name: "Forward eCall to selected PSAP"
     guid: "{F9BAA34B-5B75-4b2e-B1EB-B590140474D9}"
     type: "Activity"
@@ -50,7 +50,7 @@ elements:
     note: ""
     links:
       - "Association «defines» → Mobile Network Operator"  # {8DB3EA32-1248-492b-A2D6-C96B1F1B95B8} → {81045AAD-B99C-4577-8259-A8FA6025FF44}
-      - "Usage «Instantiate» → Receive allocated eCall"  # {4435E98C-6530-4356-B1A2-8D8CD604B0F2} → {561672A3-DFA4-4aeb-8EE4-5680D9A8A05D}
+      - "Association «triggers» → Receive allocated eCall"  # {4435E98C-6530-4356-B1A2-8D8CD604B0F2} → {561672A3-DFA4-4aeb-8EE4-5680D9A8A05D}
   - name: "Interface to selected PSAP"
     guid: "{968FFA03-232F-4bc9-B2D7-5F04A0DD982A}"
     type: "Activity"
@@ -81,7 +81,7 @@ elements:
     note: ""
     links:
       - "Association «defines» → PSAP Operator"  # {94EE5180-C0E2-4858-A758-21DA9C32FA04} → {C1ADF028-16CF-46c1-B6F5-8C88B29DD830}
-      - "Usage «Instantiate» → Call back eCall vehicle"  # {8DFCD482-6D99-43f3-878F-699E2246CDA8} → {5A23E337-85A8-4596-89E4-1B061E8D2EB8}
+      - "Association «triggers» → Call back eCall vehicle"  # {8DFCD482-6D99-43f3-878F-699E2246CDA8} → {5A23E337-85A8-4596-89E4-1B061E8D2EB8}
   - name: "Receive PSAP call"
     guid: "{3DF8FBE7-01B9-4828-94A8-A55708FCFF0F}"
     type: "Activity"
@@ -102,7 +102,7 @@ elements:
     note: ""
     links:
       - "Association «defines» → PSAP Operator"  # {3A9B31EE-1195-4eb4-B897-E9C3B1942101} → {C1ADF028-16CF-46c1-B6F5-8C88B29DD830}
-      - "Usage «Instantiate» → Process eCall"  # {C024DB44-CB36-42d4-85F1-C6145CB7E6E7} → {099683D3-8F26-4673-806E-C16A36878108}
+      - "Association «triggers» → Process eCall"  # {C024DB44-CB36-42d4-85F1-C6145CB7E6E7} → {099683D3-8F26-4673-806E-C16A36878108}
   - name: "Receive eCall"
     guid: "{6F84C9AE-1460-4f4b-8497-23E18FE2A0FE}"
     type: "Activity"
@@ -113,8 +113,8 @@ elements:
     note: ""
     links:
       - "Association «defines» → Mobile Network Operator"  # {01059DD5-74B0-487b-A2F9-E95A8B8F4EBF} → {81045AAD-B99C-4577-8259-A8FA6025FF44}
-      - "Usage «Instantiate» → Allocate eCall to correct PSAP"  # {6C947802-7B53-4a7c-AE75-0A955220BE41} → {38F667E6-9BCB-40cd-B504-74A5F5C8F2BC}
-      - "Usage «Instantiate» → Setup active communication link"  # {E7F9F4B4-FD3E-490a-BC0E-9FE1927AD0E9} → {9363B169-BE2F-4453-B81E-3A92E0110536}
+      - "Association «triggers» → Allocate eCall to correct PSAP"  # {6C947802-7B53-4a7c-AE75-0A955220BE41} → {38F667E6-9BCB-40cd-B504-74A5F5C8F2BC}
+      - "Association «triggers» → Setup active communication link"  # {E7F9F4B4-FD3E-490a-BC0E-9FE1927AD0E9} → {9363B169-BE2F-4453-B81E-3A92E0110536}
   - name: "Send eCall"
     guid: "{11602949-A865-409d-9F0C-91D7E21C99F0}"
     type: "Activity"
@@ -125,7 +125,7 @@ elements:
     note: ""
     links:
       - "Association «defines» → eCall - Generator"  # {92CABA57-0C06-449f-97B2-A2E3F713D4D2} → {A9B47171-ABC4-4e66-859E-5C320E6FC5DB}
-      - "Usage «Instantiate» → Receive eCall"  # {2E6DD74E-9BCC-460f-9675-FC8E48472CD9} → {6F84C9AE-1460-4f4b-8497-23E18FE2A0FE}
+      - "Association «triggers» → Receive eCall"  # {2E6DD74E-9BCC-460f-9675-FC8E48472CD9} → {6F84C9AE-1460-4f4b-8497-23E18FE2A0FE}
   - name: "Setup active communication link"
     guid: "{9363B169-BE2F-4453-B81E-3A92E0110536}"
     type: "Activity"
@@ -137,8 +137,8 @@ elements:
       Safe connection between eCall vehicle and PSAP in the network active service directory
     links:
       - "Association «defines» → Mobile Network Operator"  # {496AECEE-3798-479c-A9D8-9F6FC5019141} → {81045AAD-B99C-4577-8259-A8FA6025FF44}
-      - "Usage «Instantiate» → Interface to selected PSAP"  # {57B0811B-79CA-4ad0-A0CA-C4E1D30008E7} → {968FFA03-232F-4bc9-B2D7-5F04A0DD982A}
-      - "Usage «Instantiate» → Receive PSAP call"  # {52CC8D52-11B9-46bd-B525-CF1B192A5D9A} → {3DF8FBE7-01B9-4828-94A8-A55708FCFF0F}
+      - "Association «triggers» → Interface to selected PSAP"  # {57B0811B-79CA-4ad0-A0CA-C4E1D30008E7} → {968FFA03-232F-4bc9-B2D7-5F04A0DD982A}
+      - "Association «triggers» → Receive PSAP call"  # {52CC8D52-11B9-46bd-B525-CF1B192A5D9A} → {3DF8FBE7-01B9-4828-94A8-A55708FCFF0F}
   - name: "Trigger eCall"
     guid: "{FF0453B6-2A46-4229-9916-F6C48774C162}"
     type: "Activity"
@@ -149,8 +149,7 @@ elements:
     note: ""
     links:
       - "Association «defines» → eCall - Generator"  # {32F5CD4D-91D6-4764-8A15-EEB9AB707F26} → {A9B47171-ABC4-4e66-859E-5C320E6FC5DB}
-      - "Usage «Instantiate» → Create eCall"  # {14FF5B17-9424-4bf8-9D09-D562725F6FBC} → {005DBDE4-8B98-4079-966D-1E1AF39FF583}
-      - "Usage «Instantiate» → Create eCall"  # {1673F0EA-9F15-4a5b-9896-A2367B839EEE} → {005DBDE4-8B98-4079-966D-1E1AF39FF583}
+      - "Association «triggers» → Create eCall"  # {1673F0EA-9F15-4a5b-9896-A2367B839EEE} → {005DBDE4-8B98-4079-966D-1E1AF39FF583}
   - name: "eCall_ITS_Service"
     guid: "{654604A4-BE3A-422d-8705-DA008C3D7942}"
     type: "Class"

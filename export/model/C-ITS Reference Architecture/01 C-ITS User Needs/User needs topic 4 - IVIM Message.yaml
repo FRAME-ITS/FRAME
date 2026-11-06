@@ -163,8 +163,6 @@ elements:
       - "Association «belongs to» → FRAME_User_Need_Topic4 IVIM Messages"  # {5F8E5EBB-E3A8-4e26-BC6E-0D4FA678ACC7} → {857CA053-1A9D-4a23-9E1B-0AFA0A439BC4}
       - "Association «served by» → F5.16.1 Manage Communication from Vehicle to Driver"  # {7F8951E7-ECF6-4530-A8B3-8C667F88CF6E} → {DE09B5F2-6135-412e-BF14-56D1B22FFA77}
       - "Association «served by» → F5.16.2 Output Commands and Dynamic Warnings"  # {02FEF9DC-2A83-4fa2-8174-2402E5BD0D82} → {FB7FD2EE-ABFD-4a0c-8EF8-A16DDAA1E280}
-      - "Usage → F3.1 Provide Traffic Control"  # {B2F167C6-426B-49f8-B65F-CD3829D85C7F} → {226ED187-DB7A-409f-B509-BA8DBFFB6DB6}
-      - "Usage → F9.3 Manage Vehicle Access to Sensitive Areas"  # {2DD42037-38F2-409a-B5C6-8FBC38D3A9E9} → {BECAF613-EAD1-4f7d-BBA6-63FBDADA831A}
   - name: "11.2.4.2"
     guid: "{2809968A-BA4A-4059-8158-C2EA685DFD61}"
     type: "Requirement"

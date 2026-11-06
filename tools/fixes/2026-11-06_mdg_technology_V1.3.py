@@ -9,7 +9,8 @@ Base: technology V1.2 as it was stored in the model (drafts/latest/toolbox/FRAME
      motivation layer, Business Expectation «defines» Mission Statement (FRAME Meta Model) and ITS Service «adheres to» Specification;
      physical/functional/communication views: Application «contains» LL function / data store / physical data flow,
      LL data flow «contains» Information Object, Component/Terminator «use» Physical Data Flow, process «triggers» process,
-     Specification «defines» Requirement; ITS Service Added Value «delivers value to» Stakeholder replaces «defines».
+     Specification «defines» Requirement, Agreement «use» Specification, Specification «defines» Agreement,
+     Actor «implements» Desired Architecture Goals (new stereotype), Terminator «adheres to» Agreement; ITS Service Added Value «delivers value to» Stakeholder replaces «defines».
   2. Quick Linker references to stereotypes that the profile does not define are mapped to the defined name
      (Component of, Defines, instant of, associated).
   3. Stereotype names unified (not used by any connector in the model): «Impacts» → «impacts», «deliverd by» → «delivered by».
@@ -39,7 +40,7 @@ for old, new in (('Impacts', 'impacts'), ('deliverd by', 'delivered by')):
     log.append(f'stereotype «{old}» renamed «{new}» ({n} occurrences)')
 # 3b. new connector stereotypes (decided 2026-11-06): «delivers value to» (ITS Service Added Value → Stakeholder, was «defines»)
 #     and «triggers» (process → process); defined like «use» (Association, Source -> Destination) and added to the toolbox page
-for st in ('delivers value to', 'triggers'):
+for st in ('delivers value to', 'triggers', 'implements'):
     if f'<Stereotype name="{st}"' in x: continue
     use = re.search(r'<Stereotype name="use" metatype="use".*?</Stereotype>', x, re.S).group(0)
     x = x.replace(use, use + '\n\t\t\t\t\t' + use.replace('name="use" metatype="use"', f'name="{st}" metatype="{st}"'), 1)
@@ -115,7 +116,10 @@ ADD = [('component of', 'FRAME_Terminator', 'FRAME_Terminator'),            # su
        ('triggers', 'FRAME_ITS_Service_Process', 'FRAME_ITS_Service_Process'),
        ('triggers', 'FRAME_ITS_Business_Process', 'FRAME_ITS_Business_Process'),
        ('delivers value to', 'FRAME_ITS_Service_Added_Value', 'FRAME_Stakeholder'),
-       ('defines', 'FRAME_Specification', 'FRAME_Requirement')]
+       ('defines', 'FRAME_Specification', 'FRAME_Requirement'),
+       # decided 2026-11-06 (second round)
+       ('use', 'FRAME_Agreement', 'FRAME_Specification'), ('defines', 'FRAME_Specification', 'FRAME_Agreement'),
+       ('implements', 'FRAME_Actor', 'FRAME_Desired_Architecture_Goals'), ('adheres to', 'FRAME_Terminator', 'FRAME_Agreement')]
 # rules replaced by the above
 DROP = [('defines', 'FRAME_ITS_Service_Added_Value', 'FRAME_Stakeholder')]
 for st, src, tgt in DROP:

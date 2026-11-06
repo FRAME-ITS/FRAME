@@ -14,8 +14,8 @@ elements:
     note: |
       The Central node of a C-ITS network can be implemented in a TMC and distributes C-ITS messages also via a BI - Basic interface to all IP based communication channels
     links:
-      - "Abstraction → Use C-ITS central station for all messages and road network types"  # {0E52A9EE-44B7-47d4-95F4-3FB8190D3743} → {365D5500-D776-4136-91FB-56DB960294CD}
       - "Abstraction «is Type of» → Motorway operators and city public authorities"  # {4B165F8A-25C5-46ca-B924-E3B25BBD02F1} → {2E3B8D29-8DDA-48a6-AA48-C0060AEC0A2D}
+      - "Association «implements» → Use C-ITS central station for all messages and road network types"  # {0E52A9EE-44B7-47d4-95F4-3FB8190D3743} → {365D5500-D776-4136-91FB-56DB960294CD}
   - name: "C-ITS Roadside node or station"
     guid: "{F6423E2B-6982-413d-9D13-34670A5A9E8E}"
     type: "Actor"

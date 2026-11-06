@@ -14,8 +14,8 @@ elements:
     note: |
       In vehicle node of the C-ITS network, can be implemented via short range and long range communication interfaces.
     links:
-      - "Abstraction → Provide precise and targeted traffic information to drivers"  # {90C8A4EC-9AB0-4387-AACB-F7DA7600EF62} → {2005753F-B9A4-4606-B44D-993B6855C04B}
       - "Abstraction «is Type of» → Vehicle Manufacturors - OEM´s"  # {8817BDC5-FDD1-42f1-87BE-443C15BF6919} → {ED38DEDB-53CC-42c9-9686-EF58A2EB5744}
+      - "Association «implements» → Provide precise and targeted traffic information to drivers"  # {90C8A4EC-9AB0-4387-AACB-F7DA7600EF62} → {2005753F-B9A4-4606-B44D-993B6855C04B}
   - name: "Provide precise and targeted traffic information to drivers"
     guid: "{2005753F-B9A4-4606-B44D-993B6855C04B}"
     type: "Artifact"

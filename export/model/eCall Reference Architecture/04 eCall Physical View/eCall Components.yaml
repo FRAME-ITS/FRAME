@@ -13,8 +13,6 @@ elements:
     version: "1.0"
     order: 0
     note: ""
-    links:
-      - "Usage → Vehicle Environment"  # {247FEE23-07BE-4a89-AF45-B78E02D6D76A} → {934987E7-82A3-48fb-A8DA-EDB2F5D850E7}
   - name: "MNO - Core Network Unit"
     guid: "{9917EC6A-D950-4ece-8EBF-98402D736795}"
     type: "Component"

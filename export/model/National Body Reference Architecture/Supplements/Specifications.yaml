@@ -81,7 +81,7 @@ elements:
       The latest version of the accompanying document forms could be found here:
       https://napcore.eu/national-bodies-3/
     links:
-      - "Association → Compliance Assessment"  # {5466F625-C047-4733-BFEA-5FBF942A3D17} → {741A6BF3-3785-4285-B769-6E5BA4860A45}
+      - "Association «defines» → Compliance Assessment"  # {5466F625-C047-4733-BFEA-5FBF942A3D17} → {741A6BF3-3785-4285-B769-6E5BA4860A45}
   - name: "Template for national reporting"
     guid: "{82FF01BC-5818-40e7-A1AC-5BA1B47FA5DF}"
     type: "DeploymentSpecification"

@@ -118,7 +118,6 @@ elements:
       - "Association «belongs to» → FRAME_User_Need_Topic1 C-ITS System"  # {9DC9E3E5-51AF-46c3-8DDE-9B770B776E9C} → {D06129C3-AA43-483b-85AF-87DB2C48E04C}
       - "Association «served by» → F5.16.1 Manage Communication from Vehicle to Driver"  # {66E7FF55-5D4C-45c3-A9F2-7D467891F092} → {DE09B5F2-6135-412e-BF14-56D1B22FFA77}
       - "Association «served by» → F5.16.2 Output Commands and Dynamic Warnings"  # {9BB655B3-BB1E-4fad-93A6-96B9A061A711} → {FB7FD2EE-ABFD-4a0c-8EF8-A16DDAA1E280}
-      - "Usage → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {0E601581-27FC-4d27-B6CE-6B76135A6435} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
   - name: "11.1.1.7"
     guid: "{F4F92AD3-35A4-4c8b-A772-B577BAC092F7}"
     type: "Requirement"

@@ -96,8 +96,6 @@ elements:
     links:
       - "Association «use» → fPerDev-tSerPro"  # {063CC423-279D-47ae-94B3-396699934794} → {2BDA9EBA-F9A5-40a3-B5E9-9D1B6044CD30}
       - "Association «use» → fSerPro-tPerDev"  # {D27A615A-C6AF-4cbb-90B7-1E72A574B5D7} → {B2CBF2BA-60DC-4931-A79D-A2FE60469814}
-      - "Usage → Geographic Information Provider"  # {EB0F3C18-BA80-4fe8-BDDD-C7463B4A4ADF} → {35686FDB-AF89-41d3-B16B-2506BC4F27E1}
-      - "Usage → Location Data Source"  # {BFCE4D51-AB5B-4b18-BF44-1A0579FFBC31} → {F5718DD4-62B6-430b-98EE-99E0720703B3}
   - name: "SSTPIS End User Application"
     guid: "{DC5A7FF3-1BC8-4d67-A0C5-64B5CA5C2C21}"
     type: "Object"

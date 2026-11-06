@@ -503,6 +503,7 @@ elements:
     order: 0
     note: ""
     links:
+      - "Dependency «stereotyped relationship» → FRAME_Desired_Architecture_Goals"  # {2CE73E08-D303-4714-9540-FE186CFDBA4F} → {6D2830EA-49F3-4e3e-9739-0D133649711B}
       - "Dependency «stereotyped relationship» → FRAME_Requirement"  # {6C45DFC9-7809-4c06-BCDC-4062841226B0} → {AEE79FAA-7700-45ad-8E09-D35B1F39DD5A}
       - "Dependency «stereotyped relationship» → FRAME_Stakeholder"  # {F311DB40-7BE7-4ac1-A4BB-322871DFB32F} → {1D9C9DEE-24BC-44aa-85BD-8CA8BC3CC0DA}
       - "Dependency «stereotyped relationship» → FRAME_Terminator"  # {78980F11-5665-4290-9EAC-102A7F55E7C5} → {924DB332-8016-4030-B48A-73EA46503F2E}
@@ -518,6 +519,7 @@ elements:
     links:
       - "Dependency «stereotyped relationship» → FRAME_Requirement"  # {790990BD-52D4-40e7-B18E-5224E5A57186} → {AEE79FAA-7700-45ad-8E09-D35B1F39DD5A}
       - "Dependency «stereotyped relationship» → FRAME_Role"  # {36E3FB39-3D3E-4df2-A3CA-01F745EB41A7} → {8E2EF45B-FD45-417c-9E26-96C6F78A82C0}
+      - "Dependency «stereotyped relationship» → FRAME_Specification"  # {F4A64B36-47B2-45A3-A634-A1B43C17066C} → {A91B0704-2E6F-449c-BA75-85536AC7256A}
       - "Extension → Collaboration"  # {5AE4E5CC-AC0B-4cff-A4F9-026F9133D6FD} → {5F7542C8-6FD5-4875-A122-A6795323B9ED}
   - name: "FRAME_Application"
     guid: "{BE8F2B26-634D-48ee-8EAD-C8107758186C}"
@@ -919,6 +921,7 @@ elements:
     order: 0
     note: ""
     links:
+      - "Dependency «stereotyped relationship» → FRAME_Agreement"  # {25963A8C-6A7A-454B-B7F1-262A56997038} → {E591D718-076A-41bd-A6C2-117748CF08BB}
       - "Dependency «stereotyped relationship» → FRAME_Requirement"  # {95BCA958-1873-4F1E-BC65-29B8E1A7F6FA} → {AEE79FAA-7700-45ad-8E09-D35B1F39DD5A}
       - "Extension → DeploymentSpecification"  # {88BB4A08-D72A-4dc8-AAC9-1DB416A4B050} → {BA638F89-E3BB-466b-BF6E-5191534E46B5}
   - name: "FRAME_Stakeholder"
@@ -973,6 +976,7 @@ elements:
     order: 0
     note: ""
     links:
+      - "Dependency «stereotyped relationship» → FRAME_Agreement"  # {7A3734F6-6C09-4D6F-B138-86AB3BB253BB} → {E591D718-076A-41bd-A6C2-117748CF08BB}
       - "Dependency «stereotyped relationship» → FRAME_Application"  # {8ED36835-54FA-4d12-BBFA-47F4FBC969F9} → {BE8F2B26-634D-48ee-8EAD-C8107758186C}
       - "Dependency «stereotyped relationship» → FRAME_High_Level_Data_Flow"  # {AE98E2C8-C71F-4f2a-9155-30EFF768719E} → {6DBD0E8E-FC6A-444e-A6FB-CEB89E897D46}
       - "Dependency «stereotyped relationship» → FRAME_Low_Level_Data_Flow"  # {2073D210-3965-4774-BC46-3D3AFE88968C} → {B96F54C8-EF1D-4c74-AD7F-396990418023}
@@ -1380,6 +1384,16 @@ elements:
     note: ""
     links:
       - "Extension → Association"  # {52A9B1A8-29D2-4589-900D-175B9B2B1FBD} → {F06517E9-2A93-49a6-9C8B-B50745E4F011}
+  - name: "implements"
+    guid: "{B5A12BD9-D567-4361-A857-3CB6225836DD}"
+    type: "Class"
+    stereotype: "stereotype"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: ""
+    links:
+      - "Extension → Association"  # {3EAED6E8-418C-4413-B12D-E75CE8D0B77C} → {DE6FC006-93D9-4e08-81AB-D48D1213701E}
   - name: "instants of"
     guid: "{A7D2F0F2-ACC9-442a-B43B-F67966E71FD1}"
     type: "Class"

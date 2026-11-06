@@ -1,6 +1,6 @@
 # MDG technology embedded in FRAME.qea compared with FRAME.qea
 
-Technology **FRAME** – FRAME Architecture V1.3; profile FRAME_Profile defines 61 stereotypes.
+Technology **FRAME** – FRAME Architecture V1.3; profile FRAME_Profile defines 62 stereotypes.
 
 ## Quick Linker rules vs. use in the model
 
@@ -43,6 +43,7 @@ For each rule (source → target) the number of connectors drawn in that directi
 | «adheres to» | Low_Level_Function | Specification | 5 | 0 |
 | «adheres to» | Physical_Data_Flow | Specification | 0 | 0 |
 | «adheres to» | System | Specification | 1 | 0 |
+| «adheres to» | Terminator | Agreement | 2 | 0 |
 | «associate» | ITS_Vision | Mission_Statement | 3 | 0 |
 | «associate» | Role | Component | 0 | 0 |
 | «belongs to» | User_Need | User_Need_Topic | 662 | 39 |
@@ -57,10 +58,10 @@ For each rule (source → target) the number of connectors drawn in that directi
 | «component of» | Low_Level_Function | High_Level_Function | 347 | 0 |
 | «component of» | Terminator | Terminator | 69 | 69 |
 | «contains» | Application | Datastore | 8 | 0 |
-| «contains» | Application | Low_Level_Function | 38 | 0 |
-| «contains» | Application | Physical_Data_Flow | 22 | 0 |
+| «contains» | Application | Low_Level_Function | 39 | 0 |
+| «contains» | Application | Physical_Data_Flow | 23 | 0 |
 | «contains» | Information_Object | Data_Object | 16 | 0 |
-| «contains» | Low_Level_Data_Flow | Data_Object | 3 | 0 |
+| «contains» | Low_Level_Data_Flow | Data_Object | 4 | 0 |
 | «contains» | Low_Level_Data_Flow | Information_Object | 13 | 0 |
 | «contains» | Physical_Data_Flow | Information_Object | 26 | 0 |
 | «defines» | Actor | Requirement | 0 | 0 |
@@ -104,7 +105,8 @@ For each rule (source → target) the number of connectors drawn in that directi
 | «defines» | Role | Organisation | 1 | 0 |
 | «defines» | Role | Requirement | 0 | 0 |
 | «defines» | Role | User_Need | 0 | 0 |
-| «defines» | Specification | Requirement | 6 | 0 |
+| «defines» | Specification | Agreement | 1 | 0 |
+| «defines» | Specification | Requirement | 7 | 0 |
 | «defines» | Stakeholder | ITS_Vision | 2 | 0 |
 | «defines» | Stakeholder | Requirement | 13 | 0 |
 | «defines» | System | Requirement | 0 | 0 |
@@ -148,6 +150,7 @@ For each rule (source → target) the number of connectors drawn in that directi
 | «impacts» | High_Level_Function | Functional_Area | 0 | 0 |
 | «impacts» | Low_Level_Function | Functional_Area | 0 | 0 |
 | «impacts» | Low_Level_Function | High_Level_Function | 0 | 0 |
+| «implements» | Actor | Desired_Architecture_Goals | 3 | 0 |
 | «instants of» | Stakeholder | Organisation | 0 | 0 |
 | «is Type of» | Actor | Stakeholder | 29 | 0 |
 | «is Type of» | Actor | Terminator | 12 | 0 |
@@ -158,8 +161,9 @@ For each rule (source → target) the number of connectors drawn in that directi
 | «served by» | User_Need | Low_Level_Function | 1785 | 0 |
 | «stored in» | Information_Object | Datastore | 3 | 0 |
 | «triggers» | ITS_Business_Process | ITS_Business_Process | 23 | 23 |
-| «triggers» | ITS_Service_Process | ITS_Service_Process | 55 | 55 |
-| «use» | Component | Physical_Data_Flow | 24 | 0 |
+| «triggers» | ITS_Service_Process | ITS_Service_Process | 69 | 69 |
+| «use» | Agreement | Specification | 4 | 0 |
+| «use» | Component | Physical_Data_Flow | 25 | 0 |
 | «use» | Interface | Information_Object | 12 | 0 |
 | «use» | Physical_Data_Flow | Interface | 22 | 0 |
 | «use» | Terminator | Physical_Data_Flow | 12 | 0 |

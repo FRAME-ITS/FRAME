@@ -151,7 +151,6 @@ elements:
       - "Association «IN» → mt_NAP_metadata_search_request"  # {EF8E0FB1-EC04-45dc-AE32-EC204F67A4FC} → {F2F9B90C-BD35-4b2a-8DCB-4B8F834C419A}
       - "Association «IN» → tnap.cc-metadata_search_result"  # {83900E74-1744-4ace-B205-8A130BB3C6DE} → {DDCEDB1B-C3C2-4d88-AAF0-8371D10BF745}
       - "Association «IN» → tnap.mdrs-metadata_response"  # {F970BAA2-E34A-4127-B8C0-F660B2D4F767} → {CA529868-7C49-48f9-AD5E-F796011DFDF5}
-      - "Dependency → NAP IT Provider (NIT)"  # {FE22C329-43D9-450d-8DC4-096292CC0002} → {273E7961-AD50-416e-AC9A-92FA926DD4A7}
   - name: "F3.6.5 Provide NAP User Support"
     guid: "{E4E0DD97-20AB-4868-B0DE-C0C3C14EA4BA}"
     type: "Activity"
