@@ -15,7 +15,7 @@ elements:
       It contains analogue inputs from which functionality in the Manage Traffic Functional Area can create data objects to provide details of the atmospheric pollution that may be general and apply to the geographic area in which ITS Services are to be deployed, or be from individual points at or near the road network.
     links:
       - "Aggregation «component of» → fae-environmental_inputs"  # {15754BE5-F073-4ac7-8F90-3F623103728D} → {D0FEBD4B-50EE-4417-80B2-039ED6F654FE}
-      - "Association «OUT» → 3.4.2 Monitor Atmospheric Pollution"  # {08F9127E-2F54-4fd4-9B1D-45ECBA8FBE87} → {2301F03C-D6C2-4383-A739-76B255A40C9F}
+      - "Association «OUT» → F3.4.2 Monitor Atmospheric Pollution"  # {08F9127E-2F54-4fd4-9B1D-45ECBA8FBE87} → {2301F03C-D6C2-4383-A739-76B255A40C9F}
   - name: "fae-bridge_weather_conditions"
     guid: "{29B1C681-D8E7-4ed9-98C3-93732B26A40F}"
     type: "Interface"
@@ -67,7 +67,7 @@ elements:
       It contains analogue inputs from which functionality in the Manage Traffic Functional Area can create data objects about noise that may be general for a geographic area, or be from individual points at or near a road network in which ITS Services are to be deployed.
     links:
       - "Aggregation «component of» → fae-environmental_inputs"  # {F933605D-4FC1-4400-956E-09886CD7E877} → {D0FEBD4B-50EE-4417-80B2-039ED6F654FE}
-      - "Association «OUT» → 3.4.3 Monitor Noise Pollution"  # {00E36AE0-07C3-416c-B2F6-F06B3AD80B32} → {98A1C8C7-D559-4329-B6AA-0846C08512D4}
+      - "Association «OUT» → F3.4.3 Monitor Noise Pollution"  # {00E36AE0-07C3-416c-B2F6-F06B3AD80B32} → {98A1C8C7-D559-4329-B6AA-0846C08512D4}
   - name: "fae-tunnel_atmospheric_conditions"
     guid: "{3DA87F66-04F0-4aef-8DA6-C564EB34C337}"
     type: "Interface"
@@ -93,7 +93,7 @@ elements:
       It contains analogue inputs from which functionality in the Manage Traffic Functional Area can create data objects about the weather conditions, e.g. temperature, plus wind speed and direction, that may be general in a geographic area, or be from individual points at or near the road network in which ITS Services are to be deployed.
     links:
       - "Aggregation «component of» → fae-environmental_inputs"  # {ECAA4C78-AA69-4550-9325-0CA23C569CA1} → {D0FEBD4B-50EE-4417-80B2-039ED6F654FE}
-      - "Association «OUT» → 3.4.1 Monitor Weather Conditions"  # {B997084C-BD5D-4994-B4E2-8D98031FC88F} → {F8D3DDE2-231E-46c2-B4D5-EDD8551425F7}
+      - "Association «OUT» → F3.4.1 Monitor Weather Conditions"  # {B997084C-BD5D-4994-B4E2-8D98031FC88F} → {F8D3DDE2-231E-46c2-B4D5-EDD8551425F7}
   - name: "fbti-current_status"
     guid: "{5E3FE3AB-70F8-4686-BDFA-4848AA399A18}"
     type: "Interface"
@@ -1751,7 +1751,7 @@ elements:
       - "Aggregation «component of» → fft-mffo_inputs"  # {C736DCD0-35E0-4abb-B0E4-4D0349C7E317} → {5AD13A9F-99E7-42bd-A30B-528626A5B517}
       - "Association «OUT» → F8.4 Manage FTEP Preparation"  # {1EF73C39-32A5-4242-A863-262CF60589DB} → {BFCB99B2-2949-40c9-A40F-053438AB6BBC}
       - "Association «OUT» → F8.4.3 Provide Freight Transport Operations Manager Interface"  # {30E565E0-2255-4867-A903-E1125175DA16} → {8FBDF54B-6B59-4624-BAA2-0843DE946DB2}
-  - name: "fft.fton-updated_Freight_Vehicle_capabilities"
+  - name: "fft.ftom-updated_Freight_Vehicle_capabilities"
     guid: "{4B985ACE-2F47-4222-8850-4333CC59AB4D}"
     type: "Interface"
     stereotype: "FRAME_Low_Level_Data_Flow"
@@ -2214,7 +2214,7 @@ elements:
       - "Aggregation «component of» → From Multi-Modal System"  # {A04B173E-09C6-408f-8BA1-CC378B35862B} → {4E4D632B-D78C-4196-BEAF-D829B099E7AF}
       - "Aggregation «component of» → fmms.mmc-crossing_request"  # {8E4A773D-AD82-48cb-AB85-A81DB86A402F} → {5BB90974-ECDD-49cc-82E5-FEE837E2B46D}
       - "Association «OUT» → F3.1.2 Provide Inter-urban Traffic Management"  # {75C5843A-5ECE-4bf5-BF92-2E30CA786291} → {2EE2E618-41FE-4ac5-9413-C23D9DAF7E9E}
-      - "Association «OUT» → F3.1.2.14 Implement Inter-urban Management Traffic Strategy"  # {62ABDD4E-57BF-46ff-A402-13268DFE4B18} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
+      - "Association «OUT» → F3.1.2.14 Implement Inter-urban Traffic Management Strategy"  # {62ABDD4E-57BF-46ff-A402-13268DFE4B18} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
       - "Association «OUT» → F3.1.2.14.2 Output c&i to Drivers using Inter-urban Roads"  # {08030246-D93D-4a85-8A5B-1A3A5D0D6786} → {22A5DE67-505F-47ab-B208-CA8C3B51B67C}
   - name: "fmms.mmc-urban_crossing_command"
     guid: "{AD6488D6-CAE0-471d-A000-70EE2F2BC85C}"
@@ -3272,7 +3272,7 @@ elements:
     note: |
       It consists of input from the Road Network Operator from which data objects are created that provides confirmation that some or all of the previously suggested actions to mitigate the impact of either current or predicted environmental conditions are to be implemented and is for use by functionality in the Manage Traffic Functional Area.  Details of which of the actions are to be implemented are included in the information objects.
     links:
-      - "Association «OUT» → 3.4.7 Provide Environmental Management Operator Interface"  # {CEE79FE9-F1AD-4f44-B4D0-AE3B6EE7AA73} → {04BDF1B0-6E99-487e-B7CD-7A800FAEC464}
+      - "Association «OUT» → F3.4.7 Provide Environmental Management Operator Interface"  # {CEE79FE9-F1AD-4f44-B4D0-AE3B6EE7AA73} → {04BDF1B0-6E99-487e-B7CD-7A800FAEC464}
   - name: "fo.rno-create_incident_strategy"
     guid: "{E2AAA6DB-942E-4ed8-B34D-7BEB7D25281A}"
     type: "Interface"
@@ -3441,7 +3441,7 @@ elements:
     note: |
       It consists of input from the Road Network Operator from which data objects are created that provide a request for current and predicted data to be used in determining the appropriate environmental management strategies and is for use by functionality in the Manage Traffic Functional Area.
     links:
-      - "Association «OUT» → 3.4.7 Provide Environmental Management Operator Interface"  # {1DC94AD5-9784-42a9-8C70-D44D960818D2} → {04BDF1B0-6E99-487e-B7CD-7A800FAEC464}
+      - "Association «OUT» → F3.4.7 Provide Environmental Management Operator Interface"  # {1DC94AD5-9784-42a9-8C70-D44D960818D2} → {04BDF1B0-6E99-487e-B7CD-7A800FAEC464}
   - name: "fo.rno-request_incident_data_analysis"
     guid: "{AE898639-D560-4c9f-B21C-BC633D405A79}"
     type: "Interface"
@@ -3765,8 +3765,8 @@ elements:
     links:
       - "Aggregation «component of» → From Other Related System"  # {A4FE4198-03BA-4e73-AD0B-0B697627F4CE} → {F61B6D7E-F9F8-464e-8AE2-B0868F09146E}
       - "Aggregation «component of» → fors-mt_inputs"  # {238522F2-1856-4d29-B545-E68B2374BA9C} → {EEA64EEA-EFEF-431e-8231-DE877912EC8C}
-      - "Association «OUT» → 3.4.8 Manage Environmental Conditions Data Store"  # {71E0E7A5-42F3-4c50-8072-7E6F63C56C3E} → {01FE39DB-280D-4a2c-92D6-076899B2A6F1}
       - "Association «OUT» → F3.4 Provide Environmental Information"  # {9288B953-CAA4-43d3-937F-02BC3AB2159A} → {76CF90A1-6DE9-446b-9FA4-8F7412DA0B70}
+      - "Association «OUT» → F3.4.8 Manage Environmental Conditions Data Store"  # {71E0E7A5-42F3-4c50-8072-7E6F63C56C3E} → {01FE39DB-280D-4a2c-92D6-076899B2A6F1}
   - name: "fors.hgvm-hazardous_goods_vehicle_route_details"
     guid: "{700737C5-8249-406f-B210-6AFEB48D82C1}"
     type: "Interface"
@@ -4886,7 +4886,7 @@ elements:
       It contains input from Traffic from which data objects are created that enable the identity to be determined of a Vehicle that has committed a violation in the way it is using the inter-urban road network.
     links:
       - "Aggregation «component of» → ftrfc-inter-urban_data"  # {710939F0-F32C-403f-BAC2-EFB4B7165F57} → {A76A66AD-FB4A-455a-9ABD-8AFA3E16D49D}
-      - "Association «OUT» → F3.1.2.14 Implement Inter-urban Management Traffic Strategy"  # {1EDA388C-2D95-49c4-AF1B-7F1AE71D5C86} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
+      - "Association «OUT» → F3.1.2.14 Implement Inter-urban Traffic Management Strategy"  # {1EDA388C-2D95-49c4-AF1B-7F1AE71D5C86} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
       - "Association «OUT» → F3.1.2.14.5 Detect Violations on Inter-urban Roads"  # {F5D86D6A-BBE3-49fa-A1F6-7A6C90092728} → {7C52A4CB-19B8-4526-9FA6-6325C40A4A62}
   - name: "ftrfc-inter-urban_vehicle_presence_for_messages"
     guid: "{87909A77-8F63-406d-B7C1-867061733267}"
@@ -4899,7 +4899,7 @@ elements:
       It contains input from Traffic from which data objects are created that provide data indicating the presence of an approaching vehicle using the inter-urban road network.
     links:
       - "Aggregation «component of» → ftrfc-inter-urban_data"  # {12A174D2-45CB-4508-B4A4-BEF157262EF2} → {A76A66AD-FB4A-455a-9ABD-8AFA3E16D49D}
-      - "Association «OUT» → F3.1.2.14 Implement Inter-urban Management Traffic Strategy"  # {5A1995FA-01C8-4a85-B9E8-E3E7F2185174} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
+      - "Association «OUT» → F3.1.2.14 Implement Inter-urban Traffic Management Strategy"  # {5A1995FA-01C8-4a85-B9E8-E3E7F2185174} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
       - "Association «OUT» → F3.1.2.14.6 Send Messages to Approaching Inter-urban Vehicles"  # {AB9D1946-596E-4edd-93CE-5BCD31EEB571} → {69EDBF36-8BA1-4601-8620-A82C6FCF84C2}
   - name: "ftrfc-local_traffic_presence_data"
     guid: "{188E766F-C02F-4ba6-81F3-555031F2E4BB}"
@@ -5897,8 +5897,8 @@ elements:
     links:
       - "Aggregation «component of» → From Weather Systems"  # {9FB1B2CE-997D-4d45-BE60-61676674A952} → {B013B1F3-2D52-4109-BA31-E746309E687D}
       - "Aggregation «component of» → fws-mt_inputs"  # {694E241C-D858-4c53-93E3-62A2BF3047CE} → {1BC755AB-FD44-43f9-A559-3B173F9FF289}
-      - "Association «OUT» → 3.4.1 Monitor Weather Conditions"  # {C2F4D647-D0A0-4ac9-9EA1-36FB32E34256} → {F8D3DDE2-231E-46c2-B4D5-EDD8551425F7}
       - "Association «OUT» → F3.4 Provide Environmental Information"  # {413EE5A9-DF60-45d4-AC16-1960746C52BB} → {76CF90A1-6DE9-446b-9FA4-8F7412DA0B70}
+      - "Association «OUT» → F3.4.1 Monitor Weather Conditions"  # {C2F4D647-D0A0-4ac9-9EA1-36FB32E34256} → {F8D3DDE2-231E-46c2-B4D5-EDD8551425F7}
   - name: "fws-weather_data_for_incidents"
     guid: "{FA8CA04D-6117-4c98-933C-5200E3E962FA}"
     type: "Interface"
@@ -10647,7 +10647,7 @@ elements:
     note: |
       It contains data objects that provide information about atmospheric pollution in the geographic area that has been collected by sensors connected to the atmospheric pollution monitoring functionality in the Manage Traffic Functional Area.
     links:
-      - "Association «OUT» → 3.4.8 Manage Environmental Conditions Data Store"  # {AE9728F9-2261-4487-AC47-7046B5F404BA} → {01FE39DB-280D-4a2c-92D6-076899B2A6F1}
+      - "Association «OUT» → F3.4.8 Manage Environmental Conditions Data Store"  # {AE9728F9-2261-4487-AC47-7046B5F404BA} → {01FE39DB-280D-4a2c-92D6-076899B2A6F1}
   - name: "mt_bridge_action_definitions"
     guid: "{56B5408A-3F5C-4993-B1A1-AAB0A24FE0E1}"
     type: "Interface"
@@ -10986,7 +10986,7 @@ elements:
     note: |
       It contains data objects that provide confirmation from the Road Network Operator that the suggested environmental actions are to be implemented.
     links:
-      - "Association «OUT» → 3.4.11 Analyse Environmental Data and Implement Actions"  # {E4EECAC8-0DF6-474c-9474-452108DBFE01} → {76BDDFC3-4323-4702-93BB-5FFF2B7ADA94}
+      - "Association «OUT» → F3.4.11 Analyse Environmental Data and Implement Actions"  # {E4EECAC8-0DF6-474c-9474-452108DBFE01} → {76BDDFC3-4323-4702-93BB-5FFF2B7ADA94}
   - name: "mt_confirm_equipment_maintenance"
     guid: "{24618C5C-EE30-45cc-A201-5DBFB964975C}"
     type: "Interface"
@@ -11074,7 +11074,7 @@ elements:
     note: |
       It contains data objects that provide details of the environmental actions that are to be implemented because they have been confirmed by the Road Network Operator, for loading into the store of Environmental Data.
     links:
-      - "Association «OUT» → 3.4.8 Manage Environmental Conditions Data Store"  # {B135384E-84CB-4cad-99EC-4C7139C1CD77} → {01FE39DB-280D-4a2c-92D6-076899B2A6F1}
+      - "Association «OUT» → F3.4.8 Manage Environmental Conditions Data Store"  # {B135384E-84CB-4cad-99EC-4C7139C1CD77} → {01FE39DB-280D-4a2c-92D6-076899B2A6F1}
   - name: "mt_confirmed_equipment_maintenance_activity"
     guid: "{25029724-F684-427f-A6DD-45197EF77C73}"
     type: "Interface"
@@ -11151,7 +11151,7 @@ elements:
     note: |
       It contains data objects that provide information that shows the current traffic conditions for the inter-urban road network.
     links:
-      - "Association «OUT» → F3.1.2.14 Implement Inter-urban Management Traffic Strategy"  # {433ABCB7-CB8D-47f3-A8E5-ACFB8DA7D000} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
+      - "Association «OUT» → F3.1.2.14 Implement Inter-urban Traffic Management Strategy"  # {433ABCB7-CB8D-47f3-A8E5-ACFB8DA7D000} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
       - "Association «OUT» → F3.1.2.14.4 Output Inter-urban Traffic Commands & Messages"  # {FF824431-547A-41cc-85B2-FEDA96AED593} → {2945E366-E8A6-4bd7-A76A-C95CBA42DDAC}
   - name: "mt_current_roadside_equipment_faults"
     guid: "{A877788F-7031-440a-86F9-4332ED735A82}"
@@ -11374,7 +11374,7 @@ elements:
     note: |
       It contains data objects that provide the current and historical environmental data from the store of Environmental Conditions Data that are to be used in predicting future environmental conditions.
     links:
-      - "Association «OUT» → 3.4.4 Predict Environmental Conditions"  # {4F49AB51-86D1-4e0b-9E3B-E629CC3AD0A7} → {41D2B8F2-72D6-4e0a-99F5-878F109B7A78}
+      - "Association «OUT» → F3.4.4 Predict Environmental Conditions"  # {4F49AB51-86D1-4e0b-9E3B-E629CC3AD0A7} → {41D2B8F2-72D6-4e0a-99F5-878F109B7A78}
   - name: "mt_environmental_conditions_operator_requests"
     guid: "{F83FAD4E-D5A7-4eff-933F-F7DEF5FB088A}"
     type: "Interface"
@@ -11385,7 +11385,7 @@ elements:
     note: |
       It contains data objects that provide requests that have been input by the Road Network Operator.  These requests may be for all or part of the contents from the store of Environmental Data to be output (optionally including, data analysis), data to be sent to other functions in the Manage Traffic Functional Area, or to other Functional Areas and functionality, or to the environmental conditions prediction function.
     links:
-      - "Association «OUT» → 3.4.8 Manage Environmental Conditions Data Store"  # {C6A838FE-E963-4157-82E3-BE1076FE45C6} → {01FE39DB-280D-4a2c-92D6-076899B2A6F1}
+      - "Association «OUT» → F3.4.8 Manage Environmental Conditions Data Store"  # {C6A838FE-E963-4157-82E3-BE1076FE45C6} → {01FE39DB-280D-4a2c-92D6-076899B2A6F1}
   - name: "mt_environmental_conditions_operator_responses"
     guid: "{39BC5923-DF54-4e12-89EA-DF7A93D74E3C}"
     type: "Interface"
@@ -11396,7 +11396,7 @@ elements:
     note: |
       It contains data objects that provide the responses to requests previously input by the Road Network Operator.  As a minimum, these responses will contain data from the store of Environmental Data, but they may also contain indications that a particular action has been performed.
     links:
-      - "Association «OUT» → 3.4.7 Provide Environmental Management Operator Interface"  # {B2D4EFEC-29CC-4dab-B617-D2C204A788A5} → {04BDF1B0-6E99-487e-B7CD-7A800FAEC464}
+      - "Association «OUT» → F3.4.7 Provide Environmental Management Operator Interface"  # {B2D4EFEC-29CC-4dab-B617-D2C204A788A5} → {04BDF1B0-6E99-487e-B7CD-7A800FAEC464}
   - name: "mt_environmental_conditions_prediction_store_data"
     guid: "{955FA027-8FFC-4fc1-AD75-485D752E101C}"
     type: "Interface"
@@ -11407,7 +11407,7 @@ elements:
     note: |
       It contains data objects that provide predictions of environmental conditions that are to be loaded into the store of Environmental Data.  These data objects will then be available for use by other functionality.
     links:
-      - "Association «OUT» → 3.4.8 Manage Environmental Conditions Data Store"  # {DA60AAE3-BA13-490d-B802-13F0D083AEBE} → {01FE39DB-280D-4a2c-92D6-076899B2A6F1}
+      - "Association «OUT» → F3.4.8 Manage Environmental Conditions Data Store"  # {DA60AAE3-BA13-490d-B802-13F0D083AEBE} → {01FE39DB-280D-4a2c-92D6-076899B2A6F1}
   - name: "mt_environmental_conditions_static_data_update"
     guid: "{743878D1-D05F-469b-B540-DD96D7F61483}"
     type: "Interface"
@@ -11418,7 +11418,7 @@ elements:
     note: |
       It contains data objects that provide information to be loaded in the store of Environmental Data.  These data objects will include such things as details of the terrain and the period for which predictions must be made.
     links:
-      - "Association «OUT» → 3.4.8 Manage Environmental Conditions Data Store"  # {7DF74804-2C0B-4bca-9ABD-DE27AE1A9F51} → {01FE39DB-280D-4a2c-92D6-076899B2A6F1}
+      - "Association «OUT» → F3.4.8 Manage Environmental Conditions Data Store"  # {7DF74804-2C0B-4bca-9ABD-DE27AE1A9F51} → {01FE39DB-280D-4a2c-92D6-076899B2A6F1}
   - name: "mt_environmental_data_for_analysis"
     guid: "{32DE69BF-7514-4b9f-9480-FE2F2F982E96}"
     type: "Interface"
@@ -11429,7 +11429,7 @@ elements:
     note: |
       It contains data objects that provide current and predicted environmental data from the store of Environmental Data that is to be analysed by the Analyse Environmental Data and Implement Actions function.
     links:
-      - "Association «OUT» → 3.4.11 Analyse Environmental Data and Implement Actions"  # {854779B8-7469-41c4-81DF-E3DC5CC4AAAE} → {76BDDFC3-4323-4702-93BB-5FFF2B7ADA94}
+      - "Association «OUT» → F3.4.11 Analyse Environmental Data and Implement Actions"  # {854779B8-7469-41c4-81DF-E3DC5CC4AAAE} → {76BDDFC3-4323-4702-93BB-5FFF2B7ADA94}
   - name: "mt_environmental_incident_inputs"
     guid: "{7430B9EE-D5FC-4633-9B3B-22191938810C}"
     type: "Interface"
@@ -11452,7 +11452,7 @@ elements:
     note: |
       It contains data objects that provide information to be used in the output of environmental information to Drivers and Travellers and includes an indication of whether the output is to be one or both of these.
     links:
-      - "Association «OUT» → 3.4.10 Output Environmental Information"  # {AF04EB4F-EAD1-4b6f-A3B2-7293E599C494} → {BB6D4E31-446A-40d8-AE28-AE8BC026065E}
+      - "Association «OUT» → F3.4.10 Output Environmental Information"  # {AF04EB4F-EAD1-4b6f-A3B2-7293E599C494} → {BB6D4E31-446A-40d8-AE28-AE8BC026065E}
   - name: "mt_equipment_maintenance_confirmed"
     guid: "{B03C9C78-DC7D-49da-AA45-745A7C038DD1}"
     type: "Interface"
@@ -11907,7 +11907,7 @@ elements:
     note: |
       It contains data objects that provide commands for a lane use setting to be imposed (or a current setting cleared) on one or more parts of the inter-urban road network.  The request will comprise details of the actual lane use indications that are to be displayed, plus the identities of the lane and speed (l&s) command output devices at which the display(s) are to appear.  They will provide indications that will enable Drivers to move their vehicles to comply with the new lane use settings in an orderly and safe manner, without causing any hazard to other vehicles, or other types of road users.
     links:
-      - "Association «OUT» → F3.1.2.14 Implement Inter-urban Management Traffic Strategy"  # {6786D3A7-75B7-4aa3-B2CF-820049C56A85} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
+      - "Association «OUT» → F3.1.2.14 Implement Inter-urban Traffic Management Strategy"  # {6786D3A7-75B7-4aa3-B2CF-820049C56A85} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
       - "Association «OUT» → F3.1.2.14.3 Output Lane & Speed Messages to Inter-urban Roads"  # {6A0A41B0-3A13-449a-8588-43CB2716D070} → {59BFC5CB-B946-4dc3-BA1D-C345685165D1}
   - name: "mt_inter-urban_lane_management_requests"
     guid: "{7605B2FD-6FA6-4146-8007-C24C75C6F8E2}"
@@ -11930,7 +11930,7 @@ elements:
     note: |
       It contains data objects that provide details of the current lane use setting that have been imposed on one or more parts of the inter-urban road network.  The details may include the identity and/or location of the lane(s), type(s) of Vehicle that are prohibited (or allowed) and the direction of travel.
     links:
-      - "Association «OUT» → F3.1.2.14 Implement Inter-urban Management Traffic Strategy"  # {FC072DF8-0BBB-4a8a-9E84-EFC83693CB9F} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
+      - "Association «OUT» → F3.1.2.14 Implement Inter-urban Traffic Management Strategy"  # {FC072DF8-0BBB-4a8a-9E84-EFC83693CB9F} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
       - "Association «OUT» → F3.1.2.14.5 Detect Violations on Inter-urban Roads"  # {E0E6AC8B-8C6D-40e7-A4E5-1AEEFA03D3A9} → {7C52A4CB-19B8-4526-9FA6-6325C40A4A62}
   - name: "mt_inter-urban_network_long-term_prediction_data"
     guid: "{588CAA39-A76C-4a06-B79F-FFB11F22E150}"
@@ -12087,7 +12087,7 @@ elements:
     note: |
       It contains data objects that provide commands for a legal speed setting to be imposed (or a current setting cleared) on one or more parts of the inter-urban road network.  The request will comprise details of the actual speed indications that are to be displayed, plus the identity of the lane and speed (l&s) output devices at which the display(s) are to appear.  They will provide indications that will enable drivers to change the speed of their vehicles in an orderly and safe manner, without causing any hazard to other vehicles, or other types of road users.
     links:
-      - "Association «OUT» → F3.1.2.14 Implement Inter-urban Management Traffic Strategy"  # {D97D39DC-57E7-4470-86D3-F6361A5C0561} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
+      - "Association «OUT» → F3.1.2.14 Implement Inter-urban Traffic Management Strategy"  # {D97D39DC-57E7-4470-86D3-F6361A5C0561} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
       - "Association «OUT» → F3.1.2.14.3 Output Lane & Speed Messages to Inter-urban Roads"  # {57DB5EB6-8EE7-41cc-A83F-87F3667565C8} → {59BFC5CB-B946-4dc3-BA1D-C345685165D1}
   - name: "mt_inter-urban_speed_limit_changes"
     guid: "{DA9DFD83-56D9-43ed-94B5-7CD314B510C6}"
@@ -12719,7 +12719,7 @@ elements:
     note: |
       It contains data objects that provide about noise pollution in the geographic area managed by the functionality.  Sensors that are part of other functionality in the Manage Traffic Functional Area will have collected this data.
     links:
-      - "Association «OUT» → 3.4.8 Manage Environmental Conditions Data Store"  # {9A886646-353F-4958-9C88-FCE536E8B196} → {01FE39DB-280D-4a2c-92D6-076899B2A6F1}
+      - "Association «OUT» → F3.4.8 Manage Environmental Conditions Data Store"  # {9A886646-353F-4958-9C88-FCE536E8B196} → {01FE39DB-280D-4a2c-92D6-076899B2A6F1}
   - name: "mt_occupancy_time_for_carpark_space"
     guid: "{43C04622-188A-4aa4-9176-FFAAA5FC96A4}"
     type: "Interface"
@@ -13063,7 +13063,7 @@ elements:
     note: |
       It contains data objects that provide information that has been read from the store of Environmental Data.  The information will have been provided in response to a previous request from the store management functionality.
     links:
-      - "Association «OUT» → 3.4.8 Manage Environmental Conditions Data Store"  # {DFAA319B-B2FA-4798-932B-2D7994CA33EC} → {01FE39DB-280D-4a2c-92D6-076899B2A6F1}
+      - "Association «OUT» → F3.4.8 Manage Environmental Conditions Data Store"  # {DFAA319B-B2FA-4798-932B-2D7994CA33EC} → {01FE39DB-280D-4a2c-92D6-076899B2A6F1}
   - name: "mt_read_incident_data"
     guid: "{AF0789BC-D2E4-4cc8-88E1-6A08A4FC1C09}"
     type: "Interface"
@@ -13285,7 +13285,7 @@ elements:
     note: |
       It contains data objects that provide a request from the Road Network Operator that current and predicted data is extracted from the store of Environmental Conditions Data and sent to the Determine Environmental Actions function for analysis.
     links:
-      - "Association «OUT» → 3.4.8 Manage Environmental Conditions Data Store"  # {12566158-3861-478f-BD5A-BA4C7716D97A} → {01FE39DB-280D-4a2c-92D6-076899B2A6F1}
+      - "Association «OUT» → F3.4.8 Manage Environmental Conditions Data Store"  # {12566158-3861-478f-BD5A-BA4C7716D97A} → {01FE39DB-280D-4a2c-92D6-076899B2A6F1}
   - name: "mt_request_for_stored_incident_data"
     guid: "{7C663FBC-EB0B-4d22-BFF2-6AED6A44A65F}"
     type: "Interface"
@@ -13580,7 +13580,7 @@ elements:
     note: |
       It contains data objects that provide details of the inter-urban traffic management strategy that has been selected for implementation in order to manage the traffic using the inter-urban road network.
     links:
-      - "Association «OUT» → F3.1.2.14 Implement Inter-urban Management Traffic Strategy"  # {7FBED3E2-E264-4e7f-A1FE-FA4328FA1981} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
+      - "Association «OUT» → F3.1.2.14 Implement Inter-urban Traffic Management Strategy"  # {7FBED3E2-E264-4e7f-A1FE-FA4328FA1981} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
       - "Association «OUT» → F3.1.2.14.4 Output Inter-urban Traffic Commands & Messages"  # {D068E37C-4464-450b-B296-290BE2333FEC} → {2945E366-E8A6-4bd7-A76A-C95CBA42DDAC}
   - name: "mt_send_traffic_prediction_results_for_output"
     guid: "{20CD3904-9C65-49c4-A8E8-184FD070C616}"
@@ -13783,7 +13783,7 @@ elements:
     note: |
       It contains data objects that provide suggested actions resulting from the analysis of current and predicted environmental data by the Analyse Environmental Data and Implement Actions function.  They are for display to and confirmation by the Road Network
     links:
-      - "Association «OUT» → 3.4.7 Provide Environmental Management Operator Interface"  # {6962AD63-99FA-49fa-848C-EC104E25E895} → {04BDF1B0-6E99-487e-B7CD-7A800FAEC464}
+      - "Association «OUT» → F3.4.7 Provide Environmental Management Operator Interface"  # {6962AD63-99FA-49fa-848C-EC104E25E895} → {04BDF1B0-6E99-487e-B7CD-7A800FAEC464}
   - name: "mt_traffic_prediction_results"
     guid: "{0633AC1F-1768-40cf-9669-6C8F8F22BFE6}"
     type: "Interface"
@@ -14702,7 +14702,7 @@ elements:
     note: |
       It contains data objects that provide information about weather conditions in the geographic area managed by the functionality.  This information will be in two parts, one for current data and the other for forecast data.  Sensors that are part of other functionality in the Manage Traffic Functional Area will have collected the current data.  The forecast data will have been obtained from an external specialist system.
     links:
-      - "Association «OUT» → 3.4.8 Manage Environmental Conditions Data Store"  # {B80A5C7B-D7D4-4f3f-9490-E2D8C2FBEB12} → {01FE39DB-280D-4a2c-92D6-076899B2A6F1}
+      - "Association «OUT» → F3.4.8 Manage Environmental Conditions Data Store"  # {B80A5C7B-D7D4-4f3f-9490-E2D8C2FBEB12} → {01FE39DB-280D-4a2c-92D6-076899B2A6F1}
   - name: "pepf.mt_accident_warning"
     guid: "{25D6EFB6-E525-44b9-AD2A-5611D05B6B5E}"
     type: "Interface"
@@ -16760,7 +16760,7 @@ elements:
     links:
       - "Aggregation «component of» → psef.mt_emergency_request"  # {1785004A-DE9A-428f-AF6D-6636D434513A} → {3F63EF26-6AD4-4ab8-8685-9AF1F5A74B4A}
       - "Association «OUT» → F3.1.2 Provide Inter-urban Traffic Management"  # {F2BDC469-D0B2-44e5-BAF1-1436F50F8EF4} → {2EE2E618-41FE-4ac5-9413-C23D9DAF7E9E}
-      - "Association «OUT» → F3.1.2.14 Implement Inter-urban Management Traffic Strategy"  # {2C795E3B-0607-4550-B4B7-B5D65B1B8783} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
+      - "Association «OUT» → F3.1.2.14 Implement Inter-urban Traffic Management Strategy"  # {2C795E3B-0607-4550-B4B7-B5D65B1B8783} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
       - "Association «OUT» → F3.1.2.14.4 Output Inter-urban Traffic Commands & Messages"  # {61CCF1E9-9379-43a4-AA63-82DB2F74D9EA} → {2945E366-E8A6-4bd7-A76A-C95CBA42DDAC}
   - name: "psef.mt_inter-urban_virtual_coned_area_request"
     guid: "{759B3F3D-E001-4876-91FE-092F27563A37}"
@@ -16774,7 +16774,7 @@ elements:
     links:
       - "Aggregation «component of» → psef.mt_virtual_coned_area_requests"  # {A811A433-5FEE-49ce-8BE1-DA8C3C6E3A37} → {02C5C69E-2B7E-45e2-BE05-BEA0A25FFF49}
       - "Association «OUT» → F3.1.2 Provide Inter-urban Traffic Management"  # {CB8A404F-46F4-4be6-BD2D-521703D799C4} → {2EE2E618-41FE-4ac5-9413-C23D9DAF7E9E}
-      - "Association «OUT» → F3.1.2.14 Implement Inter-urban Management Traffic Strategy"  # {BE81240F-81BE-4d2d-9E40-F3CEFD999B1C} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
+      - "Association «OUT» → F3.1.2.14 Implement Inter-urban Traffic Management Strategy"  # {BE81240F-81BE-4d2d-9E40-F3CEFD999B1C} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
       - "Association «OUT» → F3.1.2.14.4 Output Inter-urban Traffic Commands & Messages"  # {CCD59666-7FDB-40bd-B231-C3C2F6D0C51C} → {2945E366-E8A6-4bd7-A76A-C95CBA42DDAC}
   - name: "psef.mt_urban_emergency_route_request"
     guid: "{01C6D6B9-E132-49a5-B35D-D74AF8EF84A4}"
@@ -23908,7 +23908,7 @@ elements:
     note: |
       It contains outputs to the Other Mode Freight Systems that have been created from data objects provided by functionality in the Manage Freight and Fleet Operations Functional Area and include a request to other transport modes for details of services they can provide to supplement/replace the services they are already expected to provide for the implementation of a Transport Execution Plan.
     links:
-      - "Aggregation «component of» → tmmms-mffo_outputs"  # {E8A29065-4451-4021-AAAA-FE5977965BEE} → {73D58488-FC92-4457-9EA5-BF2ADFF91972}
+      - "Aggregation «component of» → tmms-mffo_outputs"  # {E8A29065-4451-4021-AAAA-FE5977965BEE} → {73D58488-FC92-4457-9EA5-BF2ADFF91972}
   - name: "tmms.omfs-implement_FTLI_move"
     guid: "{435E6283-030E-4cbc-937B-670C6363B00D}"
     type: "Interface"
@@ -23919,7 +23919,7 @@ elements:
     note: |
       It contains outputs to the Other Mode Freight Systems that have been created from data objects provided by functionality in the Manage Freight and Fleet Operations Functional Area and include information about the required movement of the Freight Transport Load Item(s) that the Multi-Modal Management System is expected to make according to the Freight Transport Execution Plan that is being implemented for them.
     links:
-      - "Aggregation «component of» → tmmms-mffo_outputs"  # {3F78A380-D452-478c-8A97-444784C791FC} → {73D58488-FC92-4457-9EA5-BF2ADFF91972}
+      - "Aggregation «component of» → tmms-mffo_outputs"  # {3F78A380-D452-478c-8A97-444784C791FC} → {73D58488-FC92-4457-9EA5-BF2ADFF91972}
   - name: "tmms.omfs-other_mode_transport_booking_request"
     guid: "{1ABC5462-05C2-4e8b-9865-D27F07964013}"
     type: "Interface"
@@ -23934,7 +23934,7 @@ elements:
       - destination,
       - required arrival time.
     links:
-      - "Aggregation «component of» → tmmms-mffo_outputs"  # {77A440D5-63A3-4a35-B82F-993A0F3A09C6} → {73D58488-FC92-4457-9EA5-BF2ADFF91972}
+      - "Aggregation «component of» → tmms-mffo_outputs"  # {77A440D5-63A3-4a35-B82F-993A0F3A09C6} → {73D58488-FC92-4457-9EA5-BF2ADFF91972}
   - name: "tmms.omfs-request_multi-modal_service_data"
     guid: "{EDB841BB-C140-49e8-B41A-09BE47C282D2}"
     type: "Interface"
@@ -23945,7 +23945,7 @@ elements:
     note: |
       It contains outputs to the Other Mode Freight System that have been created from data objects provided by functionality in the Manage Freight and Fleet Operations Functional Area that are a request for data about non-road based freight transport services relevant to the Freight Transport Execution Plan currently being prepared, e.g. airlines, ferry companies, freight train operators and barge operators.
     links:
-      - "Aggregation «component of» → tmmms-mffo_outputs"  # {A0409AD6-5E04-4445-A603-1D4B800D1219} → {73D58488-FC92-4457-9EA5-BF2ADFF91972}
+      - "Aggregation «component of» → tmms-mffo_outputs"  # {A0409AD6-5E04-4445-A603-1D4B800D1219} → {73D58488-FC92-4457-9EA5-BF2ADFF91972}
   - name: "tmo.ptmo-plans"
     guid: "{0428BCC4-253B-45a1-B0D6-A840D533BFD3}"
     type: "Interface"

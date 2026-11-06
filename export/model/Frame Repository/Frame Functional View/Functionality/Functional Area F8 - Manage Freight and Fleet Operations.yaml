@@ -25,7 +25,7 @@ elements:
       - "Association «IN» → td-mffo_outputs"  # {8D264C28-14ED-45d0-B1EA-D71F8533E96D} → {A9C03C7F-AEAC-485d-B332-C0AE3BFD88F3}
       - "Association «IN» → tesp-mffo_outputs"  # {F9320F5B-5C11-45bb-8389-6D512D296205} → {35D3A8CC-3BD0-49b9-A569-4E87E1D1C113}
       - "Association «IN» → tft-mffo_outputs"  # {B4602542-1C52-4674-9E8B-28EB5F804D2E} → {819ACC91-6ECA-4c86-B589-F9F38827F4AB}
-      - "Association «IN» → tmmms-mffo_outputs"  # {3F9B1C75-F7E9-499b-BDC0-17943CF84485} → {73D58488-FC92-4457-9EA5-BF2ADFF91972}
+      - "Association «IN» → tmms-mffo_outputs"  # {3F9B1C75-F7E9-499b-BDC0-17943CF84485} → {73D58488-FC92-4457-9EA5-BF2ADFF91972}
       - "Association «IN» → ttp-mmfo_outputs"  # {E1EC6675-E596-41a2-9001-CC7F6164E004} → {2DF31441-BDD5-41b6-9FFB-3C0D8B8567DE}
   - name: "F8.4 Manage FTEP Preparation"
     guid: "{BFCB99B2-2949-40c9-A40F-053438AB6BBC}"

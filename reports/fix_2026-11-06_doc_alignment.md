@@ -1,0 +1,87 @@
+# Corrections from D4.5 (2021)
+
+Script: `tools/fixes/2026-11-06_doc_alignment_D4.5.py`; see `reports/compare_D4.2_D4.5_vs_model.md`.
+
+- function name prefix: `3.4.1 Monitor Weather Conditions` → `F3.4.1 Monitor Weather Conditions`
+- function name prefix: `3.4.10 Output Environmental Information` → `F3.4.10 Output Environmental Information`
+- function name prefix: `3.4.11 Analyse Environmental Data and Implement Actions` → `F3.4.11 Analyse Environmental Data and Implement Actions`
+- function name prefix: `3.4.2 Monitor Atmospheric Pollution` → `F3.4.2 Monitor Atmospheric Pollution`
+- function name prefix: `3.4.3 Monitor Noise Pollution` → `F3.4.3 Monitor Noise Pollution`
+- function name prefix: `3.4.4 Predict Environmental Conditions` → `F3.4.4 Predict Environmental Conditions`
+- function name prefix: `3.4.7 Provide Environmental Management Operator Interface` → `F3.4.7 Provide Environmental Management Operator Interface`
+- function name prefix: `3.4.8 Manage Environmental Conditions Data Store` → `F3.4.8 Manage Environmental Conditions Data Store`
+- function name (D4.5): `F3.1.2.14 Implement Inter-urban Management Traffic Strategy` → `F3.1.2.14 Implement Inter-urban Traffic Management Strategy`
+- User Need number (D4.5 Part 12): `1.1.4` → `1.2.4`
+- User Need 1.2.4 moved under topic 1.2 Data Exchange
+- User Need topic name (D4.5): `1.3 Adapability` → `1.3 Adaptability`
+- User Need topic name (D4.5): `1.4 Constrains` → `1.4 Constraints`
+- User Need topic name (D4.5): `1.9 Quality of Data` → `1.9 Quality of Data Content`
+- requirement type `Fuctional` → `Functional`: F8.4.2 Manage Freight Transport Execution Plan Store
+- requirement type `Function` → `Functional`: F5.14.12.1 Check for Rest Area Requirement
+- requirement type `Functionality` → `Functional`: F3.1.5.1 Monitor Service Area Vehicle Occupation
+- data-flow prefix: `fft.fton-updated_Freight_Vehicle_capabilities` → `fft.ftom-updated_Freight_Vehicle_capabilities`
+- data-flow prefix: `tmmms-mffo_outputs` → `tmms-mffo_outputs`
+- terminator alias: Traveller Information Operator = `o.tio`
+- terminator alias: Trip Planning Driver = `d.tpd`
+- terminator alias: Public Transport Passenger = `t.ptp`
+- terminator alias: Other Navigation Device = `ors.ond`
+- terminator alias: Parking Operator = `o.po`
+- terminator alias: Public Transport Stop = `ors.pts`
+- terminator alias: Multi-Modal Travel Information Provider = `esp.mmtip`
+- terminator alias: Cyclist = `t.c`
+- terminator alias: Public Transport Vehicle = `v.ptv`
+- terminator alias: Traffic Signal Controller = `ors.tsc`
+- terminator alias: Road Network Operator = `o.rno`
+- terminator alias: Human Machine Interface = `v.hmi`
+- terminator alias: Traffic Simulation System = `ors.tss`
+- terminator alias: Geographic Information Provider = `esp.g`
+- terminator alias: Planned Event Organiser = `esp.peo`
+- terminator alias: Environmental Traffic Management System = `ors.etms`
+- terminator alias: Public Transport Driver = `d.ptd`
+- terminator alias: Freight Terminal Area = `ft.fta`
+- terminator alias: Broadcaster = `esp.b`
+- terminator alias: On-Demand Service Operator = `o.odso`
+- terminator alias: Other Mode Freight System = `mms.omfs`
+- terminator alias: Other Vehicle = `v.ov`
+- terminator alias: Freight Transport User = `ft.ftu`
+- terminator alias: Vehicle Sharer = `t.vs`
+- terminator alias: Freight Transport = `ft`
+- terminator alias: Hazardous Goods Vehicle Driver = `d.hgvd`
+- terminator alias: Mobile Communications Provider = `esp.mcp`
+- terminator alias: Urban Traffic Management System = `ors.utms`
+- terminator alias: Bridge Structures = `bti.bs`
+- terminator alias: Freight Vehicle Driver = `d.fvd`
+- terminator alias: Public Transport Management System = `ors.ptms`
+- terminator alias: Traffic and Travel Information Provider = `esp.ttip`
+- terminator alias: Road Maintenance Organisation = `mo.rmo`
+- terminator alias: Road Maintenance Operator = `o.rmo`
+- terminator alias: Multi-Modal Management System = `mms.mms`
+- terminator alias: On-Demand Service Driver = `d.odsd`
+- terminator alias: On-Demand Service Passenger = `t.odsp`
+- terminator alias: Communications Operator = `o.co`
+- terminator alias: General Information Provider = `esp.gip`
+- terminator alias: Electronic Payments Operator = `o.epo`
+- terminator alias: Bridge Operator = `o.bo`
+- terminator alias: Driver and Vehicle Information Provider = `esp.dvip`
+- terminator alias: Vehicle Systems = `v.vs`
+- terminator alias: Bookable Service Provider = `esp.bsp`
+- terminator alias: Pedestrian = `t.p`
+- terminator alias: Incident Traffic Management System = `ors.itms`
+- terminator alias: Un/Loading Zone Operator = `o.ulzo`
+- terminator alias: Tunnel Operator = `o.tnlo`
+- terminator alias: Multi-Modal Crossing = `mms.mmc`
+- terminator alias: Freight Transport Operations Manager = `ft.ftom`
+- terminator alias: Public Transport Maintenance Organisation = `mo.ptmo`
+- terminator alias: Emergency Vehicle Driver = `d.e`
+- terminator alias: Tunnel Management System = `bti.tms`
+- terminator alias: Static Traveller = `t.st`
+- terminator alias: Emergency Management System = `ors.ems`
+- terminator alias: Other Road Users = `ve.oru`
+- terminator alias: Stationary Object = `ve.so`
+- terminator alias: Vehicle eCall Activation = `v.vea`
+- terminator alias: Inter-urban Traffic Management System = `ors.iutms`
+- terminator alias: Pre-Trip Traveller = `t.ptt`
+- terminator alias: Emergency Operator = `o.eo`
+- terminator alias: On-Demand Service Vehicle = `v.odsv`
+- terminator alias: Freight Vehicle = `v.fv`
+- terminator alias: Public Transport Operator = `o.pto`

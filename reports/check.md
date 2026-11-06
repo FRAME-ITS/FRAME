@@ -1,18 +1,17 @@
 # Model check – FRAME.qea
 
-**0 errors, 14 warnings**
+**0 errors, 13 warnings**
 
 | Rule | Related issue | Errors | Warnings |
 |---|---|---|---|
-| duplicate |  | 0 | 2 |
+| duplicate |  | 0 | 1 |
 | function-flows |  | 0 | 1 |
 | unused-flow | #76 | 0 | 11 |
 
 ## Warnings
 
-<details><summary><b>duplicate</b> (2)</summary>
+<details><summary><b>duplicate</b> (1)</summary>
 
-- 2× User_Need **1.1.4** in the FRAME Repository
 - 2× User_Need_Group **11 C-ITS** in the FRAME Repository
 
 </details>

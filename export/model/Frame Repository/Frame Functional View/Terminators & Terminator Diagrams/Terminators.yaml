@@ -8,6 +8,7 @@ elements:
     guid: "{B20814C3-91DB-43f3-9F58-BCBE50FB1ABD}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "esp.bsp"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -22,6 +23,7 @@ elements:
     guid: "{A97F4F7D-0727-40a6-BB92-CDAC21D9D2D2}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "o.bo"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -38,6 +40,7 @@ elements:
     guid: "{6CA6C058-CE68-4263-8055-3A8779F0C1F9}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "bti.bs"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -52,6 +55,7 @@ elements:
     guid: "{4FA5F25A-9124-4023-A0AC-A2454FC4E666}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "esp.b"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -70,6 +74,7 @@ elements:
     guid: "{8C77C811-FB6A-47f1-9CF1-5F59AEDC881D}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "o.co"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -87,6 +92,7 @@ elements:
     guid: "{24E1AB68-5084-447c-9BF3-1957840F0FA8}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "t.c"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -100,6 +106,7 @@ elements:
     guid: "{AA6E7062-3E5F-4b53-BD48-A6831CEEF612}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "esp.dvip"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -116,6 +123,7 @@ elements:
     guid: "{A60770F0-1F7F-4c56-A139-AC2AC816D446}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "o.epo"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -134,6 +142,7 @@ elements:
     guid: "{D587C88C-5E83-4466-8537-3E05E9260E50}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "ors.ems"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -150,6 +159,7 @@ elements:
     guid: "{EE00C1D0-4A96-4dc3-BF48-285261D9BB4D}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "o.eo"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -167,6 +177,7 @@ elements:
     guid: "{CC5B9241-B7FD-45d2-8FB0-9077A71C29FE}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "d.e"
     status: "Proposed"
     version: "1.0"
     order: 0
@@ -184,6 +195,7 @@ elements:
     guid: "{4161C8A8-655A-407a-B22F-A02DCF9CB7AB}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "ors.etms"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -198,6 +210,7 @@ elements:
     guid: "{4635FD01-0425-4d5c-953B-2C06153158FB}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "ft.fta"
     status: "Proposed"
     version: "1.0"
     order: 0
@@ -211,6 +224,7 @@ elements:
     guid: "{C7318974-F99A-4b00-B67C-EAD17D30AE73}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "ft.ftom"
     status: "Proposed"
     version: "1.0"
     order: 0
@@ -224,6 +238,7 @@ elements:
     guid: "{5F15D024-DF71-46ba-B5E3-D62C2AFD543C}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "ft.ftu"
     status: "Proposed"
     version: "1.0"
     order: 0
@@ -239,6 +254,7 @@ elements:
     guid: "{F67CE7E2-605C-40db-92D7-7BDD6C6D69D3}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "v.fv"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -256,6 +272,7 @@ elements:
     guid: "{71267B83-6800-4c60-A363-E6EE63077E66}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "d.fvd"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -278,6 +295,7 @@ elements:
     guid: "{A03C343B-86AC-4554-A264-552D9900AA56}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "esp.gip"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -293,6 +311,7 @@ elements:
     guid: "{35686FDB-AF89-41d3-B16B-2506BC4F27E1}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "esp.g"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -319,6 +338,7 @@ elements:
     guid: "{66444DF9-66BA-45a2-B244-CFE4848E2FBA}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "d.hgvd"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -350,6 +370,7 @@ elements:
     guid: "{2AC0E624-0294-4cdb-A41E-985793E7B3B6}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "v.hmi"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -364,6 +385,7 @@ elements:
     guid: "{BE6EF50C-DAB2-4d43-B95C-DA08388FE859}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "ors.itms"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -378,6 +400,7 @@ elements:
     guid: "{E70B933D-261A-46a7-B053-C6AA45895189}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "ors.iutms"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -394,6 +417,7 @@ elements:
     guid: "{69868245-7A14-4aa2-96A5-038BE52B3AE7}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "esp.mcp"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -409,6 +433,7 @@ elements:
     guid: "{C60F1898-547F-4907-A202-E926483BB388}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "mms.mmc"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -427,6 +452,7 @@ elements:
     guid: "{88920892-1042-40fc-B5DF-DC0302342F39}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "mms.mms"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -453,6 +479,7 @@ elements:
     guid: "{1983F168-0E27-441e-A938-F0382E34C73D}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "esp.mmtip"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -508,6 +535,7 @@ elements:
     guid: "{8AC023DF-2714-4e31-AD8E-D87E25E772EE}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "d.odsd"
     status: "Proposed"
     version: "1.0"
     order: 0
@@ -524,6 +552,7 @@ elements:
     guid: "{4FCF4625-CFDC-4cef-8673-D59EC48DED80}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "o.odso"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -543,6 +572,7 @@ elements:
     guid: "{8C5A6C11-DCFF-4c8e-9A12-3F88DEBFA62E}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "t.odsp"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -556,6 +586,7 @@ elements:
     guid: "{EF0D592A-F90F-4a3b-A9C0-AE3EFB16DDC6}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "v.odsv"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -572,6 +603,7 @@ elements:
     guid: "{5A2B2FD2-B6B3-4cb8-BACA-776C6BF6141E}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "mms.omfs"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -585,6 +617,7 @@ elements:
     guid: "{17537713-F8DB-4887-A365-01FB61FCE772}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "ors.ond"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -613,6 +646,7 @@ elements:
     guid: "{DC6676BE-0601-4838-A7E5-FB4FD9F0586B}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "ve.oru"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -627,6 +661,7 @@ elements:
     guid: "{5DE193C4-33D4-4afc-AA13-94B38C6126B3}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "v.ov"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -660,6 +695,7 @@ elements:
     guid: "{1839AD47-F336-4a43-AF40-5A0A45E882C1}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "o.po"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -691,6 +727,7 @@ elements:
     guid: "{B483AF3E-A4D3-4a44-97EB-2BC267A2D817}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "t.p"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -707,6 +744,7 @@ elements:
     guid: "{36A55105-0DB9-4945-A5AD-9A89D8DA8FF7}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "esp.peo"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -722,6 +760,7 @@ elements:
     guid: "{EC1BCCA4-DD6A-40c3-AACF-C2195C069FE4}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "t.ptt"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -749,6 +788,7 @@ elements:
     guid: "{41B86F06-F441-4248-9292-8E77F40D89C1}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "d.ptd"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -767,6 +807,7 @@ elements:
     guid: "{C9FF7EC8-9B49-438d-A478-3A4DAD1550A3}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "mo.ptmo"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -781,6 +822,7 @@ elements:
     guid: "{749DF1B3-1602-4c00-83E3-1F18E9539D04}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "ors.ptms"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -797,6 +839,7 @@ elements:
     guid: "{FDF0642B-3981-4c99-ACFD-312BA0227A44}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "o.pto"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -833,6 +876,7 @@ elements:
     guid: "{138501AE-353C-46d0-A64F-A05D9CA75161}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "t.ptp"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -852,6 +896,7 @@ elements:
     guid: "{184E3249-34EC-48ec-98D2-75C9FF6FD0E9}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "ors.pts"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -866,6 +911,7 @@ elements:
     guid: "{26AF8AAA-289F-4bb7-B55B-405CEEFF79B1}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "v.ptv"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -886,6 +932,7 @@ elements:
     guid: "{8663EB8E-D95A-492f-A0BB-A1FE2F38099D}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "o.rmo"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -906,6 +953,7 @@ elements:
     guid: "{7ADF4851-9B73-4fd2-B6D2-81BC10AB7E94}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "mo.rmo"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -925,6 +973,7 @@ elements:
     guid: "{29663965-6B51-4bd0-85FF-28C9510C17C5}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "o.rno"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -969,6 +1018,7 @@ elements:
     guid: "{D1578012-5CE8-4181-BD1D-DF96C9C21B78}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "t.st"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -984,6 +1034,7 @@ elements:
     guid: "{E3535D12-4EB0-4d16-9F2E-1B2712CF3DDD}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "ve.so"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -998,6 +1049,7 @@ elements:
     guid: "{29644FE4-8D9E-44e5-AAE8-17A4A49388D9}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "ors.tsc"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -1012,6 +1064,7 @@ elements:
     guid: "{3521BB9A-DD94-496c-8F94-FAD65008DE37}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "ors.tss"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -1026,6 +1079,7 @@ elements:
     guid: "{75CC9989-0384-406c-8F42-CD32AEA7DDC2}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "esp.ttip"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -1046,6 +1100,7 @@ elements:
     guid: "{0AB6FB01-6DE9-4fa8-8D10-B1FED17A8A5D}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "o.tio"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -1072,6 +1127,7 @@ elements:
     guid: "{119C83B9-313A-4d35-B64A-58DD776CA919}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "d.tpd"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -1096,6 +1152,7 @@ elements:
     guid: "{D0AE1DE0-9672-4cb3-945A-01B1EA450EA9}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "bti.tms"
     status: "Proposed"
     version: "1.0"
     order: 0
@@ -1110,6 +1167,7 @@ elements:
     guid: "{C24E9DB7-F2A5-484b-9A3B-BA2B354D5AA7}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "o.tnlo"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -1126,6 +1184,7 @@ elements:
     guid: "{BFFCF1E7-B3E8-4442-95DB-0C3ACCC50B2E}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "o.ulzo"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -1143,6 +1202,7 @@ elements:
     guid: "{6B2ADF25-5FB1-49fb-9D70-15D28D4C65E3}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "ors.utms"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -1159,6 +1219,7 @@ elements:
     guid: "{63B96A5E-A5D6-46e1-8895-76C9A04E4A04}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "t.vs"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -1178,6 +1239,7 @@ elements:
     guid: "{AE3B0D17-1722-4079-8B0E-F65BEED3E51B}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "v.vs"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -1205,6 +1267,7 @@ elements:
     guid: "{E63D2426-3CC0-43e8-A1C9-E2780DA0A771}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "v.vea"
     status: "Proposed"
     version: "5.1"
     order: 0
@@ -1245,6 +1308,7 @@ elements:
     guid: "{662CD0E2-2FF1-4cc1-9FAC-D2280761477E}"
     type: "Actor"
     stereotype: "FRAME_Terminator"
+    alias: "ft"
     status: "Proposed"
     version: "1.0"
     order: 2

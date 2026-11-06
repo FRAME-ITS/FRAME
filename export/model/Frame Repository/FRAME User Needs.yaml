@@ -98,16 +98,6 @@ elements:
       The Framework Architecture description shall include a glossary to explain all the main
       concepts described in the architecture.
   - name: "1.1.4"
-    guid: "{6A65E67E-3B43-4be6-AF57-CAD3EB0FC9F4}"
-    type: "Requirement"
-    stereotype: "FRAME_User_Need"
-    status: "Proposed"
-    version: "1.0"
-    order: 0
-    note: |
-      Systems that conform to the Framework Architecture shall exchange information in a
-      manner that permits road and traffic conditions to be understood by all parties.
-  - name: "1.1.4"
     guid: "{A90F40AD-1283-46d2-81EF-460977B37966}"
     type: "Requirement"
     stereotype: "FRAME_User_Need"
@@ -602,6 +592,16 @@ elements:
     note: |
       Systems that conform to the Framework Architecture shall exchange information in a
       manner that permits a given geographic location to be understood by all parties.
+  - name: "1.2.4"
+    guid: "{6A65E67E-3B43-4be6-AF57-CAD3EB0FC9F4}"
+    type: "Requirement"
+    stereotype: "FRAME_User_Need"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      Systems that conform to the Framework Architecture shall exchange information in a
+      manner that permits road and traffic conditions to be understood by all parties.
   - name: "1.2.5"
     guid: "{EC1004E6-3C68-4133-9CF3-49C2B0DCD403}"
     type: "Requirement"
@@ -2029,9 +2029,9 @@ elements:
       The system shall collect and report data as required by legally appointed authorities.
     links:
       - "Association «belongs to» → 2.1.4 Reporting"  # {CB9615B1-4179-4bdc-8D0C-E8342FBEBF5A} → {E082BB2C-BC3C-430b-89BA-567022DD5589}
-      - "Association «served by» → 3.4.8 Manage Environmental Conditions Data Store"  # {DE3A369F-F7F8-4b8a-B1FB-7114E17E039D} → {01FE39DB-280D-4a2c-92D6-076899B2A6F1}
       - "Association «served by» → F3.1.1.14 Manage Urban Traffic Data"  # {56732C3B-C624-44c4-9A1A-432BF9B0433C} → {187E4725-12EA-4e77-AE1D-58ACA792603E}
       - "Association «served by» → F3.1.2.16 Manage Inter-urban Traffic Data"  # {95EF35D0-B16D-49e9-B4D2-2E5D8A306A33} → {DD1AAAD2-C517-4a09-9870-B5AE46CB755B}
+      - "Association «served by» → F3.4.8 Manage Environmental Conditions Data Store"  # {DE3A369F-F7F8-4b8a-B1FB-7114E17E039D} → {01FE39DB-280D-4a2c-92D6-076899B2A6F1}
   - name: "2.1.4.2"
     guid: "{613A17CE-22BE-4350-B3D6-C4DA3CEEC381}"
     type: "Requirement"
@@ -3366,10 +3366,10 @@ elements:
       The system shall be able to provide extensive multi-modal trip information, e.g. prices, fares, routes, forecast & current traffic situations, traffic control, demand management measures, local warnings, special events, weather conditions, hotels etc.
     links:
       - "Association «belongs to» → 6.1.1 Modal Choice"  # {AE61880E-FAF2-4e93-9F4E-DC1AAA32360B} → {73D6F0B6-0ADA-4e7a-9C22-6B6B25DAC250}
-      - "Association «served by» → 3.4.10 Output Environmental Information"  # {81284F49-1CC8-44ea-8697-267A2D53BC2C} → {BB6D4E31-446A-40d8-AE28-AE8BC026065E}
       - "Association «served by» → F3.1.1.14 Manage Urban Traffic Data"  # {013A39E8-AEC6-4fbb-A27D-683E83A199C7} → {187E4725-12EA-4e77-AE1D-58ACA792603E}
       - "Association «served by» → F3.1.2.16 Manage Inter-urban Traffic Data"  # {424BAC96-93A4-441c-A899-21EB5AFCE026} → {DD1AAAD2-C517-4a09-9870-B5AE46CB755B}
       - "Association «served by» → F3.3.13 Output Demand Management Information"  # {4CB85320-2244-4ab7-BCEF-187F9570CAD0} → {1846F4D9-FF49-4637-8BB3-C5462C97C0CA}
+      - "Association «served by» → F3.4.10 Output Environmental Information"  # {81284F49-1CC8-44ea-8697-267A2D53BC2C} → {BB6D4E31-446A-40d8-AE28-AE8BC026065E}
       - "Association «served by» → F6.3.11 Monitor Trip Plan Implementation for Traveller"  # {FA14D28A-1A22-461d-9ED8-1BDBB2A0C138} → {5E4985B8-7E3A-4d93-B710-136DEB7E8EE6}
       - "Association «served by» → F6.5.10 Provide Traveller Trip Planning Interface"  # {69E0563F-7B5F-4e0c-920E-DF6E12EE029C} → {A73D8E6A-B8FD-4acc-AD2F-E6A619A7DEF3}
   - name: "6.1.2 Information Handling"
@@ -3439,7 +3439,7 @@ elements:
       The system shall be able to provide information to travellers so as to influence their choice of destination and/or mode of travel, e.g. to protect the environment of a "Point of Interest", or geographic area.
     links:
       - "Association «belongs to» → 6.1.2 Information Handling"  # {C513B281-3CBB-43a5-AEC3-02D1EC66BB4B} → {FE107D34-8B64-4513-9C11-AB657CA33F40}
-      - "Association «served by» → 3.4.10 Output Environmental Information"  # {AD137D40-0380-4b89-9FFB-E62C89E40599} → {BB6D4E31-446A-40d8-AE28-AE8BC026065E}
+      - "Association «served by» → F3.4.10 Output Environmental Information"  # {AD137D40-0380-4b89-9FFB-E62C89E40599} → {BB6D4E31-446A-40d8-AE28-AE8BC026065E}
       - "Association «served by» → F6.5.3.8 Collect Data About Road Traffic"  # {85113C17-D2A4-4ca6-BE50-468B5836F1AD} → {E760E206-1ADE-4073-9B46-B41DE0B93BD0}
       - "Association «served by» → F6.5.3.9 Plan Trip Details"  # {2EFFF485-BEFF-48a4-82B0-31670F44B0A5} → {2AB906E1-0864-4458-9917-F8388133E990}
       - "Association «served by» → F6.6.1 Provide Traveller Information Interface"  # {636A8E22-13C9-4642-A73A-1FAF0D961E0E} → {B75EAEB5-F795-4a15-967E-82ACB4FBE1D5}
@@ -4708,11 +4708,11 @@ elements:
       The system shall manage road traffic in such a way that levels of environmental (i.e. atmospheric and noise) pollution may be reduced.
     links:
       - "Association «belongs to» → 7.1.0 Objectives"  # {977BBA3E-704C-4942-A188-7BF16E367CA9} → {6CC24E4E-ECFA-4b5f-9EC3-E7358FB619B1}
-      - "Association «served by» → 3.4.11 Analyse Environmental Data and Implement Actions"  # {4F010983-31BF-4d1a-B0E1-D7D691C73CB9} → {76BDDFC3-4323-4702-93BB-5FFF2B7ADA94}
-      - "Association «served by» → 3.4.8 Manage Environmental Conditions Data Store"  # {37AE29B3-8B2D-427b-92F7-AF362DA4522B} → {01FE39DB-280D-4a2c-92D6-076899B2A6F1}
       - "Association «served by» → F3.1.1.5.24 Implement Urban Traffic Strategies"  # {5F2BAFDB-C512-4455-A83C-EA5929668494} → {66076FF8-17FB-4246-84B3-C09F2345458B}
       - "Association «served by» → F3.1.2.13.5 Manage Inter-urban Traffic Commands & Messages"  # {EF00A153-E02C-417d-9CB9-49503D8D5428} → {E91C5E62-FC6E-4f19-AB1C-2607B4F77C39}
       - "Association «served by» → F3.1.2.14.4 Output Inter-urban Traffic Commands & Messages"  # {097CB8F8-9B03-4092-9173-668C92A60AC2} → {2945E366-E8A6-4bd7-A76A-C95CBA42DDAC}
+      - "Association «served by» → F3.4.11 Analyse Environmental Data and Implement Actions"  # {4F010983-31BF-4d1a-B0E1-D7D691C73CB9} → {76BDDFC3-4323-4702-93BB-5FFF2B7ADA94}
+      - "Association «served by» → F3.4.8 Manage Environmental Conditions Data Store"  # {37AE29B3-8B2D-427b-92F7-AF362DA4522B} → {01FE39DB-280D-4a2c-92D6-076899B2A6F1}
   - name: "7.1.0.5"
     guid: "{EE44C8B0-48C3-47a9-9325-263B7BEB9835}"
     type: "Requirement"
@@ -4858,7 +4858,7 @@ elements:
       The system shall be able to monitor and record weather conditions (wind, fog, rain level, ice, etc.).
     links:
       - "Association «belongs to» → 7.1.1 Monitoring"  # {71D9ADBA-03AA-43d0-8965-9D59EED73508} → {6F4A9316-F07C-4efe-B15C-C9DD6F02B876}
-      - "Association «served by» → 3.4.1 Monitor Weather Conditions"  # {74D08CA8-86B6-45d8-812F-42E0AAF0CD73} → {F8D3DDE2-231E-46c2-B4D5-EDD8551425F7}
+      - "Association «served by» → F3.4.1 Monitor Weather Conditions"  # {74D08CA8-86B6-45d8-812F-42E0AAF0CD73} → {F8D3DDE2-231E-46c2-B4D5-EDD8551425F7}
   - name: "7.1.1.7"
     guid: "{ED79925A-D0FD-4e6f-BA8E-40F778FF56CC}"
     type: "Requirement"
@@ -4869,9 +4869,9 @@ elements:
       The system shall be able to monitor and record environmental (atmospheric and noise) pollution conditions, and provide an alarm when a certain threshold is exceeded.
     links:
       - "Association «belongs to» → 7.1.1 Monitoring"  # {7D842B97-F9BE-4dc3-AAFB-E53FB3DE2E93} → {6F4A9316-F07C-4efe-B15C-C9DD6F02B876}
-      - "Association «served by» → 3.4.11 Analyse Environmental Data and Implement Actions"  # {B8589A11-4900-4b85-80F7-7624FF0B3970} → {76BDDFC3-4323-4702-93BB-5FFF2B7ADA94}
-      - "Association «served by» → 3.4.3 Monitor Noise Pollution"  # {3D20CB8A-9A04-4679-A8AE-C99422438885} → {98A1C8C7-D559-4329-B6AA-0846C08512D4}
-      - "Association «served by» → 3.4.8 Manage Environmental Conditions Data Store"  # {920D968D-98D5-4eb3-A9C8-1F9F39226577} → {01FE39DB-280D-4a2c-92D6-076899B2A6F1}
+      - "Association «served by» → F3.4.11 Analyse Environmental Data and Implement Actions"  # {B8589A11-4900-4b85-80F7-7624FF0B3970} → {76BDDFC3-4323-4702-93BB-5FFF2B7ADA94}
+      - "Association «served by» → F3.4.3 Monitor Noise Pollution"  # {3D20CB8A-9A04-4679-A8AE-C99422438885} → {98A1C8C7-D559-4329-B6AA-0846C08512D4}
+      - "Association «served by» → F3.4.8 Manage Environmental Conditions Data Store"  # {920D968D-98D5-4eb3-A9C8-1F9F39226577} → {01FE39DB-280D-4a2c-92D6-076899B2A6F1}
   - name: "7.1.1.8"
     guid: "{8BE00148-9A9F-412f-8D22-E110611F9E00}"
     type: "Requirement"
@@ -4882,7 +4882,7 @@ elements:
       The system shall be able to measure the range of visibility and detect reductions caused by adverse weather and pollution conditions (but not darkness).
     links:
       - "Association «belongs to» → 7.1.1 Monitoring"  # {D89FE745-AED0-4690-8A61-96F86B8BA848} → {6F4A9316-F07C-4efe-B15C-C9DD6F02B876}
-      - "Association «served by» → 3.4.2 Monitor Atmospheric Pollution"  # {83644ED0-39E1-4bd2-A38C-FDFC1053C8F1} → {2301F03C-D6C2-4383-A739-76B255A40C9F}
+      - "Association «served by» → F3.4.2 Monitor Atmospheric Pollution"  # {83644ED0-39E1-4bd2-A38C-FDFC1053C8F1} → {2301F03C-D6C2-4383-A739-76B255A40C9F}
   - name: "7.1.10 Lane Management"
     guid: "{CFBA9C53-1230-46a5-8890-3B5566D59F21}"
     type: "Requirement"
@@ -5067,7 +5067,7 @@ elements:
       The system shall be able to predict weather conditions, in particular the formation of fog and/or ice.
     links:
       - "Association «belongs to» → 7.1.2 Planning"  # {A6A438F4-7CA2-47b1-85D3-5D34EF3D8B5C} → {095F54A3-E4E7-4262-B874-F1D13E686DE0}
-      - "Association «served by» → 3.4.4 Predict Environmental Conditions"  # {B32548BA-D59B-409c-B983-1E1FE19AF8AE} → {41D2B8F2-72D6-4e0a-99F5-878F109B7A78}
+      - "Association «served by» → F3.4.4 Predict Environmental Conditions"  # {B32548BA-D59B-409c-B983-1E1FE19AF8AE} → {41D2B8F2-72D6-4e0a-99F5-878F109B7A78}
   - name: "7.1.2.6"
     guid: "{15EA0877-DF71-412c-BAF9-4B3B27291751}"
     type: "Requirement"
@@ -5078,7 +5078,7 @@ elements:
       The system shall be able to predict short, medium and long-term road travel produced environmental (atmospheric and noise) pollution conditions based on traffic and weather conditions.
     links:
       - "Association «belongs to» → 7.1.2 Planning"  # {D826C854-889D-42b8-820A-21C76EE898FF} → {095F54A3-E4E7-4262-B874-F1D13E686DE0}
-      - "Association «served by» → 3.4.4 Predict Environmental Conditions"  # {1465F6CD-DCC5-4e5c-B7CE-F00BB56D6B2B} → {41D2B8F2-72D6-4e0a-99F5-878F109B7A78}
+      - "Association «served by» → F3.4.4 Predict Environmental Conditions"  # {1465F6CD-DCC5-4e5c-B7CE-F00BB56D6B2B} → {41D2B8F2-72D6-4e0a-99F5-878F109B7A78}
   - name: "7.1.2.7"
     guid: "{47B6BEFC-AE57-4c4b-A367-791759D35852}"
     type: "Requirement"
@@ -5481,9 +5481,9 @@ elements:
       The system shall be able to recommend re-routing strategies to reduce atmospheric pollution.
     links:
       - "Association «belongs to» → 7.1.5 Exceptions Management"  # {C542C730-AA75-4780-8963-5B82E61BCE7D} → {79A26075-47CA-4d4f-ABA9-6F4E69227540}
-      - "Association «served by» → 3.4.2 Monitor Atmospheric Pollution"  # {B6236FF3-A0DD-42f2-B725-744BC3B0DB16} → {2301F03C-D6C2-4383-A739-76B255A40C9F}
       - "Association «served by» → F3.1.1.5.24 Implement Urban Traffic Strategies"  # {210EA5D3-80F1-497e-8A05-B4ED8AFD5153} → {66076FF8-17FB-4246-84B3-C09F2345458B}
       - "Association «served by» → F3.1.2.13.5 Manage Inter-urban Traffic Commands & Messages"  # {744A4D2C-F81D-4278-A23F-7F905B76F529} → {E91C5E62-FC6E-4f19-AB1C-2607B4F77C39}
+      - "Association «served by» → F3.4.2 Monitor Atmospheric Pollution"  # {B6236FF3-A0DD-42f2-B725-744BC3B0DB16} → {2301F03C-D6C2-4383-A739-76B255A40C9F}
   - name: "7.1.6 O/D Computations"
     guid: "{088ACA20-E0F4-4ea5-926E-19ADE674D2C0}"
     type: "Requirement"
@@ -6366,8 +6366,8 @@ elements:
       (X)FCD - The system shall enable a road-side device to send weather and environmental conditions to the TCC road-side device.
     links:
       - "Association «belongs to» → 7.4.1 Road Hazard Warning"  # {EB4705E4-D5AD-4d8d-9648-9086C377D3EC} → {BE70E006-7359-4031-9AC2-4CCB2E77B101}
-      - "Association «served by» → 3.4.1 Monitor Weather Conditions"  # {E7BC06C8-FF80-4344-B52C-03631EBDD892} → {F8D3DDE2-231E-46c2-B4D5-EDD8551425F7}
-      - "Association «served by» → 3.4.8 Manage Environmental Conditions Data Store"  # {745863AC-63A2-49d9-A56A-C3703BA7293B} → {01FE39DB-280D-4a2c-92D6-076899B2A6F1}
+      - "Association «served by» → F3.4.1 Monitor Weather Conditions"  # {E7BC06C8-FF80-4344-B52C-03631EBDD892} → {F8D3DDE2-231E-46c2-B4D5-EDD8551425F7}
+      - "Association «served by» → F3.4.8 Manage Environmental Conditions Data Store"  # {745863AC-63A2-49d9-A56A-C3703BA7293B} → {01FE39DB-280D-4a2c-92D6-076899B2A6F1}
   - name: "7.4.1.13"
     guid: "{141A76B8-3E7B-4369-A693-F1B0E73D68A5}"
     type: "Requirement"
@@ -7510,13 +7510,13 @@ elements:
       The system shall enable the TCC to calculate recommended headways for the current traffic and environment conditions.
     links:
       - "Association «belongs to» → 7.4.5 Headway Management"  # {B364BFF4-4105-4a84-8EB0-88236D1FA990} → {4373FD5D-8AC4-47a3-B576-79D45C68672B}
-      - "Association «served by» → 3.4.11 Analyse Environmental Data and Implement Actions"  # {D52C4BE1-DBE4-4e86-8219-1FF4EC8317F4} → {76BDDFC3-4323-4702-93BB-5FFF2B7ADA94}
       - "Association «served by» → F3.1.1.5.18 Manage Urban Traffic Speeds and Headways"  # {64B72314-6372-4ffd-AA5B-A08C19F1985F} → {2CF84C82-C878-4b8a-A45B-2748AE33CC2C}
       - "Association «served by» → F3.1.1.5.24 Implement Urban Traffic Strategies"  # {ED69EC8D-6D2A-4acb-92E8-29163D5B98B7} → {66076FF8-17FB-4246-84B3-C09F2345458B}
       - "Association «served by» → F3.1.2.13.4 Manage Inter-urban Road Network Speeds & Headways"  # {A98434C5-1E96-4a64-8742-9D91B7AA9FBF} → {CF5F3C76-5012-401c-90EC-F1F777F1720D}
       - "Association «served by» → F3.1.2.13.5 Manage Inter-urban Traffic Commands & Messages"  # {A6E53A24-888F-4850-AEB4-EA407522D36F} → {E91C5E62-FC6E-4f19-AB1C-2607B4F77C39}
       - "Association «served by» → F3.2.6 Assess Incidents and Devise Responses"  # {FDC28D05-C6AA-4e4d-B06D-A8156EAE083E} → {E7385835-A669-4853-8BCC-770578F75E6D}
       - "Association «served by» → F3.2.7 Provide Incident Mitigations to Traffic Management"  # {94FAB01C-2407-46c1-B329-01F0CD4E8064} → {86A7111A-CBD8-4967-ADE0-9B128050C4E4}
+      - "Association «served by» → F3.4.11 Analyse Environmental Data and Implement Actions"  # {D52C4BE1-DBE4-4e86-8219-1FF4EC8317F4} → {76BDDFC3-4323-4702-93BB-5FFF2B7ADA94}
   - name: "7.4.5.2"
     guid: "{51844B7D-7353-414c-BD40-D1B51A0F24AF}"
     type: "Requirement"
@@ -8406,9 +8406,6 @@ elements:
       The system shall be able to monitor the current inter-urban traffic and weather/environmental conditions, identify incidents, assess their impact, make short term predictions, and select and initiate an appropriate mitigation strategy.
     links:
       - "Association «belongs to» → 7.5.1 Traffic Flow Optimisation"  # {53F66DE3-CB70-4af5-A783-63EE363B4FAF} → {5C99C1F2-D94C-4ee5-83B2-28AD7AC551A3}
-      - "Association «served by» → 3.4.1 Monitor Weather Conditions"  # {B9F6402E-73DF-4e9a-A1C8-72FE2ADE6C11} → {F8D3DDE2-231E-46c2-B4D5-EDD8551425F7}
-      - "Association «served by» → 3.4.11 Analyse Environmental Data and Implement Actions"  # {98071F00-D76C-4751-810A-80A71426C2ED} → {76BDDFC3-4323-4702-93BB-5FFF2B7ADA94}
-      - "Association «served by» → 3.4.8 Manage Environmental Conditions Data Store"  # {5AE2BD32-EE43-4030-AC56-C4617AACF30F} → {01FE39DB-280D-4a2c-92D6-076899B2A6F1}
       - "Association «served by» → F3.1.2.10 Collect Inter-urban Traffic Data"  # {FB915BF8-7D0E-4f61-A5DB-18CA4711D067} → {2A37A728-44A1-4e4d-986A-842EDDBD5DD5}
       - "Association «served by» → F3.1.2.15 Predict Short & Medium Term Inter-urban Conditions"  # {9EA82782-C47A-496b-BC8E-E250EB9452ED} → {D9FC2D84-84DD-4618-9B04-0ED445C214FF}
       - "Association «served by» → F3.1.2.16 Manage Inter-urban Traffic Data"  # {D4371786-757E-4c80-8C54-7FF489052B4D} → {DD1AAAD2-C517-4a09-9870-B5AE46CB755B}
@@ -8416,6 +8413,9 @@ elements:
       - "Association «served by» → F3.2.12 Detect Incidents from Data"  # {2F28E16A-C3CE-4c67-BF08-66EA8E26B5A0} → {133EE41B-40A5-49ad-9DB1-822D07A77EEA}
       - "Association «served by» → F3.2.13 Classify and Identify Incidents"  # {186DDBEB-8EEE-4428-9CBC-DCA1C9572EC0} → {E04909A4-37EE-452e-841B-C7C27E8C4C34}
       - "Association «served by» → F3.2.6 Assess Incidents and Devise Responses"  # {0A2FEF4A-150B-4b9e-B902-95BA7AAFA344} → {E7385835-A669-4853-8BCC-770578F75E6D}
+      - "Association «served by» → F3.4.1 Monitor Weather Conditions"  # {B9F6402E-73DF-4e9a-A1C8-72FE2ADE6C11} → {F8D3DDE2-231E-46c2-B4D5-EDD8551425F7}
+      - "Association «served by» → F3.4.11 Analyse Environmental Data and Implement Actions"  # {98071F00-D76C-4751-810A-80A71426C2ED} → {76BDDFC3-4323-4702-93BB-5FFF2B7ADA94}
+      - "Association «served by» → F3.4.8 Manage Environmental Conditions Data Store"  # {5AE2BD32-EE43-4030-AC56-C4617AACF30F} → {01FE39DB-280D-4a2c-92D6-076899B2A6F1}
   - name: "7.5.1.30"
     guid: "{315B85F1-C729-45b3-86A3-F2D36E50DA98}"
     type: "Requirement"
@@ -8983,11 +8983,11 @@ elements:
       The system shall enable the traveller information service provider to receive current inter-urban traffic management, and weather, conditions and planned events.
     links:
       - "Association «belongs to» → 7.6.2 Enhanced Route Guidance and Navigation"  # {2F86D3CC-6124-4e87-94C3-D2BA510124B9} → {DFB791F0-17EF-4115-BFE1-46A7AFC04714}
-      - "Association «served by» → 3.4.11 Analyse Environmental Data and Implement Actions"  # {0E2068C0-68D1-4061-B4E8-345C4FAB6351} → {76BDDFC3-4323-4702-93BB-5FFF2B7ADA94}
       - "Association «served by» → F3.1.2.16 Manage Inter-urban Traffic Data"  # {24E369BF-FD99-4401-BB1D-AFF11AA07264} → {DD1AAAD2-C517-4a09-9870-B5AE46CB755B}
       - "Association «served by» → F3.1.2.9 Output Inter-urban Traffic Data"  # {B0B97D85-1C7C-4407-9E48-608C698BEDBD} → {91513F36-97D3-423b-983C-23BC43DED946}
       - "Association «served by» → F3.2.6 Assess Incidents and Devise Responses"  # {E1C2FC6A-4156-4b5b-9307-73345F28C248} → {E7385835-A669-4853-8BCC-770578F75E6D}
       - "Association «served by» → F3.2.9 Send Incident Details to Information Providers"  # {6ACF498E-9B25-4534-97A2-332037C3E182} → {87CF97FD-DF01-4d54-A339-ECA9B0E3B794}
+      - "Association «served by» → F3.4.11 Analyse Environmental Data and Implement Actions"  # {0E2068C0-68D1-4061-B4E8-345C4FAB6351} → {76BDDFC3-4323-4702-93BB-5FFF2B7ADA94}
       - "Association «served by» → F6.3.10 Implement Trip Plan and Track Traveller"  # {2E145A93-23FC-4054-BD75-872770BE2E52} → {7830030F-1C15-4442-8195-D147AE326966}
   - name: "7.6.2.5"
     guid: "{EBC24E58-1A0A-410f-9115-074166613FAA}"
@@ -9013,8 +9013,8 @@ elements:
       The system shall enable the traveller to request and receive (anticipated) weather/environmental conditions on, or before, a planned trip.
     links:
       - "Association «belongs to» → 7.6.2 Enhanced Route Guidance and Navigation"  # {ABD2ADD8-395C-4534-BAEA-BA0CB7952C55} → {DFB791F0-17EF-4115-BFE1-46A7AFC04714}
-      - "Association «served by» → 3.4.10 Output Environmental Information"  # {3586CE93-609B-4b43-BC86-DDC869EE787F} → {BB6D4E31-446A-40d8-AE28-AE8BC026065E}
-      - "Association «served by» → 3.4.11 Analyse Environmental Data and Implement Actions"  # {A527EF3E-6593-4405-A313-39FD845174BF} → {76BDDFC3-4323-4702-93BB-5FFF2B7ADA94}
+      - "Association «served by» → F3.4.10 Output Environmental Information"  # {3586CE93-609B-4b43-BC86-DDC869EE787F} → {BB6D4E31-446A-40d8-AE28-AE8BC026065E}
+      - "Association «served by» → F3.4.11 Analyse Environmental Data and Implement Actions"  # {A527EF3E-6593-4405-A313-39FD845174BF} → {76BDDFC3-4323-4702-93BB-5FFF2B7ADA94}
   - name: "7.6.2.7"
     guid: "{A7D04771-7711-4196-871D-FBA39D53F6D3}"
     type: "Requirement"
@@ -10561,7 +10561,7 @@ elements:
       This Service contains the activities associated with the provision of a freight transport service for a customer.
     links:
       - "Association «belongs to» → 9.10.1 Manage Customer Requirements"  # {D105A1B3-E0E7-4e83-9595-0F06D08533C6} → {8D22560C-2FE7-492e-AB64-A607C1BFB6D3}
-  - name: "1.3 Adapability"
+  - name: "1.3 Adaptability"
     guid: "{C421F751-46C3-4240-B4FD-0C93FC9ED7C0}"
     type: "Requirement"
     stereotype: "FRAME_User_Need_Topic"
@@ -10611,7 +10611,7 @@ elements:
       - "Association «belongs to» → 9.11.1 Plan and Prepare Freight Transport Operations"  # {BBA04779-2A1F-40f3-A77F-C82741F4BC6E} → {9386C1CB-FC14-4556-AB24-D4DFB1436750}
       - "Association «belongs to» → 9.11.2 Manage Transport Operation"  # {4D79836B-A1AE-4dce-AEB4-BF87F97C0BFB} → {C83729F1-2C83-4ca8-AB9B-7E3227AECE0A}
       - "Association «belongs to» → 9.11.3 Monitor Transport Operation"  # {1DBC07AF-2D82-4304-BA1A-39BBDC8ACFE4} → {27F7C00E-551B-42d4-896D-4816963C50B9}
-  - name: "1.4 Constrains"
+  - name: "1.4 Constraints"
     guid: "{9076A15D-73F5-4c6f-A025-2FB4FEC72CF8}"
     type: "Requirement"
     stereotype: "FRAME_User_Need_Topic"
@@ -10794,7 +10794,7 @@ elements:
       - "Association «served by» → F8.5.1 Collect Road Network Data"  # {750F9BBC-493F-4f0f-9819-864470CACBF3} → {3BCBC290-332B-4aa6-A554-FB6C4DFAE8BD}
       - "Association «served by» → F8.5.2 Collect FTEP Data from FTOM and MMS"  # {471DE00B-AD1F-4f64-9D3F-D50B256A856E} → {3A01549B-EA04-4e49-B86F-C136E05EA085}
       - "Association «served by» → F8.5.3 Prepare FTEP"  # {0BFF7F6E-5F26-4e6e-9F06-77BF01E52C95} → {7E0E965E-C17C-49d9-8629-C35CBB49EDE3}
-  - name: "1.9 Quality of Data"
+  - name: "1.9 Quality of Data Content"
     guid: "{3C51AF52-D743-4cd8-B6A3-AF409DED5CB2}"
     type: "Requirement"
     stereotype: "FRAME_User_Need_Topic"

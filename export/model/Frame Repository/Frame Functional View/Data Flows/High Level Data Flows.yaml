@@ -1607,7 +1607,7 @@ elements:
       It consists of input from the Road Network Operator from which data objects are created that will enable the management of traffic using the inter-urban road network and is for use by functionality in the Manage Traffic Functional Area.
     links:
       - "Aggregation «component of» → fo.rno-inter-urban_traffic_commands"  # {16834B9E-665B-44b9-8950-E225E790874E} → {26680F03-A71C-4286-8996-33500236AFBE}
-      - "Association «OUT» → F3.1.2.14 Implement Inter-urban Management Traffic Strategy"  # {AB212825-99B2-410b-98FC-8755B2127B29} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
+      - "Association «OUT» → F3.1.2.14 Implement Inter-urban Traffic Management Strategy"  # {AB212825-99B2-410b-98FC-8755B2127B29} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
   - name: "fo.rno-sensitive_zone_access_inputs"
     guid: "{DD1F4B7B-147E-4c8d-805B-CC13DDAB0634}"
     type: "Interface"
@@ -3246,7 +3246,7 @@ elements:
     note: |
       It contains data objects that provide details of the ramp metering strategies that are to be implemented.
     links:
-      - "Association «OUT» → F3.1.2.14 Implement Inter-urban Management Traffic Strategy"  # {BEE807ED-0B8A-4335-B680-F17BB7D28FBA} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
+      - "Association «OUT» → F3.1.2.14 Implement Inter-urban Traffic Management Strategy"  # {BEE807ED-0B8A-4335-B680-F17BB7D28FBA} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
   - name: "mt_inter-urban_data_for_traffic_prediction"
     guid: "{83D8BA92-2C8F-405b-820F-0FFCFB00AD3A}"
     type: "Interface"
@@ -3281,7 +3281,7 @@ elements:
     links:
       - "Aggregation «component of» → mt_traffic_incident_requests"  # {AE20C4A5-8275-44e0-AE3D-4C4F9ECC78F2} → {3DAA9419-060F-4fd9-B0E6-7B88E6AB92AF}
       - "Association «OUT» → F3.1.2 Provide Inter-urban Traffic Management"  # {EE1D10E9-9339-4373-B63A-89F95C9C419D} → {2EE2E618-41FE-4ac5-9413-C23D9DAF7E9E}
-      - "Association «OUT» → F3.1.2.14 Implement Inter-urban Management Traffic Strategy"  # {46068DB5-4A4B-4123-BC79-C7037F3B1F15} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
+      - "Association «OUT» → F3.1.2.14 Implement Inter-urban Traffic Management Strategy"  # {46068DB5-4A4B-4123-BC79-C7037F3B1F15} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
   - name: "mt_inter-urban_inputs_from_demand_management"
     guid: "{1DFB0C35-4CA2-45ee-96E0-AE90F5DBA643}"
     type: "Interface"
@@ -3891,7 +3891,7 @@ elements:
     links:
       - "Aggregation «component of» → pshvs.mt_roadside_display_errors"  # {DE501287-D61B-4cc3-AA14-70F5E54A51C4} → {C2E72F83-8A1E-4154-9128-385F462C8EB3}
       - "Association «OUT» → F3.1.2 Provide Inter-urban Traffic Management"  # {E9DA70EC-5056-4465-BC56-64D9A846E638} → {2EE2E618-41FE-4ac5-9413-C23D9DAF7E9E}
-      - "Association «OUT» → F3.1.2.14 Implement Inter-urban Management Traffic Strategy"  # {3E15D099-E677-404a-A2EC-66A8CABEAE79} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
+      - "Association «OUT» → F3.1.2.14 Implement Inter-urban Traffic Management Strategy"  # {3E15D099-E677-404a-A2EC-66A8CABEAE79} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
   - name: "pshvs.mt_inter-urban_roadside_outputs_to_driver"
     guid: "{A6027C87-754E-4c6e-A54E-4F258F407774}"
     type: "Interface"
@@ -3905,7 +3905,7 @@ elements:
       - "Aggregation «component of» → pshvs.mt_data_for_traffic_management"  # {A76231E4-DF10-467e-AEA3-197CC4ED94F6} → {2CCAA96F-9559-4e9a-BE8A-F6FE5C91D948}
       - "Aggregation «component of» → pshvs.mt_outputs_to_driver_via_roadside"  # {4F63EFF5-207A-4791-B4C8-87A5BF8C2370} → {A3912DED-34FE-48c7-9D2F-3E8F3134C6F0}
       - "Association «OUT» → F3.1.2 Provide Inter-urban Traffic Management"  # {45B367CC-5152-4a81-A82E-E47587493753} → {2EE2E618-41FE-4ac5-9413-C23D9DAF7E9E}
-      - "Association «OUT» → F3.1.2.14 Implement Inter-urban Management Traffic Strategy"  # {474E6185-271E-4696-98A4-505C08316A10} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
+      - "Association «OUT» → F3.1.2.14 Implement Inter-urban Traffic Management Strategy"  # {474E6185-271E-4696-98A4-505C08316A10} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
   - name: "pshvs.mt_outputs_to_driver_via_roadside"
     guid: "{A3912DED-34FE-48c7-9D2F-3E8F3134C6F0}"
     type: "Interface"
@@ -4848,7 +4848,7 @@ elements:
     links:
       - "Aggregation «component of» → To Law Enforcement Agency"  # {185291DB-0DFB-4368-943E-7112969EAE2C} → {51620931-5B5E-442a-B721-2BD49EA9ACDA}
       - "Association «OUT» → Law Enforcement Agency"  # {B267D476-3184-4882-861F-6C252080360F} → {4014FC28-A08A-4fcc-B9A5-B6ADCC9E3353}
-  - name: "tmmms-mffo_outputs"
+  - name: "tmms-mffo_outputs"
     guid: "{73D58488-FC92-4457-9EA5-BF2ADFF91972}"
     type: "Interface"
     stereotype: "FRAME_High_Level_Data_Flow"

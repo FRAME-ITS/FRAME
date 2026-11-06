@@ -104,7 +104,7 @@ Other D4.2 findings: the functional-area table gives FA6 the mnemonic **psle** (
 *Provide Support for Host Vehicle **Services*** (model and D4.5: *Systems*); its terminator list (2019) is older than D4.5.
 MDG tag names with typos: *Standrdization* (Component), *… operationg in parallel …* (Datastore).
 
-## 3. Proposed model corrections (not applied)
+## 3. Proposed model corrections (1–5, 7, 8 applied: reports/fix_2026-11-06_doc_alignment.md)
 
 1. Rename the 8 F3.4 low-level functions to `F3.4.x …`.
 2. F3.1.2.14 → *Implement Inter-urban Traffic Management Strategy*.
