@@ -447,7 +447,7 @@ elements:
       (2) The ability to process the sensor data to determine if any Vehicles are present, their location relative to the Host Vehicle and to determine their types and probably trajectories.
       (3) Once processing is complete, the ability to send the data in digital form to the Determine and store local Host Vehicle Conditions Function.
     links:
-      - "Aggregation «component of» → F5.15.1 Provide Detection for the Vehicle Surroundings"  # {94CE0001-DA3F-4791-A331-98474425CE20} → {63E3B0BC-06DA-4321-A618-EF67962816EA}
+      - "Aggregation «componentof» → F5.15.1 Provide Detection for the Vehicle Surroundings"  # {94CE0001-DA3F-4791-A331-98474425CE20} → {63E3B0BC-06DA-4321-A618-EF67962816EA}
       - "Association «IN» → pshvs_vehicle_detected_nearby"  # {0F0C70BB-08F4-4f4f-ABF2-5105564B4B42} → {80685EAC-6A6F-4307-B2AD-22D8F98B2575}
   - name: "F5.15.1.2 Detect Other Road Users in nearby geographic area"
     guid: "{44CED227-A383-4108-8D98-AD781491CEE5}"
@@ -463,7 +463,7 @@ elements:
       (2) The ability to process the sensor data to determine the type of Other Road User (cyclist, motorcyclist, Vulnerable Road User (VRU), "non-equipped" Vehicle) that is nearby, their location relative to the Host Vehicle, and to determine its type and probably trajectory.
       (3) Once processing is complete, the ability to send the data in digital form to the Determine and store local Host Vehicle Conditions Function.
     links:
-      - "Aggregation «component of» → F5.15.1 Provide Detection for the Vehicle Surroundings"  # {ACA6D4A6-0732-4829-8299-5D6897DB4087} → {63E3B0BC-06DA-4321-A618-EF67962816EA}
+      - "Aggregation «componentof» → F5.15.1 Provide Detection for the Vehicle Surroundings"  # {ACA6D4A6-0732-4829-8299-5D6897DB4087} → {63E3B0BC-06DA-4321-A618-EF67962816EA}
       - "Association «IN» → pshvs_other_road_users_nearby"  # {DE22F292-7698-44f2-999C-F988742F2600} → {1CAB6FCF-36A3-4b3f-BB39-B5282C1709EE}
   - name: "F5.15.1.3 Detect Pedestrians near to Host Vehicle"
     guid: "{9B714517-CCE2-4b9c-95E9-E4FFD13A014C}"
@@ -479,7 +479,7 @@ elements:
       (2) The ability to process the sensor data to determine the location of the Pedestrians (including Vulnerable Road Users (VRU's)) relative to the Host Vehicle and their probable trajectory.
       (3) Once processing is complete, the ability to send the data in digital form to the Determine and store local Host Vehicle Conditions Function.
     links:
-      - "Aggregation «component of» → F5.15.1 Provide Detection for the Vehicle Surroundings"  # {903785F2-8FC2-4d7f-9F72-D4EC089E31DF} → {63E3B0BC-06DA-4321-A618-EF67962816EA}
+      - "Aggregation «componentof» → F5.15.1 Provide Detection for the Vehicle Surroundings"  # {903785F2-8FC2-4d7f-9F72-D4EC089E31DF} → {63E3B0BC-06DA-4321-A618-EF67962816EA}
       - "Association «IN» → pshvs_pedestrians_detected_nearby"  # {60916C38-DB04-4bf9-849E-A55DD6DC864C} → {B10B59D0-72A1-4f30-8F04-A727DB1077D2}
   - name: "F5.15.1.4 Detect Atmospheric Conditions near Host Vehicle"
     guid: "{CE67284F-08FE-4fab-8CC6-936325C903C1}"
@@ -495,7 +495,7 @@ elements:
       (2) The ability to process the sensor data to determine such things as temperature, wind strength and direction (taking account of the Host Vehicle's direction of travel), the presence of rain, etc.
       (3) Once processing is complete, the ability to send the data in digital form to the Determine and store local Host Vehicle Conditions Function.
     links:
-      - "Aggregation «component of» → F5.15.1 Provide Detection for the Vehicle Surroundings"  # {D086A73A-CE4B-42f8-BF43-97CA0D9AF0D0} → {63E3B0BC-06DA-4321-A618-EF67962816EA}
+      - "Aggregation «componentof» → F5.15.1 Provide Detection for the Vehicle Surroundings"  # {D086A73A-CE4B-42f8-BF43-97CA0D9AF0D0} → {63E3B0BC-06DA-4321-A618-EF67962816EA}
       - "Association «IN» → pshvs_local_vehicle_atmospheric_data"  # {3CC427E5-C570-4769-A49E-90F2D265EA4D} → {3305357F-B743-4497-9D8E-266CE1B0491A}
   - name: "F5.15.1.5 Detect Visibility in Host Vehicle vicinity"
     guid: "{91746B4E-ABF9-4750-A4F7-1D9AE330EDA5}"
@@ -511,7 +511,7 @@ elements:
       (2) The ability to process the sensor data to determine the level of visibility and the reason for it, e.g. fog, darkness.
       (3) Once processing is complete, the ability to send the data in digital form to the Determine and store local Host Vehicle Conditions Function.
     links:
-      - "Aggregation «component of» → F5.15.1 Provide Detection for the Vehicle Surroundings"  # {F2B434CB-F85F-4242-A0F2-EB90B84EB6FE} → {63E3B0BC-06DA-4321-A618-EF67962816EA}
+      - "Aggregation «componentof» → F5.15.1 Provide Detection for the Vehicle Surroundings"  # {F2B434CB-F85F-4242-A0F2-EB90B84EB6FE} → {63E3B0BC-06DA-4321-A618-EF67962816EA}
       - "Association «IN» → pshvs_local_vehicle_visibility_data"  # {6DA10C41-8884-499a-BADD-B53EDFF1BFDB} → {33777649-E88A-4f07-8CAD-4A42658D75AE}
   - name: "F5.15.1.6 Detect Road Surface State in Host Vehicle vicinity"
     guid: "{1517453F-23A7-49f7-B236-BA8496D5ADED}"
@@ -527,7 +527,7 @@ elements:
       (2) The ability to process the sensor data to determine if road surface is good, or if not what is the problem (e.g. slippery, broken) and why (e.g. oil spill, ice, mud, worn).
       (3) Once processing is complete, the ability to send the data in digital form to the Determine and store local Host Vehicle Conditions Function.
     links:
-      - "Aggregation «component of» → F5.15.1 Provide Detection for the Vehicle Surroundings"  # {4B9C9FCE-40FB-45b3-A719-D3AC83F77A53} → {63E3B0BC-06DA-4321-A618-EF67962816EA}
+      - "Aggregation «componentof» → F5.15.1 Provide Detection for the Vehicle Surroundings"  # {4B9C9FCE-40FB-45b3-A719-D3AC83F77A53} → {63E3B0BC-06DA-4321-A618-EF67962816EA}
       - "Association «IN» → pshvs_local_vehicle_road_surface_conditions"  # {D8B4F40C-2AB8-4dce-ADA5-95F521602A77} → {D31141C2-E6A7-41ef-AF17-C6FDF2EA1F9A}
   - name: "F5.15.1.7 Detect Stationary Objects in Host Vehicle vicinity"
     guid: "{E350AC14-567F-465a-8AF7-2C644A7CCED1}"
@@ -543,7 +543,7 @@ elements:
       (2) The ability to process the sensor data to determine the location of the Stationary Objects and if they are in the road carriageway that is in the forward trajectory of the Host Vehicle, or if they are in the other carriageway.
       (3) Once processing is complete, the ability to send the data in digital form to the Determine and store local Host Vehicle Conditions Function.
     links:
-      - "Aggregation «component of» → F5.15.1 Provide Detection for the Vehicle Surroundings"  # {637BBFC7-4E07-463d-BECC-09DF12B4C87D} → {63E3B0BC-06DA-4321-A618-EF67962816EA}
+      - "Aggregation «componentof» → F5.15.1 Provide Detection for the Vehicle Surroundings"  # {637BBFC7-4E07-463d-BECC-09DF12B4C87D} → {63E3B0BC-06DA-4321-A618-EF67962816EA}
       - "Association «IN» → pshvs_local_vehicle_stationary_objects"  # {09109B96-941C-480d-AF82-F82AE474DC3D} → {5E6E94F6-0E77-4036-B641-3DF79A6CA80C}
   - name: "F5.15.1.8 Detect Vehicle Attitude Status"
     guid: "{46031CA6-419E-45d7-81CB-197FEB857A02}"
@@ -559,7 +559,7 @@ elements:
       (2) The ability to use the Host Vehicle current speed, trajectory and location to determine if it is in the correct attitude, i.e. has not fallen over, or turned upside down, or on its side.
       (3) The ability to send data for a warning message that the Host Vehicle is not in a proper attitude.
     links:
-      - "Aggregation «component of» → F5.15.1 Provide Detection for the Vehicle Surroundings"  # {08BD6A5F-8A29-4af4-BBA7-8DA75BEAC306} → {63E3B0BC-06DA-4321-A618-EF67962816EA}
+      - "Aggregation «componentof» → F5.15.1 Provide Detection for the Vehicle Surroundings"  # {08BD6A5F-8A29-4af4-BBA7-8DA75BEAC306} → {63E3B0BC-06DA-4321-A618-EF67962816EA}
       - "Association «IN» → pshvs_data_for_incorrect_vehicle_attitude_warnings"  # {B6557746-1B09-4ef2-852E-48AF29C4C08F} → {7D52227B-C64A-4c99-8C5B-D8F8EE36C472}
   - name: "F5.15.3 Determine Host Vehicle Situation"
     guid: "{D880D0A8-228C-4e34-8130-5ABAB4C9A865}"
@@ -606,7 +606,7 @@ elements:
       (6) The ability to also use the data it receives from traffic signals that are relevant to the future trajectory of the Host Vehicle showing when red (stop) and green (go) will be displayed to determine whether the Host Vehicle will run a red light.
       (7) If the data received from traffic signals shows that the Host Vehicle will run a red light, the ability to send a warning to other functionality for output to its Driver and also to other functionality for transfer to Other Vehicles.
     links:
-      - "Aggregation «component of» → F5.15.3 Determine Host Vehicle Situation"  # {FD55C65A-928B-47a8-B845-F267726A3BF2} → {D880D0A8-228C-4e34-8130-5ABAB4C9A865}
+      - "Aggregation «componentof» → F5.15.3 Determine Host Vehicle Situation"  # {FD55C65A-928B-47a8-B845-F267726A3BF2} → {D880D0A8-228C-4e34-8130-5ABAB4C9A865}
       - "Association «IN» → pshvs.mt_roadside_vehicle_lane_departure_warning"  # {B49E4210-6095-4f3b-A587-7925B5040162} → {4ACCB898-9DAB-45a3-92CD-CA68690CD519}
       - "Association «IN» → pshvs_host_vehicle_ghost_driving_warning"  # {E01DFD5C-03CE-4020-83F6-DAFAFEB991AD} → {69CF7140-CA2F-4a68-9C0D-273D3E8C5CC7}
       - "Association «IN» → pshvs_host_vehicle_lane_departure_warning"  # {80E0ACB9-A55C-44b3-9F44-CD5820A5A340} → {8C2E0517-4EA8-424b-9287-E5E1ABA91EC8}
@@ -634,7 +634,7 @@ elements:
       (3) If a high possibility exists, the ability to send a warning to the Driver, Other Vehicles and to the Incident Management functionality suggesting the possibility of an accident.
       (4) The ability to perform this determination every time that the trajectory of the Host Vehicle or the position of Other Vehicles changes.
     links:
-      - "Aggregation «component of» → F5.15.3 Determine Host Vehicle Situation"  # {A7CA86D7-2762-4822-8AE9-8A6109CC2D59} → {D880D0A8-228C-4e34-8130-5ABAB4C9A865}
+      - "Aggregation «componentof» → F5.15.3 Determine Host Vehicle Situation"  # {A7CA86D7-2762-4822-8AE9-8A6109CC2D59} → {D880D0A8-228C-4e34-8130-5ABAB4C9A865}
       - "Association «IN» → pshvs.mt_possible_conflicts_with_vehicle_movement"  # {9B490B7B-B8BF-47fd-937A-1D36B2EBC7FC} → {2F1D0855-DC4C-4754-8AE6-8A2A8F0A8C37}
       - "Association «IN» → pshvs_nearby_vehicles_and_road_user_information"  # {23C1341C-255E-45d6-9012-5CB3185DBB97} → {34C2A4FE-FC99-47c2-A42C-7F16537F9F41}
       - "Association «IN» → pshvs_vehicle_collision_warning"  # {E48F1C95-9B82-4fc1-9C75-8DCE23B1A004} → {35811CB3-470E-45b8-AE0E-09E5C9E25E39}
@@ -653,7 +653,7 @@ elements:
       (3) The ability to analyse the data received about the behaviour of the Driver of the Host Vehicle and use this together with the immediate trajectory to classify the future operation of the Vehicle as safe or un-safe.
       (4) If the behaviour of the Driver is shown to be un-safe, the ability to send a warning for output to the Driver of the Host Vehicle.
     links:
-      - "Aggregation «component of» → F5.15.3 Determine Host Vehicle Situation"  # {EDBC5015-6968-44b0-A908-63AA9891BA6F} → {D880D0A8-228C-4e34-8130-5ABAB4C9A865}
+      - "Aggregation «componentof» → F5.15.3 Determine Host Vehicle Situation"  # {EDBC5015-6968-44b0-A908-63AA9891BA6F} → {D880D0A8-228C-4e34-8130-5ABAB4C9A865}
       - "Association «IN» → pshvs_vehicle_behaviour_warning"  # {CF1E6EF6-FFB2-43de-9F7A-6254FE4A4C31} → {0CABCC16-10C2-4955-BC6E-EA3EAC034A9C}
   - name: "F5.15.4 Provide Vehicle Trajectory Information to Driver"
     guid: "{D6D8A90D-CBE1-4211-99AD-D96F223A0ECC}"

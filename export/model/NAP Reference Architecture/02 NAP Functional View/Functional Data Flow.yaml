@@ -380,7 +380,7 @@ elements:
     note: |
       It consists of inputs from the NAP Content Consumer containing data objects that provide a request for information about accessible traffic, travel data and any other relevant information which are described with metadata in the store of NAP Metadata. The request shall contain keywords or any refining demand in at least one metadata element.
     links:
-      - "Aggregation «Componentof» → fnap-mt_inputs"  # {9FFF3FB8-048B-4c62-88AB-1C46DA692FD4} → {572F1D4D-9EB2-41ef-9944-23A22C7DA25B}
+      - "Aggregation «componentof» → fnap-mt_inputs"  # {9FFF3FB8-048B-4c62-88AB-1C46DA692FD4} → {572F1D4D-9EB2-41ef-9944-23A22C7DA25B}
       - "Association «OUT» → F3.6 Operate National Access Point"  # {08E37D68-18B8-4107-AE07-8A03AE8532D8} → {7ADE914E-925B-4d69-8E2A-6E26A0C42EEE}
       - "Association «OUT» → F3.6.4 Manage Metadata Retrieval"  # {BD1D94B8-CF0A-4b46-A050-B1EE2E79CF10} → {2F2393E9-9A59-4344-A2C0-207945E7F438}
       - "Association «served by» → PDF Metadata to Content Consumer"  # {8E23A8F8-BE1B-47c4-AF0D-8982438D84BD} → {C25F8BCA-DCD4-4894-956E-40D0218D3ACA}
@@ -401,7 +401,7 @@ elements:
       TODO:
       - NAP User and NAP Operator are not mentioned anywhere, they shall be created as new terminators in NAP Actors
     links:
-      - "Aggregation «Componentof» → fnap-mt_inputs"  # {959751C3-B915-4dc4-AFC7-4BD893F79BEF} → {572F1D4D-9EB2-41ef-9944-23A22C7DA25B}
+      - "Aggregation «componentof» → fnap-mt_inputs"  # {959751C3-B915-4dc4-AFC7-4BD893F79BEF} → {572F1D4D-9EB2-41ef-9944-23A22C7DA25B}
       - "Association «OUT» → F3.6 Operate National Access Point"  # {5707AA49-29EA-41f2-9D67-6F4BA67DF751} → {7ADE914E-925B-4d69-8E2A-6E26A0C42EEE}
       - "Association «OUT» → F3.6.5 Provide NAP User Support"  # {0D816A1C-CBF8-4e4e-A237-A9D5E6FA8AB6} → {E4E0DD97-20AB-4868-B0DE-C0C3C14EA4BA}
       - "Association «served by» → PDF Support of Content Consumer"  # {BEC7B4E4-8960-4b85-9E8E-EDE9219059EE} → {0B43348A-F713-49fe-A684-A88D53A58D67}
@@ -423,7 +423,7 @@ elements:
       TODO:
       - Should the authorization credentials be really done by this data flow? I assume yes, BUT then what if just log in to change data in NAP Users? Then it gets complicated, also what about the Provide Interface function should not it be also part of manage registrations? There shall also be an interface.
     links:
-      - "Aggregation «Componentof» → fnap-mt_inputs"  # {5E12A648-243C-4aa4-A848-DC6D99469B6F} → {572F1D4D-9EB2-41ef-9944-23A22C7DA25B}
+      - "Aggregation «componentof» → fnap-mt_inputs"  # {5E12A648-243C-4aa4-A848-DC6D99469B6F} → {572F1D4D-9EB2-41ef-9944-23A22C7DA25B}
       - "Association «OUT» → F3.6 Operate National Access Point"  # {A9E975BF-0523-44fc-9A71-5374B7CEE5C6} → {7ADE914E-925B-4d69-8E2A-6E26A0C42EEE}
       - "Association «OUT» → F3.6.3 Manage Content Providers Metadata"  # {19CCF105-8EDD-40cf-AA7A-85F98232F147} → {E8D1212C-A787-4da1-A4EB-B4E1896ABD19}
       - "Association «served by» → PDF Metadata from Content Provider"  # {21E24BE3-79FC-41cc-84EA-C8587F7F8F46} → {48F2D92D-8E82-4032-B932-CD8D2CB855B0}
@@ -441,7 +441,7 @@ elements:
       It consists of inputs from the NAP Content Provider containing data objects that provide a registration request of and information about a potential NAP Content Provider which wants to register or a request with credentials of registered NAP Content Provider for retrieval of its data upon a successful authorisation. (Details of the information about the NAP Content Provider will be found in the description of the store of NAP Users).
       The registration request contains relevant information about the entity to be registered under NAP Content Provider account, including identity information, licence terms approval, users, machines, and organization information.
     links:
-      - "Aggregation «Componentof» → fnap-mt_inputs"  # {9598F2DF-4EF6-4299-A9AC-31EEC2889082} → {572F1D4D-9EB2-41ef-9944-23A22C7DA25B}
+      - "Aggregation «componentof» → fnap-mt_inputs"  # {9598F2DF-4EF6-4299-A9AC-31EEC2889082} → {572F1D4D-9EB2-41ef-9944-23A22C7DA25B}
       - "Association «OUT» → F3.6 Operate National Access Point"  # {C5939786-F611-497d-BDC7-3556FCA9A119} → {7ADE914E-925B-4d69-8E2A-6E26A0C42EEE}
       - "Association «OUT» → F3.6.2 Manage Registrations and Provide Authorisation Service"  # {ABFB167B-1A9F-45d9-9B5E-98FE8A090F95} → {15D991EA-63BC-40ac-936A-A0B8D3CBC28A}
       - "Association «served by» → PDF User Management of Content Provider"  # {E04F8C8F-EA60-4f85-8462-E01326EF8DC4} → {C5A68539-7FA7-4245-9B3A-F55B6668B579}
@@ -456,7 +456,7 @@ elements:
     note: |
       It consists of inputs from the NAP Content Provider containing data objects that provide a request for support describing an issue the NAP User have and to which the NAP Operator shall respond. The data objects are used by functionality in the Manage Traffic Functional Area.
     links:
-      - "Aggregation «Componentof» → fnap-mt_inputs"  # {49435A56-CACA-4c76-B9C3-D13C28930493} → {572F1D4D-9EB2-41ef-9944-23A22C7DA25B}
+      - "Aggregation «componentof» → fnap-mt_inputs"  # {49435A56-CACA-4c76-B9C3-D13C28930493} → {572F1D4D-9EB2-41ef-9944-23A22C7DA25B}
       - "Association «OUT» → F3.6 Operate National Access Point"  # {5223F8C5-CD44-4a8a-B547-A57B3EA07B65} → {7ADE914E-925B-4d69-8E2A-6E26A0C42EEE}
       - "Association «OUT» → F3.6.5 Provide NAP User Support"  # {B9AD334A-0476-4802-A3F3-860FA59E618A} → {E4E0DD97-20AB-4868-B0DE-C0C3C14EA4BA}
       - "Association «served by» → PDF Support of Content Provider"  # {6A93FF77-84E6-45d4-B038-023F74CA63C8} → {BA985F0C-2C6F-4329-BABC-91890CC23954}
@@ -625,9 +625,9 @@ elements:
       
       - investigate if the data objects should refer to web objects (data are presented to the user as a web page)
     links:
-      - "Aggregation «Componentof» → tnap-mt_outputs"  # {52E2AD93-8E9F-4ee0-AA16-3F7E0A563C02} → {B767384A-BAB2-4802-A07C-DA9BA8B1132A}
-      - "Aggregation «Componentof» → tnap-mt_outputs"  # {DBE369D0-1D2C-4081-ADA2-8575AF649DCC} → {D2D62478-1875-414b-A64F-9D0535140FF4}
-      - "Aggregation «Componentof» → tnap-mt_outputs"  # {EFF9D3D1-8FA0-475e-A704-4BF73F9E198E} → {EACAFE4C-395F-4a01-B251-D6ED49DAFC30}
+      - "Aggregation «componentof» → tnap-mt_outputs"  # {52E2AD93-8E9F-4ee0-AA16-3F7E0A563C02} → {B767384A-BAB2-4802-A07C-DA9BA8B1132A}
+      - "Aggregation «componentof» → tnap-mt_outputs"  # {DBE369D0-1D2C-4081-ADA2-8575AF649DCC} → {D2D62478-1875-414b-A64F-9D0535140FF4}
+      - "Aggregation «componentof» → tnap-mt_outputs"  # {EFF9D3D1-8FA0-475e-A704-4BF73F9E198E} → {EACAFE4C-395F-4a01-B251-D6ED49DAFC30}
       - "Association «OUT» → NAP Content Consumer"  # {F08CDB85-EFD4-48ff-ACBC-8DBFE9A541E7} → {6713B765-606E-4208-8FE8-99B0D50851A5}
       - "Association «served by» → PDF Metadata to Content Consumer"  # {E66BC4EF-8CBC-4dd5-BA9E-FF4EE8AE3332} → {C25F8BCA-DCD4-4894-956E-40D0218D3ACA}
       - "Usage → Search result"  # {2811DDFD-5384-45de-94E0-EC10423106DA} → {C8C83A30-6BC8-42e1-ACA3-824E36C454AB}
@@ -643,9 +643,9 @@ elements:
     note: |
       It contains outputs to the NAP Content Consumer that have been created from data objects provided by functionality in the Manage Traffic Functional Area that are the responses to previous requests for support, i.e. information about handling and resolving the issue.
     links:
-      - "Aggregation «Componentof» → tnap-mt_outputs"  # {24F7CD44-EA81-4ce4-A6E4-295B2861D826} → {B767384A-BAB2-4802-A07C-DA9BA8B1132A}
-      - "Aggregation «Componentof» → tnap-mt_outputs"  # {6655521C-2C19-4a1e-BA4D-0D2DF4C04B30} → {D2D62478-1875-414b-A64F-9D0535140FF4}
-      - "Aggregation «Componentof» → tnap-mt_outputs"  # {829D03F0-099E-414c-B719-519C04663AD3} → {EACAFE4C-395F-4a01-B251-D6ED49DAFC30}
+      - "Aggregation «componentof» → tnap-mt_outputs"  # {24F7CD44-EA81-4ce4-A6E4-295B2861D826} → {B767384A-BAB2-4802-A07C-DA9BA8B1132A}
+      - "Aggregation «componentof» → tnap-mt_outputs"  # {6655521C-2C19-4a1e-BA4D-0D2DF4C04B30} → {D2D62478-1875-414b-A64F-9D0535140FF4}
+      - "Aggregation «componentof» → tnap-mt_outputs"  # {829D03F0-099E-414c-B719-519C04663AD3} → {EACAFE4C-395F-4a01-B251-D6ED49DAFC30}
       - "Association «OUT» → NAP Content Consumer"  # {0B44BB14-200C-4769-9992-03DE2FC00941} → {6713B765-606E-4208-8FE8-99B0D50851A5}
       - "Association «served by» → PDF Support of Content Consumer"  # {8A641892-A544-40bd-80C0-501DB32FB937} → {0B43348A-F713-49fe-A684-A88D53A58D67}
       - "Usage → Support Ticket Content Consumer"  # {83B1761D-F182-44b4-B319-42B93798462C} → {5BC8E2B7-C827-4227-939D-55F87D54635C}
@@ -666,9 +666,9 @@ elements:
       - investigate sequence diagram and how credentials are passed, it also shall contain CP data
       - how do I log in as CP to change data already there? And also, how do I display them?
     links:
-      - "Aggregation «Componentof» → tnap-mt_outputs"  # {15A2DBA4-80CC-437e-AAF6-73F5C362C544} → {B767384A-BAB2-4802-A07C-DA9BA8B1132A}
-      - "Aggregation «Componentof» → tnap-mt_outputs"  # {18CA8AFC-51B4-4629-9B61-38D0DB1F4A8B} → {EACAFE4C-395F-4a01-B251-D6ED49DAFC30}
-      - "Aggregation «Componentof» → tnap-mt_outputs"  # {45E55340-61C4-4890-A5FB-F6596D6BD9D5} → {D2D62478-1875-414b-A64F-9D0535140FF4}
+      - "Aggregation «componentof» → tnap-mt_outputs"  # {15A2DBA4-80CC-437e-AAF6-73F5C362C544} → {B767384A-BAB2-4802-A07C-DA9BA8B1132A}
+      - "Aggregation «componentof» → tnap-mt_outputs"  # {18CA8AFC-51B4-4629-9B61-38D0DB1F4A8B} → {EACAFE4C-395F-4a01-B251-D6ED49DAFC30}
+      - "Aggregation «componentof» → tnap-mt_outputs"  # {45E55340-61C4-4890-A5FB-F6596D6BD9D5} → {D2D62478-1875-414b-A64F-9D0535140FF4}
       - "Association «OUT» → NAP Content Provider"  # {1E95D748-07D6-4063-942E-AD02E69CBDF7} → {7F7723C2-1334-495d-8C3F-1CA486951DD2}
       - "Association «served by» → PDF User Management of Content Provider"  # {19878AF3-D172-4fd2-BE2C-F8846DB03D0A} → {C5A68539-7FA7-4245-9B3A-F55B6668B579}
       - "Usage → ID Information"  # {EAF81352-AF89-4318-BDB8-240EDA4CA2D0} → {66F65417-2156-4e81-8EFF-353075C52BEC}
@@ -688,9 +688,9 @@ elements:
       TODO:
       - IMPORTANT check naming conventions for this double functionality (either update data or get back data objects of the CP) and harmonize among the DFs
     links:
-      - "Aggregation «Componentof» → tnap-mt_outputs"  # {2D963F40-C71B-4c1d-8E3F-D2CA1109CF84} → {B767384A-BAB2-4802-A07C-DA9BA8B1132A}
-      - "Aggregation «Componentof» → tnap-mt_outputs"  # {9F257B2E-D35B-4710-8FF8-DD8F55BA652C} → {EACAFE4C-395F-4a01-B251-D6ED49DAFC30}
-      - "Aggregation «Componentof» → tnap-mt_outputs"  # {C3DF2AB1-0496-4ffd-AB8F-B3475CFDBC19} → {D2D62478-1875-414b-A64F-9D0535140FF4}
+      - "Aggregation «componentof» → tnap-mt_outputs"  # {2D963F40-C71B-4c1d-8E3F-D2CA1109CF84} → {B767384A-BAB2-4802-A07C-DA9BA8B1132A}
+      - "Aggregation «componentof» → tnap-mt_outputs"  # {9F257B2E-D35B-4710-8FF8-DD8F55BA652C} → {EACAFE4C-395F-4a01-B251-D6ED49DAFC30}
+      - "Aggregation «componentof» → tnap-mt_outputs"  # {C3DF2AB1-0496-4ffd-AB8F-B3475CFDBC19} → {D2D62478-1875-414b-A64F-9D0535140FF4}
       - "Association «OUT» → NAP Content Provider"  # {625531D6-210C-4be8-85B8-5F08DF926494} → {7F7723C2-1334-495d-8C3F-1CA486951DD2}
       - "Association «served by» → PDF Metadata from Content Provider"  # {7E0AC81A-44B6-421f-B75D-D2255C45D8A2} → {48F2D92D-8E82-4032-B932-CD8D2CB855B0}
       - "Usage → Metadata"  # {44AB8CF1-9017-4e03-A8FB-8F226FC2CCBA} → {B6CFF10C-AB9F-46d7-88EA-2C71C4A0BF1A}
@@ -711,9 +711,9 @@ elements:
       
       - to be replaced by dataflow to generic terminator (apply for all DFs from F3.6.5 function = DF reduction of 4:2)
     links:
-      - "Aggregation «Componentof» → tnap-mt_outputs"  # {21BECF7C-D136-4717-AE69-F0EC34CEC220} → {B767384A-BAB2-4802-A07C-DA9BA8B1132A}
-      - "Aggregation «Componentof» → tnap-mt_outputs"  # {C5844525-AEE3-49f9-B1BF-E5C26B1402B8} → {EACAFE4C-395F-4a01-B251-D6ED49DAFC30}
-      - "Aggregation «Componentof» → tnap-mt_outputs"  # {D885E7E8-2117-4ead-AB15-A899A099B309} → {D2D62478-1875-414b-A64F-9D0535140FF4}
+      - "Aggregation «componentof» → tnap-mt_outputs"  # {21BECF7C-D136-4717-AE69-F0EC34CEC220} → {B767384A-BAB2-4802-A07C-DA9BA8B1132A}
+      - "Aggregation «componentof» → tnap-mt_outputs"  # {C5844525-AEE3-49f9-B1BF-E5C26B1402B8} → {EACAFE4C-395F-4a01-B251-D6ED49DAFC30}
+      - "Aggregation «componentof» → tnap-mt_outputs"  # {D885E7E8-2117-4ead-AB15-A899A099B309} → {D2D62478-1875-414b-A64F-9D0535140FF4}
       - "Association «OUT» → NAP Content Provider"  # {AE0E7ADE-F518-4bda-9934-148CD084C534} → {7F7723C2-1334-495d-8C3F-1CA486951DD2}
       - "Association «served by» → PDF Support of Content Provider"  # {C7689EA7-F77B-4ebd-BB9B-8AC3E6F11FF6} → {BA985F0C-2C6F-4329-BABC-91890CC23954}
       - "Usage → support Ticket Content Provider"  # {EF0538C0-1C51-4407-A25D-9AAB19C7CDE7} → {51AAC2F5-C580-4c7b-A2C2-D7F879C9BDEB}

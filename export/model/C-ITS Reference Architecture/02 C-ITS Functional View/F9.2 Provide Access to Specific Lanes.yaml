@@ -15,4 +15,4 @@ elements:
     note: |
       This High Level Function is related to specific lanes and their use based on vehicle parameters, e.g. vehicle categories, vehicle emissions standards, vehicles passenger Nr. status, ...
     links:
-      - "Aggregation «component of» → F9. Provide Support for Cooperative Systems"  # {E8549062-784F-4b8b-91CE-586B2829B5CA} → {F0D7E9A8-9F88-4e8f-AF0F-661C1990D546}
+      - "Aggregation «componentof» → F9. Provide Support for Cooperative Systems"  # {E8549062-784F-4b8b-91CE-586B2829B5CA} → {F0D7E9A8-9F88-4e8f-AF0F-661C1990D546}

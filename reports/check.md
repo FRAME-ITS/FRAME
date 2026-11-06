@@ -1,6 +1,6 @@
 # Model check – FRAME.qea
 
-**45 errors, 73 warnings**
+**45 errors, 70 warnings**
 
 | Rule | Related issue | Errors | Warnings |
 |---|---|---|---|
@@ -13,16 +13,15 @@
 | release-hygiene |  | 0 | 1 |
 | self-reference | #62 | 0 | 2 |
 | servedby |  | 9 | 5 |
-| stereotype-spelling | #86 | 0 | 3 |
 | unused-flow | #76 | 0 | 11 |
 
 ## Errors
 
 <details><summary><b>componentof</b> (8)</summary>
 
-- «Componentof» Low_Level_Data_Flow **flds-psef_location_data** (Frame Repository) → flds-emergency_call_location (Low_Level_Data_Flow) runs whole → part or between low-level flows
-- «Componentof» Low_Level_Data_Flow **flds-psef_location_data** (Frame Repository) → flds-emergency_vehicle_location (Low_Level_Data_Flow) runs whole → part or between low-level flows
-- «component of» Low_Level_Data_Flow **fo.co-PSAP_data_update** (Frame Repository) → fo.co-PSAP_data_inputs (Low_Level_Data_Flow) runs whole → part or between low-level flows
+- «componentof» Low_Level_Data_Flow **flds-psef_location_data** (Frame Repository) → flds-emergency_call_location (Low_Level_Data_Flow) runs whole → part or between low-level flows
+- «componentof» Low_Level_Data_Flow **flds-psef_location_data** (Frame Repository) → flds-emergency_vehicle_location (Low_Level_Data_Flow) runs whole → part or between low-level flows
+- «componentof» Low_Level_Data_Flow **fo.co-PSAP_data_update** (Frame Repository) → fo.co-PSAP_data_inputs (Low_Level_Data_Flow) runs whole → part or between low-level flows
 - «componentof» Low_Level_Data_Flow **fo.co-request_PSAP_data_output** (Frame Repository) → fo.co-PSAP_data_inputs (Low_Level_Data_Flow) runs whole → part or between low-level flows
 - «componentof» Low_Level_Data_Flow **mt.mffo_current_inter-urban_traffic_data** (Frame Repository) → mt.mffo_current_road_network_data (Low_Level_Data_Flow) runs whole → part or between low-level flows
 - «componentof» Low_Level_Data_Flow **mt.mffo_current_urban_traffic_data** (Frame Repository) → mt.mffo_current_road_network_data (Low_Level_Data_Flow) runs whole → part or between low-level flows
@@ -82,48 +81,48 @@
 
 <details><summary><b>componentof</b> (42)</summary>
 
-- «Componentof» High_Level_Data_Flow **fnap-mt_inputs** (NAP Reference Architecture) → fnap.cc-metadata_search_request (Low_Level_Data_Flow) runs whole → part or between low-level flows
-- «Componentof» High_Level_Data_Flow **fnap-mt_inputs** (NAP Reference Architecture) → fnap.cc-support_request (Low_Level_Data_Flow) runs whole → part or between low-level flows
-- «Componentof» High_Level_Data_Flow **fnap-mt_inputs** (NAP Reference Architecture) → fnap.cp-metadata_&_authorisation_credentials (Low_Level_Data_Flow) runs whole → part or between low-level flows
-- «Componentof» High_Level_Data_Flow **fnap-mt_inputs** (NAP Reference Architecture) → fnap.cp-registration_request (Low_Level_Data_Flow) runs whole → part or between low-level flows
-- «Componentof» High_Level_Data_Flow **fnap-mt_inputs** (NAP Reference Architecture) → fnap.cp-support_request (Low_Level_Data_Flow) runs whole → part or between low-level flows
-- «Componentof» High_Level_Data_Flow **fnap-mt_inputs** (NAP Reference Architecture) → fnap.cp-support_request (Low_Level_Data_Flow) runs whole → part or between low-level flows
-- «Componentof» High_Level_Data_Flow **tnap-mt_outputs** (NAP Reference Architecture) → tnap.cc-support_response (Low_Level_Data_Flow) runs whole → part or between low-level flows
-- «Componentof» High_Level_Data_Flow **tnap-mt_outputs** (NAP Reference Architecture) → tnap.cc-support_response (Low_Level_Data_Flow) runs whole → part or between low-level flows
-- «Componentof» High_Level_Data_Flow **tnap-mt_outputs** (NAP Reference Architecture) → tnap.cp-support_response (Low_Level_Data_Flow) runs whole → part or between low-level flows
-- «Componentof» High_Level_Data_Flow **tnap-mt_outputs** (NAP Reference Architecture) → tnap.cp-support_response (Low_Level_Data_Flow) runs whole → part or between low-level flows
-- «component of» High_Level_Function **F9.1 Enable Cooperative Roadside Vehicle Interactions** (C-ITS Reference Architecture) → F9.1.1 (Low_Level_Function) runs whole → part
-- «component of» High_Level_Function **F9.1 Enable Cooperative Roadside Vehicle Interactions** (C-ITS Reference Architecture) → F9.1.2 (Low_Level_Function) runs whole → part
-- «component of» High_Level_Function **F9.1 Enable Cooperative Roadside Vehicle Interactions** (C-ITS Reference Architecture) → F9.1.3 (Low_Level_Function) runs whole → part
-- «component of» High_Level_Function **F9.1 Enable Cooperative Roadside Vehicle Interactions** (C-ITS Reference Architecture) → F9.1.4 (Low_Level_Function) runs whole → part
-- «component of» High_Level_Function **F9.1 Enable Cooperative Roadside Vehicle Interactions** (C-ITS Reference Architecture) → F9.1.5 (Low_Level_Function) runs whole → part
-- «component of» High_Level_Function **F9.1 Enable Cooperative Roadside Vehicle Interactions** (C-ITS Reference Architecture) → F9.1.6 (Low_Level_Function) runs whole → part
-- «component of» High_Level_Function **F9.1 Enable Cooperative Roadside Vehicle Interactions** (C-ITS Reference Architecture) → F9.1.7 (Low_Level_Function) runs whole → part
-- «component of» High_Level_Function **F9.3 Manage Vehicle Access to Sensitive Locations/ Areas** (C-ITS Reference Architecture) → F9.3.1 (Low_Level_Function) runs whole → part
-- «component of» High_Level_Function **F9.3 Manage Vehicle Access to Sensitive Locations/ Areas** (C-ITS Reference Architecture) → F9.3.10 (Low_Level_Function) runs whole → part
-- «component of» High_Level_Function **F9.3 Manage Vehicle Access to Sensitive Locations/ Areas** (C-ITS Reference Architecture) → F9.3.11 (Low_Level_Function) runs whole → part
-- «component of» High_Level_Function **F9.3 Manage Vehicle Access to Sensitive Locations/ Areas** (C-ITS Reference Architecture) → F9.3.12 (Low_Level_Function) runs whole → part
-- «component of» High_Level_Function **F9.3 Manage Vehicle Access to Sensitive Locations/ Areas** (C-ITS Reference Architecture) → F9.3.13 (Low_Level_Function) runs whole → part
-- «component of» High_Level_Function **F9.3 Manage Vehicle Access to Sensitive Locations/ Areas** (C-ITS Reference Architecture) → F9.3.14 (Low_Level_Function) runs whole → part
-- «component of» High_Level_Function **F9.3 Manage Vehicle Access to Sensitive Locations/ Areas** (C-ITS Reference Architecture) → F9.3.15 (Low_Level_Function) runs whole → part
-- «component of» High_Level_Function **F9.3 Manage Vehicle Access to Sensitive Locations/ Areas** (C-ITS Reference Architecture) → F9.3.2 (Low_Level_Function) runs whole → part
-- «component of» High_Level_Function **F9.3 Manage Vehicle Access to Sensitive Locations/ Areas** (C-ITS Reference Architecture) → F9.3.3 (Low_Level_Function) runs whole → part
-- «component of» High_Level_Function **F9.3 Manage Vehicle Access to Sensitive Locations/ Areas** (C-ITS Reference Architecture) → F9.3.4 (Low_Level_Function) runs whole → part
-- «component of» High_Level_Function **F9.3 Manage Vehicle Access to Sensitive Locations/ Areas** (C-ITS Reference Architecture) → F9.3.5 (Low_Level_Function) runs whole → part
-- «component of» High_Level_Function **F9.3 Manage Vehicle Access to Sensitive Locations/ Areas** (C-ITS Reference Architecture) → F9.3.6 (Low_Level_Function) runs whole → part
-- «component of» High_Level_Function **F9.3 Manage Vehicle Access to Sensitive Locations/ Areas** (C-ITS Reference Architecture) → F9.3.7 (Low_Level_Function) runs whole → part
-- «component of» High_Level_Function **F9.3 Manage Vehicle Access to Sensitive Locations/ Areas** (C-ITS Reference Architecture) → F9.3.8 (Low_Level_Function) runs whole → part
-- «component of» High_Level_Function **F9.3 Manage Vehicle Access to Sensitive Locations/ Areas** (C-ITS Reference Architecture) → F9.3.9 (Low_Level_Function) runs whole → part
-- «component of» High_Level_Function **F9.5 Manage Interurban Urban Traffic Zones** (C-ITS Reference Architecture) → F9.5.1 (Low_Level_Function) runs whole → part
-- «component of» High_Level_Function **F9.5 Manage Interurban Urban Traffic Zones** (C-ITS Reference Architecture) → F9.5.2 (Low_Level_Function) runs whole → part
-- «component of» High_Level_Function **F9.5 Manage Interurban Urban Traffic Zones** (C-ITS Reference Architecture) → F9.5.3 (Low_Level_Function) runs whole → part
-- «component of» High_Level_Function **F9.5 Manage Interurban Urban Traffic Zones** (C-ITS Reference Architecture) → F9.5.3 (Low_Level_Function) runs whole → part
-- «component of» High_Level_Function **F9.5 Manage Interurban Urban Traffic Zones** (C-ITS Reference Architecture) → F9.5.4 (Low_Level_Function) runs whole → part
-- «component of» High_Level_Function **F9.5 Manage Interurban Urban Traffic Zones** (C-ITS Reference Architecture) → F9.5.5 (Low_Level_Function) runs whole → part
-- «component of» High_Level_Function **F9.5 Manage Interurban Urban Traffic Zones** (C-ITS Reference Architecture) → F9.5.6 (Low_Level_Function) runs whole → part
-- «component of» High_Level_Function **F9.5 Manage Interurban Urban Traffic Zones** (C-ITS Reference Architecture) → F9.5.7 (Low_Level_Function) runs whole → part
-- «component of» High_Level_Function **F9.5 Manage Interurban Urban Traffic Zones** (C-ITS Reference Architecture) → F9.5.8 (Low_Level_Function) runs whole → part
-- «component of» High_Level_Function **F9.6 - Future messages and C-ITS services** (C-ITS Reference Architecture) → F9.6.1 (Low_Level_Function) runs whole → part
+- «componentof» High_Level_Data_Flow **fnap-mt_inputs** (NAP Reference Architecture) → fnap.cc-metadata_search_request (Low_Level_Data_Flow) runs whole → part or between low-level flows
+- «componentof» High_Level_Data_Flow **fnap-mt_inputs** (NAP Reference Architecture) → fnap.cc-support_request (Low_Level_Data_Flow) runs whole → part or between low-level flows
+- «componentof» High_Level_Data_Flow **fnap-mt_inputs** (NAP Reference Architecture) → fnap.cp-metadata_&_authorisation_credentials (Low_Level_Data_Flow) runs whole → part or between low-level flows
+- «componentof» High_Level_Data_Flow **fnap-mt_inputs** (NAP Reference Architecture) → fnap.cp-registration_request (Low_Level_Data_Flow) runs whole → part or between low-level flows
+- «componentof» High_Level_Data_Flow **fnap-mt_inputs** (NAP Reference Architecture) → fnap.cp-support_request (Low_Level_Data_Flow) runs whole → part or between low-level flows
+- «componentof» High_Level_Data_Flow **fnap-mt_inputs** (NAP Reference Architecture) → fnap.cp-support_request (Low_Level_Data_Flow) runs whole → part or between low-level flows
+- «componentof» High_Level_Data_Flow **tnap-mt_outputs** (NAP Reference Architecture) → tnap.cc-support_response (Low_Level_Data_Flow) runs whole → part or between low-level flows
+- «componentof» High_Level_Data_Flow **tnap-mt_outputs** (NAP Reference Architecture) → tnap.cc-support_response (Low_Level_Data_Flow) runs whole → part or between low-level flows
+- «componentof» High_Level_Data_Flow **tnap-mt_outputs** (NAP Reference Architecture) → tnap.cp-support_response (Low_Level_Data_Flow) runs whole → part or between low-level flows
+- «componentof» High_Level_Data_Flow **tnap-mt_outputs** (NAP Reference Architecture) → tnap.cp-support_response (Low_Level_Data_Flow) runs whole → part or between low-level flows
+- «componentof» High_Level_Function **F9.1 Enable Cooperative Roadside Vehicle Interactions** (C-ITS Reference Architecture) → F9.1.1 (Low_Level_Function) runs whole → part
+- «componentof» High_Level_Function **F9.1 Enable Cooperative Roadside Vehicle Interactions** (C-ITS Reference Architecture) → F9.1.2 (Low_Level_Function) runs whole → part
+- «componentof» High_Level_Function **F9.1 Enable Cooperative Roadside Vehicle Interactions** (C-ITS Reference Architecture) → F9.1.3 (Low_Level_Function) runs whole → part
+- «componentof» High_Level_Function **F9.1 Enable Cooperative Roadside Vehicle Interactions** (C-ITS Reference Architecture) → F9.1.4 (Low_Level_Function) runs whole → part
+- «componentof» High_Level_Function **F9.1 Enable Cooperative Roadside Vehicle Interactions** (C-ITS Reference Architecture) → F9.1.5 (Low_Level_Function) runs whole → part
+- «componentof» High_Level_Function **F9.1 Enable Cooperative Roadside Vehicle Interactions** (C-ITS Reference Architecture) → F9.1.6 (Low_Level_Function) runs whole → part
+- «componentof» High_Level_Function **F9.1 Enable Cooperative Roadside Vehicle Interactions** (C-ITS Reference Architecture) → F9.1.7 (Low_Level_Function) runs whole → part
+- «componentof» High_Level_Function **F9.3 Manage Vehicle Access to Sensitive Locations/ Areas** (C-ITS Reference Architecture) → F9.3.1 (Low_Level_Function) runs whole → part
+- «componentof» High_Level_Function **F9.3 Manage Vehicle Access to Sensitive Locations/ Areas** (C-ITS Reference Architecture) → F9.3.10 (Low_Level_Function) runs whole → part
+- «componentof» High_Level_Function **F9.3 Manage Vehicle Access to Sensitive Locations/ Areas** (C-ITS Reference Architecture) → F9.3.11 (Low_Level_Function) runs whole → part
+- «componentof» High_Level_Function **F9.3 Manage Vehicle Access to Sensitive Locations/ Areas** (C-ITS Reference Architecture) → F9.3.12 (Low_Level_Function) runs whole → part
+- «componentof» High_Level_Function **F9.3 Manage Vehicle Access to Sensitive Locations/ Areas** (C-ITS Reference Architecture) → F9.3.13 (Low_Level_Function) runs whole → part
+- «componentof» High_Level_Function **F9.3 Manage Vehicle Access to Sensitive Locations/ Areas** (C-ITS Reference Architecture) → F9.3.14 (Low_Level_Function) runs whole → part
+- «componentof» High_Level_Function **F9.3 Manage Vehicle Access to Sensitive Locations/ Areas** (C-ITS Reference Architecture) → F9.3.15 (Low_Level_Function) runs whole → part
+- «componentof» High_Level_Function **F9.3 Manage Vehicle Access to Sensitive Locations/ Areas** (C-ITS Reference Architecture) → F9.3.2 (Low_Level_Function) runs whole → part
+- «componentof» High_Level_Function **F9.3 Manage Vehicle Access to Sensitive Locations/ Areas** (C-ITS Reference Architecture) → F9.3.3 (Low_Level_Function) runs whole → part
+- «componentof» High_Level_Function **F9.3 Manage Vehicle Access to Sensitive Locations/ Areas** (C-ITS Reference Architecture) → F9.3.4 (Low_Level_Function) runs whole → part
+- «componentof» High_Level_Function **F9.3 Manage Vehicle Access to Sensitive Locations/ Areas** (C-ITS Reference Architecture) → F9.3.5 (Low_Level_Function) runs whole → part
+- «componentof» High_Level_Function **F9.3 Manage Vehicle Access to Sensitive Locations/ Areas** (C-ITS Reference Architecture) → F9.3.6 (Low_Level_Function) runs whole → part
+- «componentof» High_Level_Function **F9.3 Manage Vehicle Access to Sensitive Locations/ Areas** (C-ITS Reference Architecture) → F9.3.7 (Low_Level_Function) runs whole → part
+- «componentof» High_Level_Function **F9.3 Manage Vehicle Access to Sensitive Locations/ Areas** (C-ITS Reference Architecture) → F9.3.8 (Low_Level_Function) runs whole → part
+- «componentof» High_Level_Function **F9.3 Manage Vehicle Access to Sensitive Locations/ Areas** (C-ITS Reference Architecture) → F9.3.9 (Low_Level_Function) runs whole → part
+- «componentof» High_Level_Function **F9.5 Manage Interurban Urban Traffic Zones** (C-ITS Reference Architecture) → F9.5.1 (Low_Level_Function) runs whole → part
+- «componentof» High_Level_Function **F9.5 Manage Interurban Urban Traffic Zones** (C-ITS Reference Architecture) → F9.5.2 (Low_Level_Function) runs whole → part
+- «componentof» High_Level_Function **F9.5 Manage Interurban Urban Traffic Zones** (C-ITS Reference Architecture) → F9.5.3 (Low_Level_Function) runs whole → part
+- «componentof» High_Level_Function **F9.5 Manage Interurban Urban Traffic Zones** (C-ITS Reference Architecture) → F9.5.3 (Low_Level_Function) runs whole → part
+- «componentof» High_Level_Function **F9.5 Manage Interurban Urban Traffic Zones** (C-ITS Reference Architecture) → F9.5.4 (Low_Level_Function) runs whole → part
+- «componentof» High_Level_Function **F9.5 Manage Interurban Urban Traffic Zones** (C-ITS Reference Architecture) → F9.5.5 (Low_Level_Function) runs whole → part
+- «componentof» High_Level_Function **F9.5 Manage Interurban Urban Traffic Zones** (C-ITS Reference Architecture) → F9.5.6 (Low_Level_Function) runs whole → part
+- «componentof» High_Level_Function **F9.5 Manage Interurban Urban Traffic Zones** (C-ITS Reference Architecture) → F9.5.7 (Low_Level_Function) runs whole → part
+- «componentof» High_Level_Function **F9.5 Manage Interurban Urban Traffic Zones** (C-ITS Reference Architecture) → F9.5.8 (Low_Level_Function) runs whole → part
+- «componentof» High_Level_Function **F9.6 - Future messages and C-ITS services** (C-ITS Reference Architecture) → F9.6.1 (Low_Level_Function) runs whole → part
 
 </details>
 
@@ -164,7 +163,7 @@
 
 <details><summary><b>self-reference</b> (2)</summary>
 
-- High_Level_Data_Flow **FRAME_High_Level_Data_Flow1** (Test Package) has a Aggregation «component of» to itself
+- High_Level_Data_Flow **FRAME_High_Level_Data_Flow1** (Test Package) has a Aggregation «componentof» to itself
 - Terminator **FRAME_Terminator1** (Test Package) has a Abstraction «is Type of» to itself
 
 </details>
@@ -176,14 +175,6 @@
 - User_Need **6.5.1.3** (NAP Reference Architecture) → F3.6.4 Manage Metadata Retrieval is Aggregation «componentof», expected Association «Servedby»
 - User_Need **6.5.1.6** (NAP Reference Architecture) → F3.6.4 Manage Metadata Retrieval is Aggregation «componentof», expected Association «Servedby»
 - User_Need **6.5.1.8** (NAP Reference Architecture) → F3.6.4 Manage Metadata Retrieval is Aggregation «componentof», expected Association «Servedby»
-
-</details>
-
-<details><summary><b>stereotype-spelling</b> (3)</summary>
-
-- connector stereotype written in 2 ways: «Servedby» 1746×, «served by» 137×
-- connector stereotype written in 2 ways: «belongsto» 867×, «belongs to» 5×
-- connector stereotype written in 3 ways: «Componentof» 1851×, «componentof» 605×, «component of» 157×
 
 </details>
 

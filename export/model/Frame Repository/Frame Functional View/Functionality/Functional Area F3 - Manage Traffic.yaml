@@ -287,7 +287,7 @@ elements:
       (4) The HMI shall have to ability to enable the Road Network Operator to examine and update the sequence of inter-urban traffic control strategies that are implemented automatically, and to see the "log" of previously implemented inter-urban traffic control strategy changes.
       (5) The HMI shall have to ability to output requests to the Road Network Operator for a check to be made of the availability of auxiliary lanes (hard shoulders), and for the Operator to provide an available/not available response so that traffic can be directed to use it, or not.
     links:
-      - "Aggregation «Componentof» → F3.1.2.13 Manage Inter-urban Traffic Strategies"  # {F42B0EFD-3D00-45fa-B46B-220DC21CA435} → {44E4B5FB-6CF5-40a0-9CE1-D676DB87CA84}
+      - "Aggregation «componentof» → F3.1.2.13 Manage Inter-urban Traffic Strategies"  # {F42B0EFD-3D00-45fa-B46B-220DC21CA435} → {44E4B5FB-6CF5-40a0-9CE1-D676DB87CA84}
       - "Association «IN» → mt_inter-urban_operator_lane_override"  # {90D739A5-8FB1-4e24-A3F9-C03D7849C6A7} → {AF967CFA-107A-4ff6-B842-D532DC20B0EC}
       - "Association «IN» → mt_inter-urban_static_data_changes"  # {26609DB0-A012-4fd7-9CB9-516983031967} → {D23B430F-11BD-4a25-9542-C8FBAD117C5D}
       - "Association «IN» → mt_operator_inter-urban_auxlane_check_response"  # {19E0281B-E047-45fc-98F7-02B4D4E2D60C} → {ACD9B2D8-D289-4d8d-B9FA-317F726F03DE}
@@ -313,7 +313,7 @@ elements:
       (4) The ability to output a warning message to Drivers of Vehicles whose identities do not match those on the permitted list as they approach a point in the inter-urban road network that gives access to a zone.
       (5) The ability to send data about a Vehicle that has been detected approaching a zone to the functionality that manages access to sensitive areas.
     links:
-      - "Aggregation «Componentof» → F3.1.2.13 Manage Inter-urban Traffic Strategies"  # {3483CE71-80CB-4423-9391-0FCF6470C1BF} → {44E4B5FB-6CF5-40a0-9CE1-D676DB87CA84}
+      - "Aggregation «componentof» → F3.1.2.13 Manage Inter-urban Traffic Strategies"  # {3483CE71-80CB-4423-9391-0FCF6470C1BF} → {44E4B5FB-6CF5-40a0-9CE1-D676DB87CA84}
       - "Association «IN» → mt.pscs_vehicle_nearing_inter-urban_sensitive_area"  # {1F72FE17-9359-4265-913D-ECBE04334EDD} → {E4E5A781-3C86-4491-A26F-AEBE494D19E1}
       - "Association «IN» → mt_inter-urban_zone_vehicle_identity"  # {90B46BE4-7F21-4333-8F29-9D48E70BFD25} → {6D2F4E7A-705A-4cf4-B462-AAE82D745915}
       - "Association «IN» → td-approaching_inter-urban_zone"  # {BED0DC38-0AB7-45d8-A5A2-C92E78357CA3} → {AEA0F408-197C-4f4c-A512-12E272FA8D92}
@@ -331,7 +331,7 @@ elements:
       (2) The ability to output (zone) a warning message to Drivers that a physical barrier will prevent them driving their Vehicles into the zone.
       (3) If the Vehicles are detected actually entering the zone, the ability to send the Vehicle identity to the law enforcement functionality.
     links:
-      - "Aggregation «Componentof» → F3.1.2.13 Manage Inter-urban Traffic Strategies"  # {112F2C16-9442-4490-AE21-47F78186EF66} → {44E4B5FB-6CF5-40a0-9CE1-D676DB87CA84}
+      - "Aggregation «componentof» → F3.1.2.13 Manage Inter-urban Traffic Strategies"  # {112F2C16-9442-4490-AE21-47F78186EF66} → {44E4B5FB-6CF5-40a0-9CE1-D676DB87CA84}
       - "Association «IN» → mt.psle_vehicle_entering_inter-urban_zone"  # {02066AB7-0779-4571-A5AC-66BF60B006D8} → {B1FB54E2-DCE2-436c-BA46-D1040D12A1E7}
       - "Association «IN» → td-enterring_inter-urban_zone"  # {4A6D988E-1E15-414f-A0D1-760684C8CE50} → {882AA4BC-6AFE-4439-89DF-8E5BDDCFAEF2}
   - name: "F3.1.2.13.4 Manage Inter-urban Road Network Speeds & Headways"
@@ -350,7 +350,7 @@ elements:
       (4) The ability to send speed and headway settings to the inter-urban functionality that is responsible for the output of messages to Drivers, both at the roadside and in the Vehicle, as well as to other functionality from which it can be sent to other parts of the system and to the Broadcaster.
       (5) The ability to send legal speed settings to the digital map data provider entity in case it needs to be used in future digital map updates.
     links:
-      - "Aggregation «Componentof» → F3.1.2.13 Manage Inter-urban Traffic Strategies"  # {11B24CA7-0950-401b-8D80-B3057312ABD6} → {44E4B5FB-6CF5-40a0-9CE1-D676DB87CA84}
+      - "Aggregation «componentof» → F3.1.2.13 Manage Inter-urban Traffic Strategies"  # {11B24CA7-0950-401b-8D80-B3057312ABD6} → {44E4B5FB-6CF5-40a0-9CE1-D676DB87CA84}
       - "Association «IN» → mt.pshvs_inter-urban_legal_speed_limits"  # {79B56BF3-442B-4fa5-9314-8C5CD235FC8A} → {160C95AE-C670-4874-A780-B0189439CFB0}
       - "Association «IN» → mt.pshvs_inter-urban_suggested_speeds_and_headways"  # {BD350BB3-A885-425e-8364-7427A566ACC2} → {E8F52111-093F-4466-BE26-18D1E5CA9C4C}
       - "Association «IN» → mt_inter-urban_speed_l&s_commands"  # {95B91D28-C4CA-4a4b-9687-7D4EEF1A5B3F} → {2BD78983-6F92-4109-838D-3D8679D9EC36}
@@ -373,7 +373,7 @@ elements:
       (5) The ability to use current, historic and predicted traffic data from the inter-urban network and to change in real-time the actual traffic management commands being sent for output to take account of variations in this data.
       (6) The ability to provide details of the current and previous implemented traffic management strategies on some or all parts of the inter-urban road network to the Road Network Operator through the functionality that provides their interface.
     links:
-      - "Aggregation «Componentof» → F3.1.2.13 Manage Inter-urban Traffic Strategies"  # {624B18CD-C42C-4760-BE50-FED3AC6DFEC4} → {44E4B5FB-6CF5-40a0-9CE1-D676DB87CA84}
+      - "Aggregation «componentof» → F3.1.2.13 Manage Inter-urban Traffic Strategies"  # {624B18CD-C42C-4760-BE50-FED3AC6DFEC4} → {44E4B5FB-6CF5-40a0-9CE1-D676DB87CA84}
       - "Association «IN» → mt.ptja_inter-urban_recommended_routes"  # {517A28D8-1063-4183-A377-95AD92BA28EC} → {8FD72146-447E-4af5-B93C-F7389F66D7D9}
       - "Association «IN» → mt_inter-urban_bridge_inputs"  # {3A9469B8-612D-4798-ADDC-E43508C0396A} → {16CC0F21-75EF-47fc-80C8-B1D944EF2ADD}
       - "Association «IN» → mt_inter-urban_lane_management_requests"  # {A36EF99A-DA52-4a21-B32D-03FBF44A3ED5} → {7605B2FD-6FA6-4146-8007-C24C75C6F8E2}
@@ -406,7 +406,7 @@ elements:
       (6) The ability to support the output of lane management commands that can, where available, make the auxiliary lane (sometimes called the "hard shoulder") available for use.
       (7) The ability to send commands to alter the use of lanes to the functionality that is responsible for the output of messages to Drivers, both at the roadside and in the Vehicle.
     links:
-      - "Aggregation «Componentof» → F3.1.2.13 Manage Inter-urban Traffic Strategies"  # {6D03F51F-175D-4830-9B53-AD61D323BD06} → {44E4B5FB-6CF5-40a0-9CE1-D676DB87CA84}
+      - "Aggregation «componentof» → F3.1.2.13 Manage Inter-urban Traffic Strategies"  # {6D03F51F-175D-4830-9B53-AD61D323BD06} → {44E4B5FB-6CF5-40a0-9CE1-D676DB87CA84}
       - "Association «IN» → mt.pshvs_inter-urban_lane_commands"  # {1599A86C-4513-4e56-B440-0F079ACFD31D} → {21DA3D23-5D6B-4724-A0F0-E29A2A741381}
       - "Association «IN» → mt.pshvs_inter-urban_lane_use_information"  # {EC06D86E-2593-4d65-A61C-640B6C95BAFB} → {29818C09-F5A5-4484-8CE7-35A42D10EE53}
       - "Association «IN» → mt_inter-urban_lane_instructions"  # {98ABF3A2-51CD-4d6d-92E2-90BD087CC518} → {2A18CC73-2001-4830-9117-E3CBC46A4302}
@@ -429,7 +429,7 @@ elements:
       (4) The ability to provide on request a response to the functionality that provides the Road Network Operator interface details of the time of day sequences that are currently available for use.
       (5) The ability to send requests for implementation of traffic control strategies to the inter-urban traffic management and access control functionality.
     links:
-      - "Aggregation «Componentof» → F3.1.2.13 Manage Inter-urban Traffic Strategies"  # {8F0DA6DD-0445-48bf-83BA-24CB078BD594} → {44E4B5FB-6CF5-40a0-9CE1-D676DB87CA84}
+      - "Aggregation «componentof» → F3.1.2.13 Manage Inter-urban Traffic Strategies"  # {8F0DA6DD-0445-48bf-83BA-24CB078BD594} → {44E4B5FB-6CF5-40a0-9CE1-D676DB87CA84}
       - "Association «IN» → mt_planned_inter-urban_data_output"  # {96AD147F-86DB-492e-ADF7-0F84460EFD88} → {94B2F93F-358C-4430-B823-06D1018A7D77}
       - "Association «IN» → mt_planned_inter-urban_traffic_management_request"  # {6A73DA82-9CE1-48de-91CE-62E556FE75A8} → {4B46FD0C-4A62-4f8c-8658-D06D9CAEE800}
   - name: "F3.1.2.13.8 Provide Inter-urban Ramp Metering"
@@ -451,7 +451,7 @@ elements:
       (7) The ability for the commands to be displayed to Drivers either at the roadside, or through a device in their Vehicles.
       (8) The ability to manage one or more "ramps" and to apply different strategies and/or algorithms at each "ramp".
     links:
-      - "Aggregation «Componentof» → F3.1.2.13 Manage Inter-urban Traffic Strategies"  # {3DDAFC96-5B95-4b79-B70D-2CC23CEB43B5} → {44E4B5FB-6CF5-40a0-9CE1-D676DB87CA84}
+      - "Aggregation «componentof» → F3.1.2.13 Manage Inter-urban Traffic Strategies"  # {3DDAFC96-5B95-4b79-B70D-2CC23CEB43B5} → {44E4B5FB-6CF5-40a0-9CE1-D676DB87CA84}
       - "Association «IN» → mt.pshvs_inter-urban_ramp_metering_outputs"  # {3DF9D160-3967-4fe6-91D1-98996DBF7BE4} → {2A04C704-F5B0-4a40-A50A-E0CCC49767B3}
       - "Association «IN» → mt_inter-urban_ramp_metering_strategy_details"  # {68E3332C-259D-4143-A0A4-F3B1012CFEB4} → {3409E5F4-62F9-49f2-A560-FD8F6037844E}
       - "Association «IN» → td-inter-urban_ramp_metering_output"  # {8AEA1A24-F41A-4ca8-8069-1EA7BF71721D} → {846BDC4D-8A0B-4642-B025-A2D2CC5B5EFD}
@@ -470,7 +470,7 @@ elements:
       (3) The HMI shall have the ability to inform the Road Network Operator of the success or failure of the requested change.
       (4) The HMI shall have to ability to output requests to the Road Network Operator for a check to be made of the availability of auxiliary lanes (hard shoulders), and for the Operator to provide an available/not available response so that traffic can be directed to use it, or not.
     links:
-      - "Aggregation «Componentof» → F3.1.2.14 Implement Inter-urban Management Traffic Strategy"  # {58B78011-A039-4585-9AFA-D939778C8C45} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
+      - "Aggregation «componentof» → F3.1.2.14 Implement Inter-urban Management Traffic Strategy"  # {58B78011-A039-4585-9AFA-D939778C8C45} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
       - "Association «IN» → mt_inter-urban_command_monitoring_state"  # {4FFB8399-AC2B-482a-B319-1ADBD761E8A6} → {65E04C16-5AC0-4002-B0BC-853CE4B7F385}
       - "Association «IN» → mt_inter-urban_command_override_status"  # {69C955D4-003C-42fb-A456-89F8A2F875E4} → {D86789D8-05DF-43c2-8FD3-12189F8E0E13}
       - "Association «IN» → to.rno-inter-urban_command_override_response"  # {EE6B505D-11A4-46ba-8DCF-94AB55D5CB78} → {BE2F1DD0-D1B3-4930-B077-0DF7EA8874FD}
@@ -492,7 +492,7 @@ elements:
       (4) The ability to accommodate through non-functional mechanisms the differentiation between the way that information and commands are provided to Drivers according to the demands of the particular implementation.
       (5) The ability to monitor all of the outputs and revisions to any already being output that are likely to give rise to inconsistent and incoherent messages being displayed to Drivers.
     links:
-      - "Aggregation «Componentof» → F3.1.2.14 Implement Inter-urban Management Traffic Strategy"  # {D60DE6F1-F532-45d9-AF78-0D17C9DE7C95} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
+      - "Aggregation «componentof» → F3.1.2.14 Implement Inter-urban Management Traffic Strategy"  # {D60DE6F1-F532-45d9-AF78-0D17C9DE7C95} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
       - "Association «IN» → mt.pshvs_inter-urban_c&i_messages"  # {F6DDD4EC-91E4-42b5-B4B6-CA54FABF4BC6} → {9DC01B37-BEBD-46f9-86BA-90B8A2F0B2E8}
       - "Association «IN» → mt_inter-urban_c&i_device_status"  # {8217BEB1-761C-4869-A1BC-187A509DE1A4} → {36D9691C-CD8C-4ecf-8D27-1F412A7E529F}
       - "Association «IN» → mt_inter-urban_data_for_approaching_vehicles"  # {4C46303D-B247-4f54-918D-A419D6EDC6A2} → {BFD5EAED-DC4E-475e-9F94-116253C78FA4}
@@ -514,7 +514,7 @@ elements:
       (3) The ability to use several different technologies to provide the outputs but not through any in-vehicle technology as this will be provided separately.
       (4) The ability to monitor all of the outputs and revisions to any already being output that are likely to give rise to inconsistent and incoherent messages being displayed to Drivers.
     links:
-      - "Aggregation «Componentof» → F3.1.2.14 Implement Inter-urban Management Traffic Strategy"  # {DA5B4F31-0423-450b-B8EB-A95AC0FF0D3C} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
+      - "Aggregation «componentof» → F3.1.2.14 Implement Inter-urban Management Traffic Strategy"  # {DA5B4F31-0423-450b-B8EB-A95AC0FF0D3C} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
       - "Association «IN» → mt.pshvs_inter-urban_speed_commands"  # {54C211DC-00B4-4df3-BEC7-7E22C4077724} → {C3439A73-E3DB-4b04-939D-D11A2D61F42E}
       - "Association «IN» → mt_inter-urban_equipment_status_l&s"  # {135A547D-26BD-40a2-AC76-0B576333DDA4} → {42D81E5A-6BE0-40d0-BF29-9B1030D6DA31}
       - "Association «IN» → mt_inter-urban_l&s_device_status"  # {A1809343-EBB0-4458-816C-A113F99F0E9F} → {29D2C612-8C88-49bf-ACBC-E670B9AE6F2D}
@@ -539,7 +539,7 @@ elements:
       (6) The ability to provide details of the current and previous modes of control on some or all parts of the inter-urban road network to the Road Network Operator through the functionality that provides their interface.
       (7) The ability to monitor the results of the output of commands, so that alternative action can be taken if they are not followed.
     links:
-      - "Aggregation «Componentof» → F3.1.2.14 Implement Inter-urban Management Traffic Strategy"  # {92516BF6-1F70-4bd5-B0FF-BB90B8FA9F09} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
+      - "Aggregation «componentof» → F3.1.2.14 Implement Inter-urban Management Traffic Strategy"  # {92516BF6-1F70-4bd5-B0FF-BB90B8FA9F09} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
       - "Association «IN» → mt_inter-urban_command_monitoring_data"  # {B5A880EF-792B-488b-A6F7-4505AD1690A0} → {D48FF79E-1698-44f1-BBDA-9B1DC10675C4}
       - "Association «IN» → mt_inter-urban_command_override_response"  # {AA428B64-846C-4dd0-B9B1-A2121EAA6C32} → {145FD872-F0F8-4c99-BE97-4F1DEB447686}
       - "Association «IN» → mt_inter-urban_response_fault"  # {8A498D66-DF67-484a-A3BA-42F52C2743C9} → {482FF7A6-9155-4d83-80FC-C642B80CD2C4}
@@ -562,7 +562,7 @@ elements:
       (2) The ability to only report a violation when it is detected that a Vehicle does not follow the current inter-urban traffic commands.
       (3) The ability for details of these commands to be provided by the inter-urban traffic management functionality.
     links:
-      - "Aggregation «Componentof» → F3.1.2.14 Implement Inter-urban Management Traffic Strategy"  # {C542A34D-A8BC-4de0-B6F2-C2B197DA46ED} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
+      - "Aggregation «componentof» → F3.1.2.14 Implement Inter-urban Management Traffic Strategy"  # {C542A34D-A8BC-4de0-B6F2-C2B197DA46ED} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
       - "Association «IN» → mt.psle_inter-urban_violating_vehicle_identity"  # {64EAEFD7-6700-4d63-B63D-995241004E93} → {09F6029D-9872-4ecc-AA89-84E690CDFD6E}
   - name: "F3.1.2.14.6 Send Messages to Approaching Inter-urban Vehicles"
     guid: "{69EDBF36-8BA1-4601-8620-A82C6FCF84C2}"
@@ -1796,7 +1796,7 @@ elements:
       (4) The ability to respond to requests received from the functionality that provides the Road Network Operator interface with details of the sequences that are currently available for use.
       (5) The ability to send requests for the implementation of traffic management strategies to the urban traffic management functionality.
     links:
-      - "Aggregation «Componentof» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {E8D7C2EF-5AA4-4014-9036-8219EC7DB439} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
+      - "Aggregation «componentof» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {E8D7C2EF-5AA4-4014-9036-8219EC7DB439} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
       - "Association «IN» → mt_planned_urban_data_read"  # {16D92C8F-D860-4af1-84ED-325B7AAF1AC2} → {C77A3B22-B2EE-4c3e-AE7B-AF43EEB8161A}
       - "Association «IN» → mt_planned_urban_traffic_management_request"  # {489F1B55-5F9C-4f95-932B-1916BB25A4B1} → {92C57B48-373D-459a-BCD5-3B7DDB602EA1}
   - name: "F3.1.2.6 Manage Inter-urban Static Road Data"
@@ -1950,7 +1950,7 @@ elements:
       (2) The ability to only report a violation when it is detected that a vehicle does not follow the current urban traffic commands.
       (3) The ability for details of these commands to be provided by the urban traffic management functionality.
     links:
-      - "Aggregation «Componentof» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {D8325829-413A-47df-8B53-DC5F797FA641} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
+      - "Aggregation «componentof» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {D8325829-413A-47df-8B53-DC5F797FA641} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
       - "Association «IN» → mt.psle_urban_violating_vehicle_identity"  # {9CC2E1AF-29F1-42c3-8517-82B9F0B04CD3} → {33FEBB72-E6E7-48c6-A38B-437184DD51D8}
   - name: "F3.1.1.6 Manage Urban Road Static Data"
     guid: "{F7014D36-DDB1-4cfd-AD72-DFF4FFDA51CE}"
@@ -2114,7 +2114,7 @@ elements:
       (3) The provision of information to the Road Network Operator about the success or failure of any requested changes.
       (4) The ability of the Road Network Operator to request and be provided with the current contents of the store of Urban Road Static Data through the Manage Urban Static Traffic Data Function.
     links:
-      - "Aggregation «Componentof» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {0EAA27CB-AE1E-4902-BA72-CDA814E79948} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
+      - "Aggregation «componentof» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {0EAA27CB-AE1E-4902-BA72-CDA814E79948} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
       - "Association «IN» → mt_operator_urban_lane_override"  # {98742A27-6696-4896-93F1-58DD0DB7E70F} → {D0E96727-7193-484f-B5C9-8FB13F738744}
       - "Association «IN» → mt_operator_urban_speed_override"  # {33BF14EF-3AD8-497a-9188-5017F65C4031} → {36980FD2-A965-46c2-9AB6-80B278C7DB57}
       - "Association «IN» → mt_operator_urban_traffic_management_request"  # {F9092D0D-7E20-4b8c-A086-57FF5B8F7EF2} → {25E1EE57-4457-448b-9399-E6692D186F0E}
@@ -2616,7 +2616,7 @@ elements:
       (4) The ability to send speed and headway settings to the functionality that is responsible for the output of messages to Drivers of vehicles using the urban road network, both at the roadside and in the Vehicle, as well as to other functionality from which it can be sent to other parts of the system, to the Broadcaster entity.
       (5) The ability to send the legal speed settings to the digital map data provider entity in case it needs to be used in future digital map updates.
     links:
-      - "Aggregation «Componentof» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {A43BD088-89E2-44f6-99F0-EC106AC4F465} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
+      - "Aggregation «componentof» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {A43BD088-89E2-44f6-99F0-EC106AC4F465} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
       - "Association «IN» → mt.pshvs_urban_legal_speed_limits"  # {D3266C19-6087-4ed1-B302-F22F4A6AFC2B} → {86CE8F59-AC99-41e7-856D-7C500527D0D7}
       - "Association «IN» → mt.pshvs_urban_suggested_speeds_and_headways"  # {0DBC9F14-CB3F-4bba-AF3A-AF6B6F23AE5D} → {F847B3DA-469F-4525-A80A-71278AF3A65F}
       - "Association «IN» → mt_updatred_urban_speed_limits"  # {AAA63372-0419-4c8d-802A-7A4226D707EA} → {05C761D1-31DA-43e1-9DE2-8CD3E2F83A36}
@@ -2764,7 +2764,7 @@ elements:
       (3) The ability to enable the use of lanes to be changed in a way that is safe for vehicle operation and that causes the minimum disruption to all forms of urban road traffic.
       (4) The ability to send commands that alter the use of lanes to the functionality that is responsible for the output of messages to Drivers, both at the roadside and in the Vehicle.
     links:
-      - "Aggregation «Componentof» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {E1AA1484-5A43-4d10-8E44-7E1943695D27} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
+      - "Aggregation «componentof» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {E1AA1484-5A43-4d10-8E44-7E1943695D27} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
       - "Association «IN» → mt.pshvs_urban_lane_commands"  # {04563BC5-5C2C-43c6-B661-CEADC7E4527B} → {00BE4A1A-3E74-4f8b-ADE4-42945300E096}
       - "Association «IN» → mt_urban_lane_commands"  # {082B96C7-7750-466a-9C88-5AD19664E183} → {F8A278A6-C5FD-4957-9907-97052BDA4885}
       - "Association «IN» → mt_urban_lane_instructions"  # {11423A97-7699-433d-8E08-141E315E2D51} → {BE3A0CBA-8EAF-4cd1-B5C9-F9B77F3069EB}
@@ -2925,7 +2925,7 @@ elements:
       (7) The monitoring of its operation and the reporting of any abnormalities to Maintenance Management functionality.
       (8) The reporting of a fault to the Maintenance Management facility if a Vehicle reports that what is being output by the Function is not the same as what is being received in the Vehicle.
     links:
-      - "Aggregation «Componentof» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {39198CE4-E3FF-4b44-A454-2598DA3503FD} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
+      - "Aggregation «componentof» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {39198CE4-E3FF-4b44-A454-2598DA3503FD} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
       - "Association «IN» → mt.pshvs_c&i_state_for_driver_display"  # {ED4ECAEC-CF12-45eb-9B18-2013865BDF4D} → {9296421C-16E8-4154-A560-0960FBFF8562}
       - "Association «IN» → mt_urban_c&i_device_status"  # {851A54D1-C4F3-47a7-8FBE-C9D110F0C249} → {1337AAE7-5C77-49a7-B007-67632739C73F}
       - "Association «IN» → mt_urban_c&i_equipment_fault"  # {3D2FB4F2-66A3-4eb8-8166-0C213A37E6D7} → {EF428147-77D4-4b99-93DD-633E3ECB9C2A}
@@ -3170,7 +3170,7 @@ elements:
       (15) The ability to monitor its operation and report any malfunction to the Maintenance Management functionality.
       (16) The ability to ensure that all outputs are consistent, coherent and do not in any way compromise the safe use of the urban road network, e.g. by ensuring that no green conflicts are produced.
     links:
-      - "Aggregation «Componentof» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {377A8D38-3C93-4475-A110-432031D5AE0B} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
+      - "Aggregation «componentof» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {377A8D38-3C93-4475-A110-432031D5AE0B} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
       - "Association «IN» → mt.pscs_local_priority_request_result"  # {A9CB455A-CA76-4221-8E9C-FB5B157E8944} → {EE1F1B47-8E33-4861-8A22-9A73C36AF3B6}
       - "Association «IN» → mt.pscs_vehicle_priority_operating"  # {F6E50CB2-F53F-476e-A703-1BAFCFBB2638} → {495573A0-F7AE-49f4-8B14-46E09FE2E358}
       - "Association «IN» → mt.pshvs_s&g_sequence_data_for_host_vehicle"  # {90616280-28F0-457b-B7F9-8DB7F37D45D9} → {3FAA6288-077B-4c9a-88D9-756563835B0C}
@@ -3270,7 +3270,7 @@ elements:
       (3) The ability to provide these outputs using mechanisms that do not include in-vehicle displays or any type, and as a supplement to the outputs provided by the Output Commands & Information to Urban Roads Function.
       (4) The ability to send the data in these outputs to other functionality for output by In-vehicle displays.
     links:
-      - "Aggregation «Componentof» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {21D9F428-6C5C-4f12-BC94-736598F54C40} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
+      - "Aggregation «componentof» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {21D9F428-6C5C-4f12-BC94-736598F54C40} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
       - "Association «IN» → mt.pshvs_urban_speed_commands"  # {88AB468B-D7C5-4cc8-BC78-F54664D248F1} → {646667F6-40EE-47ec-AED4-56912FFB9E2F}
       - "Association «IN» → mt_urban_l&s_device_status"  # {495DB80B-1545-4a6a-BA4D-177F6DCA6930} → {3D099C8E-5215-4080-9BF9-3B7A3193EA18}
       - "Association «IN» → mt_urban_traffic_management_l&s_response"  # {22DE0BDF-AD99-4838-A50D-CE78D9AFEC16} → {6EDF9932-1474-411d-972D-962AB39F1ECF}
@@ -3299,7 +3299,7 @@ elements:
       (10)  The ability to monitor the results from the implementation of strategies so that if necessary corrective action can be taken if the content of strategies are not followed.
       (11) The provision of  details of the current and previously implemented strategies on some or all parts of the urban road network to the Road Network Operator through the Provide Urban Traffic Operator Interface Function.
     links:
-      - "Aggregation «Componentof» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {F4D855A1-45A7-4bb8-B959-804EB0FDDE60} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
+      - "Aggregation «componentof» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {F4D855A1-45A7-4bb8-B959-804EB0FDDE60} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
       - "Association «IN» → mt.pscs_green_wave_result"  # {603DEBB1-55C3-4afc-B415-D2A3675B96D0} → {7E8DBF0D-6031-4149-BB2C-102BA44E7559}
       - "Association «IN» → mt.pshvs_c&i_outputs_for_driver_display"  # {75CCDE12-42F3-4bd8-B37B-F521A2E66C78} → {2339E009-54F3-4f8f-BEF9-3AB8A2BC7964}
       - "Association «IN» → mt.pshvs_s&g_outputs_for_driver_display"  # {769725B5-46B9-4fe9-A03A-FDC0E48ED872} → {C5190C82-2A76-4abf-A86D-BE5742D9131C}

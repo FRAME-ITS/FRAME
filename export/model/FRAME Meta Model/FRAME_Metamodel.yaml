@@ -152,8 +152,8 @@ elements:
     note: |
       A Function, also known as a “process”, is an action that involves receiving or processing input data. This data is then either passed on to another function or sent out as information or control instructions to an external entity. Functions are categorized into different levels: High-Level Functions (HLF) and Low-Level Functions (LLF). HLFs contain a group of functions concerned with a specific part of data processing and always have component LLFs. LLFs, on the other hand, perform a specific part of the data input, process, or information output process and have no component functions. User needs are allocated to LLFs, which are the only functions used in the FRAME Methodology.
     links:
-      - "Aggregation «component of» → High Level Function"  # {A1D60A93-0F3E-4de3-82A3-281A28EA097B} → {5C69204E-D06E-4f2c-8AB9-1E1F6C08EE5C}
-      - "Aggregation «component of» → Low Level Function"  # {9FE60D0E-1C0A-426c-B956-80C7599B510E} → {568A327F-EB2D-468d-9FA6-3CD9714EE807}
+      - "Aggregation «componentof» → High Level Function"  # {A1D60A93-0F3E-4de3-82A3-281A28EA097B} → {5C69204E-D06E-4f2c-8AB9-1E1F6C08EE5C}
+      - "Aggregation «componentof» → Low Level Function"  # {9FE60D0E-1C0A-426c-B956-80C7599B510E} → {568A327F-EB2D-468d-9FA6-3CD9714EE807}
       - "Association «IN» → FRAME_High_Level_Data_Flow"  # {1C951316-4B3B-4080-9683-9892CB98BFF7} → {35F631D7-65CE-4df9-A861-1B12E39AC463}
   - name: "High Level Function"
     guid: "{5C69204E-D06E-4f2c-8AB9-1E1F6C08EE5C}"
@@ -165,7 +165,7 @@ elements:
     note: |
       A Function, also known as a “process”, is an action that involves receiving or processing input data. This data is then either passed on to another function or sent out as information or control instructions to an external entity. Functions are categorized into different levels: High-Level Functions (HLF) and Low-Level Functions (LLF). HLFs contain a group of functions concerned with a specific part of data processing and always have component LLFs. LLFs, on the other hand, perform a specific part of the data input, process, or information output process and have no component functions. User needs are allocated to LLFs, which are the only functions used in the FRAME Methodology.
     links:
-      - "Aggregation «component of» → Low Level Function"  # {821C625A-B952-4199-A329-7D03C9FBE62F} → {568A327F-EB2D-468d-9FA6-3CD9714EE807}
+      - "Aggregation «componentof» → Low Level Function"  # {821C625A-B952-4199-A329-7D03C9FBE62F} → {568A327F-EB2D-468d-9FA6-3CD9714EE807}
       - "Association «IN» → FRAME_High_Level_Data_Flow"  # {9DA03636-1979-4267-88E0-4A33BD2C4AFB} → {35F631D7-65CE-4df9-A861-1B12E39AC463}
       - "Association «IN» → FRAME_Low_Level_Data_Flow"  # {9C081F45-C397-4c78-8146-0A0179FCFC39} → {3DA4C5ED-3529-4c62-BB04-DBC9641EA039}
   - name: "ITSBusinessProcess"
@@ -437,7 +437,7 @@ elements:
     order: 0
     note: ""
     links:
-      - "Association «belongs to» → UserNeedService"  # {7628E5C6-6B96-42b7-8551-98202D05BA7D} → {E9D42249-DF2D-4a10-B040-E82833F8CDE7}
+      - "Association «belongsto» → UserNeedService"  # {7628E5C6-6B96-42b7-8551-98202D05BA7D} → {E9D42249-DF2D-4a10-B040-E82833F8CDE7}
   - name: "UserNeedService"
     guid: "{E9D42249-DF2D-4a10-B040-E82833F8CDE7}"
     type: "Requirement"
@@ -447,7 +447,7 @@ elements:
     order: 0
     note: ""
     links:
-      - "Association «belongs to» → UserNeedTopic"  # {859EDC0F-997A-4c22-A4C7-59B3B3ED5463} → {6D83289F-659C-4dca-919B-E662EA23B3AC}
+      - "Association «belongsto» → UserNeedTopic"  # {859EDC0F-997A-4c22-A4C7-59B3B3ED5463} → {6D83289F-659C-4dca-919B-E662EA23B3AC}
   - name: "UserNeedTopic"
     guid: "{6D83289F-659C-4dca-919B-E662EA23B3AC}"
     type: "Requirement"
