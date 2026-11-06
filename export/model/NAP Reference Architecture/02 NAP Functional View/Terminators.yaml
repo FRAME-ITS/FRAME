@@ -70,10 +70,10 @@ elements:
       Mnemonic: nap.cc
     links:
       - "Aggregation «component of» → NAP Actors"  # {C315C920-21DC-4a44-99FA-FB029F697E0F} → {E89EDD6C-D939-4b97-AB60-AAD3FA5FE237}
+      - "Association «IN» → fnap.cc-data_request"  # {A9C29A51-6961-4d68-9FEE-FF1FDA197CD4} → {AFB3FDE3-5682-463a-A966-CEF77741C6A9}
       - "Association «IN» → fnap.cc-metadata_search_request"  # {BE7AD80D-B732-4d10-B4CC-0E4C6725F9FB} → {CE5CAFBE-137B-4743-AB12-5EA3827B901A}
       - "Association «IN» → fnap.cc-registration_request"  # {92DA8F6B-1001-48b9-837A-33A0CAAECA83} → {7777AD14-8D53-466c-9949-22CFAB635676}
       - "Association «IN» → fnap.cc-support_request"  # {572D1BA3-8128-476c-AE45-D678F1DA2A1B} → {1309E545-2913-41f6-920A-68A496630817}
-      - "Association «OUT» → fnap.cc-data_request"  # {A9C29A51-6961-4d68-9FEE-FF1FDA197CD4} → {AFB3FDE3-5682-463a-A966-CEF77741C6A9}
       - "Dependency → Privacy agreement (CC to NO) and general terms and conditions"  # {EAF4EAC0-257D-4aa5-BE60-B3D801141DA6} → {AF555DF2-4535-42f6-993A-5BE72947BD12}
       - "Usage → PDF Data to Content Consumer"  # {31AF9124-F69F-4487-9088-36D912DF380D} → {B82B3A07-B464-4905-B517-04B74942E5AA}
       - "Usage → PDF Metadata to Content Consumer"  # {F96A7DCC-CD24-4a8d-BB10-E2BA7E92C2F4} → {C25F8BCA-DCD4-4894-956E-40D0218D3ACA}
@@ -130,5 +130,3 @@ elements:
       - "Association «IN» → From NAP Actors"  # {E60DFE5A-A499-489f-A5CE-0420B61FF67D} → {59087751-DC42-4fcc-AA52-7330F931BC0E}
       - "Association «IN» → fnap-mt_inputs"  # {C22482AC-BBF7-4fea-9339-9CD1626D398C} → {572F1D4D-9EB2-41ef-9944-23A22C7DA25B}
       - "Association «IN» → fnap-mt_inputs"  # {F706807F-CB0D-4f07-93F6-3CF2D3E1F6FA} → {90829C59-D7DB-4ff9-8AB7-F4BBCEA7422B}
-      - "Association «OUT» → tnap-mt_outputs"  # {A57E4B2D-F47A-443b-9C5D-4C7448EF91EE} → {D2D62478-1875-414b-A64F-9D0535140FF4}
-      - "Association «OUT» → tnap-mt_outputs"  # {C2F4596C-E792-4e22-B285-1AFACCBB514D} → {B767384A-BAB2-4802-A07C-DA9BA8B1132A}

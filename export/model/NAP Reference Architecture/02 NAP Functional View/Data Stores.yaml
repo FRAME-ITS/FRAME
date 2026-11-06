@@ -159,4 +159,4 @@ elements:
       - check what is in data flows and if it is covered by the DS
       - IMPORTANT: decide how to deal with optional nap.cc logging in.
     links:
-      - "Association «OUT» → mt_read_NAP_user_data"  # {7A6BE8B7-DF1B-40eb-9629-E47A6474DC83} → {6D08A3DC-FB6E-47d7-B1BF-B68208337A4F}
+      - "Association «IN» → mt_read_NAP_user_data"  # {7A6BE8B7-DF1B-40eb-9629-E47A6474DC83} → {6D08A3DC-FB6E-47d7-B1BF-B68208337A4F}

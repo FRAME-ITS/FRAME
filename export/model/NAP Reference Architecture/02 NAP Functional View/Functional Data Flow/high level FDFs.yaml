@@ -74,6 +74,7 @@ elements:
       - "Aggregation «Componentof» → To NAP Actors"  # {978FF38E-8FE7-46e0-A28D-F66B17C0B909} → {80D9E677-C285-4d45-9344-044E34B0EF83}
       - "Aggregation «Componentof» → tnap.cc-support_response"  # {B3727561-99C7-499b-82AF-357824ACE10E} → {27BFFD1B-0E50-4c8b-8CDF-8F958078802C}
       - "Aggregation «Componentof» → tnap.cp-support_response"  # {0809F101-0F3B-409a-88E7-72503613ED5A} → {997937B5-775D-4297-8297-D9ABB198ACF2}
+      - "Association «OUT» → NAP Actors"  # {C2F4596C-E792-4e22-B285-1AFACCBB514D} → {E89EDD6C-D939-4b97-AB60-AAD3FA5FE237}
   - name: "tnap-mt_outputs"
     guid: "{EACAFE4C-395F-4a01-B251-D6ED49DAFC30}"
     type: "Interface"

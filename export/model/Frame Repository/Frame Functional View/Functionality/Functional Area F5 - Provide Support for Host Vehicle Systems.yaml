@@ -1461,10 +1461,10 @@ elements:
       (3) The ability to receive and respond to requests for data objects to be retrieved from the Operational Data Store.
     links:
       - "Aggregation «componentof» → F5.11 Provide Driver Monitoring and eCall"  # {14DD964E-BAE2-43ea-B45A-50A27ADF9543} → {1D137B7D-49D7-469b-B75F-C889DED53DC9}
+      - "Association «IN» → pshvs_driver_condition"  # {5E9F8326-CEFB-4cbf-96AC-D507AF23DB87} → {BC2A08F3-DEF3-444e-9E6A-CDEE57D707C6}
       - "Association «IN» → pshvs_driver_stored_data"  # {965E1B0A-E6E5-43d2-8344-5A0232F9F0FF} → {08AB7D02-44D7-4d07-841C-C0EBCC298F69}
-      - "Association «OUT» → pshvs_driver_condition"  # {5E9F8326-CEFB-4cbf-96AC-D507AF23DB87} → {BC2A08F3-DEF3-444e-9E6A-CDEE57D707C6}
+      - "Association «IN» → pshvs_tvd_incident_data"  # {A7B96742-039A-4cfb-ABB9-54AB8E585683} → {C45538C6-9376-4eb9-B65B-C98DA05D45AA}
       - "Association «OUT» → pshvs_load_operational_data"  # {33375C7B-2697-4796-AC57-223005946916} → {EDB2D0D3-ECDD-4331-A890-3323055C7EED}
-      - "Association «OUT» → pshvs_tvd_incident_data"  # {A7B96742-039A-4cfb-ABB9-54AB8E585683} → {C45538C6-9376-4eb9-B65B-C98DA05D45AA}
       - "Realisation → Create eCall Minimum Set of Data (MSD)"  # {B53472F9-4A3C-4c0b-999E-26B4657D5B37} → {D2CDFC4F-4A5A-4906-9629-56F993B1EE05}
   - name: "F5.14.16 Manage Use of Un/loading Zones"
     guid: "{09DA69E7-8577-40e5-8104-AEA2093B5647}"

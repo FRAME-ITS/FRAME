@@ -418,6 +418,11 @@ elements:
       Mnemonic: mms.mmc
     links:
       - "Aggregation «component of» → Multi-Modal System"  # {2B4EAB16-C83E-4ae3-9BB1-04B4EC2A18BE} → {05CAA29F-450A-4dcf-8141-059421D3CB54}
+      - "Association «IN» → fmms.mmc-crossing_request"  # {F6DC1C50-EF95-415e-BE54-D8B06B1CF91E} → {5BB90974-ECDD-49cc-82E5-FEE837E2B46D}
+      - "Association «IN» → fmms.mmc-inter-urban_crossing_request"  # {A4232522-7E0B-4e39-9C75-9F13A82C0154} → {98A3FAE3-2363-46ae-AE8C-CFBD7BE0153C}
+      - "Association «IN» → fmms.mmc-urban_crossing_command"  # {C5C151BD-BAA6-4a5c-B5F0-5CC87C5B2730} → {AD6488D6-CAE0-471d-A000-70EE2F2BC85C}
+      - "Association «IN» → fmms.mmc-urban_crossing_information"  # {69A7209F-42C4-4c0b-8126-2FCC9142B45E} → {3290E9AD-BCCB-454c-959B-6452BD2BF8B9}
+      - "Association «IN» → fmms.mmc-urban_crossing_inputs"  # {951BD1A9-EBCB-42cb-A010-2EAE2D8DBA07} → {2009C16E-6694-47e2-94F4-3743BD40ABED}
   - name: "Multi-Modal Management System"
     guid: "{88920892-1042-40fc-B5DF-DC0302342F39}"
     type: "Actor"
@@ -431,6 +436,19 @@ elements:
       Mnemonic: mms.mmms
     links:
       - "Aggregation «component of» → Multi-Modal System"  # {836B2397-E997-47c5-B0F1-C00DB67CC7CC} → {05CAA29F-450A-4dcf-8141-059421D3CB54}
+      - "Association «IN» → fmms.mms-PT_service_change_request"  # {3F0EABA8-999C-42db-8588-780BEC3E4270} → {C0F2B0B8-7A2C-49a8-9A75-A34CAAE46E55}
+      - "Association «IN» → fmms.mms-accident_information"  # {52A36793-4E76-4349-A679-1858CD668B4F} → {7F740A81-04CC-4459-84C6-16B2C9FBFEC6}
+      - "Association «IN» → fmms.mms-control_parameters"  # {3123FC89-BD7F-41ec-9D0C-CC49AED6652A} → {02C61A7A-5A56-4c5e-8028-5D67EBE96524}
+      - "Association «IN» → fmms.mms-current_service_status"  # {4AAD57CC-3BB3-4b2c-B8C7-76BFE5DDD6D5} → {90D2D1C2-7E36-4938-A516-9FA22FFAFF3D}
+      - "Association «IN» → fmms.mms-data_for_demand_services"  # {93F811B0-0D16-4dc1-ACC4-DA41BF3C5905} → {692D74CD-3641-48d0-A9FC-5D77168BB078}
+      - "Association «IN» → fmms.mms-demand_inputs"  # {B1118A04-46D5-4482-9921-78804E572231} → {DA69F91E-5D68-4429-97E5-84D8308E793B}
+      - "Association «IN» → fmms.mms-ferry_service_information"  # {CF59B432-6F66-4eaf-997C-5327A28C1B96} → {37B1BA05-449C-4c65-AA29-6A5FBD84FF58}
+      - "Association «IN» → fmms.mms-incident_inputs"  # {674B418B-6527-4701-8B4C-7059CDF352BE} → {575319CC-0B29-4a43-B97C-5A3F5AE48B4E}
+      - "Association «IN» → fmms.mms-plannings"  # {8720D8AD-9737-46a9-B785-F1CD0CC608E7} → {AC4E8105-BFDF-4eb6-A52A-2B69A29A6843}
+      - "Association «IN» → fmms.mms-rail_service_information"  # {53635B78-C03F-4c21-A776-C797C5742A3C} → {3D125EF2-501F-44ab-A2D6-CCECC99DD74F}
+      - "Association «IN» → fmms.mms-service_change_request_response"  # {10467B9D-7B50-4f4d-BCF6-27D8C11468CB} → {A9C43B29-0AA8-4994-AE09-1992E97D8E73}
+      - "Association «IN» → fmms.mms-service_details_response"  # {4FFEB7EA-FC9B-47f0-89D1-6AF9111D1AB9} → {27C39065-5D92-4456-B55A-DF74894C8E70}
+      - "Association «IN» → fmms.mms-strike_details"  # {71A412FC-1022-49bd-8675-A7CA129C2E60} → {53BD6F2F-7590-4c93-9FA7-1CA430C58361}
   - name: "Multi-Modal Travel Information Provider"
     guid: "{1983F168-0E27-441e-A938-F0382E34C73D}"
     type: "Actor"
@@ -460,10 +478,10 @@ elements:
       Mnemonic: nap.cc
     links:
       - "Aggregation «component of» → NAP Actors"  # {64796CDC-48E2-4c02-A3BC-1423EE8551B1} → {FAF5089D-CEC9-4fac-A49D-D18F6E0ADC95}
+      - "Association «IN» → fnap.cc-data_request"  # {8FAE295E-9A6E-402a-BCCC-A815BC962D13} → {AFB3FDE3-5682-463a-A966-CEF77741C6A9}
       - "Association «IN» → fnap.cc-metadata_search_request"  # {8514D373-6020-4a9f-B727-956CBD5E0380} → {DCE578B8-265B-47f6-906D-8C4E9593F623}
       - "Association «IN» → fnap.cc-registration_request"  # {B8B2A2CD-EE11-4103-BADA-CF667113F6AE} → {7777AD14-8D53-466c-9949-22CFAB635676}
       - "Association «IN» → fnap.cc-support_request"  # {A5CCD342-6423-4fcd-A78D-220628545BFD} → {16D06C97-2C77-4307-B304-766A1D613BE8}
-      - "Association «OUT» → fnap.cc-data_request"  # {8FAE295E-9A6E-402a-BCCC-A815BC962D13} → {AFB3FDE3-5682-463a-A966-CEF77741C6A9}
       - "Dependency → Privacy agreement (CC to NO) and general terms and conditions"  # {E6FCAE5B-DF1A-49ac-8121-AB2C9E919413} → {AF555DF2-4535-42f6-993A-5BE72947BD12}
       - "Usage → Service Provider NAP Application"  # {38DCE31A-0723-4c1b-8449-FC2D191E6FBF} → {B65CA88A-A210-4128-A40B-FAEAB0476D73}
   - name: "NAP Content Provider"
@@ -921,7 +939,6 @@ elements:
       - "Association «IN» → fo.rno-create_incident_strategy"  # {078B6B8D-9F36-494c-A554-074AD73DFB80} → {E2AAA6DB-942E-4ed8-B34D-7BEB7D25281A}
       - "Association «IN» → fo.rno-demand_management_data_requests"  # {69A42CA2-6E63-41d8-95B5-1431FC0F26D2} → {FBE5094C-F748-4507-A638-C88C57F1D024}
       - "Association «IN» → fo.rno-demand_management_development_commands"  # {F7F33A94-3817-4c3e-8857-E10B848CCD9F} → {D3C40FAD-6D13-42fe-88B5-0254B680AC15}
-      - "Association «IN» → fo.rno-demand_management_inputs"  # {1818A7C7-842F-40de-B7EC-AC13D56A2DFF} → {ED224F69-DA94-4957-B6E4-E64746940357}
       - "Association «IN» → fo.rno-demand_management_inputs"  # {9AF58815-E7A2-4d7a-8905-FA1A705BA02C} → {ED224F69-DA94-4957-B6E4-E64746940357}
       - "Association «IN» → fo.rno-demand_management_report_requests"  # {3F966C64-C4E6-4be6-B379-18BF77447B9B} → {2E0AC1FA-21DD-4ad9-8412-6300FED79466}
       - "Association «IN» → fo.rno-demand_management_strategy_commands"  # {87E20213-1A31-44c8-B016-70BAD661C898} → {793F8D2B-6B18-4b3f-9C3C-8A89C66E24E8}
@@ -1534,7 +1551,6 @@ elements:
     links:
       - "Association «IN» → From NAP Actors"  # {9C98D9A3-97BF-4db3-97A9-830FB08DAF17} → {59087751-DC42-4fcc-AA52-7330F931BC0E}
       - "Association «IN» → fnap-mt_inputs"  # {038A8C2E-458A-4811-8B28-D7C97C881426} → {572F1D4D-9EB2-41ef-9944-23A22C7DA25B}
-      - "Association «OUT» → tnap-mt_outputs"  # {DD785317-9486-4b8f-9E95-A4A265EE7D70} → {D2D62478-1875-414b-A64F-9D0535140FF4}
   - name: "Operator"
     guid: "{102BBDF5-FF2D-4077-AD52-BEE0EA237E1C}"
     type: "Class"

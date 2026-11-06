@@ -90,7 +90,7 @@ elements:
       - "Association «IN» → mt_NAP_metadata_mod_authorisation_result"  # {98DCDD4A-1C5E-4308-BEF7-37EEBCB1D983} → {C526D3EC-9CD9-465e-B6AB-D13F6308EBB3}
       - "Association «IN» → mt_load_NAP_user_data"  # {6672E2DD-6A24-4d7e-963F-BDC4AEEE9486} → {EFA11DF3-9ABC-46b9-8E31-B15D7F357F69}
       - "Association «IN» → tnap.cc-registration_response"  # {6F9EF2C2-A656-4717-9064-1E23CC73DEF0} → {60E6A67C-C9D0-464b-900F-9F28DC71E886}
-      - "Association «OUT» → tnap.cp-registration_response"  # {B2ACEE10-1E33-40e2-A652-E4D2233705A5} → {AFD11DEB-11FE-4692-8BEB-B81835B7A4AD}
+      - "Association «IN» → tnap.cp-registration_response"  # {B2ACEE10-1E33-40e2-A652-E4D2233705A5} → {AFD11DEB-11FE-4692-8BEB-B81835B7A4AD}
   - name: "F3.6.3 Manage Content Providers Metadata"
     guid: "{E8D1212C-A787-4da1-A4EB-B4E1896ABD19}"
     type: "Activity"
@@ -119,7 +119,7 @@ elements:
       - "Aggregation «componentof» → F3.6 Operate National Access Point"  # {F699895E-C226-4353-9A4F-FF630F3629B6} → {7ADE914E-925B-4d69-8E2A-6E26A0C42EEE}
       - "Association «IN» → mt_NAP_metadata_mod_authorisation_request"  # {68CFD374-F51B-4dca-A8A8-A38300E155CA} → {D4D31515-ABC4-468d-964E-F6D5D4F77136}
       - "Association «IN» → mt_NAP_metadata_mod_request"  # {A81759EF-4A39-4e23-9E3E-B81903552870} → {E5EE6235-7DA8-4f7c-B007-A5F039A31397}
-      - "Association «OUT» → tnap.cp-metadata_&_success_report"  # {E05457AD-E5D7-4cdc-AD20-225CEE3A2544} → {169488F2-0C7D-4eef-8B43-C324785B730D}
+      - "Association «IN» → tnap.cp-metadata_&_success_report"  # {E05457AD-E5D7-4cdc-AD20-225CEE3A2544} → {169488F2-0C7D-4eef-8B43-C324785B730D}
   - name: "F3.6.4 Manage Metadata Retrieval"
     guid: "{2F2393E9-9A59-4344-A2C0-207945E7F438}"
     type: "Activity"
@@ -180,8 +180,8 @@ elements:
       - IMPORTANT: reduce number of dataflows by just addressing all NAP users at once by their higher-level terminator
       - IMPORTANT: who is the NAP User? Where do we have it specified? Different for NAP Actor?
     links:
-      - "Association «OUT» → tnap.cc-support_response"  # {22FFFD15-4634-4f3b-893B-976F8F470AC1} → {27BFFD1B-0E50-4c8b-8CDF-8F958078802C}
-      - "Association «OUT» → tnap.cp-support_response"  # {4DBF1722-1968-42a2-B232-78DA2B7CBFCC} → {997937B5-775D-4297-8297-D9ABB198ACF2}
+      - "Association «IN» → tnap.cc-support_response"  # {22FFFD15-4634-4f3b-893B-976F8F470AC1} → {27BFFD1B-0E50-4c8b-8CDF-8F958078802C}
+      - "Association «IN» → tnap.cp-support_response"  # {4DBF1722-1968-42a2-B232-78DA2B7CBFCC} → {997937B5-775D-4297-8297-D9ABB198ACF2}
   - name: "F3.6.6 Provide Metadata Quality Checks"
     guid: "{15BFF38A-05D9-4775-84C9-6604B0EEA3C6}"
     type: "Activity"

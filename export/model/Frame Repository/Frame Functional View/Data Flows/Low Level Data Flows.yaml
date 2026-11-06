@@ -79,8 +79,8 @@ elements:
       It contains analogue inputs from which functionality in the Manage Traffic Functional Area can create data objects that provide details of the atmospheric conditions, e.g. temperature, pollutant levels and smoke, that currently exist inside a tunnel in the road network in which ITS Services are to be deployed.
     links:
       - "Aggregation «Componentof» → fae-mt_inputs"  # {6A261EB6-94F3-4649-81BA-E1BBF313D18E} → {3D372511-0FBC-4b3d-9115-938ACC58E583}
-      - "Association «IN» → F3.1.7 Provide Traffic Management for Tunnels"  # {4F7545CD-A095-424d-ADDA-D3CA29B2DE3E} → {D328D434-5896-4fb1-9399-1446B46AA837}
       - "Association «OUT» → F3.1 Provide Traffic Control"  # {BAF4D9F6-7C35-4d9f-87C8-38917AC993E9} → {226ED187-DB7A-409f-B509-BA8DBFFB6DB6}
+      - "Association «OUT» → F3.1.7 Provide Traffic Management for Tunnels"  # {4F7545CD-A095-424d-ADDA-D3CA29B2DE3E} → {D328D434-5896-4fb1-9399-1446B46AA837}
       - "Association «OUT» → F3.1.7.1 Assess Tunnel Status and Take Action"  # {8FB125B0-E635-48d5-83ED-C084DF5EC5CD} → {52A943FB-6FF2-4959-98FD-55DA6A1C67C8}
   - name: "fae-weather_inputs"
     guid: "{B336D44C-4238-41b0-9879-F3E2AA0A74E9}"
@@ -130,7 +130,7 @@ elements:
       It contains data objects provided externally about the operation of tunnel systems such as fans, fire suppression, emergency doors, etc. can be determined and are for use by functionality in the Manage Traffic Functional Area.
     links:
       - "Aggregation «Componentof» → fbti-bridge_and_tunnel_inputs"  # {EFC09775-B42A-44d7-B3D9-2D8DC3272F00} → {71B2A500-E075-4e2f-B90F-80A69C190E4A}
-      - "Association «IN» → F3.1.7 Provide Traffic Management for Tunnels"  # {D1AF76DE-789A-40fe-B321-82F67195D4E2} → {D328D434-5896-4fb1-9399-1446B46AA837}
+      - "Association «OUT» → F3.1.7 Provide Traffic Management for Tunnels"  # {D1AF76DE-789A-40fe-B321-82F67195D4E2} → {D328D434-5896-4fb1-9399-1446B46AA837}
       - "Association «OUT» → F3.1.7.1 Assess Tunnel Status and Take Action"  # {6647BCA6-2E99-478c-989B-D0D19C7E05B8} → {52A943FB-6FF2-4959-98FD-55DA6A1C67C8}
   - name: "fd-carpark_space_payment"
     guid: "{53A14370-2844-4b2b-B287-38A33F72629A}"
@@ -144,7 +144,7 @@ elements:
     links:
       - "Aggregation «Componentof» → From Driver"  # {6BBD9A65-3093-40cf-9A19-F71913A9F67C} → {7590C1C5-F94F-4929-8D0C-1EAFBB19AA51}
       - "Aggregation «Componentof» → fd-mt_inputs"  # {912D3168-085A-46bf-98BB-A82118B2083A} → {414A67C9-D8FA-4b81-9DAA-57B02016F5A9}
-      - "Association «IN» → F3.1.4 Provide Management of Car Parks"  # {226BAEF0-2A03-4a33-89F0-0F218DEED6B4} → {CFC380C7-2010-46fb-9DE1-6BF39DBDA8B0}
+      - "Association «OUT» → F3.1.4 Provide Management of Car Parks"  # {226BAEF0-2A03-4a33-89F0-0F218DEED6B4} → {CFC380C7-2010-46fb-9DE1-6BF39DBDA8B0}
       - "Association «OUT» → F3.1.4.6 Collect Payment for Car Park space use"  # {FFDE1EE9-7C7E-44b0-A3B2-4C7F5BE577F7} → {24349A2F-AE19-4256-90EB-09B118127A63}
   - name: "fd-desitnation_for_bus_lane_use"
     guid: "{84129F6E-6647-4074-8D29-5543DAE9D724}"
@@ -519,7 +519,7 @@ elements:
     links:
       - "Aggregation «Componentof» → From Driver"  # {DF0D4173-472B-41ab-9E1F-BA10E2A0EF44} → {7590C1C5-F94F-4929-8D0C-1EAFBB19AA51}
       - "Aggregation «Componentof» → fd-mpto_inputs"  # {8AAE0140-8EFA-4d57-8071-337D5C936B63} → {7675F0F3-9CE3-4c10-8F5C-44E10F86DC77}
-      - "Association «IN» → F4.1 Monitor PT fleet"  # {9C21D9E4-EBF4-495e-879B-48A830004CAB} → {6371794D-1857-4152-B781-18AE7C5B8FC3}
+      - "Association «OUT» → F4.1 Monitor PT fleet"  # {9C21D9E4-EBF4-495e-879B-48A830004CAB} → {6371794D-1857-4152-B781-18AE7C5B8FC3}
       - "Association «OUT» → F4.1.15 Provide PT Vehicle Driver Interface"  # {4F589509-EA8E-4e9a-A8A2-28AC110DB9FD} → {61CB146E-2271-49ed-8085-40133EBA3E2E}
   - name: "fd.ptd-control_feedbk"
     guid: "{176CA711-3247-4497-B1BD-463FA22758BB}"
@@ -546,7 +546,7 @@ elements:
       It contains inputs the PT Driver has made from which data objects are created to provide details of the PT Service that they have either just started or just finished, or if they are available for work and it used by functionality in the Manage Public Transport Operations Functional Area.
     links:
       - "Aggregation «Componentof» → fd-mpto_inputs"  # {25DDF7F5-5AD6-44ac-8BC9-3D5FE1862CFD} → {7675F0F3-9CE3-4c10-8F5C-44E10F86DC77}
-      - "Association «IN» → F4.3 Provide PT Management"  # {A2368488-25EB-476f-9B94-E1DFF909979C} → {29AD1A4E-431A-4a7c-BE08-C8D119466A60}
+      - "Association «OUT» → F4.3 Provide PT Management"  # {A2368488-25EB-476f-9B94-E1DFF909979C} → {29AD1A4E-431A-4a7c-BE08-C8D119466A60}
       - "Association «OUT» → F4.3.9 Provide PT Driver interface for management"  # {F0EEE9D2-8113-47b9-8DA9-8D4B1B02EDE5} → {E21108D4-585B-431c-B343-7954F47DDD9C}
   - name: "fd.ptd-messages"
     guid: "{7FF12580-8EA1-4fee-A511-81B9962B21F7}"
@@ -574,7 +574,7 @@ elements:
     links:
       - "Aggregation «Componentof» → From Driver"  # {68CDE36C-DDA3-4183-9378-76F4C64B0603} → {7590C1C5-F94F-4929-8D0C-1EAFBB19AA51}
       - "Aggregation «Componentof» → fd-mpto_inputs"  # {B773B7A0-7ECF-4fe7-BE68-6A7145A89A66} → {7675F0F3-9CE3-4c10-8F5C-44E10F86DC77}
-      - "Association «IN» → F4.5 Provide PT Fare Facilities"  # {378CB6EA-A31A-4043-9997-6868BB20A35C} → {0B6EE3D2-3124-4ff6-A5B3-3C8F646B059F}
+      - "Association «OUT» → F4.5 Provide PT Fare Facilities"  # {378CB6EA-A31A-4043-9997-6868BB20A35C} → {0B6EE3D2-3124-4ff6-A5B3-3C8F646B059F}
       - "Association «OUT» → F4.5.1 Provide PT Drivers access to Fares"  # {7BF6037E-5DFD-49b4-A402-E17DB04E61AA} → {05AF58D0-FF47-427e-A589-47A0E41D7775}
   - name: "fd.tpd-accept_revised_vehicle_trip_plan"
     guid: "{F23CA0C8-EA4B-435f-938C-BD4269ACD691}"
@@ -779,7 +779,7 @@ elements:
       It contains inputs that the Broadcaster External Service Provider has made which are used to create data objects that provide a request for information about traffic conditions in the urban road network to be provided by functionality in the Manage Traffic Functional Area.
     links:
       - "Aggregation «Componentof» → fesp-road_network_data"  # {3704239F-B4AF-4a35-8491-E67D470F83BB} → {7D8D9C68-C624-4be0-B878-0BEA377D30C7}
-      - "Association «IN» → F3.1.1 Provide Urban Traffic Management"  # {5A566F2E-B3AC-4569-AF68-1DE53286C7B8} → {F2989AC8-51A0-4913-B32E-0D5E048A4788}
+      - "Association «OUT» → F3.1.1 Provide Urban Traffic Management"  # {5A566F2E-B3AC-4569-AF68-1DE53286C7B8} → {F2989AC8-51A0-4913-B32E-0D5E048A4788}
       - "Association «OUT» → F3.1.1.9 Output Urban Traffic Data"  # {1CE5BDB0-7D44-4eac-8F6E-8A95CFB85ABD} → {A9F26532-4DEE-4160-8FFC-160BBFB3F99F}
   - name: "fesp.bsp-bookable_service_information"
     guid: "{EE9123A0-6E79-4686-B6D2-0931651A7677}"
@@ -818,7 +818,7 @@ elements:
       It consists of inputs from the Driver and Vehicle Provider containing data objects that provide details about Vehicles that will enable the identities they provide through FCD/XFCD when passing through the inter-urban road network to be matched with their actual physical identities, i.e. is the FCD/XFCD credible for the type of Vehicle that it appears to be and is for use by functionality that compiles traffic data for the inter-urban road network in the Manage Traffic Functional Area.
     links:
       - "Aggregation «Componentof» → fesp-road_network_data"  # {80ECCE9D-2CA7-4566-844F-17FC1C5968B0} → {7D8D9C68-C624-4be0-B878-0BEA377D30C7}
-      - "Association «IN» → F3.1.2 Provide Inter-urban Traffic Management"  # {79EDFE69-6A24-4e98-8440-12A4CE51A9C5} → {2EE2E618-41FE-4ac5-9413-C23D9DAF7E9E}
+      - "Association «OUT» → F3.1.2 Provide Inter-urban Traffic Management"  # {79EDFE69-6A24-4e98-8440-12A4CE51A9C5} → {2EE2E618-41FE-4ac5-9413-C23D9DAF7E9E}
       - "Association «OUT» → F3.1.2.12 Monitor Inter-urban FCD/XFCD Source Vehicles"  # {5CE3C676-AD07-4ff0-8BF5-C5BF627F4699} → {D37F617B-22C6-43f3-A21D-1C26BEA45041}
   - name: "fesp.dvip-vehicle_data_for_urban_fcd_check"
     guid: "{E316E842-0D05-4006-8406-DAB3E33E60A0}"
@@ -831,7 +831,7 @@ elements:
       It consists of inputs from the Driver and Vehicle Provider containing data objects that provide details about Vehicles that will enable the identities they provide through FCD/XFCD when passing through the inter-urban road network to be matched with their actual physical identities, i.e. is the FCD/XFCD credible for the type of Vehicle that it appears to be and is for use by functionality that compiles traffic data for the urban road network in the Manage Traffic Functional Area.  All data objects provided by this data flow must comply with the requirements of the General Data Protection Regulation (GDPR - EU2016/679 and any subsequent amendments.)
     links:
       - "Aggregation «Componentof» → fesp-road_network_data"  # {44C0FB6E-D967-4ef8-82DB-E5C2D21E6D85} → {7D8D9C68-C624-4be0-B878-0BEA377D30C7}
-      - "Association «IN» → F3.1.1 Provide Urban Traffic Management"  # {F1E06437-986A-48d3-87DE-9D7EABDE6867} → {F2989AC8-51A0-4913-B32E-0D5E048A4788}
+      - "Association «OUT» → F3.1.1 Provide Urban Traffic Management"  # {F1E06437-986A-48d3-87DE-9D7EABDE6867} → {F2989AC8-51A0-4913-B32E-0D5E048A4788}
       - "Association «OUT» → F3.1.1.12 Monitor Urban FCD/XFCD Source Vehicles"  # {32B38BF2-ECF5-4483-BE82-C3AAE938D2F2} → {87DFDEDD-930C-48ee-ABB3-BF832B5452A6}
   - name: "fesp.g-digital_map_data_for_emergency_vehicle"
     guid: "{09864EC8-2CD8-4f9d-B575-A94EBFEE3A3F}"
@@ -944,7 +944,7 @@ elements:
       It consists of inputs from the Geographic Information Provider containing data objects that provide digital map data that is for the Host Vehicle to use in determining the location of Other Vehicles, Other Road Users, Pedestrians, and Stationary Objects based on input from its on-board sensors and is for use by the functionality in the Provide Support for Host Vehicle Systems Functional Area.
     links:
       - "Aggregation «Componentof» → flds-pshvs_inputs"  # {ED67A818-11E4-4b2d-B742-B6AD749B22F1} → {07C95970-EDDA-40b1-91CC-B71640769D7B}
-      - "Association «IN» → F5.15 Provide In-vehicle Detection and Analysis"  # {C486210F-A2CB-451c-866B-A5DB054D0F86} → {F8617CCE-0051-448b-9A40-576C60C469AB}
+      - "Association «OUT» → F5.15 Provide In-vehicle Detection and Analysis"  # {C486210F-A2CB-451c-866B-A5DB054D0F86} → {F8617CCE-0051-448b-9A40-576C60C469AB}
       - "Association «OUT» → F5.15.5 Collect & forward local Host Vehicle conditions"  # {4134152F-6EB6-443a-A11B-336A50584E4B} → {A4C5F193-840C-4a95-96F3-77208D9A468D}
   - name: "fesp.g-map_update"
     guid: "{DA82E51A-CE7F-459a-A087-37CAD3589EB7}"
@@ -969,7 +969,7 @@ elements:
       It consists of inputs from the Geographic Information Provider containing data objects that provide speed limit data from which, given a set of co-ordinates, the legal speed limit for that section of road can be identified and is for use by the functionality in the Provide Support for Host Vehicle Systems Functional Area.
     links:
       - "Aggregation «Componentof» → fesp-pshvs_inputs"  # {DF70F626-F2BD-45ce-8738-C5308B7DAEB2} → {2B80B2E4-62C6-4d26-96FD-9F21509F51C1}
-      - "Association «IN» → F5.13 Provide Vehicle Data and ISA"  # {FAC0F245-2F76-4355-97F3-99C9B934DCAA} → {F91C0ED5-7F89-4fd1-B561-6CE9E766291A}
+      - "Association «OUT» → F5.13 Provide Vehicle Data and ISA"  # {FAC0F245-2F76-4355-97F3-99C9B934DCAA} → {F91C0ED5-7F89-4fd1-B561-6CE9E766291A}
       - "Association «OUT» → F5.13.9 Determine Applicable Road Information"  # {EA45485B-958B-4201-9581-8FDCAC658DB2} → {012D531C-E8BB-42b0-9C9C-24C15E871CC3}
   - name: "fesp.g-trip_plan_implementation_map_data"
     guid: "{DB9CE253-AB12-4bdf-97B7-82EEFB3A00E0}"
@@ -1006,7 +1006,7 @@ elements:
       It consists of inputs from the Geographic Information Provider containing data objects that provide digital map data for use in the implementation of a Vehicle Trip Plan by a Driver and is for use by the functionality in the Provide Support for Host Vehicle Systems Functional Area.
     links:
       - "Aggregation «Componentof» → fesp-pshvs_inputs"  # {B3BEC381-27B0-4060-8DE6-998A40EF3B74} → {2B80B2E4-62C6-4d26-96FD-9F21509F51C1}
-      - "Association «IN» → F5.14 Provide In-vehicle Trip Planning & Implementation"  # {3FCFA5BE-67B9-4546-A744-D0BB27E19A15} → {CD0DD7C8-43B3-4a5b-8DD2-AA6DEA02907E}
+      - "Association «OUT» → F5.14 Provide In-vehicle Trip Planning & Implementation"  # {3FCFA5BE-67B9-4546-A744-D0BB27E19A15} → {CD0DD7C8-43B3-4a5b-8DD2-AA6DEA02907E}
       - "Association «OUT» → F5.14.4 Implement Vehicle Trip Plan and Track Vehicle"  # {D5E37BFB-30BE-4787-822F-AF365D13536E} → {9779C21E-F3B1-4389-BE4B-AD3FB28B3BF6}
   - name: "fesp.gip-access_criteria"
     guid: "{81361297-ABB1-476b-9648-14ACB800BCEB}"
@@ -1416,7 +1416,7 @@ elements:
     links:
       - "Aggregation «Componentof» → From Financial Clearinghouse"  # {5C927C1D-63C2-4c48-8DA7-7569C51145B1} → {7A02C9E7-9516-4e4b-858E-6B55D4CEAB06}
       - "Aggregation «Componentof» → ffc-mt_inputs"  # {DBC5D365-173E-4ded-92E4-C41A10312556} → {C8261C2B-9187-42ed-9F7B-BA438B197A3A}
-      - "Association «IN» → F3.1.4 Provide Management of Car Parks"  # {C22BD880-9E83-43a5-A11F-092C86F1CFED} → {CFC380C7-2010-46fb-9DE1-6BF39DBDA8B0}
+      - "Association «OUT» → F3.1.4 Provide Management of Car Parks"  # {C22BD880-9E83-43a5-A11F-092C86F1CFED} → {CFC380C7-2010-46fb-9DE1-6BF39DBDA8B0}
       - "Association «OUT» → F3.1.4.6 Collect Payment for Car Park space use"  # {D8018505-6EDE-4a0c-8003-9EA5DA7A8DD6} → {24349A2F-AE19-4256-90EB-09B118127A63}
   - name: "ffc-confirmed_fare_payment"
     guid: "{F330E21F-B009-4f65-AB6E-ECDB576D9CF5}"
@@ -1430,7 +1430,7 @@ elements:
     links:
       - "Aggregation «Componentof» → From Financial Clearinghouse"  # {B6E6FF37-CB49-4d4e-B0C1-FE7A465871DE} → {7A02C9E7-9516-4e4b-858E-6B55D4CEAB06}
       - "Aggregation «Componentof» → ffc-mpto_inputs"  # {7F032730-AD2B-46d1-B5C4-CF69DA4DB696} → {988E8387-CBBF-4afc-9A20-4C369404CEDC}
-      - "Association «IN» → F4.5 Provide PT Fare Facilities"  # {061A97D1-2A79-4732-849C-2B09F801C4B7} → {0B6EE3D2-3124-4ff6-A5B3-3C8F646B059F}
+      - "Association «OUT» → F4.5 Provide PT Fare Facilities"  # {061A97D1-2A79-4732-849C-2B09F801C4B7} → {0B6EE3D2-3124-4ff6-A5B3-3C8F646B059F}
       - "Association «OUT» → F4.5.3 Provide PT Passenger access to Fare Credit"  # {2613C983-91F6-4954-A92F-F14B0E60F096} → {1A1FE691-4DFD-406d-8866-94205433663A}
   - name: "ffc-demand_service_payment_confirmed"
     guid: "{210E3E3E-8CE5-4226-A703-5B3E73E51BCB}"
@@ -1444,7 +1444,7 @@ elements:
     links:
       - "Aggregation «Componentof» → From Financial Clearinghouse"  # {7FB7E49B-1265-432f-80D6-238EC17BAB86} → {7A02C9E7-9516-4e4b-858E-6B55D4CEAB06}
       - "Aggregation «Componentof» → ffc-mpto_inputs"  # {05F6112B-64CE-4558-8573-37A782EB4482} → {988E8387-CBBF-4afc-9A20-4C369404CEDC}
-      - "Association «IN» → F4.7 Provide On-demand Services"  # {24B20B95-F0B2-4e87-A092-4FF28161DE61} → {ED1680A0-3B04-41e7-84AF-855C767F8066}
+      - "Association «OUT» → F4.7 Provide On-demand Services"  # {24B20B95-F0B2-4e87-A092-4FF28161DE61} → {ED1680A0-3B04-41e7-84AF-855C767F8066}
       - "Association «OUT» → F4.7.1 Provide On- Demand Service Traveller Interface"  # {E030D8D7-A44C-4b66-820E-2DE835C44783} → {B8C7D7B7-FF8D-402d-B277-6C43EE0795FA}
   - name: "ffc-payment_for_trip_planning_response"
     guid: "{5D47869D-117A-4798-965C-898C8A7F67CF}"
@@ -1920,7 +1920,7 @@ elements:
       It consists of inputs from the Location Data Source containing data objects from which the current location of the host vehicle can be determined and are for use by the functionality in the Provide Support for Host Vehicle Systems Functional Area.
     links:
       - "Aggregation «Componentof» → flds-pshvs_inputs"  # {F9F80AB0-FEA9-4efb-9644-370067A7ECB9} → {07C95970-EDDA-40b1-91CC-B71640769D7B}
-      - "Association «IN» → F5.15 Provide In-vehicle Detection and Analysis"  # {D6F001E7-4513-487b-9817-12F9DED66920} → {F8617CCE-0051-448b-9A40-576C60C469AB}
+      - "Association «OUT» → F5.15 Provide In-vehicle Detection and Analysis"  # {D6F001E7-4513-487b-9817-12F9DED66920} → {F8617CCE-0051-448b-9A40-576C60C469AB}
       - "Association «OUT» → F5.15.5 Collect & forward local Host Vehicle conditions"  # {32796485-664A-4de0-89AB-7C98CAF3E248} → {A4C5F193-840C-4a95-96F3-77208D9A468D}
   - name: "flds-location_for_priority"
     guid: "{79F48888-C59B-4d86-8EBA-B08161E137F6}"
@@ -1982,7 +1982,7 @@ elements:
     links:
       - "Aggregation «Componentof» → From Location Data Source"  # {609BAC27-639E-4ce8-B04B-67C4AA3A06B4} → {B81C99FC-BB55-44e6-813C-CD04A0309AF5}
       - "Aggregation «Componentof» → flds-mpto_inputs"  # {14E1DB61-EF23-423d-93B8-D912F94B2976} → {151721E9-8A20-4e19-BFD5-F417C3B4271B}
-      - "Association «IN» → F4.7 Provide On-demand Services"  # {B7B1AED1-726C-4b6d-A41C-4949971DF105} → {ED1680A0-3B04-41e7-84AF-855C767F8066}
+      - "Association «OUT» → F4.7 Provide On-demand Services"  # {B7B1AED1-726C-4b6d-A41C-4949971DF105} → {ED1680A0-3B04-41e7-84AF-855C767F8066}
       - "Association «OUT» → F4.7.4 Monitor On-Demand Service Vehicle"  # {18B6A753-3B2D-4920-B970-70855064FB6A} → {FFFD824E-7235-47c0-931D-23CA846A444F}
   - name: "flds-psef_location_data"
     guid: "{2BE5E12C-12EB-488e-9CAD-8EE7FA2E3207}"
@@ -2063,7 +2063,7 @@ elements:
     links:
       - "Aggregation «Componentof» → From Location Data Source"  # {AEE38C16-6D49-4590-BD97-4C2CA4142773} → {B81C99FC-BB55-44e6-813C-CD04A0309AF5}
       - "Aggregation «Componentof» → flds-pshvs_inputs"  # {34BF7478-F938-4133-8429-D9DC04CFB532} → {07C95970-EDDA-40b1-91CC-B71640769D7B}
-      - "Association «IN» → F5.14 Provide In-vehicle Trip Planning & Implementation"  # {4A0C8B33-1172-4fe1-843B-3E0786F3B96A} → {CD0DD7C8-43B3-4a5b-8DD2-AA6DEA02907E}
+      - "Association «OUT» → F5.14 Provide In-vehicle Trip Planning & Implementation"  # {4A0C8B33-1172-4fe1-843B-3E0786F3B96A} → {CD0DD7C8-43B3-4a5b-8DD2-AA6DEA02907E}
       - "Association «OUT» → F5.14.4 Implement Vehicle Trip Plan and Track Vehicle"  # {ADF18D77-C1C2-4c5f-AB80-537DA3F48CF2} → {9779C21E-F3B1-4389-BE4B-AD3FB28B3BF6}
   - name: "flds-vehicle_location_for_trip_planning"
     guid: "{EA3B6F09-2B99-45e9-B10F-25BB734950D2}"
@@ -2101,7 +2101,7 @@ elements:
       It consists of inputs from the Location Data Source containing data objects from which the current location of  the Vehicle Sharer can be determined and are for use by  functionality in the Provide Traveller Journey Assistance Functional Area.
     links:
       - "Aggregation «Componentof» → flds-mpto_inputs"  # {0D8F0AFE-4146-4aaf-8078-4D3E4ABA463C} → {151721E9-8A20-4e19-BFD5-F417C3B4271B}
-      - "Association «IN» → F4.6 Provide Facilities for Vehicle Sharing"  # {B5D892BD-8408-411f-B950-405F81B1F2BA} → {A8C5BEF7-4F95-43ce-9B22-C4329AFFB177}
+      - "Association «OUT» → F4.6 Provide Facilities for Vehicle Sharing"  # {B5D892BD-8408-411f-B950-405F81B1F2BA} → {A8C5BEF7-4F95-43ce-9B22-C4329AFFB177}
       - "Association «OUT» → F4.6.1 Provide Vehicle Sharer Interface"  # {8EF79175-3CD9-497e-9D52-13EDDB79BCD6} → {03E45E36-BEAB-4729-B2FB-DCA15B1A6590}
   - name: "flds_vehicle_location_for_sensitive_area_access"
     guid: "{7D8818DE-BE50-415f-ACF5-6EA1652E2424}"
@@ -2214,7 +2214,6 @@ elements:
       - "Aggregation «Componentof» → From Multi-Modal System"  # {A04B173E-09C6-408f-8BA1-CC378B35862B} → {4E4D632B-D78C-4196-BEAF-D829B099E7AF}
       - "Aggregation «Componentof» → fmms.mmc-crossing_request"  # {8E4A773D-AD82-48cb-AB85-A81DB86A402F} → {5BB90974-ECDD-49cc-82E5-FEE837E2B46D}
       - "Association «IN» → F3.1.2.14 Implement Inter-urban Management Traffic Strategy"  # {62ABDD4E-57BF-46ff-A402-13268DFE4B18} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
-      - "Association «IN» → Multi-Modal Crossing"  # {A4232522-7E0B-4e39-9C75-9F13A82C0154} → {C60F1898-547F-4907-A202-E926483BB388}
       - "Association «OUT» → F3.1.2 Provide Inter-urban Traffic Management"  # {75C5843A-5ECE-4bf5-BF92-2E30CA786291} → {2EE2E618-41FE-4ac5-9413-C23D9DAF7E9E}
       - "Association «OUT» → F3.1.2.14.2 Output c&i to Drivers using Inter-urban Roads"  # {08030246-D93D-4a85-8A5B-1A3A5D0D6786} → {22A5DE67-505F-47ab-B208-CA8C3B51B67C}
   - name: "fmms.mmc-urban_crossing_command"
@@ -2228,7 +2227,6 @@ elements:
       It consists of inputs from the Multi-Modal Crossing containing data objects that provide notification of the opening of a multi-modal crossing which will stop or restrict the normal flow of vehicle traffic using the urban road network in which ITS Services are being deployed.  It is for use by the functionality in the Manage Traffic Functional Area.
     links:
       - "Aggregation «Componentof» → fmms.mmc-urban_crossing_inputs"  # {E812F1E8-143B-46c9-96AD-DE2267DAB4D8} → {2009C16E-6694-47e2-94F4-3743BD40ABED}
-      - "Association «IN» → Multi-Modal Crossing"  # {C5C151BD-BAA6-4a5c-B5F0-5CC87C5B2730} → {C60F1898-547F-4907-A202-E926483BB388}
       - "Association «OUT» → F3.1.1.5.22 Output s&g Commands to Urban Roads"  # {4B422CFC-74ED-45e0-A47B-CF441AE56FA2} → {E674B5BC-BDD9-4964-A421-837396315389}
   - name: "fmms.mmc-urban_crossing_information"
     guid: "{3290E9AD-BCCB-454c-959B-6452BD2BF8B9}"
@@ -2241,7 +2239,6 @@ elements:
       It consists of inputs from the Multi-Modal Crossing containing data objects that represent warning messages for output to Drivers, Cyclists and Pedestrians not to enter a multi-modal crossing because either it is about to closed to road traffic, or has closed but is a short distance ahead, and will stop or restrict the normal flow of road traffic throughout the urban road network.
     links:
       - "Aggregation «Componentof» → fmms.mmc-urban_crossing_inputs"  # {1FFC454B-E3B9-43fc-AE4F-A3FDF7C9544E} → {2009C16E-6694-47e2-94F4-3743BD40ABED}
-      - "Association «IN» → Multi-Modal Crossing"  # {69A7209F-42C4-4c0b-8126-2FCC9142B45E} → {C60F1898-547F-4907-A202-E926483BB388}
       - "Association «OUT» → F3.1.1.5.20 Output c&i to Drivers using Urban Roads"  # {BCC1B7B5-0654-4ce2-B07C-BA292024C4EB} → {C962C336-BC4F-4a43-BEB5-94E9184E60DC}
   - name: "fmms.mms-accident_information"
     guid: "{7F740A81-04CC-4459-84C6-16B2C9FBFEC6}"
@@ -2254,7 +2251,6 @@ elements:
       It consists of inputs from the Multi-Modal System containing data objects that provide details of accidents that have occurred in the other transport modes so that an assessment can be made of their impact upon the road network, to see if they constitute an incident for which mitigation action needs to be taken. The details are for use by the incident management functionality in the Manage Traffic Functional Area.
     links:
       - "Aggregation «Componentof» → fmms.mms-incident_inputs"  # {96751C1E-56AC-48c1-B67C-A0DD47DE0D49} → {575319CC-0B29-4a43-B97C-5A3F5AE48B4E}
-      - "Association «IN» → Multi-Modal Management System"  # {52A36793-4E76-4349-A679-1858CD668B4F} → {88920892-1042-40fc-B5DF-DC0302342F39}
       - "Association «OUT» → F3.2.13 Classify and Identify Incidents"  # {4525A4B1-D327-4aae-8470-2BCBE416630B} → {E04909A4-37EE-452e-841B-C7C27E8C4C34}
   - name: "fmms.mms-control_parameters"
     guid: "{02C61A7A-5A56-4c5e-8028-5D67EBE96524}"
@@ -2267,7 +2263,6 @@ elements:
       It consists of inputs from the Multi-Modal Systems containing data objects that provide recommended control parameters to enable the co-ordination of control actions between services available from other (usually non-road) modes of transport and the PT road based services being provided by functionality in the Manage Public Transport Operations Functional Area.
     links:
       - "Aggregation «Componentof» → fmms-mpto_control_inputs"  # {815DCA4C-D733-4afc-ADB9-EE0BBE22C0EF} → {51465906-5ED9-4bec-8421-4D8702638672}
-      - "Association «IN» → Multi-Modal Management System"  # {3123FC89-BD7F-41ec-9D0C-CC49AED6652A} → {88920892-1042-40fc-B5DF-DC0302342F39}
       - "Association «OUT» → F4.4.8 Provide Interface to Other Modes"  # {A06F7FAB-E064-4290-8A48-6CA25CA5AAEA} → {BAEF6D09-60A1-4572-9C90-87EF852B885A}
   - name: "fmms.mms-current_service_status"
     guid: "{90D2D1C2-7E36-4938-A516-9FA22FFAFF3D}"
@@ -2280,7 +2275,6 @@ elements:
       It consists of inputs from the Multi-Modal System containing data objects that provide the current status of services being provided by other non-road based transport modes, e.g. air, marine, heavy rail and are for use in the management of PT Vehicles and fleets by functionality in the Manage Public Transport Operations Functional Area.
     links:
       - "Aggregation «Componentof» → fmms-mpto_inputs"  # {C2DD44FE-E64C-4083-BE2C-A1B191FB8A0F} → {714B23EA-171C-4f7a-AC44-9264DED78AFB}
-      - "Association «IN» → Multi-Modal Management System"  # {4AAD57CC-3BB3-4b2c-B8C7-76BFE5DDD6D5} → {88920892-1042-40fc-B5DF-DC0302342F39}
       - "Association «OUT» → F4.4.8 Provide Interface to Other Modes"  # {F9B2B9F4-4EC7-4fa1-909B-D65E0042BEF8} → {BAEF6D09-60A1-4572-9C90-87EF852B885A}
   - name: "fmms.mms-data_for_demand_services"
     guid: "{692D74CD-3641-48d0-A9FC-5D77168BB078}"
@@ -2295,7 +2289,6 @@ elements:
       - "Aggregation «Componentof» → From Multi-Modal System"  # {5DD96225-EE58-45a0-8428-FF9CA1CC8718} → {4E4D632B-D78C-4196-BEAF-D829B099E7AF}
       - "Aggregation «Componentof» → fmms-mpto_inputs"  # {C12B5F2D-A44D-4646-84D4-A2F6980E552B} → {714B23EA-171C-4f7a-AC44-9264DED78AFB}
       - "Association «IN» → F4.7 Provide On-demand Services"  # {4A0F9CD0-398E-4917-BFE0-16799F60D56F} → {ED1680A0-3B04-41e7-84AF-855C767F8066}
-      - "Association «IN» → Multi-Modal Management System"  # {93F811B0-0D16-4dc1-ACC4-DA41BF3C5905} → {88920892-1042-40fc-B5DF-DC0302342F39}
       - "Association «OUT» → F4.7.2 Plan On-Demand Services"  # {D93597D9-CBFF-4c56-AAD5-990C435FEB72} → {C62A6214-31B0-4554-9747-556EAFA428F0}
   - name: "fmms.mms-ferry_service_information"
     guid: "{37B1BA05-449C-4c65-AA29-6A5FBD84FF58}"
@@ -2308,7 +2301,6 @@ elements:
       It consists of inputs from the Multi-Modal Systems containing data objects that provide details of ferry and rail services that are relevant to Travellers using the road network in which ITS Services are being provided and is for use by the demand management functionality in the Manage Traffic Functional Area.
     links:
       - "Aggregation «Componentof» → fmms.mms-demand_inputs"  # {7106A031-7281-42d0-A8A8-61AEDB657155} → {DA69F91E-5D68-4429-97E5-84D8308E793B}
-      - "Association «IN» → Multi-Modal Management System"  # {CF59B432-6F66-4eaf-997C-5327A28C1B96} → {88920892-1042-40fc-B5DF-DC0302342F39}
       - "Association «OUT» → F3.3.1 Receive Information on Travel Factors"  # {7AF274A7-9ED5-4494-B8E8-CE0364D91A44} → {01E4D2F5-D6A8-4237-8467-FC7D0544A4D4}
   - name: "fmms.mms-plannings"
     guid: "{AC4E8105-BFDF-4eb6-A52A-2B69A29A6843}"
@@ -2322,7 +2314,6 @@ elements:
     links:
       - "Aggregation «Componentof» → From Multi-Modal System"  # {CF6E4C23-8C22-4670-9079-F5A2EF3B7EB6} → {4E4D632B-D78C-4196-BEAF-D829B099E7AF}
       - "Aggregation «Componentof» → fmms-mpto_inputs"  # {13794B39-9523-4518-BA8A-AC9F290E0A37} → {714B23EA-171C-4f7a-AC44-9264DED78AFB}
-      - "Association «IN» → Multi-Modal Management System"  # {8720D8AD-9737-46a9-B785-F1CD0CC608E7} → {88920892-1042-40fc-B5DF-DC0302342F39}
       - "Association «OUT» → F4.2 Plan PT Service"  # {A96F8707-F46E-4445-A0D3-458F4A3CE679} → {11256DFE-FADE-493f-803F-220E79388CDC}
       - "Association «OUT» → F4.2.8 Plan New PT Service Schedule"  # {D8DADB6D-C520-44de-A0DB-FFFE1ADD86A1} → {6646E43B-CB56-4531-A39F-0D4D27299BFC}
   - name: "fmms.mms-PT_service_change_request"
@@ -2336,7 +2327,6 @@ elements:
       It consists of inputs from the Multi-Modal Systems containing data objects that contain a request from another transport mode management entity for a change in PT Services and is for use by the functionality in the Manage Public Transport Functional Area.
     links:
       - "Aggregation «Componentof» → fmms-mpto_control_inputs"  # {5F673050-1602-4d3d-A97A-AD5DD3086D0F} → {51465906-5ED9-4bec-8421-4D8702638672}
-      - "Association «IN» → Multi-Modal Management System"  # {3F0EABA8-999C-42db-8588-780BEC3E4270} → {88920892-1042-40fc-B5DF-DC0302342F39}
       - "Association «OUT» → F4.4.8 Provide Interface to Other Modes"  # {AAC64563-8F91-4638-837B-74B3988C6577} → {BAEF6D09-60A1-4572-9C90-87EF852B885A}
   - name: "fmms.mms-rail_service_information"
     guid: "{3D125EF2-501F-44ab-A2D6-CCECC99DD74F}"
@@ -2349,7 +2339,6 @@ elements:
       It consists of inputs from the Multi-Modal Systems containing data objects that provide details of rail services, other than those provided by trams or other rail operations which usually occupy part of the road space, that are relevant to Travellers using the road network in which ITS Services are being provided and is for use by the demand management functionality in the Manage Traffic Functional Area.
     links:
       - "Aggregation «Componentof» → fmms.mms-demand_inputs"  # {924F06EC-E3E5-4d21-814D-2C8F577F1E8F} → {DA69F91E-5D68-4429-97E5-84D8308E793B}
-      - "Association «IN» → Multi-Modal Management System"  # {53635B78-C03F-4c21-A776-C797C5742A3C} → {88920892-1042-40fc-B5DF-DC0302342F39}
       - "Association «OUT» → F3.3.1 Receive Information on Travel Factors"  # {09AD3377-B612-4cc0-A712-6BCCBACCF580} → {01E4D2F5-D6A8-4237-8467-FC7D0544A4D4}
   - name: "fmms.mms-service_change_request_response"
     guid: "{A9C43B29-0AA8-4994-AE09-1992E97D8E73}"
@@ -2362,7 +2351,6 @@ elements:
       It consists of inputs from the Multi-Modal Systems containing data objects that provide the response from another transport mode operating entity to a previous request from the PT functionality for a change to its services and is for use by functionality in the Manage Public Transport Operations Functional Area.
     links:
       - "Aggregation «Componentof» → fmms-mpto_control_inputs"  # {0D4320AA-AA77-4cc1-8520-B60DFAB99E88} → {51465906-5ED9-4bec-8421-4D8702638672}
-      - "Association «IN» → Multi-Modal Management System"  # {10467B9D-7B50-4f4d-BCF6-27D8C11468CB} → {88920892-1042-40fc-B5DF-DC0302342F39}
       - "Association «OUT» → F4.4.8 Provide Interface to Other Modes"  # {6DB94D2B-02F6-4aad-B19F-EC916E261271} → {BAEF6D09-60A1-4572-9C90-87EF852B885A}
   - name: "fmms.mms-service_details_response"
     guid: "{27C39065-5D92-4456-B55A-DF74894C8E70}"
@@ -2376,7 +2364,6 @@ elements:
     links:
       - "Aggregation «Componentof» → fmms-mpto_inputs"  # {9E5FF382-56C6-49a4-B4AC-E0C6B4826F1A} → {714B23EA-171C-4f7a-AC44-9264DED78AFB}
       - "Association «IN» → F4.6 Provide Facilities for Vehicle Sharing"  # {0D3BC996-0EFA-4c76-8595-38F939DF6CA7} → {A8C5BEF7-4F95-43ce-9B22-C4329AFFB177}
-      - "Association «IN» → Multi-Modal Management System"  # {4FFEB7EA-FC9B-47f0-89D1-6AF9111D1AB9} → {88920892-1042-40fc-B5DF-DC0302342F39}
       - "Association «OUT» → F4.6.2 Create Travel Plans for Vehicle Sharing"  # {00E79FA3-11B4-40b6-8910-2A5C1A75F77E} → {B7D57CA7-84EE-403f-8C46-3D00AA7F7E52}
   - name: "fmms.mms-strike_details"
     guid: "{53BD6F2F-7590-4c93-9FA7-1CA430C58361}"
@@ -2389,7 +2376,6 @@ elements:
       It consists of inputs from the Multi-Modal Systems containing data objects that provide details of strikes or other forms of industrial action in other modes of transport that may affect the operation of the road network in which ITS Services are being provided and is for use by the incident management functionality in the Manage Traffic Functional Area.
     links:
       - "Aggregation «Componentof» → fmms.mms-incident_inputs"  # {FB45B7C6-7259-489c-8B82-1C53204560B2} → {575319CC-0B29-4a43-B97C-5A3F5AE48B4E}
-      - "Association «IN» → Multi-Modal Management System"  # {71A412FC-1022-49bd-8675-A7CA129C2E60} → {88920892-1042-40fc-B5DF-DC0302342F39}
       - "Association «OUT» → F3.2.13 Classify and Identify Incidents"  # {8C6F1B01-BC32-40c4-93A9-4DD57C94B350} → {E04909A4-37EE-452e-841B-C7C27E8C4C34}
   - name: "fmms.omfs-alternative_servce_response"
     guid: "{5967142D-24A1-4b73-B347-EDB8DEA8634E}"
@@ -2549,7 +2535,7 @@ elements:
       It consists of inputs from the NAP Content Consumer containing data objects that provide a request for information about accessible traffic, travel data and any other relevant information which are described with metadata in the store of NAP Metadata. The request shall contain keywords or any refining demand in at least one metadata element.
     links:
       - "Aggregation «componentof» → fSSPS-tNAP"  # {C7675B52-D77C-4b1d-8027-8F204114C806} → {BB5DAB8B-D77C-478d-A35B-5D2F5EEA5822}
-      - "Association «IN» → F3.6 Operate National Access Point"  # {2ED3D880-8C37-4572-ABAA-E9A88A632DA5} → {9363D28A-B58D-4e6d-B249-7748C0011542}
+      - "Association «OUT» → F3.6 Operate National Access Point"  # {2ED3D880-8C37-4572-ABAA-E9A88A632DA5} → {9363D28A-B58D-4e6d-B249-7748C0011542}
       - "Association «OUT» → F3.6.4 Manage Metadata Retrieval"  # {14607E3B-B3D3-4766-8BF9-ACCA01214FF8} → {D9EFBB62-DD12-4dd1-A835-DF560A82A1AD}
   - name: "fnap.cc-support_request"
     guid: "{16D06C97-2C77-4307-B304-766A1D613BE8}"
@@ -2566,8 +2552,8 @@ elements:
       - NAP User and NAP Operator are not mentioned anywhere, they shall be created as new terminators in NAP Actors
     links:
       - "Aggregation «componentof» → fSSPS-tNAP"  # {D06F82C1-0D5E-42aa-B96E-4725CEB097F3} → {BB5DAB8B-D77C-478d-A35B-5D2F5EEA5822}
-      - "Association «IN» → F3.6 Operate National Access Point"  # {F606290E-9F1B-4ba1-A70F-4ECABC11B5B5} → {9363D28A-B58D-4e6d-B249-7748C0011542}
-      - "Association «IN» → F3.6.5 Provide NAP User Support"  # {4438C716-A271-4709-B8F8-FFCE5F136A76} → {0CFE2A7A-AD32-4068-BDC5-AF0F18B6D99B}
+      - "Association «OUT» → F3.6 Operate National Access Point"  # {F606290E-9F1B-4ba1-A70F-4ECABC11B5B5} → {9363D28A-B58D-4e6d-B249-7748C0011542}
+      - "Association «OUT» → F3.6.5 Provide NAP User Support"  # {4438C716-A271-4709-B8F8-FFCE5F136A76} → {0CFE2A7A-AD32-4068-BDC5-AF0F18B6D99B}
   - name: "fnap.cp-metadata_&_authorisation_credentials"
     guid: "{00BDD6C9-80B2-4dee-90C4-810AB30E51F8}"
     type: "Interface"
@@ -2585,8 +2571,8 @@ elements:
     links:
       - "Aggregation «Componentof» → fnap-mt_inputs"  # {18DB7F98-84BC-4eba-A811-8939A05D123F} → {572F1D4D-9EB2-41ef-9944-23A22C7DA25B}
       - "Aggregation «componentof» → fo.po-tNAP"  # {98B2A151-55E9-4881-872C-F292FA6D440A} → {A4951824-CCD7-40e8-8FB8-C62DDBD17C63}
-      - "Association «IN» → F3.6 Operate National Access Point"  # {652422B7-D9F7-4991-B219-0BBE0604EB5D} → {9363D28A-B58D-4e6d-B249-7748C0011542}
-      - "Association «IN» → F3.6.3 Manage Content Providers Metadata"  # {7D5824DE-B87E-4fff-A087-E7D2C598F9BD} → {B623B347-AA95-44be-9043-55050E3CFC41}
+      - "Association «OUT» → F3.6 Operate National Access Point"  # {652422B7-D9F7-4991-B219-0BBE0604EB5D} → {9363D28A-B58D-4e6d-B249-7748C0011542}
+      - "Association «OUT» → F3.6.3 Manage Content Providers Metadata"  # {7D5824DE-B87E-4fff-A087-E7D2C598F9BD} → {B623B347-AA95-44be-9043-55050E3CFC41}
   - name: "fnap.cp-registration_request"
     guid: "{4C018359-5E45-494d-B61F-93B909FE1F63}"
     type: "Interface"
@@ -2600,8 +2586,8 @@ elements:
     links:
       - "Aggregation «Componentof» → fnap-mt_inputs"  # {DD4ECECE-2580-4c0c-BB75-ADB138234BF8} → {572F1D4D-9EB2-41ef-9944-23A22C7DA25B}
       - "Aggregation «componentof» → fo.po-tNAP"  # {7D3AA254-F34F-4c78-B581-1A3190E71A99} → {A4951824-CCD7-40e8-8FB8-C62DDBD17C63}
-      - "Association «IN» → F3.6 Operate National Access Point"  # {BF70A585-37AB-4b78-9D95-BB1E0A1E1257} → {9363D28A-B58D-4e6d-B249-7748C0011542}
-      - "Association «IN» → F3.6.2 Manage Registrations and Provide Authorisation Service"  # {DDEE1ADA-E549-4d1c-A923-5C1E0992D112} → {B032435E-6A52-4920-97B0-C13BB3E8BFC7}
+      - "Association «OUT» → F3.6 Operate National Access Point"  # {BF70A585-37AB-4b78-9D95-BB1E0A1E1257} → {9363D28A-B58D-4e6d-B249-7748C0011542}
+      - "Association «OUT» → F3.6.2 Manage Registrations and Provide Authorisation Service"  # {DDEE1ADA-E549-4d1c-A923-5C1E0992D112} → {B032435E-6A52-4920-97B0-C13BB3E8BFC7}
   - name: "fnap.cp-support_request"
     guid: "{D597AA27-D232-49ad-8A7F-D4F246F9E217}"
     type: "Interface"
@@ -2615,8 +2601,8 @@ elements:
       It consists of inputs from the NAP Content Provider containing data objects that provide a request for support describing an issue the NAP User have and to which the NAP Operator shall respond. The data objects are used by functionality in the Manage Traffic Functional Area.
     links:
       - "Aggregation «Componentof» → fnap-mt_inputs"  # {4AFA3488-F197-42e1-88C8-BF6BF9ACB028} → {572F1D4D-9EB2-41ef-9944-23A22C7DA25B}
-      - "Association «IN» → F3.6 Operate National Access Point"  # {9D746D55-AEA1-44cb-ABF3-2475A1670664} → {9363D28A-B58D-4e6d-B249-7748C0011542}
-      - "Association «IN» → F3.6.5 Provide NAP User Support"  # {6C9B6A9D-5FE0-4670-B06C-FEC18FB850C6} → {0CFE2A7A-AD32-4068-BDC5-AF0F18B6D99B}
+      - "Association «OUT» → F3.6 Operate National Access Point"  # {9D746D55-AEA1-44cb-ABF3-2475A1670664} → {9363D28A-B58D-4e6d-B249-7748C0011542}
+      - "Association «OUT» → F3.6.5 Provide NAP User Support"  # {6C9B6A9D-5FE0-4670-B06C-FEC18FB850C6} → {0CFE2A7A-AD32-4068-BDC5-AF0F18B6D99B}
   - name: "fo.bo-bridge_action_definitions"
     guid: "{C12526B2-F232-4097-B90A-0BEC15CA17DB}"
     type: "Interface"
@@ -2679,7 +2665,7 @@ elements:
     links:
       - "Aggregation «Componentof» → From Operator"  # {34168182-EFC0-4bea-8440-159FDC4D1F6E} → {BB9A1A2D-DF0E-4c2f-8BBC-F572C836D9D6}
       - "Aggregation «Componentof» → fo-psef_inputs"  # {D80222BE-CD84-4ed9-83DD-4BC8B9592A38} → {C53B9470-22A2-4614-83E4-B89591662B8D}
-      - "Association «IN» → F2.1 Manage Emergencies"  # {3AE5E0D6-7E81-4f9f-B2DB-0E57BF324FB9} → {8B0A6367-E6D7-47e2-9086-81FB2C700C13}
+      - "Association «OUT» → F2.1 Manage Emergencies"  # {3AE5E0D6-7E81-4f9f-B2DB-0E57BF324FB9} → {8B0A6367-E6D7-47e2-9086-81FB2C700C13}
       - "Association «OUT» → F2.1.9 Provide Emergency Operator Interface"  # {647F3831-01C7-4665-8826-D9D51557DA85} → {4DC02A8C-F802-4f2e-A6F6-FBF6A5F3D194}
   - name: "fo.eo-stop_stolen_vehicle"
     guid: "{D258083B-E1A4-4ba4-8D14-5499F95C554C}"
@@ -2693,7 +2679,7 @@ elements:
     links:
       - "Aggregation «Componentof» → From Operator"  # {D20BB4D0-511E-4c1b-A4E3-9621EB74F6EE} → {BB9A1A2D-DF0E-4c2f-8BBC-F572C836D9D6}
       - "Aggregation «Componentof» → fo-psef_inputs"  # {31C3D341-1AA7-48d0-8137-B8CB84816168} → {C53B9470-22A2-4614-83E4-B89591662B8D}
-      - "Association «IN» → F2.2 Manage Stolen Vehicle Notification"  # {BCDBF20D-13BF-4ce4-B248-FDCA7F23B4E2} → {1510BFFC-B1DA-4b9b-8A6A-1A127E307272}
+      - "Association «OUT» → F2.2 Manage Stolen Vehicle Notification"  # {BCDBF20D-13BF-4ce4-B248-FDCA7F23B4E2} → {1510BFFC-B1DA-4b9b-8A6A-1A127E307272}
       - "Association «OUT» → F2.2.3 Manage Stolen Vehicle Emergency Operator Interface"  # {49159050-06FB-4c69-A4FF-2E85CF71C0CF} → {79D33215-E0CB-4b5f-A3ED-F7D3E64D1247}
   - name: "fo.epo-access_criteria"
     guid: "{BE42CC8A-532C-4c43-BF95-E33724AD7BBB}"
@@ -3406,7 +3392,7 @@ elements:
       It consists of input from the Road Network Operator from which data objects are created that provide static data about the inter-urban road network that is to be added to the store of Inter-urban Road Static Data and is for use by functionality in the Manage Traffic Functional Area.
     links:
       - "Aggregation «Componentof» → fo.rno-inter-urban_traffic_commands"  # {47539540-863F-4a74-B7EB-69E8337F684E} → {26680F03-A71C-4286-8996-33500236AFBE}
-      - "Association «IN» → F3.1.2.13 Manage Inter-urban Traffic Strategies"  # {73252DF4-5391-4ee6-937B-6C73090C332A} → {44E4B5FB-6CF5-40a0-9CE1-D676DB87CA84}
+      - "Association «OUT» → F3.1.2.13 Manage Inter-urban Traffic Strategies"  # {73252DF4-5391-4ee6-937B-6C73090C332A} → {44E4B5FB-6CF5-40a0-9CE1-D676DB87CA84}
       - "Association «OUT» → F3.1.2.13.1 Provide Inter-urban Road Operator Mgt Interface"  # {F84FEA15-124B-49a8-8690-DBC95FC0E27A} → {6BA89424-6FCB-4b9b-ADE0-AA404EFFEEE8}
   - name: "fo.rno-inter-urban_traffic_management_commands"
     guid: "{565FD599-433A-4a3a-B537-8616895F9278}"
@@ -3915,7 +3901,7 @@ elements:
     links:
       - "Aggregation «Componentof» → From Other Related System"  # {14E9056F-EB0A-4e03-9F98-C3FC09A90275} → {F61B6D7E-F9F8-464e-8AE2-B0868F09146E}
       - "Aggregation «Componentof» → fors-mpto_inputs"  # {0C20E838-8AEC-4c94-BBE2-8EA994503F16} → {9473C236-39A5-4c60-9D62-F458A04C3008}
-      - "Association «IN» → F4.1 Monitor PT fleet"  # {0276FFBD-AB1F-4b91-943C-78EF0DF48A2F} → {6371794D-1857-4152-B781-18AE7C5B8FC3}
+      - "Association «OUT» → F4.1 Monitor PT fleet"  # {0276FFBD-AB1F-4b91-943C-78EF0DF48A2F} → {6371794D-1857-4152-B781-18AE7C5B8FC3}
       - "Association «OUT» → F4.1.11 Manage PT Vehicle Stop"  # {2152815D-CCDB-4a32-8AC2-9D796DAEFF08} → {B0F0527D-5DDB-44f5-83F3-2942C76C930E}
   - name: "fors.tsc-local_priority_request_details"
     guid: "{04E080C8-DB8C-4f17-8A7B-2A1C2714C402}"
@@ -3928,9 +3914,9 @@ elements:
       It consists of data objects from another instance of the functionality in the Manage Traffic Functional Area that provide details of the local priority requests that it is implementing and are for use by the functionality in the Manage Traffic Functional Area.
     links:
       - "Aggregation «Componentof» → fors-mt_inputs"  # {9EA63232-DAFE-4a9c-95AB-742CAAFCF822} → {EEA64EEA-EFEF-431e-8231-DE877912EC8C}
-      - "Association «IN» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {3CE0F2F4-D58E-4fd5-8EF1-59EDC6A1671A} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
       - "Association «OUT» → F3.1 Provide Traffic Control"  # {95EA6320-3D12-48e0-848D-C8D396CF7998} → {226ED187-DB7A-409f-B509-BA8DBFFB6DB6}
       - "Association «OUT» → F3.1.1 Provide Urban Traffic Management"  # {06EE05B0-2CA0-46b6-95D2-4963A0E0144A} → {F2989AC8-51A0-4913-B32E-0D5E048A4788}
+      - "Association «OUT» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {3CE0F2F4-D58E-4fd5-8EF1-59EDC6A1671A} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
       - "Association «OUT» → F3.1.1.5.22 Output s&g Commands to Urban Roads"  # {18AF6F12-0F8C-410e-A080-C3C04EEC97A1} → {E674B5BC-BDD9-4964-A421-837396315389}
   - name: "fors.tss-traffic_prediction_results"
     guid: "{A9A5ED3A-2F18-450c-BAD9-17EEDB86705E}"
@@ -3944,8 +3930,8 @@ elements:
     links:
       - "Aggregation «Componentof» → From Other Related System"  # {CF4C7114-019F-46cb-9BD3-EA2FC1BAE482} → {F61B6D7E-F9F8-464e-8AE2-B0868F09146E}
       - "Aggregation «Componentof» → fors-mt_inputs"  # {269522F3-C55D-4de7-B50D-FB1864099E2D} → {EEA64EEA-EFEF-431e-8231-DE877912EC8C}
-      - "Association «IN» → F3.1.6 Provide Traffic Predictions"  # {B49871AF-8020-4742-96CD-EF844E7D12CA} → {46C6DE8C-67D9-4327-A1EE-E3D55E6B7E97}
       - "Association «OUT» → F3.1 Provide Traffic Control"  # {CDAE007E-3EDF-4dbc-BCB1-657C284A4185} → {226ED187-DB7A-409f-B509-BA8DBFFB6DB6}
+      - "Association «OUT» → F3.1.6 Provide Traffic Predictions"  # {B49871AF-8020-4742-96CD-EF844E7D12CA} → {46C6DE8C-67D9-4327-A1EE-E3D55E6B7E97}
       - "Association «OUT» → F3.1.6.4 Manage Traffic Prediction Data Store"  # {74EAF748-10BC-4dc5-B944-C82AB852AB86} → {A14D8224-9167-4fe0-B049-D05359E11358}
   - name: "fors.utms-urban_data_updates"
     guid: "{D7C9F930-6140-4714-A920-2557CCB0FDDB}"
@@ -3997,7 +3983,7 @@ elements:
       It consists of input from the Roadside Equipment from which data objects are created that provide a representation of the dynamic speed commands that are being displayed to Drivers from outside of the Vehicle, i.e. from devices that are not in any way connected to the Vehicle and are for use by the functionality in the Provide Support for Host Vehicle Systems Functional Area.
     links:
       - "Aggregation «Componentof» → fre-pshvs_inputs"  # {6B7FAC29-F0C2-43c7-B4CB-599D27E09078} → {03403272-1630-4bb0-8F28-5E7C912BFE0A}
-      - "Association «IN» → F5.13 Provide Vehicle Data and ISA"  # {1E753C62-FE17-419f-94A8-F7039F330BD5} → {F91C0ED5-7F89-4fd1-B561-6CE9E766291A}
+      - "Association «OUT» → F5.13 Provide Vehicle Data and ISA"  # {1E753C62-FE17-419f-94A8-F7039F330BD5} → {F91C0ED5-7F89-4fd1-B561-6CE9E766291A}
       - "Association «OUT» → F5.13.10 Display Current Road Information to Driver"  # {CF4024EA-0A38-411e-A29E-57A28D9D47EB} → {065FC334-1C33-4fc4-A058-51E93FE08DF6}
   - name: "frp-current_conditions"
     guid: "{225CF96D-9387-4992-A816-85D6FF717ADF}"
@@ -4024,7 +4010,6 @@ elements:
     links:
       - "Aggregation «Componentof» → From Road Pavement"  # {615C6814-CB6B-4f7d-A310-BCEEEDD9B4BF} → {E3E191DA-5784-4c53-AA36-07158215A19F}
       - "Aggregation «Componentof» → frp-pshvs_inputs"  # {78739477-685E-4af0-9A97-3FED6C1A0570} → {BCF13BFF-B76E-4c13-B77C-9068B500E8A1}
-      - "Association «IN» → F5.12.12 Collect Road Network Information"  # {3AE92658-B8CF-457f-8290-C6DFADB593E8} → {AA6323B2-E601-4976-B0A5-369078597EC2}
       - "Association «OUT» → F5.12 Provide Vehicle Communications Interfaces"  # {A93F82C6-8E13-4ced-BB32-AD620405B485} → {D7C917ED-CA9B-4e92-868E-80C5A2AA7BC3}
       - "Association «OUT» → F5.12.12 Collect Road Network Information"  # {D522930E-DF6F-46e2-BEC8-FF027A7F7409} → {AA6323B2-E601-4976-B0A5-369078597EC2}
   - name: "frp-local_vehicle_road_surface_conditions"
@@ -4039,7 +4024,7 @@ elements:
     links:
       - "Aggregation «Componentof» → From Road Pavement"  # {8819761F-ED3F-4d95-81FA-6E07B45C8932} → {E3E191DA-5784-4c53-AA36-07158215A19F}
       - "Aggregation «Componentof» → frp-pshvs_inputs"  # {D4156D1A-C4AD-42c9-BA2F-A6BA95582E73} → {BCF13BFF-B76E-4c13-B77C-9068B500E8A1}
-      - "Association «IN» → F5.15 Provide In-vehicle Detection and Analysis"  # {8604CDAD-3EFF-45bc-9AFC-4A9B09F9E7C5} → {F8617CCE-0051-448b-9A40-576C60C469AB}
+      - "Association «OUT» → F5.15 Provide In-vehicle Detection and Analysis"  # {8604CDAD-3EFF-45bc-9AFC-4A9B09F9E7C5} → {F8617CCE-0051-448b-9A40-576C60C469AB}
       - "Association «OUT» → F5.15.1 Provide Detection for the Vehicle Surroundings"  # {D8EC59FC-0763-4abc-9510-6AAF2C32F2B2} → {63E3B0BC-06DA-4321-A618-EF67962816EA}
       - "Association «OUT» → F5.15.1.6 Detect Road Surface State in Host Vehicle vicinity"  # {3B78EE96-6BAC-4218-A145-D0426F198E74} → {1517453F-23A7-49f7-B236-BA8496D5ADED}
   - name: "frp-location_data"
@@ -4357,7 +4342,7 @@ elements:
       It contains inputs from the Pedestrian from which data objects are created that enable functionality in the Provide Support for Host Vehicle Systems Functional Area to determine the physical presence of a pedestrian in the vicinity of the host vehicle and track its movements.  The definition of a "pedestrian" can include walkers, those in wheelchairs, those on horses, and any other form of Traveller that is not using a type of wheeled vehicle to move from one place to another.
     links:
       - "Aggregation «Componentof» → ft-pshvs_inputs"  # {5D612BE5-6D44-4027-890F-069CB940454C} → {EA3FB435-10B2-4484-AD08-2F75A79CC57F}
-      - "Association «IN» → F5.15 Provide In-vehicle Detection and Analysis"  # {32C12DA5-9B53-4367-9C7C-11F8FDA1666F} → {F8617CCE-0051-448b-9A40-576C60C469AB}
+      - "Association «OUT» → F5.15 Provide In-vehicle Detection and Analysis"  # {32C12DA5-9B53-4367-9C7C-11F8FDA1666F} → {F8617CCE-0051-448b-9A40-576C60C469AB}
       - "Association «OUT» → F5.15.1 Provide Detection for the Vehicle Surroundings"  # {D004A9FD-49D5-4088-A3A4-3675B2F38383} → {63E3B0BC-06DA-4321-A618-EF67962816EA}
       - "Association «OUT» → F5.15.1.3 Detect Pedestrians near to Host Vehicle"  # {D15029E6-2B21-4c82-8FDF-5282E1CDE018} → {9B714517-CCE2-4b9c-95E9-E4FFD13A014C}
   - name: "ft.p-urban_data"
@@ -4839,7 +4824,7 @@ elements:
       It contains input from Traffic from which data objects are created that provide an indication of the presence of a Freight Vehicle from which its identity can be determined as it approached a rest area within a service area.
     links:
       - "Aggregation «Componentof» → ftrfc-traffic_data_input"  # {CBAE41E8-B1B8-4c0f-82BF-6E4FBB607F8A} → {12D501E0-4CE7-4132-945A-DF73C669B8A7}
-      - "Association «IN» → F3.1.5 Provide Management of Service Areas"  # {5373D92B-71B1-4b47-97D0-61796F05F2CD} → {962C365C-5E2E-4b47-BA9E-9537F154665A}
+      - "Association «OUT» → F3.1.5 Provide Management of Service Areas"  # {5373D92B-71B1-4b47-97D0-61796F05F2CD} → {962C365C-5E2E-4b47-BA9E-9537F154665A}
       - "Association «OUT» → F3.1.5.7 Detect Vehicle Approaching Rest Area"  # {E15F3672-7C4B-4a1e-902E-C9A0F01A58A0} → {8C851E67-280F-4546-B924-DF2D4A414A95}
   - name: "ftrfc-freight_vehicle_identity_for_un/loading_zone"
     guid: "{D056C826-0AB8-463a-9874-84497134DBBF}"
@@ -4876,7 +4861,7 @@ elements:
       It contains input from Traffic from which data objects are created that provide an indication of the presence of a vehicle that is collected solely for use in the management of ramp metering at entrances to on-ramps for all of part of the inter-urban road network managed by the system.
     links:
       - "Aggregation «Componentof» → ftrfc-inter-urban_data"  # {D035BC28-D804-461a-B0F0-D9A7E5354A83} → {A76A66AD-FB4A-455a-9ABD-8AFA3E16D49D}
-      - "Association «IN» → F3.1.2.13 Manage Inter-urban Traffic Strategies"  # {57B933E9-17DF-4325-AFC2-4941ECDEA522} → {44E4B5FB-6CF5-40a0-9CE1-D676DB87CA84}
+      - "Association «OUT» → F3.1.2.13 Manage Inter-urban Traffic Strategies"  # {57B933E9-17DF-4325-AFC2-4941ECDEA522} → {44E4B5FB-6CF5-40a0-9CE1-D676DB87CA84}
       - "Association «OUT» → F3.1.2.13.8 Provide Inter-urban Ramp Metering"  # {8FAEBAA9-AF8E-4768-8BB9-8FBB0E6BACD3} → {2E0B22F4-4294-4d57-8C59-3CD19294DFD8}
   - name: "ftrfc-inter-urban_traffic_flow_data"
     guid: "{514FF47C-D1C3-4a39-AEF3-C83D5BBD9E5C}"
@@ -4914,7 +4899,7 @@ elements:
       It contains input from Traffic from which data objects are created that provide data indicating the presence of an approaching vehicle using the inter-urban road network.
     links:
       - "Aggregation «Componentof» → ftrfc-inter-urban_data"  # {12A174D2-45CB-4508-B4A4-BEF157262EF2} → {A76A66AD-FB4A-455a-9ABD-8AFA3E16D49D}
-      - "Association «IN» → F3.1.2.14 Implement Inter-urban Management Traffic Strategy"  # {5A1995FA-01C8-4a85-B9E8-E3E7F2185174} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
+      - "Association «OUT» → F3.1.2.14 Implement Inter-urban Management Traffic Strategy"  # {5A1995FA-01C8-4a85-B9E8-E3E7F2185174} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
       - "Association «OUT» → F3.1.2.14.6 Send Messages to Approaching Inter-urban Vehicles"  # {AB9D1946-596E-4edd-93CE-5BCD31EEB571} → {69EDBF36-8BA1-4601-8620-A82C6FCF84C2}
   - name: "ftrfc-local_traffic_presence_data"
     guid: "{188E766F-C02F-4ba6-81F3-555031F2E4BB}"
@@ -4966,8 +4951,8 @@ elements:
       It contains input from Traffic from which data objects are created that provide an indication of the way in which traffic is flowing through each lane of the carriageway a tunnel can be determined, including such data as Vehicle flow rate, type(s) of Vehicles, etc.
     links:
       - "Aggregation «Componentof» → ftrfc-mt_inputs"  # {CCD7B66A-E9D2-4e24-9C2D-7692845091A4} → {E120AE37-6FE5-4248-92A3-80CDBFE995CD}
-      - "Association «IN» → F3.1.7 Provide Traffic Management for Tunnels"  # {A486F04C-7C04-4758-8435-099AB6453B02} → {D328D434-5896-4fb1-9399-1446B46AA837}
       - "Association «OUT» → F3.1 Provide Traffic Control"  # {52B4B152-ABA8-4abd-999C-E0AB38877A4A} → {226ED187-DB7A-409f-B509-BA8DBFFB6DB6}
+      - "Association «OUT» → F3.1.7 Provide Traffic Management for Tunnels"  # {A486F04C-7C04-4758-8435-099AB6453B02} → {D328D434-5896-4fb1-9399-1446B46AA837}
       - "Association «OUT» → F3.1.7.1 Assess Tunnel Status and Take Action"  # {3667FA20-55C0-4745-A547-CA6BBA1BE710} → {52A943FB-6FF2-4959-98FD-55DA6A1C67C8}
   - name: "ftrfc-traffic_data"
     guid: "{2F8E1C77-F695-4757-86F0-8A17858DCA43}"
@@ -5090,8 +5075,8 @@ elements:
       It contains input from the Vehicle from which data objects are created that provide an image of a vehicle that is approaching a part of the inter-urban road network (zone or "sensitive area") to which access is controlled.
     links:
       - "Aggregation «Componentof» → fv-image_for_zone_access"  # {493AE77A-56CA-404e-B99B-A6599599580E} → {5ADCF58F-4D43-45c7-9046-F6E3DD6433D7}
-      - "Association «IN» → F3.1.2.13 Manage Inter-urban Traffic Strategies"  # {941A9406-7589-447a-AB3C-B1D6C4DE5015} → {44E4B5FB-6CF5-40a0-9CE1-D676DB87CA84}
       - "Association «OUT» → F3.1.2 Provide Inter-urban Traffic Management"  # {39108C40-8670-446b-9863-3B30047E069F} → {2EE2E618-41FE-4ac5-9413-C23D9DAF7E9E}
+      - "Association «OUT» → F3.1.2.13 Manage Inter-urban Traffic Strategies"  # {941A9406-7589-447a-AB3C-B1D6C4DE5015} → {44E4B5FB-6CF5-40a0-9CE1-D676DB87CA84}
       - "Association «OUT» → F3.1.2.13.2 Check Access to Inter-urban Zones"  # {39C9D21D-E2FB-4056-9F0E-3FA82D44352A} → {ABA78A72-EB1B-41b2-8558-5CD35E08E2E6}
   - name: "fv-identity_for_urban_zone_access"
     guid: "{1F88F0DC-428F-4c18-A24A-3CE328B6BF24}"
@@ -5104,8 +5089,8 @@ elements:
       It contains input from the Vehicle from which data objects are created that provide an indication of its identity as it approaches a part of the urban road network (zone or "sensitive area") to which access is controlled.
     links:
       - "Aggregation «Componentof» → fv-image_for_zone_access"  # {10206433-ECB6-455e-ACFD-3AED5F21AAE5} → {5ADCF58F-4D43-45c7-9046-F6E3DD6433D7}
-      - "Association «IN» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {BF10D557-5C6A-453b-8A40-C33A4E6F65A7} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
       - "Association «OUT» → F3.1.1 Provide Urban Traffic Management"  # {077B332E-3652-48fa-920E-343F41D19F49} → {F2989AC8-51A0-4913-B32E-0D5E048A4788}
+      - "Association «OUT» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {BF10D557-5C6A-453b-8A40-C33A4E6F65A7} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
       - "Association «OUT» → F3.1.1.5.11 Monitor Access to Urban Zones"  # {EAC1BF01-1A7A-4749-AD46-3025A297134D} → {E68E87F7-7F1C-4a9f-84D9-3847A5A8FAB0}
   - name: "fv-incident_notification"
     guid: "{2A6FBBBD-3511-42c6-B97E-552F1F106587}"
@@ -5197,7 +5182,7 @@ elements:
       It contains input from a Freight Vehicle from which data objects are created that provide its identity as it approaches a rest area within a service area.
     links:
       - "Aggregation «Componentof» → fv-image_for_zone_access"  # {C19D0AB4-15FB-4f30-B817-F0E9613107D4} → {5ADCF58F-4D43-45c7-9046-F6E3DD6433D7}
-      - "Association «IN» → F3.1.5 Provide Management of Service Areas"  # {D0B63478-069F-4164-9A56-82BA5EFFBE78} → {962C365C-5E2E-4b47-BA9E-9537F154665A}
+      - "Association «OUT» → F3.1.5 Provide Management of Service Areas"  # {D0B63478-069F-4164-9A56-82BA5EFFBE78} → {962C365C-5E2E-4b47-BA9E-9537F154665A}
       - "Association «OUT» → F3.1.5.7 Detect Vehicle Approaching Rest Area"  # {3B17DB16-2953-4e37-9060-0D5C1BF536E0} → {8C851E67-280F-4546-B924-DF2D4A414A95}
   - name: "fv.fv-freight_vehicle_identity_for_un/loading_zone"
     guid: "{5FC8DCE7-9265-4b13-A629-568A3C30962D}"
@@ -5782,7 +5767,7 @@ elements:
       It contains input that represents the Other Nearby Vehicle in the Vehicle Environment from which data objects are created to provide the manifestation of the presence of another Vehicle within the geographic area surrounding the Host Vehicle.
     links:
       - "Aggregation «Componentof» → fve-pshvs_inputs"  # {6D0664DE-C366-48fe-BC8A-B9064FA082AA} → {237DCC76-E3B0-4ad8-9466-1325D7EE9170}
-      - "Association «IN» → F5.15 Provide In-vehicle Detection and Analysis"  # {F47A152F-8E6A-4649-86D4-F990D1EAFB03} → {F8617CCE-0051-448b-9A40-576C60C469AB}
+      - "Association «OUT» → F5.15 Provide In-vehicle Detection and Analysis"  # {F47A152F-8E6A-4649-86D4-F990D1EAFB03} → {F8617CCE-0051-448b-9A40-576C60C469AB}
       - "Association «OUT» → F5.15.1 Provide Detection for the Vehicle Surroundings"  # {5179C846-3459-4a1a-96BA-427E9CD0B0EA} → {63E3B0BC-06DA-4321-A618-EF67962816EA}
       - "Association «OUT» → F5.15.1.1 Detect Other Vehicles near to Host Vehicle"  # {5FF1188D-D7A7-4e4e-B76F-FC8A33292310} → {6DAE5D64-1C77-4e13-BB59-D3B5C52CDFB0}
   - name: "fve.oru-presence_indication"
@@ -5796,7 +5781,7 @@ elements:
       It contains input that represents the Other Road User in the Vehicle Environment from which data objects are created to provide the manifestation of the presence of the Other Road User.  This may be a Motorcyclist, Cyclist or Pedestrian who is using the road carriageway intended for Vehicles.
     links:
       - "Aggregation «Componentof» → fve-pshvs_inputs"  # {8EF54A53-A188-423a-915D-6A0E2AB10E58} → {237DCC76-E3B0-4ad8-9466-1325D7EE9170}
-      - "Association «IN» → F5.15 Provide In-vehicle Detection and Analysis"  # {9DE39100-6C9E-48ec-95E9-5D214A786D12} → {F8617CCE-0051-448b-9A40-576C60C469AB}
+      - "Association «OUT» → F5.15 Provide In-vehicle Detection and Analysis"  # {9DE39100-6C9E-48ec-95E9-5D214A786D12} → {F8617CCE-0051-448b-9A40-576C60C469AB}
       - "Association «OUT» → F5.15.1 Provide Detection for the Vehicle Surroundings"  # {E767B20F-AD91-4bd9-B3DA-3F507831A982} → {63E3B0BC-06DA-4321-A618-EF67962816EA}
       - "Association «OUT» → F5.15.1.2 Detect Other Road Users in nearby geographic area"  # {9AAFA61B-6102-4048-819A-3868089F3C25} → {44CED227-A383-4108-8D98-AD781491CEE5}
   - name: "fve.so-object_presence_indication"
@@ -5810,7 +5795,7 @@ elements:
       It contains input that represents the Stationary Object in the Vehicle Environment from which data objects are created to provide the manifestation of the presence of stationary objects within the geographic area surrounding the Host Vehicle.
     links:
       - "Aggregation «Componentof» → fve-pshvs_inputs"  # {8F797426-3F03-417a-A1C6-9C7047142D1D} → {237DCC76-E3B0-4ad8-9466-1325D7EE9170}
-      - "Association «IN» → F5.15 Provide In-vehicle Detection and Analysis"  # {C2378681-B171-4741-BE9A-90B20EC6ADC8} → {F8617CCE-0051-448b-9A40-576C60C469AB}
+      - "Association «OUT» → F5.15 Provide In-vehicle Detection and Analysis"  # {C2378681-B171-4741-BE9A-90B20EC6ADC8} → {F8617CCE-0051-448b-9A40-576C60C469AB}
       - "Association «OUT» → F5.15.1 Provide Detection for the Vehicle Surroundings"  # {DBB1DBE3-3DB1-4adc-AEF2-F5B2D51C83E2} → {63E3B0BC-06DA-4321-A618-EF67962816EA}
       - "Association «OUT» → F5.15.1.7 Detect Stationary Objects in Host Vehicle vicinity"  # {A8C4DDF4-6EA5-46b6-92AC-1E5E86CC1EF8} → {E350AC14-567F-465a-8AF7-2C644A7CCED1}
   - name: "fws-environment_data_for_PT"
@@ -5898,7 +5883,7 @@ elements:
     links:
       - "Aggregation «Componentof» → From Weather Systems"  # {E2C9174A-A471-453a-8902-2A7BAEF7AB3A} → {B013B1F3-2D52-4109-BA31-E746309E687D}
       - "Aggregation «Componentof» → fws-pshvs_inputs"  # {53FD3332-068D-4477-B4E6-5C87B6D1B1F8} → {04D3BB54-483C-4e0a-AB74-E50BEFB9BB6F}
-      - "Association «IN» → F5.13 Provide Vehicle Data and ISA"  # {C7190EB5-BBE1-47b8-B05F-410223EBAC48} → {F91C0ED5-7F89-4fd1-B561-6CE9E766291A}
+      - "Association «OUT» → F5.13 Provide Vehicle Data and ISA"  # {C7190EB5-BBE1-47b8-B05F-410223EBAC48} → {F91C0ED5-7F89-4fd1-B561-6CE9E766291A}
       - "Association «OUT» → F5.13.8 Provide Suggested Speeds and Headways for ISA"  # {4BAEB04E-24D0-4dac-A768-DEFA56E6E837} → {92749611-12FE-47cf-904C-706334E09A85}
   - name: "fws-weather_data"
     guid: "{3DE227C1-8BF2-470d-AD21-044B874FA44B}"
@@ -10039,7 +10024,7 @@ elements:
       It contains data objects that provide information about the current status of service areas that is for output to Drivers by the Host Vehicle.
     links:
       - "Aggregation → mt.pshvs_traffic_regulations"  # {2AC09AA8-390F-4ad5-9EC9-C7132121DAE3} → {E5C8C728-3896-4ea2-82FA-F35B0A53E0B1}
-      - "Association «IN» → F5.16.1 Manage Communication from Vehicle to Driver"  # {552B2314-73A2-44ca-997A-A084E32914A1} → {DE09B5F2-6135-412e-BF14-56D1B22FFA77}
+      - "Association «OUT» → F5.16.1 Manage Communication from Vehicle to Driver"  # {552B2314-73A2-44ca-997A-A084E32914A1} → {DE09B5F2-6135-412e-BF14-56D1B22FFA77}
   - name: "mt.pshvs_short_term_road_condition_warning"
     guid: "{7044D7EC-64A1-4194-84BC-DFA12BB35111}"
     type: "Interface"
@@ -12573,7 +12558,7 @@ elements:
       - decide where the credential is passed
       - NAP User has to be specified
     links:
-      - "Association «IN» → D3.17 NAP Users"  # {17621412-7F1A-4e6a-A4D7-0D0DE00CA110} → {DEABFE3A-CF27-4232-83E9-D03599E58AC3}
+      - "Association «OUT» → D3.17 NAP Users"  # {17621412-7F1A-4e6a-A4D7-0D0DE00CA110} → {DEABFE3A-CF27-4232-83E9-D03599E58AC3}
   - name: "mt_load_prediction_data"
     guid: "{5F71BBF9-A19F-425a-9564-01A7C92632B3}"
     type: "Interface"
@@ -17731,7 +17716,7 @@ elements:
       It contains data objects that provide eXtended Floating Car Data (XFCD) from the Host Vehicle in the inter-urban traffic network.  These data objects will enable the reconstruction of the location, intended route (way points) and motion characteristics of the Host Vehicle and, together with that from other Vehicles, the traffic behaviour in their local geographic area.  Host Vehicle identity and status information such as ESP or ABS activities will - together with that from other vehicles - will be included in the data objects to enable other data about traffic conditions to be determined, e.g. darkness (lights on), fog (fog lights on), rain (windscreen wipers active), Vehicle direction change (turn indicator use).
     links:
       - "Aggregation «Componentof» → pshvs.mt_floating_car_data"  # {F0D60703-8B2B-4f73-8FE1-3B2F338380BB} → {5D78B163-4356-4a9c-BE66-CA33BEFBA930}
-      - "Association «IN» → F3.1.2 Provide Inter-urban Traffic Management"  # {08535078-51A1-4e01-994E-5779FA7E8F12} → {2EE2E618-41FE-4ac5-9413-C23D9DAF7E9E}
+      - "Association «OUT» → F3.1.2 Provide Inter-urban Traffic Management"  # {08535078-51A1-4e01-994E-5779FA7E8F12} → {2EE2E618-41FE-4ac5-9413-C23D9DAF7E9E}
       - "Association «OUT» → F3.1.2.8 Collect Inter-urban Data from Vehicles"  # {2EA858F7-1186-474c-A432-F5BB8CEEEA2D} → {DB7075B2-63F4-40df-9ACD-32E312D452D6}
   - name: "pshvs.mt_other_vehicle_lane_departure_warning"
     guid: "{27CF4E54-8105-4f39-A757-4F1BE495B7AF}"
@@ -17796,7 +17781,6 @@ elements:
     links:
       - "Aggregation «Componentof» → pshvs.mt_rest_zone_use_data"  # {63D32642-FC38-478f-8D32-C82DC9BA60E7} → {82A1F697-B29B-4971-B41F-58060486B6A6}
       - "Association «OUT» → F3.1.5.10 Manage Rest Area Usage"  # {1C6B614E-ACFD-4c37-B9E0-F912E27D43AC} → {BD05A124-5086-481a-8850-7D5AC404685F}
-      - "Association «OUT» → F3.1.5.10 Manage Rest Area Usage"  # {E3AD8B34-87F8-44a1-B78E-B197013162EF} → {BD05A124-5086-481a-8850-7D5AC404685F}
       - "Association «OUT» → Parking Area Management"  # {3E887295-2692-4e64-BA03-D72508532BC9} → {8DE27522-3716-477e-B08C-3BAAC7A52E94}
   - name: "pshvs.mt_roadside_vehicle_lane_departure_warning"
     guid: "{4ACCB898-9DAB-45a3-92CD-CA68690CD519}"
@@ -18188,8 +18172,8 @@ elements:
       - Is it a "test" eCall as part of Vehicle fitness checks?
     links:
       - "Aggregation «component of» → pshvs.psef_vehicle_data"  # {3CB28EA3-D2DF-4c34-B95D-0A76BDD84CDE} → {B1614AB8-BD5A-49ce-B1E0-4F0DEB0B0557}
-      - "Association «IN» → F2.1.11 Manage eCall Messages"  # {FDE54C71-D98A-472d-B317-11B5869C3C97} → {89ADDE3A-4642-4d57-A89E-BFAE05F44CF1}
       - "Association «OUT» → F2.1 Manage Emergencies"  # {3E89177A-9034-470b-8EAE-C337C56F762F} → {8B0A6367-E6D7-47e2-9086-81FB2C700C13}
+      - "Association «OUT» → F2.1.11 Manage eCall Messages"  # {FDE54C71-D98A-472d-B317-11B5869C3C97} → {89ADDE3A-4642-4d57-A89E-BFAE05F44CF1}
       - "Association «OUT» → F2.1.11.1 Manage eCall Message Transmission"  # {967E2313-B9F9-4922-B8A5-4916FC1F3944} → {E3715257-281B-407c-BEC6-DE27BD1C0AAC}
   - name: "pshvs.psef_stolen_vehicle_notification"
     guid: "{3C3AF200-C3B3-4a44-9512-FDE8582367A9}"
@@ -19516,7 +19500,7 @@ elements:
     note: |
       It contains data objects that provide short term records of traffic, vehicle and driver data (e.g. to be used in case of accident) recorded by the Host Vehicle.  The data objects also include statistical data on vehicle and driving behaviour.
     links:
-      - "Association «IN» → F5.11.13 Manage Operational Data Store"  # {B043C109-4A18-4ea9-BF6D-B63BDD12400E} → {7FB2F1F0-46C6-4ca4-85A8-86F78843F985}
+      - "Association «OUT» → F5.11.13 Manage Operational Data Store"  # {B043C109-4A18-4ea9-BF6D-B63BDD12400E} → {7FB2F1F0-46C6-4ca4-85A8-86F78843F985}
   - name: "pshvs_un-safe_overtaking_manoeuvre_warning"
     guid: "{61B8080B-4968-4c5c-A55A-3B6B9C2118BA}"
     type: "Interface"
@@ -20655,8 +20639,8 @@ elements:
     links:
       - "Aggregation «component of» → fo-psef_inputs"  # {30A6F288-1DA3-4c13-9F1D-E6F2A59755ED} → {C53B9470-22A2-4614-83E4-B89591662B8D}
       - "Aggregation «componentof» → fo.co-PSAP_data_inputs"  # {BC746A8C-349A-48aa-8DF4-5BC3481F6E53} → {19BF87B2-DEE8-460b-84A9-C991320AEB62}
-      - "Association «IN» → F2.1.11 Manage eCall Messages"  # {F59C47C0-CA29-4484-815C-2A6EE0A8DCF3} → {89ADDE3A-4642-4d57-A89E-BFAE05F44CF1}
       - "Association «OUT» → F2.1 Manage Emergencies"  # {03E519CB-FAC5-47eb-88C7-BC4C7D6D9A75} → {8B0A6367-E6D7-47e2-9086-81FB2C700C13}
+      - "Association «OUT» → F2.1.11 Manage eCall Messages"  # {F59C47C0-CA29-4484-815C-2A6EE0A8DCF3} → {89ADDE3A-4642-4d57-A89E-BFAE05F44CF1}
       - "Association «OUT» → F2.1.11.3 Provide PSAP Data Operator Interface"  # {67ACAD5E-2689-4503-BE90-DFD3BC262F53} → {7E3A2A8A-CD9E-44a7-94B3-209769E6BBDB}
   - name: "ptja.psef_emergency_route_plan"
     guid: "{FEFD8014-7A1C-45f7-9294-E6C8039BC3FE}"

@@ -825,6 +825,7 @@ elements:
       - "Association «IN» → mt.pshvs_data_for_rest_area_use"  # {BE34CEFF-A8C2-4587-8D93-3C080DC5E040} → {9DC9C988-6E28-4471-865C-1318F7F111CE}
       - "Association «IN» → mt.pshvs_rest_area_booking_confirmed_&_information"  # {75DF48DB-0B5F-4e1a-BC6D-1F8B15802082} → {AA7248F2-09A3-4038-B33B-224FF79A577C}
       - "Association «IN» → mt.pshvs_rest_area_unavailable_for_new_eta"  # {1CAF7E9B-1503-4c34-B690-FA23CB014D33} → {3799CEB3-F41A-493e-8287-32D82AD79994}
+      - "Association «IN» → mt.pshvs_service_area_information"  # {3EFAA128-B53F-4e4e-8B51-39E60A95F50F} → {8AFBAD1F-614D-4009-827E-5751E79CC47A}
       - "Association «IN» → mt.ptja_service_area_occupancy"  # {08FC46F4-9478-46f0-8FAC-F0DD3241E284} → {BC5C8686-420A-4849-A0AA-3CE5736F81BA}
       - "Association «IN» → mt_confirm_rest_area_request"  # {839276F3-8E22-44a8-9B84-7CB6E7956415} → {ADC2C00A-4F0B-4fa3-9AAC-C17A5229044C}
       - "Association «IN» → mt_current_service_area_status_and_occupancy"  # {DB0C3AC9-691C-4bcb-A6F4-3D8C93501ED6} → {298E116B-F0E8-4503-939C-A6773038400C}
@@ -856,7 +857,6 @@ elements:
       - "Association «IN» → to.po-service_area_current_data"  # {194741CF-7F35-4925-BDA5-E70AC440B63D} → {A0366A1E-083F-4d37-BDB1-7DCD74F5E7F9}
       - "Association «IN» → to.po-service_area_static_data"  # {C64C577F-2B8E-4dc9-B8E9-30331F8A020C} → {20D7E27B-CC06-4f7b-B9C3-27BDFC5486E1}
       - "Association «IN» → to.po-service_area_status_overrride_response"  # {B3D3F50B-FB57-46f3-B0AA-FBE147CE7E39} → {FF833A32-FCE5-48c1-B058-1435285D3146}
-      - "Association «OUT» → mt.pshvs_service_area_information"  # {3EFAA128-B53F-4e4e-8B51-39E60A95F50F} → {8AFBAD1F-614D-4009-827E-5751E79CC47A}
   - name: "F3.1.5.1 Monitor Service Area Vehicle Occupation"
     guid: "{0E5602CA-D10F-4daa-91FB-20F4304238A3}"
     type: "Activity"
@@ -917,9 +917,9 @@ elements:
       (5) The ability for the way in which the information is displayed to be selected from options such as, all cars/motorcycles, buses/coaches and HGV s .
     links:
       - "Aggregation «componentof» → F3.1.5 Provide Management of Service Areas"  # {1232EFF8-843B-4f9b-BDE9-3FD1CC3FB6D2} → {962C365C-5E2E-4b47-BA9E-9537F154665A}
+      - "Association «IN» → mt.pshvs_service_area_information"  # {6CAE1B31-522A-44fb-A327-F5A6FC5CB46D} → {8AFBAD1F-614D-4009-827E-5751E79CC47A}
       - "Association «IN» → td-service_area_occupancy"  # {F84BEAFF-D88A-47c3-8224-62AE3013CE43} → {528196AC-8CF9-4ea6-99BF-52BE4F7E10AE}
       - "Association «IN» → td-service_area_status"  # {51238E4B-6F14-4953-A4DF-F0860B198E77} → {27C750E4-BAE9-4f85-ADD6-CDC8BEED03A7}
-      - "Association «OUT» → mt.pshvs_service_area_information"  # {6CAE1B31-522A-44fb-A327-F5A6FC5CB46D} → {8AFBAD1F-614D-4009-827E-5751E79CC47A}
   - name: "F3.1.5.5 Manage Inter-Urban Service Area Data Store"
     guid: "{9F4D68BB-0EAF-491c-BC30-6393C7DFA6E9}"
     type: "Activity"
@@ -1525,11 +1525,11 @@ elements:
       This High -level  Function shall provide the facilities needed to enable a National Access Point (NAP) to operate.  It shall include functionality that enables information objects containing NAP data to be provided and stored.  These information objects shall consist of meta-data describing the data that is available and pointers to the Internet address from which data may be obtained.  NAP Content Consumers shall be able to discover, search for and obtain some or all of the NAP information objects.  These information objects will be provided to and entered for the first time by the NAP Content Provider once they have been approved as Content Providers.
     links:
       - "Aggregation «componentof» → F3. Manage Traffic"  # {AF48139D-BC34-4df5-B7A3-99D0C4B3A1F4} → {E9EDA059-38C0-41ba-9127-FF30B58B7C0D}
-      - "Association «OUT» → tnap.cc-metadata_search_result"  # {A82C5A53-996E-411c-BE56-369E3142CA38} → {63E13C50-8801-4e2b-BA9D-170CDE8BD53D}
-      - "Association «OUT» → tnap.cc-support_response"  # {84B87FA9-1BFB-4ac9-9110-1549A4B265D7} → {72CEA537-E1D0-4568-A93D-9343F41193CC}
-      - "Association «OUT» → tnap.cp-metadata_&_success_report"  # {05C56B00-B019-4069-8988-0DC43838834B} → {B3154461-F9DC-4afd-8D5F-F44985AF55EC}
+      - "Association «IN» → tnap.cc-metadata_search_result"  # {A82C5A53-996E-411c-BE56-369E3142CA38} → {63E13C50-8801-4e2b-BA9D-170CDE8BD53D}
+      - "Association «IN» → tnap.cc-support_response"  # {84B87FA9-1BFB-4ac9-9110-1549A4B265D7} → {72CEA537-E1D0-4568-A93D-9343F41193CC}
+      - "Association «IN» → tnap.cp-metadata_&_success_report"  # {05C56B00-B019-4069-8988-0DC43838834B} → {B3154461-F9DC-4afd-8D5F-F44985AF55EC}
+      - "Association «IN» → tnap.cp-support_response"  # {25D6650D-CC6D-43f5-A2EE-29D95C0A874E} → {396E64F8-C99F-4e67-9ABE-3D0BF49B608F}
       - "Association «OUT» → tnap.cp-registration_response"  # {EE27D826-1981-436f-AE29-CE0A4BE43C15} → {43BA5834-14FF-41d8-89AB-BD55A7C65F2E}
-      - "Association «OUT» → tnap.cp-support_response"  # {25D6650D-CC6D-43f5-A2EE-29D95C0A874E} → {396E64F8-C99F-4e67-9ABE-3D0BF49B608F}
   - name: "F3.6.1 Manage NAP Metadata Repository"
     guid: "{FC985F0E-26B3-41e8-847E-A71AA3290132}"
     type: "Activity"
@@ -1622,7 +1622,7 @@ elements:
       - "Aggregation «componentof» → F3.6 Operate National Access Point"  # {20D04540-3276-404d-8D74-5606962CCEF5} → {9363D28A-B58D-4e6d-B249-7748C0011542}
       - "Association «IN» → mt_NAP_metadata_mod_authorisation_request"  # {E93F588C-C9EE-4213-AD80-C615DAD30800} → {8CF116B5-F004-4ade-992F-224F911F17FB}
       - "Association «IN» → mt_NAP_metadata_mod_request"  # {B6E27C10-9375-49b9-8C1D-999FCCCF748D} → {8B43A86E-ED30-493c-9B56-4D3EB3EB391B}
-      - "Association «OUT» → tnap.cp-metadata_&_success_report"  # {FACED043-36A8-431b-9970-411CC595E464} → {B3154461-F9DC-4afd-8D5F-F44985AF55EC}
+      - "Association «IN» → tnap.cp-metadata_&_success_report"  # {FACED043-36A8-431b-9970-411CC595E464} → {B3154461-F9DC-4afd-8D5F-F44985AF55EC}
   - name: "F3.6.4 Manage Metadata Retrieval"
     guid: "{D9EFBB62-DD12-4dd1-A835-DF560A82A1AD}"
     type: "Activity"
@@ -1679,8 +1679,8 @@ elements:
       - IMPORTANT: who is the NAP User? Where do we have it specified? Different for NAP Actor?
     links:
       - "Aggregation «componentof» → F3.6 Operate National Access Point"  # {FFBE3AAD-58EA-45ed-9FD8-B87119F23E47} → {9363D28A-B58D-4e6d-B249-7748C0011542}
-      - "Association «OUT» → tnap.cc-support_response"  # {AF0D20F5-60C2-494f-9833-9589F786DBB7} → {72CEA537-E1D0-4568-A93D-9343F41193CC}
-      - "Association «OUT» → tnap.cp-support_response"  # {B9AE4751-A83C-4625-9D66-EF0228527308} → {396E64F8-C99F-4e67-9ABE-3D0BF49B608F}
+      - "Association «IN» → tnap.cc-support_response"  # {AF0D20F5-60C2-494f-9833-9589F786DBB7} → {72CEA537-E1D0-4568-A93D-9343F41193CC}
+      - "Association «IN» → tnap.cp-support_response"  # {B9AE4751-A83C-4625-9D66-EF0228527308} → {396E64F8-C99F-4e67-9ABE-3D0BF49B608F}
   - name: "3.4.1 Monitor Weather Conditions"
     guid: "{F8D3DDE2-231E-46c2-B4D5-EDD8551425F7}"
     type: "Activity"
@@ -3098,7 +3098,6 @@ elements:
       (2) The ability to respond to the enquiry with information about the parking available at the specified rest areas.
     links:
       - "Aggregation «componentof» → F3.1.5 Provide Management of Service Areas"  # {3B34BDCD-52DE-48db-95CB-FFB8960306E6} → {962C365C-5E2E-4b47-BA9E-9537F154665A}
-      - "Association «IN» → mt.pshvs_rest_area_parking_response"  # {10B2B83F-90F5-4e06-BC37-0D5B0E47A2D4} → {1D771D70-E194-4ae6-A874-B3AC397FD549}
       - "Association «IN» → mt.pshvs_rest_area_parking_response"  # {140C9FEB-FF65-49b3-9C69-8B55B1A9CEE9} → {1D771D70-E194-4ae6-A874-B3AC397FD549}
       - "Association «IN» → mt_request_data_for_service_area"  # {D398ADED-6D25-42b7-8A0B-E091189D9B9A} → {C35A6BAD-0A35-4e65-B547-B127A687E6EF}
       - "Association «IN» → mt_rest_area_details_for_booking"  # {D859EC30-DCA3-4439-93D1-BF9D69D1580F} → {811C1B4E-1BCC-4af4-ABE8-3A9830669093}

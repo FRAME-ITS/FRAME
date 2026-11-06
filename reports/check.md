@@ -1,6 +1,6 @@
 # Model check – FRAME.qea
 
-**145 errors, 96 warnings**
+**48 errors, 73 warnings**
 
 | Rule | Related issue | Errors | Warnings |
 |---|---|---|---|
@@ -9,7 +9,7 @@
 | duplicate |  | 0 | 2 |
 | function-flows |  | 0 | 1 |
 | function-parent |  | 0 | 5 |
-| in-out | #69 | 128 | 23 |
+| in-out | #69 | 31 | 0 |
 | release-hygiene |  | 0 | 1 |
 | self-reference | #62 | 0 | 2 |
 | servedby |  | 9 | 5 |
@@ -31,100 +31,21 @@
 
 </details>
 
-<details><summary><b>in-out</b> (128)</summary>
+<details><summary><b>in-out</b> (31)</summary>
 
-- «IN» High_Level_Data_Flow **From NAP Actors** (Frame Repository) → System: expected «OUT» for this direction (or reverse the connector)
-- «IN» High_Level_Data_Flow **ffc-mt_inputs** (Frame Repository) → F3. Manage Traffic: expected «OUT» for this direction (or reverse the connector)
-- «IN» High_Level_Data_Flow **fmms-mpto_control_inputs** (Frame Repository) → F4.4 Control PT Fleet: expected «OUT» for this direction (or reverse the connector)
-- «IN» High_Level_Data_Flow **fmms.mmc-crossing_request** (Frame Repository) → Multi-Modal Crossing: expected «OUT» for this direction (or reverse the connector)
-- «IN» High_Level_Data_Flow **fmms.mmc-urban_crossing_inputs** (Frame Repository) → Multi-Modal Crossing: expected «OUT» for this direction (or reverse the connector)
-- «IN» High_Level_Data_Flow **fmms.mms-demand_inputs** (Frame Repository) → Multi-Modal Management System: expected «OUT» for this direction (or reverse the connector)
-- «IN» High_Level_Data_Flow **fmms.mms-incident_inputs** (Frame Repository) → Multi-Modal Management System: expected «OUT» for this direction (or reverse the connector)
-- «IN» High_Level_Data_Flow **fws-mpto_inputs** (Frame Repository) → F4. Manage Public Transport Operations: expected «OUT» for this direction (or reverse the connector)
-- «IN» High_Level_Data_Flow **psef.mpto_alarm_acknowledgements** (Frame Repository) → F4. Manage Public Transport Operations: expected «OUT» for this direction (or reverse the connector)
-- «IN» High_Level_Data_Flow **pshvs.mt_outputs_to_driver_via_roadside** (Frame Repository) → F3.1 Provide Traffic Control: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fae-tunnel_atmospheric_conditions** (Frame Repository) → F3.1.7 Provide Traffic Management for Tunnels: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fbti.tms-tunnel_system_inputs** (Frame Repository) → F3.1.7 Provide Traffic Management for Tunnels: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fd-carpark_space_payment** (Frame Repository) → F3.1.4 Provide Management of Car Parks: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fd.ptd-assign_vehicle_to_service** (Frame Repository) → F4.1 Monitor PT fleet: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fd.ptd-driver_status** (Frame Repository) → F4.3 Provide PT Management: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fd.ptd-request_fares** (Frame Repository) → F4.5 Provide PT Fare Facilities: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fesp.b-urban_traffic_information_request** (Frame Repository) → F3.1.1 Provide Urban Traffic Management: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fesp.dvip-vehicle_data_for_inter-urban_fcd_check** (Frame Repository) → F3.1.2 Provide Inter-urban Traffic Management: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fesp.dvip-vehicle_data_for_urban_fcd_check** (Frame Repository) → F3.1.1 Provide Urban Traffic Management: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fesp.g-map_data_for_vehicle_sensor_data** (Frame Repository) → F5.15 Provide In-vehicle Detection and Analysis: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fesp.g-static_road_information** (Frame Repository) → F5.13 Provide Vehicle Data and ISA: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fesp.g-vehicle_trip_plan_implementation_map_data** (Frame Repository) → F5.14 Provide In-vehicle Trip Planning & Implementation: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **ffc-carpark_space_payment_response** (Frame Repository) → F3.1.4 Provide Management of Car Parks: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **ffc-confirmed_fare_payment** (Frame Repository) → F4.5 Provide PT Fare Facilities: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **ffc-demand_service_payment_confirmed** (Frame Repository) → F4.7 Provide On-demand Services: expected «OUT» for this direction (or reverse the connector)
 - «IN» Low_Level_Data_Flow **fft.ftom-incident_responses** (Frame Repository) → F8.6.5 Provide FTOM Interface for FTEP Monitoring: expected «OUT» for this direction (or reverse the connector)
 - «IN» Low_Level_Data_Flow **fft.ftom-prepare_new_FTEP** (Frame Repository) → F8.4.3 Provide Freight Transport Operations Manager Interface: expected «OUT» for this direction (or reverse the connector)
 - «IN» Low_Level_Data_Flow **fft.ftom-request_existing_FTEP** (Frame Repository) → F8.4.3 Provide Freight Transport Operations Manager Interface: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **flds-location_data_for_vehicle_sensor_data** (Frame Repository) → F5.15 Provide In-vehicle Detection and Analysis: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **flds-on-demand_service_vehicle_location** (Frame Repository) → F4.7 Provide On-demand Services: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **flds-vehicle_location_for_trip_monitoring** (Frame Repository) → F5.14 Provide In-vehicle Trip Planning & Implementation: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **flds-vehicle_sharer_location** (Frame Repository) → F4.6 Provide Facilities for Vehicle Sharing: expected «OUT» for this direction (or reverse the connector)
 - «IN» Low_Level_Data_Flow **fmms.mmc-inter-urban_crossing_request** (Frame Repository) → F3.1.2.14 Implement Inter-urban Management Traffic Strategy: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fmms.mmc-inter-urban_crossing_request** (Frame Repository) → Multi-Modal Crossing: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fmms.mmc-urban_crossing_command** (Frame Repository) → Multi-Modal Crossing: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fmms.mmc-urban_crossing_information** (Frame Repository) → Multi-Modal Crossing: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fmms.mms-PT_service_change_request** (Frame Repository) → Multi-Modal Management System: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fmms.mms-accident_information** (Frame Repository) → Multi-Modal Management System: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fmms.mms-control_parameters** (Frame Repository) → Multi-Modal Management System: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fmms.mms-current_service_status** (Frame Repository) → Multi-Modal Management System: expected «OUT» for this direction (or reverse the connector)
 - «IN» Low_Level_Data_Flow **fmms.mms-data_for_demand_services** (Frame Repository) → F4.7 Provide On-demand Services: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fmms.mms-data_for_demand_services** (Frame Repository) → Multi-Modal Management System: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fmms.mms-ferry_service_information** (Frame Repository) → Multi-Modal Management System: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fmms.mms-plannings** (Frame Repository) → Multi-Modal Management System: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fmms.mms-rail_service_information** (Frame Repository) → Multi-Modal Management System: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fmms.mms-service_change_request_response** (Frame Repository) → Multi-Modal Management System: expected «OUT» for this direction (or reverse the connector)
 - «IN» Low_Level_Data_Flow **fmms.mms-service_details_response** (Frame Repository) → F4.6 Provide Facilities for Vehicle Sharing: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fmms.mms-service_details_response** (Frame Repository) → Multi-Modal Management System: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fmms.mms-strike_details** (Frame Repository) → Multi-Modal Management System: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fnap.cc-metadata_search_request** (Frame Repository) → F3.6 Operate National Access Point: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fnap.cc-support_request** (Frame Repository) → F3.6 Operate National Access Point: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fnap.cc-support_request** (Frame Repository) → F3.6.5 Provide NAP User Support: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fnap.cp-metadata_&_authorisation_credentials** (Frame Repository) → F3.6 Operate National Access Point: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fnap.cp-metadata_&_authorisation_credentials** (Frame Repository) → F3.6.3 Manage Content Providers Metadata: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fnap.cp-registration_request** (Frame Repository) → F3.6 Operate National Access Point: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fnap.cp-registration_request** (Frame Repository) → F3.6.2 Manage Registrations and Provide Authorisation Service: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fnap.cp-support_request** (Frame Repository) → F3.6 Operate National Access Point: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fnap.cp-support_request** (Frame Repository) → F3.6.5 Provide NAP User Support: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fo.co-PSAP_data_inputs** (Frame Repository) → F2.1.11 Manage eCall Messages: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fo.co-request_PSAP_data_output** (Frame Repository) → F2.1.11 Manage eCall Messages: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fo.eo-request_statistical_report** (Frame Repository) → F2.1 Manage Emergencies: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fo.eo-stop_stolen_vehicle** (Frame Repository) → F2.2 Manage Stolen Vehicle Notification: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fo.rno-inter-urban_road_static_network_data** (Frame Repository) → F3.1.2.13 Manage Inter-urban Traffic Strategies: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fors.pts-arrival_prediction_data** (Frame Repository) → F4.1 Monitor PT fleet: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fors.tsc-local_priority_request_details** (Frame Repository) → F3.1.1.5 Provide Urban Traffic Management Facilities: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fors.tss-traffic_prediction_results** (Frame Repository) → F3.1.6 Provide Traffic Predictions: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fre-roadside_speed_indication_details** (Frame Repository) → F5.13 Provide Vehicle Data and ISA: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **frp-guidance_data** (Frame Repository) → F5.12.12 Collect Road Network Information: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **frp-local_vehicle_road_surface_conditions** (Frame Repository) → F5.15 Provide In-vehicle Detection and Analysis: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **ft.p-presence_indication** (Frame Repository) → F5.15 Provide In-vehicle Detection and Analysis: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **ftrfc-freight_vehicle_identity_for_rest_area** (Frame Repository) → F3.1.5 Provide Management of Service Areas: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **ftrfc-inter-urban_local_data_for_ramp_metering** (Frame Repository) → F3.1.2.13 Manage Inter-urban Traffic Strategies: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **ftrfc-inter-urban_vehicle_presence_for_messages** (Frame Repository) → F3.1.2.14 Implement Inter-urban Management Traffic Strategy: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **ftrfc-traffic_conditions_in_tunnel** (Frame Repository) → F3.1.7 Provide Traffic Management for Tunnels: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fv-identity_for_inter-urban_zone_access** (Frame Repository) → F3.1.2.13 Manage Inter-urban Traffic Strategies: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fv-identity_for_urban_zone_access** (Frame Repository) → F3.1.1.5 Provide Urban Traffic Management Facilities: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fv.fv-freight_vehicle_identity_for_rest_area** (Frame Repository) → F3.1.5 Provide Management of Service Areas: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fve.onv-vehicle_presence_indication** (Frame Repository) → F5.15 Provide In-vehicle Detection and Analysis: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fve.oru-presence_indication** (Frame Repository) → F5.15 Provide In-vehicle Detection and Analysis: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fve.so-object_presence_indication** (Frame Repository) → F5.15 Provide In-vehicle Detection and Analysis: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fws-weather_conditions_for_ISA** (Frame Repository) → F5.13 Provide Vehicle Data and ISA: expected «OUT» for this direction (or reverse the connector)
 - «IN» Low_Level_Data_Flow **mpto_current_driver_availability** (Frame Repository) → F4.4 Control PT Fleet: expected «OUT» for this direction (or reverse the connector)
 - «IN» Low_Level_Data_Flow **mpto_demand_vehicle_repaired** (Frame Repository) → F4.7 Provide On-demand Services: expected «OUT» for this direction (or reverse the connector)
 - «IN» Low_Level_Data_Flow **mpto_fare_scheme_for_PT_driver** (Frame Repository) → F4.2 Plan PT Service: expected «OUT» for this direction (or reverse the connector)
 - «IN» Low_Level_Data_Flow **mpto_fare_scheme_for_service** (Frame Repository) → F4.2 Plan PT Service: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **mt.pshvs_service_area_information** (Frame Repository) → F5.16.1 Manage Communication from Vehicle to Driver: expected «OUT» for this direction (or reverse the connector)
 - «IN» Low_Level_Data_Flow **mt_carpark_occupancy_for_inter-urban** (Frame Repository) → F3.1.5 Provide Management of Service Areas: expected «OUT» for this direction (or reverse the connector)
 - «IN» Low_Level_Data_Flow **mt_inter-urban_strategy_command_response_failure** (Frame Repository) → F3.1.2.13 Manage Inter-urban Traffic Strategies: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **mt_load_NAP_user_data** (Frame Repository) → D3.17 NAP Users: expected «OUT» for this direction (or reverse the connector)
 - «IN» Low_Level_Data_Flow **psef_request_emergency_response_statistics** (Frame Repository) → F2.1.2 Manage Emergency Intervention: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **pshvs.mt_inter-urban_xfcd** (Frame Repository) → F3.1.2 Provide Inter-urban Traffic Management: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **pshvs.psef_eCall_message** (Frame Repository) → F2.1.11 Manage eCall Messages: expected «OUT» for this direction (or reverse the connector)
 - «IN» Low_Level_Data_Flow **pshvs_instructions_&_warnings_for_other_vehicles** (Frame Repository) → F5.16 Provide Outputs to Host Vehicle Drivers: expected «OUT» for this direction (or reverse the connector)
 - «IN» Low_Level_Data_Flow **pshvs_load_operational_data** (Frame Repository) → D5.1 Operational Data: expected «OUT» for this direction (or reverse the connector)
 - «IN» Low_Level_Data_Flow **pshvs_location_from_other_vehicle** (Frame Repository) → F5.13 Provide Vehicle Data and ISA: expected «OUT» for this direction (or reverse the connector)
@@ -133,34 +54,16 @@
 - «IN» Low_Level_Data_Flow **pshvs_request_driver_condition** (Frame Repository) → F5.11.13 Manage Operational Data Store: expected «OUT» for this direction (or reverse the connector)
 - «IN» Low_Level_Data_Flow **pshvs_request_driver_stored_data** (Frame Repository) → F5.11.13 Manage Operational Data Store: expected «OUT» for this direction (or reverse the connector)
 - «IN» Low_Level_Data_Flow **pshvs_request_tvd_incident_data** (Frame Repository) → F5.11.13 Manage Operational Data Store: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **pshvs_tvd_scenario** (Frame Repository) → F5.11.13 Manage Operational Data Store: expected «OUT» for this direction (or reverse the connector)
 - «IN» Low_Level_Data_Flow **pshvs_vehicle_data_for_trip_planning** (Frame Repository) → F5.14 Provide In-vehicle Trip Planning & Implementation: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **tnap.cc-data_response** (NAP Reference Architecture) → NAP Content Consumer: expected «OUT» for this direction (or reverse the connector)
-- «OUT» Datastore **D3.17 NAP Users** (Frame Repository) → mt_read_NAP_user_data: expected «IN» for this direction (or reverse the connector)
 - «OUT» Datastore **D5.1 Operational Data** (Frame Repository) → pshvs_read_operational_data: expected «IN» for this direction (or reverse the connector)
-- «OUT» High_Level_Function **F3.1.5 Provide Management of Service Areas** (Frame Repository) → mt.pshvs_service_area_information: expected «IN» for this direction (or reverse the connector)
-- «OUT» High_Level_Function **F3.6 Operate National Access Point** (Frame Repository) → tnap.cc-metadata_search_result: expected «IN» for this direction (or reverse the connector)
-- «OUT» High_Level_Function **F3.6 Operate National Access Point** (Frame Repository) → tnap.cc-support_response: expected «IN» for this direction (or reverse the connector)
-- «OUT» High_Level_Function **F3.6 Operate National Access Point** (Frame Repository) → tnap.cp-metadata_&_success_report: expected «IN» for this direction (or reverse the connector)
 - «OUT» High_Level_Function **F3.6 Operate National Access Point** (Frame Repository) → tnap.cp-registration_response: expected «IN» for this direction (or reverse the connector)
-- «OUT» High_Level_Function **F3.6 Operate National Access Point** (Frame Repository) → tnap.cp-support_response: expected «IN» for this direction (or reverse the connector)
-- «OUT» Low_Level_Function **F3.1.5.3 Output Service Area Messages** (Frame Repository) → mt.pshvs_service_area_information: expected «IN» for this direction (or reverse the connector)
 - «OUT» Low_Level_Function **F3.6.2 Manage Registrations and Provide Authorisation Service** (Frame Repository) → tnap.cp-registration_response: expected «IN» for this direction (or reverse the connector)
-- «OUT» Low_Level_Function **F3.6.3 Manage Content Providers Metadata** (Frame Repository) → tnap.cp-metadata_&_success_report: expected «IN» for this direction (or reverse the connector)
-- «OUT» Low_Level_Function **F3.6.5 Provide NAP User Support** (Frame Repository) → tnap.cc-support_response: expected «IN» for this direction (or reverse the connector)
-- «OUT» Low_Level_Function **F3.6.5 Provide NAP User Support** (Frame Repository) → tnap.cp-support_response: expected «IN» for this direction (or reverse the connector)
 - «OUT» Low_Level_Function **F5.11.11 Monitor Status of Driver** (Frame Repository) → pshvs_request_driver_stored_data: expected «IN» for this direction (or reverse the connector)
-- «OUT» Low_Level_Function **F5.11.13 Manage Operational Data Store** (Frame Repository) → pshvs_driver_condition: expected «IN» for this direction (or reverse the connector)
 - «OUT» Low_Level_Function **F5.11.13 Manage Operational Data Store** (Frame Repository) → pshvs_load_operational_data: expected «IN» for this direction (or reverse the connector)
-- «OUT» Low_Level_Function **F5.11.13 Manage Operational Data Store** (Frame Repository) → pshvs_tvd_incident_data: expected «IN» for this direction (or reverse the connector)
 - «OUT» Low_Level_Function **F5.11.6 Provide Incident Related Data** (Frame Repository) → pshvs_request_tvd_incident_data: expected «IN» for this direction (or reverse the connector)
 - «OUT» Low_Level_Function **F5.11.7 Provide In-vehicle eCall Facilities** (Frame Repository) → pshvs_request_driver_condition: expected «IN» for this direction (or reverse the connector)
 - «OUT» Low_Level_Function **F8.4.3 Provide Freight Transport Operations Manager Interface** (Frame Repository) → tft.ftom-prepared_new_FTEP: expected «IN» for this direction (or reverse the connector)
 - «OUT» Low_Level_Function **F8.4.3 Provide Freight Transport Operations Manager Interface** (Frame Repository) → tft.ftom-requested_existing_FTEP: expected «IN» for this direction (or reverse the connector)
-- «OUT» System **System** (Frame Repository) → To NAP Actors: expected «IN» for this direction (or reverse the connector)
-- «OUT» Terminator **NAP Actors** (Frame Repository) → tnap-mt_outputs: expected «IN» for this direction (or reverse the connector)
-- «OUT» Terminator **NAP Actors** (NAP Reference Architecture) → tnap-mt_outputs: expected «IN» for this direction (or reverse the connector)
-- «OUT» Terminator **NAP Content Consumer** (Frame Repository) → fnap.cc-data_request: expected «IN» for this direction (or reverse the connector)
 
 </details>
 
@@ -253,34 +156,6 @@
 - Low_Level_Function **F3.1.1.5.21 Send Messages to Approaching Urban Vehicles** (Frame Repository) is not «Componentof» a high-level function or functional area
 - Low_Level_Function **F3.1.2.14.6 Send Messages to Approaching Inter-urban Vehicles** (Frame Repository) is not «Componentof» a high-level function or functional area
 - Low_Level_Function **F6.5.8 Enable Final Approval of Trip Plan** (Frame Repository) is not «Componentof» a high-level function or functional area
-
-</details>
-
-<details><summary><b>in-out</b> (23)</summary>
-
-- «IN» Low_Level_Data_Flow **fnap.cc-metadata_search_request** (NAP Reference Architecture) → F3.6 Operate National Access Point: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fnap.cc-support_request** (NAP Reference Architecture) → F3.6 Operate National Access Point: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fnap.cc-support_request** (NAP Reference Architecture) → F3.6.5 Provide NAP User Support: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fnap.cp-metadata_&_authorisation_credentials** (NAP Reference Architecture) → F3.6 Operate National Access Point: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fnap.cp-metadata_&_authorisation_credentials** (NAP Reference Architecture) → F3.6.3 Manage Content Providers Metadata: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fnap.cp-registration_request** (NAP Reference Architecture) → F3.6 Operate National Access Point: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fnap.cp-registration_request** (NAP Reference Architecture) → F3.6.2 Manage Registrations and Provide Authorisation Service: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fnap.cp-support_request** (NAP Reference Architecture) → F3.6 Operate National Access Point: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **fnap.cp-support_request** (NAP Reference Architecture) → F3.6.5 Provide NAP User Support: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **mt_load_NAP_user_data** (NAP Reference Architecture) → D3.17 NAP Users: expected «OUT» for this direction (or reverse the connector)
-- «IN» Low_Level_Data_Flow **tnap.cc-data_response** (NAP Reference Architecture) → NAP Content Consumer: expected «OUT» for this direction (or reverse the connector)
-- «OUT» Datastore **D3.17 NAP Users** (NAP Reference Architecture) → mt_read_NAP_user_data: expected «IN» for this direction (or reverse the connector)
-- «OUT» High_Level_Function **F3.6 Operate National Access Point** (NAP Reference Architecture) → tnap.cc-metadata_search_result: expected «IN» for this direction (or reverse the connector)
-- «OUT» High_Level_Function **F3.6 Operate National Access Point** (NAP Reference Architecture) → tnap.cc-support_response: expected «IN» for this direction (or reverse the connector)
-- «OUT» High_Level_Function **F3.6 Operate National Access Point** (NAP Reference Architecture) → tnap.cp-metadata_&_success_report: expected «IN» for this direction (or reverse the connector)
-- «OUT» High_Level_Function **F3.6 Operate National Access Point** (NAP Reference Architecture) → tnap.cp-registration_response: expected «IN» for this direction (or reverse the connector)
-- «OUT» High_Level_Function **F3.6 Operate National Access Point** (NAP Reference Architecture) → tnap.cp-support_response: expected «IN» for this direction (or reverse the connector)
-- «OUT» Low_Level_Function **F3.6.2 Manage Registrations and Provide Authorisation Service** (NAP Reference Architecture) → tnap.cp-registration_response: expected «IN» for this direction (or reverse the connector)
-- «OUT» Low_Level_Function **F3.6.3 Manage Content Providers Metadata** (NAP Reference Architecture) → tnap.cp-metadata_&_success_report: expected «IN» for this direction (or reverse the connector)
-- «OUT» Low_Level_Function **F3.6.5 Provide NAP User Support** (NAP Reference Architecture) → tnap.cc-support_response: expected «IN» for this direction (or reverse the connector)
-- «OUT» Low_Level_Function **F3.6.5 Provide NAP User Support** (NAP Reference Architecture) → tnap.cp-support_response: expected «IN» for this direction (or reverse the connector)
-- «OUT» Terminator **NAP Actors** (NAP Reference Architecture) → tnap-mt_outputs: expected «IN» for this direction (or reverse the connector)
-- «OUT» Terminator **NAP Content Consumer** (NAP Reference Architecture) → fnap.cc-data_request: expected «IN» for this direction (or reverse the connector)
 
 </details>
 

@@ -942,7 +942,7 @@ elements:
       - check what is in data flows and if it is covered by the DS
       - IMPORTANT: decide how to deal with optional nap.cc logging in.
     links:
-      - "Association «OUT» → mt_read_NAP_user_data"  # {4A61D8D6-A5B7-4f80-A052-8890FD562FD5} → {7E763AED-E934-47b4-BF12-7ED1C864E575}
+      - "Association «IN» → mt_read_NAP_user_data"  # {4A61D8D6-A5B7-4f80-A052-8890FD562FD5} → {7E763AED-E934-47b4-BF12-7ED1C864E575}
   - name: "D3.3 Environmental Data"
     guid: "{F242EC18-4213-4a90-B103-85AF940319C9}"
     type: "Object"

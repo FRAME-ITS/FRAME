@@ -154,7 +154,7 @@ elements:
     note: |
       This data flow only appears in the Context Diagram and contains input from the NAP Actors Terminator.  It contains data objects containing either the Internet address from which other data objects about ITS Services are available, or a request for access to these data objects.
     links:
-      - "Association «IN» → System"  # {8F0F70F2-339C-41c2-BFD9-77705B4DCFA0} → {A7365472-4893-4994-9241-EEED83ABEF7D}
+      - "Association «OUT» → System"  # {8F0F70F2-339C-41c2-BFD9-77705B4DCFA0} → {A7365472-4893-4994-9241-EEED83ABEF7D}
   - name: "From Operator"
     guid: "{BB9A1A2D-DF0E-4c2f-8BBC-F572C836D9D6}"
     type: "Interface"
@@ -956,7 +956,7 @@ elements:
       It consists of inputs from the Financial Clearinghouse  containing data objects that provide responses to previous requests for payment to enable Drivers and other Travellers to use Services and are for use by the functionality in the Manage Traffic Funct
     links:
       - "Aggregation «Componentof» → From Financial Clearinghouse"  # {D720457E-EB28-4e8a-BE27-B4670BBE716C} → {7A02C9E7-9516-4e4b-858E-6B55D4CEAB06}
-      - "Association «IN» → F3. Manage Traffic"  # {D8D1F5FF-3542-4e17-833E-1DD7766F20B5} → {E9EDA059-38C0-41ba-9127-FF30B58B7C0D}
+      - "Association «OUT» → F3. Manage Traffic"  # {D8D1F5FF-3542-4e17-833E-1DD7766F20B5} → {E9EDA059-38C0-41ba-9127-FF30B58B7C0D}
       - "Association «OUT» → F3.1 Provide Traffic Control"  # {A957DE47-8FB7-428c-8E04-55DB0D538ED7} → {226ED187-DB7A-409f-B509-BA8DBFFB6DB6}
       - "Association «OUT» → F3.1.4 Provide Management of Car Parks"  # {A896BCDF-1AA5-45fa-BCFF-1797645F3754} → {CFC380C7-2010-46fb-9DE1-6BF39DBDA8B0}
       - "Association «OUT» → F3.1.4.6 Collect Payment for Car Park space use"  # {3BF12E42-72E9-43d1-8784-5DD4F191FD62} → {24349A2F-AE19-4256-90EB-09B118127A63}
@@ -1164,7 +1164,7 @@ elements:
       It consists of inputs from the Multi-Modal Systems containing data objects that are for use by  functionality in the Manage Public Transport Operations Functional Area.
     links:
       - "Aggregation «Componentof» → fmms-mpto_inputs"  # {A4A3B682-6953-40cc-BBB0-1FE101ADDB0B} → {714B23EA-171C-4f7a-AC44-9264DED78AFB}
-      - "Association «IN» → F4.4 Control PT Fleet"  # {82B29A63-3A40-4866-BB96-CE0180EF109D} → {A2FF30DF-0587-4b92-A15D-1EC9040BD276}
+      - "Association «OUT» → F4.4 Control PT Fleet"  # {82B29A63-3A40-4866-BB96-CE0180EF109D} → {A2FF30DF-0587-4b92-A15D-1EC9040BD276}
   - name: "fmms-mpto_inputs"
     guid: "{714B23EA-171C-4f7a-AC44-9264DED78AFB}"
     type: "Interface"
@@ -1201,7 +1201,6 @@ elements:
     links:
       - "Aggregation «Componentof» → From Multi-Modal System"  # {B6302FF7-79FF-48c2-AF13-845C90229B62} → {4E4D632B-D78C-4196-BEAF-D829B099E7AF}
       - "Aggregation «Componentof» → fmms-mt_inputs"  # {F75EB252-A405-43be-A091-BF4554C12E6A} → {114919E6-7494-4f5a-B641-F644431B8FCD}
-      - "Association «IN» → Multi-Modal Crossing"  # {F6DC1C50-EF95-415e-BE54-D8B06B1CF91E} → {C60F1898-547F-4907-A202-E926483BB388}
       - "Association «OUT» → F3.1 Provide Traffic Control"  # {ECA64CF2-3464-4931-9362-3BDB720B5BAE} → {226ED187-DB7A-409f-B509-BA8DBFFB6DB6}
   - name: "fmms.mmc-urban_crossing_inputs"
     guid: "{2009C16E-6694-47e2-94F4-3743BD40ABED}"
@@ -1215,7 +1214,6 @@ elements:
     links:
       - "Aggregation «Componentof» → From Multi-Modal System"  # {C2C2479C-7FAE-43ce-ACA9-EB1369B921FD} → {4E4D632B-D78C-4196-BEAF-D829B099E7AF}
       - "Aggregation «Componentof» → fmms.mmc-crossing_request"  # {54BF0332-6638-4c33-B6B8-F382EED495BC} → {5BB90974-ECDD-49cc-82E5-FEE837E2B46D}
-      - "Association «IN» → Multi-Modal Crossing"  # {951BD1A9-EBCB-42cb-A010-2EAE2D8DBA07} → {C60F1898-547F-4907-A202-E926483BB388}
       - "Association «OUT» → F3.1.1 Provide Urban Traffic Management"  # {4E087805-62AC-4013-8801-FD21450177DA} → {F2989AC8-51A0-4913-B32E-0D5E048A4788}
       - "Association «OUT» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {B35B89F8-A0C4-4e46-931C-956C478A485B} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
   - name: "fmms.mms-demand_inputs"
@@ -1230,7 +1228,6 @@ elements:
     links:
       - "Aggregation «Componentof» → From Multi-Modal System"  # {6C18D4BE-EE85-46dc-96D7-BDF2F2D9DB18} → {4E4D632B-D78C-4196-BEAF-D829B099E7AF}
       - "Aggregation «Componentof» → fmms-mt_inputs"  # {587CD57E-AE1B-402d-AAE5-0CE88C0046D7} → {114919E6-7494-4f5a-B641-F644431B8FCD}
-      - "Association «IN» → Multi-Modal Management System"  # {B1118A04-46D5-4482-9921-78804E572231} → {88920892-1042-40fc-B5DF-DC0302342F39}
       - "Association «OUT» → F3.3 Manage Demand"  # {5401F5FE-D7D5-4e98-83E4-23051DF1B388} → {4BFDC8AC-0614-4098-AEF0-9C645EAFA294}
   - name: "fmms.mms-incident_inputs"
     guid: "{575319CC-0B29-4a43-B97C-5A3F5AE48B4E}"
@@ -1244,7 +1241,6 @@ elements:
     links:
       - "Aggregation «Componentof» → From Multi-Modal System"  # {925E2804-E28A-42e0-9D7B-438F6ED35988} → {4E4D632B-D78C-4196-BEAF-D829B099E7AF}
       - "Aggregation «Componentof» → fmms-mt_inputs"  # {54621F56-FEE1-4d83-97D4-D6E203CDE649} → {114919E6-7494-4f5a-B641-F644431B8FCD}
-      - "Association «IN» → Multi-Modal Management System"  # {674B418B-6527-4701-8B4C-7059CDF352BE} → {88920892-1042-40fc-B5DF-DC0302342F39}
       - "Association «OUT» → F3.2 Manage Incidents"  # {F03FD9CE-6ED0-4384-9EBF-27A58F6E8CFE} → {7B5551F4-B9B4-4df4-A228-C3111996584E}
   - name: "fmo-mpto_inputs"
     guid: "{F847F6DF-5A88-4d8a-8753-396C0058EAA1}"
@@ -1416,8 +1412,8 @@ elements:
       It consists of inputs from the Communications Operator from which data objects are created that provide either new and/or update PSAP data for use by functionality in the Provide Safety and Emergency Facilities Functional Area, or requests for output of the PSAP details currently in the store of PSAP Operational Data..
     links:
       - "Aggregation «component of» → fo-psef_inputs"  # {D4BC7BF5-3C29-42de-9BF3-B2C8D13D83F3} → {C53B9470-22A2-4614-83E4-B89591662B8D}
-      - "Association «IN» → F2.1.11 Manage eCall Messages"  # {E21C1D6E-033C-4808-A653-1E2C5E562A85} → {89ADDE3A-4642-4d57-A89E-BFAE05F44CF1}
       - "Association «OUT» → F2.1 Manage Emergencies"  # {31B52EBB-A25D-4ec3-9EDD-1D61E15E6063} → {8B0A6367-E6D7-47e2-9086-81FB2C700C13}
+      - "Association «OUT» → F2.1.11 Manage eCall Messages"  # {E21C1D6E-033C-4808-A653-1E2C5E562A85} → {89ADDE3A-4642-4d57-A89E-BFAE05F44CF1}
   - name: "fo.odso-operator_inputs"
     guid: "{708E369C-7F2E-4e79-8F2D-A969CC898710}"
     type: "Interface"
@@ -2350,7 +2346,7 @@ elements:
     note: |
       It contains input from the Weather Systems from which data objects are created for use by functionality in the Manage Public Transport Operations Functional Area.
     links:
-      - "Association «IN» → F4. Manage Public Transport Operations"  # {DD0C6E5B-EB71-44c8-845F-7F63CCAB4CE8} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Association «OUT» → F4. Manage Public Transport Operations"  # {DD0C6E5B-EB71-44c8-845F-7F63CCAB4CE8} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
   - name: "fws-mt_inputs"
     guid: "{1BC755AB-FD44-43f9-A559-3B173F9FF289}"
     type: "Interface"
@@ -3750,7 +3746,7 @@ elements:
     note: |
       It contains data objects that provide acknowledgements of alarms that have been reported to the Emergency Services from PT Vehicles.
     links:
-      - "Association «IN» → F4. Manage Public Transport Operations"  # {5AD0DE8F-CC53-4ff3-83A4-85E85DCED816} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
+      - "Association «OUT» → F4. Manage Public Transport Operations"  # {5AD0DE8F-CC53-4ff3-83A4-85E85DCED816} → {132D4B60-A4E2-4229-9661-F6171B8DE3C2}
       - "Association «OUT» → F4.1 Monitor PT fleet"  # {5E1C05DA-FBB1-4733-A774-EC68593126B4} → {6371794D-1857-4152-B781-18AE7C5B8FC3}
   - name: "psef.mt_data_and_priority_requests"
     guid: "{91E02601-6D4A-4fd5-835E-87F62AEE08F4}"
@@ -3919,7 +3915,7 @@ elements:
       It contains data objects that provide information that will be used to generate messages for output to Drivers from the roadside in both the inter-urban and urban road networks, i.e. not from within the Host Vehicle.
     links:
       - "Aggregation «Componentof» → pshvs.mt_data_for_traffic_management"  # {5F5F981A-6C83-4df5-9E12-C321C2B7BCF0} → {2CCAA96F-9559-4e9a-BE8A-F6FE5C91D948}
-      - "Association «IN» → F3.1 Provide Traffic Control"  # {3F3C8573-B389-4cfa-8DAE-BBDF2B1D4C03} → {226ED187-DB7A-409f-B509-BA8DBFFB6DB6}
+      - "Association «OUT» → F3.1 Provide Traffic Control"  # {3F3C8573-B389-4cfa-8DAE-BBDF2B1D4C03} → {226ED187-DB7A-409f-B509-BA8DBFFB6DB6}
   - name: "pshvs.mt_rest_zone_use_data"
     guid: "{82A1F697-B29B-4971-B41F-58060486B6A6}"
     type: "Interface"
@@ -4961,6 +4957,8 @@ elements:
       It contains outputs to the NAP Actors that have been created from data objects provided by functionality in the Manage Traffic Functional Area and includes either confirmation of acceptance of inputs, or the Internet addresses from which access to data objects provided by ITS Services can be obtained.
     links:
       - "Aggregation «Componentof» → To NAP Actors"  # {2951C6EE-FE78-434b-9152-54D7EC7B58B8} → {80D9E677-C285-4d45-9344-044E34B0EF83}
+      - "Association «OUT» → NAP Actors"  # {A57E4B2D-F47A-443b-9C5D-4C7448EF91EE} → {E89EDD6C-D939-4b97-AB60-AAD3FA5FE237}
+      - "Association «OUT» → NAP Actors"  # {DD785317-9486-4b8f-9E95-A4A265EE7D70} → {FAF5089D-CEC9-4fac-A49D-D18F6E0ADC95}
   - name: "to-bridge_and_tunnel_outputs"
     guid: "{4EAF8D9B-B14C-4ea9-87F5-AAAA00C47E8A}"
     type: "Interface"
