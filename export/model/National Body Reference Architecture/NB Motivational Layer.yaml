@@ -15,14 +15,14 @@ elements:
     version: "1.0"
     order: 0
     note: ""
-  - name: "Link to other Views"
+  - name: "Link to Views of Stakeholders"
     guid: "{C1874C54-6007-4434-BB70-C539C94F0804}"
     type: "Boundary"
     status: "Proposed"
     version: "1.0"
     order: 0
     note: ""
-  - name: "Link to other views"
+  - name: "Link to Views of Stakeholders"
     guid: "{D3B4C28E-2831-4c83-BC98-15E8C8B45891}"
     type: "Boundary"
     status: "Proposed"

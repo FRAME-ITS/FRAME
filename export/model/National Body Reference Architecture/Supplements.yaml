@@ -15,10 +15,14 @@ elements:
       
       The Architecture will show common functionalities and processes of National Bodies in Europe.
       
+      The NB Reference Architecture is a live document: it expands on what is in the FRAME Repository by providing much greater detail.
+      
+      How to navigate: the index on the left lists the packages and elements of the architecture; the boxes in the diagrams (e.g. the views on this page) open the diagram of the view, and each element page lists its connections to other elements.
+      
       The Architecture will be developed within the ongoing project NAPCORE (https://napcore.eu)
       
-      If issues, problems or mistakes are found, please report it under:
-      https://github.com/NAPCORE/NB-Reference-Architecture
+      If issues, problems or mistakes are found, please report it as an issue under:
+      https://github.com/NAPCORE/NB-Reference-Architecture/issues
   - name: "Compliance Assement process states"
     guid: "{6613CB3D-B2B1-4cef-B5D9-43CBB8A27AB2}"
     type: "Boundary"
@@ -59,6 +63,22 @@ elements:
       DR		Delegated Regulation
       
       FRAME		the name commonly used for the European ITS Framework Architecture and is derived from the names 		           of the projects that since 2001 have developed its content and the methodology for its use.
+      
+      EC		European Commission
+      
+      EU		European Union
+      
+      ITS		Intelligent Transport Systems
+      
+      MS		Member State
+      
+      NAP		National Access Point
+      
+      NAPCORE		National Access Point Coordination Organisation for Europe
+      
+      SD		Self-declaration
+      
+      Compliance assessment		written in full in this architecture; "CA" stands for Competent Authority
   - name: "Change History"
     guid: "{E1490E31-8101-47d1-9D77-AF97D60AFFAD}"
     type: "Class"
@@ -79,6 +99,24 @@ elements:
       "SearchName": ""
       "SearchValue": ""
     note: |
+      07.11.2026 Change History V1.0.0 to V1.1.0 (draft; review of R. Bossom, 09/2026):
+      
+      Landing Page:
+      Note that the NB Reference Architecture is a live document; navigation hint; link to GitHub issues
+      Glossary: abbreviations added
+      
+      Motivational Layer:
+      Boxes "Link to other Views" renamed "Link to Views of Stakeholders"
+      
+      Functional View:
+      Connector labels (IN/OUT) hidden in the diagram
+      Data flows renamed after their content (Request/Response pairs, flows read from data stores)
+      Source and target in every data-flow description; inputs and outputs in every function description
+      Status of CA: produced by the Compliance assessment registry
+      
+      FRAME relationships (FRAME 5.3, MDG technology V1.3):
+      Role «adheres to» Agreement, Agreement «accepted by» Role; Actor «performs» Role; Business Expectation «defines» ITS Service
+      
       12.02.2025 Change History V0.1 to 0.2:
       
       Landing Page:
