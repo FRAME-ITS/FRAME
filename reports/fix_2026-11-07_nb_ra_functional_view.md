@@ -1,0 +1,75 @@
+# NB Reference Architecture – Functional View (review R. Bossom, group C)
+
+- diagram 02 National Body Functional View: connector labels hidden
+- Status of CA: «OUT» to Compliance assessment registry → «IN» from the registry
+- flow "Status of CA" (Compliance assessment registry → Compliance Assessment) renamed "Previous compliance assessment results"
+- flow "Request data" (Stakeholder List → Manage Stakeholder List) renamed "Stakeholder data"
+- flow "Request self-declaration" (Self-declaration Storage → Compliance Assessment) renamed "Self-declaration for compliance assessment"
+- flow "Provide status of SD" (Self-declaration Journal → Reporting of self-declaration and compliance assessment results) renamed "Self-declaration status for reporting"
+- flow "Provide self-declaration" (Self-declaration Storage → Reporting of self-declaration and compliance assessment results) renamed "Self-declarations for reporting"
+- flow "Response" (Managing general requests regarding self-declaration → Handling Non-Compliance) renamed "Self-declaration information for non-compliance"
+- flow "Request" (Handling Non-Compliance → Managing general requests regarding self-declaration) renamed "Request for self-declaration information"
+- flow "Request" (Handling Non-Compliance → Compliance Assessment) renamed "Request for compliance assessment"
+- flow "Response" (Compliance Assessment → Handling Non-Compliance) renamed "Compliance assessment result for non-compliance"
+- flow "Request information" (Stakeholder List → Validation of completeness) renamed "Stakeholder contact details"
+- flow "Status request on SD" (Self-declaration Journal → Handling Non-Compliance) renamed "Self-declaration status for non-compliance"
+- flow "Store CA result" (Compliance assessment registry → Handling Non-Compliance) renamed "Compliance assessment result"
+- flow "Access information": source and target added to the note (note was empty)
+- flow "Receive information": source and target added to the note (note was empty)
+- flow "Request for providing information": source and target added to the note (note was empty)
+- flow "Request relevant SD information": source and target added to the note (note was empty)
+- flow "Update journal information": source and target added to the note
+- flow "Status of SD": source and target added to the note (note was empty)
+- flow "Provide relevant information": source and target added to the note (note was empty)
+- flow "Status update": source and target added to the note (note was empty)
+- flow "Request general information": source and target added to the note (note was empty)
+- flow "receives relevant SD information": source and target added to the note (note was empty)
+- flow "Provision of information": source and target added to the note (note was empty)
+- flow "Status of request": source and target added to the note (note was empty)
+- flow "Status of requested SD": source and target added to the note (note was empty)
+- flow "Information about status": source and target added to the note
+- flow "Send report": source and target added to the note
+- flow "Provide general information": source and target added to the note (note was empty)
+- flow "Store self-declaration": source and target added to the note
+- flow "SD details": source and target added to the note (note was empty)
+- flow "Information": source and target added to the note
+- flow "Information about SD obligation": source and target added to the note
+- flow "Status of CA": source and target added to the note (note was empty)
+- flow "General requests": source and target added to the note (note was empty)
+- flow "Status details SD": source and target added to the note (note was empty)
+- flow "Previous compliance assessment results": source and target added to the note (note was empty)
+- flow "Store CA result": source and target added to the note (note was empty)
+- flow "Validation results": source and target added to the note (note was empty)
+- flow "Stakeholder data": source and target added to the note (note was empty)
+- flow "Store registered SD in storage": source and target added to the note (note was empty)
+- flow "Stores changed self-declaration": source and target added to the note (note was empty)
+- flow "Self-declaration for compliance assessment": source and target added to the note (note was empty)
+- flow "Self-declaration status for reporting": source and target added to the note (note was empty)
+- flow "Store stakeholder information": source and target added to the note
+- flow "Provides self-declaration form": source and target added to the note (note was empty)
+- flow "Self-declarations for reporting": source and target added to the note (note was empty)
+- flow "Provide information": source and target added to the note (note was empty)
+- flow "Self-declaration information for non-compliance": source and target added to the note (note was empty)
+- flow "Request for self-declaration information": source and target added to the note (note was empty)
+- flow "Request for compliance assessment": source and target added to the note (note was empty)
+- flow "Compliance assessment result for non-compliance": source and target added to the note (note was empty)
+- flow "Status SD": source and target added to the note (note was empty)
+- flow "Stakeholder contact details": source and target added to the note (note was empty)
+- flow "Store Information": source and target added to the note (note was empty)
+- flow "Accepted": source and target added to the note (note was empty)
+- flow "Request report": source and target added to the note (note was empty)
+- flow "Request status of SD": source and target added to the note (note was empty)
+- flow "Request self-declaration": source and target added to the note (note was empty)
+- flow "Update journal information": source and target added to the note (note was empty)
+- flow "Self-declaration status for non-compliance": source and target added to the note (note was empty)
+- flow "Compliance assessment result": source and target added to the note (note was empty)
+- flow "Status of CA": source and target added to the note (note was empty)
+- function "Handling Non-Compliance": 4 inputs, 4 outputs listed
+- function "Management of self-declaration": 4 inputs, 4 outputs listed
+- function "Provide NB support": 3 inputs, 3 outputs listed
+- function "Manage Stakeholder List": 2 inputs, 2 outputs listed
+- function "Reporting of self-declaration and compliance assessment results": 3 inputs, 3 outputs listed
+- function "Validation of completeness": 3 inputs, 3 outputs listed
+- function "Managing general requests regarding self-declaration": 3 inputs, 3 outputs listed
+- function "Compliance Assessment": 6 inputs, 6 outputs listed
+- function "Receive self-declaration": 2 inputs, 2 outputs listed

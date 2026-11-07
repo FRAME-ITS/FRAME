@@ -27,9 +27,12 @@ elements:
       A National Body should be capable to perform at least 1 compliance assessment per year for delegated regulation where active self-declarations exist.
       
       The National Body should direct its efforts to perform compliance assessments according to the number of active self-declarations related to each delegated act.
+      
+      Inputs: Previous compliance assessment results; Provide relevant information; Receive information; Request for compliance assessment; Self-declaration for compliance assessment; Status details SD
+      Outputs: Access information; Compliance assessment result for non-compliance; Status of CA; Status update; Store CA result; Stores changed self-declaration
     links:
       - "Association «IN» → Access information"  # {2CA242CE-AA39-4feb-97D3-7E3E47EF7355} → {37D92C6B-5199-4a9d-8837-0740EF3B1A41}
-      - "Association «IN» → Response"  # {010520FC-9FDF-49a9-AD49-9EFDD3713ADF} → {3F75E697-74ED-4d4f-852D-4F9B4927C399}
+      - "Association «IN» → Compliance assessment result for non-compliance"  # {010520FC-9FDF-49a9-AD49-9EFDD3713ADF} → {3F75E697-74ED-4d4f-852D-4F9B4927C399}
       - "Association «IN» → Status of CA"  # {A08056AA-4C55-4dc6-8C20-8703A546E0D5} → {863DE7F6-BB4C-4bf5-A4F1-2351D0273C65}
       - "Association «IN» → Status update"  # {AE072CFA-E792-4abe-9B07-0723FEA97270} → {28B4DEC2-D621-4b4e-AF18-B8E34B28E0A2}
       - "Association «IN» → Store CA result"  # {C4ACB5B1-0921-447d-AB7A-F66DA2AE0464} → {9105DF71-6B49-44e7-B2E3-4EFC9779D6BB}
@@ -45,9 +48,12 @@ elements:
     note: |
       The details of the non-compliance process are not described in the delegated acts. It was a decision of the NAPCORE that harmonisation up to a certain degree is recommended throughout Europe.
       The non-compliance process describes how the National Body should react to non-compliance identified in compliance assessment or other ways. Details are shown within the Non-compliance process description.
+      
+      Inputs: Compliance assessment result; Compliance assessment result for non-compliance; Self-declaration information for non-compliance; Self-declaration status for non-compliance
+      Outputs: Request for compliance assessment; Request for self-declaration information; Status of CA; Update journal information
     links:
-      - "Association «IN» → Request"  # {1CFC90DB-FB06-46e2-8BF3-B307B5BFE092} → {D92DEB09-7102-4a53-B622-F98C50736668}
-      - "Association «IN» → Request"  # {4F5782C5-BCAE-4b0e-BB3A-56BB32EDDC68} → {DAA1751E-B997-47be-9076-48B04D2051EC}
+      - "Association «IN» → Request for compliance assessment"  # {1CFC90DB-FB06-46e2-8BF3-B307B5BFE092} → {D92DEB09-7102-4a53-B622-F98C50736668}
+      - "Association «IN» → Request for self-declaration information"  # {4F5782C5-BCAE-4b0e-BB3A-56BB32EDDC68} → {DAA1751E-B997-47be-9076-48B04D2051EC}
       - "Association «IN» → Status of CA"  # {1447E981-9F9C-435a-8E1F-CC29519AEC42} → {B966942A-D11B-46f8-8082-B2CAAAF82E75}
       - "Association «IN» → Update journal information"  # {618EEF62-ABFA-4a31-BB12-1D350B2296B4} → {82BB9579-0354-4fa1-91CC-A01F31ED41DF}
   - name: "Manage Stakeholder List"
@@ -64,6 +70,9 @@ elements:
       
       Create a list of respondents to whom the request for information will be sent.
       Requirements: Based on common criteria (agreed within NAPCORE) a list of respondents will be created. Respondents from the list will be requested to provide information/documents for the compliance with the requirements set out in the delegated act.
+      
+      Inputs: Provision of information; Stakeholder data
+      Outputs: Request for providing information; Store stakeholder information
     links:
       - "Association «IN» → Request for providing information"  # {CF1349B8-2719-4d1c-8B05-2BD814FC9A00} → {04FE4FC1-5A04-424c-8D06-96D805AA1556}
       - "Association «IN» → Store stakeholder information"  # {D138EB5E-2B09-4c4a-B868-BE84232C3FF8} → {D58832E7-6942-4a0f-A4C3-89BC3C2C25B5}
@@ -84,6 +93,9 @@ elements:
       (3) Self-declarations are stateful (always have a defined status)
       (4) Self-declarations can be withdrawn by the stakeholder (e.g. when a newer version has been provided by the stakeholder or when the service or data provider ceases to provide the service or data publication) or moved to state "inactive" by the national body (when the stakeholder ceases to exist).
       Inactive, rejected or withdrawn SD's can be stored in alignment to GDPR for statistical reasons, but should not be used for compliance assessment.
+      
+      Inputs: Request relevant SD information; Status of SD; Status of requested SD; Store self-declaration
+      Outputs: Status SD; Store registered SD in storage; Update journal information; receives relevant SD information
     links:
       - "Association «IN» → Status SD"  # {CCE55FBE-9F20-445e-9A2C-63E6D898ACF6} → {80647EEC-C009-432c-9451-A433608E8B8B}
       - "Association «IN» → Store registered SD in storage"  # {F67B0F2C-1261-4207-A21F-2A73CC99B196} → {A4486CEE-A577-4037-BEAA-01463BFDDF78}
@@ -98,9 +110,12 @@ elements:
     order: 0
     note: |
       The National Body may receive requests related to self-declarations at any time. These requests may be requests for information about the self-declaration, request from the stakeholder to replace the self-declaration with a newer version or other requests which may change the state of a self-declaration.
+      
+      Inputs: General requests; Request for self-declaration information; receives relevant SD information
+      Outputs: Request relevant SD information; Self-declaration information for non-compliance; Status of request
     links:
       - "Association «IN» → Request relevant SD information"  # {12AB7A19-C49C-4db7-95AE-1486B7B001FC} → {05F09947-F13A-4ae9-B944-9672D5872516}
-      - "Association «IN» → Response"  # {AF461CCE-A5A0-47a1-9CDE-7015E0F82E5E} → {BB8C1624-E80F-46f9-9D4E-137043169ED0}
+      - "Association «IN» → Self-declaration information for non-compliance"  # {AF461CCE-A5A0-47a1-9CDE-7015E0F82E5E} → {BB8C1624-E80F-46f9-9D4E-137043169ED0}
       - "Association «IN» → Status of request"  # {732CB494-F4E4-4597-B288-6D5F35521050} → {4A25B12D-81DB-4e1a-9F7A-61545373A048}
   - name: "Provide NB support"
     guid: "{3577F755-7777-4b9e-AAF8-F0A7532ACE4A}"
@@ -119,6 +134,9 @@ elements:
       Stakeholder obligations:
       Stakeholder as main focus group can be informed about their tasks and obligations based on the ITS Directive
       2010/40/EU and their delegated regulations which includes deadlines of handing in self-declarations for self-assessments and random inspections. National BodyNational Body shall provide information about the national law and legal situation. This information process also includes the offering of direct information meetings and other support activities.
+      
+      Inputs: Accepted; Information; Request general information
+      Outputs: Information about SD obligation; Provide general information; Provide information
     links:
       - "Association «IN» → Information about SD obligation"  # {BD3BBFA6-5753-4ba0-A33F-C1C2248FDD58} → {7BA75E54-A1DD-420f-B358-F2B59B2985F5}
       - "Association «IN» → Provide general information"  # {4D6230E8-DEE7-40a6-A5E1-88CB9C31B4DC} → {6442F7CD-399A-445c-B5F5-DDF9E7793EEF}
@@ -133,6 +151,9 @@ elements:
     order: 0
     note: |
       The National Body  shall be able to receive self-declarations from stakeholders as data owner or service provider in paper or electronic format. The self-declarations shall be provided by an authorized person or signed by the stakeholder.
+      
+      Inputs: Provides self-declaration form; Validation results
+      Outputs: Information about status; SD details
     links:
       - "Association «IN» → Information about status"  # {64B39527-C33B-487a-A950-F023EA83A944} → {601B22D4-F573-4e35-A0DC-8F110BD53E3E}
       - "Association «IN» → SD details"  # {651008D5-21F1-4080-9001-373A6832E93C} → {6F33D268-087B-4626-946B-36BE3CE60116}
@@ -146,6 +167,9 @@ elements:
     order: 0
     note: |
       Reporting of performed compliance assessments and received self-declaration to a proper ministry (member state representative) and further EU commission by using the NAPCORE harmonized reporting forms.
+      
+      Inputs: Request report; Self-declaration status for reporting; Self-declarations for reporting
+      Outputs: Request self-declaration; Request status of SD; Send report
     links:
       - "Association «IN» → Request self-declaration"  # {713F2A9A-692E-4b06-986A-FA07961A22C6} → {A8DDF368-5294-4b6d-9BA7-4AD1436DC838}
       - "Association «IN» → Request status of SD"  # {FB230E8E-65D0-40f6-9F64-AB6F20CAF070} → {D53E8616-4F42-4b0d-9A5B-35DB6ABA28D3}
@@ -163,6 +187,9 @@ elements:
     note: |
       The National Body has to validate stakeholder contact details. At minimum, the National Body shall validate that all required contact details have been provided. The National Body may validate contact information of the stakeholder based on business registration or VAT number.
       The National Body should check the completeness of the information received from respondents based on validation rules agreed within NAPCORE.
+      
+      Inputs: SD details; Stakeholder contact details; Status SD
+      Outputs: Store Information; Store self-declaration; Validation results
     links:
       - "Association «IN» → Store Information"  # {F9EE96DA-045A-4525-9FA6-4938C322DEA8} → {FE598186-5858-44b4-8B51-2BE7D8C848BD}
       - "Association «IN» → Store self-declaration"  # {0236F708-1643-43e2-A7D4-C3DEB50D4A0F} → {648DBA1F-EA00-43e6-B28A-C5E117297931}

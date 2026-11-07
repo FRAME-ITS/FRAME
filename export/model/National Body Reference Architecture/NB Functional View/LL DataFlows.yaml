@@ -11,7 +11,9 @@ elements:
     status: "Proposed"
     version: "1.0"
     order: 0
-    note: ""
+    note: |
+      From: Member States
+      To: Provide NB support
     links:
       - "Association «OUT» → Provide NB support"  # {6D900A54-6C3D-4a9e-9212-5C771039FED8} → {3577F755-7777-4b9e-AAF8-F0A7532ACE4A}
   - name: "Access information"
@@ -21,9 +23,35 @@ elements:
     status: "Proposed"
     version: "1.0"
     order: 0
-    note: ""
+    note: |
+      From: Compliance Assessment
+      To: National Access Point(s)
     links:
       - "Association «OUT» → National Access Point(s)"  # {A4AFE1B0-BAFB-45ea-A0CD-BF918E4B7991} → {6902FEFA-51CE-4958-A449-99F7F9CA5213}
+  - name: "Compliance assessment result"
+    guid: "{49E07AE1-EBBA-436a-8648-93FBA8754532}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      From: Compliance assessment registry
+      To: Handling Non-Compliance
+    links:
+      - "Association «OUT» → Handling Non-Compliance"  # {755A8CCC-E95B-47cd-90C9-EE184E8040F9} → {1D8C33F8-CF43-44a6-8E15-D5CC49B29943}
+  - name: "Compliance assessment result for non-compliance"
+    guid: "{3F75E697-74ED-4d4f-852D-4F9B4927C399}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      From: Compliance Assessment
+      To: Handling Non-Compliance
+    links:
+      - "Association «OUT» → Handling Non-Compliance"  # {04CFC120-2D1C-47f8-88B3-5D259E28C216} → {1D8C33F8-CF43-44a6-8E15-D5CC49B29943}
   - name: "General requests"
     guid: "{867F3DE7-6F39-43bf-A1C0-A31185A4482C}"
     type: "Interface"
@@ -31,7 +59,9 @@ elements:
     status: "Proposed"
     version: "1.0"
     order: 0
-    note: ""
+    note: |
+      From: Data- and/or Service provider(s)
+      To: Managing general requests regarding self-declaration
     links:
       - "Association «OUT» → Managing general requests regarding self-declaration"  # {980EA42F-BB9A-4d2c-82AC-E661BEFA9D31} → {45963755-0898-4846-8129-F2724C86B673}
   - name: "Information"
@@ -42,6 +72,9 @@ elements:
     version: "1.0"
     order: 0
     note: |
+      From: Data- and/or Service provider(s)
+      To: Provide NB support
+      
       Data and/or Service provider provide information about the organization, data and services, status of self declaration and some more.
     links:
       - "Association «OUT» → Provide NB support"  # {359EF9ED-ACC0-4b65-86B7-C39E888DD608} → {3577F755-7777-4b9e-AAF8-F0A7532ACE4A}
@@ -53,6 +86,9 @@ elements:
     version: "1.0"
     order: 0
     note: |
+      From: Provide NB support
+      To: Data- and/or Service provider(s)
+      
       The National Body / Competent Authority should provide information on deadlines, processes and other obligations with regards to self-declarations
     links:
       - "Association «OUT» → Data- and/or Service provider(s)"  # {236A18F3-293F-408e-98E6-E33A71A89A6C} → {4BBDECD9-7CB6-4269-9AA6-DE1A948C9995}
@@ -64,10 +100,25 @@ elements:
     version: "1.0"
     order: 0
     note: |
+      From: Receive self-declaration
+      To: Data- and/or Service provider(s)
+      
       The confirmation letter (template to be agreed within NAPCORE) proving, that all documents for Compliance
       Assessment received from respondent have been checked and registered in the system should be send to respondent by e-mail.
     links:
       - "Association «OUT» → Data- and/or Service provider(s)"  # {EC5A8BB3-207E-4574-A069-12A5F2BDE683} → {4BBDECD9-7CB6-4269-9AA6-DE1A948C9995}
+  - name: "Previous compliance assessment results"
+    guid: "{89C549FA-9351-4a9f-B8CB-02E00D983144}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      From: Compliance assessment registry
+      To: Compliance Assessment
+    links:
+      - "Association «OUT» → Compliance Assessment"  # {5E0F5E97-682E-41bd-A567-1D11FB6FF795} → {91C7B206-E453-4ab9-B0B6-D08FDE6075D8}
   - name: "Provide general information"
     guid: "{6442F7CD-399A-445c-B5F5-DDF9E7793EEF}"
     type: "Interface"
@@ -75,7 +126,9 @@ elements:
     status: "Proposed"
     version: "1.0"
     order: 0
-    note: ""
+    note: |
+      From: Provide NB support
+      To: General Public
     links:
       - "Association «OUT» → General Public"  # {6599A64F-26D5-43c6-90E0-BF8306A36487} → {DEC15748-EB48-4dce-BABA-FDB1698EC9A9}
   - name: "Provide information"
@@ -85,7 +138,9 @@ elements:
     status: "Proposed"
     version: "1.0"
     order: 0
-    note: ""
+    note: |
+      From: Provide NB support
+      To: Member States
     links:
       - "Association «OUT» → Member States"  # {6E8BFC7F-E4FF-40e0-B2BC-96D44671562C} → {E2280DC8-3870-4bca-B9D9-0B0F048FF2BE}
   - name: "Provide relevant information"
@@ -95,29 +150,11 @@ elements:
     status: "Proposed"
     version: "1.0"
     order: 0
-    note: ""
+    note: |
+      From: Data- and/or Service provider(s)
+      To: Compliance Assessment
     links:
       - "Association «OUT» → Compliance Assessment"  # {114EFC47-6986-4b7b-ADB5-25410CA91468} → {91C7B206-E453-4ab9-B0B6-D08FDE6075D8}
-  - name: "Provide self-declaration"
-    guid: "{E7A8112B-9F75-4601-B108-9964DC50FED0}"
-    type: "Interface"
-    stereotype: "FRAME_Low_Level_Data_Flow"
-    status: "Proposed"
-    version: "1.0"
-    order: 0
-    note: ""
-    links:
-      - "Association «OUT» → Reporting of self-declaration and compliance assessment results"  # {61C8A8A4-DFF7-480c-8322-27B18C8EAEBA} → {395DED00-A80C-418c-A674-B65B7434A6E0}
-  - name: "Provide status of SD"
-    guid: "{CB5D3CF4-3486-4ced-AFF0-E84DF5C64C48}"
-    type: "Interface"
-    stereotype: "FRAME_Low_Level_Data_Flow"
-    status: "Proposed"
-    version: "1.0"
-    order: 0
-    note: ""
-    links:
-      - "Association «OUT» → Reporting of self-declaration and compliance assessment results"  # {3916ACDA-8E83-4b34-BCC0-7C90FBEC6371} → {395DED00-A80C-418c-A674-B65B7434A6E0}
   - name: "Provides self-declaration form"
     guid: "{E0D893E9-3F96-49c4-9FBF-48591C8B77A4}"
     type: "Interface"
@@ -125,7 +162,9 @@ elements:
     status: "Proposed"
     version: "1.0"
     order: 0
-    note: ""
+    note: |
+      From: Data- and/or Service provider(s)
+      To: Receive self-declaration
     links:
       - "Association «OUT» → Receive self-declaration"  # {79213E72-D42E-40ed-9ACB-3FD47476876B} → {F49ACE9E-16BD-430e-AAFF-5A858FC334B9}
   - name: "Provision of information"
@@ -135,7 +174,9 @@ elements:
     status: "Proposed"
     version: "1.0"
     order: 0
-    note: ""
+    note: |
+      From: Data- and/or Service provider(s)
+      To: Manage Stakeholder List
     links:
       - "Association «OUT» → Manage Stakeholder List"  # {FB7D1470-216E-45c6-98AE-FC77ACF17500} → {35C53FD1-0C8A-49dc-85AE-E2D72F886A54}
   - name: "Receive information"
@@ -145,39 +186,23 @@ elements:
     status: "Proposed"
     version: "1.0"
     order: 0
-    note: ""
+    note: |
+      From: National Access Point(s)
+      To: Compliance Assessment
     links:
       - "Association «OUT» → Compliance Assessment"  # {995F6E18-0A9E-417a-B752-72486100F228} → {91C7B206-E453-4ab9-B0B6-D08FDE6075D8}
-  - name: "Request"
+  - name: "Request for compliance assessment"
     guid: "{D92DEB09-7102-4a53-B622-F98C50736668}"
     type: "Interface"
     stereotype: "FRAME_Low_Level_Data_Flow"
     status: "Proposed"
     version: "1.0"
     order: 0
-    note: ""
+    note: |
+      From: Handling Non-Compliance
+      To: Compliance Assessment
     links:
       - "Association «OUT» → Compliance Assessment"  # {4DA6A67C-F6A8-48fb-B59E-05A0BAB3DA0F} → {91C7B206-E453-4ab9-B0B6-D08FDE6075D8}
-  - name: "Request"
-    guid: "{DAA1751E-B997-47be-9076-48B04D2051EC}"
-    type: "Interface"
-    stereotype: "FRAME_Low_Level_Data_Flow"
-    status: "Proposed"
-    version: "1.0"
-    order: 0
-    note: ""
-    links:
-      - "Association «OUT» → Managing general requests regarding self-declaration"  # {A3D491D6-392A-4210-87EE-CFC1467FA414} → {45963755-0898-4846-8129-F2724C86B673}
-  - name: "Request data"
-    guid: "{A0A7EF5B-0F75-48ac-9FD3-C6DB2915A800}"
-    type: "Interface"
-    stereotype: "FRAME_Low_Level_Data_Flow"
-    status: "Proposed"
-    version: "1.0"
-    order: 0
-    note: ""
-    links:
-      - "Association «OUT» → Manage Stakeholder List"  # {7F8F97D3-ED3F-4b1f-A063-412780499212} → {35C53FD1-0C8A-49dc-85AE-E2D72F886A54}
   - name: "Request for providing information"
     guid: "{04FE4FC1-5A04-424c-8D06-96D805AA1556}"
     type: "Interface"
@@ -185,9 +210,23 @@ elements:
     status: "Proposed"
     version: "1.0"
     order: 0
-    note: ""
+    note: |
+      From: Manage Stakeholder List
+      To: Data- and/or Service provider(s)
     links:
       - "Association «OUT» → Data- and/or Service provider(s)"  # {A5117D97-7762-4e1a-B643-6F5A0C9F6D18} → {4BBDECD9-7CB6-4269-9AA6-DE1A948C9995}
+  - name: "Request for self-declaration information"
+    guid: "{DAA1751E-B997-47be-9076-48B04D2051EC}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      From: Handling Non-Compliance
+      To: Managing general requests regarding self-declaration
+    links:
+      - "Association «OUT» → Managing general requests regarding self-declaration"  # {A3D491D6-392A-4210-87EE-CFC1467FA414} → {45963755-0898-4846-8129-F2724C86B673}
   - name: "Request general information"
     guid: "{2D8D8356-1D5E-42b7-B9BB-BCDFD97F2C95}"
     type: "Interface"
@@ -195,19 +234,11 @@ elements:
     status: "Proposed"
     version: "1.0"
     order: 0
-    note: ""
+    note: |
+      From: General Public
+      To: Provide NB support
     links:
       - "Association «OUT» → Provide NB support"  # {B58C8B05-BF0C-4226-8F45-2476B00FFC91} → {3577F755-7777-4b9e-AAF8-F0A7532ACE4A}
-  - name: "Request information"
-    guid: "{61F9DAAD-6D92-4838-91FA-32D72DE2C4F4}"
-    type: "Interface"
-    stereotype: "FRAME_Low_Level_Data_Flow"
-    status: "Proposed"
-    version: "1.0"
-    order: 0
-    note: ""
-    links:
-      - "Association «OUT» → Validation of completeness"  # {A36AB267-3BE5-4705-B603-F1E5D6F9988C} → {3D931997-C649-47cd-B6F6-261C8137D773}
   - name: "Request relevant SD information"
     guid: "{05F09947-F13A-4ae9-B944-9672D5872516}"
     type: "Interface"
@@ -215,7 +246,9 @@ elements:
     status: "Proposed"
     version: "1.0"
     order: 0
-    note: ""
+    note: |
+      From: Managing general requests regarding self-declaration
+      To: Management of self-declaration
     links:
       - "Association «OUT» → Management of self-declaration"  # {DE78990C-9131-4662-92A3-49EFA2BCB7F8} → {12F2142B-1179-455b-9F44-335FE9CBB4D2}
   - name: "Request report"
@@ -225,7 +258,9 @@ elements:
     status: "Proposed"
     version: "1.0"
     order: 0
-    note: ""
+    note: |
+      From: Member States
+      To: Reporting of self-declaration and compliance assessment results
     links:
       - "Association «OUT» → Reporting of self-declaration and compliance assessment results"  # {0DAAE382-FF34-4827-B929-F7301EA47E03} → {395DED00-A80C-418c-A674-B65B7434A6E0}
   - name: "Request self-declaration"
@@ -235,19 +270,11 @@ elements:
     status: "Proposed"
     version: "1.0"
     order: 0
-    note: ""
+    note: |
+      From: Reporting of self-declaration and compliance assessment results
+      To: Self-declaration Storage
     links:
       - "Association «OUT» → Self-declaration Storage"  # {CF46D973-2A87-498f-8516-96DB0E513A4C} → {3D7503E7-23C4-4846-A45A-D63C8A3B4CC5}
-  - name: "Request self-declaration"
-    guid: "{B7AFE5CB-2A70-48ce-9ACC-91B5CA776A2B}"
-    type: "Interface"
-    stereotype: "FRAME_Low_Level_Data_Flow"
-    status: "Proposed"
-    version: "1.0"
-    order: 0
-    note: ""
-    links:
-      - "Association «OUT» → Compliance Assessment"  # {1375CAC1-0383-43b4-B3E7-716C014E6BA3} → {91C7B206-E453-4ab9-B0B6-D08FDE6075D8}
   - name: "Request status of SD"
     guid: "{D53E8616-4F42-4b0d-9A5B-35DB6ABA28D3}"
     type: "Interface"
@@ -255,29 +282,11 @@ elements:
     status: "Proposed"
     version: "1.0"
     order: 0
-    note: ""
+    note: |
+      From: Reporting of self-declaration and compliance assessment results
+      To: Self-declaration Journal
     links:
       - "Association «OUT» → Self-declaration Journal"  # {6F7EA2A2-58CE-4876-BDC2-CC1240A8DBA4} → {4EA8D521-CA96-4ea3-90A3-D303CC0AACA8}
-  - name: "Response"
-    guid: "{3F75E697-74ED-4d4f-852D-4F9B4927C399}"
-    type: "Interface"
-    stereotype: "FRAME_Low_Level_Data_Flow"
-    status: "Proposed"
-    version: "1.0"
-    order: 0
-    note: ""
-    links:
-      - "Association «OUT» → Handling Non-Compliance"  # {04CFC120-2D1C-47f8-88B3-5D259E28C216} → {1D8C33F8-CF43-44a6-8E15-D5CC49B29943}
-  - name: "Response"
-    guid: "{BB8C1624-E80F-46f9-9D4E-137043169ED0}"
-    type: "Interface"
-    stereotype: "FRAME_Low_Level_Data_Flow"
-    status: "Proposed"
-    version: "1.0"
-    order: 0
-    note: ""
-    links:
-      - "Association «OUT» → Handling Non-Compliance"  # {B4CFE6BC-213F-44f4-8913-327BF0BDA8C5} → {1D8C33F8-CF43-44a6-8E15-D5CC49B29943}
   - name: "SD details"
     guid: "{6F33D268-087B-4626-946B-36BE3CE60116}"
     type: "Interface"
@@ -285,9 +294,71 @@ elements:
     status: "Proposed"
     version: "1.0"
     order: 0
-    note: ""
+    note: |
+      From: Receive self-declaration
+      To: Validation of completeness
     links:
       - "Association «OUT» → Validation of completeness"  # {DBA63A8B-BAD0-4791-8622-62845E58BB78} → {3D931997-C649-47cd-B6F6-261C8137D773}
+  - name: "Self-declaration for compliance assessment"
+    guid: "{B7AFE5CB-2A70-48ce-9ACC-91B5CA776A2B}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      From: Self-declaration Storage
+      To: Compliance Assessment
+    links:
+      - "Association «OUT» → Compliance Assessment"  # {1375CAC1-0383-43b4-B3E7-716C014E6BA3} → {91C7B206-E453-4ab9-B0B6-D08FDE6075D8}
+  - name: "Self-declaration information for non-compliance"
+    guid: "{BB8C1624-E80F-46f9-9D4E-137043169ED0}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      From: Managing general requests regarding self-declaration
+      To: Handling Non-Compliance
+    links:
+      - "Association «OUT» → Handling Non-Compliance"  # {B4CFE6BC-213F-44f4-8913-327BF0BDA8C5} → {1D8C33F8-CF43-44a6-8E15-D5CC49B29943}
+  - name: "Self-declaration status for non-compliance"
+    guid: "{043B9875-7D84-4fa5-A611-0D64FC6EB57D}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      From: Self-declaration Journal
+      To: Handling Non-Compliance
+    links:
+      - "Association «OUT» → Handling Non-Compliance"  # {05AF7B06-4030-45a0-A725-295EDB7E0D9B} → {1D8C33F8-CF43-44a6-8E15-D5CC49B29943}
+  - name: "Self-declaration status for reporting"
+    guid: "{CB5D3CF4-3486-4ced-AFF0-E84DF5C64C48}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      From: Self-declaration Journal
+      To: Reporting of self-declaration and compliance assessment results
+    links:
+      - "Association «OUT» → Reporting of self-declaration and compliance assessment results"  # {3916ACDA-8E83-4b34-BCC0-7C90FBEC6371} → {395DED00-A80C-418c-A674-B65B7434A6E0}
+  - name: "Self-declarations for reporting"
+    guid: "{E7A8112B-9F75-4601-B108-9964DC50FED0}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      From: Self-declaration Storage
+      To: Reporting of self-declaration and compliance assessment results
+    links:
+      - "Association «OUT» → Reporting of self-declaration and compliance assessment results"  # {61C8A8A4-DFF7-480c-8322-27B18C8EAEBA} → {395DED00-A80C-418c-A674-B65B7434A6E0}
   - name: "Send report"
     guid: "{616DB36E-4251-4b12-BD54-58105CB20637}"
     type: "Interface"
@@ -296,9 +367,36 @@ elements:
     version: "1.0"
     order: 0
     note: |
+      From: Reporting of self-declaration and compliance assessment results
+      To: Member States
+      
       Information about received, reviewed, performed random inspections and actions taken for improvement of data quality.
     links:
       - "Association «OUT» → Member States"  # {05D00B1E-B8DD-4008-A8CD-9196C30EED70} → {E2280DC8-3870-4bca-B9D9-0B0F048FF2BE}
+  - name: "Stakeholder contact details"
+    guid: "{61F9DAAD-6D92-4838-91FA-32D72DE2C4F4}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      From: Stakeholder List
+      To: Validation of completeness
+    links:
+      - "Association «OUT» → Validation of completeness"  # {A36AB267-3BE5-4705-B603-F1E5D6F9988C} → {3D931997-C649-47cd-B6F6-261C8137D773}
+  - name: "Stakeholder data"
+    guid: "{A0A7EF5B-0F75-48ac-9FD3-C6DB2915A800}"
+    type: "Interface"
+    stereotype: "FRAME_Low_Level_Data_Flow"
+    status: "Proposed"
+    version: "1.0"
+    order: 0
+    note: |
+      From: Stakeholder List
+      To: Manage Stakeholder List
+    links:
+      - "Association «OUT» → Manage Stakeholder List"  # {7F8F97D3-ED3F-4b1f-A063-412780499212} → {35C53FD1-0C8A-49dc-85AE-E2D72F886A54}
   - name: "Status SD"
     guid: "{80647EEC-C009-432c-9451-A433608E8B8B}"
     type: "Interface"
@@ -306,7 +404,9 @@ elements:
     status: "Proposed"
     version: "1.0"
     order: 0
-    note: ""
+    note: |
+      From: Management of self-declaration
+      To: Validation of completeness
     links:
       - "Association «OUT» → Validation of completeness"  # {A2969940-74EF-442d-8B08-773EEEDCCBB3} → {3D931997-C649-47cd-B6F6-261C8137D773}
   - name: "Status details SD"
@@ -316,7 +416,9 @@ elements:
     status: "Proposed"
     version: "1.0"
     order: 0
-    note: ""
+    note: |
+      From: Self-declaration Journal
+      To: Compliance Assessment
     links:
       - "Association «OUT» → Compliance Assessment"  # {D651B833-41A7-40c5-8E4B-8B93F4935272} → {91C7B206-E453-4ab9-B0B6-D08FDE6075D8}
   - name: "Status of CA"
@@ -326,20 +428,11 @@ elements:
     status: "Proposed"
     version: "1.0"
     order: 0
-    note: ""
+    note: |
+      From: Compliance Assessment
+      To: Data- and/or Service provider(s)
     links:
       - "Association «OUT» → Data- and/or Service provider(s)"  # {05EDCB6D-3A69-42a6-8FAC-F25F87DC9A6A} → {4BBDECD9-7CB6-4269-9AA6-DE1A948C9995}
-  - name: "Status of CA"
-    guid: "{89C549FA-9351-4a9f-B8CB-02E00D983144}"
-    type: "Interface"
-    stereotype: "FRAME_Low_Level_Data_Flow"
-    status: "Proposed"
-    version: "1.0"
-    order: 0
-    note: ""
-    links:
-      - "Association «OUT» → Compliance Assessment"  # {5E0F5E97-682E-41bd-A567-1D11FB6FF795} → {91C7B206-E453-4ab9-B0B6-D08FDE6075D8}
-      - "Association «OUT» → Compliance assessment registry"  # {57798E39-825F-4e49-9FF5-47FC5FAE9953} → {D2A4C9B8-BDD7-427c-81A6-1411C0F7B280}
   - name: "Status of CA"
     guid: "{B966942A-D11B-46f8-8082-B2CAAAF82E75}"
     type: "Interface"
@@ -347,7 +440,9 @@ elements:
     status: "Proposed"
     version: "1.0"
     order: 0
-    note: ""
+    note: |
+      From: Handling Non-Compliance
+      To: Compliance assessment registry
     links:
       - "Association «OUT» → Compliance assessment registry"  # {E6942CE8-898F-44ab-8124-F3C821A06EE5} → {D2A4C9B8-BDD7-427c-81A6-1411C0F7B280}
   - name: "Status of SD"
@@ -357,7 +452,9 @@ elements:
     status: "Proposed"
     version: "1.0"
     order: 0
-    note: ""
+    note: |
+      From: Self-declaration Storage
+      To: Management of self-declaration
     links:
       - "Association «OUT» → Management of self-declaration"  # {403D41E3-1738-49b0-8D8C-9E66C894A222} → {12F2142B-1179-455b-9F44-335FE9CBB4D2}
   - name: "Status of request"
@@ -367,7 +464,9 @@ elements:
     status: "Proposed"
     version: "1.0"
     order: 0
-    note: ""
+    note: |
+      From: Managing general requests regarding self-declaration
+      To: Data- and/or Service provider(s)
     links:
       - "Association «OUT» → Data- and/or Service provider(s)"  # {C9DE39C1-9C7E-4dcb-9A9B-404D0B563379} → {4BBDECD9-7CB6-4269-9AA6-DE1A948C9995}
   - name: "Status of requested SD"
@@ -377,19 +476,11 @@ elements:
     status: "Proposed"
     version: "1.0"
     order: 0
-    note: ""
+    note: |
+      From: Self-declaration Journal
+      To: Management of self-declaration
     links:
       - "Association «OUT» → Management of self-declaration"  # {B3072EDB-C5A8-44a2-9DE4-7DE270F0968A} → {12F2142B-1179-455b-9F44-335FE9CBB4D2}
-  - name: "Status request on SD"
-    guid: "{043B9875-7D84-4fa5-A611-0D64FC6EB57D}"
-    type: "Interface"
-    stereotype: "FRAME_Low_Level_Data_Flow"
-    status: "Proposed"
-    version: "1.0"
-    order: 0
-    note: ""
-    links:
-      - "Association «OUT» → Handling Non-Compliance"  # {05AF7B06-4030-45a0-A725-295EDB7E0D9B} → {1D8C33F8-CF43-44a6-8E15-D5CC49B29943}
   - name: "Status update"
     guid: "{28B4DEC2-D621-4b4e-AF18-B8E34B28E0A2}"
     type: "Interface"
@@ -397,19 +488,11 @@ elements:
     status: "Proposed"
     version: "1.0"
     order: 0
-    note: ""
+    note: |
+      From: Compliance Assessment
+      To: Self-declaration Journal
     links:
       - "Association «OUT» → Self-declaration Journal"  # {8DE8E689-5FC7-4726-9307-6855FEED8A40} → {4EA8D521-CA96-4ea3-90A3-D303CC0AACA8}
-  - name: "Store CA result"
-    guid: "{49E07AE1-EBBA-436a-8648-93FBA8754532}"
-    type: "Interface"
-    stereotype: "FRAME_Low_Level_Data_Flow"
-    status: "Proposed"
-    version: "1.0"
-    order: 0
-    note: ""
-    links:
-      - "Association «OUT» → Handling Non-Compliance"  # {755A8CCC-E95B-47cd-90C9-EE184E8040F9} → {1D8C33F8-CF43-44a6-8E15-D5CC49B29943}
   - name: "Store CA result"
     guid: "{9105DF71-6B49-44e7-B2E3-4EFC9779D6BB}"
     type: "Interface"
@@ -417,7 +500,9 @@ elements:
     status: "Proposed"
     version: "1.0"
     order: 0
-    note: ""
+    note: |
+      From: Compliance Assessment
+      To: Compliance assessment registry
     links:
       - "Association «OUT» → Compliance assessment registry"  # {21A2E5E0-DCDE-42f0-B57F-440C213D232D} → {D2A4C9B8-BDD7-427c-81A6-1411C0F7B280}
   - name: "Store Information"
@@ -427,7 +512,9 @@ elements:
     status: "Proposed"
     version: "1.0"
     order: 0
-    note: ""
+    note: |
+      From: Validation of completeness
+      To: Stakeholder List
     links:
       - "Association «OUT» → Stakeholder List"  # {0BDF35BD-2F3F-47ae-ACC8-57B9CA211436} → {28C2E2B1-65B4-47fd-8903-FE3449030F55}
   - name: "Store registered SD in storage"
@@ -437,7 +524,9 @@ elements:
     status: "Proposed"
     version: "1.0"
     order: 0
-    note: ""
+    note: |
+      From: Management of self-declaration
+      To: Self-declaration Storage
     links:
       - "Association «OUT» → Self-declaration Storage"  # {EAA119EC-7D18-4307-97C8-24F25D80DF22} → {3D7503E7-23C4-4846-A45A-D63C8A3B4CC5}
   - name: "Store self-declaration"
@@ -448,6 +537,9 @@ elements:
     version: "1.0"
     order: 0
     note: |
+      From: Validation of completeness
+      To: Management of self-declaration
+      
       Store initial proofed Self Declaration
     links:
       - "Association «OUT» → Management of self-declaration"  # {093F4208-87E4-4e1c-81E2-72635EADDCE0} → {12F2142B-1179-455b-9F44-335FE9CBB4D2}
@@ -459,6 +551,9 @@ elements:
     version: "1.0"
     order: 0
     note: |
+      From: Manage Stakeholder List
+      To: Stakeholder List
+      
       The National Body has to be able to receive, process and store stakeholder information from different sources.
     links:
       - "Association «OUT» → Stakeholder List"  # {A25E2473-4B51-413b-A684-5F47AEE16745} → {28C2E2B1-65B4-47fd-8903-FE3449030F55}
@@ -469,7 +564,9 @@ elements:
     status: "Proposed"
     version: "1.0"
     order: 0
-    note: ""
+    note: |
+      From: Compliance Assessment
+      To: Self-declaration Storage
     links:
       - "Association «OUT» → Self-declaration Storage"  # {15EB8EA2-93EF-461e-8266-047693F1C4D4} → {3D7503E7-23C4-4846-A45A-D63C8A3B4CC5}
   - name: "Update journal information"
@@ -480,6 +577,9 @@ elements:
     version: "1.0"
     order: 0
     note: |
+      From: Management of self-declaration
+      To: Self-declaration Journal
+      
       An update or change of a Self-declaration or a change of related stakeholder will lead to a new entry within the Self-declaration journal. All documents received from respondents should be registered.
       Requirements: All documents received from respondents reviewed (for completeness) and registered in the system. In case of discrepancies the request should be sent to respondents.
     links:
@@ -491,7 +591,9 @@ elements:
     status: "Proposed"
     version: "1.0"
     order: 0
-    note: ""
+    note: |
+      From: Handling Non-Compliance
+      To: Self-declaration Journal
     links:
       - "Association «OUT» → Self-declaration Journal"  # {C5A304D3-532C-44d4-A03A-B459A71B6C71} → {4EA8D521-CA96-4ea3-90A3-D303CC0AACA8}
   - name: "Validation results"
@@ -501,7 +603,9 @@ elements:
     status: "Proposed"
     version: "1.0"
     order: 0
-    note: ""
+    note: |
+      From: Validation of completeness
+      To: Receive self-declaration
     links:
       - "Association «OUT» → Receive self-declaration"  # {69C34CAA-276A-41db-9FD8-CB68D3702C00} → {F49ACE9E-16BD-430e-AAFF-5A858FC334B9}
   - name: "receives relevant SD information"
@@ -511,6 +615,8 @@ elements:
     status: "Proposed"
     version: "1.0"
     order: 0
-    note: ""
+    note: |
+      From: Management of self-declaration
+      To: Managing general requests regarding self-declaration
     links:
       - "Association «OUT» → Managing general requests regarding self-declaration"  # {378EFCC5-381E-40ef-A63D-67E671B99348} → {45963755-0898-4846-8129-F2724C86B673}

@@ -16,7 +16,8 @@ elements:
       
       The compliance assessment store should contain the link to the used harmonized forms or comparable information (Member State specific). Furthermore, it should contain the contact details of the people involved and a clear description of the result reasoning, and a description of inconsistencies.
     links:
-      - "Association «IN» → Store CA result"  # {8B9327F9-FF11-427b-8481-65F7A1D6C034} → {49E07AE1-EBBA-436a-8648-93FBA8754532}
+      - "Association «IN» → Compliance assessment result"  # {8B9327F9-FF11-427b-8481-65F7A1D6C034} → {49E07AE1-EBBA-436a-8648-93FBA8754532}
+      - "Association «IN» → Previous compliance assessment results"  # {57798E39-825F-4e49-9FF5-47FC5FAE9953} → {89C549FA-9351-4a9f-B8CB-02E00D983144}
   - name: "Self-declaration Journal"
     guid: "{4EA8D521-CA96-4ea3-90A3-D303CC0AACA8}"
     type: "Object"
@@ -27,10 +28,10 @@ elements:
     note: |
       The repository should represent like a journal all changes regarding receiving, processing and results of self-declarations.
     links:
-      - "Association «IN» → Provide status of SD"  # {7773FB4E-71F6-4d56-87AD-22884147D3F3} → {CB5D3CF4-3486-4ced-AFF0-E84DF5C64C48}
+      - "Association «IN» → Self-declaration status for non-compliance"  # {5B87426A-0D30-4cb5-8F82-1DF29E34BFF1} → {043B9875-7D84-4fa5-A611-0D64FC6EB57D}
+      - "Association «IN» → Self-declaration status for reporting"  # {7773FB4E-71F6-4d56-87AD-22884147D3F3} → {CB5D3CF4-3486-4ced-AFF0-E84DF5C64C48}
       - "Association «IN» → Status details SD"  # {D583B26E-A818-4451-9681-BC104AB7D66E} → {89A547AC-1519-4a98-8C0B-35A678FA7586}
       - "Association «IN» → Status of requested SD"  # {C4EC1FBF-8B70-4ae4-8332-60D9EBE3A1D0} → {524E697F-9C46-42bb-B366-74B380D7F591}
-      - "Association «IN» → Status request on SD"  # {5B87426A-0D30-4cb5-8F82-1DF29E34BFF1} → {043B9875-7D84-4fa5-A611-0D64FC6EB57D}
   - name: "Self-declaration Storage"
     guid: "{3D7503E7-23C4-4846-A45A-D63C8A3B4CC5}"
     type: "Object"
@@ -53,8 +54,8 @@ elements:
       	- Covered Countries
       	- Delegated Regulation (RTTI, STTP, SRTI or MMTIS)
     links:
-      - "Association «IN» → Provide self-declaration"  # {A00962ED-5313-48b5-B876-B7372BCB29AB} → {E7A8112B-9F75-4601-B108-9964DC50FED0}
-      - "Association «IN» → Request self-declaration"  # {2FE086B2-AC5F-4a1c-806C-B8E2BC38E7FD} → {B7AFE5CB-2A70-48ce-9ACC-91B5CA776A2B}
+      - "Association «IN» → Self-declaration for compliance assessment"  # {2FE086B2-AC5F-4a1c-806C-B8E2BC38E7FD} → {B7AFE5CB-2A70-48ce-9ACC-91B5CA776A2B}
+      - "Association «IN» → Self-declarations for reporting"  # {A00962ED-5313-48b5-B876-B7372BCB29AB} → {E7A8112B-9F75-4601-B108-9964DC50FED0}
       - "Association «IN» → Status of SD"  # {C5E0E6FE-BB6E-4967-83E9-EFE6DFB02013} → {17E98F9A-7E4B-4e4c-9D4E-61F335A5A284}
       - "Association «adheres to» → Template for self-declaration"  # {43F55CEB-889F-4ffc-9390-31CBC4216AA9} → {7D17E92C-40B9-4747-8B9D-5D52B942D18F}
   - name: "Stakeholder List"
@@ -83,5 +84,5 @@ elements:
       	- 2nd communication way (postal address, telephone number)
       	- Date of last contact (Last interaction with stakeholder)
     links:
-      - "Association «IN» → Request data"  # {7D01BF41-E0EC-4721-B63A-217FE9438A66} → {A0A7EF5B-0F75-48ac-9FD3-C6DB2915A800}
-      - "Association «IN» → Request information"  # {53D54F69-52F1-485c-A14F-0AE6B3BF22CA} → {61F9DAAD-6D92-4838-91FA-32D72DE2C4F4}
+      - "Association «IN» → Stakeholder contact details"  # {53D54F69-52F1-485c-A14F-0AE6B3BF22CA} → {61F9DAAD-6D92-4838-91FA-32D72DE2C4F4}
+      - "Association «IN» → Stakeholder data"  # {7D01BF41-E0EC-4721-B63A-217FE9438A66} → {A0A7EF5B-0F75-48ac-9FD3-C6DB2915A800}
