@@ -12,7 +12,8 @@ Conventions (FRAME Repository V5.2):
   «IN»   Association  function / terminator / data store / functional area / system  →  data flow
   «OUT»  Association  data flow  →  function / terminator / data store / functional area / system
   «component of» Aggregation  part → whole  (low-level → high-level data flow, high-level → high-level data flow,
-                             low-level → high-level function → functional area → system, sub-terminator → terminator)
+                             low-level → high-level function → functional area → system)
+  «is Type of» Abstraction   sub-terminator → terminator (#68)
   «served by» Association     User Need → low-level function
   «belongs to» Association    part → whole  (User Need → User Need Topic → User Need Service → User Need Group)
 """
@@ -28,7 +29,7 @@ FUNC = {'FRAME_Low_Level_Function': 0, 'FRAME_High_Level_Function': 1, 'FRAME_Fu
 ENDPOINT = set(FUNC) | {'FRAME_Terminator', 'FRAME_Datastore'}
 UN = {'FRAME_User_Need': 0, 'FRAME_User_Need_Topic': 1, 'FRAME_User_Need_Service': 2, 'FRAME_User_Need_Group': 3}
 ISSUE = {'dangling': '', 'self-reference': '#62', 'in-out': '#69', 'componentof': '#80, #81', 'generalization': '#79',
-         'servedby': '', 'belongsto': '#16', 'stereotype-spelling': '#86', 'unused-flow': '#76', 'function-flows': '', 'function-parent': '',
+         'servedby': '', 'belongsto': '#16', 'subterminator': '#68', 'stereotype-spelling': '#86', 'unused-flow': '#76', 'function-flows': '', 'function-parent': '',
          'context-diagram': '#91', 'duplicate': '', 'release-hygiene': ''}
 norm = lambda s: (s or '').lower().replace(' ', '')
 
@@ -81,6 +82,8 @@ def main(argv):
                 R('componentof', f'«{k["st"]}» {label(s)} → {t["name"]} ({t["st"].replace("FRAME_", "")}) runs whole → part or between low-level flows')
             elif s['st'] in FUNC and t['st'] in FUNC and FUNC[s['st']] > FUNC[t['st']]:
                 R('componentof', f'«{k["st"]}» {label(s)} → {t["name"]} ({t["st"].replace("FRAME_", "")}) runs whole → part')
+        if s['st'] == t['st'] == 'FRAME_Terminator' and s['id'] != t['id'] and st != 'istypeof' and k['type'] != 'Dependency':
+            R('subterminator', f'{k["type"]} «{k["st"]}» {label(s)} → {t["name"]}: a sub-terminator «is Type of» its terminator')
         if st == 'belongsto' and s['st'] in UN and t['st'] in UN and UN[s['st']] > UN[t['st']]:
             R('belongsto', f'«{k["st"]}» {label(s)} → {t["name"]} ({t["st"].replace("FRAME_", "")}) runs whole → part')
         if k['type'] == 'Generalization' and (s['st'] in FLOW or t['st'] in FLOW):
@@ -111,7 +114,7 @@ def main(argv):
     ctx = {o for o, ds in on_diagram.items() if any('Context Diagram' in (d or '') for d in ds)}
     if ctx:
         for o in repo:
-            sub = any(norm(k['st']) == 'componentof' and k['s']['id'] == o['id'] and other['st'] == 'FRAME_Terminator' for k, other in links[o['id']])
+            sub = any(norm(k['st']) in ('istypeof', 'componentof') and k['s']['id'] == o['id'] and other['st'] == 'FRAME_Terminator' for k, other in links[o['id']])
             if o['st'] == 'FRAME_Terminator' and o['id'] not in ctx and o['type'] == 'Actor' and not sub:
                 if any(other['st'] == 'FRAME_High_Level_Data_Flow' for _, other in links[o['id']]):
                     W('context-diagram', f'{label(o)} has high-level data flows but is not in the FRAME Context Diagram')

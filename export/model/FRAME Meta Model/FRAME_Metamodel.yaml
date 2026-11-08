@@ -411,7 +411,6 @@ elements:
       Terminators/Actors define the world outside the FRAME Architecture, i.e. artefacts that are not modelled within it. Actors are used to identify particular variants of a Terminator, e.g. different types of vehicle and drivers, or the different roles that a traveller may take during a trip.
     links:
       - "Abstraction «is Type of» → Terminator/ Subterminator"  # {A9E89699-D75A-4567-AB30-91C9EDF973E8} → {C619D94C-1176-4bee-86C2-D8C4FF8FB634}
-      - "Aggregation «component of» → Terminator/ Subterminator"  # {FC6C9DC5-A966-4558-99DD-EBA63703D50A} → {C619D94C-1176-4bee-86C2-D8C4FF8FB634}
       - "Association «IN» → FRAME_High_Level_Data_Flow"  # {570C2EDF-9B4F-43ae-A3E8-299C858444EF} → {35F631D7-65CE-4df9-A861-1B12E39AC463}
       - "Association «IN» → FRAME_Low_Level_Data_Flow"  # {219589AF-C19C-4aee-BB75-E387E78846D7} → {3DA4C5ED-3529-4c62-BB04-DBC9641EA039}
       - "Association «defines» → Application"  # {F4449BB0-FFFB-4ebf-8177-03B4B201D828} → {9E05B1AE-4239-4341-BCF2-010BB287A0BB}

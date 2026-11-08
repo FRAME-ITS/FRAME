@@ -27,7 +27,6 @@ Built by `tools/fixes/2026-11-06_mdg_technology_V1.3.py`.
 - Quick Linker removed: «delivered by» ITS_Service → ITS_Service_Added_Value
 - Quick Linker removed: «defines» ITS_Vision → Requirement
 - Quick Linker removed: «defines» ITS_Service_Added_Value → User_Need
-- Quick Linker added: «component of» Terminator → Terminator
 - Quick Linker added: «component of» High_Level_Function → High_Level_Function
 - Quick Linker added: «component of» Functional_Area → System
 - Quick Linker added: «IN» System → High_Level_Data_Flow
@@ -64,7 +63,7 @@ Built by `tools/fixes/2026-11-06_mdg_technology_V1.3.py`.
 - Quick Linker: Low_Level_Function – 8 rules merged into 6
 - Quick Linker: Mission_Statement – 2 rules merged into 1
 - Quick Linker: Role – 4 rules merged into 3
-- Quick Linker: Terminator – 8 rules merged into 7
+- Quick Linker: Terminator – 7 rules merged into 6
 - Quick Linker: User_Need – 4 rules merged into 3
 - Quick Linker: TDF_LowLevelFunction – 4 rules merged into 3
 - Quick Linker: UML links hidden (_HideUmlLinks) for Functional_Area, High_Level_Function, Low_Level_Function, High_Level_Data_Flow, Low_Level_Data_Flow, Terminator, Datastore, System, User_Need, User_Need_Topic, User_Need_Service, User_Need_Group

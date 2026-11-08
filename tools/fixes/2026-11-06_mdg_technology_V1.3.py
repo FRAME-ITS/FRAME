@@ -4,7 +4,7 @@ usage: python tools/fixes/2026-11-06_mdg_technology_V1.3.py [model/FRAME.qea] [o
 Base: technology V1.2 as it was stored in the model (drafts/latest/toolbox/FRAME_Technology_V1.2_embedded.xml). Changes:
   1. Quick Linker rules (stereotypedrelationship) that point the opposite way to the model are reversed
      (function hierarchy «component of», user-need hierarchy «belongs to», «associate» Mission Statement – ITS Vision).
-     Rules added for patterns the FRAME Repository uses throughout (sub-terminator, HL function in HL function,
+     Rules added for patterns the FRAME Repository uses throughout (HL function in HL function,
      functional area in system, IN/OUT of System and functional areas in the Context / functional-area diagrams) and, in the
      motivation layer, Business Expectation «defines» Mission Statement (FRAME Meta Model) and ITS Service «adheres to» Specification;
      physical/functional/communication views: Application «contains» LL function / data store / physical data flow,
@@ -102,8 +102,8 @@ for st, src, tgt in REVERSE:
     edit_rules(tgt, st, lambda t: t + [P + src] if P + src not in t else t)
     log.append(f'Quick Linker reversed: «{st}» {src[6:]} → {tgt[6:]}  becomes  {tgt[6:]} → {src[6:]}')
 # 1b. rules for patterns the FRAME Repository uses throughout but the Quick Linker does not offer
-ADD = [('component of', 'FRAME_Terminator', 'FRAME_Terminator'),            # sub-terminator → terminator
-       ('component of', 'FRAME_High_Level_Function', 'FRAME_High_Level_Function'),
+# sub-terminator → terminator is «is Type of» (already in V1.2; issue #68, decided 2026-11-08), not «component of»
+ADD = [('component of', 'FRAME_High_Level_Function', 'FRAME_High_Level_Function'),
        ('component of', 'FRAME_Functional_Area', 'FRAME_System'),
        ('IN', 'FRAME_System', 'FRAME_High_Level_Data_Flow'), ('OUT', 'FRAME_High_Level_Data_Flow', 'FRAME_System'),   # Context Diagram
        ('IN', 'FRAME_Functional_Area', 'FRAME_Low_Level_Data_Flow'), ('OUT', 'FRAME_Low_Level_Data_Flow', 'FRAME_Functional_Area'),

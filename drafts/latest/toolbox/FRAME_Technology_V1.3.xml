@@ -720,7 +720,6 @@ AAAAAHN0ci5kYXRVVAUAB2fRu19QSwUGAAAAAAEAAQA+AAAAUAEAAAAA</Image>
 						<stereotypedrelationships>
 							<stereotypedrelationship stereotype="FRAME_Profile::adheres to" constraint="FRAME_Profile::FRAME_Agreement"/>
 							<stereotypedrelationship stereotype="FRAME_Profile::use" constraint="FRAME_Profile::FRAME_Physical_Data_Flow"/>
-							<stereotypedrelationship stereotype="FRAME_Profile::component of" constraint="FRAME_Profile::FRAME_Terminator"/>
 							<stereotypedrelationship stereotype="FRAME_Profile::defines" constraint="FRAME_Profile::FRAME_Requirement;FRAME_Profile::FRAME_Application"/>
 							<stereotypedrelationship stereotype="FRAME_Profile::IN" constraint="FRAME_Profile::FRAME_High_Level_Data_Flow;FRAME_Profile::FRAME_Low_Level_Data_Flow"/>
 							<stereotypedrelationship stereotype="FRAME_Profile::is Type of" constraint="FRAME_Profile::FRAME_Terminator"/>
