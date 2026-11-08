@@ -55,8 +55,8 @@ elements:
     note: |
       The European Commission (EC) is part of the executive branch of the European Union (EU) responsible for proposing new European legislation, implementing the decisions of the European Parliament and the Council of the EU, and managing EU policies and budget.
     links:
+      - "Association «defines» → Seamless EU-wide provision of data and services"  # {86E03E7F-4B78-4118-A8BB-5853FCDD2272} → {BFC9524E-A1D0-415a-9CAA-50D01DACE293}
       - "Association «has» → EU-wide coverage and harmonized delivery of ITS services"  # {E004E606-C9FC-4b8e-BC44-CDD73D703C9E} → {40E6AD55-91B5-46d0-97FB-DAD263613E62}
-      - "Usage «Instantiate» → Seamless EU-wide provision of data and services"  # {86E03E7F-4B78-4118-A8BB-5853FCDD2272} → {BFC9524E-A1D0-415a-9CAA-50D01DACE293}
   - name: "Member State"
     guid: "{2DC22194-A127-42ba-9AEA-E8CBDD2EC795}"
     type: "Actor"
@@ -68,16 +68,6 @@ elements:
       A Member State of the European Union is a country that is part of the European Union (EU), a political and economic union. There are 27 member states as of 2023. These states are party to the EU’s founding treaties and are subject to the privileges and obligations of membership. They have agreed to share their sovereignty through the institutions of the EU in certain aspects of government.
     links:
       - "Association «has» → Better mobility services for citizens"  # {7FE3E091-1329-4d84-8635-F262E70A8CE2} → {B1BC2597-7347-4c5e-AD8F-54DD1CD5430C}
-  - name: "NAP"
-    guid: "{872B10AE-A464-430f-AC5D-4D944C75532F}"
-    type: "Actor"
-    stereotype: "FRAME_Stakeholder"
-    status: "Proposed"
-    version: "1.0"
-    order: 0
-    note: ""
-    links:
-      - "Association «has» → Clear set of requirements"  # {96973249-5DCE-4663-B393-5B3AE4BD73DA} → {C5BF4F37-E65D-4998-BC18-CF0C0F8F8AF9}
   - name: "NAP Operator"
     guid: "{4B4D9772-CCE6-459c-B5E0-80E3C5C32674}"
     type: "Actor"

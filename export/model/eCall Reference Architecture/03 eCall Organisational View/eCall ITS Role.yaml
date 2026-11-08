@@ -18,16 +18,6 @@ elements:
       "Role Value": ""
       "Role View": ""
     note: ""
-    links:
-      - "Abstraction → Allocate eCall to correct PSAP"  # {F53576E9-D557-47ce-BC23-C3CD4AFEF06B} → {38F667E6-9BCB-40cd-B504-74A5F5C8F2BC}
-      - "Abstraction → Forward eCall to selected PSAP"  # {3639CBB5-8725-43c0-A17A-6F12540258EF} → {F9BAA34B-5B75-4b2e-B1EB-B590140474D9}
-      - "Abstraction → Interface to selected PSAP"  # {C70D4F4D-65EC-4ac8-9945-322E1CF79262} → {968FFA03-232F-4bc9-B2D7-5F04A0DD982A}
-      - "Abstraction → Receive eCall"  # {0F91ED2C-AC69-434c-B0B2-3D626E868172} → {6F84C9AE-1460-4f4b-8497-23E18FE2A0FE}
-      - "Abstraction → Setup active communication link"  # {32C45A5E-C17C-44c3-B6EF-07085A3C3740} → {9363B169-BE2F-4453-B81E-3A92E0110536}
-      - "Association → Third Party Service Provider"  # {4707AB6C-BE39-4e08-BFFB-738DEC1D0C58} → {B95642FE-BB74-481c-9923-249609098B53}
-      - "Association «accepted by» → Network Usage Contract"  # {77D2DFC3-0C62-4e35-B87E-AF63CA47734A} → {7798C178-BD30-4830-B7D4-16A395506D5F}
-      - "Association «accepted by» → eCall Delegated Regulation Mobile Network Systems"  # {36061676-A498-4773-AD44-D77CD5182F8F} → {1B607CF4-214F-469e-A7F0-5327CE16574D}
-      - "Association «defines» → eCall transaction"  # {D074461B-CCF5-498a-90F9-335F36786C4E} → {67CE4961-3F29-4c10-8D52-C5CBEC5BC70D}
   - name: "PSAP Operator"
     guid: "{C1ADF028-16CF-46c1-B6F5-8C88B29DD830}"
     type: "Object"
@@ -41,9 +31,6 @@ elements:
       "Role Value": ""
       "Role View": ""
     note: ""
-    links:
-      - "Association «accepted by» → eCall Delegated Regulation Public Service Answering Point - PSAP Systems"  # {009163AF-759C-4edc-A39C-429D6983C209} → {82173E21-2622-48bb-9D3D-246516F61B6D}
-      - "Association «defines» → eCall PSAP Operator"  # {21B21692-A509-436d-8369-321AB1A728DB} → {6C6C2F43-F7FF-479b-A712-DD7400ABAC61}
   - name: "Public Authorithy - EU Member States"
     guid: "{96C28E87-6CE7-4957-950A-ACD1C313C7D7}"
     type: "Object"
@@ -57,6 +44,10 @@ elements:
       "Role Value": ""
       "Role View": ""
     note: ""
+    links:
+      - "Association «adheres to» → eCall Delegated Regulation In Vehicle Systems"  # {01AE3A90-59A8-463f-A275-77EDD1A83EA4} → {DA146232-5A97-481d-A114-3A383988E3C2}
+      - "Association «adheres to» → eCall Delegated Regulation Mobile Network Systems"  # {57A0C6D6-BAA5-4f07-B633-B54E7BF953AB} → {1B607CF4-214F-469e-A7F0-5327CE16574D}
+      - "Association «adheres to» → eCall Delegated Regulation Public Service Answering Point - PSAP Systems"  # {A0521499-F0E9-4560-9F64-40235F6A16B3} → {82173E21-2622-48bb-9D3D-246516F61B6D}
   - name: "Third Party Service Provider"
     guid: "{B95642FE-BB74-481c-9923-249609098B53}"
     type: "Object"
@@ -72,9 +63,7 @@ elements:
     note: |
       Optional: Organization which separates real eCalls from other requests from driver.
     links:
-      - "Association → PSAP Operator"  # {F1570283-132B-4f6a-9174-8B5CB7233046} → {C1ADF028-16CF-46c1-B6F5-8C88B29DD830}
-      - "Association «accepted by» → eCall additional Service"  # {9D045BF3-5D40-4f3f-BA5C-4F231544C18F} → {7FAE0707-8124-469e-B459-1941A7BD00E7}
-      - "Association «defines» → Service Partner"  # {CCC48418-00A8-4913-9A26-67A5C73B907C} → {44E8AD11-AAE1-4778-9C5F-B4DCC4F12477}
+      - "Association «adheres to» → eCall additional Service"  # {9D045BF3-5D40-4f3f-BA5C-4F231544C18F} → {7FAE0707-8124-469e-B459-1941A7BD00E7}
   - name: "Vehicle Manufacturer"
     guid: "{2B124BA8-846E-41d9-B4E4-51DF61F59E6D}"
     type: "Object"
@@ -88,9 +77,6 @@ elements:
       "Role Value": ""
       "Role View": ""
     note: ""
-    links:
-      - "Association «accepted by» → eCall Delegated Regulation In Vehicle Systems"  # {F18E745E-F8E2-4232-802A-24C5F04EC0B7} → {DA146232-5A97-481d-A114-3A383988E3C2}
-      - "Association «defines» → eCall In Vehicle System"  # {7AA39CE0-9A67-4f64-AFFC-5E70413C5719} → {6BD43EDE-C6BB-4b9a-9F42-5E58564320F4}
   - name: "eCall - Generator"
     guid: "{A9B47171-ABC4-4e66-859E-5C320E6FC5DB}"
     type: "Object"
@@ -104,11 +90,6 @@ elements:
       "Role Value": ""
       "Role View": ""
     note: ""
-    links:
-      - "Abstraction → Create eCall"  # {9F6BF2A4-14FF-4685-96BF-F59A12136B20} → {005DBDE4-8B98-4079-966D-1E1AF39FF583}
-      - "Abstraction → Receive PSAP call"  # {BF932CD7-F960-4b05-A544-10AA7B64F418} → {3DF8FBE7-01B9-4828-94A8-A55708FCFF0F}
-      - "Abstraction → Send eCall"  # {C6CCC75C-B439-45a8-8AFC-4EA9415D021D} → {11602949-A865-409d-9F0C-91D7E21C99F0}
-      - "Abstraction → Trigger eCall"  # {32F5CD4D-91D6-4764-8A15-EEB9AB707F26} → {FF0453B6-2A46-4229-9916-F6C48774C162}
   - name: "eCall Driver"
     guid: "{3DDC8409-8542-4fed-AB8E-1E040CF78302}"
     type: "Object"
@@ -123,6 +104,5 @@ elements:
       "Role View": ""
     note: ""
     links:
-      - "Association «accepted by» → Third Party service agreement"  # {D094ABA9-CF41-44a0-A0D8-553909819524} → {BEA8E2A4-80A9-48c9-B190-5828D7B3A106}
-      - "Association «accepted by» → Vehicle Purchasing Contract"  # {4AF89F5D-4841-4658-A4F2-FED747A69C35} → {8E15F8DA-AA35-4d11-8FB2-55DB6F6E81D7}
-      - "Association «defines» → eCall vehicle driver"  # {F3A07D2E-3D00-4159-BE3B-9386AF78CE9A} → {C55ED064-85A8-4550-A20C-7DD49679AFF5}
+      - "Association «adheres to» → Third Party service agreement"  # {D094ABA9-CF41-44a0-A0D8-553909819524} → {BEA8E2A4-80A9-48c9-B190-5828D7B3A106}
+      - "Association «adheres to» → Vehicle Purchasing Contract"  # {4AF89F5D-4841-4658-A4F2-FED747A69C35} → {8E15F8DA-AA35-4d11-8FB2-55DB6F6E81D7}

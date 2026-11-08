@@ -159,8 +159,8 @@ elements:
     note: |
       Personal C-ITS stations are implemented on standard communication interfaces and messages and able to be extended in the future.
     links:
-      - "Association «defines» → C-ITS Service provider"  # {885BC552-6A51-4aa1-A935-9C6B122685DC} → {3013F2AA-5BC3-4d57-8AFA-790BBA733C21}
-      - "Association «defines» → EU Citizen in one of the member states"  # {251C1B1D-F512-4dee-B432-6AB3E510DDA1} → {E8695FF6-1351-4508-97CF-980CF0604B41}
+      - "Association «delivers value to» → C-ITS Service provider"  # {885BC552-6A51-4aa1-A935-9C6B122685DC} → {3013F2AA-5BC3-4d57-8AFA-790BBA733C21}
+      - "Association «delivers value to» → EU Citizen in one of the member states"  # {251C1B1D-F512-4dee-B432-6AB3E510DDA1} → {E8695FF6-1351-4508-97CF-980CF0604B41}
   - name: "C-ITS_Service_Added_Security"
     guid: "{1FEF62FC-5779-4e44-946F-F988E52BD5D6}"
     type: "Class"
@@ -173,7 +173,7 @@ elements:
     note: |
       Public authorities enhance the security of data transmission to mobile travellers and monitor the quality of the provided information services.
     links:
-      - "Association «defines» → EU Member states, public authorities"  # {115C7383-A6E5-4941-8079-62B589921561} → {07E0D60C-2D04-4079-A5AF-99126D64B7DF}
+      - "Association «delivers value to» → EU Member states, public authorities"  # {115C7383-A6E5-4941-8079-62B589921561} → {07E0D60C-2D04-4079-A5AF-99126D64B7DF}
   - name: "C-ITS_Service_Added_Value - compatibility with tolling"
     guid: "{8108435A-4120-4c5d-91F9-0482B6E69237}"
     type: "Class"
@@ -186,7 +186,7 @@ elements:
     note: |
       Because C-ITS is based on standards, the compliance with existing tolling systems on European motorway networks has been demonstrated.
     links:
-      - "Association «defines» → Motorway operators and city public authorities"  # {F6844E8A-7EFB-4859-9C11-6737652CC66B} → {2E3B8D29-8DDA-48a6-AA48-C0060AEC0A2D}
+      - "Association «delivers value to» → Motorway operators and city public authorities"  # {F6844E8A-7EFB-4859-9C11-6737652CC66B} → {2E3B8D29-8DDA-48a6-AA48-C0060AEC0A2D}
   - name: "C-ITS_Service_Added_Value - direct V2V"
     guid: "{C7ECEC0B-2AB2-41c1-B66E-4DCF218E4A14}"
     type: "Class"
@@ -199,7 +199,7 @@ elements:
     note: |
       Because of C-ITS based on standards and open communication profiles the direct data communication with all vehicles in the vicinity is possible.
     links:
-      - "Association «defines» → Vehicle Manufacturors - OEM´s"  # {4F5B487C-A9D0-455b-85DF-3E2880253541} → {ED38DEDB-53CC-42c9-9686-EF58A2EB5744}
+      - "Association «delivers value to» → Vehicle Manufacturors - OEM´s"  # {4F5B487C-A9D0-455b-85DF-3E2880253541} → {ED38DEDB-53CC-42c9-9686-EF58A2EB5744}
   - name: "C-ITS_Service_Added_Value - trusted data communication"
     guid: "{D8706C62-D2BC-49e2-A3DF-8171B3CE7E96}"
     type: "Class"
@@ -212,8 +212,8 @@ elements:
     note: |
       C-ITS stations linked to the EU common trust domain and able to communicate data V2I and V2V in a trustful C-ITS environment
     links:
-      - "Association «defines» → Motorway operators and city public authorities"  # {F6771D5B-62E7-438e-8D10-7BE33D7999FC} → {2E3B8D29-8DDA-48a6-AA48-C0060AEC0A2D}
-      - "Association «defines» → Vehicle Manufacturors - OEM´s"  # {27C0986B-657A-4d81-8377-A8C2FDA823D4} → {ED38DEDB-53CC-42c9-9686-EF58A2EB5744}
+      - "Association «delivers value to» → Motorway operators and city public authorities"  # {F6771D5B-62E7-438e-8D10-7BE33D7999FC} → {2E3B8D29-8DDA-48a6-AA48-C0060AEC0A2D}
+      - "Association «delivers value to» → Vehicle Manufacturors - OEM´s"  # {27C0986B-657A-4d81-8377-A8C2FDA823D4} → {ED38DEDB-53CC-42c9-9686-EF58A2EB5744}
   - name: "C-ITS_Service_Added_Value, standard based station"
     guid: "{A1AECE81-0004-4e6a-9B12-604BC596A41E}"
     type: "Class"
@@ -226,8 +226,8 @@ elements:
     note: |
       C-ITS stations based on standards and communication profiles and therefore able to communicate V2I and V2V with all C-ITS actors in the network.
     links:
-      - "Association «defines» → Motorway operators and city public authorities"  # {EC8952B9-A9AB-4f83-9083-61089F74685D} → {2E3B8D29-8DDA-48a6-AA48-C0060AEC0A2D}
-      - "Association «defines» → Vehicle Manufacturors - OEM´s"  # {7EE43A65-128B-4d58-90DC-523835702104} → {ED38DEDB-53CC-42c9-9686-EF58A2EB5744}
+      - "Association «delivers value to» → Motorway operators and city public authorities"  # {EC8952B9-A9AB-4f83-9083-61089F74685D} → {2E3B8D29-8DDA-48a6-AA48-C0060AEC0A2D}
+      - "Association «delivers value to» → Vehicle Manufacturors - OEM´s"  # {7EE43A65-128B-4d58-90DC-523835702104} → {ED38DEDB-53CC-42c9-9686-EF58A2EB5744}
   - name: "C-ITS_Service_Added_communication interface"
     guid: "{79B7A2D8-2EFA-4b87-B69C-06894BEE1DE8}"
     type: "Class"
@@ -240,8 +240,8 @@ elements:
     note: |
       Vehicle C-ITS stations implemented on standard communication interfaces and messages and able to be extended in the future.
     links:
-      - "Association «defines» → Motorway operators and city public authorities"  # {F9CF8B7D-821B-4db5-9959-4265B24201DB} → {2E3B8D29-8DDA-48a6-AA48-C0060AEC0A2D}
-      - "Association «defines» → Vehicle Manufacturors - OEM´s"  # {9A56A5C6-9F11-4807-89E9-E5FF2E8B3326} → {ED38DEDB-53CC-42c9-9686-EF58A2EB5744}
+      - "Association «delivers value to» → Motorway operators and city public authorities"  # {F9CF8B7D-821B-4db5-9959-4265B24201DB} → {2E3B8D29-8DDA-48a6-AA48-C0060AEC0A2D}
+      - "Association «delivers value to» → Vehicle Manufacturors - OEM´s"  # {9A56A5C6-9F11-4807-89E9-E5FF2E8B3326} → {ED38DEDB-53CC-42c9-9686-EF58A2EB5744}
   - name: "C-ITS_Service_Added_road safety messages"
     guid: "{431792B4-93EC-49e7-952B-D4BFD69D156F}"
     type: "Class"
@@ -254,7 +254,7 @@ elements:
     note: |
       Public authorities enhance the access and distribution reach of C-ITS messages to travelers and hereby support road safety goals.
     links:
-      - "Association «defines» → EU Member states, public authorities"  # {6065AA7B-F81A-4e8a-86A0-C2E27AAD955B} → {07E0D60C-2D04-4079-A5AF-99126D64B7DF}
+      - "Association «delivers value to» → EU Member states, public authorities"  # {6065AA7B-F81A-4e8a-86A0-C2E27AAD955B} → {07E0D60C-2D04-4079-A5AF-99126D64B7DF}
   - name: "C-ITS_personal node or station - standard based"
     guid: "{7DF7DDFD-DD79-4575-8B75-6F6FF5B63AB8}"
     type: "Class"
@@ -267,8 +267,8 @@ elements:
     note: |
       The personal C-ITS node is based on a set of standards and can therefore communicate with all C-ITS actors in a trusted and secure way.
     links:
-      - "Association «defines» → C-ITS Service provider"  # {595126AD-DF1F-4c44-8AB8-01D12E5B6018} → {3013F2AA-5BC3-4d57-8AFA-790BBA733C21}
-      - "Association «defines» → EU Citizen in one of the member states"  # {62883B3B-4EFE-4519-B696-91C5F271DEA2} → {E8695FF6-1351-4508-97CF-980CF0604B41}
+      - "Association «delivers value to» → C-ITS Service provider"  # {595126AD-DF1F-4c44-8AB8-01D12E5B6018} → {3013F2AA-5BC3-4d57-8AFA-790BBA733C21}
+      - "Association «delivers value to» → EU Citizen in one of the member states"  # {62883B3B-4EFE-4519-B696-91C5F271DEA2} → {E8695FF6-1351-4508-97CF-980CF0604B41}
   - name: "Centralized per region"
     guid: "{DC995978-83B4-4e3b-AF3D-666194CA6995}"
     type: "Class"

@@ -27,8 +27,6 @@ elements:
       Directive (EU) 2023/2661 of the European Parliament and of the Council of 22 November 2023 amending Directive 2010/40/EU on the framework for the deployment of Intelligent Transport Systems in the field of road transport and for interfaces with other modes of transport
       
       https://eur-lex.europa.eu/legal-content/en/TXT/?uri=CELEX:32023L2661
-    links:
-      - "Usage «Instantiate» → Fulfilling National Body activities and reliabilities according to ITS directive 2010/EU/40"  # {9BF48855-99EF-4499-871F-AA074F60C4AC} → {01809F43-C4B8-4445-BF4A-91BFA2C95612}
   - name: "Guidline and Timelines"
     guid: "{80021436-2426-48b8-924C-F76DC5D338BC}"
     type: "DeploymentSpecification"
@@ -58,8 +56,6 @@ elements:
       Directive 2010/40/EU of the European Parliament and of the Council of 7 July 2010 on the framework for the deployment of Intelligent Transport Systems in the field of road transport and for interfaces with other modes of transport Text with EEA relevance
       
       https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32010L0040
-    links:
-      - "Usage «Instantiate» → Fulfilling National Body activities and reliabilities according to ITS directive 2010/EU/40"  # {BBA497D6-543F-439b-9F59-7F5B8057135D} → {01809F43-C4B8-4445-BF4A-91BFA2C95612}
   - name: "Template for EU reporting"
     guid: "{931FCB16-30EE-46d1-A710-1551EE357C47}"
     type: "DeploymentSpecification"
@@ -85,7 +81,7 @@ elements:
       The latest version of the accompanying document forms could be found here:
       https://napcore.eu/national-bodies-3/
     links:
-      - "Association → Compliance Assessment"  # {5466F625-C047-4733-BFEA-5FBF942A3D17} → {741A6BF3-3785-4285-B769-6E5BA4860A45}
+      - "Association «defines» → Compliance Assessment"  # {5466F625-C047-4733-BFEA-5FBF942A3D17} → {741A6BF3-3785-4285-B769-6E5BA4860A45}
   - name: "Template for national reporting"
     guid: "{82FF01BC-5818-40e7-A1AC-5BA1B47FA5DF}"
     type: "DeploymentSpecification"

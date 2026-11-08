@@ -38,7 +38,7 @@ elements:
     note: |
       Organisation that provides security related services to operators of C-ITS stations in the network and has the responsibility to list all active stations in the single EU C-ITS trust domain in order to exchange trusted data communication between all stakeholders.
     links:
-      - "Realisation → Root CA  - Certificate Authority 2"  # {FC0546BD-FC21-4842-90C3-49B7CD51EC4A} → {8585C2EC-0782-40cf-B8E4-21C9365A34E8}
+      - "Association «performs» → Root CA  - Certificate Authority 2"  # {FC0546BD-FC21-4842-90C3-49B7CD51EC4A} → {8585C2EC-0782-40cf-B8E4-21C9365A34E8}
   - name: "Policy Authority"
     guid: "{43FC96D4-0EC2-4547-AF9E-35CF41527D97}"
     type: "Actor"
@@ -49,7 +49,7 @@ elements:
     note: |
       The main decision body in the EU CCMS, consisting of public and private members with active C-ITS stations operating in the C-ITS network and taking the strategic decisions for the further development of the security and the network development.
     links:
-      - "Usage → EU CCMS Provider"  # {828D94E7-12CE-4434-8D3C-E9EA85DE9200} → {141D71A7-ABA6-4d67-80D8-8BD1B412CBA9}
+      - "Association «performs» → EU CCMS Provider"  # {828D94E7-12CE-4434-8D3C-E9EA85DE9200} → {141D71A7-ABA6-4d67-80D8-8BD1B412CBA9}
   - name: "Root CA  - Certificate Authority 1"
     guid: "{3B9C07FE-7D8D-4a2c-8C15-D2FACABD863A}"
     type: "Object"
@@ -96,7 +96,3 @@ elements:
       The latest list of all participants in the EU single trust domain, the ECTL is published at: https://cpoc.jrc.ec.europa.eu/ECTL.html
       
       The certificates of the TLM are published at: https://cpoc.jrc.ec.europa.eu/TLMCertificates.html
-    links:
-      - "Realisation → EU Root CA - Certificate Authority"  # {26F26B67-581A-4605-8415-0B5870FFD21E} → {382A18C3-34F8-4e60-BC2E-9CF27784CA1A}
-      - "Realisation → Root CA  - Certificate Authority 1"  # {0BE708E1-2640-43d7-99F9-483B0BB3320C} → {3B9C07FE-7D8D-4a2c-8C15-D2FACABD863A}
-      - "Realisation → Root CA  - Certificate Authority 2"  # {3EBCB178-A5C5-4c0c-8CAC-C7ACDB2C740D} → {8585C2EC-0782-40cf-B8E4-21C9365A34E8}

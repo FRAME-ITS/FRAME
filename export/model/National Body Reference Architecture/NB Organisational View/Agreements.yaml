@@ -19,8 +19,8 @@ elements:
       Self Declaration
       Version 1.0  Phase 1.0  Proposed
     links:
-      - "Association «adheres to» → Data or Service Provider"  # {BCA0F6C3-FD15-4a2e-AC48-0CB2CB5DBBE5} → {2EE5FD1F-AC4F-40b2-9C2B-52A2CE6A979C}
-      - "Association «adheres to» → National Body / Competent Authority"  # {7BC57A42-1BE6-4d57-9862-FA1B2FE1C9AC} → {DB0FFB19-1B79-4dbd-9F2B-5B224D345C66}
+      - "Association «accepted by» → Data or Service Provider"  # {BCA0F6C3-FD15-4a2e-AC48-0CB2CB5DBBE5} → {2EE5FD1F-AC4F-40b2-9C2B-52A2CE6A979C}
+      - "Association «accepted by» → National Body / Competent Authority"  # {7BC57A42-1BE6-4d57-9862-FA1B2FE1C9AC} → {DB0FFB19-1B79-4dbd-9F2B-5B224D345C66}
   - name: "Delegated Regulation"
     guid: "{18BED502-4259-4737-9DD1-6B52EBF5BA0F}"
     type: "Collaboration"
@@ -31,9 +31,9 @@ elements:
     note: |
       The delegated regulation applicable to data sets or service publications may consist of one or more initial legal acts published in the Official Journal of the European Union. If the delegated regulation consists of more than one legal act, the complete text of the delegated regulation as a consolidated version.
     links:
-      - "Association → ITS directive 2010/EU/40"  # {752FCDDB-9D1A-450a-BAF5-3BE27D98A99F} → {838FF400-30C2-465b-A815-907FD87D213B}
-      - "Association → Template for EU reporting"  # {6D7746D1-6812-425d-8D0A-73DADA490FA8} → {931FCB16-30EE-46d1-A710-1551EE357C47}
-      - "Association «adheres to» → European Commission"  # {E4C3597D-44EA-430d-B102-91408E7CE724} → {1EC60CD8-B204-450d-9238-47BEC17A4785}
+      - "Association «accepted by» → Member State"  # {62282D12-F895-4243-9078-44A8020F702D} → {06C05CA6-B06C-4ca9-AE2B-B93C77D2BECA}
+      - "Association «use» → ITS directive 2010/EU/40"  # {752FCDDB-9D1A-450a-BAF5-3BE27D98A99F} → {838FF400-30C2-465b-A815-907FD87D213B}
+      - "Association «use» → Template for EU reporting"  # {6D7746D1-6812-425d-8D0A-73DADA490FA8} → {931FCB16-30EE-46d1-A710-1551EE357C47}
   - name: "National Law or Contract MS - NAP"
     guid: "{9A594D51-2CA2-4048-B043-981F4DF70F2D}"
     type: "Collaboration"
@@ -103,7 +103,7 @@ elements:
       	- an evidence-based declaration of compliance with the requirements set out in Delegated Regulations;
       	- the licence or contractual agreements with travel information service providers.
     links:
-      - "Association «adheres to» → Member State"  # {D8CBE71D-1200-4e63-8CAB-7E36429C1D83} → {06C05CA6-B06C-4ca9-AE2B-B93C77D2BECA}
+      - "Association «accepted by» → National Access Point"  # {D23CE465-5F09-4cd4-AA70-6AC6D569DC12} → {98435A5F-0A74-4cea-BA8E-AE02988208EE}
   - name: "National Law or Contract MS - NB"
     guid: "{0BDE8A5E-CC0E-4fa9-89DD-1DCD42A5AA0B}"
     type: "Collaboration"
@@ -128,8 +128,8 @@ elements:
       	- To provide information about the performed compliance assessment to the MS.
       	- To cooperate with NAP on the implementation of the ITS Directive.
     links:
-      - "Association «adheres to» → Member State"  # {9DBCE9C0-5D00-4d58-9470-C8AEC4F18E0E} → {06C05CA6-B06C-4ca9-AE2B-B93C77D2BECA}
-      - "Usage → Template for national reporting"  # {C614E568-631C-45f3-9D1B-FFBC3D7E6930} → {82FF01BC-5818-40e7-A1AC-5BA1B47FA5DF}
+      - "Association «accepted by» → National Body / Competent Authority"  # {42960C0A-0DC1-4547-ACBC-12E42B467A9D} → {DB0FFB19-1B79-4dbd-9F2B-5B224D345C66}
+      - "Association «use» → Template for national reporting"  # {C614E568-631C-45f3-9D1B-FFBC3D7E6930} → {82FF01BC-5818-40e7-A1AC-5BA1B47FA5DF}
   - name: "Self-declaration"
     guid: "{EB8F2E83-0D00-458a-8C55-0EB4EC40B71C}"
     type: "Collaboration"
@@ -140,6 +140,4 @@ elements:
     note: |
       The self-declaration (SD) is the declaration of compliance with a Delegated Regulation of a stakeholder which is affected by one of the Delegated Regulations of the ITS Directive 2010/40/EU. The SD forms are based on the harmonization activities within NAPCORE.
     links:
-      - "Association → Template for self-declaration"  # {B412C04D-A75D-44ed-9F1B-E143612EDC7F} → {7D17E92C-40B9-4747-8B9D-5D52B942D18F}
-      - "Association «adheres to» → Data or Service Provider"  # {DF960F1A-E6C7-4f5f-8E28-7FEDC920B026} → {2EE5FD1F-AC4F-40b2-9C2B-52A2CE6A979C}
-      - "Association «adheres to» → National Body / Competent Authority"  # {DA7A9FC1-AB99-4413-A33A-8D890B5A523C} → {DB0FFB19-1B79-4dbd-9F2B-5B224D345C66}
+      - "Association «use» → Template for self-declaration"  # {B412C04D-A75D-44ed-9F1B-E143612EDC7F} → {7D17E92C-40B9-4747-8B9D-5D52B942D18F}

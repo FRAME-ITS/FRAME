@@ -1,0 +1,82 @@
+# FRAME Toolsetup aligned with technology V1.3
+
+Script: `tools/fixes/2026-11-06_toolsetup_V1.3.py`.
+
+- stereotype class «Impacts» → «impacts»
+- toolbox entry FRAME_Profile::Impacts(UML::Association) → impacts
+- stereotype class «deliverd by» → «delivered by»
+- toolbox entry FRAME_Profile::deliverd by(UML::Deployment) → delivered by
+- rule «Defines» → «defines»: FRAME_Application → FRAME_Interface
+- rule «Defines» → «defines»: FRAME_Application → FRAME_Information_Object
+- rule «Defines» → «defines»: FRAME_Functionality → FRAME_Application
+- rule «Defines» → «defines»: FRAME_Functionality → FRAME_Component
+- rule «Defines» → «defines»: FRAME_Role → FRAME_Organisation
+- rule «Defines» → «defines»: FRAME_Role → FRAME_User_Need
+- rule «Defines» → «defines»: FRAME_Role → FRAME_Actor
+- rule «associated» → «associate»: FRAME_Role → FRAME_Component
+- rule «Defines» → «defines»: FRAME_User_Need → FRAME_Functionality
+- rule «Defines» → «defines»: FRAME_Terminator → FRAME_Application
+- rule «Defines» → «defines»: FRAME_ITS_Service_Process → FRAME_Role
+- rule «Defines» → «defines»: FRAME_ITS_Service_Process → FRAME_Functionality
+- rule «Defines» → «defines»: FRAME_ITS_Service_Process → FRAME_Functionality
+- rule reversed: «component of» FRAME_High_Level_Function → FRAME_Low_Level_Function  becomes  FRAME_Low_Level_Function → FRAME_High_Level_Function
+- rule «Impacts» → «impacts»: FRAME_High_Level_Function → FRAME_Functional_Area
+- rule «Defines» → «defines»: FRAME_Low_Level_Function → FRAME_Functionality
+- rule «Impacts» → «impacts»: FRAME_Low_Level_Function → FRAME_Functional_Area
+- rule reversed: «belongs to» FRAME_User_Need_Group → FRAME_User_Need_Service  becomes  FRAME_User_Need_Service → FRAME_User_Need_Group
+- rule reversed: «belongs to» FRAME_User_Need_Group → FRAME_User_Need_Service  becomes  FRAME_User_Need_Service → FRAME_User_Need_Group
+- rule reversed: «belongs to» FRAME_User_Need_Service → FRAME_User_Need_Topic  becomes  FRAME_User_Need_Topic → FRAME_User_Need_Service
+- rule reversed: «belongs to» FRAME_User_Need_Topic → FRAME_User_Need  becomes  FRAME_User_Need → FRAME_User_Need_Topic
+- rule «Defines» → «defines»: TDF_LowLevelFunction → FRAME_Functionality
+- rule «Defines» → «defines»: TDF_LowLevelFunction → FRAME_Interface
+- rule «Impacts» → «impacts»: TDF_LowLevelFunction → FRAME_TDF_HighLevelFunction
+- rule «Component of» → «component of»: TDF_Functionarea → TDF_LowLevelFunction
+- rule «Component of» → «component of»: FRAME_TDF_HighLevelFunction → TDF_LowLevelFunction
+- rule «Defines» → «defines»: FRAME_Low_Level_Data_Flow → FRAME_Functionality
+- rule «Defines» → «defines»: FRAME_Mission_Statement → FRAME_User_Need
+- rule «Defines» → «defines»: FRAME_Mission_Statement → FRAME_ITS_Service
+- rule «deliverd by» → «delivered by»: FRAME_ITS_Service → FRAME_ITS_Service_Added_Value
+- rule «Defines» → «defines»: FRAME_ITS_Service → FRAME_ITS_Service_Process
+- rule «Defines» → «defines»: FRAME_ITS_Service → FRAME_ITS_Business_Process
+- rule «Defines» → «defines»: FRAME_ITS_Service → FRAME_User_Need
+- rule «Defines» → «defines»: FRAME_ITS_Service_Added_Value → FRAME_User_Need
+- rule «Defines» → «defines»: FRAME_ITS_Vision → FRAME_User_Need
+- rule «Defines» → «defines»: FRAME_ITS_Vision → FRAME_ITS_Service
+- rule «Component of» → «component of»: FRAME_Functional_Area → FRAME_Low_Level_Function
+- rule reversed: «component of» FRAME_Functional_Area → FRAME_Low_Level_Function  becomes  FRAME_Low_Level_Function → FRAME_Functional_Area
+- rule reversed: «component of» FRAME_Functional_Area → FRAME_High_Level_Function  becomes  FRAME_High_Level_Function → FRAME_Functional_Area
+- rule reversed: «fulfilled by» FRAME_Desired_Architecture_Goals → FRAME_Requirement  becomes  FRAME_Requirement → FRAME_Desired_Architecture_Goals
+- rule «instant of» → «instants of»: FRAME_Stakeholder → FRAME_Organisation
+- duplicate rule removed: «defines» FRAME_Actor → FRAME_Requirement
+- duplicate rule removed: «defines» FRAME_ITS_Service_Process → FRAME_Functionality
+- duplicate rule removed: «belongs to» FRAME_User_Need_Service → FRAME_User_Need_Group
+- rule added: «IN» FRAME_Functional_Area → FRAME_Low_Level_Data_Flow
+- rule added: «IN» FRAME_System → FRAME_High_Level_Data_Flow
+- rule added: «OUT» FRAME_High_Level_Data_Flow → FRAME_System
+- rule added: «OUT» FRAME_Low_Level_Data_Flow → FRAME_Functional_Area
+- rule added: «adheres to» FRAME_ITS_Service → FRAME_Specification
+- rule added: «component of» FRAME_Functional_Area → FRAME_System
+- rule added: «component of» FRAME_High_Level_Function → FRAME_High_Level_Function
+- rule added: «component of» FRAME_Terminator → FRAME_Terminator
+- rule added: «defines» FRAME_Business_Expectation → FRAME_Mission_Statement
+- _HideUmlLinks = True on the metaclass of FRAME_Functional_Area
+- _HideUmlLinks = True on the metaclass of FRAME_High_Level_Function
+- _HideUmlLinks = True on the metaclass of FRAME_Low_Level_Function
+- _HideUmlLinks = True on the metaclass of FRAME_High_Level_Data_Flow
+- _HideUmlLinks = True on the metaclass of FRAME_Low_Level_Data_Flow
+- _HideUmlLinks = True on the metaclass of FRAME_Terminator
+- _HideUmlLinks = True on the metaclass of FRAME_Datastore
+- _HideUmlLinks = True on the metaclass of FRAME_System
+- _HideUmlLinks = True on the metaclass of FRAME_User_Need
+- _HideUmlLinks = True on the metaclass of FRAME_User_Need_Topic
+- _HideUmlLinks = True on the metaclass of FRAME_User_Need_Service
+- _HideUmlLinks = True on the metaclass of FRAME_User_Need_Group
+- diagram type FRAME_Diagram: toolbox = FRAME::FRAME_Toolbox
+
+Rules in the package and not in V1.3: 4
+- «None» FRAME_Datastore → FRAME_Information_Object
+- «None» FRAME_Information_Object → FRAME_Information_Object
+- «None» FRAME_Requirement → FRAME_Organisation
+- «None» FRAME_Stakeholder → FRAME_Requirement
+
+Rules in V1.3 and not in the package: 0

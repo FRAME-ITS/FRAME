@@ -16,7 +16,7 @@ elements:
       
       Mnemonic: mt
     links:
-      - "Aggregation «componentof» → System"  # {69040112-6155-4960-8CE3-1393165F4E61} → {A7365472-4893-4994-9241-EEED83ABEF7D}
+      - "Aggregation «component of» → System"  # {69040112-6155-4960-8CE3-1393165F4E61} → {A7365472-4893-4994-9241-EEED83ABEF7D}
       - "Association «IN» → To External Service Provider"  # {3630614C-ECF3-4c3b-8675-228A0E5A3087} → {CB0E5267-0EB0-4bc5-979C-11C135689F57}
       - "Association «IN» → To Maintenance Organisation"  # {0A982077-18A1-465e-BDB6-3ACEE9F21FFA} → {8572AE13-B6F9-4e6b-8D05-7B93E36A105C}
       - "Association «IN» → To Multi-Modal System"  # {24570AB4-E977-4ab8-91C4-7A4B2018E4E7} → {B5C9D8C7-873B-40b6-A991-CC0A7C4FD415}
@@ -71,7 +71,7 @@ elements:
     note: |
       This High-level Function shall provide facilities for the management of traffic that is using the urban and inter-urban road networks.  It shall provide facilities that enable data objects to be collected about the traffic using the road networks and for their use in managing the flow of traffic according to the required strategies.  These and other data objects shall be used in the the optimisation of traffic flows and to provide priority of movement through the road network for selected vehicles. Functionality shall also be included to manage car parks, rest areas, and manage the use of tunnels and bridges using data objects that it has collected itself.
     links:
-      - "Aggregation «componentof» → F3. Manage Traffic"  # {9E1E7476-ECF8-4064-BD34-8862A0AC6D49} → {E9EDA059-38C0-41ba-9127-FF30B58B7C0D}
+      - "Aggregation «component of» → F3. Manage Traffic"  # {9E1E7476-ECF8-4064-BD34-8862A0AC6D49} → {E9EDA059-38C0-41ba-9127-FF30B58B7C0D}
       - "Association «IN» → fo.bo-bridge_operator_inputs"  # {8A6E3FA8-F39A-4a8a-A01A-C2C1DC6F115C} → {55A37B65-72AD-4900-ADC8-EC9ED64D3A30}
       - "Association «IN» → fo.rno-inter-urban_traffic_management_commands"  # {B4B63401-A00D-4b1c-8279-971271FB2033} → {565FD599-433A-4a3a-B537-8616895F9278}
       - "Association «IN» → ftp-prediction_and_modelling_inputs"  # {C64BBC2D-3B6D-4429-B37E-99C8C867837B} → {E812096F-8A73-46af-999D-0AAE511B6B77}
@@ -141,8 +141,8 @@ elements:
     note: |
       This High-level Function shall provide the facilities needed manage traffic using the urban road network.  It shall be possible to manage the traffic through control measures that result in the output of indications to drivers as to how they are to behave.  The facilities in the Function shall make it possible for these indications to be commands to stop and go, or messages asking that certain other actions are taken, e.g. divert to alternative route.  It shall also be possible for priority to be given to selected road users both at individual points and on routes through the road network.  Data objects about the movement of traffic in the urban road network shall be collected and sent to other parts of the Manage Traffic Area, to other Areas, and other Systems for their own use.
     links:
-      - "Aggregation «componentof» → F3. Manage Traffic"  # {FE3E13FC-53C4-4a48-B54A-383F81CB0C14} → {E9EDA059-38C0-41ba-9127-FF30B58B7C0D}
-      - "Aggregation «componentof» → F3.1 Provide Traffic Control"  # {48AFCEFE-ED5B-42e7-AC51-2DFE06166401} → {226ED187-DB7A-409f-B509-BA8DBFFB6DB6}
+      - "Aggregation «component of» → F3. Manage Traffic"  # {FE3E13FC-53C4-4a48-B54A-383F81CB0C14} → {E9EDA059-38C0-41ba-9127-FF30B58B7C0D}
+      - "Aggregation «component of» → F3.1 Provide Traffic Control"  # {48AFCEFE-ED5B-42e7-AC51-2DFE06166401} → {226ED187-DB7A-409f-B509-BA8DBFFB6DB6}
       - "Association «IN» → fesp.g-urban_static_road_data"  # {BD247B43-EE5E-4b5c-8725-4C0F8693B966} → {5DBEC8BB-CDB9-4871-B3FE-3BB62CB2CEDE}
       - "Association «IN» → fesp.mcp-urban_network_journey_time_data"  # {F3D2C12D-2EF3-471e-A616-4785EBF04EC9} → {B7744E7A-0962-4c93-B9DB-A2CC49C9FC6B}
       - "Association «IN» → ftrfc-urban_fcd_source_vehicle_image"  # {4DF45682-D038-4db3-8F74-62407D4FC944} → {060EEB55-43F1-44d3-9982-EA0FBDBB98D4}
@@ -211,8 +211,8 @@ elements:
     note: |
       This High-level Function shall provide the facilities needed manage traffic using the inter-urban road network.  It shall be possible for the Traffic to be managed through control measures that result in the output of indications to drivers.  The Function shall enable these indications to be such things as messages asking that certain other actions are taken, e.g. change lane, travel at or below a certain speed, divert to an alternative route, etc.  It shall also be possible for priority for road use to be given to selected users through parts of the road network.  Data objects about the movement of traffic in the inter-urban road network shall be collected and sent to other parts of the Manage Traffic Area, to other Areas, and other Systems for their own use.
     links:
-      - "Aggregation «componentof» → F3. Manage Traffic"  # {13C87C11-5BAC-4459-98DC-46F4C28846F2} → {E9EDA059-38C0-41ba-9127-FF30B58B7C0D}
-      - "Aggregation «componentof» → F3.1 Provide Traffic Control"  # {B3BF6173-F1C5-4643-8872-2CC874786C01} → {226ED187-DB7A-409f-B509-BA8DBFFB6DB6}
+      - "Aggregation «component of» → F3. Manage Traffic"  # {13C87C11-5BAC-4459-98DC-46F4C28846F2} → {E9EDA059-38C0-41ba-9127-FF30B58B7C0D}
+      - "Aggregation «component of» → F3.1 Provide Traffic Control"  # {B3BF6173-F1C5-4643-8872-2CC874786C01} → {226ED187-DB7A-409f-B509-BA8DBFFB6DB6}
       - "Association «IN» → fesp.g-inter-urban_static_road_data"  # {F9F34029-0D48-4590-B332-6BE4780A835B} → {C8F279C6-A74A-48be-B0C0-0EC3EC85F967}
       - "Association «IN» → fesp.mcp-inter-urban_network_journey_time_data"  # {B9883313-4430-45b9-9B28-79CD568C1E43} → {F6596129-E1B2-486f-9016-6C9816130F09}
       - "Association «IN» → fo.rno-inter-urban_traffic_control_commands"  # {67EFCD4F-1D4B-43b2-8FEB-9EDEA91BCD4F} → {31CBE563-83A7-4ea2-9944-F684CAA93088}
@@ -287,7 +287,7 @@ elements:
       (4) The HMI shall have to ability to enable the Road Network Operator to examine and update the sequence of inter-urban traffic control strategies that are implemented automatically, and to see the "log" of previously implemented inter-urban traffic control strategy changes.
       (5) The HMI shall have to ability to output requests to the Road Network Operator for a check to be made of the availability of auxiliary lanes (hard shoulders), and for the Operator to provide an available/not available response so that traffic can be directed to use it, or not.
     links:
-      - "Aggregation «Componentof» → F3.1.2.13 Manage Inter-urban Traffic Strategies"  # {F42B0EFD-3D00-45fa-B46B-220DC21CA435} → {44E4B5FB-6CF5-40a0-9CE1-D676DB87CA84}
+      - "Aggregation «component of» → F3.1.2.13 Manage Inter-urban Traffic Strategies"  # {F42B0EFD-3D00-45fa-B46B-220DC21CA435} → {44E4B5FB-6CF5-40a0-9CE1-D676DB87CA84}
       - "Association «IN» → mt_inter-urban_operator_lane_override"  # {90D739A5-8FB1-4e24-A3F9-C03D7849C6A7} → {AF967CFA-107A-4ff6-B842-D532DC20B0EC}
       - "Association «IN» → mt_inter-urban_static_data_changes"  # {26609DB0-A012-4fd7-9CB9-516983031967} → {D23B430F-11BD-4a25-9542-C8FBAD117C5D}
       - "Association «IN» → mt_operator_inter-urban_auxlane_check_response"  # {19E0281B-E047-45fc-98F7-02B4D4E2D60C} → {ACD9B2D8-D289-4d8d-B9FA-317F726F03DE}
@@ -313,7 +313,7 @@ elements:
       (4) The ability to output a warning message to Drivers of Vehicles whose identities do not match those on the permitted list as they approach a point in the inter-urban road network that gives access to a zone.
       (5) The ability to send data about a Vehicle that has been detected approaching a zone to the functionality that manages access to sensitive areas.
     links:
-      - "Aggregation «Componentof» → F3.1.2.13 Manage Inter-urban Traffic Strategies"  # {3483CE71-80CB-4423-9391-0FCF6470C1BF} → {44E4B5FB-6CF5-40a0-9CE1-D676DB87CA84}
+      - "Aggregation «component of» → F3.1.2.13 Manage Inter-urban Traffic Strategies"  # {3483CE71-80CB-4423-9391-0FCF6470C1BF} → {44E4B5FB-6CF5-40a0-9CE1-D676DB87CA84}
       - "Association «IN» → mt.pscs_vehicle_nearing_inter-urban_sensitive_area"  # {1F72FE17-9359-4265-913D-ECBE04334EDD} → {E4E5A781-3C86-4491-A26F-AEBE494D19E1}
       - "Association «IN» → mt_inter-urban_zone_vehicle_identity"  # {90B46BE4-7F21-4333-8F29-9D48E70BFD25} → {6D2F4E7A-705A-4cf4-B462-AAE82D745915}
       - "Association «IN» → td-approaching_inter-urban_zone"  # {BED0DC38-0AB7-45d8-A5A2-C92E78357CA3} → {AEA0F408-197C-4f4c-A512-12E272FA8D92}
@@ -331,7 +331,7 @@ elements:
       (2) The ability to output (zone) a warning message to Drivers that a physical barrier will prevent them driving their Vehicles into the zone.
       (3) If the Vehicles are detected actually entering the zone, the ability to send the Vehicle identity to the law enforcement functionality.
     links:
-      - "Aggregation «Componentof» → F3.1.2.13 Manage Inter-urban Traffic Strategies"  # {112F2C16-9442-4490-AE21-47F78186EF66} → {44E4B5FB-6CF5-40a0-9CE1-D676DB87CA84}
+      - "Aggregation «component of» → F3.1.2.13 Manage Inter-urban Traffic Strategies"  # {112F2C16-9442-4490-AE21-47F78186EF66} → {44E4B5FB-6CF5-40a0-9CE1-D676DB87CA84}
       - "Association «IN» → mt.psle_vehicle_entering_inter-urban_zone"  # {02066AB7-0779-4571-A5AC-66BF60B006D8} → {B1FB54E2-DCE2-436c-BA46-D1040D12A1E7}
       - "Association «IN» → td-enterring_inter-urban_zone"  # {4A6D988E-1E15-414f-A0D1-760684C8CE50} → {882AA4BC-6AFE-4439-89DF-8E5BDDCFAEF2}
   - name: "F3.1.2.13.4 Manage Inter-urban Road Network Speeds & Headways"
@@ -350,7 +350,7 @@ elements:
       (4) The ability to send speed and headway settings to the inter-urban functionality that is responsible for the output of messages to Drivers, both at the roadside and in the Vehicle, as well as to other functionality from which it can be sent to other parts of the system and to the Broadcaster.
       (5) The ability to send legal speed settings to the digital map data provider entity in case it needs to be used in future digital map updates.
     links:
-      - "Aggregation «Componentof» → F3.1.2.13 Manage Inter-urban Traffic Strategies"  # {11B24CA7-0950-401b-8D80-B3057312ABD6} → {44E4B5FB-6CF5-40a0-9CE1-D676DB87CA84}
+      - "Aggregation «component of» → F3.1.2.13 Manage Inter-urban Traffic Strategies"  # {11B24CA7-0950-401b-8D80-B3057312ABD6} → {44E4B5FB-6CF5-40a0-9CE1-D676DB87CA84}
       - "Association «IN» → mt.pshvs_inter-urban_legal_speed_limits"  # {79B56BF3-442B-4fa5-9314-8C5CD235FC8A} → {160C95AE-C670-4874-A780-B0189439CFB0}
       - "Association «IN» → mt.pshvs_inter-urban_suggested_speeds_and_headways"  # {BD350BB3-A885-425e-8364-7427A566ACC2} → {E8F52111-093F-4466-BE26-18D1E5CA9C4C}
       - "Association «IN» → mt_inter-urban_speed_l&s_commands"  # {95B91D28-C4CA-4a4b-9687-7D4EEF1A5B3F} → {2BD78983-6F92-4109-838D-3D8679D9EC36}
@@ -373,7 +373,7 @@ elements:
       (5) The ability to use current, historic and predicted traffic data from the inter-urban network and to change in real-time the actual traffic management commands being sent for output to take account of variations in this data.
       (6) The ability to provide details of the current and previous implemented traffic management strategies on some or all parts of the inter-urban road network to the Road Network Operator through the functionality that provides their interface.
     links:
-      - "Aggregation «Componentof» → F3.1.2.13 Manage Inter-urban Traffic Strategies"  # {624B18CD-C42C-4760-BE50-FED3AC6DFEC4} → {44E4B5FB-6CF5-40a0-9CE1-D676DB87CA84}
+      - "Aggregation «component of» → F3.1.2.13 Manage Inter-urban Traffic Strategies"  # {624B18CD-C42C-4760-BE50-FED3AC6DFEC4} → {44E4B5FB-6CF5-40a0-9CE1-D676DB87CA84}
       - "Association «IN» → mt.ptja_inter-urban_recommended_routes"  # {517A28D8-1063-4183-A377-95AD92BA28EC} → {8FD72146-447E-4af5-B93C-F7389F66D7D9}
       - "Association «IN» → mt_inter-urban_bridge_inputs"  # {3A9469B8-612D-4798-ADDC-E43508C0396A} → {16CC0F21-75EF-47fc-80C8-B1D944EF2ADD}
       - "Association «IN» → mt_inter-urban_lane_management_requests"  # {A36EF99A-DA52-4a21-B32D-03FBF44A3ED5} → {7605B2FD-6FA6-4146-8007-C24C75C6F8E2}
@@ -406,7 +406,7 @@ elements:
       (6) The ability to support the output of lane management commands that can, where available, make the auxiliary lane (sometimes called the "hard shoulder") available for use.
       (7) The ability to send commands to alter the use of lanes to the functionality that is responsible for the output of messages to Drivers, both at the roadside and in the Vehicle.
     links:
-      - "Aggregation «Componentof» → F3.1.2.13 Manage Inter-urban Traffic Strategies"  # {6D03F51F-175D-4830-9B53-AD61D323BD06} → {44E4B5FB-6CF5-40a0-9CE1-D676DB87CA84}
+      - "Aggregation «component of» → F3.1.2.13 Manage Inter-urban Traffic Strategies"  # {6D03F51F-175D-4830-9B53-AD61D323BD06} → {44E4B5FB-6CF5-40a0-9CE1-D676DB87CA84}
       - "Association «IN» → mt.pshvs_inter-urban_lane_commands"  # {1599A86C-4513-4e56-B440-0F079ACFD31D} → {21DA3D23-5D6B-4724-A0F0-E29A2A741381}
       - "Association «IN» → mt.pshvs_inter-urban_lane_use_information"  # {EC06D86E-2593-4d65-A61C-640B6C95BAFB} → {29818C09-F5A5-4484-8CE7-35A42D10EE53}
       - "Association «IN» → mt_inter-urban_lane_instructions"  # {98ABF3A2-51CD-4d6d-92E2-90BD087CC518} → {2A18CC73-2001-4830-9117-E3CBC46A4302}
@@ -429,7 +429,7 @@ elements:
       (4) The ability to provide on request a response to the functionality that provides the Road Network Operator interface details of the time of day sequences that are currently available for use.
       (5) The ability to send requests for implementation of traffic control strategies to the inter-urban traffic management and access control functionality.
     links:
-      - "Aggregation «Componentof» → F3.1.2.13 Manage Inter-urban Traffic Strategies"  # {8F0DA6DD-0445-48bf-83BA-24CB078BD594} → {44E4B5FB-6CF5-40a0-9CE1-D676DB87CA84}
+      - "Aggregation «component of» → F3.1.2.13 Manage Inter-urban Traffic Strategies"  # {8F0DA6DD-0445-48bf-83BA-24CB078BD594} → {44E4B5FB-6CF5-40a0-9CE1-D676DB87CA84}
       - "Association «IN» → mt_planned_inter-urban_data_output"  # {96AD147F-86DB-492e-ADF7-0F84460EFD88} → {94B2F93F-358C-4430-B823-06D1018A7D77}
       - "Association «IN» → mt_planned_inter-urban_traffic_management_request"  # {6A73DA82-9CE1-48de-91CE-62E556FE75A8} → {4B46FD0C-4A62-4f8c-8658-D06D9CAEE800}
   - name: "F3.1.2.13.8 Provide Inter-urban Ramp Metering"
@@ -451,7 +451,7 @@ elements:
       (7) The ability for the commands to be displayed to Drivers either at the roadside, or through a device in their Vehicles.
       (8) The ability to manage one or more "ramps" and to apply different strategies and/or algorithms at each "ramp".
     links:
-      - "Aggregation «Componentof» → F3.1.2.13 Manage Inter-urban Traffic Strategies"  # {3DDAFC96-5B95-4b79-B70D-2CC23CEB43B5} → {44E4B5FB-6CF5-40a0-9CE1-D676DB87CA84}
+      - "Aggregation «component of» → F3.1.2.13 Manage Inter-urban Traffic Strategies"  # {3DDAFC96-5B95-4b79-B70D-2CC23CEB43B5} → {44E4B5FB-6CF5-40a0-9CE1-D676DB87CA84}
       - "Association «IN» → mt.pshvs_inter-urban_ramp_metering_outputs"  # {3DF9D160-3967-4fe6-91D1-98996DBF7BE4} → {2A04C704-F5B0-4a40-A50A-E0CCC49767B3}
       - "Association «IN» → mt_inter-urban_ramp_metering_strategy_details"  # {68E3332C-259D-4143-A0A4-F3B1012CFEB4} → {3409E5F4-62F9-49f2-A560-FD8F6037844E}
       - "Association «IN» → td-inter-urban_ramp_metering_output"  # {8AEA1A24-F41A-4ca8-8069-1EA7BF71721D} → {846BDC4D-8A0B-4642-B025-A2D2CC5B5EFD}
@@ -470,7 +470,7 @@ elements:
       (3) The HMI shall have the ability to inform the Road Network Operator of the success or failure of the requested change.
       (4) The HMI shall have to ability to output requests to the Road Network Operator for a check to be made of the availability of auxiliary lanes (hard shoulders), and for the Operator to provide an available/not available response so that traffic can be directed to use it, or not.
     links:
-      - "Aggregation «Componentof» → F3.1.2.14 Implement Inter-urban Management Traffic Strategy"  # {58B78011-A039-4585-9AFA-D939778C8C45} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
+      - "Aggregation «component of» → F3.1.2.14 Implement Inter-urban Traffic Management Strategy"  # {58B78011-A039-4585-9AFA-D939778C8C45} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
       - "Association «IN» → mt_inter-urban_command_monitoring_state"  # {4FFB8399-AC2B-482a-B319-1ADBD761E8A6} → {65E04C16-5AC0-4002-B0BC-853CE4B7F385}
       - "Association «IN» → mt_inter-urban_command_override_status"  # {69C955D4-003C-42fb-A456-89F8A2F875E4} → {D86789D8-05DF-43c2-8FD3-12189F8E0E13}
       - "Association «IN» → to.rno-inter-urban_command_override_response"  # {EE6B505D-11A4-46ba-8DCF-94AB55D5CB78} → {BE2F1DD0-D1B3-4930-B077-0DF7EA8874FD}
@@ -492,7 +492,7 @@ elements:
       (4) The ability to accommodate through non-functional mechanisms the differentiation between the way that information and commands are provided to Drivers according to the demands of the particular implementation.
       (5) The ability to monitor all of the outputs and revisions to any already being output that are likely to give rise to inconsistent and incoherent messages being displayed to Drivers.
     links:
-      - "Aggregation «Componentof» → F3.1.2.14 Implement Inter-urban Management Traffic Strategy"  # {D60DE6F1-F532-45d9-AF78-0D17C9DE7C95} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
+      - "Aggregation «component of» → F3.1.2.14 Implement Inter-urban Traffic Management Strategy"  # {D60DE6F1-F532-45d9-AF78-0D17C9DE7C95} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
       - "Association «IN» → mt.pshvs_inter-urban_c&i_messages"  # {F6DDD4EC-91E4-42b5-B4B6-CA54FABF4BC6} → {9DC01B37-BEBD-46f9-86BA-90B8A2F0B2E8}
       - "Association «IN» → mt_inter-urban_c&i_device_status"  # {8217BEB1-761C-4869-A1BC-187A509DE1A4} → {36D9691C-CD8C-4ecf-8D27-1F412A7E529F}
       - "Association «IN» → mt_inter-urban_data_for_approaching_vehicles"  # {4C46303D-B247-4f54-918D-A419D6EDC6A2} → {BFD5EAED-DC4E-475e-9F94-116253C78FA4}
@@ -514,7 +514,7 @@ elements:
       (3) The ability to use several different technologies to provide the outputs but not through any in-vehicle technology as this will be provided separately.
       (4) The ability to monitor all of the outputs and revisions to any already being output that are likely to give rise to inconsistent and incoherent messages being displayed to Drivers.
     links:
-      - "Aggregation «Componentof» → F3.1.2.14 Implement Inter-urban Management Traffic Strategy"  # {DA5B4F31-0423-450b-B8EB-A95AC0FF0D3C} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
+      - "Aggregation «component of» → F3.1.2.14 Implement Inter-urban Traffic Management Strategy"  # {DA5B4F31-0423-450b-B8EB-A95AC0FF0D3C} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
       - "Association «IN» → mt.pshvs_inter-urban_speed_commands"  # {54C211DC-00B4-4df3-BEC7-7E22C4077724} → {C3439A73-E3DB-4b04-939D-D11A2D61F42E}
       - "Association «IN» → mt_inter-urban_equipment_status_l&s"  # {135A547D-26BD-40a2-AC76-0B576333DDA4} → {42D81E5A-6BE0-40d0-BF29-9B1030D6DA31}
       - "Association «IN» → mt_inter-urban_l&s_device_status"  # {A1809343-EBB0-4458-816C-A113F99F0E9F} → {29D2C612-8C88-49bf-ACBC-E670B9AE6F2D}
@@ -539,7 +539,7 @@ elements:
       (6) The ability to provide details of the current and previous modes of control on some or all parts of the inter-urban road network to the Road Network Operator through the functionality that provides their interface.
       (7) The ability to monitor the results of the output of commands, so that alternative action can be taken if they are not followed.
     links:
-      - "Aggregation «Componentof» → F3.1.2.14 Implement Inter-urban Management Traffic Strategy"  # {92516BF6-1F70-4bd5-B0FF-BB90B8FA9F09} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
+      - "Aggregation «component of» → F3.1.2.14 Implement Inter-urban Traffic Management Strategy"  # {92516BF6-1F70-4bd5-B0FF-BB90B8FA9F09} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
       - "Association «IN» → mt_inter-urban_command_monitoring_data"  # {B5A880EF-792B-488b-A6F7-4505AD1690A0} → {D48FF79E-1698-44f1-BBDA-9B1DC10675C4}
       - "Association «IN» → mt_inter-urban_command_override_response"  # {AA428B64-846C-4dd0-B9B1-A2121EAA6C32} → {145FD872-F0F8-4c99-BE97-4F1DEB447686}
       - "Association «IN» → mt_inter-urban_response_fault"  # {8A498D66-DF67-484a-A3BA-42F52C2743C9} → {482FF7A6-9155-4d83-80FC-C642B80CD2C4}
@@ -562,7 +562,7 @@ elements:
       (2) The ability to only report a violation when it is detected that a Vehicle does not follow the current inter-urban traffic commands.
       (3) The ability for details of these commands to be provided by the inter-urban traffic management functionality.
     links:
-      - "Aggregation «Componentof» → F3.1.2.14 Implement Inter-urban Management Traffic Strategy"  # {C542A34D-A8BC-4de0-B6F2-C2B197DA46ED} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
+      - "Aggregation «component of» → F3.1.2.14 Implement Inter-urban Traffic Management Strategy"  # {C542A34D-A8BC-4de0-B6F2-C2B197DA46ED} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
       - "Association «IN» → mt.psle_inter-urban_violating_vehicle_identity"  # {64EAEFD7-6700-4d63-B63D-995241004E93} → {09F6029D-9872-4ecc-AA89-84E690CDFD6E}
   - name: "F3.1.2.14.6 Send Messages to Approaching Inter-urban Vehicles"
     guid: "{69EDBF36-8BA1-4601-8620-A82C6FCF84C2}"
@@ -579,6 +579,7 @@ elements:
       (3) When an approaching Vehicle is detected, the ability to output to it the data for information and warning messages plus commands relevant to the management of traffic using the inter-urban road network.
       (4) The ability to continue with the output to approaching Vehicles, changing the data every time it is changed, and stopping output if there is no data to transmit.
     links:
+      - "Aggregation «component of» → F3.1.2.14 Implement Inter-urban Traffic Management Strategy"  # {5ED6273A-C899-4519-8EFE-7992CAE1D5B4} → {033C90BB-44C7-4a7e-ADC2-10627BFE6B45}
       - "Association «IN» → mt.pshvs_approaching_vehicles_inter-urban_messages"  # {08FC3B0F-8F89-4858-A14C-53EB116C1496} → {E97124E0-93F0-4805-904F-365E4F228219}
   - name: "F3.1.4 Provide Management of Car Parks"
     guid: "{CFC380C7-2010-46fb-9DE1-6BF39DBDA8B0}"
@@ -590,8 +591,8 @@ elements:
     note: |
       This High-level Function shall provide facilities for the management of car parks.  These are assumed to exist in the urban environment, although in practice as an alternative they could be used in the inter-urban environment.  The facilities enable the use of car park spaces to be monitored both in terms of the numbers being used (car park occupancy and/or car park state) and the time that individual spaces are used.  The consequent state of car parks is output directly to Drivers. It is also possible for Drivers to be charged for the use of particular car park spaces and for them to be prosecuted for overstaying their time in a particular space.  Information about the car park occupancy and status is passed to the Trip Planning and Traffic Management data storage facilities, as well as to the inter-urban service area management facilities.  Facilities are provided in this High-level Function for the direct output to Drivers of information about the status of service areas.  The Parking Operator is able to provide data objects about the spaces available in each car park, monitor the use of the car parks, to override the status setting (e.g. to close a car park) and to obtain a record of the payment for the use of car park spaces.
     links:
-      - "Aggregation «componentof» → F3. Manage Traffic"  # {13F9FC30-75BD-4c39-A145-D3DC71AEC11B} → {E9EDA059-38C0-41ba-9127-FF30B58B7C0D}
-      - "Aggregation «componentof» → F3.1 Provide Traffic Control"  # {A193E7CA-718D-4869-8E98-5896A453DE2B} → {226ED187-DB7A-409f-B509-BA8DBFFB6DB6}
+      - "Aggregation «component of» → F3. Manage Traffic"  # {13F9FC30-75BD-4c39-A145-D3DC71AEC11B} → {E9EDA059-38C0-41ba-9127-FF30B58B7C0D}
+      - "Aggregation «component of» → F3.1 Provide Traffic Control"  # {A193E7CA-718D-4869-8E98-5896A453DE2B} → {226ED187-DB7A-409f-B509-BA8DBFFB6DB6}
       - "Association «IN» → fo.po-carpark_current_data_request"  # {BA30C850-F721-4567-B4BB-D7E1FB119058} → {6B286CD5-82EE-4203-AE5A-1496D05C0101}
       - "Association «IN» → fo.po-carpark_output_settings"  # {0015BB3D-FC0C-47dc-B738-E3CF1FA4CEF6} → {090552F6-FCBF-4571-AA5D-07ABBECD6D0C}
       - "Association «IN» → fo.po-carpark_payment_record_request"  # {EA3EF9EE-E67A-4c6c-A633-825FFDC6A522} → {415A8C0B-565E-4c81-9725-C6390C000876}
@@ -655,7 +656,7 @@ elements:
       (3) The ability to process the data to provide actual vehicle count data, i.e. numbers of vehicles, using the entrances and exits of each car park.
       (4) The ability to send the processed data to other functionality for collation and use in traffic management.
     links:
-      - "Aggregation «componentof» → F3.1.4 Provide Management of Car Parks"  # {33263767-5338-4324-A67A-245F158183B3} → {CFC380C7-2010-46fb-9DE1-6BF39DBDA8B0}
+      - "Aggregation «component of» → F3.1.4 Provide Management of Car Parks"  # {33263767-5338-4324-A67A-245F158183B3} → {CFC380C7-2010-46fb-9DE1-6BF39DBDA8B0}
       - "Association «IN» → mt_carpark_entrance_exit_vehicle_detection"  # {6079CEEE-73F1-4e6f-9611-D5D57D6AA0E0} → {D8427A91-3B21-40f6-8476-0F69F992ECB1}
   - name: "F3.1.4.2 Detect the occupancy of Car Park spaces"
     guid: "{D84EE4AD-74B1-4d89-909C-FCAE8AADCDE3}"
@@ -671,7 +672,7 @@ elements:
       (2) The ability to collect this data as raw input by sensors that are capable of detecting the presence of a Vehicle and determining its type, e.g. car, bicycle, Heavy Goods Vehicle (HGV), Public Transport Vehicle.
       (3) The ability to send the data about the detected Vehicle to the functionality that calculates the car park spaces occupancies to that it can be determined if a vehicle has exceeded the time it is allowed to occupy a particular space.
     links:
-      - "Aggregation «componentof» → F3.1.4 Provide Management of Car Parks"  # {E9F084F8-C64A-413c-9671-5A84EF940F05} → {CFC380C7-2010-46fb-9DE1-6BF39DBDA8B0}
+      - "Aggregation «component of» → F3.1.4 Provide Management of Car Parks"  # {E9F084F8-C64A-413c-9671-5A84EF940F05} → {CFC380C7-2010-46fb-9DE1-6BF39DBDA8B0}
       - "Association «IN» → mt_carpark_space_occupancy"  # {3BF69BDB-8719-44a6-B350-025145B6CFB1} → {C8774BBE-3C0D-495c-AD73-4666D0EB5322}
   - name: "F3.1.4.3 Calculate Occupancy for individual Car Park Spaces"
     guid: "{7F1329C8-7BBF-4ff1-AF83-7866B8EFD866}"
@@ -689,7 +690,7 @@ elements:
       (4) If the functionality that collects payment for the use of the car park space responds with an indication that there is a valid amount of time remaining then the ability to monitor this time and to send a warning message to the Vehicle Driver when that time is about to expire.
       (5) If the Vehicle over stays its paid for (or permitted) time, the ability to send details of the situation sent to functionality that processes the violation of traffic regulations.
     links:
-      - "Aggregation «componentof» → F3.1.4 Provide Management of Car Parks"  # {8739ECAE-3824-4eae-AF07-C4C9242B93EB} → {CFC380C7-2010-46fb-9DE1-6BF39DBDA8B0}
+      - "Aggregation «component of» → F3.1.4 Provide Management of Car Parks"  # {8739ECAE-3824-4eae-AF07-C4C9242B93EB} → {CFC380C7-2010-46fb-9DE1-6BF39DBDA8B0}
       - "Association «IN» → mt.psle_illegal_carpark_space_occupancy"  # {40E41AC6-B874-4712-B4A9-F99C522A6429} → {A4DE1D4D-E6DF-44d6-879C-B39A58817389}
       - "Association «IN» → mt_carkpark_space_occuppied"  # {A3EF37BD-C77E-4872-A310-A867A27FAB16} → {5766E397-89F4-424f-965F-29D1A55DBD29}
       - "Association «IN» → mt_vehicle_in_carpark_space"  # {47A194F5-5066-4860-9046-07BE80FDFCD3} → {7D356B5E-15F5-4b1a-BBF7-A3D34FC09ED7}
@@ -708,7 +709,7 @@ elements:
       (2) The ability to translate the actual occupancy into the car park "status".
       (3) The ability for the translation to enable the functionality that outputs information about the car park occupancy to show either spaces or "state" according to the type of equipment that is available and/or the requirements of the Parking Operator.
     links:
-      - "Aggregation «componentof» → F3.1.4 Provide Management of Car Parks"  # {AA9D6BD3-0FE0-453a-93B9-E725E1C689AC} → {CFC380C7-2010-46fb-9DE1-6BF39DBDA8B0}
+      - "Aggregation «component of» → F3.1.4 Provide Management of Car Parks"  # {AA9D6BD3-0FE0-453a-93B9-E725E1C689AC} → {CFC380C7-2010-46fb-9DE1-6BF39DBDA8B0}
       - "Association «IN» → mt.mpto_requested_car_park_details"  # {1C0A2019-A5F2-4701-870B-A3CFE09C7346} → {E9B66915-B77C-4a63-B69D-9424771B3604}
       - "Association «IN» → mt.ptja_carpark_occupancy"  # {3DBF454C-EA4A-4aa0-872E-429810E420FA} → {BC8C022E-C687-4065-BB35-F21F752947AE}
       - "Association «IN» → mt_carpark_occupancy"  # {7A7D11F4-CCBE-4567-97A6-6939B2D8EFDF} → {D9E6B767-18BE-4e39-8321-26FE603DEE72}
@@ -735,7 +736,7 @@ elements:
       (3) The ability to send details of the payment to the Financial Clearinghouse for verification and confirmation.
       (4) If confirmation of successful payment is not provided by the Financial Clearinghouse then the purchased time that is sent to the functionality that calculates the car park spaces occupancy shall be set to zero, otherwise it shall be the amount of time purchased.
     links:
-      - "Aggregation «componentof» → F3.1.4 Provide Management of Car Parks"  # {0A3B8411-0268-4748-925C-05C6FB403C67} → {CFC380C7-2010-46fb-9DE1-6BF39DBDA8B0}
+      - "Aggregation «component of» → F3.1.4 Provide Management of Car Parks"  # {0A3B8411-0268-4748-925C-05C6FB403C67} → {CFC380C7-2010-46fb-9DE1-6BF39DBDA8B0}
       - "Association «IN» → mt_carpark_space_payment_result"  # {D81B9236-9C28-473c-95A7-28A347C55478} → {B5394363-B81A-46aa-86AC-CC8BF2EA6311}
       - "Association «IN» → mt_occupancy_time_for_carpark_space"  # {9D0EE801-3B07-439b-83A7-CC32685473BA} → {43C04622-188A-4aa4-9176-FFAAA5FC96A4}
       - "Association «IN» → mt_requested_carpark_payment_records"  # {D0872058-FF57-4774-9770-DD7AF4A8D1AB} → {4CBA872E-5370-44b8-AA50-78657455606F}
@@ -757,7 +758,7 @@ elements:
       (2) The HMI shall enable the Parking Operator to set up data about car parks that is loaded into the store of Car Park Data, to provide output of the current static data and to provide output of the current car park data (occupancy and/or number of spaces).
       (3) The HMI shall also enable the Parking Operator to override the current status so that for example, a car park can be set to "CLOSED" regardless of how many of its spaces are not being used.
     links:
-      - "Aggregation «componentof» → F3.1.4 Provide Management of Car Parks"  # {D2B16006-19D2-4dcf-B2FB-E33EE9D6C6C4} → {CFC380C7-2010-46fb-9DE1-6BF39DBDA8B0}
+      - "Aggregation «component of» → F3.1.4 Provide Management of Car Parks"  # {D2B16006-19D2-4dcf-B2FB-E33EE9D6C6C4} → {CFC380C7-2010-46fb-9DE1-6BF39DBDA8B0}
       - "Association «IN» → mt_carpark_output_settings"  # {13257F55-FDC0-440f-8512-1E9C09D44D40} → {2BBA0119-3394-446a-B593-922DC3AF332A}
       - "Association «IN» → mt_load_carpark_static_data"  # {E691ED62-14AB-470a-A5A5-FCAF24AA2373} → {B55A1F5D-3FBF-4d9e-B8CF-DD995E6172E4}
       - "Association «IN» → mt_override_carpark_status"  # {9040FEA2-6B13-4a02-8AD2-E1EF9F0B88D9} → {6E01A014-761E-433f-B918-B2D18B9AF6DC}
@@ -779,7 +780,7 @@ elements:
       (1) The ability to manage the use of the store of Urban Car Park Data.
       (2) The ability to load the store both static and real-time data and to extract (read) this data from the store when requested by other functionality.
     links:
-      - "Aggregation «componentof» → F3.1.4 Provide Management of Car Parks"  # {8880DB7E-4BEB-4d93-BB7C-42957CDACCBB} → {CFC380C7-2010-46fb-9DE1-6BF39DBDA8B0}
+      - "Aggregation «component of» → F3.1.4 Provide Management of Car Parks"  # {8880DB7E-4BEB-4d93-BB7C-42957CDACCBB} → {CFC380C7-2010-46fb-9DE1-6BF39DBDA8B0}
       - "Association «IN» → mt_carpark_space_time_costs"  # {6C9AF633-88ED-4739-B8A4-C4E237CB6F92} → {4AD35F8A-0D01-4ae6-9511-D643247EC912}
       - "Association «IN» → mt_carpark_static_data"  # {4525C3FB-62FA-48d0-B21D-C4E9BFB5E57D} → {336FC642-B8A8-44ef-B7D5-541755F1B0D1}
       - "Association «IN» → mt_load_car_park_data"  # {AFA88548-4853-4ad9-B533-217D678ADE41} → {124FE9C0-B2A4-4f28-AFF9-37C1EB0DC6EF}
@@ -798,7 +799,7 @@ elements:
       (2) The ability to output information about relevant service areas, if it is available from other functionality.
       (3) The ability for the output to show either the current car park occupancy (number of spaces) or the current status depending on what is required by the Parking Operator.
     links:
-      - "Aggregation «componentof» → F3.1.4 Provide Management of Car Parks"  # {2CD73D50-8675-4739-9C6B-5F5116A988E8} → {CFC380C7-2010-46fb-9DE1-6BF39DBDA8B0}
+      - "Aggregation «component of» → F3.1.4 Provide Management of Car Parks"  # {2CD73D50-8675-4739-9C6B-5F5116A988E8} → {CFC380C7-2010-46fb-9DE1-6BF39DBDA8B0}
       - "Association «IN» → mt.pshvs_carpark_information"  # {FAE2630E-3234-4738-8EAF-50C7949C1E38} → {0CC6E4F5-9A96-45a5-BB1B-6563FB17518F}
       - "Association «IN» → td-carpark_occupancy"  # {99245576-F4FE-4c2d-8B90-D611480F063A} → {FDF39F29-88C3-4c62-8E0B-2EBC15FD5AF2}
       - "Association «IN» → td-carpark_status"  # {8A565CFD-1F26-45f7-8F5E-DECA3DB3657F} → {3C728212-7D48-432a-A822-B2F2FBFBFC2A}
@@ -812,8 +813,8 @@ elements:
     note: |
       This High-level Function shall provide facilities for the management of service areas.  These are assumed to exist in the inter-urban environment, although in practice as an alternative they could be used in the urban environment.  The facilities enable the use of service area spaces to be monitored in terms of the numbers being used (service area occupancy and/or state) and for the consequent state to be output directly to Drivers.  Information about the service area occupancy and status is passed to the Trip Planning and Traffic Management data storage facilities, as well as to the urban car park management facilities.  Facilities are provided in this High-level Function for the direct output to Drivers of information about the status of car parks.  The Parking Operator is able to provide data objects about the spaces available in each service area, monitor the use of the service area and to override the status setting, e.g. to close a service area.
     links:
-      - "Aggregation «componentof» → F3. Manage Traffic"  # {C1507F2F-352A-4e46-B954-2A1D37E4BB58} → {E9EDA059-38C0-41ba-9127-FF30B58B7C0D}
-      - "Aggregation «componentof» → F3.1 Provide Traffic Control"  # {1AB84CE8-29DF-4335-ADA4-D2D2F7823734} → {226ED187-DB7A-409f-B509-BA8DBFFB6DB6}
+      - "Aggregation «component of» → F3. Manage Traffic"  # {C1507F2F-352A-4e46-B954-2A1D37E4BB58} → {E9EDA059-38C0-41ba-9127-FF30B58B7C0D}
+      - "Aggregation «component of» → F3.1 Provide Traffic Control"  # {1AB84CE8-29DF-4335-ADA4-D2D2F7823734} → {226ED187-DB7A-409f-B509-BA8DBFFB6DB6}
       - "Association «IN» → fo.po-rest_area_booking_response"  # {B6F9ADD8-7496-446b-A690-FB397EF552D3} → {544C49F5-FB79-43a6-A4DB-2E881964254B}
       - "Association «IN» → fo.po-service_area_current_data_request"  # {A3D9D955-BEC2-4c35-AF2B-3DBDCB1549B0} → {E9629A2E-7E74-4f25-BF42-045C5744CD56}
       - "Association «IN» → fo.po-service_area_driver_output_settings"  # {29A7ADAA-BF93-48d4-9B44-F51B9A9F831D} → {E58F7816-23F8-4e8f-8F41-DE4E3AC786DD}
@@ -825,6 +826,7 @@ elements:
       - "Association «IN» → mt.pshvs_data_for_rest_area_use"  # {BE34CEFF-A8C2-4587-8D93-3C080DC5E040} → {9DC9C988-6E28-4471-865C-1318F7F111CE}
       - "Association «IN» → mt.pshvs_rest_area_booking_confirmed_&_information"  # {75DF48DB-0B5F-4e1a-BC6D-1F8B15802082} → {AA7248F2-09A3-4038-B33B-224FF79A577C}
       - "Association «IN» → mt.pshvs_rest_area_unavailable_for_new_eta"  # {1CAF7E9B-1503-4c34-B690-FA23CB014D33} → {3799CEB3-F41A-493e-8287-32D82AD79994}
+      - "Association «IN» → mt.pshvs_service_area_information"  # {3EFAA128-B53F-4e4e-8B51-39E60A95F50F} → {8AFBAD1F-614D-4009-827E-5751E79CC47A}
       - "Association «IN» → mt.ptja_service_area_occupancy"  # {08FC46F4-9478-46f0-8FAC-F0DD3241E284} → {BC5C8686-420A-4849-A0AA-3CE5736F81BA}
       - "Association «IN» → mt_confirm_rest_area_request"  # {839276F3-8E22-44a8-9B84-7CB6E7956415} → {ADC2C00A-4F0B-4fa3-9AAC-C17A5229044C}
       - "Association «IN» → mt_current_service_area_status_and_occupancy"  # {DB0C3AC9-691C-4bcb-A6F4-3D8C93501ED6} → {298E116B-F0E8-4503-939C-A6773038400C}
@@ -856,7 +858,6 @@ elements:
       - "Association «IN» → to.po-service_area_current_data"  # {194741CF-7F35-4925-BDA5-E70AC440B63D} → {A0366A1E-083F-4d37-BDB1-7DCD74F5E7F9}
       - "Association «IN» → to.po-service_area_static_data"  # {C64C577F-2B8E-4dc9-B8E9-30331F8A020C} → {20D7E27B-CC06-4f7b-B9C3-27BDFC5486E1}
       - "Association «IN» → to.po-service_area_status_overrride_response"  # {B3D3F50B-FB57-46f3-B0AA-FBE147CE7E39} → {FF833A32-FCE5-48c1-B058-1435285D3146}
-      - "Association «OUT» → mt.pshvs_service_area_information"  # {3EFAA128-B53F-4e4e-8B51-39E60A95F50F} → {8AFBAD1F-614D-4009-827E-5751E79CC47A}
   - name: "F3.1.5.1 Monitor Service Area Vehicle Occupation"
     guid: "{0E5602CA-D10F-4daa-91FB-20F4304238A3}"
     type: "Activity"
@@ -872,7 +873,7 @@ elements:
       (3) The ability for the raw input data to be processed to provide actual traffic count data, i.e. numbers of vehicles, at the entrances and exits of each service area vehicle park.
       (4) The ability for the resulting data to be passed to other functionality for collation and use in inter-urban traffic control.
     links:
-      - "Aggregation «componentof» → F3.1.5 Provide Management of Service Areas"  # {94A817C1-08A2-4717-860B-C80A24AF410B} → {962C365C-5E2E-4b47-BA9E-9537F154665A}
+      - "Aggregation «component of» → F3.1.5 Provide Management of Service Areas"  # {94A817C1-08A2-4717-860B-C80A24AF410B} → {962C365C-5E2E-4b47-BA9E-9537F154665A}
       - "Association «IN» → mt_service_area_entrance_exit_vehicle_detection"  # {5F909BD5-2A83-42a2-8F94-D5937D217028} → {D1C68963-7EEA-4c6d-9854-E4BDB709D605}
   - name: "F3.1.5.2 Calculate Service Area Occupancy and Status"
     guid: "{462B415A-6B6D-4fd2-B79A-6CBA18BC3CEE}"
@@ -888,7 +889,7 @@ elements:
       (2) The ability for the translation to enable the information output functionality to show either spaces or "state" according to the type of equipment that is available.
       (3) The ability for the occupancy levels to be provided by the service area occupancy monitoring functionality.
     links:
-      - "Aggregation «componentof» → F3.1.5 Provide Management of Service Areas"  # {92531188-3C4C-4d2c-B593-E39305C93218} → {962C365C-5E2E-4b47-BA9E-9537F154665A}
+      - "Aggregation «component of» → F3.1.5 Provide Management of Service Areas"  # {92531188-3C4C-4d2c-B593-E39305C93218} → {962C365C-5E2E-4b47-BA9E-9537F154665A}
       - "Association «IN» → mt.mpto_requested_service_area_details"  # {8F10AB08-49B5-4048-9626-87823F895CB0} → {14DBF88D-9BA4-406e-BB55-99EBBD836502}
       - "Association «IN» → mt.ptja_service_area_occupancy"  # {F96F784C-C063-4d57-8654-A26EBD478BE7} → {BC5C8686-420A-4849-A0AA-3CE5736F81BA}
       - "Association «IN» → mt_current_service_area_status_and_occupancy"  # {F85F6F97-9B82-49b5-89A7-A54BFFB8A3F3} → {298E116B-F0E8-4503-939C-A6773038400C}
@@ -916,10 +917,10 @@ elements:
       (4) The ability for the Parking Operator to select which car park occupancies and/or status are displayed.
       (5) The ability for the way in which the information is displayed to be selected from options such as, all cars/motorcycles, buses/coaches and HGV s .
     links:
-      - "Aggregation «componentof» → F3.1.5 Provide Management of Service Areas"  # {1232EFF8-843B-4f9b-BDE9-3FD1CC3FB6D2} → {962C365C-5E2E-4b47-BA9E-9537F154665A}
+      - "Aggregation «component of» → F3.1.5 Provide Management of Service Areas"  # {1232EFF8-843B-4f9b-BDE9-3FD1CC3FB6D2} → {962C365C-5E2E-4b47-BA9E-9537F154665A}
+      - "Association «IN» → mt.pshvs_service_area_information"  # {6CAE1B31-522A-44fb-A327-F5A6FC5CB46D} → {8AFBAD1F-614D-4009-827E-5751E79CC47A}
       - "Association «IN» → td-service_area_occupancy"  # {F84BEAFF-D88A-47c3-8224-62AE3013CE43} → {528196AC-8CF9-4ea6-99BF-52BE4F7E10AE}
       - "Association «IN» → td-service_area_status"  # {51238E4B-6F14-4953-A4DF-F0860B198E77} → {27C750E4-BAE9-4f85-ADD6-CDC8BEED03A7}
-      - "Association «OUT» → mt.pshvs_service_area_information"  # {6CAE1B31-522A-44fb-A327-F5A6FC5CB46D} → {8AFBAD1F-614D-4009-827E-5751E79CC47A}
   - name: "F3.1.5.5 Manage Inter-Urban Service Area Data Store"
     guid: "{9F4D68BB-0EAF-491c-BC30-6393C7DFA6E9}"
     type: "Activity"
@@ -934,7 +935,7 @@ elements:
       (2) The ability to ensure that all data sent to the store is stored in a coherent and logical manner and shall enable data to be read from the store as and when requested.
       (3) The ability to carry out these activities in such a way that they do not interfere with one another and that the integrity of the data being stored and read is preserved.
     links:
-      - "Aggregation «componentof» → F3.1.5 Provide Management of Service Areas"  # {49B5C121-C41D-42bf-8224-CBEEF4A1E23F} → {962C365C-5E2E-4b47-BA9E-9537F154665A}
+      - "Aggregation «component of» → F3.1.5 Provide Management of Service Areas"  # {49B5C121-C41D-42bf-8224-CBEEF4A1E23F} → {962C365C-5E2E-4b47-BA9E-9537F154665A}
       - "Association «IN» → mt_load_service_area_data"  # {90FBA6F0-8A90-486b-8C38-E1276018A36B} → {2FC8B5E7-4DC6-437c-BBDF-A9D2540F4C69}
       - "Association «IN» → mt_read_service_area_static_data"  # {C702BFFC-476C-427d-A446-D5661A122602} → {4433DFCC-11CE-45f7-A74F-E1B64BB8032C}
       - "Association «IN» → mt_requested_data_for_service_area"  # {B8D510CC-3A54-4a63-950C-E5CE16B65D2E} → {1A78A689-6E1E-4362-9912-134DB58B4F17}
@@ -953,7 +954,7 @@ elements:
       (2) When its sensors detect that a Vehicle is approaching the ability to use the data from the sensors to determine the Vehicle identity.
       (3) The ability to send the Vehicle identity data to the functionality that manages service area rest area bookings.
     links:
-      - "Aggregation «componentof» → F3.1.5 Provide Management of Service Areas"  # {8F2EAD41-9D8F-4aca-BD32-83E7D68A4536} → {962C365C-5E2E-4b47-BA9E-9537F154665A}
+      - "Aggregation «component of» → F3.1.5 Provide Management of Service Areas"  # {8F2EAD41-9D8F-4aca-BD32-83E7D68A4536} → {962C365C-5E2E-4b47-BA9E-9537F154665A}
       - "Association «IN» → mt_freight_vehicle_identity_for_rest_area"  # {B637F54F-9336-4ed1-8B73-409BCB87AD56} → {7C99E04E-F29A-469c-A178-B408F591BCA4}
   - name: "F3.1.6 Provide Traffic Predictions"
     guid: "{46C6DE8C-67D9-4327-A1EE-E3D55E6B7E97}"
@@ -965,8 +966,8 @@ elements:
     note: |
       This High-level Function provides facilities for the prediction of traffic conditions using simulation and modelling techniques.  It will provide individual facilities for the creation of traffic management strategies through the use of simulation tools, the use of data objects containing real-time data to drive the simulation tools, the creation and use of models of the road networks and the recording of which strategies have been used and the results of their use so that their effect on the traffic conditions in the road network can be determined and assessed, i.e. learning the lessons from previous strategy implementations.  Many of these facilities are provided as options so that it will be possible to configure individual systems to contain some or all of them.  The Road Network Operator will be able to monitor and manage these facilities and hence the use of the simulation and modelling tools.
     links:
-      - "Aggregation «componentof» → F3. Manage Traffic"  # {6217683A-3F3E-4538-9EB0-EB7970EF5837} → {E9EDA059-38C0-41ba-9127-FF30B58B7C0D}
-      - "Aggregation «componentof» → F3.1 Provide Traffic Control"  # {E4ADFDDB-E74C-4c0d-88AE-4BD13BD05216} → {226ED187-DB7A-409f-B509-BA8DBFFB6DB6}
+      - "Aggregation «component of» → F3. Manage Traffic"  # {6217683A-3F3E-4538-9EB0-EB7970EF5837} → {E9EDA059-38C0-41ba-9127-FF30B58B7C0D}
+      - "Aggregation «component of» → F3.1 Provide Traffic Control"  # {E4ADFDDB-E74C-4c0d-88AE-4BD13BD05216} → {226ED187-DB7A-409f-B509-BA8DBFFB6DB6}
       - "Association «IN» → ftp-process_traffic_prediction_results"  # {B5E2E8BD-F6A8-450d-8611-7E7D74660548} → {4BAE3BF4-FF7C-4d73-8604-AEFB9FC5D38F}
       - "Association «IN» → ftp-request_road_network_data"  # {9D4293B1-30F6-420e-929D-797D53A9C9AD} → {2E80EA46-3F45-4a83-BE52-B435CEA8EF0B}
       - "Association «IN» → ftp-request_traffic_prediction_results"  # {256579A6-C10C-4ebd-A52E-29B39816D708} → {0400E33B-727D-4923-93DF-B494925EF1E4}
@@ -1025,7 +1026,7 @@ elements:
       (2) The ability to process the received data so that it can be used in the road network model by the Traffic Simulation Engine functionality.
       (3) When the data has been processed it shall be sent to the functionality that manages the store of Traffic Simulation Data from where it can be obtained by the Traffic Simulation Engine functionality.
     links:
-      - "Aggregation «componentof» → F3.1.6 Provide Traffic Predictions"  # {BEA98DE2-C9C4-42f7-A1C3-0CC893D4192E} → {46C6DE8C-67D9-4327-A1EE-E3D55E6B7E97}
+      - "Aggregation «component of» → F3.1.6 Provide Traffic Predictions"  # {BEA98DE2-C9C4-42f7-A1C3-0CC893D4192E} → {46C6DE8C-67D9-4327-A1EE-E3D55E6B7E97}
       - "Association «IN» → mt_road_network_data_for_predictions"  # {22A26B60-B091-4245-AF9D-3C2DF506540D} → {1B514F5B-4015-475b-ACA3-C8FDAC2FD86E}
   - name: "F3.1.6.2 Process Road Traffic Data"
     guid: "{E5845535-9E00-4901-8A0D-E18896882833}"
@@ -1043,7 +1044,7 @@ elements:
       (4) When the data has been processed, the ability for the data to be sent to the functionality that manages the store of Traffic Simulation Data from where it can be obtained by the Traffic Simulation Engine functionality.
       (5) It shall be possible for road network (model) data to be provided and for historic traffic data to be provided periodically by the functionality managing the store of Traffic Simulation Data for use in the processing of the traffic data.
     links:
-      - "Aggregation «componentof» → F3.1.6 Provide Traffic Predictions"  # {9301E9EF-C980-49ca-B8E9-44725EDC1DCA} → {46C6DE8C-67D9-4327-A1EE-E3D55E6B7E97}
+      - "Aggregation «component of» → F3.1.6 Provide Traffic Predictions"  # {9301E9EF-C980-49ca-B8E9-44725EDC1DCA} → {46C6DE8C-67D9-4327-A1EE-E3D55E6B7E97}
       - "Association «IN» → mt_processed_road_traffic_data"  # {6FB55053-B94A-477a-B7CD-0810B1701A50} → {221CA33F-241D-4a17-9A1C-985795A89213}
   - name: "F3.1.6.3 Create Traffic Predictions with Simulation Methods"
     guid: "{416DC520-A18D-4000-999A-59F7261E5928}"
@@ -1061,7 +1062,7 @@ elements:
       (4) The ability for these predictions to include the need for car park spaces and shall be produced at the request of the Transport Planner or at regular intervals that the Planner may specify.
       (5) When completed the ability to send the predicted traffic conditions and associated strategies to the functionality managing the store of Traffic Simulation Data.
     links:
-      - "Aggregation «componentof» → F3.1.6 Provide Traffic Predictions"  # {E7AB6617-58F8-4a1a-94AE-23322CA45425} → {46C6DE8C-67D9-4327-A1EE-E3D55E6B7E97}
+      - "Aggregation «component of» → F3.1.6 Provide Traffic Predictions"  # {E7AB6617-58F8-4a1a-94AE-23322CA45425} → {46C6DE8C-67D9-4327-A1EE-E3D55E6B7E97}
       - "Association «IN» → mt_operator_traffic_prediction_responses"  # {A4E202DC-6FF9-470c-BD0C-F3F9C4F80609} → {9893848C-CBF5-4b31-9F58-D2963A18FAAA}
       - "Association «IN» → mt_request_road_data_for_predictions"  # {70F14394-BAF5-4388-A0E1-D03E2056732A} → {F6C7BCE1-FB40-47b4-B7CA-A881C6205F12}
       - "Association «IN» → mt_traffic_prediction_results"  # {6C951558-0F17-49da-96BB-DC2D3E3B6BAD} → {0633AC1F-1768-40cf-9669-6C8F8F22BFE6}
@@ -1082,7 +1083,7 @@ elements:
       (5) The ability to enable the Transport Planner to have access to the data in the store in a controlled manner so that changes can be made to the road network model and the results extracted for output to other functionality, either by specific request or following the automatic generation of new results by the Traffic Simulation Engine functionality.
       (6) If necessary the ability to be able to exchange data from the store with similar functionality in another instance of the System.
     links:
-      - "Aggregation «componentof» → F3.1.6 Provide Traffic Predictions"  # {3CA7B0A4-9769-4440-B63E-580F180B7582} → {46C6DE8C-67D9-4327-A1EE-E3D55E6B7E97}
+      - "Aggregation «component of» → F3.1.6 Provide Traffic Predictions"  # {3CA7B0A4-9769-4440-B63E-580F180B7582} → {46C6DE8C-67D9-4327-A1EE-E3D55E6B7E97}
       - "Association «IN» → mt_load_prediction_data"  # {F61A8345-C84E-452f-99BE-E7739B321412} → {5F71BBF9-A19F-425a-9564-01A7C92632B3}
       - "Association «IN» → mt_requested_road_nework_data"  # {ABE1604F-78F2-4ffa-AFBD-829AF626EA51} → {DA86E667-6CFA-496c-A073-D7FBEF00D3B3}
       - "Association «IN» → mt_requested_traffic_prediction_results"  # {0B92280C-7F90-49d3-8319-0035FC901F47} → {018D880B-0913-439e-A2CC-E726F7A67671}
@@ -1104,7 +1105,7 @@ elements:
       (2) The HMI shall enable these tasks to include the management of the operation of Traffic Simulation Engine functionality and the modification of the road network model through the functionality that manages the store of Traffic Simulation Data.
       (3) The HMI shall enable the Transport Planner to request access to view both the simulation results and the current road network data for all or any of the models plus in the case of traffic data for varying periods of time and parts of the road network.
     links:
-      - "Aggregation «componentof» → F3.1.6 Provide Traffic Predictions"  # {133F1F12-D2A8-4585-ABE0-E85705C50001} → {46C6DE8C-67D9-4327-A1EE-E3D55E6B7E97}
+      - "Aggregation «component of» → F3.1.6 Provide Traffic Predictions"  # {133F1F12-D2A8-4585-ABE0-E85705C50001} → {46C6DE8C-67D9-4327-A1EE-E3D55E6B7E97}
       - "Association «IN» → mt_operator_traffic_prediction_commands"  # {3B38C9EF-D4A9-4eb7-882F-AD1692C5BF86} → {785D97D3-F5AD-4df7-BD76-4DAA3491F1C8}
       - "Association «IN» → mt_request_road_nework_data"  # {7B36A947-91BC-4f17-B7C1-AD7608F13DD0} → {F2516FAD-6C42-4d8b-94F6-DDCF99B794BD}
       - "Association «IN» → mt_request_traffic_prediction_results"  # {D2657C50-E2AA-4b28-ACFA-2116DBF3D900} → {FFE1C538-5AC7-4896-A43E-FA591EB936A2}
@@ -1126,7 +1127,7 @@ elements:
       (2) The ability to process these results to provide coherent and comprehensive information about forecasts of traffic conditions and traffic management strategies.
       (3) The ability to automatically send this information to the appropriate functionality in the System.
     links:
-      - "Aggregation «componentof» → F3.1.6 Provide Traffic Predictions"  # {AA4DFBA4-BD6D-415d-B083-EA3103EE728D} → {46C6DE8C-67D9-4327-A1EE-E3D55E6B7E97}
+      - "Aggregation «component of» → F3.1.6 Provide Traffic Predictions"  # {AA4DFBA4-BD6D-415d-B083-EA3103EE728D} → {46C6DE8C-67D9-4327-A1EE-E3D55E6B7E97}
       - "Association «IN» → mt.mffo_predicted_road_netwrk_data"  # {190E4B79-09B3-4994-8912-B821140E3A66} → {F7147113-5C13-46a1-9FAD-3F0CBCFBBE32}
       - "Association «IN» → mt.mpto_predicted_road_conditions_for_demand"  # {91F353B9-D90D-4f45-A041-99D892B5B148} → {9E37BFEE-167C-4c84-9385-5383191BCE75}
       - "Association «IN» → mt.mpto_road_network_traffic_predictions"  # {F64C4CFF-8A1A-485c-BCA7-BD6EBA47FEF6} → {B899E27B-0E06-4e0a-8B0A-1BBACBE9F0AB}
@@ -1143,7 +1144,7 @@ elements:
       - "Association «IN» → mt_urban_strategies_for_long-term"  # {612D48C1-7E03-4c28-87B9-D17448585DF0} → {2C5E5DC3-BC3F-426f-AF0F-75B8E9CC8DAE}
       - "Association «IN» → mt_urban_traffic_long-term_prediction_data"  # {B268C01A-D253-4350-9F75-6D2210F1EA52} → {DC9984EE-34BA-4b7b-A018-99804B702963}
       - "Association «IN» → tesp.ttip_forecast_traffic_conditions_data"  # {471785A1-7D6F-41d9-9BDC-A014B6FE67F1} → {D490431D-0C5C-4668-B0C5-F8B0075ED1F1}
-      - "Association «belongsto» → 9.11.1.6"  # {A08AE6FB-2199-422e-93F2-878BF349FA3D} → {7CEBA355-23A2-4178-BC45-ACE85F9644B0}
+      - "Association «belongs to» → 9.11.1.6"  # {A08AE6FB-2199-422e-93F2-878BF349FA3D} → {7CEBA355-23A2-4178-BC45-ACE85F9644B0}
   - name: "F3.1.7 Provide Traffic Management for Tunnels"
     guid: "{D328D434-5896-4fb1-9399-1446B46AA837}"
     type: "Activity"
@@ -1154,8 +1155,8 @@ elements:
     note: |
       This High-level Function shall provide facilities for the control and management of road traffic within tunnels.  It shall use a variety of inputs from the tunnel infrastructure to assess if there are any exceptional conditions that might affect the current situations for Vehicles as well as their Drivers and passengers.  From this assessment the Function can provide warnings and other information to Drivers as they approach the tunnels.  Facilities shall be provided by the Function to enable the Tunnel Operator to monitor the actions taken as a result of the assessment process and to modify these actions or provide new ones.
     links:
-      - "Aggregation «componentof» → F3. Manage Traffic"  # {069E41C0-6940-425d-8A81-164F68A7536E} → {E9EDA059-38C0-41ba-9127-FF30B58B7C0D}
-      - "Aggregation «componentof» → F3.1 Provide Traffic Control"  # {E7E2F648-A4F1-4c84-854C-0AF97F7830CC} → {226ED187-DB7A-409f-B509-BA8DBFFB6DB6}
+      - "Aggregation «component of» → F3. Manage Traffic"  # {069E41C0-6940-425d-8A81-164F68A7536E} → {E9EDA059-38C0-41ba-9127-FF30B58B7C0D}
+      - "Aggregation «component of» → F3.1 Provide Traffic Control"  # {E7E2F648-A4F1-4c84-854C-0AF97F7830CC} → {226ED187-DB7A-409f-B509-BA8DBFFB6DB6}
       - "Association «IN» → fo.tnlo-exceptional_condition_action_response"  # {DFA7F7D2-A115-4f13-9B68-698E751CCA50} → {66686032-5DB7-4f28-B8E3-729837358706}
       - "Association «IN» → fo.tnlo-tunnel_action_definitions"  # {33D038F5-3012-4b90-8059-FB6260727DAC} → {4BFB37CC-6AA8-4e8e-BFBC-76FE8A58C5D4}
       - "Association «IN» → mt.pshvs_tunnel_status_for_drivers"  # {CB452352-6B3C-407a-971A-CEE8984FDD51} → {35780542-296F-4f53-96C6-DBBE3BC5195B}
@@ -1189,7 +1190,7 @@ elements:
       (7 The ability to also receive the details of the content of messages informing Drivers about traffic management strategies that should be output to Drivers using the tunnel(s) that it is managing in the absence of any higher priority messages of its own once confirmation is received from the Tunnel Operator through the HMI provided by other functionality.
       (8) If any faults are detected with its sensors or other equipment, the ability to report this to the appropriate functionality within the System.
     links:
-      - "Aggregation «componentof» → F3.1.7 Provide Traffic Management for Tunnels"  # {DF8FC1FC-822A-45a8-B606-7F67F4D6971F} → {D328D434-5896-4fb1-9399-1446B46AA837}
+      - "Aggregation «component of» → F3.1.7 Provide Traffic Management for Tunnels"  # {DF8FC1FC-822A-45a8-B606-7F67F4D6971F} → {D328D434-5896-4fb1-9399-1446B46AA837}
       - "Association «IN» → mt_actions_for_tunnel_operator"  # {4891A598-137A-43e1-8BA3-C78C99115B90} → {A966BE92-AAE6-42c9-A916-EEEDEEFC9E9F}
       - "Association «IN» → mt_tunnel_equipment_status"  # {7CF0EDE5-965F-45f9-9877-C251C06965D5} → {82AD95EA-4355-4d8e-ABF8-6FB611ED726B}
       - "Association «IN» → mt_tunnel_exceptional_conditions"  # {25191EE3-3032-45bb-940B-F8E9FCB161AC} → {FA0A18FD-1938-4b6c-901F-003571A12811}
@@ -1212,7 +1213,7 @@ elements:
       (3) If the Tunnel Operator is advised that there are no pre-defined actions that can be taken, the HMI shall enable them to be defined by the Operator for immediate implementation.
       (4) The ability for the Tunnel Operator to set up actions in advance of the detection of any exceptional situations.
     links:
-      - "Aggregation «componentof» → F3.1.7 Provide Traffic Management for Tunnels"  # {9EB40B49-E3C3-4ccf-8EDA-EA6D82E12821} → {D328D434-5896-4fb1-9399-1446B46AA837}
+      - "Aggregation «component of» → F3.1.7 Provide Traffic Management for Tunnels"  # {9EB40B49-E3C3-4ccf-8EDA-EA6D82E12821} → {D328D434-5896-4fb1-9399-1446B46AA837}
       - "Association «IN» → mt_tunnel_action_definitions"  # {BA3F151A-076D-405d-96C9-976AF06F3F2C} → {0E707C29-B787-4860-AE0B-B934BFD0068A}
       - "Association «IN» → mt_tunnel_action_responses"  # {5C02E6CE-3C57-4d0b-85F4-1A6DCB4BB4E6} → {F3D8461F-91FC-46ff-9BCE-C1412C4CABD8}
       - "Association «IN» → to.tnlo-exceptional_condition_action_request"  # {715ADC5D-0565-43a5-817F-5F3194C75B01} → {57CD5232-D6BD-4fb6-AADA-15DDBF1CD299}
@@ -1235,7 +1236,7 @@ elements:
       (6) It shall be possible for the output from equipment outside the vehicle to be clearly visible in all types of ambient light conditions (including darkness).
       (7) It shall be possible for the output of messages from equipment outside that instruct Drivers not to enter a tunnel to use mechanisms to physically prevent Vehicle access to a tunnel.
     links:
-      - "Aggregation «componentof» → F3.1.7 Provide Traffic Management for Tunnels"  # {07DE0234-8DB9-4b31-82D3-7E81E2A4D9D1} → {D328D434-5896-4fb1-9399-1446B46AA837}
+      - "Aggregation «component of» → F3.1.7 Provide Traffic Management for Tunnels"  # {07DE0234-8DB9-4b31-82D3-7E81E2A4D9D1} → {D328D434-5896-4fb1-9399-1446B46AA837}
       - "Association «IN» → mt.pshvs_tunnel_status_for_drivers"  # {9C76EA80-82F8-4411-8F61-9526477CECCC} → {35780542-296F-4f53-96C6-DBBE3BC5195B}
       - "Association «IN» → td-tunnel_status"  # {8874F60B-7E05-4005-A9E7-920465AC10D3} → {2B7DF593-E11F-4c6a-ADEC-08260C612843}
   - name: "F3.1.8 Provide Traffic Management for Bridges"
@@ -1248,8 +1249,8 @@ elements:
     note: |
       This High-level Function shall provide facilities for the control and management of road traffic using bridges.  It shall use inputs from equipment that monitors atmospheric conditions, weather forecasts and the bridge infrastructure to assess if there are any weather conditions that pose a danger to Vehicles as well as their Drivers and passengers.  From this assessment the Function can provide warnings and other information to Drivers as they approach the bridges.  Facilities shall be provided by the Function to enable the Bridge Operator to monitor the actions taken as a result of the assessment process and to modify these actions or provide new ones.
     links:
-      - "Aggregation «componentof» → F3. Manage Traffic"  # {3FB187AE-E0A9-4f3f-AD1B-A27BAED2C623} → {E9EDA059-38C0-41ba-9127-FF30B58B7C0D}
-      - "Aggregation «componentof» → F3.1 Provide Traffic Control"  # {B172D963-74A6-4d2d-B952-CBFF0A9EAFEF} → {226ED187-DB7A-409f-B509-BA8DBFFB6DB6}
+      - "Aggregation «component of» → F3. Manage Traffic"  # {3FB187AE-E0A9-4f3f-AD1B-A27BAED2C623} → {E9EDA059-38C0-41ba-9127-FF30B58B7C0D}
+      - "Aggregation «component of» → F3.1 Provide Traffic Control"  # {B172D963-74A6-4d2d-B952-CBFF0A9EAFEF} → {226ED187-DB7A-409f-B509-BA8DBFFB6DB6}
       - "Association «IN» → fo.bo-bridge_action_definitions"  # {F34A757E-9DEF-469b-AC9B-AD31B8B5BA4A} → {C12526B2-F232-4097-B90A-0BEC15CA17DB}
       - "Association «IN» → fo.bo-weather_condition_action_request_response"  # {C172F5F8-72DD-48fd-803F-3D868B13D7B8} → {4C0565B4-917B-47fc-AE29-44BF6BBE712C}
       - "Association «IN» → mt.pshvs_bridge_status_for_drivers"  # {5BB0F165-35FD-4d67-B84A-570B02AA252C} → {F792A446-EA90-4760-B594-97C64DDF34C2}
@@ -1282,7 +1283,7 @@ elements:
       (7) The ability to also receive the details of the content of messages informing Drivers about traffic management strategies that it should output to Drivers using the bridges(s) that it is managing in the absence of any higher priority messages of its own once confirmation is received from the Bridge Operator.
       (8) If any faults are detected by its sensors or other equipment, the ability to report this to the appropriate functionality in the System.
     links:
-      - "Aggregation «componentof» → F3.1.8 Provide Traffic Management for Bridges"  # {19D21437-7E1F-4982-8B53-09D75737E02C} → {0F1A871B-A608-446a-9122-0D83D25D124D}
+      - "Aggregation «component of» → F3.1.8 Provide Traffic Management for Bridges"  # {19D21437-7E1F-4982-8B53-09D75737E02C} → {0F1A871B-A608-446a-9122-0D83D25D124D}
       - "Association «IN» → mt_actions_for_bridge_operator"  # {F3CE6E9D-904B-4b86-9F23-688C0EC63F74} → {FA5BFE0C-9FAE-4e0c-8C4C-FBA118284008}
       - "Association «IN» → mt_bridge_dangerous_conditions"  # {7AA012C9-FD52-4346-8B1C-F99E803DE95B} → {AB02F17E-6939-428f-861D-BC63B4B9E0CE}
       - "Association «IN» → mt_bridge_equipment_status"  # {80F19982-B7C0-4983-A016-C6A1ED0A3383} → {A0D5B4D5-5B79-4f96-BEB0-790EFDC47A3A}
@@ -1304,7 +1305,7 @@ elements:
       (3) If the Bridge Operator is advised that there are no pre-defined actions that can be taken, the HMI shall enable them to be defined by the Operator for immediate implementation.
       (4) The ability for the Bridge Operator to set up actions in advance of the detection of any dangerous weather conditions.
     links:
-      - "Aggregation «componentof» → F3.1.8 Provide Traffic Management for Bridges"  # {91796279-2E81-4bc1-B0C9-A40BD7963D85} → {0F1A871B-A608-446a-9122-0D83D25D124D}
+      - "Aggregation «component of» → F3.1.8 Provide Traffic Management for Bridges"  # {91796279-2E81-4bc1-B0C9-A40BD7963D85} → {0F1A871B-A608-446a-9122-0D83D25D124D}
       - "Association «IN» → mt_bridge_action_definitions"  # {D7DECE5B-7735-4ce1-B42B-3D744C504D70} → {56B5408A-3F5C-4993-B1A1-AAB0A24FE0E1}
       - "Association «IN» → mt_bridge_action_responses"  # {6B636FD6-BA9B-4f46-AE9B-9A221CFBCBB5} → {BCAAFE7B-0A21-448a-A265-FA0AF33C15BC}
       - "Association «IN» → to.bo-dangerous_weather_conditions_action_taken"  # {8FD0A6AB-3FE8-4e72-AF0F-D1C9229078E6} → {173269DC-DA7C-4574-BCFC-5D22BF4C76F5}
@@ -1327,7 +1328,7 @@ elements:
       (6) It shall be possible for the output from equipment outside the vehicle to be clearly visible in all types of ambient light conditions (including darkness).
       (7) It shall be possible for the output of messages from equipment outside that instruct Drivers not to cross a bridge to use mechanisms to physically prevent Vehicle and/or Pedestrian access to a bridge.
     links:
-      - "Aggregation «componentof» → F3.1.8 Provide Traffic Management for Bridges"  # {40435B0E-36D4-4777-B077-360D46C515F9} → {0F1A871B-A608-446a-9122-0D83D25D124D}
+      - "Aggregation «component of» → F3.1.8 Provide Traffic Management for Bridges"  # {40435B0E-36D4-4777-B077-360D46C515F9} → {0F1A871B-A608-446a-9122-0D83D25D124D}
       - "Association «IN» → mt.pshvs_bridge_status_for_drivers"  # {395FB4BF-9879-48b0-8ED9-D5815EEA5380} → {F792A446-EA90-4760-B594-97C64DDF34C2}
       - "Association «IN» → td-bridge_status"  # {4DAB3E86-7A4C-4f57-8129-2D7325D046C7} → {B3F43A9F-31C7-47d8-95E6-AA27C62A445F}
   - name: "F3.2 Manage Incidents"
@@ -1340,7 +1341,7 @@ elements:
     note: |
       This High-level Function shall provide facilities for the management of incidents that occur within a road network.  It shall be possible for the incidents to be planned events, or due to a variety of un-planned activities.  The Function shall enable the occurrence of these unplanned activities to be detected by internal functionality, or by functionality included in other Functional Areas.  It shall be possible for this High-level Function to involve other Functional Areas in the management of incidents through implementation of ad-hoc and/or pre-planned activities that are part of incident management strategies.  Real-time information about incidents and the mitigation strategies being applied to them shall be made available to External Service Providers, such as Broadcasters.
     links:
-      - "Aggregation «componentof» → F3. Manage Traffic"  # {20BBE829-7765-446c-B95E-80D828534E97} → {E9EDA059-38C0-41ba-9127-FF30B58B7C0D}
+      - "Aggregation «component of» → F3. Manage Traffic"  # {20BBE829-7765-446c-B95E-80D828534E97} → {E9EDA059-38C0-41ba-9127-FF30B58B7C0D}
       - "Association «IN» → fesp.b-request_current_incident_strategies"  # {ED856A79-58BD-4ea2-8A89-BF87B14CCD7C} → {ADDFBD50-4C34-4cbb-BBA1-0A8A1F48D873}
       - "Association «IN» → fesp.b-request_incident_data"  # {2C3D4E2D-0F81-4597-95A2-4D760E5825EF} → {BB19E8A9-CFC0-4e28-A256-ADB7A19A10B2}
       - "Association «IN» → fesp.ttip-request_current_incident_strategies"  # {6C20AEE5-131A-4834-9260-836DCB0F2A9D} → {8CB9C876-4DF7-4b1a-8063-54BB3EAF4EBC}
@@ -1399,7 +1400,7 @@ elements:
     note: |
       This High-level Function shall provide facilities for the management of the demand from Travellers within the road network.  The Function shall provide facilities that enable Travellers to be directed and encouraged to use all modes of transport, including walking and cycling.  The management activity shall be based on information objects collected within the Manage Traffic Area and by other Functional Areas.  The High-level Function shall enable these other Functional Areas to be involved in the implementation of demand management strategies that aim to re-distribute Traveller demand between modes of transport.
     links:
-      - "Aggregation «componentof» → F3. Manage Traffic"  # {175362D7-88F9-4cf1-AD40-6C342DC3FF4A} → {E9EDA059-38C0-41ba-9127-FF30B58B7C0D}
+      - "Aggregation «component of» → F3. Manage Traffic"  # {175362D7-88F9-4cf1-AD40-6C342DC3FF4A} → {E9EDA059-38C0-41ba-9127-FF30B58B7C0D}
       - "Association «IN» → ftp-request_demand_data_output"  # {DADE87E7-EE02-4f34-9BB6-C634307F89D2} → {16570A74-319F-46f7-93E6-C166A21FC75E}
       - "Association «IN» → ftp-request_demand_strataegy_simulation"  # {F6B046BC-E2D7-4e49-8E8F-564482B9971E} → {5C24AE25-BF6D-4588-A92B-6B228DB61D51}
       - "Association «IN» → ftp-request_demand_strategy_analysis"  # {547F8042-4DC3-4602-BE8B-57C587154868} → {FFBD9BDC-32C7-4ea3-A19F-5C22BE274C73}
@@ -1445,7 +1446,7 @@ elements:
     note: |
       This High-level Function shall provide the facilities needed to collect and store information objects about the changes to the atmospheric conditions present in the geographic area in which road network is located.  The High-level Function shall enable the information objects that are collected and stored to cover noise, pollution and weather.  It shall be possible for these information objects to be used to predict future atmospheric pollution levels.  The stored information objects containing the predictions of atmospheric conditions shall be provided to other parts of the Manage Traffic Area and to other Functional Areas within the System.
     links:
-      - "Aggregation «componentof» → F3. Manage Traffic"  # {FCD9E411-A840-42d6-9323-25032813DF04} → {E9EDA059-38C0-41ba-9127-FF30B58B7C0D}
+      - "Aggregation «component of» → F3. Manage Traffic"  # {FCD9E411-A840-42d6-9323-25032813DF04} → {E9EDA059-38C0-41ba-9127-FF30B58B7C0D}
       - "Association «IN» → fo.rno-confirm_environmental_actions"  # {5B60BABA-2CDC-4fb5-98EB-9542FA273630} → {03F66A0F-0F5D-492f-9EB1-2A0C96B2479C}
       - "Association «IN» → fo.rno-request_environmental_data_analysis"  # {C475DE7E-DECA-40d6-864C-059E0D5CDF34} → {DBBF3CC1-2674-4895-8407-7126323B1CF8}
       - "Association «IN» → mt.pshvs_weather_data_for_vehicle_trip_monitoring"  # {68B87D8E-4FDA-4be3-9674-EC0C3E9FEEE5} → {542DE07C-E77E-4049-9334-B2ED9FD44C45}
@@ -1475,7 +1476,7 @@ elements:
     note: |
       This High-level Function shall provide the facilities needed to manage the maintenance of the road network and associated equipment in the geographic area served by the System.  This shall include the physical pavement and any equipment used to manage the use of the road network by vehicles, cyclists, pedestrians and others.  When it is found that short term or long term maintenance is needed, or repairs must be made the Function shall obtain confirmation from the Maintenance Operator before requesting the Maintenance Organisation to carry out the work.  This work shall also include the de-icing or the road surface when it has been determined that this is needed.
     links:
-      - "Aggregation «componentof» → F3. Manage Traffic"  # {DFD91B76-0BEC-4ced-911A-01415EDE832C} → {E9EDA059-38C0-41ba-9127-FF30B58B7C0D}
+      - "Aggregation «component of» → F3. Manage Traffic"  # {DFD91B76-0BEC-4ced-911A-01415EDE832C} → {E9EDA059-38C0-41ba-9127-FF30B58B7C0D}
       - "Association «IN» → fmo.rmo-de-icing_activity_update"  # {64B9047B-B396-4513-902B-328D38BFDA7B} → {2C40877D-E08C-471f-B99F-859A225D33F4}
       - "Association «IN» → fmo.rmo-long_term_maintenance_activity_update"  # {53E4A22B-B1C9-4963-A743-D3FC753BD718} → {B4319531-39DB-424c-80C8-9782ABBA3BC9}
       - "Association «IN» → fmo.rmo-short_term_maintenance_activity_update"  # {83282984-97DD-4c05-A8F6-459E2F458F10} → {5D5831F9-BE99-4be5-BFAB-E2E8B4FA4048}
@@ -1524,12 +1525,12 @@ elements:
     note: |
       This High -level  Function shall provide the facilities needed to enable a National Access Point (NAP) to operate.  It shall include functionality that enables information objects containing NAP data to be provided and stored.  These information objects shall consist of meta-data describing the data that is available and pointers to the Internet address from which data may be obtained.  NAP Content Consumers shall be able to discover, search for and obtain some or all of the NAP information objects.  These information objects will be provided to and entered for the first time by the NAP Content Provider once they have been approved as Content Providers.
     links:
-      - "Aggregation «componentof» → F3. Manage Traffic"  # {AF48139D-BC34-4df5-B7A3-99D0C4B3A1F4} → {E9EDA059-38C0-41ba-9127-FF30B58B7C0D}
-      - "Association «OUT» → tnap.cc-metadata_search_result"  # {A82C5A53-996E-411c-BE56-369E3142CA38} → {63E13C50-8801-4e2b-BA9D-170CDE8BD53D}
-      - "Association «OUT» → tnap.cc-support_response"  # {84B87FA9-1BFB-4ac9-9110-1549A4B265D7} → {72CEA537-E1D0-4568-A93D-9343F41193CC}
-      - "Association «OUT» → tnap.cp-metadata_&_success_report"  # {05C56B00-B019-4069-8988-0DC43838834B} → {B3154461-F9DC-4afd-8D5F-F44985AF55EC}
-      - "Association «OUT» → tnap.cp-registration_response"  # {EE27D826-1981-436f-AE29-CE0A4BE43C15} → {43BA5834-14FF-41d8-89AB-BD55A7C65F2E}
-      - "Association «OUT» → tnap.cp-support_response"  # {25D6650D-CC6D-43f5-A2EE-29D95C0A874E} → {396E64F8-C99F-4e67-9ABE-3D0BF49B608F}
+      - "Aggregation «component of» → F3. Manage Traffic"  # {AF48139D-BC34-4df5-B7A3-99D0C4B3A1F4} → {E9EDA059-38C0-41ba-9127-FF30B58B7C0D}
+      - "Association «IN» → tnap.cc-metadata_search_result"  # {A82C5A53-996E-411c-BE56-369E3142CA38} → {63E13C50-8801-4e2b-BA9D-170CDE8BD53D}
+      - "Association «IN» → tnap.cc-support_response"  # {84B87FA9-1BFB-4ac9-9110-1549A4B265D7} → {72CEA537-E1D0-4568-A93D-9343F41193CC}
+      - "Association «IN» → tnap.cp-metadata_&_success_report"  # {05C56B00-B019-4069-8988-0DC43838834B} → {B3154461-F9DC-4afd-8D5F-F44985AF55EC}
+      - "Association «IN» → tnap.cp-registration_response"  # {EE27D826-1981-436f-AE29-CE0A4BE43C15} → {43BA5834-14FF-41d8-89AB-BD55A7C65F2E}
+      - "Association «IN» → tnap.cp-support_response"  # {25D6650D-CC6D-43f5-A2EE-29D95C0A874E} → {396E64F8-C99F-4e67-9ABE-3D0BF49B608F}
   - name: "F3.6.1 Manage NAP Metadata Repository"
     guid: "{FC985F0E-26B3-41e8-847E-A71AA3290132}"
     type: "Activity"
@@ -1546,7 +1547,7 @@ elements:
       (5) The ability to carry out its activities in such a way that they do not interfere with one another, and that the integrity of the data being stored and read is preserved.
       (6) This function manages all data mentioned in the mobilityDCAT-AP (https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html) and other relevant information (e.g. quality info, possible data comments etc.)
     links:
-      - "Aggregation «componentof» → F3.6 Operate National Access Point"  # {F087FB23-41EF-4eae-AD92-B0E4BB3B431C} → {9363D28A-B58D-4e6d-B249-7748C0011542}
+      - "Aggregation «component of» → F3.6 Operate National Access Point"  # {F087FB23-41EF-4eae-AD92-B0E4BB3B431C} → {9363D28A-B58D-4e6d-B249-7748C0011542}
       - "Association «IN» → mt_NAP_metadata_for_data_check_and_store_response"  # {99AFD60A-B812-4d3b-B9DF-15D41768ECA1} → {2FD69798-3950-48ea-B7F0-F52F39470F34}
       - "Association «IN» → mt_NAP_metadata_for_quality_check"  # {49C8A213-3BBA-4af1-ACDB-974933E6E0C5} → {EB72DA4A-A638-4946-B10F-21C536686F6C}
       - "Association «IN» → mt_NAP_metadata_mod_result"  # {9CA19187-4348-4ce3-81B7-8B4FD1418D70} → {D1E1FC81-8318-433d-8628-B81EF2B0B4AB}
@@ -1589,13 +1590,13 @@ elements:
       
       - IMPORTANT: check for simplification of the functionality!!
     links:
-      - "Aggregation «componentof» → F3.6 Operate National Access Point"  # {ACB26EA0-4071-4121-B0D1-BC48632348E9} → {9363D28A-B58D-4e6d-B249-7748C0011542}
+      - "Aggregation «component of» → F3.6 Operate National Access Point"  # {ACB26EA0-4071-4121-B0D1-BC48632348E9} → {9363D28A-B58D-4e6d-B249-7748C0011542}
       - "Association «IN» → mt_NAP_data_mod_authorisation_response"  # {C44E14C0-CC44-4830-9BE9-9B6BFE9977C2} → {310CD8FD-F1FA-4b44-A502-9A7D061FD2BE}
       - "Association «IN» → mt_NAP_data_read_authorisation_response"  # {90444E90-8277-410a-9CBA-789AFC0DAEF7} → {C050FEDE-4276-4730-8B5C-0F605084BE69}
       - "Association «IN» → mt_NAP_metadata_mod_authorisation_result"  # {768C9897-B3B0-4194-B034-A450A93A16FE} → {BEA016F1-B13A-4ae8-951E-7F0A26FD3888}
       - "Association «IN» → mt_load_NAP_user_data"  # {8103610A-CDF6-4938-B692-8A2CEF7BFA89} → {6FE0CAF2-D55F-4f13-B39A-6D819C3E9C75}
       - "Association «IN» → tnap.cc-registration_response"  # {6CA155C5-4839-4563-9BFF-A9A95E43E568} → {60E6A67C-C9D0-464b-900F-9F28DC71E886}
-      - "Association «OUT» → tnap.cp-registration_response"  # {B2ABA73C-D040-40db-998B-95521C0703F4} → {43BA5834-14FF-41d8-89AB-BD55A7C65F2E}
+      - "Association «IN» → tnap.cp-registration_response"  # {B2ABA73C-D040-40db-998B-95521C0703F4} → {43BA5834-14FF-41d8-89AB-BD55A7C65F2E}
   - name: "F3.6.3 Manage Content Providers Metadata"
     guid: "{B623B347-AA95-44be-9043-55050E3CFC41}"
     type: "Activity"
@@ -1619,10 +1620,10 @@ elements:
       
       ===========
     links:
-      - "Aggregation «componentof» → F3.6 Operate National Access Point"  # {20D04540-3276-404d-8D74-5606962CCEF5} → {9363D28A-B58D-4e6d-B249-7748C0011542}
+      - "Aggregation «component of» → F3.6 Operate National Access Point"  # {20D04540-3276-404d-8D74-5606962CCEF5} → {9363D28A-B58D-4e6d-B249-7748C0011542}
       - "Association «IN» → mt_NAP_metadata_mod_authorisation_request"  # {E93F588C-C9EE-4213-AD80-C615DAD30800} → {8CF116B5-F004-4ade-992F-224F911F17FB}
       - "Association «IN» → mt_NAP_metadata_mod_request"  # {B6E27C10-9375-49b9-8C1D-999FCCCF748D} → {8B43A86E-ED30-493c-9B56-4D3EB3EB391B}
-      - "Association «OUT» → tnap.cp-metadata_&_success_report"  # {FACED043-36A8-431b-9970-411CC595E464} → {B3154461-F9DC-4afd-8D5F-F44985AF55EC}
+      - "Association «IN» → tnap.cp-metadata_&_success_report"  # {FACED043-36A8-431b-9970-411CC595E464} → {B3154461-F9DC-4afd-8D5F-F44985AF55EC}
   - name: "F3.6.4 Manage Metadata Retrieval"
     guid: "{D9EFBB62-DD12-4dd1-A835-DF560A82A1AD}"
     type: "Activity"
@@ -1648,7 +1649,7 @@ elements:
       
       - IMPORTANT: a functionality to contact NAP User to provide basic info and for NAP User to provide feedback is needed NOT part of the minimum functionality, resolve by adding functionality to 3.6.2 that the NAP operator could retrieve NAP user contact data to be able to contact them.
     links:
-      - "Aggregation «componentof» → F3.6 Operate National Access Point"  # {4898A1E3-4808-40a9-B145-C5023EC4CBC9} → {9363D28A-B58D-4e6d-B249-7748C0011542}
+      - "Aggregation «component of» → F3.6 Operate National Access Point"  # {4898A1E3-4808-40a9-B145-C5023EC4CBC9} → {9363D28A-B58D-4e6d-B249-7748C0011542}
       - "Association «IN» → mt_NAP_metadata_search_request"  # {F48E85EF-0922-4c70-8533-B09143C77A97} → {4624DD5D-01B5-414a-AE0A-50169378736B}
       - "Association «IN» → tnap.cc-metadata_search_result"  # {0BD42B4E-6799-4fa1-91F4-029E4AB98AF3} → {63E13C50-8801-4e2b-BA9D-170CDE8BD53D}
       - "Association «IN» → tnap.mdrs-metadata_response"  # {EE858A8C-E5E3-44dd-AF08-A464F96BE0F1} → {CA529868-7C49-48f9-AD5E-F796011DFDF5}
@@ -1678,25 +1679,9 @@ elements:
       - IMPORTANT: reduce number of dataflows by just addressing all NAP users at once by their higher-level terminator
       - IMPORTANT: who is the NAP User? Where do we have it specified? Different for NAP Actor?
     links:
-      - "Aggregation «componentof» → F3.6 Operate National Access Point"  # {FFBE3AAD-58EA-45ed-9FD8-B87119F23E47} → {9363D28A-B58D-4e6d-B249-7748C0011542}
-      - "Association «OUT» → tnap.cc-support_response"  # {AF0D20F5-60C2-494f-9833-9589F786DBB7} → {72CEA537-E1D0-4568-A93D-9343F41193CC}
-      - "Association «OUT» → tnap.cp-support_response"  # {B9AE4751-A83C-4625-9D66-EF0228527308} → {396E64F8-C99F-4e67-9ABE-3D0BF49B608F}
-  - name: "3.4.1 Monitor Weather Conditions"
-    guid: "{F8D3DDE2-231E-46c2-B4D5-EDD8551425F7}"
-    type: "Activity"
-    stereotype: "FRAME_Low_Level_Function"
-    status: "Proposed"
-    version: "5.0"
-    order: 1
-    note: |
-      This Function shall be capable of providing the following facilities:
-      
-      (1) The ability to collect data about weather conditions that are relevant to the operation of the road network managed by the System.
-      (2) The ability for some or all of the data to come from Weather Systems or to be detected using sensors within the road network.
-      (3) The ability to forward the collected data to other functionality for storage.
-    links:
-      - "Aggregation «componentof» → F3.4 Provide Environmental Information"  # {9D1A94F8-FE28-428a-B3ED-EAF470799B0B} → {76CF90A1-6DE9-446b-9FA4-8F7412DA0B70}
-      - "Association «IN» → mt_weather_condition_data_inputs"  # {CF86442F-9F08-43ef-AF35-1AB790929516} → {E3054A9F-9CD8-46d2-8EE7-5C0AEA077580}
+      - "Aggregation «component of» → F3.6 Operate National Access Point"  # {FFBE3AAD-58EA-45ed-9FD8-B87119F23E47} → {9363D28A-B58D-4e6d-B249-7748C0011542}
+      - "Association «IN» → tnap.cc-support_response"  # {AF0D20F5-60C2-494f-9833-9589F786DBB7} → {72CEA537-E1D0-4568-A93D-9343F41193CC}
+      - "Association «IN» → tnap.cp-support_response"  # {B9AE4751-A83C-4625-9D66-EF0228527308} → {396E64F8-C99F-4e67-9ABE-3D0BF49B608F}
   - name: "F3.1.1.5 Provide Urban Traffic Management Facilities"
     guid: "{1AF52437-DFBF-48bc-B240-E3B1A297AE9B}"
     type: "Activity"
@@ -1707,7 +1692,7 @@ elements:
     note: |
       This High-level Function shall provide the facilities needed control traffic using the urban road network.  It shall be possible for the traffic to be controlled using indications that may be commands to stop and go, or messages asking that certain other actions are taken, e.g. divert to alternative route.  Thus the output of the commands shall be possible through devices providing single or multiple indications, and/or text messages.  The Function shall include facilities that enable priority to be given to selected road users both at individual points and on routes through the road network.  The operation of output Functions shall be monitored and incorrect responses reported.
     links:
-      - "Aggregation «componentof» → F3.1.1 Provide Urban Traffic Management"  # {80139962-3A54-49c2-9ECA-B2D03243605E} → {F2989AC8-51A0-4913-B32E-0D5E048A4788}
+      - "Aggregation «component of» → F3.1.1 Provide Urban Traffic Management"  # {80139962-3A54-49c2-9ECA-B2D03243605E} → {F2989AC8-51A0-4913-B32E-0D5E048A4788}
       - "Association → F3.1.1.5.11 Monitor Access to Urban Zones"  # {B553B2FC-30FD-448a-8FC2-C8068B10596D} → {E68E87F7-7F1C-4a9f-84D9-3847A5A8FAB0}
       - "Association → F3.1.1.5.12 Prevent Access to Urban Zones"  # {3016D76C-46EB-410d-A920-5AF81830099F} → {A3F892F5-EBA3-4780-9D26-031E08CAAA8B}
       - "Association → F3.1.1.5.21 Send Messages to Approaching Urban Vehicles"  # {ED8A837C-6F44-4679-B6C3-7B3B0EFE2E22} → {2D52A5A7-314A-46cd-A604-532926B4A246}
@@ -1796,7 +1781,7 @@ elements:
       (4) The ability to respond to requests received from the functionality that provides the Road Network Operator interface with details of the sequences that are currently available for use.
       (5) The ability to send requests for the implementation of traffic management strategies to the urban traffic management functionality.
     links:
-      - "Aggregation «Componentof» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {E8D7C2EF-5AA4-4014-9036-8219EC7DB439} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
+      - "Aggregation «component of» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {E8D7C2EF-5AA4-4014-9036-8219EC7DB439} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
       - "Association «IN» → mt_planned_urban_data_read"  # {16D92C8F-D860-4af1-84ED-325B7AAF1AC2} → {C77A3B22-B2EE-4c3e-AE7B-AF43EEB8161A}
       - "Association «IN» → mt_planned_urban_traffic_management_request"  # {489F1B55-5F9C-4f95-932B-1916BB25A4B1} → {92C57B48-373D-459a-BCD5-3B7DDB602EA1}
   - name: "F3.1.2.6 Manage Inter-urban Static Road Data"
@@ -1817,7 +1802,7 @@ elements:
       (6) The ability to send changes in the data for the inter-urban road network provided through the Road Network Operator HMI functionality to functionality from which it will be returned to the Geographic Information Provider for use when digital map data is provided in the future.
       (7) When vehicle location data is received, the ability to send data about traffic regulations that apply to segments of the inter-urban road network in the geographic area relevant to the location to Driver assistance functionality.
     links:
-      - "Aggregation «componentof» → F3.1.2 Provide Inter-urban Traffic Management"  # {EB6353C9-28AA-41a7-83F9-C4C71F137A80} → {2EE2E618-41FE-4ac5-9413-C23D9DAF7E9E}
+      - "Aggregation «component of» → F3.1.2 Provide Inter-urban Traffic Management"  # {EB6353C9-28AA-41a7-83F9-C4C71F137A80} → {2EE2E618-41FE-4ac5-9413-C23D9DAF7E9E}
       - "Association «IN» → mt.mffo_inter-urban_road_network_static_data"  # {6074CEE0-8AB0-498b-A82B-EC39D691E840} → {9C6B842F-AF96-4742-8AD7-AF42CDBFA95C}
       - "Association «IN» → mt.mpto_inter-urban_road_data"  # {37D31406-24BF-4cd2-894B-8281075134F7} → {7723C346-20CF-4b91-A7FD-A6C5820EAE6F}
       - "Association «IN» → mt.mpto_inter-urban_road_data_for_demand"  # {17A75A81-00D4-46e9-A607-772CDAFBBFD9} → {EDF59BAA-9709-4528-B15C-0D2AF02812E0}
@@ -1840,7 +1825,7 @@ elements:
       - "Association «IN» → mt_inter-urban_static_data_for_traffic_conditions"  # {089CB5D5-C654-49f4-9D79-63AD63F2F146} → {61DDCCD0-523D-4845-9E15-D8AB2157CFF5}
       - "Association «IN» → mt_inter-urban_static_data_update"  # {5A0BBA61-F6D0-4b53-9016-7B2B92604271} → {62F638FD-0642-446b-8559-31CBD36B07B5}
       - "Association «IN» → mt_operator_inter-urban_road_static_data_response"  # {45914E57-7C43-430a-BA54-C244413A6E2D} → {028DD95F-B024-4ca7-92C4-36F383E5B9A5}
-      - "Association «belongsto» → 9.11.1.7"  # {CA525E2E-4C92-41b4-BBAB-2392068CAC98} → {E0D33EBD-6329-475c-8176-8C4F8A329BD8}
+      - "Association «belongs to» → 9.11.1.7"  # {CA525E2E-4C92-41b4-BBAB-2392068CAC98} → {E0D33EBD-6329-475c-8176-8C4F8A329BD8}
   - name: "F3.2.6 Assess Incidents and Devise Responses"
     guid: "{E7385835-A669-4853-8BCC-770578F75E6D}"
     type: "Activity"
@@ -1863,7 +1848,7 @@ elements:
       (10) The ability to continually monitor the data that is being collected so that it can remove strategies when incidents or events are no longer in progress.
       (11) When all the strategies that have been implemented for a particular incident or event have been removed the ability to inform the Road Network Operator to signify that the incident or event has finished, using the functionality providing their HMI.
     links:
-      - "Aggregation «componentof» → F3.2 Manage Incidents"  # {6D22CD52-627E-479f-8386-D4E86291DB3D} → {7B5551F4-B9B4-4df4-A228-C3111996584E}
+      - "Aggregation «component of» → F3.2 Manage Incidents"  # {6D22CD52-627E-479f-8386-D4E86291DB3D} → {7B5551F4-B9B4-4df4-A228-C3111996584E}
       - "Association «IN» → mt_confirm_incident_strategy_implementation"  # {88A62B44-9B76-4010-8BE5-BC02653855A9} → {83EAF45E-2648-4a64-B2AB-725D6BE79308}
       - "Association «IN» → mt_incident_command_response"  # {1B9F0AF3-8884-4da7-BD40-0285D0A5CE45} → {A5949E39-5F42-4915-89B0-18EA87DD9254}
       - "Association «IN» → mt_incident_strategies_removed"  # {13AD632C-5A24-44a5-94E4-12E42D891866} → {166B3AF9-BCC0-4780-801F-BF1B4533A154}
@@ -1890,8 +1875,24 @@ elements:
       (1) The ability to receive data about the use of transport modes by Travellers in the geographic area served by the System from other functionality in the System, and/or external entities such as the Weather Service and Multi-Modal Systems.
       (2) The ability to check the received data for consistency before being sent to another part of the System functionality for storage.
     links:
-      - "Aggregation «componentof» → F3.3 Manage Demand"  # {B895B078-D481-4bbb-BA58-749148EE7CEA} → {4BFDC8AC-0614-4098-AEF0-9C645EAFA294}
+      - "Aggregation «component of» → F3.3 Manage Demand"  # {B895B078-D481-4bbb-BA58-749148EE7CEA} → {4BFDC8AC-0614-4098-AEF0-9C645EAFA294}
       - "Association «IN» → mt_updated_demand_data"  # {E4E7CB57-166E-4a3c-9F03-A960B3A2258A} → {C14AEB0A-1FE0-4e07-90AA-BDE7B06B9B57}
+  - name: "F3.4.1 Monitor Weather Conditions"
+    guid: "{F8D3DDE2-231E-46c2-B4D5-EDD8551425F7}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 1
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to collect data about weather conditions that are relevant to the operation of the road network managed by the System.
+      (2) The ability for some or all of the data to come from Weather Systems or to be detected using sensors within the road network.
+      (3) The ability to forward the collected data to other functionality for storage.
+    links:
+      - "Aggregation «component of» → F3.4 Provide Environmental Information"  # {9D1A94F8-FE28-428a-B3ED-EAF470799B0B} → {76CF90A1-6DE9-446b-9FA4-8F7412DA0B70}
+      - "Association «IN» → mt_weather_condition_data_inputs"  # {CF86442F-9F08-43ef-AF35-1AB790929516} → {E3054A9F-9CD8-46d2-8EE7-5C0AEA077580}
   - name: "F3.5.7 Provide Road Maintenance Operator Interface"
     guid: "{517B27E8-78C4-4a57-837A-FEF5A418A531}"
     type: "Activity"
@@ -1906,7 +1907,7 @@ elements:
       (2) The ability for the HMI to enable the Road Maintenance Operator to confirm or reject both short term and long term maintenance activities plus de-icing activities, to review and update the criteria by which the need for maintenance and repair is decided and to monitor maintenance activities.
       (3) The ability for the HMI to enable the Road Maintenance Operator to update and display the current status of maintenance activities and the static data that defines any devices used to manage traffic using the road network, including such things as location, type, etc.
     links:
-      - "Aggregation «componentof» → F3.5 Manage Road Maintenance"  # {89C1E821-F302-4672-B807-834D4A5C4481} → {2C4E39A1-4DAE-4e21-B46B-C2922531FA3F}
+      - "Aggregation «component of» → F3.5 Manage Road Maintenance"  # {89C1E821-F302-4672-B807-834D4A5C4481} → {2C4E39A1-4DAE-4e21-B46B-C2922531FA3F}
       - "Association «IN» → mt_confirmed_de-icing_activities"  # {AA3DE8F1-7847-40c5-9DA9-3898C00123BD} → {0005CCC6-5FB6-4613-A2C6-102D526D2A84}
       - "Association «IN» → mt_equipment_maintenance_confirmed"  # {579137BB-4530-4698-82B3-5CDA29A4F8FD} → {B03C9C78-DC7D-49da-AA45-745A7C038DD1}
       - "Association «IN» → mt_long_term_maintenance_confirmed"  # {8F3FFDF3-CCAE-45fb-987D-354CCB8D2F1B} → {527BFC87-34E6-4330-98FB-30A5D9146B5B}
@@ -1920,22 +1921,6 @@ elements:
       - "Association «IN» → to.rmo-maintenance_activities_required"  # {5B1C8248-8965-4dfe-B99B-A3460700719F} → {C8D8B980-BD8F-4e4b-BE3E-75526899AFD2}
       - "Association «IN» → to.rmo-proposed_de-icing_activities"  # {40D125C9-FBDB-42f1-82F9-D2CDE4828F55} → {A162ECA0-5A15-4d97-A773-04EF3BA5A84B}
       - "Association «IN» → to.rmo-static_data_update_completed"  # {4E7A2901-F31C-4561-97CE-9FBC63541FFD} → {82E12B50-7FE2-4405-8EC5-844813BC3BE4}
-  - name: "3.4.2 Monitor Atmospheric Pollution"
-    guid: "{2301F03C-D6C2-4383-A739-76B255A40C9F}"
-    type: "Activity"
-    stereotype: "FRAME_Low_Level_Function"
-    status: "Proposed"
-    version: "5.0"
-    order: 2
-    note: |
-      This Function shall be capable of providing the following facilities:
-      
-      (1) The ability to provide data about atmospheric pollution in the road network.
-      (2) The ability to provide the data about atmospheric pollution by continuously monitoring the weather conditions using sensors.
-      (3) The ability to send the data resulting from the weather conditions monitoring to other functionality within the System for storage.
-    links:
-      - "Aggregation «componentof» → F3.4 Provide Environmental Information"  # {8B539F24-6EE6-41e5-9F33-859B75C20293} → {76CF90A1-6DE9-446b-9FA4-8F7412DA0B70}
-      - "Association «IN» → mt_atmospheric_pollution_data_inputs"  # {13A3CCD1-F185-4eef-942E-4AEE4263E0E4} → {BE26BA30-C609-4b69-B854-F8C8B8EBD72B}
   - name: "F3.1.1.5.8 Detect Urban Traffic Violations"
     guid: "{FA01231C-66D0-44d8-8651-06D7A0A53169}"
     type: "Activity"
@@ -1950,7 +1935,7 @@ elements:
       (2) The ability to only report a violation when it is detected that a vehicle does not follow the current urban traffic commands.
       (3) The ability for details of these commands to be provided by the urban traffic management functionality.
     links:
-      - "Aggregation «Componentof» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {D8325829-413A-47df-8B53-DC5F797FA641} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
+      - "Aggregation «component of» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {D8325829-413A-47df-8B53-DC5F797FA641} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
       - "Association «IN» → mt.psle_urban_violating_vehicle_identity"  # {9CC2E1AF-29F1-42c3-8517-82B9F0B04CD3} → {33FEBB72-E6E7-48c6-A38B-437184DD51D8}
   - name: "F3.1.1.6 Manage Urban Road Static Data"
     guid: "{F7014D36-DDB1-4cfd-AD72-DFF4FFDA51CE}"
@@ -1968,7 +1953,7 @@ elements:
       (4) The provision of new and/or updated  road network static  data provided by the Road Network Operator to the functionality that will send the data to the Geographic Information Provider so that it can be used when digital map data is provided in the future.
       (5) The collection and loading into the store of static data about traffic regulations (i.e. speeds, access restrictions for certain Vehicle types to particular urban road segments, etc.) provided by the Road Network Operator, and its subsequent distribution to the functionality in the Provide Support for Law Enforcement, Provide Electronic Payment Facilities and Provide Support for Host Vehicle Systems Functional Areas.
     links:
-      - "Aggregation «componentof» → F3.1.1 Provide Urban Traffic Management"  # {E1FE6125-F21F-4753-924B-F8DAF91A58DC} → {F2989AC8-51A0-4913-B32E-0D5E048A4788}
+      - "Aggregation «component of» → F3.1.1 Provide Urban Traffic Management"  # {E1FE6125-F21F-4753-924B-F8DAF91A58DC} → {F2989AC8-51A0-4913-B32E-0D5E048A4788}
       - "Association «IN» → mt.mffo_urban_road_network_static_data"  # {4398F531-C93F-4827-A17A-244DC148A28E} → {E6E39D2C-DB20-4b0b-942D-166CC909DE36}
       - "Association «IN» → mt.mpto_urban_road_data"  # {9CCFC5B5-B903-4431-9380-8B16EF538FF6} → {3CD28A72-FB83-45b2-A178-DE6C318DF411}
       - "Association «IN» → mt.mpto_urban_road_data_for_demand"  # {ABB5AF22-C54A-423d-AF1B-D2E7E8845333} → {CF11D4FC-8C23-4f3c-95F9-C31D586DE0FB}
@@ -1991,7 +1976,7 @@ elements:
       - "Association «IN» → mt_urban_static_data"  # {649E96AD-5D7B-4c08-A131-9B97D45269FD} → {206E6694-091E-4606-A58D-FC4EA7865104}
       - "Association «IN» → mt_urban_static_data_for_traffic_conditions"  # {63C2412C-E83D-4980-88D7-15CD00E1D36C} → {70D8C957-E741-49ce-85C2-1A2324F386C7}
       - "Association «IN» → mt_urban_static_data_update"  # {0875F13A-B2CF-4e48-8233-15E08BF5D346} → {C142EBFB-24F1-4075-84E2-A590DE9988E5}
-      - "Association «belongsto» → 9.11.1.7"  # {CABE0130-12AA-42b8-80F9-4ABCC09CBED4} → {E0D33EBD-6329-475c-8176-8C4F8A329BD8}
+      - "Association «belongs to» → 9.11.1.7"  # {CABE0130-12AA-42b8-80F9-4ABCC09CBED4} → {E0D33EBD-6329-475c-8176-8C4F8A329BD8}
   - name: "F3.1.2.8 Collect Inter-urban Data from Vehicles"
     guid: "{DB7075B2-63F4-40df-9ACD-32E312D452D6}"
     type: "Activity"
@@ -2012,7 +1997,7 @@ elements:
       (8) The ability to pass the processed data to the incident management functionality for collation and to other traffic management functionality for use in managing the traffic using the inter-urban road network.
       (9) The ability to make all processed data anonymous so that the movement through the urban road network of specific Vehicles cannot be identified.
     links:
-      - "Aggregation «componentof» → F3.1.2 Provide Inter-urban Traffic Management"  # {363C83BA-1FA4-442d-964B-2620A551D119} → {2EE2E618-41FE-4ac5-9413-C23D9DAF7E9E}
+      - "Aggregation «component of» → F3.1.2 Provide Inter-urban Traffic Management"  # {363C83BA-1FA4-442d-964B-2620A551D119} → {2EE2E618-41FE-4ac5-9413-C23D9DAF7E9E}
       - "Association «IN» → mt.pshvs_inter-urban_fused_xfcd"  # {E8811E48-913A-4074-8A66-AFB87CB6B516} → {313BF9FC-3FF9-4d41-96C6-A51E0A5D8F44}
       - "Association «IN» → mt_collected_inter-urban_vehicle_data"  # {C849C925-4136-4c1b-9243-E41E7A50B1AC} → {1F0584DB-6492-4c02-AF95-A06E91B98BFE}
       - "Association «IN» → mt_inter-urban_fcd_vehicle_identity"  # {DB0DCE44-D42C-4e83-A6D1-34973A892AC6} → {C59BB8DF-26D2-40d2-AFF2-84D3D46BCEF7}
@@ -2032,7 +2017,7 @@ elements:
       (3) The ability for the output of the incident management strategies to begin as soon as the strategy information is received.
       (4) The ability to keep a local store of the strategies currently being implemented and delete them when their expiry time has passed, or when a strategy modification or removal indication arrives from the incident management functionality.
     links:
-      - "Aggregation «componentof» → F3.2 Manage Incidents"  # {56662221-4D04-45ba-B3A4-6A29926731D1} → {7B5551F4-B9B4-4df4-A228-C3111996584E}
+      - "Aggregation «component of» → F3.2 Manage Incidents"  # {56662221-4D04-45ba-B3A4-6A29926731D1} → {7B5551F4-B9B4-4df4-A228-C3111996584E}
       - "Association «IN» → mt_inter-urban_incident_strategy_request"  # {3E1EF7FD-63F9-497c-BD2E-000A87DE14C9} → {E70C8E1A-1703-4089-B972-1F606A44AC01}
       - "Association «IN» → mt_inter-urban_incident_warning_c&i_commands"  # {397CADB3-16D8-4d43-B38A-DFD9E2F67107} → {F7FBB380-E918-473f-91EB-00C79E640FB9}
       - "Association «IN» → mt_inter-urban_incident_warning_l&s_commands"  # {20E7E630-1F4E-4647-9ADF-ADCC2D31BBCC} → {256B9B0E-13A9-423b-B333-0C3790F44C0A}
@@ -2053,7 +2038,7 @@ elements:
       (2) The HMI shall enable the Road Network Operator to develop and implement demand strategies both off-line and in real time and to be informed of the effects of their implementation.
       (3) The HMI shall provide facilities that enable reports on the use of transport modes to be produced using stored data.
     links:
-      - "Aggregation «componentof» → F3.3 Manage Demand"  # {3D328FF5-02B5-4c53-A0B3-96FFE170BFA1} → {4BFDC8AC-0614-4098-AEF0-9C645EAFA294}
+      - "Aggregation «component of» → F3.3 Manage Demand"  # {3D328FF5-02B5-4c53-A0B3-96FFE170BFA1} → {4BFDC8AC-0614-4098-AEF0-9C645EAFA294}
       - "Association «IN» → mt_demand_management_operator_commands"  # {6EE00DD1-9FED-4ec4-A914-CB90EC06134C} → {7B292673-7906-44d9-8F37-D10B901AC7A1}
       - "Association «IN» → mt_demand_management_strategy_commands"  # {B7248DCD-5843-41a2-9577-121227ED54D7} → {2C1C1262-D287-4a65-B339-1CF747CF352C}
       - "Association «IN» → mt_demand_strategy_data_update"  # {59471B22-5F2A-4035-B85C-FD02DC24FD82} → {CAC9DD0C-D0C1-4479-8CA5-2C506FBC5891}
@@ -2062,6 +2047,22 @@ elements:
       - "Association «IN» → to.rno-demand_management_outputs"  # {2700EA9A-1933-47ae-BCAB-A60C8E33A7D8} → {C5A26F92-96C2-4c3d-8E25-EB2484F08272}
       - "Association «IN» → to.rno-demand_management_report_responses"  # {736942C9-69A9-45b4-816A-CEE6A01E849E} → {1645B334-9BB8-4212-A093-11886C911A19}
       - "Association «IN» → to.rno-demand_management_strategy_responses"  # {C1618520-015B-43fc-B960-81FB8B936E59} → {A739E4B6-F9E5-4cf5-B94D-8775515E0792}
+  - name: "F3.4.2 Monitor Atmospheric Pollution"
+    guid: "{2301F03C-D6C2-4383-A739-76B255A40C9F}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 2
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to provide data about atmospheric pollution in the road network.
+      (2) The ability to provide the data about atmospheric pollution by continuously monitoring the weather conditions using sensors.
+      (3) The ability to send the data resulting from the weather conditions monitoring to other functionality within the System for storage.
+    links:
+      - "Aggregation «component of» → F3.4 Provide Environmental Information"  # {8B539F24-6EE6-41e5-9F33-859B75C20293} → {76CF90A1-6DE9-446b-9FA4-8F7412DA0B70}
+      - "Association «IN» → mt_atmospheric_pollution_data_inputs"  # {13A3CCD1-F185-4eef-942E-4AEE4263E0E4} → {BE26BA30-C609-4b69-B854-F8C8B8EBD72B}
   - name: "F3.5.8 Provide Maintenance Data Store Management"
     guid: "{C104E482-3605-40ea-93E5-E61318BF1E35}"
     type: "Activity"
@@ -2077,28 +2078,12 @@ elements:
       (3) The ability for other maintenance functionality to obtain data from the store of Maintenance Data and for its contents to be changed through the operator interface functionality and HMI.
       (4) The ability to update the data about maintenance activities using provided by other functionality and by the Maintenance Organisation.
     links:
-      - "Aggregation «componentof» → F3.5 Manage Road Maintenance"  # {7AC2B821-26B8-42b2-98B2-CB28FB857A5B} → {2C4E39A1-4DAE-4e21-B46B-C2922531FA3F}
+      - "Aggregation «component of» → F3.5 Manage Road Maintenance"  # {7AC2B821-26B8-42b2-98B2-CB28FB857A5B} → {2C4E39A1-4DAE-4e21-B46B-C2922531FA3F}
       - "Association «IN» → mt.pshvs_roadworks_data_to_monitor_vehicle_trips"  # {7FF97385-E450-47ca-8860-E9991A8D4F7D} → {62DA1CCC-DC47-47ef-959A-396AD60E5AD9}
       - "Association «IN» → mt.ptja_roadworks_information_for_trip_monitoring"  # {6438BF70-CDA0-4be6-AAA5-124AC018FBB9} → {23814130-7B7E-4861-B939-380C4568A733}
       - "Association «IN» → mt_load_maintenance_data"  # {1862CDFE-2159-4f50-B4DF-BD3685420A7C} → {D59DBC0F-5F85-4207-B972-D5817B016BAC}
       - "Association «IN» → mt_maintenance_updates_response"  # {603F55A7-5076-43fc-9EAC-E60D51D600AA} → {3068293F-24D5-4423-A07A-AFBDCD27D4DA}
       - "Association «IN» → mt_roadworks_information_for_incident_management"  # {1C84A6F4-207E-4d18-842B-1306459AA50F} → {0193ACBA-79A2-46d3-93AA-556B080EBA16}
-  - name: "3.4.3 Monitor Noise Pollution"
-    guid: "{98A1C8C7-D559-4329-B6AA-0846C08512D4}"
-    type: "Activity"
-    stereotype: "FRAME_Low_Level_Function"
-    status: "Proposed"
-    version: "5.0"
-    order: 3
-    note: |
-      This Function shall be capable of providing the following facilities:
-      
-      (1) The ability to provide data about noise pollution in the road network.
-      (2) The ability to provide this data by continuously monitoring the noise levels using sensors.
-      (3) The ability the data about noise resulting from the monitoring to other functionality within the System for storage.
-    links:
-      - "Aggregation «componentof» → F3.4 Provide Environmental Information"  # {3DCBA518-54AA-4aeb-8F49-A2C0CADC284A} → {76CF90A1-6DE9-446b-9FA4-8F7412DA0B70}
-      - "Association «IN» → mt_noise_pollution_data_inputs"  # {DB435F98-8614-4276-A17D-6E2638BAB4F3} → {DDAD77AA-5331-4a95-9E9D-D1410B652D33}
   - name: "F3.1.1.5.10 Provide Urban Traffic Operator Interface"
     guid: "{D966353E-B722-40a1-A3F5-D26DC93731D1}"
     type: "Activity"
@@ -2114,7 +2099,7 @@ elements:
       (3) The provision of information to the Road Network Operator about the success or failure of any requested changes.
       (4) The ability of the Road Network Operator to request and be provided with the current contents of the store of Urban Road Static Data through the Manage Urban Static Traffic Data Function.
     links:
-      - "Aggregation «Componentof» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {0EAA27CB-AE1E-4902-BA72-CDA814E79948} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
+      - "Aggregation «component of» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {0EAA27CB-AE1E-4902-BA72-CDA814E79948} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
       - "Association «IN» → mt_operator_urban_lane_override"  # {98742A27-6696-4896-93F1-58DD0DB7E70F} → {D0E96727-7193-484f-B5C9-8FB13F738744}
       - "Association «IN» → mt_operator_urban_speed_override"  # {33BF14EF-3AD8-497a-9188-5017F65C4031} → {36980FD2-A965-46c2-9AB6-80B278C7DB57}
       - "Association «IN» → mt_operator_urban_traffic_management_request"  # {F9092D0D-7E20-4b8c-A086-57FF5B8F7EF2} → {25E1EE57-4457-448b-9399-E6692D186F0E}
@@ -2141,7 +2126,7 @@ elements:
       (6) The provision of the processed and collected data to the Detect Incidents from Data and Urban Traffic Data Management Functions.
       (7) The ability to make all processed data anonymous so that the movement through the urban road network of specific Vehicles cannot be identified.
     links:
-      - "Aggregation «componentof» → F3.1.1 Provide Urban Traffic Management"  # {0176B629-A623-4ea0-98F3-077F59085063} → {F2989AC8-51A0-4913-B32E-0D5E048A4788}
+      - "Aggregation «component of» → F3.1.1 Provide Urban Traffic Management"  # {0176B629-A623-4ea0-98F3-077F59085063} → {F2989AC8-51A0-4913-B32E-0D5E048A4788}
       - "Association «IN» → mt.pshvs_urban_fused_xfcd"  # {B3E1555C-8521-4515-A5AF-0ADDEAFD35FD} → {6BD8427F-16B2-464c-B03A-16C429937335}
       - "Association «IN» → mt_collected_urban_vehicle_data"  # {BF5A8DFC-D4DA-4c35-92BE-00D9D839ACDC} → {3E56AE9B-2C9E-46f1-B828-E448F26B0B31}
       - "Association «IN» → mt_urban_fcd_vehicle_identity"  # {0A68F224-4613-4f26-85C0-B728F1ADDEC7} → {991881EF-2849-432c-8C85-B8AFF631E524}
@@ -2160,7 +2145,7 @@ elements:
       (2) The ability to immediately output the data which has been received to other parts of the System or to entities that are outside of the System.
       (3) When a request is received from the Broadcaster entity, the ability to output the latest set of data that is available about inter-urban traffic conditions.
     links:
-      - "Aggregation «componentof» → F3.1.2 Provide Inter-urban Traffic Management"  # {9115111F-C322-4d57-B0A2-2E4FFF49F00C} → {2EE2E618-41FE-4ac5-9413-C23D9DAF7E9E}
+      - "Aggregation «component of» → F3.1.2 Provide Inter-urban Traffic Management"  # {9115111F-C322-4d57-B0A2-2E4FFF49F00C} → {2EE2E618-41FE-4ac5-9413-C23D9DAF7E9E}
       - "Association «IN» → mt.mffo_current_inter-urban_traffic_data"  # {291D7105-E862-464e-9C50-3F2F7899E995} → {2BC33E64-B2B1-4ed8-85DE-DA3E12A24729}
       - "Association «IN» → mt.pepf_inter-urban_traffic_conditions_CSF"  # {3AFE3C3F-B61C-47fd-A84A-898F4D38AAEA} → {6777CC37-A554-4b36-950F-7300CBE6D8C5}
       - "Association «IN» → mt.pepf_inter-urban_traffic_conditions_CUR"  # {A6E71A5D-4B7E-4e0d-BBD1-E8613E845FDB} → {747EDA07-AB47-48b9-8373-6918C98CC12F}
@@ -2171,7 +2156,7 @@ elements:
       - "Association «IN» → mt.ptja_inter-urban_network_perturbations"  # {9F2E4B50-231B-4450-BCBB-37793B673396} → {EE509844-3F08-4f56-BCBF-A6273CC30031}
       - "Association «IN» → tesp.b-inter-urban_traffic_data"  # {DD00E9DC-513C-440b-BC72-EE19AA632090} → {C7D57C62-7D19-4f6f-B669-E7F7189AAA89}
       - "Association «IN» → tesp.ttip-inter-urban_traffic_data"  # {A9D3D982-7BB5-4d28-99AC-747724ED0D3F} → {551D105F-AFE3-4ed2-A7E8-B23210F707C4}
-      - "Association «belongsto» → 9.11.1.6"  # {093EAD80-0E50-4ccf-9655-1FFEE0D80A80} → {7CEBA355-23A2-4178-BC45-ACE85F9644B0}
+      - "Association «belongs to» → 9.11.1.6"  # {093EAD80-0E50-4ccf-9655-1FFEE0D80A80} → {7CEBA355-23A2-4178-BC45-ACE85F9644B0}
   - name: "F3.2.8 Send Incident Details to Others"
     guid: "{6057BDEA-2822-45ca-A68C-DFB4F155772D}"
     type: "Activity"
@@ -2187,7 +2172,7 @@ elements:
       (3) The output of incident management strategies shall begin as soon as the strategy information is received.
       (4) The ability to keep a local store of the strategies currently being implemented and delete them when their expiry time has passed, or when a strategy modification or removal indication arrives from the incident management functionality.
     links:
-      - "Aggregation «componentof» → F3.2 Manage Incidents"  # {A5D42520-D144-4b09-9337-0C2571DBC3BE} → {7B5551F4-B9B4-4df4-A228-C3111996584E}
+      - "Aggregation «component of» → F3.2 Manage Incidents"  # {A5D42520-D144-4b09-9337-0C2571DBC3BE} → {7B5551F4-B9B4-4df4-A228-C3111996584E}
       - "Association «IN» → mt.mffo_incident_response"  # {4E4E159B-4D76-408d-84AD-410FE18AA19C} → {EBAD543C-7B71-4f6d-B6C3-14D5DD674A99}
       - "Association «IN» → mt.mpto_incident_details"  # {4EA770DC-1034-4d98-ADEF-7772BBC81664} → {6170E8AE-79B2-4a63-A8EA-531A5F339B29}
       - "Association «IN» → mt.mpto_request_incident_service_change"  # {E51E3D4E-E05F-4da3-B20B-43998EA7D833} → {CB741508-3861-4d97-AB2D-A232A8AEB90C}
@@ -2211,9 +2196,25 @@ elements:
       (2) The ability to make the decision about which Strategy to implement by analysing the data being collected and stored in the store of Demand Data.
       (3) If no suitable Demand Management Strategy can be found to implement, the ability to request that a new demand management strategy is created.
     links:
-      - "Aggregation «componentof» → F3.3 Manage Demand"  # {A0D35D8F-B94D-4256-9BDA-EC3DBEBBD8DB} → {4BFDC8AC-0614-4098-AEF0-9C645EAFA294}
+      - "Aggregation «component of» → F3.3 Manage Demand"  # {A0D35D8F-B94D-4256-9BDA-EC3DBEBBD8DB} → {4BFDC8AC-0614-4098-AEF0-9C645EAFA294}
       - "Association «IN» → mt_new_demand_managemen_strategy_needed"  # {385316A1-E31C-4ed1-8EDB-15CE9081CEEF} → {6EF90620-C9BB-442e-89A2-696CBFB11F7B}
       - "Association «IN» → mt_request_demand_strategy"  # {F8FD1514-083C-4fb9-945C-05FACCC5E223} → {DFE74949-23BE-4481-B25E-0018DF74472C}
+  - name: "F3.4.3 Monitor Noise Pollution"
+    guid: "{98A1C8C7-D559-4329-B6AA-0846C08512D4}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 3
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to provide data about noise pollution in the road network.
+      (2) The ability to provide this data by continuously monitoring the noise levels using sensors.
+      (3) The ability the data about noise resulting from the monitoring to other functionality within the System for storage.
+    links:
+      - "Aggregation «component of» → F3.4 Provide Environmental Information"  # {3DCBA518-54AA-4aeb-8F49-A2C0CADC284A} → {76CF90A1-6DE9-446b-9FA4-8F7412DA0B70}
+      - "Association «IN» → mt_noise_pollution_data_inputs"  # {DB435F98-8614-4276-A17D-6E2638BAB4F3} → {DDAD77AA-5331-4a95-9E9D-D1410B652D33}
   - name: "F3.5.9 Evaluate Needs for Short Term Maintenance"
     guid: "{313DEB87-1EB5-45c7-A052-28F74C210C18}"
     type: "Activity"
@@ -2233,28 +2234,12 @@ elements:
       (7) The ability to keep a record of the current status of the requested short term maintenance activities, which shall be updated using the input from the Maintenance Organisation.
       (8) The ability to send the current status of the requested short term maintenance activities to the Maintenance Data Store so that it can be accessed by the Road Maintenance Operator through their HMI.
     links:
-      - "Aggregation «componentof» → F3.5 Manage Road Maintenance"  # {AD21A67C-1170-4f47-99EC-AD60514FBA5C} → {2C4E39A1-4DAE-4e21-B46B-C2922531FA3F}
+      - "Aggregation «component of» → F3.5 Manage Road Maintenance"  # {AD21A67C-1170-4f47-99EC-AD60514FBA5C} → {2C4E39A1-4DAE-4e21-B46B-C2922531FA3F}
       - "Association «IN» → mt.pshvs_short_term_road_condition_warning"  # {6B220233-565A-4a11-B4D7-C9AD3BAD8588} → {7044D7EC-64A1-4194-84BC-DFA12BB35111}
       - "Association «IN» → mt_confirm_short_term_maintenance"  # {55658239-61D2-40e3-B5E5-3BF89E622D4C} → {B66994B2-E5FA-41e5-BF8F-BC0D8CAE605B}
       - "Association «IN» → mt_confirmed_short_term_maintenance_activity"  # {08A896B5-CFA3-4218-B7A1-55AFB8640552} → {AA29FD52-E3B0-439c-A35B-D7CFD3A82FD4}
       - "Association «IN» → mt_update_short_term_maintenance_activity"  # {0443FAF0-4AE5-4a6c-AAC3-FD001607B52D} → {1A792BF2-CA52-475f-B98C-5E52053B6944}
       - "Association «IN» → tmo.rmo-short_term_activities"  # {3C9CF5BD-FD1F-42c6-BC64-24F777DF11B9} → {D5F9D591-A533-40f9-ADDB-3779BA3C7393}
-  - name: "3.4.4 Predict Environmental Conditions"
-    guid: "{41D2B8F2-72D6-4e0a-99F5-878F109B7A78}"
-    type: "Activity"
-    stereotype: "FRAME_Low_Level_Function"
-    status: "Proposed"
-    version: "5.0"
-    order: 4
-    note: |
-      This Function shall be capable of providing the following facilities:
-      
-      (1) The ability to use data collected and stored by other functionality to predict the environmental conditions that will occur in and around the road network managed by the System.
-      (2) The ability to use this collected and stored data with one or more algorithms and static data provided by the Road Network Operator to predict the environmental conditions that will be experienced by Travellers and/or Drivers.
-      (3) The ability to send the data providing the predicted environmental conditions for storage by other functionality in the System.
-    links:
-      - "Aggregation «componentof» → F3.4 Provide Environmental Information"  # {BE50320D-1D3F-407d-8888-4940C7EC433D} → {76CF90A1-6DE9-446b-9FA4-8F7412DA0B70}
-      - "Association «IN» → mt_environmental_conditions_prediction_store_data"  # {2F559127-B187-4143-BAD3-05681D3065DB} → {955FA027-8FFC-4fc1-AD75-485D752E101C}
   - name: "F3.1.1.5.11 Monitor Access to Urban Zones"
     guid: "{E68E87F7-7F1C-4a9f-84D9-3847A5A8FAB0}"
     type: "Activity"
@@ -2271,6 +2256,7 @@ elements:
       (4) The output of a warning message of no entry permission for display to Drivers of detected Vehicles whose identities do not match those on the permitted list.
       (5) The output of data about the detected Vehicle to the Manage Vehicle Access to Sensitive Areas Function.
     links:
+      - "Aggregation «component of» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {DBB2E4A6-6E89-4174-A7D7-D83B48F8016B} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
       - "Association «IN» → mt.pscs_vehicle_nearing_urban_sensitive_area"  # {FA55A9E6-B103-4517-A249-C0EFD4821955} → {A46E1454-31DE-4cfb-AE64-9ACED7743619}
       - "Association «IN» → mt_urban_zone_vehicle_identity"  # {2DBC5205-36E3-4ad5-A131-68B355973517} → {6866A359-9B7C-492a-B5F2-7926C4419B65}
       - "Association «IN» → td-approaching_urban_zone"  # {B7561945-AFA7-4020-8432-D8DC03DCCD10} → {8040FD8A-C054-4504-A2C4-3098338E358D}
@@ -2288,7 +2274,7 @@ elements:
       (2) Both sets of outputs shall be sent as soon as new data is received to functionality in the Provide Support for Host Vehicle Systems, Provide Support for Cooperative Systems, Provide Electronic Payment Facilities and Provide Traveller Journey Assistance Functional Areas, plus the Broadcast and Traffic and Travel Information Provider.
       (3) Both sets of outputs shall also be sent as soon as new data is received to the Broadcaster and Traffic and Travel Information Provider, or to the Broadcaster when it provides a request.
     links:
-      - "Aggregation «componentof» → F3.1.1 Provide Urban Traffic Management"  # {CD5396FD-5CF3-4203-A7C9-5C864B67CA82} → {F2989AC8-51A0-4913-B32E-0D5E048A4788}
+      - "Aggregation «component of» → F3.1.1 Provide Urban Traffic Management"  # {CD5396FD-5CF3-4203-A7C9-5C864B67CA82} → {F2989AC8-51A0-4913-B32E-0D5E048A4788}
       - "Association «IN» → mt.mffo_current_urban_traffic_data"  # {54093D54-2BE0-4718-86D1-9928ECB9B856} → {101EBF34-C4CA-43d9-BAF7-EBC762070CCD}
       - "Association «IN» → mt.pepf_urban_traffic_conditions_CSF"  # {341F8AE1-CCA0-4b83-9FCA-19C51A108D49} → {9A97D1F2-7471-4623-8620-1B782057D3B7}
       - "Association «IN» → mt.pepf_urban_traffic_conditions_CUR"  # {C15FD2C3-81CA-4087-8AE2-A1EDFEF96E5B} → {F87081AC-6082-4eef-9018-6AEFF426B9AE}
@@ -2299,7 +2285,7 @@ elements:
       - "Association «IN» → mt.ptja_urban_network_perturbations"  # {ACD91288-360D-45f9-8C51-BAA7BC6F83F0} → {4570B2EC-EA5C-4234-83A6-ECF4AD8ED8D2}
       - "Association «IN» → tesp.b-urban_traffic_data"  # {7F27FBE2-07A9-492c-A68A-9E7A43592300} → {D39C1ACB-8300-4107-AC42-24DD1A635C8F}
       - "Association «IN» → tesp.ttip-urban_traffic_data"  # {03F25B2E-F08F-4ed4-8713-5D8BC85878A0} → {57918552-1532-40f6-9546-169208A1409B}
-      - "Association «belongsto» → 9.11.1.6"  # {6B6F9600-153E-43ac-A253-ED4D3C846352} → {7CEBA355-23A2-4178-BC45-ACE85F9644B0}
+      - "Association «belongs to» → 9.11.1.6"  # {6B6F9600-153E-43ac-A253-ED4D3C846352} → {7CEBA355-23A2-4178-BC45-ACE85F9644B0}
   - name: "F3.1.2.10 Collect Inter-urban Traffic Data"
     guid: "{2A37A728-44A1-4e4d-986A-842EDDBD5DD5}"
     type: "Activity"
@@ -2315,7 +2301,7 @@ elements:
       (3) The ability to process the raw input data provided by the sensors to provide actual traffic flow data, e.g. flow, speed, etc.
       (4) The ability to pass this processed data to other functionality for collation and use in traffic control.
     links:
-      - "Aggregation «componentof» → F3.1.2 Provide Inter-urban Traffic Management"  # {CF735099-66DE-47a6-B57B-EF650488BE3C} → {2EE2E618-41FE-4ac5-9413-C23D9DAF7E9E}
+      - "Aggregation «component of» → F3.1.2 Provide Inter-urban Traffic Management"  # {CF735099-66DE-47a6-B57B-EF650488BE3C} → {2EE2E618-41FE-4ac5-9413-C23D9DAF7E9E}
       - "Association «IN» → mt_collected_inter-urban_traffic_data"  # {68DE4D89-F613-4260-9493-19F3886EF5CE} → {97D3BF3C-3C47-4132-89D8-A2C39B98FED8}
       - "Association «IN» → mt_inter-urban_current_traffic_data_for_demand"  # {FF426991-E716-427d-A047-2F6FB4E39F72} → {D40D0B80-573D-412f-A3BD-5A430570C670}
       - "Association «IN» → mt_inter-urban_traffic_data_for_incident_detection"  # {3E6D4974-B0C1-49b9-ABA4-A00562349C3A} → {7388FB6E-3146-4c1a-8B52-D79A01379F6D}
@@ -2334,7 +2320,7 @@ elements:
       (2) The HMI shall have the ability to enable the Parking Operator to set up data about service areas that is loaded into the store of Service Area Data, to provide output of the current static data and to provide output of the current service area data (occupancy and/or number of spaces).
       (3) The HMI shall have the ability to enable the Operator to override the current status so that for example, a service area can be set to "CLOSED" regardless of how many of its spaces are not being used and to manage the use of the rest area part of the service area by Freight Vehicles.
     links:
-      - "Aggregation «componentof» → F3.1.5 Provide Management of Service Areas"  # {EFF55C48-C861-418e-BA9F-C89AFC90D69E} → {962C365C-5E2E-4b47-BA9E-9537F154665A}
+      - "Aggregation «component of» → F3.1.5 Provide Management of Service Areas"  # {EFF55C48-C861-418e-BA9F-C89AFC90D69E} → {962C365C-5E2E-4b47-BA9E-9537F154665A}
       - "Association «IN» → mt_load_service_area_static_data"  # {2E3A08B3-0719-47d6-B309-BC4C95720806} → {734D8DB7-5632-4a39-BB56-40EA87117441}
       - "Association «IN» → mt_override_service_area_status"  # {FBF457A4-47AD-471c-9CBD-1BB44B5C95D4} → {BA5782EF-A170-482f-9886-6984DA9E6923}
       - "Association «IN» → mt_rest_area_request_confirmation_response"  # {F01D7F0D-5920-4c48-BDB2-15F97D7AC57E} → {34246A15-A760-4f57-9CDF-F2860B8C4CFB}
@@ -2358,7 +2344,7 @@ elements:
       (3) The ability for the output of the information to begin as soon as the strategy information is received.
       (4) The ability to keep a local store of the incident management strategies currently being implemented and delete them when their expiry time has passed, or when a strategy modification or removal indication arrives from the incident management functionality.
     links:
-      - "Aggregation «componentof» → F3.2 Manage Incidents"  # {A2E29641-BDA2-435a-9CCD-10EEB89355A4} → {7B5551F4-B9B4-4df4-A228-C3111996584E}
+      - "Aggregation «component of» → F3.2 Manage Incidents"  # {A2E29641-BDA2-435a-9CCD-10EEB89355A4} → {7B5551F4-B9B4-4df4-A228-C3111996584E}
       - "Association «IN» → mt_reqeust_incident_strategies_for_external"  # {F79B4E6D-4EA4-4523-B0A1-7A7E829B3BE0} → {5B37BD97-FF09-47d4-90B7-41CB01E2D8B2}
       - "Association «IN» → mt_request_incident_data"  # {AB9CF0C3-CC39-48d7-8545-EF78D8EB4AC3} → {14CA1FFD-C0E6-4519-9EC4-29149574F086}
       - "Association «IN» → tesp.b-incident_strategy_information"  # {6A07FF7B-2A9B-42d6-8529-840400F30FAA} → {FED70410-2E0E-407e-910D-94BCC337ED1D}
@@ -2378,7 +2364,7 @@ elements:
       (1) The ability to implement demand management strategies when requested by the Road Network Operator.
       (2) The ability to achieve the implementation of demand management strategies by sending data about what action is required to other functionality in the System.
     links:
-      - "Aggregation «componentof» → F3.3 Manage Demand"  # {5EE39259-4D9D-47fe-9391-6F3D9B4A26B9} → {4BFDC8AC-0614-4098-AEF0-9C645EAFA294}
+      - "Aggregation «component of» → F3.3 Manage Demand"  # {5EE39259-4D9D-47fe-9391-6F3D9B4A26B9} → {4BFDC8AC-0614-4098-AEF0-9C645EAFA294}
       - "Association «IN» → mt.mpto_request_demand_service_change"  # {A0F0BCB6-4146-4804-9A04-46A5DA772594} → {DC602F50-B427-4d5c-9CF0-64E82BAA8F14}
       - "Association «IN» → mt.mpto_request_fares"  # {9B908A4E-D9DB-445d-A556-9C95BFA13863} → {E452A0AB-F03B-4d8a-B027-6BDC0C0087A7}
       - "Association «IN» → mt.pepf_inter-urban_charge_update_request"  # {7A23E1B3-D139-4a65-BDEB-FA10A2458634} → {8D35807F-4EB7-4072-A711-7EDF9F7AD1FE}
@@ -2394,6 +2380,22 @@ elements:
       - "Association «IN» → mt_urban_zoning_strategy"  # {C7573C6D-793E-428d-A9AD-F5EAD83446B3} → {60B75DB8-C129-4954-BC83-427877FDF249}
       - "Association «IN» → tesp.b-demand_data"  # {188D2036-AD3F-444c-8DC6-AF5D5ACD8C2D} → {3F095D30-FB2D-47dd-B2D9-5DED00EC5E08}
       - "Association «IN» → tesp.ttip-demand_data"  # {20686495-2D76-4207-856D-16F998492058} → {0361B9A5-04A6-45d1-ABDA-851784503687}
+  - name: "F3.4.4 Predict Environmental Conditions"
+    guid: "{41D2B8F2-72D6-4e0a-99F5-878F109B7A78}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 4
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to use data collected and stored by other functionality to predict the environmental conditions that will occur in and around the road network managed by the System.
+      (2) The ability to use this collected and stored data with one or more algorithms and static data provided by the Road Network Operator to predict the environmental conditions that will be experienced by Travellers and/or Drivers.
+      (3) The ability to send the data providing the predicted environmental conditions for storage by other functionality in the System.
+    links:
+      - "Aggregation «component of» → F3.4 Provide Environmental Information"  # {BE50320D-1D3F-407d-8888-4940C7EC433D} → {76CF90A1-6DE9-446b-9FA4-8F7412DA0B70}
+      - "Association «IN» → mt_environmental_conditions_prediction_store_data"  # {2F559127-B187-4143-BAD3-05681D3065DB} → {955FA027-8FFC-4fc1-AD75-485D752E101C}
   - name: "F3.5.10 Evaluate Need for Long Term Maintenance"
     guid: "{E8CFC626-48EF-4f94-8589-A3C1FCF08E19}"
     type: "Activity"
@@ -2414,33 +2416,12 @@ elements:
       (8) The ability to keep a record of the current status of the requested long term maintenance activities, which shall be updated using the input from the Maintenance Organisation.
       (9) The ability to send the current status of the road maintenance activities to the store of Maintenance Data so that it can be accessed by the Road Maintenance Operator.
     links:
-      - "Aggregation «componentof» → F3.5 Manage Road Maintenance"  # {82DFCCD4-F4D7-4527-96FE-B5FCCC840881} → {2C4E39A1-4DAE-4e21-B46B-C2922531FA3F}
+      - "Aggregation «component of» → F3.5 Manage Road Maintenance"  # {82DFCCD4-F4D7-4527-96FE-B5FCCC840881} → {2C4E39A1-4DAE-4e21-B46B-C2922531FA3F}
       - "Association «IN» → mt.pshvs_long_term_road_condition_warning"  # {A02149BC-5BF8-4cbb-A234-AAC5C6132924} → {07B44D49-2F07-4498-974D-8B83A1FE5C4C}
       - "Association «IN» → mt_confirm_long_term_maintenance"  # {D4327EA6-282F-4c4a-B255-259358793D40} → {8C2A4AE7-1F50-49ef-BF84-E0AEA846CF85}
       - "Association «IN» → mt_confirmed_long_term_maintenance_activity"  # {D020B5C2-5E77-42fd-89B8-0D4B3624CA13} → {6971DBC5-59B2-4cca-A50B-35460FAE21DC}
       - "Association «IN» → mt_update_long_term_maintenance_activity"  # {AF18D9A1-DCB4-45fd-878F-EBE7142450EE} → {0FEDAA84-0ABE-44c1-8075-C3D7A859CE23}
       - "Association «IN» → tmo.rmo-long_term_activities"  # {3F324184-6A08-4e98-BB99-058014E200A5} → {B585D1A8-E53A-4a13-8B54-5FD6A245CDF3}
-  - name: "3.4.7 Provide Environmental Management Operator Interface"
-    guid: "{04BDF1B0-6E99-487e-B7CD-7A800FAEC464}"
-    type: "Activity"
-    stereotype: "FRAME_Low_Level_Function"
-    status: "Proposed"
-    version: "5.0"
-    order: 5
-    note: |
-      This Function shall be capable of providing the following facilities:
-      
-      (1) A HMI through which the Road Network Operator shall be able to manage the collection of environmental data, plus its analysis and use by other functionality within the System.
-      (2) The HMI shall enable the Road Network Operator to request and be provided with output of the data currently being collected, prediction of environmental conditions and historical data.
-      (3) The HMI shall enable the Road Network Operator to request an analysis of the environmental data, receive the resulting suggested actions and confirm these actions.
-      (4) The HMI shall enable the Road Network Operator to update the static data used in the prediction of environmental conditions.
-    links:
-      - "Aggregation «componentof» → F3.4 Provide Environmental Information"  # {40C1F467-EF95-44db-8C19-A1AA55352F90} → {76CF90A1-6DE9-446b-9FA4-8F7412DA0B70}
-      - "Association «IN» → mt_confirm_environmental_actions"  # {745CDFB1-184E-42d4-BE39-D5B297E2FE8F} → {DE71C9A0-537B-42d2-826A-2ED342E03FB5}
-      - "Association «IN» → mt_environmental_conditions_operator_requests"  # {71D61F09-0F3F-4d3f-873A-71DE269C5E26} → {F83FAD4E-D5A7-4eff-933F-F7DEF5FB088A}
-      - "Association «IN» → mt_environmental_conditions_static_data_update"  # {C3B2A622-44D0-4ed9-8B62-7BC6C6BE9F52} → {743878D1-D05F-469b-B540-DD96D7F61483}
-      - "Association «IN» → mt_request_environmental_data_analysis"  # {2A1DB85B-97F8-4e1b-B45E-2DB2490DE6FD} → {5F946F68-994B-40a7-B1C4-B755858B1815}
-      - "Association «IN» → to.rno-environmental_data_analysis_results"  # {C8DB20AF-ADE3-486b-A0DB-5697608BD574} → {0DD67CC0-F248-4abf-AB70-753D5916A21E}
   - name: "F3.1.1.10 Collect Urban Traffic Data"
     guid: "{26B5879E-F71D-4909-858C-63BC4C2D4F7F}"
     type: "Activity"
@@ -2458,7 +2439,7 @@ elements:
       
       Note that this Function shall not collect any data directly from Vehicles.  It shall assume that all Vehicles are passive and not capable of providing data themselves.
     links:
-      - "Aggregation «componentof» → F3.1.1 Provide Urban Traffic Management"  # {F4BE9516-284F-4ae0-BA46-8E18AF98564A} → {F2989AC8-51A0-4913-B32E-0D5E048A4788}
+      - "Aggregation «component of» → F3.1.1 Provide Urban Traffic Management"  # {F4BE9516-284F-4ae0-BA46-8E18AF98564A} → {F2989AC8-51A0-4913-B32E-0D5E048A4788}
       - "Association «IN» → mt_collected_urban_traffic_data"  # {FC25DB4F-02A3-4a1e-B10B-E53735908F29} → {30D70235-3B58-4c3d-AD44-DBD4A1381B33}
       - "Association «IN» → mt_urban_current_traffic_data_for_demand"  # {9F9B5894-EDA6-422b-BD79-2FB52E75E71B} → {E7720384-4F3F-4c43-A25A-82B4FEFE623E}
       - "Association «IN» → mt_urban_traffic_data_for_incident_detection"  # {993E7CAE-E737-4c0e-A237-FF1A552C5C54} → {F0AA6033-B2FF-4574-ABC7-79009E8B788D}
@@ -2478,6 +2459,7 @@ elements:
       (3) The output of a warning message to Drivers of Vehicles that do not have permission to enter the zone that a physical barrier may prevent them driving their Vehicles into the zone.
       (4) The provision of data to functionality in the Provide Support for Law Enforcement Functional Area about un-permitted Vehicles that have entered the zone so that if necessary prosecution can take place.
     links:
+      - "Aggregation «component of» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {1F313B62-CF9C-4BD0-8A16-832B6F0BB31F} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
       - "Association «IN» → mt.psle_vehicle_entering_urban_zone"  # {4034C586-2B17-4faa-B230-44458E334410} → {35E26B7A-4225-4a93-888B-F5C3CEEDD2C5}
       - "Association «IN» → td-enterring_urban_zone"  # {35E47CBB-535A-4ab4-8EA1-F96D318DFFE0} → {075B6F0B-636E-4fbb-BDAF-FED4BA2C83AC}
   - name: "F3.1.2.11 Provide Updated Inter-urban data for Digital Maps"
@@ -2494,7 +2476,7 @@ elements:
       (2) The ability for the information provided by this Function to include structural alteration, static speed limits and default journey times.
       (3) The ability to provide updated information to the digital map provider in order to be implemented in the next issue of digital maps as well as to in-vehicle devices for use in current and future planned journeys.
     links:
-      - "Aggregation «componentof» → F3.1.2 Provide Inter-urban Traffic Management"  # {DD1E9DD4-FAEC-47c8-8D3C-169C89660AE6} → {2EE2E618-41FE-4ac5-9413-C23D9DAF7E9E}
+      - "Aggregation «component of» → F3.1.2 Provide Inter-urban Traffic Management"  # {DD1E9DD4-FAEC-47c8-8D3C-169C89660AE6} → {2EE2E618-41FE-4ac5-9413-C23D9DAF7E9E}
       - "Association «IN» → tesp.g-updated_inter-urban_data_for_maps"  # {5AC62059-09CF-47db-A82F-9AEC144A57AA} → {4E7DE4D8-BD4F-4e04-8784-54C71ECD359B}
   - name: "F3.2.10 Manage Store of Incident Data"
     guid: "{6DBA7FEF-A37F-413d-B627-1C8C5CD54C63}"
@@ -2512,7 +2494,7 @@ elements:
       (4) The ability to retrieve data from the store of Incident Data for assessment, when requested by other functionality in the System.
       (5) When a request is received from the functionality providing the HMI for the Road Network Operator, the ability to retrieve the data from the store of Incident Data and produce the required incident statistics reports.
     links:
-      - "Aggregation «componentof» → F3.2 Manage Incidents"  # {C85A9994-812E-4e99-A2CA-483CCA1A8BE5} → {7B5551F4-B9B4-4df4-A228-C3111996584E}
+      - "Aggregation «component of» → F3.2 Manage Incidents"  # {C85A9994-812E-4e99-A2CA-483CCA1A8BE5} → {7B5551F4-B9B4-4df4-A228-C3111996584E}
       - "Association «IN» → mt_incident_data_for_assessment"  # {CA3540AD-0F8B-4ac5-BFB4-6877DBD0BA18} → {DE2817B5-73A7-463f-80B9-3C312E09D0BF}
       - "Association «IN» → mt_incident_statistics_response"  # {81B04872-5567-4d50-BB8B-7BB129BD1DCE} → {4153C642-0D16-45dc-9713-A5D768F30A20}
       - "Association «IN» → mt_load_incident_data"  # {BA42370F-9A68-4c48-8C2C-CF1B7B95038A} → {9C72E9A4-B753-4f67-9AD4-969AB8C8BDBE}
@@ -2533,11 +2515,32 @@ elements:
       (4) The ability to assess the data about the current usage of different transport modes against "rules" for distribution provided by the Transport Planner through the functionality providing their HMI.
       (5) The ability to send the resulting new demand management strategies to the functionality that manages the store of Demand Management Data.
     links:
-      - "Aggregation «componentof» → F3.3 Manage Demand"  # {CF994D0A-1FD6-4c37-BD07-4600B9A2053F} → {4BFDC8AC-0614-4098-AEF0-9C645EAFA294}
+      - "Aggregation «component of» → F3.3 Manage Demand"  # {CF994D0A-1FD6-4c37-BD07-4600B9A2053F} → {4BFDC8AC-0614-4098-AEF0-9C645EAFA294}
       - "Association «IN» → mt_created_new_demand_strategy"  # {29B59A82-86A4-4646-83FC-7484F1B87750} → {502F46F3-169C-4cf5-8681-5496E7136800}
       - "Association «IN» → mt_demand_management_operator_responses"  # {A53943C1-51D9-41c6-BB5F-5ECEA1585E81} → {8F4786A8-8C8D-4da0-B6FC-3F03474C02C2}
       - "Association «IN» → mt_developed_demand_strategy"  # {338DD306-5250-470f-947E-A43EECDAA932} → {B99F3D50-91A4-41cd-998A-2C99C8888669}
       - "Association «IN» → mt_new_demand_strategy_for_simulation"  # {5A44EAE2-86BE-43d0-B068-755033850216} → {AD141032-CF52-4b3c-A12A-3D291621C0D7}
+  - name: "F3.4.7 Provide Environmental Management Operator Interface"
+    guid: "{04BDF1B0-6E99-487e-B7CD-7A800FAEC464}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 5
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) A HMI through which the Road Network Operator shall be able to manage the collection of environmental data, plus its analysis and use by other functionality within the System.
+      (2) The HMI shall enable the Road Network Operator to request and be provided with output of the data currently being collected, prediction of environmental conditions and historical data.
+      (3) The HMI shall enable the Road Network Operator to request an analysis of the environmental data, receive the resulting suggested actions and confirm these actions.
+      (4) The HMI shall enable the Road Network Operator to update the static data used in the prediction of environmental conditions.
+    links:
+      - "Aggregation «component of» → F3.4 Provide Environmental Information"  # {40C1F467-EF95-44db-8C19-A1AA55352F90} → {76CF90A1-6DE9-446b-9FA4-8F7412DA0B70}
+      - "Association «IN» → mt_confirm_environmental_actions"  # {745CDFB1-184E-42d4-BE39-D5B297E2FE8F} → {DE71C9A0-537B-42d2-826A-2ED342E03FB5}
+      - "Association «IN» → mt_environmental_conditions_operator_requests"  # {71D61F09-0F3F-4d3f-873A-71DE269C5E26} → {F83FAD4E-D5A7-4eff-933F-F7DEF5FB088A}
+      - "Association «IN» → mt_environmental_conditions_static_data_update"  # {C3B2A622-44D0-4ed9-8B62-7BC6C6BE9F52} → {743878D1-D05F-469b-B540-DD96D7F61483}
+      - "Association «IN» → mt_request_environmental_data_analysis"  # {2A1DB85B-97F8-4e1b-B45E-2DB2490DE6FD} → {5F946F68-994B-40a7-B1C4-B755858B1815}
+      - "Association «IN» → to.rno-environmental_data_analysis_results"  # {C8DB20AF-ADE3-486b-A0DB-5697608BD574} → {0DD67CC0-F248-4abf-AB70-753D5916A21E}
   - name: "F3.5.11 Evaluate Need for De-icing"
     guid: "{5C4A01ED-D7BB-4ea6-8127-2EA028FD23E5}"
     type: "Activity"
@@ -2554,36 +2557,13 @@ elements:
       (4) The ability to keep a record of the current status of the requested de-icing activities, which shall be updated using the input from the Maintenance Organisation.
       (5) The ability to send the current de-icing activity status to the store of Maintenance Data so that it can be accessed by the Road Maintenance Operator.
     links:
-      - "Aggregation «componentof» → F3.5 Manage Road Maintenance"  # {473FFC4F-C4E6-4749-B021-FF15351D5ED7} → {2C4E39A1-4DAE-4e21-B46B-C2922531FA3F}
+      - "Aggregation «component of» → F3.5 Manage Road Maintenance"  # {473FFC4F-C4E6-4749-B021-FF15351D5ED7} → {2C4E39A1-4DAE-4e21-B46B-C2922531FA3F}
       - "Association «IN» → mt.pshvs_de-icing_data_for_vehicle_trip_monitoring"  # {9BA75723-E452-40b6-8D3E-BE4E83C75F66} → {4B265AA5-2600-4f2d-9435-7B6CF8A23F99}
       - "Association «IN» → mt.ptja_de-icing_data_for_trip_monitoring"  # {1B5D6321-3B45-4ead-B247-C4CBDB57F6F3} → {CB0AE80C-1DBA-4929-B1BD-C5EBBA92C861}
       - "Association «IN» → mt_confirmed_de-icing_activity"  # {90F43F06-4AC6-424d-99DC-F6FCC4DD5AA6} → {BB9DE33A-FB36-4b39-B790-DDC0772286BF}
       - "Association «IN» → mt_icing_incident_data"  # {5BB59FFC-63CA-41a9-A6AF-CB4D9A76717D} → {2ECE5072-3214-4a65-9043-543916476FA5}
       - "Association «IN» → mt_proposed_de-icing_activities"  # {DDECB18E-C89E-453a-8EFC-19D8EA02A651} → {492EC0B9-0A84-4536-AA19-01FA315A0184}
       - "Association «IN» → tmo.rmo-de-icing_tasks"  # {C10B662A-F036-4c31-A160-783000623CE0} → {BB8B17BE-8004-44db-9513-1E63EC00C240}
-  - name: "3.4.8 Manage Environmental Conditions Data Store"
-    guid: "{01FE39DB-280D-4a2c-92D6-076899B2A6F1}"
-    type: "Activity"
-    stereotype: "FRAME_Low_Level_Function"
-    status: "Proposed"
-    version: "5.0"
-    order: 6
-    note: |
-      This Function shall be capable of providing the following facilities:
-      
-      (1) The ability to manage the store of Environmental Conditions Data.
-      (2) In performing this activity, the ability to collect and collate environmental data provided by other functionality and from other System(s) and load this data into the store of Environmental Conditions Data.
-      (3) Periodically or when requested by the Road Network Operator, the ability to retrieve data from the store of Environmental Conditions Data and send it to other functionality in the System.
-      (4) The ability to retrieve data from the store of Environmental Conditions Data and send it to other functionality in the System and when returned, load the results back into the store.
-      (5) When confirmed by the Road Network Operator, the ability to add to the store of Environmental Conditions Data any confirmed actions to reduce the impact of environmental conditions.
-      (6) The ability to provide the Road Network Operator with copies of the stored data when requested by the Operator.
-    links:
-      - "Aggregation «componentof» → F3.4 Provide Environmental Information"  # {3ADD22C4-073E-4138-A6A1-BB056F48A3C2} → {76CF90A1-6DE9-446b-9FA4-8F7412DA0B70}
-      - "Association «IN» → mt_environmental_conditions_data_for_predictions"  # {B239F282-F422-4039-8A21-0CFAD4D4E11E} → {A754C91A-1530-4b9b-A01D-E37CB9678F84}
-      - "Association «IN» → mt_environmental_conditions_operator_responses"  # {CBA72F28-CD24-4817-9CFD-0E1AD024AC24} → {39BC5923-DF54-4e12-89EA-DF7A93D74E3C}
-      - "Association «IN» → mt_environmental_data_for_analysis"  # {DDF2B6B8-10D3-4901-B755-BA287624E061} → {32DE69BF-7514-4b9f-9480-FE2F2F982E96}
-      - "Association «IN» → mt_load_environmental_conditions_data"  # {A70267C9-9911-469a-A060-4D16FF05254D} → {4B45E792-6280-4665-83AC-32D428FF8B71}
-      - "Association «IN» → tors.etms-environmental_data_updates"  # {CE36B520-D6BB-4793-B682-61198061699A} → {B1E533EE-D90F-4bff-A5EC-ED94D7B3ED8E}
   - name: "F3.1.1.11 Provide Updated Urban data for Digital Maps"
     guid: "{1D65380C-4EA3-4aeb-A01E-1A5285F4AD91}"
     type: "Activity"
@@ -2598,7 +2578,7 @@ elements:
       (2) The information shall include such things as structural alterations, static speed limits and default journey times.
       (3) The information shall be provided in a way that it can be used by the Geographic Information Provider in subsequent issues of digital maps and any other related data they provide for use by in-vehicle devices.
     links:
-      - "Aggregation «componentof» → F3.1.1 Provide Urban Traffic Management"  # {831D2588-8640-4ac7-B66D-6EED89656521} → {F2989AC8-51A0-4913-B32E-0D5E048A4788}
+      - "Aggregation «component of» → F3.1.1 Provide Urban Traffic Management"  # {831D2588-8640-4ac7-B66D-6EED89656521} → {F2989AC8-51A0-4913-B32E-0D5E048A4788}
       - "Association «IN» → tesp.g-updated_urban_data_for_maps"  # {9DE30331-09D7-416d-95B3-FA52FD4311E2} → {54366A81-DBD5-4ef0-98A2-D3D553F88414}
   - name: "F3.1.1.5.18 Manage Urban Traffic Speeds and Headways"
     guid: "{2CF84C82-C878-4b8a-A45B-2748AE33CC2C}"
@@ -2616,7 +2596,7 @@ elements:
       (4) The ability to send speed and headway settings to the functionality that is responsible for the output of messages to Drivers of vehicles using the urban road network, both at the roadside and in the Vehicle, as well as to other functionality from which it can be sent to other parts of the system, to the Broadcaster entity.
       (5) The ability to send the legal speed settings to the digital map data provider entity in case it needs to be used in future digital map updates.
     links:
-      - "Aggregation «Componentof» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {A43BD088-89E2-44f6-99F0-EC106AC4F465} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
+      - "Aggregation «component of» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {A43BD088-89E2-44f6-99F0-EC106AC4F465} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
       - "Association «IN» → mt.pshvs_urban_legal_speed_limits"  # {D3266C19-6087-4ed1-B302-F22F4A6AFC2B} → {86CE8F59-AC99-41e7-856D-7C500527D0D7}
       - "Association «IN» → mt.pshvs_urban_suggested_speeds_and_headways"  # {0DBC9F14-CB3F-4bba-AF3A-AF6B6F23AE5D} → {F847B3DA-469F-4525-A80A-71278AF3A65F}
       - "Association «IN» → mt_updatred_urban_speed_limits"  # {AAA63372-0419-4c8d-802A-7A4226D707EA} → {05C761D1-31DA-43e1-9DE2-8CD3E2F83A36}
@@ -2637,7 +2617,7 @@ elements:
       (3) If no correspondence is found, the ability to send all of the Vehicle information to other functionality for potential prosecution.
       (4) If no correspondence is found, the ability to send a lack of correspondence indication to the functionality responsible for collecting FCD/XFCD data from Vehicles using the urban road network, so that the data can be marked as suspect.
     links:
-      - "Aggregation «componentof» → F3.1.2 Provide Inter-urban Traffic Management"  # {C7AA4E98-935A-4316-8E5C-D317B14D9FBA} → {2EE2E618-41FE-4ac5-9413-C23D9DAF7E9E}
+      - "Aggregation «component of» → F3.1.2 Provide Inter-urban Traffic Management"  # {C7AA4E98-935A-4316-8E5C-D317B14D9FBA} → {2EE2E618-41FE-4ac5-9413-C23D9DAF7E9E}
       - "Association «IN» → mt.psle_inter-urban_vehicle_identity_error"  # {D3E76C53-4776-4a31-8F0E-B8D11ACEB527} → {EF36F72C-CC39-4411-8F51-D39755FCB409}
       - "Association «IN» → mt_inter-urban_fcd_error"  # {8FE14909-7140-431c-BA21-02E641EB43EA} → {EB4DF43D-DB17-4ffd-BC41-84DBD5562448}
   - name: "F3.2.11 Provide Operator Interface for Incident Management"
@@ -2654,7 +2634,7 @@ elements:
       (2) The HMI shall enable the Road Network Operator to confirm the implementation of incident management strategies if needed, to input and update incident data in the store of Incident Data, and to manage the development of new incident management strategies.
       (3) The HMI shall enable the Road Network Operator to request and receive statistical reports on the occurrence of incidents and the use strategies.
     links:
-      - "Aggregation «componentof» → F3.2 Manage Incidents"  # {9FDACC69-DB89-4401-9178-C9EE4773F902} → {7B5551F4-B9B4-4df4-A228-C3111996584E}
+      - "Aggregation «component of» → F3.2 Manage Incidents"  # {9FDACC69-DB89-4401-9178-C9EE4773F902} → {7B5551F4-B9B4-4df4-A228-C3111996584E}
       - "Association «IN» → mt_implement_requested_strategy"  # {7ED56078-A894-410e-AFAB-73C04CDDA227} → {A9B8E5A4-D55C-4424-915C-40C92E08E8EA}
       - "Association «IN» → mt_incident_command_request"  # {C869F112-F9F0-45c4-BFCC-DAD271BAC8EE} → {F4C5A071-D06C-44df-83C4-DD25018A7DD4}
       - "Association «IN» → mt_incident_statistics_request"  # {B01E074E-CB13-42b7-AF1F-6E1CA48D4105} → {FEC74ACB-C301-4c35-BB86-FCFF82DE8C5D}
@@ -2681,7 +2661,7 @@ elements:
       (3) The ability for the received data to be sent to the functionality responsible for reviewing demand management strategies.
       (4) The ability to extract data from the Demand Management Data and send it to the appropriate functionality for use in the development of new demand management strategies.
     links:
-      - "Aggregation «componentof» → F3.3 Manage Demand"  # {2927A509-8469-4a1c-B225-F10EE3789F02} → {4BFDC8AC-0614-4098-AEF0-9C645EAFA294}
+      - "Aggregation «component of» → F3.3 Manage Demand"  # {2927A509-8469-4a1c-B225-F10EE3789F02} → {4BFDC8AC-0614-4098-AEF0-9C645EAFA294}
       - "Association «IN» → mt_current_demand_strategy_for_simulation"  # {7EADE921-BB23-4b3a-93AE-B27E0266032F} → {1C23D1BD-6134-4fe2-8C0E-9A7B44EE09D8}
       - "Association «IN» → mt_data_for_demand_strategy_development"  # {216741FB-0701-4ee2-8B88-5C1329D5470E} → {9A60F391-59BB-4bee-BBDF-3A53A83F1DFB}
       - "Association «IN» → mt_demand_data_for_checking"  # {220FA77B-6C9E-4b1a-9C35-7425FA69292C} → {3C3AB624-347A-47e9-BE01-D82496BFEAFC}
@@ -2691,6 +2671,29 @@ elements:
       - "Association «IN» → mt_requested_demand_data_for_analysis"  # {4BDC2D7E-F04B-4aca-AF83-ECC55416513E} → {49C7C6F2-7B75-4dbd-9C7E-FA06ABF871E1}
       - "Association «IN» → mt_requested_demand_management_strategy"  # {C3D716A3-A8B7-4aa3-8562-00384B09FE6F} → {40B8B63C-6287-4d8c-8DD1-396523652F0E}
       - "Association «IN» → mt_response_to_demand_strategy_request"  # {D219BFF2-90FC-40db-BB57-0F3BFCA97068} → {4058C837-8D1E-43c4-A73B-19EA3E403541}
+  - name: "F3.4.8 Manage Environmental Conditions Data Store"
+    guid: "{01FE39DB-280D-4a2c-92D6-076899B2A6F1}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 6
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to manage the store of Environmental Conditions Data.
+      (2) In performing this activity, the ability to collect and collate environmental data provided by other functionality and from other System(s) and load this data into the store of Environmental Conditions Data.
+      (3) Periodically or when requested by the Road Network Operator, the ability to retrieve data from the store of Environmental Conditions Data and send it to other functionality in the System.
+      (4) The ability to retrieve data from the store of Environmental Conditions Data and send it to other functionality in the System and when returned, load the results back into the store.
+      (5) When confirmed by the Road Network Operator, the ability to add to the store of Environmental Conditions Data any confirmed actions to reduce the impact of environmental conditions.
+      (6) The ability to provide the Road Network Operator with copies of the stored data when requested by the Operator.
+    links:
+      - "Aggregation «component of» → F3.4 Provide Environmental Information"  # {3ADD22C4-073E-4138-A6A1-BB056F48A3C2} → {76CF90A1-6DE9-446b-9FA4-8F7412DA0B70}
+      - "Association «IN» → mt_environmental_conditions_data_for_predictions"  # {B239F282-F422-4039-8A21-0CFAD4D4E11E} → {A754C91A-1530-4b9b-A01D-E37CB9678F84}
+      - "Association «IN» → mt_environmental_conditions_operator_responses"  # {CBA72F28-CD24-4817-9CFD-0E1AD024AC24} → {39BC5923-DF54-4e12-89EA-DF7A93D74E3C}
+      - "Association «IN» → mt_environmental_data_for_analysis"  # {DDF2B6B8-10D3-4901-B755-BA287624E061} → {32DE69BF-7514-4b9f-9480-FE2F2F982E96}
+      - "Association «IN» → mt_load_environmental_conditions_data"  # {A70267C9-9911-469a-A060-4D16FF05254D} → {4B45E792-6280-4665-83AC-32D428FF8B71}
+      - "Association «IN» → tors.etms-environmental_data_updates"  # {CE36B520-D6BB-4793-B682-61198061699A} → {B1E533EE-D90F-4bff-A5EC-ED94D7B3ED8E}
   - name: "F3.5.12 Evaluate Need for Equipment Maintenance"
     guid: "{5FFB8F0E-27F7-468d-9840-83308422610E}"
     type: "Activity"
@@ -2709,28 +2712,11 @@ elements:
       (6) The ability to keep a list of the status of all outstanding roadside equipment faults and make this list available to the Road Maintenance Operator on request through the  store of  Maintenance Data.
       (7) The ability to update the list of all outstanding roadside equipment faults with information that it receives from the Maintenance Organisation.
     links:
-      - "Aggregation «componentof» → F3.5 Manage Road Maintenance"  # {D2E0040A-4CD2-46d1-B284-824553E84DE1} → {2C4E39A1-4DAE-4e21-B46B-C2922531FA3F}
+      - "Aggregation «component of» → F3.5 Manage Road Maintenance"  # {D2E0040A-4CD2-46d1-B284-824553E84DE1} → {2C4E39A1-4DAE-4e21-B46B-C2922531FA3F}
       - "Association «IN» → mt_confirm_equipment_maintenance"  # {FE5D3069-558F-4147-92E8-F84C5CAC6305} → {24618C5C-EE30-45cc-A201-5DBFB964975C}
       - "Association «IN» → mt_confirmed_equipment_maintenance_activity"  # {66A0FB6E-1630-48ba-B273-59DF78421ECD} → {25029724-F684-427f-A6DD-45197EF77C73}
       - "Association «IN» → mt_current_roadside_equipment_faults"  # {6BC98ACD-B9A9-40a8-8B83-A731084E2AC2} → {A877788F-7031-440a-86F9-4332ED735A82}
       - "Association «IN» → tmo.rmo-equipment_tasks"  # {D27693C4-7946-4920-87B8-6E9AAE16E21A} → {2FB375D9-BF38-4f57-B7EB-9793A0FDEDB4}
-  - name: "3.4.10 Output Environmental Information"
-    guid: "{BB6D4E31-446A-40d8-AE28-AE8BC026065E}"
-    type: "Activity"
-    stereotype: "FRAME_Low_Level_Function"
-    status: "Proposed"
-    version: "5.0"
-    order: 7
-    note: |
-      This Function shall be capable of providing the following facilities:
-      
-      (1) The ability to take responsibility for the output of information to Drivers and/or Travellers about environmental conditions.
-      (2) Details of what the information output should contain and to which group(s) of users the information should be output will be provided to this Function by other functionality.
-      (3) A HMI through which the environmental conditions information can be output to Drivers and/or Travellers.
-    links:
-      - "Aggregation «componentof» → F3.4 Provide Environmental Information"  # {FAA7889A-1BEF-4ba7-83F5-D77F80323198} → {76CF90A1-6DE9-446b-9FA4-8F7412DA0B70}
-      - "Association «IN» → td-environmental_information"  # {6F9B6E0E-5228-492f-8485-F38F96422B25} → {CBD72135-0498-4365-9281-9B91833AB9EC}
-      - "Association «IN» → tt-environmental_information"  # {BD1795D8-5107-4d5e-9D94-6310E7FF32CF} → {84293F7B-FF91-460c-88BC-E936118DDA7A}
   - name: "F3.1.1.12 Monitor Urban FCD/XFCD Source Vehicles"
     guid: "{87DFDEDD-930C-48ee-ABB3-BF832B5452A6}"
     type: "Activity"
@@ -2746,7 +2732,7 @@ elements:
       (3) The provision of data about Vehicles where no match is found to functionality in the Provide Support for Law Enforcement Functional Area for use in potential prosecutions.
       (4) The provision of a suspect data indication for the Vehicle for which no match is found to the Collect Urban Data from Vehicles Function.
     links:
-      - "Aggregation «componentof» → F3.1.1 Provide Urban Traffic Management"  # {21B8E178-2E16-4e5d-87EB-9D9B4CE4296E} → {F2989AC8-51A0-4913-B32E-0D5E048A4788}
+      - "Aggregation «component of» → F3.1.1 Provide Urban Traffic Management"  # {21B8E178-2E16-4e5d-87EB-9D9B4CE4296E} → {F2989AC8-51A0-4913-B32E-0D5E048A4788}
       - "Association «IN» → mt.psle_urban_vehicle_identity_error"  # {9F8E22DE-880F-4142-BB8D-18BBFAC4C9AD} → {105DE71B-99B3-483d-B667-EC5F7DCA4A94}
       - "Association «IN» → mt_urban_fcd_error"  # {3E5D26BA-1EB1-47a2-844F-64B15E15437D} → {8F7B7F9D-7EC0-4a2e-B501-6AD2F59EE479}
   - name: "F3.1.1.5.19 Manage Urban Road Network Lanes"
@@ -2764,7 +2750,7 @@ elements:
       (3) The ability to enable the use of lanes to be changed in a way that is safe for vehicle operation and that causes the minimum disruption to all forms of urban road traffic.
       (4) The ability to send commands that alter the use of lanes to the functionality that is responsible for the output of messages to Drivers, both at the roadside and in the Vehicle.
     links:
-      - "Aggregation «Componentof» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {E1AA1484-5A43-4d10-8E44-7E1943695D27} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
+      - "Aggregation «component of» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {E1AA1484-5A43-4d10-8E44-7E1943695D27} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
       - "Association «IN» → mt.pshvs_urban_lane_commands"  # {04563BC5-5C2C-43c6-B661-CEADC7E4527B} → {00BE4A1A-3E74-4f8b-ADE4-42945300E096}
       - "Association «IN» → mt_urban_lane_commands"  # {082B96C7-7750-466a-9C88-5AD19664E183} → {F8A278A6-C5FD-4957-9907-97052BDA4885}
       - "Association «IN» → mt_urban_lane_instructions"  # {11423A97-7699-433d-8E08-141E315E2D51} → {BE3A0CBA-8EAF-4cd1-B5C9-F9B77F3069EB}
@@ -2779,7 +2765,7 @@ elements:
     note: |
       This High-level Function shall be responsible for the management and imposition of strategies to manage the way that Vehicles are using the inter-urban road network.  It shall be able to impose strategies on some or the entire inter-urban road network managed by the System, either as part of a pre-determined timetable of changes, or at the command of the Road Network Operator, or taking account of strategies that are being used in to manage the urban road network.  The Operator shall in fact be able to override one or more of the planned strategies in all or part(s) of the inter-urban road network.  It shall also be possible for the strategies to be modified to take account of conditions on any tunnels and/or bridges and to take account of environmental conditions.
     links:
-      - "Aggregation «componentof» → F3.1.2 Provide Inter-urban Traffic Management"  # {AC1D2F68-6756-472b-BEF9-8EFD712913CE} → {2EE2E618-41FE-4ac5-9413-C23D9DAF7E9E}
+      - "Aggregation «component of» → F3.1.2 Provide Inter-urban Traffic Management"  # {AC1D2F68-6756-472b-BEF9-8EFD712913CE} → {2EE2E618-41FE-4ac5-9413-C23D9DAF7E9E}
       - "Association «IN» → fo.rno-inter-urban_traffic_commands"  # {ABC957CF-A645-468b-9990-17387C07950E} → {26680F03-A71C-4286-8996-33500236AFBE}
       - "Association «IN» → ftrfc-vehicle_approaching_inter-urban_zone"  # {3535EB97-8B4F-4189-A430-DA78F55C2431} → {344C5C20-3B2F-438e-B633-44E8C87D6C1D}
       - "Association «IN» → ftrfc-vehicle_entering_inter-urban_zone"  # {FCDBAAA9-220B-4ca1-AA2A-CFB4A6562A6E} → {0007863D-9CAB-4e75-85B8-1DEAF3CEAD13}
@@ -2840,7 +2826,7 @@ elements:
       (4) The ability for the term "incident" to include anything that is likely to impede the normal flow of traffic, including such things as wide/long loads and "ghost drivers", i.e. Vehicles travelling against the proscribed direction of traffic flow.
       (5) The ability to send details of a detected incident occurrence to the classification and storage functionality.
     links:
-      - "Aggregation «componentof» → F3.2 Manage Incidents"  # {FA292B89-3CDE-4de7-A742-443A5E3BC8B8} → {7B5551F4-B9B4-4df4-A228-C3111996584E}
+      - "Aggregation «component of» → F3.2 Manage Incidents"  # {FA292B89-3CDE-4de7-A742-443A5E3BC8B8} → {7B5551F4-B9B4-4df4-A228-C3111996584E}
       - "Association «IN» → mt_incident_detection_data"  # {FBDF9CD7-5042-4cab-A217-794BEBAE0C2F} → {4899F50C-04DD-44d9-B545-7D309F392830}
   - name: "F3.3.10 Review Demand Management Strategy Effects"
     guid: "{6784737B-912B-4b57-ABBC-63FE85781002}"
@@ -2856,38 +2842,26 @@ elements:
       (2) The ability to carry out this review at the request of the Transport Planner who must have specified the data about the use of transport modes that is to be analysed.
       (3) The ability to send the results of the analysis of the effectiveness of demand management strategies to functionality providing the HMI for the Transport Planner.
     links:
-      - "Aggregation «componentof» → F3.3 Manage Demand"  # {2AC029AF-6A86-4fce-B87F-10207AF8173C} → {4BFDC8AC-0614-4098-AEF0-9C645EAFA294}
+      - "Aggregation «component of» → F3.3 Manage Demand"  # {2AC029AF-6A86-4fce-B87F-10207AF8173C} → {4BFDC8AC-0614-4098-AEF0-9C645EAFA294}
       - "Association «IN» → mt_request_demand_data_for_analysis"  # {7A52E1BA-7EE6-4c8d-A02D-BED055A8F9D2} → {B406F16A-BBDA-4e77-9D6B-A65DEB7CA55A}
       - "Association «IN» → mt_strategy_effectiveness_results"  # {941F8B11-CDF7-44fb-83E9-A846CCC92E47} → {383F902C-09C6-47e5-AB7C-CA5EF78372E2}
-  - name: "3.4.11 Analyse Environmental Data and Implement Actions"
-    guid: "{76BDDFC3-4323-4702-93BB-5FFF2B7ADA94}"
+  - name: "F3.4.10 Output Environmental Information"
+    guid: "{BB6D4E31-446A-40d8-AE28-AE8BC026065E}"
     type: "Activity"
     stereotype: "FRAME_Low_Level_Function"
     status: "Proposed"
     version: "5.0"
-    order: 8
+    order: 7
     note: |
       This Function shall be capable of providing the following facilities:
       
-      (1) The ability to analyse the environmental data when it is received from the functionality managing the store of Environmental Conditions data to see if any action is needed.
-      (2) The ability to send the results of the analysis and any recommended action to the functionality providing the HMI for the Road Network Operator for confirmation of the action.
-      (3) When conformation of the recommended action is received from the functionality providing the HMI for the Road Network Operator, the ability to send the data to other functionality in the System.
-      (4) The ability to send a copy of the confirmed actions to the functionality that is managing the store of Environmental Conditions for loading into the data store.
-      (5) If included in the recommended action, the ability to send the data about the environmental conditions to the functionality in the System that provides the HMI through which it can be output to Drivers and/or Travellers.
+      (1) The ability to take responsibility for the output of information to Drivers and/or Travellers about environmental conditions.
+      (2) Details of what the information output should contain and to which group(s) of users the information should be output will be provided to this Function by other functionality.
+      (3) A HMI through which the environmental conditions information can be output to Drivers and/or Travellers.
     links:
-      - "Aggregation «componentof» → F3.4 Provide Environmental Information"  # {DD805E2C-A6E6-4979-9DD3-FCB2729A1B3B} → {76CF90A1-6DE9-446b-9FA4-8F7412DA0B70}
-      - "Association «IN» → mt.pshvs_weather_data_for_vehicle_trip_monitoring"  # {5CD0370F-9348-4756-8824-26B783489542} → {542DE07C-E77E-4049-9334-B2ED9FD44C45}
-      - "Association «IN» → mt.ptja_pollution"  # {003E4497-A47F-4782-9A79-0139FC74E75F} → {EBE182F2-630A-4af9-AF05-144DF015DA6C}
-      - "Association «IN» → mt.ptja_weather_information"  # {F7B66347-A5DE-43f9-A25A-C4140E5A7E19} → {498F1A63-55BA-4a41-AB26-B6B47D0BBE5C}
-      - "Association «IN» → mt.ptja_weather_information_for_trip_monitoring"  # {ED0BBDA5-58F4-4049-87B5-8E6A8664AEE6} → {32240F8F-C8E7-4ae8-A67A-19F125A34601}
-      - "Association «IN» → mt_confirmed_environmental_actions"  # {F509D4CC-4CC2-4b60-BBB4-D34C147C1F39} → {5F531C11-F04D-4828-9338-380BDF15C286}
-      - "Association «IN» → mt_demand_management_environmental_data"  # {59786F6F-AA7C-4824-AF05-464B9D03C63B} → {599EC851-9CB8-402f-9D83-8E8B18A9988E}
-      - "Association «IN» → mt_environmental_incident_inputs"  # {2164B44D-37D4-452e-A96A-36682E391003} → {7430B9EE-D5FC-4633-9B3B-22191938810C}
-      - "Association «IN» → mt_environmental_information"  # {CF9A9EEA-72FC-4eb1-9520-B0EBA987A664} → {C424D31F-A62A-4552-B8D5-218ECE71CCAD}
-      - "Association «IN» → mt_inter-urban_environmental_inputs"  # {FE69214E-745F-4272-B8DE-630608D7B3DF} → {15DC47E4-2084-43d6-9472-685CECF173EE}
-      - "Association «IN» → mt_suggest_environmental_actions"  # {4F78872B-CC56-4ec5-B09C-2490A4EC4385} → {63B94908-AEAC-4a0c-AABB-A625FAD3C8EF}
-      - "Association «IN» → mt_urban_environmental_inputs"  # {1E8E0FD5-27AD-4077-B79D-4BF882B1AA1F} → {36F7C70B-E54A-4875-B723-C0A901AEEA13}
-      - "Association «IN» → tesp.ttip-weather_conditions_information"  # {AA90C031-BE76-442d-96F2-FF2F20B8BBF5} → {75B6C2DB-0317-4edf-958E-366EC59CFA2F}
+      - "Aggregation «component of» → F3.4 Provide Environmental Information"  # {FAA7889A-1BEF-4ba7-83F5-D77F80323198} → {76CF90A1-6DE9-446b-9FA4-8F7412DA0B70}
+      - "Association «IN» → td-environmental_information"  # {6F9B6E0E-5228-492f-8485-F38F96422B25} → {CBD72135-0498-4365-9281-9B91833AB9EC}
+      - "Association «IN» → tt-environmental_information"  # {BD1795D8-5107-4d5e-9D94-6310E7FF32CF} → {84293F7B-FF91-460c-88BC-E936118DDA7A}
   - name: "F3.1.1.13 Predict Short & Medium Term Urban Conditions"
     guid: "{708B81CE-D54E-4d21-A13E-4E1A77FB24FF}"
     type: "Activity"
@@ -2903,7 +2877,7 @@ elements:
       (3) The ability to request and use current urban traffic data as the starting point for the predictions of short and medium term urban traffic data.
       (4) The ability to repeat the creation of the predicted short and medium term urban traffic data at (frequent?) periodic intervals.
     links:
-      - "Aggregation «componentof» → F3.1.1 Provide Urban Traffic Management"  # {F42480E8-10F0-449d-AED6-3095836F2C0D} → {F2989AC8-51A0-4913-B32E-0D5E048A4788}
+      - "Aggregation «component of» → F3.1.1 Provide Urban Traffic Management"  # {F42480E8-10F0-449d-AED6-3095836F2C0D} → {F2989AC8-51A0-4913-B32E-0D5E048A4788}
       - "Association «IN» → mt_request_current_urban_traffic_data"  # {9F26BBBC-32E3-48e4-B85E-9CCD7418A450} → {4A275922-5A47-4046-B243-94F613821BEB}
       - "Association «IN» → mt_short_&_medium_predicted_urban_traffic"  # {0354E3E4-B21F-465b-BA38-C47AF2E20294} → {7D08F7D9-54A7-4f62-BDA2-F6780D7A97C0}
   - name: "F3.1.1.5.20 Output c&i to Drivers using Urban Roads"
@@ -2925,7 +2899,7 @@ elements:
       (7) The monitoring of its operation and the reporting of any abnormalities to Maintenance Management functionality.
       (8) The reporting of a fault to the Maintenance Management facility if a Vehicle reports that what is being output by the Function is not the same as what is being received in the Vehicle.
     links:
-      - "Aggregation «Componentof» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {39198CE4-E3FF-4b44-A454-2598DA3503FD} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
+      - "Aggregation «component of» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {39198CE4-E3FF-4b44-A454-2598DA3503FD} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
       - "Association «IN» → mt.pshvs_c&i_state_for_driver_display"  # {ED4ECAEC-CF12-45eb-9B18-2013865BDF4D} → {9296421C-16E8-4154-A560-0960FBFF8562}
       - "Association «IN» → mt_urban_c&i_device_status"  # {851A54D1-C4F3-47a7-8FBE-C9D110F0C249} → {1337AAE7-5C77-49a7-B007-67632739C73F}
       - "Association «IN» → mt_urban_c&i_equipment_fault"  # {3D2FB4F2-66A3-4eb8-8166-0C213A37E6D7} → {EF428147-77D4-4b99-93DD-633E3ECB9C2A}
@@ -2935,7 +2909,7 @@ elements:
       - "Association «IN» → td-urban_traffic_messages"  # {94E513A3-DDE0-4e5b-9240-96D5C854C02A} → {DE2BA7F0-D763-455c-AD39-2B6E30DE73B7}
       - "Association «IN» → tt.c-urban_traffic_management_messages"  # {A2873CEE-5943-416f-BF1C-CC4BB3D1F361} → {01901CFC-DBDE-4b97-BF18-D5D31261A77A}
       - "Association «IN» → tt.p-urban_traffic_management_messages"  # {224BAE34-82E6-4ed4-99EB-BB3EBA1312A5} → {1ABC28D4-7143-4426-9481-7B48FB40B0A3}
-  - name: "F3.1.2.14 Implement Inter-urban Management Traffic Strategy"
+  - name: "F3.1.2.14 Implement Inter-urban Traffic Management Strategy"
     guid: "{033C90BB-44C7-4a7e-ADC2-10627BFE6B45}"
     type: "Activity"
     stereotype: "FRAME_High_Level_Function"
@@ -2945,7 +2919,7 @@ elements:
     note: |
       This High-level Function shall be responsible for the actual output of messages and that status of signs that can be seen by Drivers using all or part(s) of the inter-urban road network.  It shall be able to use these messages and signs to manage the use if the inter-urban road network by Vehicles.  This shall include restricting the use of lane, setting speed limits, assigning particular types of Vehicles to particular lanes and other measures that will help to optimise and improve the efficiency with which the inter-urban road network is used, as well as reducing the impact of Vehicles on the environment.  The Function shall enable the current strategies to be temporarily overridden in order that Emergency Vehicles can be given green waves, or part(s) of the inter-urban road network can be "coned" off to enable the Emergency Services to respond to incidents.    If a Vehicle violates one or more of any mandatory messages and/or sign states, it shall be possible for its details to be sent to the functionality that will forward them to the Law Enforcement Agency.  It shall also be possible for the Road Network Operator to have access to the functionality to both monitor what messages and sign states are being output and to override some or all of those outputs if necessary.
     links:
-      - "Aggregation «componentof» → F3.1.2 Provide Inter-urban Traffic Management"  # {1A8756BB-4E21-4ab0-BB98-E3F5FB8BCF5A} → {2EE2E618-41FE-4ac5-9413-C23D9DAF7E9E}
+      - "Aggregation «component of» → F3.1.2 Provide Inter-urban Traffic Management"  # {1A8756BB-4E21-4ab0-BB98-E3F5FB8BCF5A} → {2EE2E618-41FE-4ac5-9413-C23D9DAF7E9E}
       - "Association → F3.1.2.14.6 Send Messages to Approaching Inter-urban Vehicles"  # {3E0F80E3-6402-4f1d-B4F8-DCFFC89E0752} → {69EDBF36-8BA1-4601-8620-A82C6FCF84C2}
       - "Association «IN» → fo.rno-inter-urban_command_output_override"  # {7DF0DDD4-721A-4792-AC41-644B48EC1267} → {6001F213-F42C-4646-9106-0A60E9F597C0}
       - "Association «IN» → fo.rno-request_inter-urban_ouput_monitoring"  # {2AF67852-C810-4dcc-A107-85C3EED40862} → {ED55D2AB-CA59-494b-8FD6-2B4AEFAEC4D0}
@@ -2997,7 +2971,7 @@ elements:
       (7) The ability to analyse data about the weather to see if it will create a hazard for Vehicles.
       (8) When the identification and classification of the incident has been completed, the ability to send the data about it for storage and subsequent assessment of the necessary mitigation strategies by other functionality.
     links:
-      - "Aggregation «componentof» → F3.2 Manage Incidents"  # {B7F9991C-177C-4436-94D5-B764DA85DC3C} → {7B5551F4-B9B4-4df4-A228-C3111996584E}
+      - "Aggregation «component of» → F3.2 Manage Incidents"  # {B7F9991C-177C-4436-94D5-B764DA85DC3C} → {7B5551F4-B9B4-4df4-A228-C3111996584E}
       - "Association «IN» → mt_new_incident_data"  # {D4AD09B2-AD93-4622-85EC-92F7FEB35FEB} → {48966284-5DE7-4557-86B6-CE12A37A554B}
   - name: "F3.3.11 Simulate Demand Management Strategy"
     guid: "{BFE7D090-6F60-4a46-A01A-B2F212084B91}"
@@ -3013,9 +2987,38 @@ elements:
       (2) The ability to carry out its simulations at the request of the Transport Planner who must specify the existing strategy that is to be simulated.
       (3) The ability to send the results of the simulation to the functionality providing the HMI for the Transport Planner.
     links:
-      - "Aggregation «componentof» → F3.3 Manage Demand"  # {F70AE0CE-1C1E-4fc5-992E-7A1FFCE0829E} → {4BFDC8AC-0614-4098-AEF0-9C645EAFA294}
+      - "Aggregation «component of» → F3.3 Manage Demand"  # {F70AE0CE-1C1E-4fc5-992E-7A1FFCE0829E} → {4BFDC8AC-0614-4098-AEF0-9C645EAFA294}
       - "Association «IN» → mt_demand_strategy_simulation_results"  # {05DBB423-A7BE-40a7-B681-B0BA2C70BADA} → {D30ABB62-0337-48c6-A28A-3F086E95699A}
       - "Association «IN» → mt_request_data_&_strategies_for_simulation"  # {79B993CA-28E0-4050-9F3C-0AA7B3D9D54E} → {DCD87D77-20AD-4c10-A1FE-C2B4F6CFE270}
+  - name: "F3.4.11 Analyse Environmental Data and Implement Actions"
+    guid: "{76BDDFC3-4323-4702-93BB-5FFF2B7ADA94}"
+    type: "Activity"
+    stereotype: "FRAME_Low_Level_Function"
+    status: "Proposed"
+    version: "5.0"
+    order: 8
+    note: |
+      This Function shall be capable of providing the following facilities:
+      
+      (1) The ability to analyse the environmental data when it is received from the functionality managing the store of Environmental Conditions data to see if any action is needed.
+      (2) The ability to send the results of the analysis and any recommended action to the functionality providing the HMI for the Road Network Operator for confirmation of the action.
+      (3) When conformation of the recommended action is received from the functionality providing the HMI for the Road Network Operator, the ability to send the data to other functionality in the System.
+      (4) The ability to send a copy of the confirmed actions to the functionality that is managing the store of Environmental Conditions for loading into the data store.
+      (5) If included in the recommended action, the ability to send the data about the environmental conditions to the functionality in the System that provides the HMI through which it can be output to Drivers and/or Travellers.
+    links:
+      - "Aggregation «component of» → F3.4 Provide Environmental Information"  # {DD805E2C-A6E6-4979-9DD3-FCB2729A1B3B} → {76CF90A1-6DE9-446b-9FA4-8F7412DA0B70}
+      - "Association «IN» → mt.pshvs_weather_data_for_vehicle_trip_monitoring"  # {5CD0370F-9348-4756-8824-26B783489542} → {542DE07C-E77E-4049-9334-B2ED9FD44C45}
+      - "Association «IN» → mt.ptja_pollution"  # {003E4497-A47F-4782-9A79-0139FC74E75F} → {EBE182F2-630A-4af9-AF05-144DF015DA6C}
+      - "Association «IN» → mt.ptja_weather_information"  # {F7B66347-A5DE-43f9-A25A-C4140E5A7E19} → {498F1A63-55BA-4a41-AB26-B6B47D0BBE5C}
+      - "Association «IN» → mt.ptja_weather_information_for_trip_monitoring"  # {ED0BBDA5-58F4-4049-87B5-8E6A8664AEE6} → {32240F8F-C8E7-4ae8-A67A-19F125A34601}
+      - "Association «IN» → mt_confirmed_environmental_actions"  # {F509D4CC-4CC2-4b60-BBB4-D34C147C1F39} → {5F531C11-F04D-4828-9338-380BDF15C286}
+      - "Association «IN» → mt_demand_management_environmental_data"  # {59786F6F-AA7C-4824-AF05-464B9D03C63B} → {599EC851-9CB8-402f-9D83-8E8B18A9988E}
+      - "Association «IN» → mt_environmental_incident_inputs"  # {2164B44D-37D4-452e-A96A-36682E391003} → {7430B9EE-D5FC-4633-9B3B-22191938810C}
+      - "Association «IN» → mt_environmental_information"  # {CF9A9EEA-72FC-4eb1-9520-B0EBA987A664} → {C424D31F-A62A-4552-B8D5-218ECE71CCAD}
+      - "Association «IN» → mt_inter-urban_environmental_inputs"  # {FE69214E-745F-4272-B8DE-630608D7B3DF} → {15DC47E4-2084-43d6-9472-685CECF173EE}
+      - "Association «IN» → mt_suggest_environmental_actions"  # {4F78872B-CC56-4ec5-B09C-2490A4EC4385} → {63B94908-AEAC-4a0c-AABB-A625FAD3C8EF}
+      - "Association «IN» → mt_urban_environmental_inputs"  # {1E8E0FD5-27AD-4077-B79D-4BF882B1AA1F} → {36F7C70B-E54A-4875-B723-C0A901AEEA13}
+      - "Association «IN» → tesp.ttip-weather_conditions_information"  # {AA90C031-BE76-442d-96F2-FF2F20B8BBF5} → {75B6C2DB-0317-4edf-958E-366EC59CFA2F}
   - name: "F3.1.1.14 Manage Urban Traffic Data"
     guid: "{187E4725-12EA-4e77-AE1D-58ACA792603E}"
     type: "Activity"
@@ -3035,7 +3038,7 @@ elements:
       (7) The ability to  provide the collated and fused data from  the store of Urban Traffic Data  to other functionality in the Manage Traffic area, either for its own use, or for sending to functionality in other Functional Areas and to  entities outside the System.
       (8) The ability to provide current urban traffic data for use in creating short and medium term predictions for that data and when received to load that data into the store of Urban Traffic Data.
     links:
-      - "Aggregation «componentof» → F3.1.1 Provide Urban Traffic Management"  # {BD62C402-5477-449a-A638-67BB4681A3BF} → {F2989AC8-51A0-4913-B32E-0D5E048A4788}
+      - "Aggregation «component of» → F3.1.1 Provide Urban Traffic Management"  # {BD62C402-5477-449a-A638-67BB4681A3BF} → {F2989AC8-51A0-4913-B32E-0D5E048A4788}
       - "Association «IN» → mt.mffo_historic_urban_traffic_data"  # {EE84A30C-5A77-45e2-B05B-BD0386A2E062} → {F45EEB65-015C-473a-B224-AA4071B0CFB2}
       - "Association «IN» → mt_current_urban_traffic_conditions"  # {9768AD1D-02B5-4b94-8384-7F5F94BC35C2} → {51AF429E-3486-4560-8404-7326E7223EFF}
       - "Association «IN» → mt_default_urban_journey_time_update"  # {95CDE557-800E-4324-8DAD-FECA1B1DA79B} → {C00B6502-86A1-48ac-B712-79C343A83DD5}
@@ -3049,7 +3052,7 @@ elements:
       - "Association «IN» → mt_urban_traffic_data_for_output"  # {FFEBE567-A7BA-4974-97A1-4CC633E47743} → {B2972B53-FB41-4ec1-BA6A-D6E7068E8372}
       - "Association «IN» → mt_urban_traffic_maintenance_conditions"  # {A3ADEEBF-BEC3-4f6c-BEB7-1B1511440212} → {4432C286-7C14-4c5e-A86B-BDB1C5F89951}
       - "Association «IN» → tors.utms-urban_data_updates"  # {A9592E51-1589-4e48-9FA7-C0488E1D484C} → {CB6FC93B-EC95-4bdf-B498-29A933472D20}
-      - "Association «belongsto» → 9.11.1.6"  # {0D6E04F5-E257-4bc1-B7E2-95348C00AE2E} → {7CEBA355-23A2-4178-BC45-ACE85F9644B0}
+      - "Association «belongs to» → 9.11.1.6"  # {0D6E04F5-E257-4bc1-B7E2-95348C00AE2E} → {7CEBA355-23A2-4178-BC45-ACE85F9644B0}
   - name: "F3.1.1.5.21 Send Messages to Approaching Urban Vehicles"
     guid: "{2D52A5A7-314A-46cd-A604-532926B4A246}"
     type: "Activity"
@@ -3065,6 +3068,7 @@ elements:
       (3) When an approaching Vehicle is detected, the ability to output to it the data for information and warning messages plus commands relevant to the management of traffic using the urban road network.
       (4) The ability to continue with the output to approaching Vehicles, changing the data every time it is changed, and stopping output if there is no data to transmit.
     links:
+      - "Aggregation «component of» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {63F346CC-744F-49D1-AF92-70BB3F86CE9B} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
       - "Association «IN» → mt.pshvs_approaching_vehicles_urban_messages"  # {3F2E5D4C-AD80-4c97-9457-79825F9CA7AE} → {E053CAEF-4BF1-4f30-ADAB-C482DD247589}
   - name: "F3.1.2.15 Predict Short & Medium Term Inter-urban Conditions"
     guid: "{D9FC2D84-84DD-4618-9B04-0ED445C214FF}"
@@ -3081,7 +3085,7 @@ elements:
       (3) The ability to request and use current inter-urban traffic data as the starting point for the predictions of short and medium term inter-urban traffic data.
       (4) The ability to repeat the creation of the predicted short and medium term inter-urban traffic data at (frequent?) periodic intervals.
     links:
-      - "Aggregation «componentof» → F3.1.2 Provide Inter-urban Traffic Management"  # {58946599-1D84-40ab-8AEB-B899DAF4625A} → {2EE2E618-41FE-4ac5-9413-C23D9DAF7E9E}
+      - "Aggregation «component of» → F3.1.2 Provide Inter-urban Traffic Management"  # {58946599-1D84-40ab-8AEB-B899DAF4625A} → {2EE2E618-41FE-4ac5-9413-C23D9DAF7E9E}
       - "Association «IN» → mt_request_current_inter-urban_traffic_data"  # {99FDE5B6-3634-403b-B846-153503B3FB56} → {9669048C-2E06-4e80-8BFA-292ED0B7A952}
       - "Association «IN» → mt_short_&_medium_predicted_inter-urban_traffic"  # {68D8DFFF-D6FF-4fca-B246-7EDE55986B5F} → {F0A2FE59-BEBD-4795-87AB-8244CCBEE430}
   - name: "F3.1.5.10 Manage Rest Area Usage"
@@ -3097,8 +3101,7 @@ elements:
       (1) Upon receiving an enquiry for information about parking available at one or more rest areas, the ability to request details of the parking that is available.
       (2) The ability to respond to the enquiry with information about the parking available at the specified rest areas.
     links:
-      - "Aggregation «componentof» → F3.1.5 Provide Management of Service Areas"  # {3B34BDCD-52DE-48db-95CB-FFB8960306E6} → {962C365C-5E2E-4b47-BA9E-9537F154665A}
-      - "Association «IN» → mt.pshvs_rest_area_parking_response"  # {10B2B83F-90F5-4e06-BC37-0D5B0E47A2D4} → {1D771D70-E194-4ae6-A874-B3AC397FD549}
+      - "Aggregation «component of» → F3.1.5 Provide Management of Service Areas"  # {3B34BDCD-52DE-48db-95CB-FFB8960306E6} → {962C365C-5E2E-4b47-BA9E-9537F154665A}
       - "Association «IN» → mt.pshvs_rest_area_parking_response"  # {140C9FEB-FF65-49b3-9C69-8B55B1A9CEE9} → {1D771D70-E194-4ae6-A874-B3AC397FD549}
       - "Association «IN» → mt_request_data_for_service_area"  # {D398ADED-6D25-42b7-8A0B-E091189D9B9A} → {C35A6BAD-0A35-4e65-B547-B127A687E6EF}
       - "Association «IN» → mt_rest_area_details_for_booking"  # {D859EC30-DCA3-4439-93D1-BF9D69D1580F} → {811C1B4E-1BCC-4af4-ABE8-3A9830669093}
@@ -3117,7 +3120,7 @@ elements:
       (3) The ability for the output of the instructions to Vehicles to begin as soon as the strategy information has been received, but only if it is relevant for the geographic location of the road network that is being managed by the System.
       (4) The ability to keep a local store of the strategies currently being implemented and delete them when their expiry time has passed, or when a strategy modification or removal indication arrives from the management functionality.
     links:
-      - "Aggregation «componentof» → F3.2 Manage Incidents"  # {7D8C43DD-27DF-4545-B1DC-1A2702C9E825} → {7B5551F4-B9B4-4df4-A228-C3111996584E}
+      - "Aggregation «component of» → F3.2 Manage Incidents"  # {7D8C43DD-27DF-4545-B1DC-1A2702C9E825} → {7B5551F4-B9B4-4df4-A228-C3111996584E}
       - "Association «IN» → mt.pshvs_local_incident_related_warnings"  # {A8AC31A7-4D2B-4f2f-B8F2-146854EC6369} → {F01102C8-C6FB-4f70-9733-934B407C2B3F}
   - name: "F3.3.12 Provide Transport Planner Managing Demand Access"
     guid: "{7B352EB5-85A2-44fb-9524-CE6F216C4BBE}"
@@ -3132,7 +3135,7 @@ elements:
       (1) An HMI through which the Transport Planner can manage a variety of activities.
       (2) The ability for the activities to include the creation of new demand management strategies, the review of previously activated strategies and the simulation of existing strategies.
     links:
-      - "Aggregation «componentof» → F3.3 Manage Demand"  # {352014DB-DC52-4797-891C-B009F56F3F49} → {4BFDC8AC-0614-4098-AEF0-9C645EAFA294}
+      - "Aggregation «component of» → F3.3 Manage Demand"  # {352014DB-DC52-4797-891C-B009F56F3F49} → {4BFDC8AC-0614-4098-AEF0-9C645EAFA294}
       - "Association «IN» → mt_create_new_demend_strategy"  # {A7978AB1-6743-4a0c-BEC8-A55357B69ADC} → {3580B134-9A05-4847-BB33-B82BF9D867EC}
       - "Association «IN» → mt_request_demand_strategies"  # {E2649CAC-D8C4-43d6-87AB-E41D9C417C99} → {5DD5B58E-1D76-4342-933F-CF28006EAE9E}
       - "Association «IN» → mt_run_demand_strategy_simulation"  # {8BF8BC44-1068-4baa-9D55-0FE335E59B96} → {E1B26E4A-FBF8-46b9-8B65-C5395E3DC4DA}
@@ -3171,7 +3174,7 @@ elements:
       (15) The ability to monitor its operation and report any malfunction to the Maintenance Management functionality.
       (16) The ability to ensure that all outputs are consistent, coherent and do not in any way compromise the safe use of the urban road network, e.g. by ensuring that no green conflicts are produced.
     links:
-      - "Aggregation «Componentof» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {377A8D38-3C93-4475-A110-432031D5AE0B} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
+      - "Aggregation «component of» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {377A8D38-3C93-4475-A110-432031D5AE0B} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
       - "Association «IN» → mt.pscs_local_priority_request_result"  # {A9CB455A-CA76-4221-8E9C-FB5B157E8944} → {EE1F1B47-8E33-4861-8A22-9A73C36AF3B6}
       - "Association «IN» → mt.pscs_vehicle_priority_operating"  # {F6E50CB2-F53F-476e-A703-1BAFCFBB2638} → {495573A0-F7AE-49f4-8B14-46E09FE2E358}
       - "Association «IN» → mt.pshvs_s&g_sequence_data_for_host_vehicle"  # {90616280-28F0-457b-B7F9-8DB7F37D45D9} → {3FAA6288-077B-4c9a-88D9-756563835B0C}
@@ -3202,7 +3205,7 @@ elements:
       (6) The ability to  provide the collated and fused data from  the store of Inter-urban Traffic Data to other functionality, including that responsible for the output of the processed data to other parts of the System and entities outside the System.
       (7) The ability to provide current inter-urban traffic data for use in creating short and medium term predictions for that data and when received to load that data into the store of Inter-urban Traffic Data.
     links:
-      - "Aggregation «componentof» → F3.1.2 Provide Inter-urban Traffic Management"  # {9DC8345A-E0CF-439a-819A-96338B9820FF} → {2EE2E618-41FE-4ac5-9413-C23D9DAF7E9E}
+      - "Aggregation «component of» → F3.1.2 Provide Inter-urban Traffic Management"  # {9DC8345A-E0CF-439a-819A-96338B9820FF} → {2EE2E618-41FE-4ac5-9413-C23D9DAF7E9E}
       - "Association «IN» → mt.mffo_historic_intre-urban_traffic_data"  # {798F525C-7DC0-412d-8256-69D87C0884B6} → {1E65CAD4-A13C-4cb0-86CC-32A467EA4CB2}
       - "Association «IN» → mt_current_inter-urban_traffic_conditions"  # {37565656-666F-417c-BA4D-66758511B075} → {0B373276-55A9-4384-AE37-6A0E9ACBD4AB}
       - "Association «IN» → mt_default_inter-urban_journey_time_update"  # {01F3ADBD-E949-42ae-8566-2300B1527548} → {9DD4D4FE-0BFF-4032-B6DC-F5ECAFD22033}
@@ -3216,7 +3219,7 @@ elements:
       - "Association «IN» → mt_load_inter-urban_traffic_data"  # {633FE1BC-8E68-41e3-ABE4-9E2F81CE4931} → {A441CC18-76FF-4064-9A79-E253CFE02CCE}
       - "Association «IN» → mt_requested_current_inter-urban_traffic_data"  # {0C6B3254-9E15-46af-9DF5-33CA73C63605} → {1AB02DCF-2DDE-47c3-A9A4-1738018EA5A4}
       - "Association «IN» → tors.iutms-inter-urban_data_updates"  # {E351E7E7-08ED-4570-9030-672CEA87AFFE} → {09C4AF29-5E5D-4a05-91BD-851932BB4751}
-      - "Association «belongsto» → 9.11.1.6"  # {1D01AEC6-7AA4-48cf-BDB1-132E7B4BF230} → {7CEBA355-23A2-4178-BC45-ACE85F9644B0}
+      - "Association «belongs to» → 9.11.1.6"  # {1D01AEC6-7AA4-48cf-BDB1-132E7B4BF230} → {7CEBA355-23A2-4178-BC45-ACE85F9644B0}
   - name: "F3.1.5.11 Manage Rest Area Booking"
     guid: "{192BCF57-D03B-4560-8511-20C702898400}"
     type: "Activity"
@@ -3234,7 +3237,7 @@ elements:
       (5) The ability to remove a booking for a parking space once the Freight Vehicle that booked it has left the res area, thus making the space available for use by other Freight Vehicles.
       (6) The ability to respond to the request for the booking of a parking space for inclusion in a Hazardous Goods Vehicle trip plan, again subject to confirmation by the Parking Operator using other functionality.
     links:
-      - "Aggregation «componentof» → F3.1.5 Provide Management of Service Areas"  # {FFC0A38B-8BAF-4dd9-B714-97C3D435B478} → {962C365C-5E2E-4b47-BA9E-9537F154665A}
+      - "Aggregation «component of» → F3.1.5 Provide Management of Service Areas"  # {FFC0A38B-8BAF-4dd9-B714-97C3D435B478} → {962C365C-5E2E-4b47-BA9E-9537F154665A}
       - "Association «IN» → mt.pscs_rest_area_space_response"  # {0E05E529-E9C0-459c-A9AD-045E67098D30} → {B46D4111-5454-4579-A1C7-36CC3CD8F96D}
       - "Association «IN» → mt.pshvs_rest_area_booking_confirmed_&_information"  # {E2D683FD-4D59-475e-AC4F-EFFDB87D20D8} → {AA7248F2-09A3-4038-B33B-224FF79A577C}
       - "Association «IN» → mt.pshvs_rest_area_booking_response"  # {79590D00-9CCA-4c19-AA81-678E1F30F17D} → {5AD93008-1967-4a41-B7D5-DD1CE15F4EB0}
@@ -3253,7 +3256,7 @@ elements:
       (1) The ability to take responsibility for the output of information to Drivers and/or Travellers as part of a demand management strategy.
       (2) The ability for other functionality to provide details of what the information output should contain and to which group(s) of users the information should be output.
     links:
-      - "Aggregation «componentof» → F3.3 Manage Demand"  # {45BCEAE7-73A2-499e-976F-9E3E0137F58E} → {4BFDC8AC-0614-4098-AEF0-9C645EAFA294}
+      - "Aggregation «component of» → F3.3 Manage Demand"  # {45BCEAE7-73A2-499e-976F-9E3E0137F58E} → {4BFDC8AC-0614-4098-AEF0-9C645EAFA294}
       - "Association «IN» → td-demand_management_information"  # {71790BFB-F0B7-4efe-9303-7446B16A0D83} → {24D32615-B082-4bae-B47F-3F786029B409}
       - "Association «IN» → tt-demand_management_information"  # {1A36EB14-6059-4ce3-9086-F26831D9C6BF} → {6CB8D125-BD0D-468f-AB94-AA9531F28634}
   - name: "F3.1.1.5.23 Output Urban Lane & Speed Commands"
@@ -3271,7 +3274,7 @@ elements:
       (3) The ability to provide these outputs using mechanisms that do not include in-vehicle displays or any type, and as a supplement to the outputs provided by the Output Commands & Information to Urban Roads Function.
       (4) The ability to send the data in these outputs to other functionality for output by In-vehicle displays.
     links:
-      - "Aggregation «Componentof» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {21D9F428-6C5C-4f12-BC94-736598F54C40} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
+      - "Aggregation «component of» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {21D9F428-6C5C-4f12-BC94-736598F54C40} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
       - "Association «IN» → mt.pshvs_urban_speed_commands"  # {88AB468B-D7C5-4cc8-BC78-F54664D248F1} → {646667F6-40EE-47ec-AED4-56912FFB9E2F}
       - "Association «IN» → mt_urban_l&s_device_status"  # {495DB80B-1545-4a6a-BA4D-177F6DCA6930} → {3D099C8E-5215-4080-9BF9-3B7A3193EA18}
       - "Association «IN» → mt_urban_traffic_management_l&s_response"  # {22DE0BDF-AD99-4838-A50D-CE78D9AFEC16} → {6EDF9932-1474-411d-972D-962AB39F1ECF}
@@ -3300,7 +3303,7 @@ elements:
       (10)  The ability to monitor the results from the implementation of strategies so that if necessary corrective action can be taken if the content of strategies are not followed.
       (11) The provision of  details of the current and previously implemented strategies on some or all parts of the urban road network to the Road Network Operator through the Provide Urban Traffic Operator Interface Function.
     links:
-      - "Aggregation «Componentof» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {F4D855A1-45A7-4bb8-B959-804EB0FDDE60} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
+      - "Aggregation «component of» → F3.1.1.5 Provide Urban Traffic Management Facilities"  # {F4D855A1-45A7-4bb8-B959-804EB0FDDE60} → {1AF52437-DFBF-48bc-B240-E3B1A297AE9B}
       - "Association «IN» → mt.pscs_green_wave_result"  # {603DEBB1-55C3-4afc-B415-D2A3675B96D0} → {7E8DBF0D-6031-4149-BB2C-102BA44E7559}
       - "Association «IN» → mt.pshvs_c&i_outputs_for_driver_display"  # {75CCDE12-42F3-4bd8-B37B-F521A2E66C78} → {2339E009-54F3-4f8f-BEF9-3AB8A2BC7964}
       - "Association «IN» → mt.pshvs_s&g_outputs_for_driver_display"  # {769725B5-46B9-4fe9-A03A-FDC0E48ED872} → {C5190C82-2A76-4abf-A86D-BE5742D9131C}

@@ -12,8 +12,6 @@ elements:
     version: "1.0"
     order: 0
     note: ""
-    links:
-      - "Association «OUT» → Park Management Center"  # {D18FB952-CB00-40fd-A4F1-8255E9861B28} → {6E45DF73-1572-42d2-AF0D-CFC9275BDF26}
   - name: "fNAP-tSerPro"
     guid: "{687ACDCC-F476-4916-98BC-DDDA166B98F8}"
     type: "Interface"
@@ -22,8 +20,6 @@ elements:
     version: "1.0"
     order: 0
     note: ""
-    links:
-      - "Association «OUT» → Service Provider Central"  # {B844BA5D-28FB-4a99-8521-8549CDFFD917} → {CB931E5C-62B0-4a1a-BE6D-D27FFFA2F6FB}
   - name: "fParkCent-tParkEq"
     guid: "{54A3522B-DBAB-4524-B4F4-C9D69BECB5E5}"
     type: "Interface"
@@ -32,8 +28,6 @@ elements:
     version: "1.0"
     order: 0
     note: ""
-    links:
-      - "Association «OUT» → Parking Area Equipment"  # {A35F4288-C800-460a-A2FD-BC3B5A89419F} → {AD0930DA-45BB-4e9e-B704-094B15EE8ECC}
   - name: "fParkCet-tNAP"
     guid: "{4C787B39-8BD3-49d4-951D-80A965AE782F}"
     type: "Interface"
@@ -42,8 +36,6 @@ elements:
     version: "1.0"
     order: 0
     note: ""
-    links:
-      - "Association «OUT» → EU NAP Central"  # {7F7CC4E6-B6B1-4c38-8602-EE7B5995D728} → {B347CC5F-562A-4cf3-81D9-8750F1833797}
   - name: "fParkEq-tParkCent"
     guid: "{58B6A29A-5D03-4cbf-B262-A9986BBBAFE2}"
     type: "Interface"
@@ -52,8 +44,6 @@ elements:
     version: "1.0"
     order: 0
     note: ""
-    links:
-      - "Association «OUT» → Park Management Center"  # {4FF0BCD3-4E3D-495b-B219-082CBDC8564C} → {6E45DF73-1572-42d2-AF0D-CFC9275BDF26}
   - name: "fParkEq-tSerPro"
     guid: "{8B367654-53D2-404d-9769-4CBBEFB18186}"
     type: "Interface"
@@ -62,8 +52,6 @@ elements:
     version: "1.0"
     order: 0
     note: ""
-    links:
-      - "Association «OUT» → Service Provider Central"  # {98FD9217-6DA0-49d1-896B-CDCA9F8447F6} → {CB931E5C-62B0-4a1a-BE6D-D27FFFA2F6FB}
   - name: "fPerDev-tSerPro"
     guid: "{2BDA9EBA-F9A5-40a3-B5E9-9D1B6044CD30}"
     type: "Interface"
@@ -72,8 +60,6 @@ elements:
     version: "1.0"
     order: 0
     note: ""
-    links:
-      - "Association «OUT» → Service Provider Central"  # {D42755EA-487E-43ef-8173-6CF51C7C00C9} → {CB931E5C-62B0-4a1a-BE6D-D27FFFA2F6FB}
   - name: "fSerPro-tNAP"
     guid: "{3A72D078-D04E-42c7-B096-BB906E2CC828}"
     type: "Interface"
@@ -82,8 +68,6 @@ elements:
     version: "1.0"
     order: 0
     note: ""
-    links:
-      - "Association «OUT» → EU NAP Central"  # {6515DD1C-1969-4a3a-8159-6B2C3492B54A} → {B347CC5F-562A-4cf3-81D9-8750F1833797}
   - name: "fSerPro-tParkEq"
     guid: "{60EA9D83-D040-413d-BA8B-D2A585D32E1E}"
     type: "Interface"
@@ -92,8 +76,6 @@ elements:
     version: "1.0"
     order: 0
     note: ""
-    links:
-      - "Association «OUT» → Parking Area Equipment"  # {9E9DC3D0-FC2F-4233-BEFF-2925F77EFBA0} → {AD0930DA-45BB-4e9e-B704-094B15EE8ECC}
   - name: "fSerPro-tPerDev"
     guid: "{B2CBF2BA-60DC-4931-A79D-A2FE60469814}"
     type: "Interface"
@@ -102,5 +84,3 @@ elements:
     version: "1.0"
     order: 0
     note: ""
-    links:
-      - "Association «OUT» → Personal Information Device / In Vehicle Component"  # {D27A615A-C6AF-4cbb-90B7-1E72A574B5D7} → {FA430332-D5C4-44f4-941F-363E1D17521B}

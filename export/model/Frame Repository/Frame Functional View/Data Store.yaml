@@ -521,7 +521,7 @@ elements:
       
       Note that the functionality that manages this Data Store does not enable the Communications Operator or any other entity to access these information objects.  This is to protect the identity and communications information of the Vehicles from which eCall messages are being processed.
     links:
-      - "Association «instants of» → psef_eCall_data_from_store"  # {C20DAE88-9F18-425e-8484-086DEB4E890C} → {8F7FDE8D-E199-40d5-B785-3FD0876038F6}
+      - "Association «IN» → psef_eCall_data_from_store"  # {C20DAE88-9F18-425e-8484-086DEB4E890C} → {8F7FDE8D-E199-40d5-B785-3FD0876038F6}
   - name: "D3.10 Inter-urban Service Area Data"
     guid: "{ACD78063-0815-45b6-BA8F-22C9D3336EAD}"
     type: "Object"
@@ -942,7 +942,7 @@ elements:
       - check what is in data flows and if it is covered by the DS
       - IMPORTANT: decide how to deal with optional nap.cc logging in.
     links:
-      - "Association «OUT» → mt_read_NAP_user_data"  # {4A61D8D6-A5B7-4f80-A052-8890FD562FD5} → {7E763AED-E934-47b4-BF12-7ED1C864E575}
+      - "Association «IN» → mt_read_NAP_user_data"  # {4A61D8D6-A5B7-4f80-A052-8890FD562FD5} → {7E763AED-E934-47b4-BF12-7ED1C864E575}
   - name: "D3.3 Environmental Data"
     guid: "{F242EC18-4213-4a90-B103-85AF940319C9}"
     type: "Object"
@@ -1877,7 +1877,7 @@ elements:
       
       It shall be possible for the above data objects to be updated in real-time as the Vehicle moves through the road network.
     links:
-      - "Association «OUT» → pshvs_read_operational_data"  # {C467D24F-7D3B-488c-9B7A-F94BE2502743} → {184489AE-0597-41ec-9FF2-277094884491}
+      - "Association «IN» → pshvs_read_operational_data"  # {C467D24F-7D3B-488c-9B7A-F94BE2502743} → {184489AE-0597-41ec-9FF2-277094884491}
   - name: "D5.2 ISA Data"
     guid: "{C46A67B7-DD4A-4e06-82B2-8AADAFCEED93}"
     type: "Object"

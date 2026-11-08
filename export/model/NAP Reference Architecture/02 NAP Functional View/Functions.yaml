@@ -22,7 +22,7 @@ elements:
       (5) The ability to carry out its activities in such a way that they do not interfere with one another, and that the integrity of the data being stored and read is preserved.
       (6) This function manages all data mentioned in the mobilityDCAT-AP (https://mobilitydcat-ap.github.io/mobilityDCAT-AP/releases/index.html) and other relevant information (e.g. quality info, possible data comments etc.)
     links:
-      - "Aggregation «componentof» → F3.6 Operate National Access Point"  # {E3BEC736-624C-478a-ACE3-7E413DB9BAFF} → {7ADE914E-925B-4d69-8E2A-6E26A0C42EEE}
+      - "Aggregation «component of» → F3.6 Operate National Access Point"  # {E3BEC736-624C-478a-ACE3-7E413DB9BAFF} → {7ADE914E-925B-4d69-8E2A-6E26A0C42EEE}
       - "Association «IN» → mt_NAP_metadata_for_data_check_and_store_response"  # {7ECA2926-BE67-40b1-9D4A-1FDB15D3A46A} → {2FD69798-3950-48ea-B7F0-F52F39470F34}
       - "Association «IN» → mt_NAP_metadata_for_quality_check"  # {5FE66C32-7D0D-4989-8528-DE73C33E02AE} → {EB72DA4A-A638-4946-B10F-21C536686F6C}
       - "Association «IN» → mt_NAP_metadata_mod_result"  # {7416B140-A34B-4973-9305-4353CDF8AFDA} → {3947BAD7-63D3-4efd-9308-DDBCD8C288F9}
@@ -83,14 +83,14 @@ elements:
       
       - IMPORTANT: check for simplification of the functionality!!
     links:
-      - "Aggregation «componentof» → F3.6 Operate National Access Point"  # {72034106-FFE1-401f-8A15-646C81C976BB} → {7ADE914E-925B-4d69-8E2A-6E26A0C42EEE}
-      - "Aggregation «componentof» → F3.6 Operate National Access Point"  # {E0722B09-0398-4b8a-ADCD-0E60FC9B557F} → {9363D28A-B58D-4e6d-B249-7748C0011542}
+      - "Aggregation «component of» → F3.6 Operate National Access Point"  # {72034106-FFE1-401f-8A15-646C81C976BB} → {7ADE914E-925B-4d69-8E2A-6E26A0C42EEE}
+      - "Aggregation «component of» → F3.6 Operate National Access Point"  # {E0722B09-0398-4b8a-ADCD-0E60FC9B557F} → {9363D28A-B58D-4e6d-B249-7748C0011542}
       - "Association «IN» → mt_NAP_data_mod_authorisation_response"  # {9C1C3B83-C2B6-4342-ABF1-2A3E0160C6E4} → {310CD8FD-F1FA-4b44-A502-9A7D061FD2BE}
       - "Association «IN» → mt_NAP_data_read_authorisation_response"  # {190BB9DB-3DD7-4715-8E44-BBC442EF5E93} → {C050FEDE-4276-4730-8B5C-0F605084BE69}
       - "Association «IN» → mt_NAP_metadata_mod_authorisation_result"  # {98DCDD4A-1C5E-4308-BEF7-37EEBCB1D983} → {C526D3EC-9CD9-465e-B6AB-D13F6308EBB3}
       - "Association «IN» → mt_load_NAP_user_data"  # {6672E2DD-6A24-4d7e-963F-BDC4AEEE9486} → {EFA11DF3-9ABC-46b9-8E31-B15D7F357F69}
       - "Association «IN» → tnap.cc-registration_response"  # {6F9EF2C2-A656-4717-9064-1E23CC73DEF0} → {60E6A67C-C9D0-464b-900F-9F28DC71E886}
-      - "Association «OUT» → tnap.cp-registration_response"  # {B2ACEE10-1E33-40e2-A652-E4D2233705A5} → {AFD11DEB-11FE-4692-8BEB-B81835B7A4AD}
+      - "Association «IN» → tnap.cp-registration_response"  # {B2ACEE10-1E33-40e2-A652-E4D2233705A5} → {AFD11DEB-11FE-4692-8BEB-B81835B7A4AD}
   - name: "F3.6.3 Manage Content Providers Metadata"
     guid: "{E8D1212C-A787-4da1-A4EB-B4E1896ABD19}"
     type: "Activity"
@@ -116,10 +116,10 @@ elements:
       
       ===========
     links:
-      - "Aggregation «componentof» → F3.6 Operate National Access Point"  # {F699895E-C226-4353-9A4F-FF630F3629B6} → {7ADE914E-925B-4d69-8E2A-6E26A0C42EEE}
+      - "Aggregation «component of» → F3.6 Operate National Access Point"  # {F699895E-C226-4353-9A4F-FF630F3629B6} → {7ADE914E-925B-4d69-8E2A-6E26A0C42EEE}
       - "Association «IN» → mt_NAP_metadata_mod_authorisation_request"  # {68CFD374-F51B-4dca-A8A8-A38300E155CA} → {D4D31515-ABC4-468d-964E-F6D5D4F77136}
       - "Association «IN» → mt_NAP_metadata_mod_request"  # {A81759EF-4A39-4e23-9E3E-B81903552870} → {E5EE6235-7DA8-4f7c-B007-A5F039A31397}
-      - "Association «OUT» → tnap.cp-metadata_&_success_report"  # {E05457AD-E5D7-4cdc-AD20-225CEE3A2544} → {169488F2-0C7D-4eef-8B43-C324785B730D}
+      - "Association «IN» → tnap.cp-metadata_&_success_report"  # {E05457AD-E5D7-4cdc-AD20-225CEE3A2544} → {169488F2-0C7D-4eef-8B43-C324785B730D}
   - name: "F3.6.4 Manage Metadata Retrieval"
     guid: "{2F2393E9-9A59-4344-A2C0-207945E7F438}"
     type: "Activity"
@@ -147,11 +147,10 @@ elements:
       
       - IMPORTANT: a functionality to contact NAP User to provide basic info and for NAP User to provide feedback is needed NOT part of the minimum functionality, resolve by adding functionality to 3.6.2 that the NAP operator could retrieve NAP user contact data to be able to contact them.
     links:
-      - "Aggregation «componentof» → F3.6 Operate National Access Point"  # {B763000A-5CAE-4ab7-81AB-168751AAA90E} → {7ADE914E-925B-4d69-8E2A-6E26A0C42EEE}
+      - "Aggregation «component of» → F3.6 Operate National Access Point"  # {B763000A-5CAE-4ab7-81AB-168751AAA90E} → {7ADE914E-925B-4d69-8E2A-6E26A0C42EEE}
       - "Association «IN» → mt_NAP_metadata_search_request"  # {EF8E0FB1-EC04-45dc-AE32-EC204F67A4FC} → {F2F9B90C-BD35-4b2a-8DCB-4B8F834C419A}
       - "Association «IN» → tnap.cc-metadata_search_result"  # {83900E74-1744-4ace-B205-8A130BB3C6DE} → {DDCEDB1B-C3C2-4d88-AAF0-8371D10BF745}
       - "Association «IN» → tnap.mdrs-metadata_response"  # {F970BAA2-E34A-4127-B8C0-F660B2D4F767} → {CA529868-7C49-48f9-AD5E-F796011DFDF5}
-      - "Dependency → NAP IT Provider (NIT)"  # {FE22C329-43D9-450d-8DC4-096292CC0002} → {273E7961-AD50-416e-AC9A-92FA926DD4A7}
   - name: "F3.6.5 Provide NAP User Support"
     guid: "{E4E0DD97-20AB-4868-B0DE-C0C3C14EA4BA}"
     type: "Activity"
@@ -180,8 +179,8 @@ elements:
       - IMPORTANT: reduce number of dataflows by just addressing all NAP users at once by their higher-level terminator
       - IMPORTANT: who is the NAP User? Where do we have it specified? Different for NAP Actor?
     links:
-      - "Association «OUT» → tnap.cc-support_response"  # {22FFFD15-4634-4f3b-893B-976F8F470AC1} → {27BFFD1B-0E50-4c8b-8CDF-8F958078802C}
-      - "Association «OUT» → tnap.cp-support_response"  # {4DBF1722-1968-42a2-B232-78DA2B7CBFCC} → {997937B5-775D-4297-8297-D9ABB198ACF2}
+      - "Association «IN» → tnap.cc-support_response"  # {22FFFD15-4634-4f3b-893B-976F8F470AC1} → {27BFFD1B-0E50-4c8b-8CDF-8F958078802C}
+      - "Association «IN» → tnap.cp-support_response"  # {4DBF1722-1968-42a2-B232-78DA2B7CBFCC} → {997937B5-775D-4297-8297-D9ABB198ACF2}
   - name: "F3.6.6 Provide Metadata Quality Checks"
     guid: "{15BFF38A-05D9-4775-84C9-6604B0EEA3C6}"
     type: "Activity"

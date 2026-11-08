@@ -11,9 +11,11 @@ With --strict the script exits with code 1 when there are errors (for CI once th
 Conventions (FRAME Repository V5.2):
   «IN»   Association  function / terminator / data store / functional area / system  →  data flow
   «OUT»  Association  data flow  →  function / terminator / data store / functional area / system
-  «Componentof» Aggregation  part → whole  (low-level → high-level data flow, high-level → high-level data flow,
-                             low-level → high-level function → functional area → system, sub-terminator → terminator)
-  «Servedby» Association     User Need → low-level function
+  «component of» Aggregation  part → whole  (low-level → high-level data flow, high-level → high-level data flow,
+                             low-level → high-level function → functional area → system)
+  «is Type of» Abstraction   sub-terminator → terminator (#68)
+  «served by» Association     User Need → low-level function
+  «belongs to» Association    part → whole  (User Need → User Need Topic → User Need Service → User Need Group)
 """
 import sys, os, sqlite3
 from collections import defaultdict, Counter
@@ -25,8 +27,9 @@ META = ('FRAME Meta Model', 'FRAME Toolsetup')   # define stereotypes and their 
 FLOW = {'FRAME_Low_Level_Data_Flow': 0, 'FRAME_High_Level_Data_Flow': 1}
 FUNC = {'FRAME_Low_Level_Function': 0, 'FRAME_High_Level_Function': 1, 'FRAME_Functional_Area': 2, 'FRAME_System': 3}
 ENDPOINT = set(FUNC) | {'FRAME_Terminator', 'FRAME_Datastore'}
+UN = {'FRAME_User_Need': 0, 'FRAME_User_Need_Topic': 1, 'FRAME_User_Need_Service': 2, 'FRAME_User_Need_Group': 3}
 ISSUE = {'dangling': '', 'self-reference': '#62', 'in-out': '#69', 'componentof': '#80, #81', 'generalization': '#79',
-         'servedby': '', 'stereotype-spelling': '#86', 'unused-flow': '#76', 'function-flows': '', 'function-parent': '',
+         'servedby': '', 'belongsto': '#16', 'subterminator': '#68', 'stereotype-spelling': '#86', 'unused-flow': '#76', 'function-flows': '', 'function-parent': '',
          'context-diagram': '#91', 'duplicate': '', 'release-hygiene': ''}
 norm = lambda s: (s or '').lower().replace(' ', '')
 
@@ -74,15 +77,21 @@ def main(argv):
                 want = 'IN' if tf else 'OUT'
                 if st != want.lower():
                     R('in-out', f'«{k["st"]}» {label(s)} → {t["name"]}: expected «{want}» for this direction (or reverse the connector)')
+        if k['type'] == 'Association' and st not in ('in', 'out') and ((s['st'] in ENDPOINT and t['st'] in FLOW) or (s['st'] in FLOW and t['st'] in ENDPOINT)):
+            R('in-out', f'«{k["st"]}» {label(s)} → {t["name"]}: a data flow is linked to its producer / consumer by «IN» / «OUT»')
         if st == 'componentof':
             if s['st'] in FLOW and t['st'] in FLOW and (FLOW[s['st']] > FLOW[t['st']] or FLOW[s['st']] == FLOW[t['st']] == 0):
                 R('componentof', f'«{k["st"]}» {label(s)} → {t["name"]} ({t["st"].replace("FRAME_", "")}) runs whole → part or between low-level flows')
             elif s['st'] in FUNC and t['st'] in FUNC and FUNC[s['st']] > FUNC[t['st']]:
                 R('componentof', f'«{k["st"]}» {label(s)} → {t["name"]} ({t["st"].replace("FRAME_", "")}) runs whole → part')
+        if s['st'] == t['st'] == 'FRAME_Terminator' and s['id'] != t['id'] and st != 'istypeof' and k['type'] != 'Dependency':
+            R('subterminator', f'{k["type"]} «{k["st"]}» {label(s)} → {t["name"]}: a sub-terminator «is Type of» its terminator')
+        if st == 'belongsto' and s['st'] in UN and t['st'] in UN and UN[s['st']] > UN[t['st']]:
+            R('belongsto', f'«{k["st"]}» {label(s)} → {t["name"]} ({t["st"].replace("FRAME_", "")}) runs whole → part')
         if k['type'] == 'Generalization' and (s['st'] in FLOW or t['st'] in FLOW):
-            R('generalization', f'Generalization {label(s)} → {t["name"]}: data flows are linked by «Componentof»')
+            R('generalization', f'Generalization {label(s)} → {t["name"]}: data flows are linked by «component of»')
         if s['st'] == 'FRAME_User_Need' and t['st'] in FUNC and st != 'servedby':
-            R('servedby', f'{label(s)} → {t["name"]} is {k["type"]} «{k["st"]}», expected Association «Servedby»')
+            R('servedby', f'{label(s)} → {t["name"]} is {k["type"]} «{k["st"]}», expected Association «served by»')
     for n, variants in spelling.items():
         if len(variants) > 1:
             W('stereotype-spelling', 'connector stereotype written in ' + str(len(variants)) + ' ways: '
@@ -103,11 +112,11 @@ def main(argv):
             if missing:
                 W('function-flows', f'{label(o)} has no {" and ".join(missing)} data flows')
             if not any(norm(k['st']) == 'componentof' and k['s']['id'] == o['id'] for k, _ in links[o['id']]):
-                W('function-parent', f'{label(o)} is not «Componentof» a high-level function or functional area')
+                W('function-parent', f'{label(o)} is not «component of» a high-level function or functional area')
     ctx = {o for o, ds in on_diagram.items() if any('Context Diagram' in (d or '') for d in ds)}
     if ctx:
         for o in repo:
-            sub = any(norm(k['st']) == 'componentof' and k['s']['id'] == o['id'] and other['st'] == 'FRAME_Terminator' for k, other in links[o['id']])
+            sub = any(norm(k['st']) in ('istypeof', 'componentof') and k['s']['id'] == o['id'] and other['st'] == 'FRAME_Terminator' for k, other in links[o['id']])
             if o['st'] == 'FRAME_Terminator' and o['id'] not in ctx and o['type'] == 'Actor' and not sub:
                 if any(other['st'] == 'FRAME_High_Level_Data_Flow' for _, other in links[o['id']]):
                     W('context-diagram', f'{label(o)} has high-level data flows but is not in the FRAME Context Diagram')

@@ -271,7 +271,6 @@ elements:
       - "Association «adheres to» → NeTEx"  # {FBB9A249-CBBD-4f19-B2E6-A14E4832045B} → {477B7D19-AF4F-483d-BF7D-70FEBB8AE8BB}
       - "Association «adheres to» → SIRI"  # {79976084-7CCB-4d8b-BC40-4892F7A29431} → {E14C46B0-7A08-4284-BF7D-294B3FD4373B}
       - "Association «adheres to» → TAP-TSI"  # {E443BF98-8810-4385-8A54-58932F70F1B0} → {682395F9-50B7-41f0-A637-3327735690CE}
-      - "Realisation → Traffic and travel data"  # {23B9A838-5833-4110-B74F-6D58BC660E9D} → {5D025724-4C19-430d-9128-3E1DA1AC1B10}
   - name: "Real-time traffic information"
     guid: "{26DA86A3-8E64-4517-9A5D-8D52040CDAB8}"
     type: "Object"
@@ -331,7 +330,6 @@ elements:
       https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32015R0962
     links:
       - "Association «adheres to» → DATEX II"  # {C81CD6D7-17AC-496a-AADD-2DFA002B7643} → {F9A9AFD3-AF4D-4391-9AE4-2FB290C7C9F9}
-      - "Realisation → Traffic and travel data"  # {5C6E94C8-CBA4-46ad-9680-B7F51B211FC7} → {5D025724-4C19-430d-9128-3E1DA1AC1B10}
   - name: "Road safety-related traffic information"
     guid: "{40CA1E89-95A1-4382-8F88-A78C115A61C8}"
     type: "Object"
@@ -406,7 +404,6 @@ elements:
       https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32013R0886
     links:
       - "Association «adheres to» → DATEX II"  # {C831877B-0B2D-4acf-9F80-F01B3A6853F5} → {F9A9AFD3-AF4D-4391-9AE4-2FB290C7C9F9}
-      - "Realisation → Traffic and travel data"  # {88774395-F1E6-4296-B9A1-079D571B4B32} → {5D025724-4C19-430d-9128-3E1DA1AC1B10}
   - name: "Safe and secure truck parking"
     guid: "{C0AED25D-ABFB-4eaf-87F6-757E7462E6D7}"
     type: "Object"
@@ -483,7 +480,6 @@ elements:
       https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=celex%3A32013R0885
     links:
       - "Association «adheres to» → DATEX II"  # {40972D3C-EB0F-4500-A7E4-B0A0FCD2DC40} → {F9A9AFD3-AF4D-4391-9AE4-2FB290C7C9F9}
-      - "Realisation → Traffic and travel data"  # {B89B4029-3DEA-434a-9BAC-EA8161CAB0FA} → {5D025724-4C19-430d-9128-3E1DA1AC1B10}
   - name: "Search request"
     guid: "{756D79DD-7A75-4ae9-8BA9-FBA358DF8592}"
     type: "Object"
@@ -625,5 +621,3 @@ elements:
       "structureRef": ""
     note: |
       This information object contains all information about the support request of the Content Provider.
-    links:
-      - "Usage → fnap.cp-support_request"  # {A5C93086-0646-493c-8864-376E1DCCFEA1} → {1ED4DEC1-3019-4933-A419-5FE60CC29FF4}

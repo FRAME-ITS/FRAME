@@ -1,0 +1,31 @@
+﻿scope;guid;label;direction;flow;endpoint;role;confidence;action;evidence
+FRAME Repository;{4A6444F9-693E-45e7-9EF0-012C32AFE3CD};IN;flow→Low_Level_Function;fft.ftom-incident_responses;F8.6.5 Provide FTOM Interface for FTEP Monitoring;?;conflict;review in EA;"flow ""fft.ftom-inc…"" from a terminator into the system; flow already has a consumer"
+FRAME Repository;{78BEF4DF-A7F0-4698-989F-03877590D0DA};IN;flow→Low_Level_Function;fft.ftom-prepare_new_FTEP;F8.4.3 Provide Freight Transport Operations Manager Interface;?;conflict;review in EA;"flow ""fft.ftom-pre…"" from a terminator into the system; flow already has a consumer"
+FRAME Repository;{AA31D6AD-741F-4538-9017-4176EF8A2366};IN;flow→Low_Level_Function;fft.ftom-request_existing_FTEP;F8.4.3 Provide Freight Transport Operations Manager Interface;?;conflict;review in EA;"flow ""fft.ftom-req…"" from a terminator into the system; flow already has a consumer"
+FRAME Repository;{D0EE0D95-E444-41bc-B07A-CEFFCE92BA64};OUT;Low_Level_Function→flow;tft.ftom-prepared_new_FTEP;F8.4.3 Provide Freight Transport Operations Manager Interface;?;conflict;review in EA;"flow ""tft.ftom-pre…"" from the system to a terminator; flow already has a producer"
+FRAME Repository;{AAE925B5-21F3-43e9-BA3B-580FC1E2007F};OUT;Low_Level_Function→flow;tft.ftom-requested_existing_FTEP;F8.4.3 Provide Freight Transport Operations Manager Interface;?;conflict;review in EA;"flow ""tft.ftom-req…"" from the system to a terminator; flow already has a producer"
+FRAME Repository;{B2ABA73C-D040-40db-998B-95521C0703F4};OUT;Low_Level_Function→flow;tnap.cp-registration_response;F3.6.2 Manage Registrations and Provide Authorisation Service;?;conflict;review in EA;"flow ""tnap.cp-regi…"" from the system to a terminator; flow already has a producer"
+FRAME Repository;{EE27D826-1981-436f-AE29-CE0A4BE43C15};OUT;High_Level_Function→flow;tnap.cp-registration_response;F3.6 Operate National Access Point;?;conflict;review in EA;"flow ""tnap.cp-regi…"" from the system to a terminator; flow already has a producer"
+FRAME Repository;{2B911DAE-DC8A-4304-8FAD-FA51957E0D82};IN;flow→High_Level_Function;mpto_current_driver_availability;F4.4 Control PT Fleet;?;unknown;review in EA;
+FRAME Repository;{1AA9E3C4-00D2-469e-B70E-5BDFF8E1FF89};IN;flow→High_Level_Function;mpto_demand_vehicle_repaired;F4.7 Provide On-demand Services;?;unknown;review in EA;
+FRAME Repository;{4E25A6E0-2058-43b0-8251-D2A14A65B1D7};IN;flow→High_Level_Function;mpto_fare_scheme_for_PT_driver;F4.2 Plan PT Service;?;unknown;review in EA;
+FRAME Repository;{87C2429C-0363-44ce-9A3F-F8ED627DE2DA};IN;flow→High_Level_Function;mpto_fare_scheme_for_service;F4.2 Plan PT Service;?;unknown;review in EA;
+FRAME Repository;{B760099F-E335-49e5-BB0B-3C2F425C20CD};IN;flow→High_Level_Function;mt_carpark_occupancy_for_inter-urban;F3.1.5 Provide Management of Service Areas;?;unknown;review in EA;
+FRAME Repository;{95803E51-1957-4d88-BF99-52BA9A8F87DC};IN;flow→High_Level_Function;mt_inter-urban_strategy_command_response_failure;F3.1.2.13 Manage Inter-urban Traffic Strategies;?;unknown;review in EA;
+FRAME Repository;{F4B7B6C7-C920-4188-9239-240F61D6E76A};IN;flow→High_Level_Function;psef_request_emergency_response_statistics;F2.1.2 Manage Emergency Intervention;?;unknown;review in EA;
+FRAME Repository;{C37BF3A2-69DD-4348-A1D1-1C68D4489E9D};IN;flow→High_Level_Function;pshvs_instructions_&_warnings_for_other_vehicles;F5.16 Provide Outputs to Host Vehicle Drivers;?;unknown;review in EA;
+FRAME Repository;{33375C7B-2697-4796-AC57-223005946916};OUT;Low_Level_Function→flow;pshvs_load_operational_data;F5.11.13 Manage Operational Data Store;?;unknown;review in EA;
+FRAME Repository;{DC6847CE-2036-4c34-BBD0-0C361A0351CF};IN;flow→Datastore;pshvs_load_operational_data;D5.1 Operational Data;?;unknown;review in EA;
+FRAME Repository;{7363EAA6-19E8-4f54-879D-C855467A9F2D};IN;flow→High_Level_Function;pshvs_location_from_other_vehicle;F5.13 Provide Vehicle Data and ISA;?;unknown;review in EA;
+FRAME Repository;{85D7E728-D524-41a1-B1B4-56DD17266893};IN;flow→High_Level_Function;pshvs_other_vehicle_trajectory_for_host_vehicle;F5.15.3 Determine Host Vehicle Situation;?;unknown;review in EA;
+FRAME Repository;{6EC203A9-7761-49b0-9E58-57FDB78F66DF};IN;flow→Low_Level_Function;pshvs_read_operational_data;F5.11.13 Manage Operational Data Store;?;unknown;review in EA;
+FRAME Repository;{C467D24F-7D3B-488c-9B7A-F94BE2502743};OUT;Datastore→flow;pshvs_read_operational_data;D5.1 Operational Data;?;unknown;review in EA;
+FRAME Repository;{C86E9220-1553-4025-B521-FA1500A47710};IN;flow→Low_Level_Function;pshvs_request_driver_condition;F5.11.13 Manage Operational Data Store;?;unknown;review in EA;
+FRAME Repository;{4BA43992-D850-44fc-9A1A-862B1810DBD3};OUT;Low_Level_Function→flow;pshvs_request_driver_condition;F5.11.7 Provide In-vehicle eCall Facilities;?;unknown;review in EA;
+FRAME Repository;{291C7C0B-E552-478f-A77D-28C441FA63D8};IN;flow→Low_Level_Function;pshvs_request_driver_stored_data;F5.11.13 Manage Operational Data Store;?;unknown;review in EA;
+FRAME Repository;{1E0FD69B-2512-4882-BE30-B5A86F02F290};OUT;Low_Level_Function→flow;pshvs_request_driver_stored_data;F5.11.11 Monitor Status of Driver;?;unknown;review in EA;
+FRAME Repository;{E9CD0DB5-2E3A-4f7e-A360-766CA6234D2E};OUT;Low_Level_Function→flow;pshvs_request_tvd_incident_data;F5.11.6 Provide Incident Related Data;?;unknown;review in EA;
+FRAME Repository;{722287A8-89A9-47e4-AABC-FB62B6CD9FEE};IN;flow→Low_Level_Function;pshvs_request_tvd_incident_data;F5.11.13 Manage Operational Data Store;?;unknown;review in EA;
+FRAME Repository;{07BC91CC-3678-4547-B905-F9549F218BED};IN;flow→High_Level_Function;pshvs_vehicle_data_for_trip_planning;F5.14 Provide In-vehicle Trip Planning & Implementation;?;unknown;review in EA;
+FRAME Meta Model;{219589AF-C19C-4aee-BB75-E387E78846D7};IN;flow→Terminator;FRAME_Low_Level_Data_Flow;Terminator/ Subterminator;?;unknown;review in EA;
+FRAME Meta Model;{9BB07876-E49C-4d52-BCFC-B78344600B1C};OUT;Terminator→flow;FRAME_Low_Level_Data_Flow;Terminator/ Subterminator;?;unknown;review in EA;

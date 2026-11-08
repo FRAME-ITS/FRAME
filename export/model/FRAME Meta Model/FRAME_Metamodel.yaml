@@ -16,6 +16,7 @@ elements:
     links:
       - "Abstraction «is Type of» → Stakeholder"  # {F8082342-A3D2-43c0-8298-9E95A5F1A4B6} → {D8941B60-3EFA-422b-93B5-1F7FDFB18CFF}
       - "Abstraction «is Type of» → Terminator/ Subterminator"  # {DB9664B0-F2CB-4bef-B81F-DC63B7EBA2AB} → {C619D94C-1176-4bee-86C2-D8C4FF8FB634}
+      - "Association «performs» → Role"  # {01753DD3-F870-468a-B4DE-0A1932C6AFD5} → {6919B163-FD91-4478-B0D6-0A11A723D27B}
   - name: "Agreement"
     guid: "{59AC1C75-662C-4f63-B4A9-8E075FE15BE4}"
     type: "Collaboration"
@@ -25,7 +26,7 @@ elements:
     order: 0
     note: ""
     links:
-      - "Association «adheres to» → Role"  # {A749230A-CD41-4481-B84F-DC565F0AEF02} → {6919B163-FD91-4478-B0D6-0A11A723D27B}
+      - "Association «accepted by» → Role"  # {A749230A-CD41-4481-B84F-DC565F0AEF02} → {6919B163-FD91-4478-B0D6-0A11A723D27B}
   - name: "Application"
     guid: "{9E05B1AE-4239-4341-BCF2-010BB287A0BB}"
     type: "Object"
@@ -39,9 +40,10 @@ elements:
       An ITS Application (or module) is an ITS architecture building block and consists of a computer program or system of computer programs that automate or implement useful functions. It uses ITS interfaces for communication with other ITS applications and realises technical activities in an ITS business process.
     links:
       - "Association «adheres to» → Specification"  # {A40EA1B2-C603-4fc3-9668-E6EC6BB94AA7} → {32E1A53D-B9C9-4180-BD66-998E967D5E33}
+      - "Association «contains» → Low Level Function"  # {D42F79EB-128B-4820-BD89-AB9BE6C0F700} → {568A327F-EB2D-468d-9FA6-3CD9714EE807}
+      - "Association «contains» → Physical Dataflow"  # {054583DA-096F-49f0-8BBF-C9134A9A17E4} → {AC1DD116-B224-4693-B0FE-4AD1D8B1246C}
       - "Association «hosted by» → Component"  # {37910D96-8C5F-4a9c-8A20-37D996DC82D7} → {A3ECE56A-3A44-4971-9CEC-0D092A4DB634}
-      - "Usage → Low Level Function"  # {D42F79EB-128B-4820-BD89-AB9BE6C0F700} → {568A327F-EB2D-468d-9FA6-3CD9714EE807}
-      - "Usage → Physical Dataflow"  # {054583DA-096F-49f0-8BBF-C9134A9A17E4} → {AC1DD116-B224-4693-B0FE-4AD1D8B1246C}
+      - "Association «owned by» → Role"  # {12AC94F6-DDD9-4DED-9612-29B0232EA841} → {6919B163-FD91-4478-B0D6-0A11A723D27B}
   - name: "Business_Expectation"
     guid: "{76442EA5-1026-40ac-9827-10B79B425CD5}"
     type: "Artifact"
@@ -52,7 +54,7 @@ elements:
     note: |
       Business expectations of an actor involved in the ITS Service is an ITS architecture building block, which formulates the economic added value for an institution/company associated with an ITS service as a goal.
     links:
-      - "Association «defines» → Mission Statement"  # {9D522F03-A7F7-43d7-8628-1027FB273E45} → {B3A79F6B-D9C7-45e4-9E34-B1F4A73D19DC}
+      - "Association «defines» → ITS_Service"  # {74E6BE36-188E-43CB-A9B1-E8F38A2F01AE} → {7153E4F6-663F-4457-B65B-207E5B95ED99}
   - name: "Component"
     guid: "{A3ECE56A-3A44-4971-9CEC-0D092A4DB634}"
     type: "Component"
@@ -67,18 +69,8 @@ elements:
       Components describes all subsystems, hardware and software
     links:
       - "Association «adheres to» → Specification"  # {02BA6521-94A3-47c7-892F-DF8754992ED5} → {32E1A53D-B9C9-4180-BD66-998E967D5E33}
-      - "Usage → Physical Dataflow"  # {FCAC2E88-13FE-4faa-872B-54A34C982F28} → {AC1DD116-B224-4693-B0FE-4AD1D8B1246C}
-  - name: "DataObject"
-    guid: "{55575BA9-439F-41d2-9C92-F2E3A2A0AEBF}"
-    type: "DataType"
-    stereotype: "FRAME_Data_Object"
-    status: "Proposed"
-    version: "1.0"
-    order: 0
-    note: ""
-    links:
-      - "Association «adheres to» → Specification"  # {3D29F3D1-F6CC-4f36-B50A-01D8A2C63313} → {32E1A53D-B9C9-4180-BD66-998E967D5E33}
-      - "Usage → InformationObject"  # {6E17BB3C-03A4-4f00-9B88-6505ED9DE343} → {23EBC3DA-D923-4f06-8F70-6D29A77E7973}
+      - "Association «owned by» → Role"  # {883DD431-0B62-4eb8-AC30-E2DAD1EAE9F5} → {6919B163-FD91-4478-B0D6-0A11A723D27B}
+      - "Association «use» → Physical Dataflow"  # {FCAC2E88-13FE-4faa-872B-54A34C982F28} → {AC1DD116-B224-4693-B0FE-4AD1D8B1246C}
   - name: "Data_Object"
     guid: "{D9D08334-9438-4292-8CF0-B0B048CA8A3C}"
     type: "Object"
@@ -88,6 +80,8 @@ elements:
     order: 0
     note: |
       The ITS Data object is an ITS architecture building block that contains ITS information objects and uses ITS references to describe locations. It is used in ITS interfaces.
+    links:
+      - "Association «adheres to» → Specification"  # {3D29F3D1-F6CC-4f36-B50A-01D8A2C63313} → {32E1A53D-B9C9-4180-BD66-998E967D5E33}
   - name: "Desired_Architecture_Goals"
     guid: "{7E0FAD8F-0BA7-468d-AF74-828588DA2AF9}"
     type: "Artifact"
@@ -118,7 +112,7 @@ elements:
     note: |
       Physical Data Flows are the means of communication between Sub-systems, Modules, and Terminators/Actors in the Physical View of ITS. There are two types of Physical Data Flows: Internal, which link Sub-systems and Modules together; and External, which link Sub-systems and Modules to Terminators/Actors. The creation of a Physical View is always based on a particular Functional View, which must have passed the logical consistency checks before it can be used.
     links:
-      - "Aggregation «componentof» → FRAME_High_Level_Data_Flow"  # {5844534E-D51B-4666-97DD-10CB991BB962} → {35F631D7-65CE-4df9-A861-1B12E39AC463}
+      - "Aggregation «component of» → FRAME_High_Level_Data_Flow"  # {5844534E-D51B-4666-97DD-10CB991BB962} → {35F631D7-65CE-4df9-A861-1B12E39AC463}
       - "Association «OUT» → Fuctional Area"  # {4172F59B-47AB-4ead-8A53-28E3FC22DBD6} → {21EEE2BA-B8F1-4519-AC3F-C983FE93983E}
       - "Association «OUT» → High Level Function"  # {03C5AD0D-996B-4e0d-894B-3DB68F0AFE68} → {5C69204E-D06E-4f2c-8AB9-1E1F6C08EE5C}
       - "Association «OUT» → Terminator/ Subterminator"  # {1C7752F9-0E54-487f-9A35-EAF90B32740B} → {C619D94C-1176-4bee-86C2-D8C4FF8FB634}
@@ -132,16 +126,14 @@ elements:
     note: |
       Data Flows are the movements of data between different components of the system. There are three types of data flows. The first type is data flows between Low-Level Functions. The second type is data flows between Low-Level Functions and Data Stores The third type is data flows between Low-Level Functions and Terminators/Actors.
     links:
-      - "Aggregation «componentof» → FRAME_High_Level_Data_Flow"  # {1155A96F-421E-4c3d-86AD-18654A211DAB} → {35F631D7-65CE-4df9-A861-1B12E39AC463}
-      - "Association «IN» → Terminator/ Subterminator"  # {219589AF-C19C-4aee-BB75-E387E78846D7} → {C619D94C-1176-4bee-86C2-D8C4FF8FB634}
+      - "Aggregation «component of» → FRAME_High_Level_Data_Flow"  # {1155A96F-421E-4c3d-86AD-18654A211DAB} → {35F631D7-65CE-4df9-A861-1B12E39AC463}
       - "Association «OUT» → FRAME_Datastore"  # {884EDFC3-124A-494c-B636-61A9BF9705E9} → {C16508B8-537D-40cd-B45A-513529E5781C}
       - "Association «OUT» → High Level Function"  # {71574DF3-38AA-42ee-BB91-976994E7B5FC} → {5C69204E-D06E-4f2c-8AB9-1E1F6C08EE5C}
       - "Association «OUT» → Low Level Function"  # {F8FB90EF-15B0-4f01-9464-95B0EF89ED92} → {568A327F-EB2D-468d-9FA6-3CD9714EE807}
       - "Association «OUT» → System"  # {4A991BEB-39D8-4a5b-B6EB-B36E3C518C54} → {DFDAD014-1425-41e4-A8A2-F8A960161987}
+      - "Association «OUT» → Terminator/ Subterminator"  # {9BB07876-E49C-4d52-BCFC-B78344600B1C} → {C619D94C-1176-4bee-86C2-D8C4FF8FB634}
       - "Association «contains» → Data_Object"  # {18873814-9EEF-440d-9DBF-93114AE3C72F} → {D9D08334-9438-4292-8CF0-B0B048CA8A3C}
-      - "Association «defines» → DataObject"  # {5819AC30-5FF2-4731-955F-B470972C00A3} → {55575BA9-439F-41d2-9C92-F2E3A2A0AEBF}
       - "Association «served by» → Physical Dataflow"  # {B985BBE5-C2CE-4fbd-B90E-73981FABBC40} → {AC1DD116-B224-4693-B0FE-4AD1D8B1246C}
-      - "Usage → Interface"  # {EF8EBCBF-6A8D-4d7b-A6E0-441A5BA6D0C4} → {31C82DE5-89C7-493b-96A7-4E257321F468}
   - name: "Fuctional Area"
     guid: "{21EEE2BA-B8F1-4519-AC3F-C983FE93983E}"
     type: "Activity"
@@ -152,8 +144,6 @@ elements:
     note: |
       A Function, also known as a “process”, is an action that involves receiving or processing input data. This data is then either passed on to another function or sent out as information or control instructions to an external entity. Functions are categorized into different levels: High-Level Functions (HLF) and Low-Level Functions (LLF). HLFs contain a group of functions concerned with a specific part of data processing and always have component LLFs. LLFs, on the other hand, perform a specific part of the data input, process, or information output process and have no component functions. User needs are allocated to LLFs, which are the only functions used in the FRAME Methodology.
     links:
-      - "Aggregation «component of» → High Level Function"  # {A1D60A93-0F3E-4de3-82A3-281A28EA097B} → {5C69204E-D06E-4f2c-8AB9-1E1F6C08EE5C}
-      - "Aggregation «component of» → Low Level Function"  # {9FE60D0E-1C0A-426c-B956-80C7599B510E} → {568A327F-EB2D-468d-9FA6-3CD9714EE807}
       - "Association «IN» → FRAME_High_Level_Data_Flow"  # {1C951316-4B3B-4080-9683-9892CB98BFF7} → {35F631D7-65CE-4df9-A861-1B12E39AC463}
   - name: "High Level Function"
     guid: "{5C69204E-D06E-4f2c-8AB9-1E1F6C08EE5C}"
@@ -165,7 +155,7 @@ elements:
     note: |
       A Function, also known as a “process”, is an action that involves receiving or processing input data. This data is then either passed on to another function or sent out as information or control instructions to an external entity. Functions are categorized into different levels: High-Level Functions (HLF) and Low-Level Functions (LLF). HLFs contain a group of functions concerned with a specific part of data processing and always have component LLFs. LLFs, on the other hand, perform a specific part of the data input, process, or information output process and have no component functions. User needs are allocated to LLFs, which are the only functions used in the FRAME Methodology.
     links:
-      - "Aggregation «component of» → Low Level Function"  # {821C625A-B952-4199-A329-7D03C9FBE62F} → {568A327F-EB2D-468d-9FA6-3CD9714EE807}
+      - "Aggregation «component of» → Fuctional Area"  # {A1D60A93-0F3E-4de3-82A3-281A28EA097B} → {21EEE2BA-B8F1-4519-AC3F-C983FE93983E}
       - "Association «IN» → FRAME_High_Level_Data_Flow"  # {9DA03636-1979-4267-88E0-4A33BD2C4AFB} → {35F631D7-65CE-4df9-A861-1B12E39AC463}
       - "Association «IN» → FRAME_Low_Level_Data_Flow"  # {9C081F45-C397-4c78-8146-0A0179FCFC39} → {3DA4C5ED-3529-4c62-BB04-DBC9641EA039}
   - name: "ITSBusinessProcess"
@@ -197,13 +187,13 @@ elements:
     tags:
       "Field of Application": ""
     note: |
-      The ITS service describes the idea and functional elements of the ITS service as well as framework conditions.
-      The ITS Service is an architectural artifact that describes a value-added service provided by ITS actors in the field of transport, traffic, and mobility for end-users. The added value is created by combining technologies, organizations, processes, and people. The service can be delivered by a single actor or in cooperation with others, and it creates added value that may consist of individual benefits for mobile travelers, collective benefits for end-user groups or society, or a mixture of both.
+      The ITS service describes the idea and functional elements of the ITS service as well as framework conditions. The ITS Service is an architectural artifact that describes a value-added service provided by ITS actors to end-users. The added value is created by combining technologies, organizations, processes, and people. The service can be delivered by a single actor or in cooperation with others, and it creates added value that may consist of individual benefits for end users, collective benefits for end-user groups or society, or a mixture of both.
     links:
       - "Association «defines» → ITSBusinessProcess"  # {C4791D93-7831-4d3e-A98E-7A974B7ADB0C} → {69BD576D-9718-4c71-A12F-71329B3B65F0}
       - "Association «defines» → ITS_ServiceProcess"  # {FDD7EA6E-EE4C-4061-9133-1FC46B4555AC} → {AAE8BD5C-8D68-412e-AD63-C049013FCE0B}
       - "Association «defines» → Requirement"  # {23673D85-0AB3-43ce-B706-2E082F72B857} → {C94C247E-3F93-47ee-AA0A-75C521916D0A}
       - "Association «defines» → User_Need"  # {199F747E-D68F-4829-932D-5CB583632930} → {AAD160FE-1FEE-4cea-93C1-A68DDAE1E0CD}
+      - "Association «delivers» → ITS_Service_Added_Value"  # {F50D00FC-C881-4287-B438-DA9BEAB31FD8} → {5973109B-76D5-4860-B8E0-E70ADB5483C0}
       - "Association «has» → ITS_Domain"  # {FA55D340-4A76-4440-9CF1-DFD2EFBC7D78} → {1A23C9AA-C9E1-4572-9F33-D101F6A2937D}
   - name: "ITS_ServiceProcess"
     guid: "{AAE8BD5C-8D68-412e-AD63-C049013FCE0B}"
@@ -229,8 +219,7 @@ elements:
     note: |
       The ITS Service added value is created when end-users are given access to ITS information within application processes via easily accessible service access points, enabling them to make their own ITS decisions safely, reliably, quickly, and effectively.
     links:
-      - "Association «defines» → Stakeholder"  # {4B664570-26A6-4bef-B256-CFF93DFEA378} → {D8941B60-3EFA-422b-93B5-1F7FDFB18CFF}
-      - "Association «defines» → User_Need"  # {F130565C-2FFB-4856-B394-B37D02B40C7E} → {AAD160FE-1FEE-4cea-93C1-A68DDAE1E0CD}
+      - "Association «delivers value to» → Stakeholder"  # {4B664570-26A6-4bef-B256-CFF93DFEA378} → {D8941B60-3EFA-422b-93B5-1F7FDFB18CFF}
   - name: "ITS_Vision"
     guid: "{EEBB0D81-284E-4b97-B8DB-21FC225173BC}"
     type: "Class"
@@ -238,10 +227,10 @@ elements:
     status: "Proposed"
     version: "1.0"
     order: 0
-    note: ""
+    note: |
+      ITS Vision is the long-term objective and an aspirational goal for the future. The ITS Vision is shared by all ITS Stakeholders. It is a source of inspiration for the ITS Services and provides a clear goal to be adhered to by the ITS Services.
     links:
       - "Association «associate» → Mission Statement"  # {6D447C59-487B-4fac-924E-04733EB7CDEE} → {B3A79F6B-D9C7-45e4-9E34-B1F4A73D19DC}
-      - "Association «defines» → Requirement"  # {ACEA9F80-F3ED-48bb-BC5A-B0723D7D1586} → {C94C247E-3F93-47ee-AA0A-75C521916D0A}
   - name: "InformationObject"
     guid: "{23EBC3DA-D923-4f06-8F70-6D29A77E7973}"
     type: "Object"
@@ -272,7 +261,6 @@ elements:
     links:
       - "Association «contains» → Data_Object"  # {18E1E28E-39EF-47cd-B7E2-7C4BE905A0A3} → {D9D08334-9438-4292-8CF0-B0B048CA8A3C}
       - "Association «stored in» → FRAME_Datastore"  # {48050D9B-96A7-4f15-B680-1F297E5B0B42} → {C16508B8-537D-40cd-B45A-513529E5781C}
-      - "Usage → InformationObject"  # {7E178259-42FB-43d8-83F5-D21545877AE0} → {23EBC3DA-D923-4f06-8F70-6D29A77E7973}
   - name: "Interface"
     guid: "{31C82DE5-89C7-493b-96A7-4E257321F468}"
     type: "Interface"
@@ -284,8 +272,8 @@ elements:
       An ITS Interface is an ITS architecture building block that serves the exchange of information between systems. It corresponds to an interface specification consisting of the definition of a protocol and a data model and is used and implemented by ITS applications.
     links:
       - "Association «adheres to» → Specification"  # {80CE5958-AF33-437b-B8C0-32774BAB6673} → {32E1A53D-B9C9-4180-BD66-998E967D5E33}
+      - "Association «defines» → Requirement"  # {50365A83-D2B0-4368-B7C8-4554B09B4F37} → {C94C247E-3F93-47ee-AA0A-75C521916D0A}
       - "Association «use» → InformationObject"  # {1CDB2350-94A6-4bff-BCF1-4A23825AB8A7} → {23EBC3DA-D923-4f06-8F70-6D29A77E7973}
-      - "Usage «Instantiate» → FRAME_Low_Level_Data_Flow"  # {B86EE178-250B-49cf-B47C-4B387E950208} → {3DA4C5ED-3529-4c62-BB04-DBC9641EA039}
   - name: "Low Level Function"
     guid: "{568A327F-EB2D-468d-9FA6-3CD9714EE807}"
     type: "Activity"
@@ -296,9 +284,10 @@ elements:
     note: |
       A Function, also known as a “process”, is an action that involves receiving or processing input data. This data is then either passed on to another function or sent out as information or control instructions to an external entity. Functions are categorized into different levels: High-Level Functions (HLF) and Low-Level Functions (LLF). HLFs contain a group of functions concerned with a specific part of data processing and always have component LLFs. LLFs, on the other hand, perform a specific part of the data input, process, or information output process and have no component functions. User needs are allocated to LLFs, which are the only functions used in the FRAME Methodology.
     links:
+      - "Aggregation «component of» → Fuctional Area"  # {9FE60D0E-1C0A-426c-B956-80C7599B510E} → {21EEE2BA-B8F1-4519-AC3F-C983FE93983E}
+      - "Aggregation «component of» → High Level Function"  # {821C625A-B952-4199-A329-7D03C9FBE62F} → {5C69204E-D06E-4f2c-8AB9-1E1F6C08EE5C}
       - "Association «IN» → FRAME_Low_Level_Data_Flow"  # {83E2A392-0C84-40bf-91A9-1B230785F875} → {3DA4C5ED-3529-4c62-BB04-DBC9641EA039}
       - "Association «adheres to» → Specification"  # {1CBB1B95-7458-4201-8E24-B09C00D10839} → {32E1A53D-B9C9-4180-BD66-998E967D5E33}
-      - "Usage «Call» → Component"  # {4FFE32DD-1A06-4580-89D4-ACD40CF32E1E} → {A3ECE56A-3A44-4971-9CEC-0D092A4DB634}
   - name: "Mission Statement"
     guid: "{B3A79F6B-D9C7-45e4-9E34-B1F4A73D19DC}"
     type: "Class"
@@ -307,7 +296,7 @@ elements:
     version: "1.0"
     order: 0
     note: |
-      The ITS Mission statement formulates a clearly structured, overarching, long-term policy objective and the benefits for the defined ITS service deployment, taking into account the interests of stakeholders and end-users. It represents a long-term framework for strengthening the security of action and investment for the involved actors and involves all modes and means of transport.
+      ITS Mission Statement is a short statement that describes what is needed to be done by the ITS Stakeholders in the present to achieve the ITS Vision. It summarizes the purpose of the existence of the ITS Services and guides their use by the ITS Actors and/or the end users. It formulates a clearly structured, overarching policy objective of the ITS service, considering the interests of stakeholders and end-users.
     links:
       - "Association «defines» → ITS_Service"  # {833D8409-F59A-43b0-80E5-6B2D8B401971} → {7153E4F6-663F-4457-B65B-207E5B95ED99}
   - name: "Organisation"
@@ -336,7 +325,7 @@ elements:
   - name: "Requirement"
     guid: "{C94C247E-3F93-47ee-AA0A-75C521916D0A}"
     type: "Requirement"
-    stereotype: "FRAME_Reqirement"
+    stereotype: "FRAME_Requirement"
     status: "Proposed"
     version: "1.0"
     order: 0
@@ -353,7 +342,6 @@ elements:
       
       Specific high level R. - Security: In terms of secure data and functionality.
     links:
-      - "Abstraction → Specification"  # {09120566-4BC3-4580-9922-889375D076D5} → {32E1A53D-B9C9-4180-BD66-998E967D5E33}
       - "Association «fulfilled by» → Application"  # {4DDD0A8F-6394-40d9-9B4F-A65906FD246E} → {9E05B1AE-4239-4341-BCF2-010BB287A0BB}
       - "Association «fulfilled by» → Component"  # {03AE6B03-89A8-4ad9-961D-18FA35787AAD} → {A3ECE56A-3A44-4971-9CEC-0D092A4DB634}
       - "Association «fulfilled by» → Interface"  # {0C99C3FD-2BC8-4238-965C-C4A050920FA0} → {31C82DE5-89C7-493b-96A7-4E257321F468}
@@ -376,11 +364,8 @@ elements:
       Part of the ITS service chain, (partners contributing to the service delivery)
       The ITS Role is an architectural artifact that defines and semantically describes the stereotypes of ITS responsibilities, tasks, and capabilities that are typical and necessary for the value creation of ITS services. It is a significant component of ITS value-added chains for ITS information logistics and is taken by ITS actors and stakeholders depending on the requirements of the ITS service to be implemented. A single ITS actor or stakeholder can occupy one or more ITS roles. The role operates its capabilities, responsibilities, and tasks in the form of activities which, together with the activities of other ITS roles, constitute the ITS business process of an ITS service.
     links:
-      - "Abstraction → ITS_Service"  # {7A2564F0-1333-40b8-AE61-5A7C0C184ADE} → {7153E4F6-663F-4457-B65B-207E5B95ED99}
-      - "Association «accepted by» → Agreement"  # {322AA2AB-0141-4586-86D8-50EFCA83FB3E} → {59AC1C75-662C-4f63-B4A9-8E075FE15BE4}
-      - "Association «defines» → Actor"  # {01753DD3-F870-468a-B4DE-0A1932C6AFD5} → {E9485972-884F-42d6-A74B-D8D874B6CA2D}
+      - "Association «adheres to» → Agreement"  # {322AA2AB-0141-4586-86D8-50EFCA83FB3E} → {59AC1C75-662C-4f63-B4A9-8E075FE15BE4}
       - "Association «defines» → Organisation"  # {61F2CD8B-AE8F-4060-BD2D-970E315C7B1C} → {FAB885FE-E93D-4446-B40C-9C8CD237440F}
-      - "Usage → Component"  # {883DD431-0B62-4eb8-AC30-E2DAD1EAE9F5} → {A3ECE56A-3A44-4971-9CEC-0D092A4DB634}
   - name: "Specification"
     guid: "{32E1A53D-B9C9-4180-BD66-998E967D5E33}"
     type: "DeploymentSpecification"
@@ -389,6 +374,8 @@ elements:
     version: "1.0"
     order: 0
     note: ""
+    links:
+      - "Association «defines» → Requirement"  # {09120566-4BC3-4580-9922-889375D076D5} → {C94C247E-3F93-47ee-AA0A-75C521916D0A}
   - name: "Stakeholder"
     guid: "{D8941B60-3EFA-422b-93B5-1F7FDFB18CFF}"
     type: "Actor"
@@ -397,7 +384,7 @@ elements:
     version: "1.0"
     order: 0
     note: |
-      ITS Stakeholders are usually non-IT decision makers, e.g., politicians, land-use planners, high-level managers, and others who usually have little or no knowledge of IT systems design and implementation beyond what they have acquired as end users.
+      ITS Stakeholders are organizations or individuals interested in the deployment, operation, or outcomes of ITS services. They can be directly or indirectly affected by the decisions made during the entire lifecycle of ITS Services. They are usually decision-makers such as politicians, high-level managers, and others e.g., the general public or user groups; who typically have little or no knowledge of systems design and implementation beyond what they have acquired as end users.
     links:
       - "Association «defines» → ITS_Vision"  # {91993B36-54E3-40a1-92B6-AE20D6A7612B} → {EEBB0D81-284E-4b97-B8DB-21FC225173BC}
       - "Association «has» → Business_Expectation"  # {C95F0F8D-A1C9-4c7d-8929-780EB23E2019} → {76442EA5-1026-40ac-9827-10B79B425CD5}
@@ -425,9 +412,9 @@ elements:
     links:
       - "Abstraction «is Type of» → Terminator/ Subterminator"  # {A9E89699-D75A-4567-AB30-91C9EDF973E8} → {C619D94C-1176-4bee-86C2-D8C4FF8FB634}
       - "Association «IN» → FRAME_High_Level_Data_Flow"  # {570C2EDF-9B4F-43ae-A3E8-299C858444EF} → {35F631D7-65CE-4df9-A861-1B12E39AC463}
-      - "Association «OUT» → FRAME_Low_Level_Data_Flow"  # {9BB07876-E49C-4d52-BCFC-B78344600B1C} → {3DA4C5ED-3529-4c62-BB04-DBC9641EA039}
-      - "Usage → Application"  # {F4449BB0-FFFB-4ebf-8177-03B4B201D828} → {9E05B1AE-4239-4341-BCF2-010BB287A0BB}
-      - "Usage «Instantiate» → Terminator/ Subterminator"  # {FC6C9DC5-A966-4558-99DD-EBA63703D50A} → {C619D94C-1176-4bee-86C2-D8C4FF8FB634}
+      - "Association «IN» → FRAME_Low_Level_Data_Flow"  # {219589AF-C19C-4aee-BB75-E387E78846D7} → {3DA4C5ED-3529-4c62-BB04-DBC9641EA039}
+      - "Association «defines» → Application"  # {F4449BB0-FFFB-4ebf-8177-03B4B201D828} → {9E05B1AE-4239-4341-BCF2-010BB287A0BB}
+      - "Association «use» → Physical Dataflow"  # {3D4FB729-DA77-4681-9123-36A663DEF980} → {AC1DD116-B224-4693-B0FE-4AD1D8B1246C}
   - name: "UserNeedGroup"
     guid: "{356C4C7D-2D63-439e-BD9F-8DC379AD68B9}"
     type: "Requirement"
@@ -436,8 +423,6 @@ elements:
     version: "1.0"
     order: 0
     note: ""
-    links:
-      - "Association «belongs to» → UserNeedService"  # {7628E5C6-6B96-42b7-8551-98202D05BA7D} → {E9D42249-DF2D-4a10-B040-E82833F8CDE7}
   - name: "UserNeedService"
     guid: "{E9D42249-DF2D-4a10-B040-E82833F8CDE7}"
     type: "Requirement"
@@ -447,7 +432,7 @@ elements:
     order: 0
     note: ""
     links:
-      - "Association «belongs to» → UserNeedTopic"  # {859EDC0F-997A-4c22-A4C7-59B3B3ED5463} → {6D83289F-659C-4dca-919B-E662EA23B3AC}
+      - "Association «belongs to» → UserNeedGroup"  # {7628E5C6-6B96-42b7-8551-98202D05BA7D} → {356C4C7D-2D63-439e-BD9F-8DC379AD68B9}
   - name: "UserNeedTopic"
     guid: "{6D83289F-659C-4dca-919B-E662EA23B3AC}"
     type: "Requirement"
@@ -456,6 +441,8 @@ elements:
     version: "1.0"
     order: 0
     note: ""
+    links:
+      - "Association «belongs to» → UserNeedService"  # {859EDC0F-997A-4c22-A4C7-59B3B3ED5463} → {E9D42249-DF2D-4a10-B040-E82833F8CDE7}
   - name: "User_Need"
     guid: "{AAD160FE-1FEE-4cea-93C1-A68DDAE1E0CD}"
     type: "Requirement"
@@ -465,6 +452,6 @@ elements:
     order: 0
     note: ""
     links:
-      - "Association → UserNeedTopic"  # {E18ED45A-2476-4b80-8037-D30080DB6307} → {6D83289F-659C-4dca-919B-E662EA23B3AC}
+      - "Association «belongs to» → UserNeedTopic"  # {E18ED45A-2476-4b80-8037-D30080DB6307} → {6D83289F-659C-4dca-919B-E662EA23B3AC}
       - "Association «defines» → Requirement"  # {8BFAD281-2AB8-4d0c-91A1-6CCE54C48F70} → {C94C247E-3F93-47ee-AA0A-75C521916D0A}
       - "Association «served by» → Low Level Function"  # {44AD17F1-EF70-443d-8300-C78E44D1A707} → {568A327F-EB2D-468d-9FA6-3CD9714EE807}

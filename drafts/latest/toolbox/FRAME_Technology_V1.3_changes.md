@@ -1,0 +1,75 @@
+# FRAME MDG technology V1.3 – changes against V1.2 (embedded in FRAME.qea)
+
+Built by `tools/fixes/2026-11-06_mdg_technology_V1.3.py`.
+
+- stereotype «Impacts» renamed «impacts» (10 occurrences)
+- stereotype «deliverd by» renamed «delivered by» (7 occurrences)
+- stereotype «instants of» renamed «instance of» (5 occurrences)
+- new stereotype «delivers value to» (Association) with toolbox entry
+- new stereotype «triggers» (Association) with toolbox entry
+- new stereotype «implements» (Association) with toolbox entry
+- new stereotype «performs» (Association) with toolbox entry
+- new stereotype «delivers» (Association) with toolbox entry
+- Quick Linker: «Component of» → «component of» (3 rules)
+- Quick Linker: «Defines» → «defines» (13 rules)
+- Quick Linker: «instant of» → «instance of» (1 rules)
+- Quick Linker: «associated» → «associate» (1 rules)
+- Quick Linker reversed: «component of» Functional_Area → Low_Level_Function  becomes  Low_Level_Function → Functional_Area
+- Quick Linker reversed: «component of» Functional_Area → High_Level_Function  becomes  High_Level_Function → Functional_Area
+- Quick Linker reversed: «component of» High_Level_Function → Low_Level_Function  becomes  Low_Level_Function → High_Level_Function
+- Quick Linker reversed: «belongs to» User_Need_Group → User_Need_Service  becomes  User_Need_Service → User_Need_Group
+- Quick Linker reversed: «belongs to» User_Need_Service → User_Need_Topic  becomes  User_Need_Topic → User_Need_Service
+- Quick Linker reversed: «belongs to» User_Need_Topic → User_Need  becomes  User_Need → User_Need_Topic
+- Quick Linker reversed: «associate» Mission_Statement → ITS_Vision  becomes  ITS_Vision → Mission_Statement
+- Quick Linker removed: «defines» ITS_Service_Added_Value → Stakeholder
+- Quick Linker removed: «defines» Role → Actor
+- Quick Linker removed: «adheres to» Agreement → Role
+- Quick Linker removed: «accepted by» Role → Agreement
+- Quick Linker removed: «delivered by» ITS_Service → ITS_Service_Added_Value
+- Quick Linker removed: «defines» ITS_Vision → Requirement
+- Quick Linker removed: «defines» ITS_Service_Added_Value → User_Need
+- Quick Linker added: «component of» High_Level_Function → High_Level_Function
+- Quick Linker added: «component of» Functional_Area → System
+- Quick Linker added: «IN» System → High_Level_Data_Flow
+- Quick Linker added: «OUT» High_Level_Data_Flow → System
+- Quick Linker added: «IN» Functional_Area → Low_Level_Data_Flow
+- Quick Linker added: «OUT» Low_Level_Data_Flow → Functional_Area
+- Quick Linker added: «adheres to» ITS_Service → Specification
+- Quick Linker added: «contains» Application → Low_Level_Function
+- Quick Linker added: «contains» Application → Datastore
+- Quick Linker added: «contains» Application → Physical_Data_Flow
+- Quick Linker added: «contains» Low_Level_Data_Flow → Information_Object
+- Quick Linker added: «use» Component → Physical_Data_Flow
+- Quick Linker added: «use» Terminator → Physical_Data_Flow
+- Quick Linker added: «triggers» ITS_Service_Process → ITS_Service_Process
+- Quick Linker added: «triggers» ITS_Business_Process → ITS_Business_Process
+- Quick Linker added: «delivers value to» ITS_Service_Added_Value → Stakeholder
+- Quick Linker added: «defines» Specification → Requirement
+- Quick Linker added: «use» Agreement → Specification
+- Quick Linker added: «defines» Specification → Agreement
+- Quick Linker added: «implements» Actor → Desired_Architecture_Goals
+- Quick Linker added: «adheres to» Terminator → Agreement
+- Quick Linker added: «owned by» Component → Role
+- Quick Linker added: «adheres to» Data_Object → Specification
+- Quick Linker added: «defines» Business_Expectation → ITS_Service
+- Quick Linker added: «owned by» Application → Role
+- Quick Linker added: «performs» Actor → Role
+- Quick Linker added: «adheres to» Role → Agreement
+- Quick Linker added: «accepted by» Agreement → Role
+- Quick Linker added: «delivers» ITS_Service → ITS_Service_Added_Value
+- Quick Linker: Application – 6 rules merged into 5
+- Quick Linker: ITS_Service – 5 rules merged into 4
+- Quick Linker: ITS_Service_Process – 5 rules merged into 4
+- Quick Linker: Low_Level_Data_Flow – 7 rules merged into 6
+- Quick Linker: Low_Level_Function – 8 rules merged into 6
+- Quick Linker: Mission_Statement – 2 rules merged into 1
+- Quick Linker: Role – 4 rules merged into 3
+- Quick Linker: Terminator – 7 rules merged into 6
+- Quick Linker: User_Need – 4 rules merged into 3
+- Quick Linker: TDF_LowLevelFunction – 4 rules merged into 3
+- Quick Linker: UML links hidden (_HideUmlLinks) for Functional_Area, High_Level_Function, Low_Level_Function, High_Level_Data_Flow, Low_Level_Data_Flow, Terminator, Datastore, System, User_Need, User_Need_Topic, User_Need_Service, User_Need_Group
+- diagram type FRAME_Diagram: toolbox "FRAME_Toolbox" → "FRAME::FRAME_Toolbox" (1), so the FRAME toolbox opens with the diagram
+- toolbox label FRAME_Component: "Component" → "Sub-system" (1)
+- toolbox label FRAME_Application: "Application" → "Module" (1)
+- toolbox: plain UML Association ("associate" without stereotype) removed (1) - issue #92
+- model images added from V1.0: 7 (start-page images)

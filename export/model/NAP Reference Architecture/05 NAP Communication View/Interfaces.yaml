@@ -14,6 +14,7 @@ elements:
     note: |
       This interface is used by the Content Consumer to retrieve information from the NAP.
     links:
+      - "Association «adheres to» → Content Consumer data retrieval specifications"  # {58F9EDF2-97EB-4a35-A997-70DED749223E} → {8C9538D0-640C-48ba-A4FD-615ACD5EEB23}
       - "Association «adheres to» → Specification for map data"  # {834D27ED-49F8-4789-A15C-A171FFE4D330} → {6D9DECD8-FBCA-4d32-A313-253F7899F239}
       - "Association «adheres to» → Specification tbd"  # {A9085784-371F-4ff3-B65F-CE13F1BD21FA} → {8727F207-9CDB-4ed3-B6B7-73AC02BF3286}
       - "Association «adheres to» → specification for Content Consumer data retrieval interface"  # {D9DA212D-4BBF-417f-B339-391BB57E0C3E} → {69695A87-EBC5-47cf-BE97-A9B8E9483960}
@@ -135,6 +136,7 @@ elements:
     order: 0
     note: ""
     links:
+      - "Association «adheres to» → Content Consumer data retrieval specifications"  # {26AB31DC-75FD-49d2-995C-8554AC4FEC75} → {8C9538D0-640C-48ba-A4FD-615ACD5EEB23}
       - "Association «adheres to» → Specification for map data"  # {E8B65D5C-2ACE-465e-A39A-CD295DA72EFF} → {6D9DECD8-FBCA-4d32-A313-253F7899F239}
       - "Association «adheres to» → Specification tbd"  # {37BF043E-6E2B-4196-BF35-4096B8C2122E} → {8727F207-9CDB-4ed3-B6B7-73AC02BF3286}
       - "Association «adheres to» → specification for Content Consumer data retrieval interface"  # {6C016AA8-155C-40c2-9E52-01ACEB6B7C14} → {69695A87-EBC5-47cf-BE97-A9B8E9483960}

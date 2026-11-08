@@ -173,9 +173,6 @@ elements:
     order: 0
     note: |
       Indicates the possible movements for a specific time and traffic lane (entry or exit, ingress or egress)
-    links:
-      - "Realisation → Speeds"  # {38480AEF-B573-4f9e-A1BC-C4BD84898B1F} → {6DC68672-304C-44c0-8CD1-1B978068E096}
-      - "Realisation → Timing"  # {2400A259-979C-4af3-B020-90968F95ECBE} → {040EDC7D-B622-47b4-A473-EE10AAC6091A}
   - name: "SPAT Intersection Contents"
     guid: "{98CFAFD3-D029-4191-B584-A258AC09FB12}"
     type: "Object"
@@ -186,8 +183,6 @@ elements:
     order: 0
     note: |
       Content elements as defined in SAE J2735_201603, Dedicated Short Range Communications (DSRC) Message Set Dictionary, March 2016
-    links:
-      - "Realisation → Signal States"  # {43FFA340-2D88-4f23-A89D-79D90BC57C4C} → {ECC22D92-268A-4818-848E-B7710306840F}
   - name: "Signal States"
     guid: "{ECC22D92-268A-4818-848E-B7710306840F}"
     type: "Object"
@@ -198,9 +193,6 @@ elements:
     order: 0
     note: |
       Contains the signal states of the interesections signal groups.
-    links:
-      - "Realisation → Manouver Assist"  # {C542F469-7137-4142-A8B3-60F90F64A0C1} → {E703C97A-1CE0-42a8-90AB-B16719F85F44}
-      - "Realisation → Movement Event"  # {63AC4D15-1874-4b02-95CC-C60A78B1BAA0} → {7BF06A19-FC7D-4c76-B779-90FA756F1751}
   - name: "Situation Container - Optional"
     guid: "{911320AB-82C4-4d3e-8058-79C018A11AA1}"
     type: "Object"

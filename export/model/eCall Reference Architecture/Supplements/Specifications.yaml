@@ -12,6 +12,8 @@ elements:
     version: "1.0"
     order: 0
     note: ""
+    links:
+      - "Association «defines» → Answering eCall appropiately"  # {F19244CD-92D8-46e9-887A-F0A43AC1BBD3} → {7D545615-3677-45b7-87AF-8AFA11CCC94E}
   - name: "Directive 2002/58/EC"
     guid: "{59D553D1-1868-410d-B176-30159D4ADE3A}"
     type: "DeploymentSpecification"
@@ -20,6 +22,8 @@ elements:
     version: "1.0"
     order: 0
     note: ""
+    links:
+      - "Association «defines» → Processing personal Data and protect individuals"  # {8B749B7B-826A-482d-9B5A-DDFA0D8BBE7A} → {53B4AA3B-D7CF-486b-B91D-6638D6A5CCBD}
   - name: "Directive 95/46/EC"
     guid: "{154BD9A2-57AE-4747-886B-D3FBA0FDCC43}"
     type: "DeploymentSpecification"
@@ -28,6 +32,8 @@ elements:
     version: "1.0"
     order: 0
     note: ""
+    links:
+      - "Association «defines» → Processing personal Data and protect individuals"  # {A086EC76-026A-41c3-A088-6D9EC3FC1AED} → {53B4AA3B-D7CF-486b-B91D-6638D6A5CCBD}
   - name: "EN 16062"
     guid: "{A674B408-41A8-4beb-9C17-47A5A5AF37FC}"
     type: "DeploymentSpecification"
@@ -37,6 +43,8 @@ elements:
     order: 0
     note: |
       Call High Level Application Requirements (HLAP)
+    links:
+      - "Association «defines» → eCall PSAP is equipped"  # {B30EDC9F-3247-48e6-BB2E-23F377A0F3F1} → {9401FA04-5A9B-4462-8A81-BF8796A14B22}
   - name: "EN 16072"
     guid: "{1B95C17E-F8C0-45bc-81B0-BF70012D03CB}"
     type: "DeploymentSpecification"
@@ -46,6 +54,8 @@ elements:
     order: 0
     note: |
       eSafety — PanEuropean eCall-Operating requirements
+    links:
+      - "Association «defines» → eCall PSAP is equipped"  # {C64CEEA1-AF8A-491a-8BDB-DAF0C5685930} → {9401FA04-5A9B-4462-8A81-BF8796A14B22}
   - name: "FRAME_Specification1"
     guid: "{A7637BF3-80BC-4483-99DC-B1B3DF59C196}"
     type: "DeploymentSpecification"
@@ -71,6 +81,8 @@ elements:
     version: "1.0"
     order: 0
     note: ""
+    links:
+      - "Association «defines» → Vehicles equipped with eCall in-vehicle equipment shall not be traceable in their normal operational status"  # {D27997FD-7C03-4c5b-8C08-D6D00234A129} → {004FEFE0-5DB4-490c-9236-374D2F3FF51C}
   - name: "minimum set of data"
     guid: "{8188ACBF-5355-4bad-A1BC-D70050F97EDE}"
     type: "DeploymentSpecification"

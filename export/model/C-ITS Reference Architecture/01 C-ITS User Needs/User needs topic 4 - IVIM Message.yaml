@@ -40,21 +40,7 @@ elements:
       5 - SPAT/MAP related
       6 -for future messages to be defined
     links:
-      - "Abstraction → 11.1.4.1"  # {EBA4B26F-1755-496e-B102-29902F371959} → {D639FA90-0A07-40d5-A7DA-30C610216C5D}
-      - "Abstraction → 11.1.4.2"  # {889C7284-E9DD-43bb-970E-01C06652D998} → {B4ABB4F8-33ED-4af6-B1C8-CB6783BDB2AB}
-      - "Abstraction → 11.1.4.3"  # {D302B7BE-3910-4eb6-B55B-226CA38CB140} → {AAF5BA3D-A8E1-474e-9006-16F250AB80C9}
-      - "Abstraction → 11.1.4.4"  # {5D57D506-9CEC-4244-8CA0-607634C370EB} → {1A3CCA9B-0C58-41ed-A886-2BC1BC2A5913}
-      - "Abstraction → 11.1.4.5"  # {1CFC744E-E5BC-4359-B155-114D23792597} → {D7847619-42F2-4241-BF27-EEF5DFBE6228}
-      - "Abstraction → 11.1.4.6"  # {58B14CFF-E55E-43f5-999C-F43B2994B1DD} → {9C0FE0FC-ADB7-4a16-9C8F-9C1428FDFD99}
-      - "Abstraction → 11.1.4.7"  # {AEA377CB-6C73-4c1d-9693-FECEB9926EAC} → {3299BF22-4349-4b9d-979C-BD63AB3F87CF}
-      - "Abstraction → 11.1.4.8"  # {49440D8B-F4CC-4ea5-B641-4D03C1718802} → {9AF8D858-6D71-406c-A9AD-F349A47555B1}
-      - "Abstraction → 11.1.4.9"  # {2187323E-800C-46a1-9C09-B8F4021C678D} → {107B26AD-B83E-4aee-B456-C7D5A34D0D76}
-      - "Abstraction → 11.2.4.1"  # {5F8E5EBB-E3A8-4e26-BC6E-0D4FA678ACC7} → {87917A51-EBC7-4212-A114-A3B36A741A8A}
-      - "Abstraction → 11.2.4.2"  # {D95BBE08-EBCF-4b25-8738-08BE4EBBC3D0} → {2809968A-BA4A-4059-8158-C2EA685DFD61}
-      - "Abstraction → 11.2.4.3"  # {930CD581-8E22-4052-AB33-0350F37BADA6} → {6F651EBC-516E-49eb-908E-4030281B1304}
-      - "Abstraction → 11.2.4.4"  # {4500C31B-0A0D-4f80-9CC5-C4A0A1A558B4} → {97E06842-433B-4683-BF01-87F831DF2713}
-      - "Abstraction → 11.2.4.5"  # {BF7B30CE-45FF-4a7a-B672-3536926334EC} → {CD31F139-3993-4c61-9710-4B1316AF8A9F}
-      - "Abstraction → 11.3.4.1"  # {453E417A-5BCE-4c2b-B92A-020C4B7EF145} → {5DC53393-B59B-4c4e-B501-DE79A80A3C20}
+      - "Association «belongs to» → FRAME_User_Need_Service 3 Driving Comfort"  # {E4CB896F-B0AA-4c05-A6C2-2A039B8DB580} → {10E16CB6-028A-4e5c-9528-B7DFC84CB6BE}
   - name: "11.1.4.1"
     guid: "{D639FA90-0A07-40d5-A7DA-30C610216C5D}"
     type: "Requirement"
@@ -66,8 +52,9 @@ elements:
     note: |
       For IVI based use cases the system shall be able to inform drivers of the content of all static and dynamic road signs that are part of the Vienna Convention.
     links:
-      - "Usage → F5.16.1 Manage Communication from Vehicle to Driver"  # {879F9848-9E4B-49d4-BF84-6FC084081E98} → {DE09B5F2-6135-412e-BF14-56D1B22FFA77}
-      - "Usage → F5.16.2 Output Commands and Dynamic Warnings"  # {AB5DA7F1-1CFB-46b7-A786-5A1B0BE9CC91} → {FB7FD2EE-ABFD-4a0c-8EF8-A16DDAA1E280}
+      - "Association «belongs to» → FRAME_User_Need_Topic4 IVIM Messages"  # {EBA4B26F-1755-496e-B102-29902F371959} → {857CA053-1A9D-4a23-9E1B-0AFA0A439BC4}
+      - "Association «served by» → F5.16.1 Manage Communication from Vehicle to Driver"  # {879F9848-9E4B-49d4-BF84-6FC084081E98} → {DE09B5F2-6135-412e-BF14-56D1B22FFA77}
+      - "Association «served by» → F5.16.2 Output Commands and Dynamic Warnings"  # {AB5DA7F1-1CFB-46b7-A786-5A1B0BE9CC91} → {FB7FD2EE-ABFD-4a0c-8EF8-A16DDAA1E280}
   - name: "11.1.4.2"
     guid: "{B4ABB4F8-33ED-4af6-B1C8-CB6783BDB2AB}"
     type: "Requirement"
@@ -77,6 +64,8 @@ elements:
     order: 3
     note: |
       For IVI based use cases the system shall be able to inform drivers of all road signs that are represented in the ISO 14823 graphic data dictionary.
+    links:
+      - "Association «belongs to» → FRAME_User_Need_Topic4 IVIM Messages"  # {889C7284-E9DD-43bb-970E-01C06652D998} → {857CA053-1A9D-4a23-9E1B-0AFA0A439BC4}
   - name: "11.1.4.3"
     guid: "{AAF5BA3D-A8E1-474e-9006-16F250AB80C9}"
     type: "Requirement"
@@ -86,6 +75,8 @@ elements:
     order: 4
     note: |
       For IVI based use cases the system shall be able to inform drivers of the contents of virtual VMS signs.
+    links:
+      - "Association «belongs to» → FRAME_User_Need_Topic4 IVIM Messages"  # {D302B7BE-3910-4eb6-B55B-226CA38CB140} → {857CA053-1A9D-4a23-9E1B-0AFA0A439BC4}
   - name: "11.1.4.4"
     guid: "{1A3CCA9B-0C58-41ed-A886-2BC1BC2A5913}"
     type: "Requirement"
@@ -96,6 +87,8 @@ elements:
     order: 5
     note: |
       The system shall use the agreed IVI messages and be able to receive updates.
+    links:
+      - "Association «belongs to» → FRAME_User_Need_Topic4 IVIM Messages"  # {5D57D506-9CEC-4244-8CA0-607634C370EB} → {857CA053-1A9D-4a23-9E1B-0AFA0A439BC4}
   - name: "11.1.4.5"
     guid: "{D7847619-42F2-4241-BF27-EEF5DFBE6228}"
     type: "Requirement"
@@ -106,6 +99,8 @@ elements:
     order: 6
     note: |
       The system shall be able to encode one main VMS and up to three sub-signs in oneGeneralIviContainer.
+    links:
+      - "Association «belongs to» → FRAME_User_Need_Topic4 IVIM Messages"  # {1CFC744E-E5BC-4359-B155-114D23792597} → {857CA053-1A9D-4a23-9E1B-0AFA0A439BC4}
   - name: "11.1.4.6"
     guid: "{9C0FE0FC-ADB7-4a16-9C8F-9C1428FDFD99}"
     type: "Requirement"
@@ -116,6 +111,8 @@ elements:
     order: 7
     note: |
       The system shall be able to present additional free text when relevant and extra Text is ordered, hereby the first line corresponds to the first RSCode.
+    links:
+      - "Association «belongs to» → FRAME_User_Need_Topic4 IVIM Messages"  # {58B14CFF-E55E-43f5-999C-F43B2994B1DD} → {857CA053-1A9D-4a23-9E1B-0AFA0A439BC4}
   - name: "11.1.4.7"
     guid: "{3299BF22-4349-4b9d-979C-BD63AB3F87CF}"
     type: "Requirement"
@@ -126,6 +123,8 @@ elements:
     order: 8
     note: |
       The system shall be able to describe the driving lane configuration when the message is not valid for all lanes andmay use the RoadConfigurationContainer.
+    links:
+      - "Association «belongs to» → FRAME_User_Need_Topic4 IVIM Messages"  # {AEA377CB-6C73-4c1d-9693-FECEB9926EAC} → {857CA053-1A9D-4a23-9E1B-0AFA0A439BC4}
   - name: "11.1.4.8"
     guid: "{9AF8D858-6D71-406c-A9AD-F349A47555B1}"
     type: "Requirement"
@@ -136,6 +135,8 @@ elements:
     order: 9
     note: |
       This use case is based on the “General IVI Container” including lane status and all types of IOS/TS 14823 signs, as well as the “Road configuration container”. The IVIM permissions (SSP) have to be encoded as defined in ETSI TS 103 301 [11].
+    links:
+      - "Association «belongs to» → FRAME_User_Need_Topic4 IVIM Messages"  # {49440D8B-F4CC-4ea5-B641-4D03C1718802} → {857CA053-1A9D-4a23-9E1B-0AFA0A439BC4}
   - name: "11.1.4.9"
     guid: "{107B26AD-B83E-4aee-B456-C7D5A34D0D76}"
     type: "Requirement"
@@ -147,6 +148,8 @@ elements:
     note: |
       For IVI based use cases the message shall define the Geographic area (Quadtree) as follows:
       The event is characterized by its referencePosition, detectionZone(s), relevanceZone(s) and DestinationArea. These fields draw a geographic area and C-ITS Actors shall publish in a set of tiles corresponding to the maximum set of tiles containing all the geographic indication mentioned.
+    links:
+      - "Association «belongs to» → FRAME_User_Need_Topic4 IVIM Messages"  # {2187323E-800C-46a1-9C09-B8F4021C678D} → {857CA053-1A9D-4a23-9E1B-0AFA0A439BC4}
   - name: "11.2.4.1"
     guid: "{87917A51-EBC7-4212-A114-A3B36A741A8A}"
     type: "Requirement"
@@ -157,10 +160,9 @@ elements:
     note: |
       For IVI based use cases the system shall enable the road operator to optimize the management of warnings, information and regulations knowing the real-time traffic characteristics.
     links:
-      - "Usage → F3.1 Provide Traffic Control"  # {B2F167C6-426B-49f8-B65F-CD3829D85C7F} → {226ED187-DB7A-409f-B509-BA8DBFFB6DB6}
-      - "Usage → F5.16.1 Manage Communication from Vehicle to Driver"  # {7F8951E7-ECF6-4530-A8B3-8C667F88CF6E} → {DE09B5F2-6135-412e-BF14-56D1B22FFA77}
-      - "Usage → F5.16.2 Output Commands and Dynamic Warnings"  # {02FEF9DC-2A83-4fa2-8174-2402E5BD0D82} → {FB7FD2EE-ABFD-4a0c-8EF8-A16DDAA1E280}
-      - "Usage → F9.3 Manage Vehicle Access to Sensitive Areas"  # {2DD42037-38F2-409a-B5C6-8FBC38D3A9E9} → {BECAF613-EAD1-4f7d-BBA6-63FBDADA831A}
+      - "Association «belongs to» → FRAME_User_Need_Topic4 IVIM Messages"  # {5F8E5EBB-E3A8-4e26-BC6E-0D4FA678ACC7} → {857CA053-1A9D-4a23-9E1B-0AFA0A439BC4}
+      - "Association «served by» → F5.16.1 Manage Communication from Vehicle to Driver"  # {7F8951E7-ECF6-4530-A8B3-8C667F88CF6E} → {DE09B5F2-6135-412e-BF14-56D1B22FFA77}
+      - "Association «served by» → F5.16.2 Output Commands and Dynamic Warnings"  # {02FEF9DC-2A83-4fa2-8174-2402E5BD0D82} → {FB7FD2EE-ABFD-4a0c-8EF8-A16DDAA1E280}
   - name: "11.2.4.2"
     guid: "{2809968A-BA4A-4059-8158-C2EA685DFD61}"
     type: "Requirement"
@@ -170,6 +172,8 @@ elements:
     order: 12
     note: |
       For IVI based use cases the system shall enable the Traffic Operations Centre (TOC) to send applicable traffic signs to all relevant vehicles.
+    links:
+      - "Association «belongs to» → FRAME_User_Need_Topic4 IVIM Messages"  # {D95BBE08-EBCF-4b25-8738-08BE4EBBC3D0} → {857CA053-1A9D-4a23-9E1B-0AFA0A439BC4}
   - name: "11.2.4.3"
     guid: "{6F651EBC-516E-49eb-908E-4030281B1304}"
     type: "Requirement"
@@ -179,6 +183,8 @@ elements:
     order: 13
     note: |
       For IVI based use cases the system shall enable the Traffic Operations Centre (TOC) to send specific applicable traffic signs to all relevant specific classes of vehicle
+    links:
+      - "Association «belongs to» → FRAME_User_Need_Topic4 IVIM Messages"  # {930CD581-8E22-4052-AB33-0350F37BADA6} → {857CA053-1A9D-4a23-9E1B-0AFA0A439BC4}
   - name: "11.2.4.4"
     guid: "{97E06842-433B-4683-BF01-87F831DF2713}"
     type: "Requirement"
@@ -189,6 +195,8 @@ elements:
     order: 14
     note: |
       For IVI based use cases the system shall enable the Traffic Operations Centre (TOC) to send applicable traffic signs to all relevant vehicles in a specific lane(s).
+    links:
+      - "Association «belongs to» → FRAME_User_Need_Topic4 IVIM Messages"  # {4500C31B-0A0D-4f80-9CC5-C4A0A1A558B4} → {857CA053-1A9D-4a23-9E1B-0AFA0A439BC4}
   - name: "11.2.4.5"
     guid: "{CD31F139-3993-4c61-9710-4B1316AF8A9F}"
     type: "Requirement"
@@ -199,6 +207,8 @@ elements:
     order: 15
     note: |
       The system shall enable the operator to specify the zone(s) in which a message will be displayed.
+    links:
+      - "Association «belongs to» → FRAME_User_Need_Topic4 IVIM Messages"  # {BF7B30CE-45FF-4a7a-B672-3536926334EC} → {857CA053-1A9D-4a23-9E1B-0AFA0A439BC4}
   - name: "11.3.4.1"
     guid: "{5DC53393-B59B-4c4e-B501-DE79A80A3C20}"
     type: "Requirement"
@@ -209,3 +219,5 @@ elements:
     order: 16
     note: |
       For IVI based use cases the system shall limit stress for the road user to comprehend the content of the information and react accordingly, compared to the short-term awareness provided by the physical VMS.
+    links:
+      - "Association «belongs to» → FRAME_User_Need_Topic4 IVIM Messages"  # {453E417A-5BCE-4c2b-B92A-020C4B7EF145} → {857CA053-1A9D-4a23-9E1B-0AFA0A439BC4}

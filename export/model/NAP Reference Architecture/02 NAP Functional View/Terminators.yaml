@@ -19,7 +19,7 @@ elements:
       Mnemonic: nap.dps
     links:
       - "Association «IN» → fnap.dps-data_&_authorisation_credentials"  # {D3794913-14F7-42bd-A380-0435A43689FD} → {8EC048EF-B06E-497b-A29E-EFB18412560E}
-      - "Usage → PDF Data from Data Provision System"  # {B1A95FFA-0D99-4a31-B303-AECD7D9D2CF0} → {1DE55835-B3EB-461f-BAF4-61B9F635EDBD}
+      - "Association «use» → PDF Data from Data Provision System"  # {B1A95FFA-0D99-4a31-B303-AECD7D9D2CF0} → {1DE55835-B3EB-461f-BAF4-61B9F635EDBD}
   - name: "Data Requesting System"
     guid: "{6CBF0F02-2909-4086-A608-C5EA1E42A9F6}"
     type: "Actor"
@@ -36,7 +36,7 @@ elements:
       Mnemonic: nap.drs
     links:
       - "Association «IN» → fnap.drs-data_request"  # {9C30B785-03D6-450c-8050-85B0D468ECBE} → {A57EDCA4-5B76-4808-9C68-5DDF06E70C93}
-      - "Usage → PDF Data to Data Requesting System"  # {BB3B5C7B-484F-410e-9F7B-1E621FEFBD8C} → {F785EA75-B3BD-4be6-9374-06DC89A98B73}
+      - "Association «use» → PDF Data to Data Requesting System"  # {BB3B5C7B-484F-410e-9F7B-1E621FEFBD8C} → {F785EA75-B3BD-4be6-9374-06DC89A98B73}
   - name: "Metadata Requesting System"
     guid: "{DEB4AC48-7332-4f57-99D5-79169FCA6F1F}"
     type: "Actor"
@@ -52,7 +52,7 @@ elements:
       Mnemonic: nap.mdrs
     links:
       - "Association «IN» → fnap.mdrs-metadata_request"  # {0DE4E9BC-F952-4f2e-BF6D-9800A6BD46B9} → {1F8479D1-6CEC-42fd-8CD2-79F9AD3334A4}
-      - "Usage → PDF Metadata to Requesting System"  # {083FB2AB-4B93-40e3-9A01-61F9FCDC0A9B} → {5681386B-AB60-4a6c-B51B-4BD4F745FDD5}
+      - "Association «use» → PDF Metadata to Requesting System"  # {083FB2AB-4B93-40e3-9A01-61F9FCDC0A9B} → {5681386B-AB60-4a6c-B51B-4BD4F745FDD5}
   - name: "NAP Content Consumer"
     guid: "{6713B765-606E-4208-8FE8-99B0D50851A5}"
     type: "Actor"
@@ -69,15 +69,16 @@ elements:
       Tasks: Receive content
       Mnemonic: nap.cc
     links:
-      - "Aggregation «component of» → NAP Actors"  # {C315C920-21DC-4a44-99FA-FB029F697E0F} → {E89EDD6C-D939-4b97-AB60-AAD3FA5FE237}
+      - "Abstraction «is Type of» → NAP Actors"  # {C315C920-21DC-4a44-99FA-FB029F697E0F} → {E89EDD6C-D939-4b97-AB60-AAD3FA5FE237}
+      - "Association «IN» → fnap.cc-data_request"  # {A9C29A51-6961-4d68-9FEE-FF1FDA197CD4} → {AFB3FDE3-5682-463a-A966-CEF77741C6A9}
       - "Association «IN» → fnap.cc-metadata_search_request"  # {BE7AD80D-B732-4d10-B4CC-0E4C6725F9FB} → {CE5CAFBE-137B-4743-AB12-5EA3827B901A}
       - "Association «IN» → fnap.cc-registration_request"  # {92DA8F6B-1001-48b9-837A-33A0CAAECA83} → {7777AD14-8D53-466c-9949-22CFAB635676}
       - "Association «IN» → fnap.cc-support_request"  # {572D1BA3-8128-476c-AE45-D678F1DA2A1B} → {1309E545-2913-41f6-920A-68A496630817}
-      - "Association «OUT» → fnap.cc-data_request"  # {A9C29A51-6961-4d68-9FEE-FF1FDA197CD4} → {AFB3FDE3-5682-463a-A966-CEF77741C6A9}
-      - "Dependency → Privacy agreement (CC to NO) and general terms and conditions"  # {EAF4EAC0-257D-4aa5-BE60-B3D801141DA6} → {AF555DF2-4535-42f6-993A-5BE72947BD12}
-      - "Usage → PDF Data to Content Consumer"  # {31AF9124-F69F-4487-9088-36D912DF380D} → {B82B3A07-B464-4905-B517-04B74942E5AA}
-      - "Usage → PDF Metadata to Content Consumer"  # {F96A7DCC-CD24-4a8d-BB10-E2BA7E92C2F4} → {C25F8BCA-DCD4-4894-956E-40D0218D3ACA}
-      - "Usage → PDF Support of Content Consumer"  # {892D855E-FA9A-490c-9AB5-F1F939885A6C} → {0B43348A-F713-49fe-A684-A88D53A58D67}
+      - "Association «adheres to» → Privacy agreement (CC to NO) and general terms and conditions"  # {EAF4EAC0-257D-4aa5-BE60-B3D801141DA6} → {AF555DF2-4535-42f6-993A-5BE72947BD12}
+      - "Association «use» → Content Consumer Authorization and Registration"  # {222EA4B4-80EB-4149-A45C-CADBCABF1C65} → {96C4145B-D427-423c-8272-54CE77DBDE7F}
+      - "Association «use» → PDF Data to Content Consumer"  # {31AF9124-F69F-4487-9088-36D912DF380D} → {B82B3A07-B464-4905-B517-04B74942E5AA}
+      - "Association «use» → PDF Metadata to Content Consumer"  # {F96A7DCC-CD24-4a8d-BB10-E2BA7E92C2F4} → {C25F8BCA-DCD4-4894-956E-40D0218D3ACA}
+      - "Association «use» → PDF Support of Content Consumer"  # {892D855E-FA9A-490c-9AB5-F1F939885A6C} → {0B43348A-F713-49fe-A684-A88D53A58D67}
   - name: "NAP Content Provider"
     guid: "{7F7723C2-1334-495d-8C3F-1CA486951DD2}"
     type: "Actor"
@@ -96,16 +97,16 @@ elements:
       Tasks: Provide content relevant to the ITS domain and according to contracts with the NAP and content consumers
       Mnemonic: nap.cp
     links:
-      - "Aggregation «component of» → NAP Actors"  # {76C6E1CB-C2D4-497d-9F52-2528B02B06E6} → {E89EDD6C-D939-4b97-AB60-AAD3FA5FE237}
+      - "Abstraction «is Type of» → NAP Actors"  # {76C6E1CB-C2D4-497d-9F52-2528B02B06E6} → {E89EDD6C-D939-4b97-AB60-AAD3FA5FE237}
       - "Association «IN» → fnap.cp-data_&_authorisation_credentials"  # {6EA16D14-D878-4ead-88A4-8F2BA81B96C4} → {60297FF0-CD09-4e8d-8221-0B0FF35E3239}
       - "Association «IN» → fnap.cp-metadata_&_authorisation_credentials"  # {CF2EA95A-F1FD-4971-81BD-1D347BDDE645} → {8D75B934-0C29-40d6-9C80-4963B533B29D}
       - "Association «IN» → fnap.cp-registration_request"  # {DCCA7AC8-F140-4289-8791-97625EDD8792} → {2165053D-3E67-4324-90F7-172FAA37E259}
       - "Association «IN» → fnap.cp-support_request"  # {83721649-22C0-4582-87EE-49480D33DE1F} → {1ED4DEC1-3019-4933-A419-5FE60CC29FF4}
-      - "Dependency → Metadata provision contract (NO to CP)"  # {E9650C33-6974-4c67-90B2-D8B8E009579B} → {BEED600A-C5D2-4829-9BF5-6E6649CB3D14}
-      - "Usage → PDF Data from Content Provider"  # {DBBF9565-99B8-4285-BE82-559428C0B562} → {1F6F7D4C-BAFE-43db-AF7B-C8043CC6E31F}
-      - "Usage → PDF Metadata from Content Provider"  # {DD83F61E-D062-4d94-B902-D5F8B054107C} → {48F2D92D-8E82-4032-B932-CD8D2CB855B0}
-      - "Usage → PDF Support of Content Provider"  # {4A754CEB-E5A2-4d50-B203-94FA91733F34} → {BA985F0C-2C6F-4329-BABC-91890CC23954}
-      - "Usage → PDF User Management of Content Provider"  # {2076F5E8-4744-4848-AB93-7DA41C848451} → {C5A68539-7FA7-4245-9B3A-F55B6668B579}
+      - "Association «adheres to» → Metadata provision contract (NO to CP)"  # {E9650C33-6974-4c67-90B2-D8B8E009579B} → {BEED600A-C5D2-4829-9BF5-6E6649CB3D14}
+      - "Association «use» → PDF Data from Content Provider"  # {DBBF9565-99B8-4285-BE82-559428C0B562} → {1F6F7D4C-BAFE-43db-AF7B-C8043CC6E31F}
+      - "Association «use» → PDF Metadata from Content Provider"  # {DD83F61E-D062-4d94-B902-D5F8B054107C} → {48F2D92D-8E82-4032-B932-CD8D2CB855B0}
+      - "Association «use» → PDF Support of Content Provider"  # {4A754CEB-E5A2-4d50-B203-94FA91733F34} → {BA985F0C-2C6F-4329-BABC-91890CC23954}
+      - "Association «use» → PDF User Management of Content Provider"  # {2076F5E8-4744-4848-AB93-7DA41C848451} → {C5A68539-7FA7-4245-9B3A-F55B6668B579}
   - name: "NAP Actors"
     guid: "{E89EDD6C-D939-4b97-AB60-AAD3FA5FE237}"
     type: "Class"
@@ -130,5 +131,3 @@ elements:
       - "Association «IN» → From NAP Actors"  # {E60DFE5A-A499-489f-A5CE-0420B61FF67D} → {59087751-DC42-4fcc-AA52-7330F931BC0E}
       - "Association «IN» → fnap-mt_inputs"  # {C22482AC-BBF7-4fea-9339-9CD1626D398C} → {572F1D4D-9EB2-41ef-9944-23A22C7DA25B}
       - "Association «IN» → fnap-mt_inputs"  # {F706807F-CB0D-4f07-93F6-3CF2D3E1F6FA} → {90829C59-D7DB-4ff9-8AB7-F4BBCEA7422B}
-      - "Association «OUT» → tnap-mt_outputs"  # {A57E4B2D-F47A-443b-9C5D-4C7448EF91EE} → {D2D62478-1875-414b-A64F-9D0535140FF4}
-      - "Association «OUT» → tnap-mt_outputs"  # {C2F4596C-E792-4e22-B285-1AFACCBB514D} → {B767384A-BAB2-4802-A07C-DA9BA8B1132A}

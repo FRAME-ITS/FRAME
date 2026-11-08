@@ -47,7 +47,7 @@ Only while the git maintainer has the file **checked out** in SharePoint:
 |---|---|
 | `tools/export.py model/FRAME.qea export` | model → YAML, one file per package, plus diagrams, glossary and documentation templates |
 | `tools/diff.py OLD.qea NEW.qea report.md` / `tools/diff.py --git v5.2.0 HEAD report.md` | change report by view: new/deleted objects, renames, description changes, connections, diagrams |
-| `tools/check.py model/FRAME.qea reports/check.md [--strict]` | convention check (IN/OUT direction, «Componentof» part → whole, «Servedby», unused data flows, stereotype spelling, Context Diagram, …); each rule is linked to the related GitHub issue |
+| `tools/check.py model/FRAME.qea reports/check.md [--strict]` | convention check (IN/OUT direction, «component of» part → whole, «served by», unused data flows, stereotype spelling, Context Diagram, …); each rule is linked to the related GitHub issue |
 | `tools/sync_sharepoint.py` | SharePoint ↔ git synchronisation with conflict protection |
 | `tools/hooks/` | pre-commit (re-export) and Git LFS hooks |
 | `tools/ci/model-diff.yml` | GitHub Actions workflow: change report and check as a comment on every pull request that changes the model. Copy it to `.github/workflows/` to activate it. |

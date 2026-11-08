@@ -23,8 +23,7 @@ elements:
       
       for details please see at: https://www.c-roads.eu/platform/documents.html
     links:
-      - "Association «accepted by» → C-ITS Security Agreement"  # {7FD41A51-1FD8-4353-A2CF-2F8EBF3B6165} → {96C04E30-1DBA-4a29-AABA-BC4C175AE12F}
-      - "Association «defines» → Road Operator/ City Public authorities and C-ITS station operator"  # {4A6D80C5-BF5D-467a-B215-0E127E911C98} → {38C7B456-75DD-4962-BE8E-344206811EB6}
+      - "Association «adheres to» → C-ITS Security Agreement"  # {7FD41A51-1FD8-4353-A2CF-2F8EBF3B6165} → {96C04E30-1DBA-4a29-AABA-BC4C175AE12F}
   - name: "EU CCMS Provider"
     guid: "{141D71A7-ABA6-4d67-80D8-8BD1B412CBA9}"
     type: "Object"
@@ -47,8 +46,6 @@ elements:
       EA - Enrolment Authority and
       AA  - Authorisation Authority
       and the links to the documents at: https://cpoc.jrc.ec.europa.eu/ECTL.html
-    links:
-      - "Dependency → Trust List Manager"  # {04C453C7-CFE6-48d7-B9F4-925FAC875B78} → {B983EA30-7513-47bd-88FA-2F7CE5575F4A}
   - name: "Vehicle Manufacturer and C-ITS station operator"
     guid: "{0F3BBA70-5E3D-4c2a-B68F-961BDC0B1885}"
     type: "Object"
@@ -70,8 +67,7 @@ elements:
       
       Addtional roles for OEM´s can be possible
     links:
-      - "Association «accepted by» → C-ITS Security Agreement"  # {81AA6C09-E478-41ab-8D58-5271746C4A48} → {96C04E30-1DBA-4a29-AABA-BC4C175AE12F}
-      - "Association «defines» → OEM and mobile C-ITS stations operator"  # {F17EF16B-4823-46e5-8482-016E9FA00C84} → {0B92BE20-A211-4709-8222-8B3CAEAF3DFC}
+      - "Association «adheres to» → C-ITS Security Agreement"  # {81AA6C09-E478-41ab-8D58-5271746C4A48} → {96C04E30-1DBA-4a29-AABA-BC4C175AE12F}
   - name: "Driver"
     guid: "{D96513DF-8F0C-41e0-A1AE-3B65A11CC4AE}"
     type: "Object"
@@ -87,8 +83,7 @@ elements:
     note: |
       Mobile traveller receiving and using C-ITS day one services.
     links:
-      - "Association «accepted by» → Vehicle purchasing/ leasing contract Agreement"  # {6C9DD049-6701-452f-93A8-D95243BD4F7E} → {B38F9670-4EAD-4d22-934B-358CE571A894}
-      - "Association «defines» → EU Citizen"  # {3ACABEFA-DBAB-4b87-84BC-2EC0BB72BE63} → {5584CEC2-2AC4-4b1e-AC7A-65E352398E8C}
+      - "Association «adheres to» → Vehicle purchasing/ leasing contract Agreement"  # {6C9DD049-6701-452f-93A8-D95243BD4F7E} → {B38F9670-4EAD-4d22-934B-358CE571A894}
   - name: "Mobile Traveller"
     guid: "{89E1E006-9E0D-46f8-A64F-1D158457BCB0}"
     type: "Object"
@@ -103,8 +98,6 @@ elements:
       "Role View": ""
     note: |
       C-ITS mobile station user, e.g bicycle driver
-    links:
-      - "Association «defines» → EU Citizen"  # {9140C313-F243-41fc-AC9B-827E6DD3C95D} → {5584CEC2-2AC4-4b1e-AC7A-65E352398E8C}
   - name: "Mobile Network and /or C-ITS Station Operator"
     guid: "{33AD0518-4548-44f9-A965-2C67CAE83B41}"
     type: "Object"
@@ -120,10 +113,9 @@ elements:
     note: |
       Service provider for C-ITS day one traffic information services to mobile users.
     links:
-      - "Association «accepted by» → C-ITS Long Range Communication Service Agreement"  # {4A554C28-F0E6-44c3-9D93-A300F84CFAE0} → {3B85872B-52EB-4509-A9E7-CE7F265327C2}
-      - "Association «accepted by» → C-ITS Security Agreement"  # {F83380BE-140C-482f-867F-8CAF1D3A44B3} → {96C04E30-1DBA-4a29-AABA-BC4C175AE12F}
-      - "Association «accepted by» → Third party service Agreement"  # {61318089-CC78-4c49-A666-A6EB2DCCEB58} → {55DDB938-4CFE-4e83-8BE8-D648FFCA95FA}
-      - "Association «defines» → 3rd party service provider"  # {2BE57848-7B71-4a95-AF2A-178994349D4C} → {CB3A280B-2F50-4a35-9603-8BD95D127A4F}
+      - "Association «adheres to» → C-ITS Long Range Communication Service Agreement"  # {4A554C28-F0E6-44c3-9D93-A300F84CFAE0} → {3B85872B-52EB-4509-A9E7-CE7F265327C2}
+      - "Association «adheres to» → C-ITS Security Agreement"  # {F83380BE-140C-482f-867F-8CAF1D3A44B3} → {96C04E30-1DBA-4a29-AABA-BC4C175AE12F}
+      - "Association «adheres to» → Third party service Agreement"  # {61318089-CC78-4c49-A666-A6EB2DCCEB58} → {55DDB938-4CFE-4e83-8BE8-D648FFCA95FA}
   - name: "Third party service provider and/or C-ITS station operator"
     guid: "{22EE9EE9-F3FE-4b6d-A8E6-328F73E45192}"
     type: "Object"
@@ -139,7 +131,6 @@ elements:
     note: |
       Traffic information service provider with active C-ITS stations and day one service distribution.
     links:
-      - "Association «accepted by» → C-ITS Long Range Communication Service Agreement"  # {38BE65A7-F9B0-448f-9E07-DC043314EE7D} → {3B85872B-52EB-4509-A9E7-CE7F265327C2}
-      - "Association «accepted by» → C-ITS Security Agreement"  # {388AEB7F-7558-4294-B41B-3642D5897937} → {96C04E30-1DBA-4a29-AABA-BC4C175AE12F}
-      - "Association «accepted by» → Third party service Agreement"  # {07FBBFF5-CDF4-4679-AB50-59F0A93D17B7} → {55DDB938-4CFE-4e83-8BE8-D648FFCA95FA}
-      - "Association «defines» → 3rd party service provider"  # {BF091DF4-16AF-47fb-94EF-6C74A7C7F429} → {CB3A280B-2F50-4a35-9603-8BD95D127A4F}
+      - "Association «adheres to» → C-ITS Long Range Communication Service Agreement"  # {38BE65A7-F9B0-448f-9E07-DC043314EE7D} → {3B85872B-52EB-4509-A9E7-CE7F265327C2}
+      - "Association «adheres to» → C-ITS Security Agreement"  # {388AEB7F-7558-4294-B41B-3642D5897937} → {96C04E30-1DBA-4a29-AABA-BC4C175AE12F}
+      - "Association «adheres to» → Third party service Agreement"  # {07FBBFF5-CDF4-4679-AB50-59F0A93D17B7} → {55DDB938-4CFE-4e83-8BE8-D648FFCA95FA}

@@ -39,9 +39,6 @@ elements:
       4 - IVIM related
       5 - SPAT/MAP related
       6 -for future messages to be defined
-    links:
-      - "Abstraction → 11.1.3.1"  # {A8602E6C-BD5B-4a45-B96A-7F65E6B7EFB4} → {F124163A-04C8-4b17-A9C1-05025EAD440C}
-      - "Abstraction → 11.1.3.2"  # {5E0636BE-2E80-4659-9F12-28E6C56C5F27} → {327661E8-A79C-4b23-A437-841A9A93FEFF}
   - name: "11.1.3.1"
     guid: "{F124163A-04C8-4b17-A9C1-05025EAD440C}"
     type: "Requirement"
@@ -52,6 +49,8 @@ elements:
     order: 14
     note: |
       The System shall process vehicle data from CAM messages in regular and event based operations.
+    links:
+      - "Association «belongs to» → FRAME_User_Need_Topic3 CAM Messages"  # {A8602E6C-BD5B-4a45-B96A-7F65E6B7EFB4} → {C56A9710-EDCF-4768-8784-867E07406042}
   - name: "11.1.3.2"
     guid: "{327661E8-A79C-4b23-A437-841A9A93FEFF}"
     type: "Requirement"
@@ -62,3 +61,5 @@ elements:
     order: 59
     note: |
       Vehicles shall be able to lower the Rx transmission power if passing a tolling area on a motorway.
+    links:
+      - "Association «belongs to» → FRAME_User_Need_Topic3 CAM Messages"  # {5E0636BE-2E80-4659-9F12-28E6C56C5F27} → {C56A9710-EDCF-4768-8784-867E07406042}

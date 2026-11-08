@@ -16,7 +16,7 @@ elements:
       
       Mnemonic: psle
     links:
-      - "Aggregation «componentof» → System"  # {BEB1EE2F-3B64-404f-AFF3-1130B59C087E} → {A7365472-4893-4994-9241-EEED83ABEF7D}
+      - "Aggregation «component of» → System"  # {BEB1EE2F-3B64-404f-AFF3-1130B59C087E} → {A7365472-4893-4994-9241-EEED83ABEF7D}
       - "Association «IN» → To Law Enforcement Agency"  # {5D6F660E-7575-432f-BE79-C0C5D16EEBD2} → {51620931-5B5E-442a-B721-2BD49EA9ACDA}
       - "Association «IN» → fv-psle_inputs"  # {BD3C5298-C0B3-4cc9-9CA7-474D5D08EEE6} → {2814E720-AF67-4324-ADE2-93689DD60B55}
       - "Association «IN» → psle.mt_violator_ID"  # {4F6AA58B-91CB-4c60-A127-429C1DA93F4A} → {E9C43494-914F-433f-9359-05618EFE68AA}
@@ -33,7 +33,7 @@ elements:
     note: |
       This High-level Function shall perform the detection of specific types of violation not carried out by functionality in this and other Functional Areas, such as Weight In Motion (WIM).  It shall determine the nature of the violation, the data that shows the violation has occurred, e.g. the parameters that have been exceeded and the means of identification of the violator.  These data shall be combined into data objects that are sent for processing by another High-level Function in this Functional Area.
     links:
-      - "Aggregation «componentof» → F7 Provide Support for Law Enforcement"  # {79AD292C-3B05-4e60-8572-53E48E0522A1} → {114B0BB0-2D5A-4635-A605-D99FE54477BE}
+      - "Aggregation «component of» → F7 Provide Support for Law Enforcement"  # {79AD292C-3B05-4e60-8572-53E48E0522A1} → {114B0BB0-2D5A-4635-A605-D99FE54477BE}
       - "Association «IN» → fv-psle_vehicle_image"  # {8E251B12-124C-4b1a-B4D7-740808510474} → {FC7DED18-68F1-480c-B011-1694A61B1FD9}
       - "Association «IN» → psle.pshvs_vehicle_ID_request"  # {0F4442B0-E207-4cb8-9B7A-2140243A9B3B} → {4D037353-9D8C-4fa4-924A-799B6AAB60E0}
       - "Association «IN» → psle_user_clearance_request"  # {B26FD0B9-9794-40fe-868F-886021B4155B} → {6AF1B716-8E7E-41d6-A55F-1B7542363A1D}
@@ -57,8 +57,8 @@ elements:
       (4) The ability to apply the rules more or less strictly according to guidelines sent by functionality in the Manage Traffic Function Area.
       (5) Upon detection of a violation, the ability to send the associated elements to the Process Violation Notifications Function.
     links:
-      - "Aggregation «componentof» → F7 Provide Support for Law Enforcement"  # {1A00B331-7536-442b-A829-AE32FB935577} → {114B0BB0-2D5A-4635-A605-D99FE54477BE}
-      - "Aggregation «componentof» → F7.1 Detect Violation"  # {31E8B340-EF53-404c-BD87-A305872D9623} → {35333EE8-BA25-4119-8879-CDE727500979}
+      - "Aggregation «component of» → F7 Provide Support for Law Enforcement"  # {1A00B331-7536-442b-A829-AE32FB935577} → {114B0BB0-2D5A-4635-A605-D99FE54477BE}
+      - "Aggregation «component of» → F7.1 Detect Violation"  # {31E8B340-EF53-404c-BD87-A305872D9623} → {35333EE8-BA25-4119-8879-CDE727500979}
       - "Association «IN» → psel_reqest_relevant_rules"  # {8C6E119E-1AAA-4339-8204-DA880CEB4245} → {AFCE0970-D64D-43df-8605-56D5F0DD7694}
       - "Association «IN» → psle_user_clearance_request"  # {D49C3E09-7777-42f9-B690-A4F642E44C0F} → {6AF1B716-8E7E-41d6-A55F-1B7542363A1D}
       - "Association «IN» → psle_user_image"  # {3DC1FFC0-0018-43cb-AFB6-E3B496CBA34A} → {7C75C3AF-6310-4c22-B6EB-DF5099A0DFF9}
@@ -81,8 +81,8 @@ elements:
       (5) The ability to request the Vehicle's Driver to provide records, of route, speed, hours until the next rest stop, etc.
       (5) The ability to receive guidelines from functionality in the Manage Traffic Functional Area about the way that rules should be applied and compliance checked.
     links:
-      - "Aggregation «componentof» → F7 Provide Support for Law Enforcement"  # {71C17D35-7930-4734-961B-EA8A38570E38} → {114B0BB0-2D5A-4635-A605-D99FE54477BE}
-      - "Aggregation «componentof» → F7.1 Detect Violation"  # {82F75119-C61C-4979-92AB-904947B617AC} → {35333EE8-BA25-4119-8879-CDE727500979}
+      - "Aggregation «component of» → F7 Provide Support for Law Enforcement"  # {71C17D35-7930-4734-961B-EA8A38570E38} → {114B0BB0-2D5A-4635-A605-D99FE54477BE}
+      - "Aggregation «component of» → F7.1 Detect Violation"  # {82F75119-C61C-4979-92AB-904947B617AC} → {35333EE8-BA25-4119-8879-CDE727500979}
       - "Association «IN» → psle.pshvs_vehicle_ID_request"  # {CF49FAF1-D2A5-4861-B746-586E7162D946} → {4D037353-9D8C-4fa4-924A-799B6AAB60E0}
       - "Association «IN» → psle_measure"  # {7D110A88-61C0-4760-8863-8E1E1E1675EC} → {303ED1F2-B720-448a-9CE7-0730FAC15C7A}
       - "Association «IN» → td-psle_record_request"  # {82ABE7C5-CDDE-4782-A432-3F9CB9516BD3} → {AD0D01FD-A2F6-419d-974C-7A36D24CB90A}
@@ -96,7 +96,7 @@ elements:
     note: |
       This High-level Function shall analyse the image or information included in the violation notifications sent to it by either functionality in other Functional Areas, or the "Detect Violation" Function.  From this analysis the functionality shall determine the identity of the violator and shall supplement it with information stored in the store of User's Registration Data.
     links:
-      - "Aggregation «componentof» → F7 Provide Support for Law Enforcement"  # {93580EC9-BEFB-40c8-892F-B0D978BAEB9A} → {114B0BB0-2D5A-4635-A605-D99FE54477BE}
+      - "Aggregation «component of» → F7 Provide Support for Law Enforcement"  # {93580EC9-BEFB-40c8-892F-B0D978BAEB9A} → {114B0BB0-2D5A-4635-A605-D99FE54477BE}
       - "Association «IN» → psle_user_data_request"  # {21DD8523-CF0C-48a8-9496-F2BEF51514CC} → {17E2B33A-0CBF-4bc9-B1B6-E69A2D450B8F}
       - "Association «IN» → psle_vehicle_ID_for_detection"  # {80CE6548-EC51-4c88-B061-68DB17AE5CB0} → {3CCAC36B-7A9A-4b0f-B08F-E6D7D4537480}
       - "Association «IN» → psle_violation_type_from_image_analysis"  # {3CF09469-9FF6-4574-9322-C1E1437FE552} → {E14240AC-0CDA-4e0e-9F29-2CF75727AB53}
@@ -116,8 +116,8 @@ elements:
       (2) The ability to determine the ID of the violator vehicle, and the type of violation involved from the received image.
       (3) Once the image has been analysed, the ability to send the results to the Determine Violator ID Function.
     links:
-      - "Aggregation «componentof» → F7 Provide Support for Law Enforcement"  # {C2EA730C-EF70-4d92-BA4A-8EAD1CDC9772} → {114B0BB0-2D5A-4635-A605-D99FE54477BE}
-      - "Aggregation «componentof» → F7.2 Identify Violator"  # {4B8B044B-7792-4582-8E1D-7F40EB297FDE} → {2F5B1A41-93A6-4663-AB3D-34BCA59B8EDF}
+      - "Aggregation «component of» → F7 Provide Support for Law Enforcement"  # {C2EA730C-EF70-4d92-BA4A-8EAD1CDC9772} → {114B0BB0-2D5A-4635-A605-D99FE54477BE}
+      - "Aggregation «component of» → F7.2 Identify Violator"  # {4B8B044B-7792-4582-8E1D-7F40EB297FDE} → {2F5B1A41-93A6-4663-AB3D-34BCA59B8EDF}
       - "Association «IN» → psle_vehicle_ID_DV"  # {0CD59964-22EF-49e0-91ED-5413101E599D} → {28085C82-2DA3-43e5-9375-167639947464}
       - "Association «IN» → psle_vehicle_ID_for_detection"  # {A6258894-7CF5-4436-A23D-CBA2D61B52F9} → {3CCAC36B-7A9A-4b0f-B08F-E6D7D4537480}
       - "Association «IN» → psle_violation_type_from_image_analysis"  # {29C05E6A-C6B5-4d86-B61B-12143D62D530} → {E14240AC-0CDA-4e0e-9F29-2CF75727AB53}
@@ -134,8 +134,8 @@ elements:
       (1) The ability to obtain the identity of the violator, i.e. the person who has committed the violation, from the store of User's Registration Data using the identification of the violating Vehicle as the reference for the data.
       (2) The ability to send this extracted information to other functionality in the Provide Support for Law Enforcement Functional Area.
     links:
-      - "Aggregation «componentof» → F7 Provide Support for Law Enforcement"  # {77E5FD3D-5D0A-4fe7-83CC-DE878F39EF91} → {114B0BB0-2D5A-4635-A605-D99FE54477BE}
-      - "Aggregation «componentof» → F7.2 Identify Violator"  # {1D17CCE2-7E07-42de-B359-8754EF524889} → {2F5B1A41-93A6-4663-AB3D-34BCA59B8EDF}
+      - "Aggregation «component of» → F7 Provide Support for Law Enforcement"  # {77E5FD3D-5D0A-4fe7-83CC-DE878F39EF91} → {114B0BB0-2D5A-4635-A605-D99FE54477BE}
+      - "Aggregation «component of» → F7.2 Identify Violator"  # {1D17CCE2-7E07-42de-B359-8754EF524889} → {2F5B1A41-93A6-4663-AB3D-34BCA59B8EDF}
       - "Association «IN» → psle_user_data_request"  # {2302A39C-DD80-41ed-A778-6C568FAA86D5} → {17E2B33A-0CBF-4bc9-B1B6-E69A2D450B8F}
       - "Association «IN» → psle_violation_type_from_violator_determination"  # {B40A5518-7DE2-43c9-9B65-CAED0159DCF2} → {1B735445-16C8-4ed1-92D2-83AAE796F69C}
       - "Association «IN» → psle_violator_ID_from_violator_determination"  # {5900C1B0-E1DE-4b5c-8103-D56171D25DE6} → {FC83BADE-20A3-401f-9073-82A8A0F6E4DF}
@@ -149,7 +149,7 @@ elements:
     note: |
       This High-level Function shall process all the violation notifications detected by functionality in this and other Functional Areas.  It shall classify the notifications by kind of violation, level of importance.  If not already done, the Function shall ask for the identification of the violator. Depending on the type of violation, it shall build a prosecution file gathering all the information required by the Law Enforcement Agency and send it.
     links:
-      - "Aggregation «componentof» → F7 Provide Support for Law Enforcement"  # {F8571351-60A9-4a94-8B75-E29EE535C74D} → {114B0BB0-2D5A-4635-A605-D99FE54477BE}
+      - "Aggregation «component of» → F7 Provide Support for Law Enforcement"  # {F8571351-60A9-4a94-8B75-E29EE535C74D} → {114B0BB0-2D5A-4635-A605-D99FE54477BE}
       - "Association «IN» → psle.mt_enforcement_equipment_fault"  # {0E42C0F3-EBCE-43fd-B321-3BBF9E5F6845} → {A15EED2C-ACF4-4e0d-9E7A-D6F42F4DF680}
       - "Association «IN» → psle.mt_inter-urban_enforcement_device_status"  # {1A8D4A35-FA56-47e7-878F-333901D45FEF} → {941C56E3-8CD2-41e2-BA10-BAA3D82B626B}
       - "Association «IN» → psle.mt_urban_enforcement_device_status"  # {656A4EDC-4488-4c6a-BB40-161261FFAE2F} → {AC5757E1-9BD2-420d-9BBF-2C22820E76C7}
@@ -177,8 +177,8 @@ elements:
       (1) The ability to output the identity of a Vehicle that has exceeded a speed limit, or not used the correct lane in the urban road network.
       (2) The ability to provide the output at the roadside at or near (down stream) the location of the violation, as in-vehicle outputs will be provided separately.
     links:
-      - "Aggregation «componentof» → F7 Provide Support for Law Enforcement"  # {CFBFBDEF-B347-41cd-B822-EFE0F3AA1D85} → {114B0BB0-2D5A-4635-A605-D99FE54477BE}
-      - "Aggregation «componentof» → F7.3 Process Violation Notifications"  # {3C802923-B99A-40c4-8E07-A6035560BE8A} → {484A054E-FDBF-4cf2-BA2D-6E62961E0722}
+      - "Aggregation «component of» → F7 Provide Support for Law Enforcement"  # {CFBFBDEF-B347-41cd-B822-EFE0F3AA1D85} → {114B0BB0-2D5A-4635-A605-D99FE54477BE}
+      - "Aggregation «component of» → F7.3 Process Violation Notifications"  # {3C802923-B99A-40c4-8E07-A6035560BE8A} → {484A054E-FDBF-4cf2-BA2D-6E62961E0722}
       - "Association «IN» → psle.mt_urban_enforcement_device_status"  # {34A7E58A-B5E2-40d0-98EF-FB93FEC0BD35} → {AC5757E1-9BD2-420d-9BBF-2C22820E76C7}
       - "Association «IN» → td-urban_traffic_enforcement_messages"  # {96E6A955-3E7F-4bfa-AD12-C61A78AB87CB} → {B806B2A0-854A-40a9-9031-88A7BE5427BD}
   - name: "F7.3.4 Output Violator Identities to Inter-urban Roads"
@@ -194,8 +194,8 @@ elements:
       (1) The ability to output the identity of a Vehicle that has exceeded a speed limit, or not used the correct lane in the inter-urban road network.
       (2) The ability to provide the output at the roadside at or near (down stream) the location of the violation, as in-vehicle outputs will be provided separately.
     links:
-      - "Aggregation «componentof» → F7 Provide Support for Law Enforcement"  # {9C8A0F1E-919F-49e7-B0EF-F051F8AFAA04} → {114B0BB0-2D5A-4635-A605-D99FE54477BE}
-      - "Aggregation «componentof» → F7.3 Process Violation Notifications"  # {CDB951D6-00F5-4e93-89BC-AE9A904DE1E6} → {484A054E-FDBF-4cf2-BA2D-6E62961E0722}
+      - "Aggregation «component of» → F7 Provide Support for Law Enforcement"  # {9C8A0F1E-919F-49e7-B0EF-F051F8AFAA04} → {114B0BB0-2D5A-4635-A605-D99FE54477BE}
+      - "Aggregation «component of» → F7.3 Process Violation Notifications"  # {CDB951D6-00F5-4e93-89BC-AE9A904DE1E6} → {484A054E-FDBF-4cf2-BA2D-6E62961E0722}
       - "Association «IN» → psle.mt_inter-urban_enforcement_device_status"  # {7955DE3A-4E84-4578-89DA-C3C5DC253CA1} → {941C56E3-8CD2-41e2-BA10-BAA3D82B626B}
       - "Association «IN» → td-inter-urban_traffic_enforcement_messages"  # {C9E703D0-A846-4d4d-872B-9DA88BAEB386} → {8578A285-5594-47a5-9885-9BC8962243A5}
   - name: "F7.3.5 Sort Violation Notifications"
@@ -213,8 +213,8 @@ elements:
       (3) The ability to carry out the classification according to different criteria: level of seriousness, field (road, financial, commercial) and repeat offence.
       (4) Once the classification has been completed, the ability to send it together with all the other information about the violation to the Create File for use in Prosecution Function.
     links:
-      - "Aggregation «componentof» → F7 Provide Support for Law Enforcement"  # {FEBAA1DC-7D21-4950-B105-AE396CD7133B} → {114B0BB0-2D5A-4635-A605-D99FE54477BE}
-      - "Aggregation «componentof» → F7.3 Process Violation Notifications"  # {476EF10A-04C6-4619-9AD4-0A05CE124431} → {484A054E-FDBF-4cf2-BA2D-6E62961E0722}
+      - "Aggregation «component of» → F7 Provide Support for Law Enforcement"  # {FEBAA1DC-7D21-4950-B105-AE396CD7133B} → {114B0BB0-2D5A-4635-A605-D99FE54477BE}
+      - "Aggregation «component of» → F7.3 Process Violation Notifications"  # {476EF10A-04C6-4619-9AD4-0A05CE124431} → {484A054E-FDBF-4cf2-BA2D-6E62961E0722}
       - "Association «IN» → psle_inter-urban_violator_ID"  # {3E4E679A-61D9-4790-BB2E-2EC0A30118A5} → {CA4285E3-B2C7-4de3-9ED5-3E682566929C}
       - "Association «IN» → psle_request_violation_classification"  # {06E6EBD9-BFE2-4966-A072-7590D27CD46C} → {55F3E0C5-D70E-4a74-A177-E53131912B8E}
       - "Association «IN» → psle_request_violation_history_for_notification"  # {62E6B47F-43C1-4aac-ABAB-C3670B55DDF7} → {7DF46D4D-32CB-4a43-8577-9DD935042ADD}
@@ -236,8 +236,8 @@ elements:
       (2) As part of the process of preparing the file, the ability to check that the violation is not the result of an instruction that has been given to and acknowledged by a Driver and to abandon the prosecution process if it was.
       (3) The ability to also send the resulting file, plus all the elements received, to the functionality that stores violation notifications.
     links:
-      - "Aggregation «componentof» → F7 Provide Support for Law Enforcement"  # {1D68EC7D-F54F-49d9-ACF3-5A721CEDC883} → {114B0BB0-2D5A-4635-A605-D99FE54477BE}
-      - "Aggregation «componentof» → F7.3 Process Violation Notifications"  # {3B10358D-B718-4de9-BC01-C23A735AEF7D} → {484A054E-FDBF-4cf2-BA2D-6E62961E0722}
+      - "Aggregation «component of» → F7 Provide Support for Law Enforcement"  # {1D68EC7D-F54F-49d9-ACF3-5A721CEDC883} → {114B0BB0-2D5A-4635-A605-D99FE54477BE}
+      - "Aggregation «component of» → F7.3 Process Violation Notifications"  # {3B10358D-B718-4de9-BC01-C23A735AEF7D} → {484A054E-FDBF-4cf2-BA2D-6E62961E0722}
       - "Association «IN» → psle_check_insructions_recieved"  # {E26D6EC4-4469-4b8d-A2B2-3FA5D92DE293} → {089839B1-7EDC-4a31-A1DC-F10DFF2D67D5}
       - "Association «IN» → psle_prosecution_file"  # {A3CDE03F-A416-40b7-A153-DBC236C7E13F} → {97304CA2-354F-4c0f-AE97-BA1FE2353EE7}
       - "Association «IN» → psle_request_violation_history_for_prosecution"  # {38E129EB-C3F1-4d83-89C3-E39576D6AA58} → {9A74FE76-CF66-4d9f-B1A9-E80C62E9C8B8}
@@ -256,8 +256,8 @@ elements:
       (2) The ability to load the collect instruction acknowledgements into the store of Instruction Notifications Data and to manage the contents of that store.
       (3) When requested by other functionality, the ability to provide evidence from the store of Instruction Notifications Data about if, when (time and date) and where (location) a Driver was issued with particular instructions.
     links:
-      - "Aggregation «componentof» → F7 Provide Support for Law Enforcement"  # {77707511-0A21-4d2e-BBC6-64B0139E569D} → {114B0BB0-2D5A-4635-A605-D99FE54477BE}
-      - "Aggregation «componentof» → F7.3 Process Violation Notifications"  # {981AA57B-7A5E-49f7-A207-923180D4C7AF} → {484A054E-FDBF-4cf2-BA2D-6E62961E0722}
+      - "Aggregation «component of» → F7 Provide Support for Law Enforcement"  # {77707511-0A21-4d2e-BBC6-64B0139E569D} → {114B0BB0-2D5A-4635-A605-D99FE54477BE}
+      - "Aggregation «component of» → F7.3 Process Violation Notifications"  # {981AA57B-7A5E-49f7-A207-923180D4C7AF} → {484A054E-FDBF-4cf2-BA2D-6E62961E0722}
       - "Association «IN» → psle_check_instructions_results"  # {BE5A30FC-6B12-47f7-9F12-9729801CC722} → {F1FA1DCA-2007-4e2c-BE3B-146B192255CC}
       - "Association «IN» → psle_instruction_notification_load"  # {1FA61FF4-F1BB-4c8b-980E-119F455CBD0E} → {F60DABE5-0957-4710-AFFC-7D63CD216255}
   - name: "F7.5 Manage Rules and Users' Registrations"
@@ -270,7 +270,7 @@ elements:
     note: |
       This High-level Function shall be charged with the upkeep of the store of Rules Data and Users' Registration Data.  It shall update their content with new data objects as and when it receives them, or in response to periodic requests.  When requested by other functionality it shall provide data objects from each of the stores of data.
     links:
-      - "Aggregation «componentof» → F7 Provide Support for Law Enforcement"  # {72AD1415-8BD0-4355-B1A2-B72F868ADC39} → {114B0BB0-2D5A-4635-A605-D99FE54477BE}
+      - "Aggregation «component of» → F7 Provide Support for Law Enforcement"  # {72AD1415-8BD0-4355-B1A2-B72F868ADC39} → {114B0BB0-2D5A-4635-A605-D99FE54477BE}
       - "Association «IN» → psle_classification_of_violation"  # {85C2A197-F261-4c66-9CC6-91EA15498580} → {116386C1-C74C-46f2-88E5-0F5F58506BC7}
       - "Association «IN» → psle_rules_load"  # {98BB65B3-02E1-4398-8653-1447689865D2} → {E37F41DF-84FE-42e1-846F-D85F97D3264C}
       - "Association «IN» → psle_user_clearance_read"  # {9A556D54-AC46-441a-8598-716CEF649E9F} → {4D89F150-2C3F-46d3-90A2-860AAF239E18}
@@ -292,8 +292,8 @@ elements:
       (2) When updating the store of Rules Data, the ability to take into account new elements provided by the different organisations that constitute the Law Enforcement Agency.
       (3) The ability to respond to requests for data from the store of Rules Data.
     links:
-      - "Aggregation «componentof» → F7 Provide Support for Law Enforcement"  # {1C5912CA-CE62-4c84-BE2D-E0E64AC839A0} → {114B0BB0-2D5A-4635-A605-D99FE54477BE}
-      - "Aggregation «componentof» → F7.5 Manage Rules and Users' Registrations"  # {7BD42FB5-0F60-4d63-810E-BB7F723E650F} → {36A185E0-87CE-4eb3-965F-C85CF3E774D0}
+      - "Aggregation «component of» → F7 Provide Support for Law Enforcement"  # {1C5912CA-CE62-4c84-BE2D-E0E64AC839A0} → {114B0BB0-2D5A-4635-A605-D99FE54477BE}
+      - "Aggregation «component of» → F7.5 Manage Rules and Users' Registrations"  # {7BD42FB5-0F60-4d63-810E-BB7F723E650F} → {36A185E0-87CE-4eb3-965F-C85CF3E774D0}
       - "Association «IN» → psle_classification_of_violation"  # {9101B0F4-60D0-453f-89C1-5D3DC4C5A09B} → {116386C1-C74C-46f2-88E5-0F5F58506BC7}
       - "Association «IN» → psle_requested_relevant_rules"  # {17AA1F84-A4EA-4a57-A361-0D2A3285BAF5} → {CCFF0D58-057F-4a29-B483-698B6E5ABE04}
       - "Association «IN» → psle_rules_load"  # {FC2D0D0D-F788-4521-B648-97F7ECF603B2} → {E37F41DF-84FE-42e1-846F-D85F97D3264C}
@@ -312,8 +312,8 @@ elements:
       (2) The ability to make sure that the registrations concern the identification of users, the ownership or utilisation relationship between users and vehicles, and the registration of operators allowed to perform commercial operations using the road network.
       (3) The ability to respond to requests for data from the store of Rules Data.
     links:
-      - "Aggregation «componentof» → F7 Provide Support for Law Enforcement"  # {448E6674-703A-4d83-9B31-C54B498A2E24} → {114B0BB0-2D5A-4635-A605-D99FE54477BE}
-      - "Aggregation «componentof» → F7.5 Manage Rules and Users' Registrations"  # {0DA5430C-BACA-41b2-83EA-6575B36ABB6D} → {36A185E0-87CE-4eb3-965F-C85CF3E774D0}
+      - "Aggregation «component of» → F7 Provide Support for Law Enforcement"  # {448E6674-703A-4d83-9B31-C54B498A2E24} → {114B0BB0-2D5A-4635-A605-D99FE54477BE}
+      - "Aggregation «component of» → F7.5 Manage Rules and Users' Registrations"  # {0DA5430C-BACA-41b2-83EA-6575B36ABB6D} → {36A185E0-87CE-4eb3-965F-C85CF3E774D0}
       - "Association «IN» → psle_user_clearance_read"  # {CEA4C258-B7EB-48ee-891C-E838616964A8} → {4D89F150-2C3F-46d3-90A2-860AAF239E18}
       - "Association «IN» → psle_user_data_read"  # {B88E1E97-8C9C-40c9-A70F-7B6ECB5B5AFA} → {A44B63FC-6A2D-4239-A1B7-AD3F4DECE503}
       - "Association «IN» → psle_user_registration_data_load"  # {48BBB8FF-BCFD-4dc1-8698-734B18AFA326} → {C5334954-4C31-45e7-A861-12587662FC9B}
@@ -333,7 +333,7 @@ elements:
       (2) Respond to requests for information about previous violations from other functions in the Provide Support for Law Enforcement Functional Area.
       (3) As part of the management process, provide specified contents of the store to the Law Enforcement Agency terminator upon reception of a specific request.
     links:
-      - "Aggregation «componentof» → F7 Provide Support for Law Enforcement"  # {0580324C-902C-41e1-BB4E-333F8AB436C3} → {114B0BB0-2D5A-4635-A605-D99FE54477BE}
+      - "Aggregation «component of» → F7 Provide Support for Law Enforcement"  # {0580324C-902C-41e1-BB4E-333F8AB436C3} → {114B0BB0-2D5A-4635-A605-D99FE54477BE}
       - "Association «IN» → psle_load_violations_store"  # {C5A76A28-D445-41f2-A695-0F94CF6197E5} → {549DFFA8-6893-4d3d-BDCE-46A5ED249951}
       - "Association «IN» → psle_violation_history"  # {35DB84A4-F859-4a87-8C82-7972C3465391} → {C76F3CBC-05A5-4a0e-AA74-97939EE02256}
       - "Association «IN» → tlea-psle_violation_data response"  # {070D822F-0DC3-45e0-9532-64DFD1F1EDC3} → {A5648B86-468D-4308-9369-A729C62CEEC9}

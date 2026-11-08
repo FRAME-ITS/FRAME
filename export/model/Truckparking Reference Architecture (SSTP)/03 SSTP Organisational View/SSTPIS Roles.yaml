@@ -59,10 +59,6 @@ elements:
       
       the percentage of parking places providing dynamic information on the availability of parking spaces and the priority zones to the Commission.
     links:
-      - "Association → NAP Operator (NO)"  # {218BFE8F-5E4D-4c13-9768-07D4ABBF6030} → {234C8914-6D8F-43fd-B3A7-34118A92FBA3}
-      - "Association → Park Operator"  # {A0383F2A-D425-42ec-BE41-F9ACE2F444FC} → {F889E587-63FF-4ed3-A1DA-3B5232BCD976}
-      - "Association → Service Provider"  # {98094AC1-5269-4438-9EEF-E915C73B65A3} → {56E95060-70F8-4023-9557-1EE0A92B253B}
-      - "Association → User"  # {A2C3681A-523D-4e5b-95E3-3DDE3EB9D5DD} → {9887014B-F428-4c13-82F6-E9513B4B18AB}
       - "Dependency → "  # {BC65C41E-DADC-4ba0-AEFA-02FA8F7C5C90} → {5611A6C0-4ABC-4fc4-82D8-8902E6C5CCA1}
   - name: "Park Operator"
     guid: "{F889E587-63FF-4ed3-A1DA-3B5232BCD976}"

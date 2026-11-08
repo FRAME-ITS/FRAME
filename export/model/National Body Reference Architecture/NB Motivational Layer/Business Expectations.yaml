@@ -14,7 +14,7 @@ elements:
     note: |
       Guidelines and documentation on how to set up functional and organisational elements which are needed for the National Body to operate in a harmonized way.
     links:
-      - "Realisation → National Body Mission_Statement"  # {0386095C-E0FD-483d-8B91-DDB65B0E469B} → {19CCAB3F-C533-4107-9E55-E64EF97E7204}
+      - "Association «defines» → Fulfilling National Body activities and reliabilities according to ITS directive 2010/EU/40"  # {C8546667-7175-41E6-9A45-8924B775EEC4} → {01809F43-C4B8-4445-BF4A-91BFA2C95612}
   - name: "Guideline for operation of National Bodies"
     guid: "{5E9DF39C-6000-43d3-9226-88DCD911CCC0}"
     type: "Artifact"
@@ -25,7 +25,7 @@ elements:
     note: |
       A clear guideline how to act as National Body in a harmonized EU-wide NB environment.
     links:
-      - "Realisation → National Body Mission_Statement"  # {EE88339E-7184-4f1c-9A42-26B100A39877} → {19CCAB3F-C533-4107-9E55-E64EF97E7204}
+      - "Association «defines» → Fulfilling National Body activities and reliabilities according to ITS directive 2010/EU/40"  # {5ECAE131-0534-407A-8A60-2A3CF254DE14} → {01809F43-C4B8-4445-BF4A-91BFA2C95612}
   - name: "Obligations and Interactions"
     guid: "{4355144F-8BD4-4b25-94CB-E69C5B98871A}"
     type: "Artifact"
@@ -36,7 +36,7 @@ elements:
     note: |
       Stakeholders expect information about obligations and deadlines to fulfill the requirements from the delegated acts. They also need information about possible consequences if not fulfilling the requirements from the delegated acts. Furthermore, the stakeholders expect advice and instructions from the National Body in any part of the fulfillment process
     links:
-      - "Realisation → National Body Mission_Statement"  # {46292DE4-F728-4257-9D2A-8D7F6436D90F} → {19CCAB3F-C533-4107-9E55-E64EF97E7204}
+      - "Association «defines» → Fulfilling National Body activities and reliabilities according to ITS directive 2010/EU/40"  # {8943032E-8DB8-413A-B343-509E588934C6} → {01809F43-C4B8-4445-BF4A-91BFA2C95612}
   - name: "Requirements"
     guid: "{A25E0F1A-B731-4e92-B10F-C75E52119119}"
     type: "Artifact"
@@ -48,7 +48,7 @@ elements:
       The NAP and the National Body are in direct relation.
       The NAP needs to know the requirements for the provision of data and metadata. The National Body needs to know how to access the descriptions of data and metadata.
     links:
-      - "Realisation → National Body Mission_Statement"  # {7070F885-6331-4380-B72A-E1AED571C741} → {19CCAB3F-C533-4107-9E55-E64EF97E7204}
+      - "Association «defines» → Fulfilling National Body activities and reliabilities according to ITS directive 2010/EU/40"  # {5CF1065F-BB09-4106-A825-C8C8890DCC4F} → {01809F43-C4B8-4445-BF4A-91BFA2C95612}
   - name: "facilitate a harmonized implementation"
     guid: "{01EE4DC2-403A-4982-AD07-A61EEB10017F}"
     type: "Artifact"
@@ -59,4 +59,4 @@ elements:
     note: |
       The architecture is an enabler for EU-wide harmonized implementation of National Bodies and Competent Authorities.
     links:
-      - "Realisation → National Body Mission_Statement"  # {73D89ECE-CF41-4052-975B-3E8414237460} → {19CCAB3F-C533-4107-9E55-E64EF97E7204}
+      - "Association «defines» → Fulfilling National Body activities and reliabilities according to ITS directive 2010/EU/40"  # {E7FC1DB2-C843-4458-9B87-56D78A996749} → {01809F43-C4B8-4445-BF4A-91BFA2C95612}

@@ -39,7 +39,7 @@ elements:
       5 - SPAT/MAP related
       6 -for future messages to be defined
     links:
-      - "Abstraction → 11.1.5.1"  # {16F61DC3-01A6-4f60-A2E6-CD08597B17C7} → {159FAE41-53DC-4633-9EAB-187BA2207820}
+      - "Association «belongs to» → FRAME_User_Need_Service 3 Driving Comfort"  # {0B05B657-DEFA-4cf8-8612-A6AB717A2158} → {10E16CB6-028A-4e5c-9528-B7DFC84CB6BE}
   - name: "11.1.5.1"
     guid: "{159FAE41-53DC-4633-9EAB-187BA2207820}"
     type: "Requirement"
@@ -50,3 +50,5 @@ elements:
     order: 61
     note: |
       The System shall provide intersection related informations for vehicles in SPAT / MAP message formats according to the standards as defined in ETSI TS 103 301 which refers to the SAEJ2735 data dictionary.
+    links:
+      - "Association «belongs to» → FRAME_User_Need_Topic5 SPAT/MAP Messages"  # {16F61DC3-01A6-4f60-A2E6-CD08597B17C7} → {E1094F3C-7DD4-43f9-AFC2-3010DD9A5DF0}

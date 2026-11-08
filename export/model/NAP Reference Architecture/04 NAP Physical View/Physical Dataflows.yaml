@@ -14,7 +14,6 @@ elements:
       This Physical Data Flow facilitates information exchange between NAP Content Consumer and User Management Application. This exchange concerns Content Consumers data objects for registration requests and credentials for data retrieval upon authorization. The registration request contains entity information, license terms approval, and organization details. Outputs include responses to registration requests and credentials for accessing NAP functionality.
     links:
       - "Association «use» → user management metadata repository interface"  # {1AA4DE24-084C-4d88-8946-72F0EBDC7AC6} → {572A0DDD-F3CD-426f-B920-5E8E986DFC0C}
-      - "Usage → NAP Content Consumer"  # {222EA4B4-80EB-4149-A45C-CADBCABF1C65} → {6713B765-606E-4208-8FE8-99B0D50851A5}
   - name: "PDF Data Quality Check"
     guid: "{1587F034-1363-447d-8BFA-2234BA04649C}"
     type: "Interface"
@@ -33,7 +32,6 @@ elements:
       This Physical Data Flow facilitates information exchange between Data Management Application and Content Provider. This exchange concerns inputs from the NAP Content Provider with new or updated data objects, requiring authorisation credentials.
     links:
       - "Association «use» → Content Provider data provision interface"  # {5D5ECCD2-6B89-476d-BE32-0C799DD2FC6F} → {C03CF47C-96E7-4733-B905-CB836A908BB7}
-      - "Usage → Data Management Application"  # {C9CE165B-5416-4c86-9175-A9C1EEE41A02} → {919C23BB-5FFF-4300-A416-F084AB9FE538}
   - name: "PDF Data from Data Provision System"
     guid: "{1DE55835-B3EB-461f-BAF4-61B9F635EDBD}"
     type: "Interface"
@@ -98,7 +96,6 @@ elements:
       This Physical Data Flow facilitates information exchange between Metadata Management Application and Content Provider. This exchange concerns inputs from the NAP Content Provider with new or updated metadata objects, requiring authorisation credentials.
     links:
       - "Association «use» → Content Provider Metadata repository interface"  # {6079A08F-B185-4a92-A51E-CB0308C73C4D} → {DAA1010E-3FD1-49b7-AC66-2080DB101A8E}
-      - "Usage → Metadata Management Module"  # {4711E1DB-BF45-4a73-BB6A-40B13785B952} → {4C1A7740-ADB9-4654-9703-57AC92DD6D54}
   - name: "PDF Metadata to Content Consumer"
     guid: "{C25F8BCA-DCD4-4894-956E-40D0218D3ACA}"
     type: "Interface"
@@ -149,7 +146,6 @@ elements:
       This Physical Data Flow facilitates information exchange between Content Provider and User Management. This exchange concerns user registration requests.
     links:
       - "Association «use» → Content Provider user management interface"  # {4FA1CE67-8DBC-47e7-A002-065873A1C146} → {D137DB55-A2D0-4a62-9A98-6144AC1C5404}
-      - "Usage → User Management Module"  # {7E9FF617-F7D6-43b5-977D-B0DFA5B3571E} → {83B61A0E-1086-4216-B72F-38DA9E185D9B}
   - name: "PDF User and Data Management"
     guid: "{5C212D22-87C8-423c-A4EE-D4FACC7598C7}"
     type: "Interface"
