@@ -17,7 +17,7 @@ elements:
       
       Mnemonic: esp.bsp
     links:
-      - "Aggregation «component of» → External Service Provider"  # {3796D12A-BCA9-4158-9478-9E85EBFC67DE} → {73960376-E008-4811-B5BB-B58A1E143730}
+      - "Abstraction «is Type of» → External Service Provider"  # {3796D12A-BCA9-4158-9478-9E85EBFC67DE} → {73960376-E008-4811-B5BB-B58A1E143730}
       - "Association «IN» → fesp.bsp-bookable_service_information"  # {0629471A-F823-48be-8BEA-C6F55FB41537} → {EE9123A0-6E79-4686-B6D2-0931651A7677}
   - name: "Bridge Operator"
     guid: "{A97F4F7D-0727-40a6-BB92-CDAC21D9D2D2}"
@@ -32,7 +32,7 @@ elements:
       
       Mnemonic: o.bo
     links:
-      - "Aggregation «component of» → Operator"  # {9F3F4B69-7090-40c3-8405-188028DDBFF6} → {102BBDF5-FF2D-4077-AD52-BEE0EA237E1C}
+      - "Abstraction «is Type of» → Operator"  # {9F3F4B69-7090-40c3-8405-188028DDBFF6} → {102BBDF5-FF2D-4077-AD52-BEE0EA237E1C}
       - "Association «IN» → fo.bo-bridge_action_definitions"  # {B22C1265-AB07-4f2a-A966-21B36819A046} → {C12526B2-F232-4097-B90A-0BEC15CA17DB}
       - "Association «IN» → fo.bo-bridge_operator_inputs"  # {B5ADEAE6-287A-4a00-9D4E-8A0D6648EF68} → {55A37B65-72AD-4900-ADC8-EC9ED64D3A30}
       - "Association «IN» → fo.bo-weather_condition_action_request_response"  # {2F3A23F8-61FA-4212-B602-8C0D50C7523C} → {4C0565B4-917B-47fc-AE29-44BF6BBE712C}
@@ -49,7 +49,7 @@ elements:
       
       Mnemonic: bti.bs
     links:
-      - "Aggregation «component of» → Bridge/Tunnel Infrastructure"  # {D63FF626-0273-408a-BFBA-3DE5BF17F91A} → {238D1096-B655-4900-BF9D-2B03E46D0D25}
+      - "Abstraction «is Type of» → Bridge/Tunnel Infrastructure"  # {D63FF626-0273-408a-BFBA-3DE5BF17F91A} → {238D1096-B655-4900-BF9D-2B03E46D0D25}
       - "Association «IN» → fbti.bs-current_status"  # {2FE01CB6-3278-4cac-AD2E-679AFC0DB652} → {970D54CE-9651-48fe-B1C4-35823807896F}
   - name: "Broadcaster"
     guid: "{4FA5F25A-9124-4023-A0AC-A2454FC4E666}"
@@ -64,7 +64,7 @@ elements:
       
       Mnemonic: esp.b
     links:
-      - "Aggregation «component of» → External Service Provider"  # {63F77AC3-29D4-48f4-ABFD-4912BBD4F6AF} → {73960376-E008-4811-B5BB-B58A1E143730}
+      - "Abstraction «is Type of» → External Service Provider"  # {63F77AC3-29D4-48f4-ABFD-4912BBD4F6AF} → {73960376-E008-4811-B5BB-B58A1E143730}
       - "Association «IN» → fesp.b-incident_information_requests"  # {210AC998-53A1-4c3b-B9FB-6795082AFC40} → {C8CD6D82-91AE-48bb-AF65-A700EF6D9FE2}
       - "Association «IN» → fesp.b-inter-urban_traffic_information_request"  # {96ECF710-6BDD-4530-883F-B7367EEF608E} → {49D931D3-F40D-4137-8235-4629BDBB2DC9}
       - "Association «IN» → fesp.b-request_current_incident_strategies"  # {B88275BC-E293-47d0-A00F-E9B3F93BAF3F} → {ADDFBD50-4C34-4cbb-BBA1-0A8A1F48D873}
@@ -83,7 +83,7 @@ elements:
       
       Mnemonic: o.co
     links:
-      - "Aggregation «component of» → Operator"  # {464EB324-D34E-47b4-81FC-586056309C22} → {102BBDF5-FF2D-4077-AD52-BEE0EA237E1C}
+      - "Abstraction «is Type of» → Operator"  # {464EB324-D34E-47b4-81FC-586056309C22} → {102BBDF5-FF2D-4077-AD52-BEE0EA237E1C}
       - "Association → Public Land Mobile Network"  # {8A24C1B0-0640-4773-95C9-703FAFF8D096} → {B5308147-42F5-4b91-817C-2BBAFA39A178}
       - "Association «IN» → fo.co-PSAP_data_inputs"  # {1F11C970-2DEC-402d-8890-C99C41D0E44B} → {19BF87B2-DEE8-460b-84A9-C991320AEB62}
       - "Association «IN» → fo.co-PSAP_data_update"  # {9C0F10F8-D40C-4c83-B08A-DBA331558783} → {A1581061-0EFC-4e20-B411-D4AA992521A8}
@@ -101,7 +101,7 @@ elements:
       
       Mnemonic: t.c
     links:
-      - "Aggregation «component of» → Traveller"  # {6DCC6D3C-5960-480c-AC31-4C56E27818FD} → {5F83A087-8531-4855-A274-F88A8ACBBAF0}
+      - "Abstraction «is Type of» → Traveller"  # {6DCC6D3C-5960-480c-AC31-4C56E27818FD} → {5F83A087-8531-4855-A274-F88A8ACBBAF0}
   - name: "Driver and Vehicle Information Provider"
     guid: "{AA6E7062-3E5F-4b53-BD48-A6831CEEF612}"
     type: "Actor"
@@ -115,7 +115,7 @@ elements:
       
       Mnemonic: esp.dvip
     links:
-      - "Aggregation «component of» → External Service Provider"  # {818FB35C-CA8D-429a-BCE5-316A42487CBE} → {73960376-E008-4811-B5BB-B58A1E143730}
+      - "Abstraction «is Type of» → External Service Provider"  # {818FB35C-CA8D-429a-BCE5-316A42487CBE} → {73960376-E008-4811-B5BB-B58A1E143730}
       - "Association «IN» → fesp.dvip-identification_response"  # {C659AE65-8721-43f9-99BA-2F46B7138D9E} → {98F80403-7FE8-428f-B06C-DAB718EE8925}
       - "Association «IN» → fesp.dvip-vehicle_data_for_inter-urban_fcd_check"  # {597D5678-59D6-4c73-88B1-E3997105B306} → {0BF0E1FF-BE9F-4c18-A8B7-82258F285024}
       - "Association «IN» → fesp.dvip-vehicle_data_for_urban_fcd_check"  # {892B71BB-59FE-4ed9-AE18-1C2D803308D4} → {E316E842-0D05-4006-8406-DAB3E33E60A0}
@@ -132,7 +132,7 @@ elements:
       
       Mnemonic: o.epo
     links:
-      - "Aggregation «component of» → Operator"  # {4075C7BF-69C6-43d6-8E15-173B3F95174B} → {102BBDF5-FF2D-4077-AD52-BEE0EA237E1C}
+      - "Abstraction «is Type of» → Operator"  # {4075C7BF-69C6-43d6-8E15-173B3F95174B} → {102BBDF5-FF2D-4077-AD52-BEE0EA237E1C}
       - "Association «IN» → fo.epo-access_criteria"  # {01D9EE76-9297-4fb9-93F2-24398BA73C29} → {BE42CC8A-532C-4c43-BF95-E33724AD7BBB}
       - "Association «IN» → fo.epo-contract_statistics_request"  # {7BD7227E-369D-4908-A6C5-B387184E4B53} → {A636ECEE-EEBF-4fdd-AE22-633665C2CCFF}
       - "Association «IN» → fo.epo-pepf_services_available"  # {26993CFB-0BD7-4151-9027-BEC0B2AC127C} → {6E9C4C93-93D6-4743-A149-C36848DAE64D}
@@ -151,7 +151,7 @@ elements:
       
       Mnemonic: ors.ems
     links:
-      - "Aggregation «component of» → Other Related System"  # {C7FF1EA2-065B-43c2-84D0-C04FA7B96F63} → {AB919AF2-B1C5-45bf-8731-FB6EC44C2A2E}
+      - "Abstraction «is Type of» → Other Related System"  # {C7FF1EA2-065B-43c2-84D0-C04FA7B96F63} → {AB919AF2-B1C5-45bf-8731-FB6EC44C2A2E}
       - "Association → PSAP eCall Modem Server"  # {2C2CAF87-3511-40d9-9844-F66CF0041082} → {56CFDFDB-8969-43ad-B329-1CA7CD510A4F}
       - "Association «IN» → fors.ems-emergency_or_incident_notification"  # {62B0841F-D174-42ee-A680-7DF879A1C434} → {6DCFCB68-85A7-48f5-9032-00D6182F1FE1}
       - "Usage → PSAP eCall Router"  # {4880570B-6828-4803-B504-75BBB72B72D1} → {EC7D8FCD-EA59-4507-B0CD-31F4B8D47D38}
@@ -168,7 +168,7 @@ elements:
       
       Mnemonic: o.eo
     links:
-      - "Aggregation «component of» → Operator"  # {746C6B00-4F21-4b58-B521-568193E21EF3} → {102BBDF5-FF2D-4077-AD52-BEE0EA237E1C}
+      - "Abstraction «is Type of» → Operator"  # {746C6B00-4F21-4b58-B521-568193E21EF3} → {102BBDF5-FF2D-4077-AD52-BEE0EA237E1C}
       - "Association → PSAP eCall Modem Server"  # {2E4DE6F0-F99E-4ae8-9450-283CE40ACFF2} → {56CFDFDB-8969-43ad-B329-1CA7CD510A4F}
       - "Association «IN» → fo.eo-commands"  # {8F0FCC2E-2C20-4462-93C1-541528F432FA} → {3DB32641-035B-4f7d-A288-B42C7B468D4A}
       - "Association «IN» → fo.eo-request_statistical_report"  # {25E2E980-FABE-43cb-A3E4-75707CC39FC1} → {C038884C-94E6-4b33-AA11-C411F44B9BB8}
@@ -186,7 +186,7 @@ elements:
       
       Mnemonic: d.evd
     links:
-      - "Aggregation «component of» → Driver"  # {A8847E92-7AD5-4583-A7C1-AB06B6794CA5} → {0C560BF0-702E-48c1-B7F0-69F55BF03556}
+      - "Abstraction «is Type of» → Driver"  # {A8847E92-7AD5-4583-A7C1-AB06B6794CA5} → {0C560BF0-702E-48c1-B7F0-69F55BF03556}
       - "Association «IN» → fd.evd-command_inputs"  # {95A00FDE-29B4-49f4-9F4B-1D8CA263250C} → {C799F5F7-FBCB-4a13-8FE2-1E5FAE6DCB1A}
       - "Association «IN» → fd.evd-deploy_virtual_cones"  # {24C8285B-83FF-4ba8-A3C3-20AE440AC684} → {BE4E25D8-5FFD-4dab-8C51-5755D0B6F050}
       - "Association «IN» → fd.evd-green_wave_request"  # {25F7F52C-5A04-468b-9343-D4658B0823E2} → {16EE5446-20CB-4e77-B3A8-AF4FDA16C74A}
@@ -204,7 +204,7 @@ elements:
       
       Mnemonic: ors.etms
     links:
-      - "Aggregation «component of» → Other Related System"  # {ABEF60C2-DCA2-4341-AD76-9946EE8E1787} → {AB919AF2-B1C5-45bf-8731-FB6EC44C2A2E}
+      - "Abstraction «is Type of» → Other Related System"  # {ABEF60C2-DCA2-4341-AD76-9946EE8E1787} → {AB919AF2-B1C5-45bf-8731-FB6EC44C2A2E}
       - "Association «IN» → fors.etms-environmental_data_updates"  # {C779178D-546C-4d16-ACB1-F28D495C0CAA} → {03327867-84D1-4aa1-B6E7-766445F5AF1C}
   - name: "Freight Terminal Area"
     guid: "{4635FD01-0425-4d5c-953B-2C06153158FB}"
@@ -219,7 +219,7 @@ elements:
       
       Mnemonic: ft.fta
     links:
-      - "Aggregation «component of» → Freight Transport"  # {14B685B5-5950-49c7-8935-55C3745C65C5} → {662CD0E2-2FF1-4cc1-9FAC-D2280761477E}
+      - "Abstraction «is Type of» → Freight Transport"  # {14B685B5-5950-49c7-8935-55C3745C65C5} → {662CD0E2-2FF1-4cc1-9FAC-D2280761477E}
   - name: "Freight Transport Operations Manager"
     guid: "{C7318974-F99A-4b00-B67C-EAD17D30AE73}"
     type: "Actor"
@@ -233,7 +233,7 @@ elements:
       
       Mnemonic: ft.ftom
     links:
-      - "Aggregation «component of» → Freight Transport"  # {419A6E3C-2C01-4577-96AB-87F5190440A4} → {662CD0E2-2FF1-4cc1-9FAC-D2280761477E}
+      - "Abstraction «is Type of» → Freight Transport"  # {419A6E3C-2C01-4577-96AB-87F5190440A4} → {662CD0E2-2FF1-4cc1-9FAC-D2280761477E}
   - name: "Freight Transport User"
     guid: "{5F15D024-DF71-46ba-B5E3-D62C2AFD543C}"
     type: "Actor"
@@ -247,7 +247,7 @@ elements:
       
       Mnemonic: ft.ftu
     links:
-      - "Aggregation «component of» → Freight Transport"  # {B0E4098E-B109-4a05-AE18-37089E3B70C1} → {662CD0E2-2FF1-4cc1-9FAC-D2280761477E}
+      - "Abstraction «is Type of» → Freight Transport"  # {B0E4098E-B109-4a05-AE18-37089E3B70C1} → {662CD0E2-2FF1-4cc1-9FAC-D2280761477E}
       - "Association «IN» → fft.ftu-new_FTEP_request"  # {F27FE243-F857-4bc4-A22A-964761F68DDF} → {997ED10C-2392-4730-BBB0-B278557831D1}
       - "Association «IN» → fft.ftu-request_FTEP_data"  # {7DA18E26-1CD3-4e89-9B26-63B51D4011FE} → {80CC94D5-A9D6-4fc4-BE29-FE10373587F9}
   - name: "Freight Vehicle"
@@ -263,7 +263,7 @@ elements:
       
       Mnemonic: v.fv
     links:
-      - "Aggregation «component of» → Vehicle"  # {BF85EA44-00F7-4a0a-86DD-55C0AD0B863C} → {9021465A-4479-4fa8-B8DB-3481C001B9C3}
+      - "Abstraction «is Type of» → Vehicle"  # {BF85EA44-00F7-4a0a-86DD-55C0AD0B863C} → {9021465A-4479-4fa8-B8DB-3481C001B9C3}
       - "Association «IN» → fv.fv-freight_vehicle_identity_for_holding_zone"  # {342309C7-8D4F-4b12-A55D-C5FC624835A4} → {55C764D7-1CED-47e3-994A-A639B9799E2B}
       - "Association «IN» → fv.fv-freight_vehicle_identity_for_rest_area"  # {DB9EC3F3-E033-41fa-85F1-83CD760F34C1} → {F88C343D-8C4C-4cc3-8594-5B48B5AE42DF}
       - "Association «IN» → fv.fv-freight_vehicle_identity_for_un/loading_zone"  # {422F3633-D974-472c-9A48-54F37081A85D} → {5FC8DCE7-9265-4b13-A629-568A3C30962D}
@@ -281,7 +281,7 @@ elements:
       
       Mnemonic: d.fvd
     links:
-      - "Aggregation «component of» → Driver"  # {B49E156D-69D8-4a34-8AAF-29F956B42874} → {0C560BF0-702E-48c1-B7F0-69F55BF03556}
+      - "Abstraction «is Type of» → Driver"  # {B49E156D-69D8-4a34-8AAF-29F956B42874} → {0C560BF0-702E-48c1-B7F0-69F55BF03556}
       - "Association «IN» → fd.fvd-find_new_rest_area_booking"  # {460F99F8-A1B7-4e36-BC8D-4409E7153098} → {58307648-B377-403d-84B3-97C5522AC5FE}
       - "Association «IN» → fd.fvd-rest_area_booking_needed"  # {07A7F87B-72A3-4eb8-A673-EBFDF50BCD0A} → {03CAC915-156C-4346-8590-70C1B2A9DBAA}
       - "Association «IN» → fd.fvd-rest_area_booking_request_response"  # {4E6C9720-1A48-4469-A471-5D77F0DDA0F1} → {9D1D6037-50A2-42ed-96E5-789D062A8397}
@@ -304,7 +304,7 @@ elements:
       
       Mnemonic: esp.gip
     links:
-      - "Aggregation «component of» → External Service Provider"  # {E8B87B36-5C8A-44f3-862B-8782F5249927} → {73960376-E008-4811-B5BB-B58A1E143730}
+      - "Abstraction «is Type of» → External Service Provider"  # {E8B87B36-5C8A-44f3-862B-8782F5249927} → {73960376-E008-4811-B5BB-B58A1E143730}
       - "Association «IN» → fesp.gip-poi_information"  # {E520CA33-5860-41c1-ACBB-1A0168887E68} → {29B4C30E-EC0B-4bdb-9594-A7811B11DE8C}
       - "Association «IN» → fesp.gip-ps_information"  # {A808ED04-C22A-4d81-B42B-36F6EE647E65} → {19914E0F-1A6C-4231-B7A0-280CCE9C0B20}
   - name: "Geographic Information Provider"
@@ -320,7 +320,7 @@ elements:
       
       Mnemonic: esp.g
     links:
-      - "Aggregation «component of» → External Service Provider"  # {697B1EF5-98E2-4b4d-A458-FF1964B1A734} → {73960376-E008-4811-B5BB-B58A1E143730}
+      - "Abstraction «is Type of» → External Service Provider"  # {697B1EF5-98E2-4b4d-A458-FF1964B1A734} → {73960376-E008-4811-B5BB-B58A1E143730}
       - "Association «IN» → fesp.g-ISA_information"  # {7F94AC8F-2904-4639-ABCD-9E4439510D25} → {7E10DB24-1695-450c-B8A9-5181CE375981}
       - "Association «IN» → fesp.g-digital_map_data_for_emergency_vehicle"  # {EED4C31D-126F-4944-AAA4-8954CF2B9446} → {09864EC8-2CD8-4f9d-B575-A94EBFEE3A3F}
       - "Association «IN» → fesp.g-inter-urban_static_road_data"  # {FE2AEA15-FF62-4959-9444-8B2A11D1EAF8} → {C8F279C6-A74A-48be-B0C0-0EC3EC85F967}
@@ -347,7 +347,7 @@ elements:
       
       Mnemonic: d.hgvd
     links:
-      - "Aggregation «component of» → Driver"  # {22E2B9E5-16BF-4cbb-8978-F6F36C6AC136} → {0C560BF0-702E-48c1-B7F0-69F55BF03556}
+      - "Abstraction «is Type of» → Driver"  # {22E2B9E5-16BF-4cbb-8978-F6F36C6AC136} → {0C560BF0-702E-48c1-B7F0-69F55BF03556}
       - "Association «IN» → fd.hgvd-implement_route"  # {AE7BC285-9A5D-46d8-BB7C-F194986C17B1} → {C29AA9E2-0948-4c82-97FB-E00957131F28}
       - "Association «IN» → fd.hgvd-redetermine_route_request"  # {07893C19-EFB9-4780-84AB-C10DB44DA14B} → {7FB7EAAC-7CF4-4b7a-A9EC-2C8638E504BA}
       - "Association «IN» → fd.hgvd-route_request_details"  # {FDFF82B4-A9E5-4fe1-A2C9-856571128EDE} → {808DD15D-CC02-444f-9C52-09C223040C05}
@@ -364,7 +364,7 @@ elements:
       
       Mnemonic: ors.hgvm
     links:
-      - "Aggregation «component of» → Other Related System"  # {E17C6F0F-65BA-41ff-9F38-259CADEE8250} → {AB919AF2-B1C5-45bf-8731-FB6EC44C2A2E}
+      - "Abstraction «is Type of» → Other Related System"  # {E17C6F0F-65BA-41ff-9F38-259CADEE8250} → {AB919AF2-B1C5-45bf-8731-FB6EC44C2A2E}
       - "Association «IN» → fors.hgvm-hazardous_goods_vehicle_route_details"  # {1F056082-EFF3-4888-8166-4067F185C68C} → {700737C5-8249-406f-B210-6AFEB48D82C1}
   - name: "Human Machine Interface"
     guid: "{2AC0E624-0294-4cdb-A41E-985793E7B3B6}"
@@ -379,7 +379,7 @@ elements:
       
       Mnemonic: v.hmi
     links:
-      - "Aggregation «component of» → Vehicle"  # {9A9A93EF-C212-4e68-9754-67C21522C15E} → {9021465A-4479-4fa8-B8DB-3481C001B9C3}
+      - "Abstraction «is Type of» → Vehicle"  # {9A9A93EF-C212-4e68-9754-67C21522C15E} → {9021465A-4479-4fa8-B8DB-3481C001B9C3}
       - "Association «IN» → fv.hmi-initiate_eCall"  # {DBA529DA-4186-44ac-8A60-24FB515E06B1} → {13FBAB78-2BDD-4e79-BB22-2F578B56ADA4}
   - name: "Incident Traffic Management System"
     guid: "{BE6EF50C-DAB2-4d43-B95C-DA08388FE859}"
@@ -394,7 +394,7 @@ elements:
       
       Mnemonic: ors.itms
     links:
-      - "Aggregation «component of» → Other Related System"  # {5344E096-DCEE-41c1-8974-453C9B0557A7} → {AB919AF2-B1C5-45bf-8731-FB6EC44C2A2E}
+      - "Abstraction «is Type of» → Other Related System"  # {5344E096-DCEE-41c1-8974-453C9B0557A7} → {AB919AF2-B1C5-45bf-8731-FB6EC44C2A2E}
       - "Association «IN» → fors.itms-incident_strategy"  # {1C698AF0-D7F5-414e-BC16-AE312887B257} → {F161F439-8FE8-448d-BA68-8C937F1D22E6}
   - name: "Inter-urban Traffic Management System"
     guid: "{E70B933D-261A-46a7-B053-C6AA45895189}"
@@ -409,7 +409,7 @@ elements:
       
       Mnemonic: ors.iutms
     links:
-      - "Aggregation «component of» → Other Related System"  # {ECB8269C-E218-45d5-BAF6-28F410BFDF85} → {AB919AF2-B1C5-45bf-8731-FB6EC44C2A2E}
+      - "Abstraction «is Type of» → Other Related System"  # {ECB8269C-E218-45d5-BAF6-28F410BFDF85} → {AB919AF2-B1C5-45bf-8731-FB6EC44C2A2E}
       - "Association «IN» → fors.iutms-inter-urban_data_transfer"  # {77FF0058-0EEB-473e-91D4-31F0F0A9AA4A} → {B51F0DA2-49B9-45d2-B413-CED4BE4425E6}
       - "Association «IN» → fors.iutms-inter-urban_data_updates"  # {58545A16-14DD-42a6-99D3-7ACB17FC8BCA} → {5F182CBA-3DD8-4581-8431-D4FA1107258B}
       - "Association «IN» → fors.iutms-inter-urban_traffic_management_strategy"  # {8DDA7A8B-58B9-4db8-B927-93973E2DDC1E} → {F9DA96D4-B1A7-4c45-8F6B-F61BC1E52262}
@@ -426,7 +426,7 @@ elements:
       
       Mnemonic: esp.mcp
     links:
-      - "Aggregation «component of» → External Service Provider"  # {48F9F12E-B010-42b9-A187-3290E26596C5} → {73960376-E008-4811-B5BB-B58A1E143730}
+      - "Abstraction «is Type of» → External Service Provider"  # {48F9F12E-B010-42b9-A187-3290E26596C5} → {73960376-E008-4811-B5BB-B58A1E143730}
       - "Association «IN» → fesp.mcp-inter-urban_network_journey_time_data"  # {8B23332B-84AE-4ec5-9182-63A5A3139E81} → {F6596129-E1B2-486f-9016-6C9816130F09}
       - "Association «IN» → fesp.mcp-urban_network_journey_time_data"  # {46DB8BC9-9604-480b-8A4F-8AB754369EB7} → {B7744E7A-0962-4c93-B9DB-A2CC49C9FC6B}
   - name: "Multi-Modal Crossing"
@@ -442,7 +442,7 @@ elements:
       
       Mnemonic: mms.mmc
     links:
-      - "Aggregation «component of» → Multi-Modal System"  # {2B4EAB16-C83E-4ae3-9BB1-04B4EC2A18BE} → {05CAA29F-450A-4dcf-8141-059421D3CB54}
+      - "Abstraction «is Type of» → Multi-Modal System"  # {2B4EAB16-C83E-4ae3-9BB1-04B4EC2A18BE} → {05CAA29F-450A-4dcf-8141-059421D3CB54}
       - "Association «IN» → fmms.mmc-crossing_request"  # {F6DC1C50-EF95-415e-BE54-D8B06B1CF91E} → {5BB90974-ECDD-49cc-82E5-FEE837E2B46D}
       - "Association «IN» → fmms.mmc-inter-urban_crossing_request"  # {A4232522-7E0B-4e39-9C75-9F13A82C0154} → {98A3FAE3-2363-46ae-AE8C-CFBD7BE0153C}
       - "Association «IN» → fmms.mmc-urban_crossing_command"  # {C5C151BD-BAA6-4a5c-B5F0-5CC87C5B2730} → {AD6488D6-CAE0-471d-A000-70EE2F2BC85C}
@@ -461,7 +461,7 @@ elements:
       
       Mnemonic: mms.mmms
     links:
-      - "Aggregation «component of» → Multi-Modal System"  # {836B2397-E997-47c5-B0F1-C00DB67CC7CC} → {05CAA29F-450A-4dcf-8141-059421D3CB54}
+      - "Abstraction «is Type of» → Multi-Modal System"  # {836B2397-E997-47c5-B0F1-C00DB67CC7CC} → {05CAA29F-450A-4dcf-8141-059421D3CB54}
       - "Association «IN» → fmms.mms-PT_service_change_request"  # {3F0EABA8-999C-42db-8588-780BEC3E4270} → {C0F2B0B8-7A2C-49a8-9A75-A34CAAE46E55}
       - "Association «IN» → fmms.mms-accident_information"  # {52A36793-4E76-4349-A679-1858CD668B4F} → {7F740A81-04CC-4459-84C6-16B2C9FBFEC6}
       - "Association «IN» → fmms.mms-control_parameters"  # {3123FC89-BD7F-41ec-9D0C-CC49AED6652A} → {02C61A7A-5A56-4c5e-8028-5D67EBE96524}
@@ -488,7 +488,7 @@ elements:
       
       Mnemonic: esp.mmtip
     links:
-      - "Aggregation «component of» → External Service Provider"  # {DAF83091-FB65-4b75-B605-AD131FFFD422} → {73960376-E008-4811-B5BB-B58A1E143730}
+      - "Abstraction «is Type of» → External Service Provider"  # {DAF83091-FB65-4b75-B605-AD131FFFD422} → {73960376-E008-4811-B5BB-B58A1E143730}
       - "Association «IN» → fesp.mmtip-requested_travel_information"  # {72F439EF-A72B-458f-BFF7-3A8CE538A3B6} → {7FD0BA62-D9FA-492d-A732-DD0CAD725DD9}
   - name: "NAP Content Consumer"
     guid: "{A8478CF0-37A0-4638-BECC-CBB89B7519C6}"
@@ -504,7 +504,7 @@ elements:
       Tasks: Receive content
       Mnemonic: nap.cc
     links:
-      - "Aggregation «component of» → NAP Actors"  # {64796CDC-48E2-4c02-A3BC-1423EE8551B1} → {FAF5089D-CEC9-4fac-A49D-D18F6E0ADC95}
+      - "Abstraction «is Type of» → NAP Actors"  # {64796CDC-48E2-4c02-A3BC-1423EE8551B1} → {FAF5089D-CEC9-4fac-A49D-D18F6E0ADC95}
       - "Association «IN» → fnap.cc-data_request"  # {8FAE295E-9A6E-402a-BCCC-A815BC962D13} → {AFB3FDE3-5682-463a-A966-CEF77741C6A9}
       - "Association «IN» → fnap.cc-metadata_search_request"  # {8514D373-6020-4a9f-B727-956CBD5E0380} → {DCE578B8-265B-47f6-906D-8C4E9593F623}
       - "Association «IN» → fnap.cc-registration_request"  # {B8B2A2CD-EE11-4103-BADA-CF667113F6AE} → {7777AD14-8D53-466c-9949-22CFAB635676}
@@ -527,7 +527,7 @@ elements:
       Tasks: Provide content relevant to the ITS domain and according to contracts with the NAP and content consumers
       Mnemonic: nap.cp
     links:
-      - "Aggregation «component of» → NAP Actors"  # {94807A04-4070-4301-9714-33F0C29F6384} → {FAF5089D-CEC9-4fac-A49D-D18F6E0ADC95}
+      - "Abstraction «is Type of» → NAP Actors"  # {94807A04-4070-4301-9714-33F0C29F6384} → {FAF5089D-CEC9-4fac-A49D-D18F6E0ADC95}
       - "Association «IN» → fnap.cp-metadata_&_authorisation_credentials"  # {8B618D2B-3C13-40d6-8EF8-2F96E80963F0} → {00BDD6C9-80B2-4dee-90C4-810AB30E51F8}
       - "Association «IN» → fnap.cp-support_request"  # {12656EAF-E4E6-4836-98E0-BB70CF903760} → {D597AA27-D232-49ad-8A7F-D4F246F9E217}
       - "Usage → NAP Content Provider Application"  # {51783470-D8DC-4747-9249-ECC3EC6FDC2B} → {9D9DEAFB-7B63-41bb-B460-EDEF2367FB6C}
@@ -544,7 +544,7 @@ elements:
       
       Mnemonic: d.odsd
     links:
-      - "Aggregation «component of» → Driver"  # {47B6A068-37BC-43ca-B1B6-4CB8CD03E5F6} → {0C560BF0-702E-48c1-B7F0-69F55BF03556}
+      - "Abstraction «is Type of» → Driver"  # {47B6A068-37BC-43ca-B1B6-4CB8CD03E5F6} → {0C560BF0-702E-48c1-B7F0-69F55BF03556}
       - "Association «IN» → fd.odsd-driver_inputs"  # {DFC4DB62-1E67-40c4-A8BE-2B82B838F95B} → {615B7D23-90DB-41a3-B8A4-FFF1B74BDE88}
       - "Association «IN» → fd.odsd-instruction_acknowledgement"  # {F262AAE6-3437-4954-A0F1-758DFB36C301} → {E4BF54D2-6F45-4745-8C83-46EB9DFE5272}
       - "Association «IN» → fd.odsd-message_from_vehicle"  # {F902DBF7-89FB-4d3c-8B42-79E5299CC0D4} → {3775AD22-B463-4bf5-91FE-93E59F0E5B29}
@@ -561,7 +561,7 @@ elements:
       
       Mnemonic: o.odso
     links:
-      - "Aggregation «component of» → Operator"  # {039B7469-7867-4aa7-9D44-769B10A7D02F} → {102BBDF5-FF2D-4077-AD52-BEE0EA237E1C}
+      - "Abstraction «is Type of» → Operator"  # {039B7469-7867-4aa7-9D44-769B10A7D02F} → {102BBDF5-FF2D-4077-AD52-BEE0EA237E1C}
       - "Association «IN» → fo.odso-operator_inputs"  # {59D09D5E-06B3-45f0-827A-E4E36FE31717} → {708E369C-7F2E-4e79-8F2D-A969CC898710}
       - "Association «IN» → fo.odso-provide_message_for_driver"  # {95FE5E57-6277-430e-A13D-0D0C99DD5B46} → {88051A11-373D-40b1-94FB-67E73D58A309}
       - "Association «IN» → fo.odso-provide_road_network_data"  # {F4D24B45-8269-41e6-BFF1-A5ECEEB736BB} → {57E11186-3709-487e-ADF0-0C9378D58E8A}
@@ -581,7 +581,7 @@ elements:
       .
       Mnemonic: t.odsp
     links:
-      - "Aggregation «component of» → Traveller"  # {748B0A51-51B0-4970-9C98-3889CC92E1A2} → {5F83A087-8531-4855-A274-F88A8ACBBAF0}
+      - "Abstraction «is Type of» → Traveller"  # {748B0A51-51B0-4970-9C98-3889CC92E1A2} → {5F83A087-8531-4855-A274-F88A8ACBBAF0}
   - name: "On-Demand Service Vehicle"
     guid: "{EF0D592A-F90F-4a3b-A9C0-AE3EFB16DDC6}"
     type: "Actor"
@@ -595,7 +595,7 @@ elements:
       
       Mnemonic: v.odsv
     links:
-      - "Aggregation «component of» → Vehicle"  # {DC589D53-AE29-46a0-8251-B3D72CCD7535} → {9021465A-4479-4fa8-B8DB-3481C001B9C3}
+      - "Abstraction «is Type of» → Vehicle"  # {DC589D53-AE29-46a0-8251-B3D72CCD7535} → {9021465A-4479-4fa8-B8DB-3481C001B9C3}
       - "Association «IN» → fv.odsv-passenger_numbers"  # {6BC879AF-914E-477f-B1F2-7132DDBD6A55} → {11C18F29-E30B-4c1e-A2A9-0A7B47C69135}
       - "Association «IN» → fv.odsv-status"  # {24A05EEA-6E15-45df-89E7-F96450A875C6} → {6DCBF601-19A4-4609-8AB1-FAE24F56D9B9}
       - "Association «IN» → fv.odsv-vehicle_inputs"  # {0D1035E1-4D0E-49bd-9702-73D2AB3AF43A} → {041F9B20-3F01-497a-B227-98664D2E174B}
@@ -612,7 +612,7 @@ elements:
       
       Mnemonic: mms.omfs
     links:
-      - "Aggregation «component of» → Multi-Modal System"  # {B6895C63-37F2-44c7-ABDA-A34BB172034D} → {05CAA29F-450A-4dcf-8141-059421D3CB54}
+      - "Abstraction «is Type of» → Multi-Modal System"  # {B6895C63-37F2-44c7-ABDA-A34BB172034D} → {05CAA29F-450A-4dcf-8141-059421D3CB54}
   - name: "Other Navigation Device"
     guid: "{17537713-F8DB-4887-A365-01FB61FCE772}"
     type: "Actor"
@@ -626,7 +626,7 @@ elements:
       
       Mnemonic: ors.ond
     links:
-      - "Aggregation «component of» → Other Related System"  # {E4EC6D15-DC2D-4660-A5DC-728974F04F63} → {AB919AF2-B1C5-45bf-8731-FB6EC44C2A2E}
+      - "Abstraction «is Type of» → Other Related System"  # {E4EC6D15-DC2D-4660-A5DC-728974F04F63} → {AB919AF2-B1C5-45bf-8731-FB6EC44C2A2E}
       - "Association «IN» → fors.ond-traffic_data"  # {32E5E774-5896-4353-B5E1-D54DCC3AD112} → {DCA3925A-C33B-4d17-A050-C4C26BC40C2D}
   - name: "Other Nearby Vehicles"
     guid: "{1ECDD44D-4BCC-4615-8057-7C09D644E611}"
@@ -640,7 +640,7 @@ elements:
       
       Mnemonic: ve.onv
     links:
-      - "Aggregation «component of» → Vehicle Environment"  # {2BFA74FD-9C6B-44dc-BF1E-EEEA4A9B8272} → {934987E7-82A3-48fb-A8DA-EDB2F5D850E7}
+      - "Abstraction «is Type of» → Vehicle Environment"  # {2BFA74FD-9C6B-44dc-BF1E-EEEA4A9B8272} → {934987E7-82A3-48fb-A8DA-EDB2F5D850E7}
       - "Association «IN» → fve.onv-vehicle_presence_indication"  # {AFCF02BD-39D7-4a03-831B-18C0949C3E7B} → {1666BA9A-96A5-4a20-8A40-318CE49FB6C2}
   - name: "Other Road Users"
     guid: "{DC6676BE-0601-4838-A7E5-FB4FD9F0586B}"
@@ -655,7 +655,7 @@ elements:
       
       Mnemonic: ve.oru
     links:
-      - "Aggregation «component of» → Vehicle Environment"  # {52F510DF-3DA6-4902-8C66-6EEF9343CC2C} → {934987E7-82A3-48fb-A8DA-EDB2F5D850E7}
+      - "Abstraction «is Type of» → Vehicle Environment"  # {52F510DF-3DA6-4902-8C66-6EEF9343CC2C} → {934987E7-82A3-48fb-A8DA-EDB2F5D850E7}
       - "Association «IN» → fve.oru-presence_indication"  # {04EF8CDD-E6F0-478a-83D9-790002F28851} → {ABDB8103-2C63-44aa-ADF4-AC4219073F7C}
   - name: "Other Vehicle"
     guid: "{5DE193C4-33D4-4afc-AA13-94B38C6126B3}"
@@ -670,7 +670,7 @@ elements:
       
       Mnemonic: v.ov
     links:
-      - "Aggregation «component of» → Vehicle"  # {14E03607-DFFF-4101-8A91-5DF3EAB0E050} → {9021465A-4479-4fa8-B8DB-3481C001B9C3}
+      - "Abstraction «is Type of» → Vehicle"  # {14E03607-DFFF-4101-8A91-5DF3EAB0E050} → {9021465A-4479-4fa8-B8DB-3481C001B9C3}
       - "Association «IN» → fv.ov-collision_warning"  # {BD869E8B-E263-4b0a-B1F7-5F4E3CDB4D0C} → {553693D9-EEA4-46ce-84B2-1A23F65CF017}
       - "Association «IN» → fv.ov-emergency_brake_application"  # {7C95153E-D0AE-4100-B9DB-886FAE1465E5} → {E95E2355-E637-4e93-AB98-EF59E13FA784}
       - "Association «IN» → fv.ov-ghost_vehicle_detected"  # {05BADAFD-1128-491b-9F58-7A1F89B03B48} → {AEB54933-6ACD-43d2-9C32-E96D58958547}
@@ -704,7 +704,8 @@ elements:
       
       Mnemonic: o.po
     links:
-      - "Aggregation «component of» → Operator"  # {4B8387A0-4B7E-4493-84FE-46AA84F109B7} → {102BBDF5-FF2D-4077-AD52-BEE0EA237E1C}
+      - "Abstraction «is Type of» → NAP Content Provider"  # {E6FD404D-E1B5-43d7-BD72-11B0DEAA5662} → {48698837-F8BB-4dca-BBDB-736CF23C778C}
+      - "Abstraction «is Type of» → Operator"  # {4B8387A0-4B7E-4493-84FE-46AA84F109B7} → {102BBDF5-FF2D-4077-AD52-BEE0EA237E1C}
       - "Association «IN» → fo.po-carpark_current_data_request"  # {6233E285-5236-4ce3-8C9D-944842E12334} → {6B286CD5-82EE-4203-AE5A-1496D05C0101}
       - "Association «IN» → fo.po-carpark_output_settings"  # {0D7086FE-2FFF-4f31-8F15-1C014E26A826} → {090552F6-FCBF-4571-AA5D-07ABBECD6D0C}
       - "Association «IN» → fo.po-carpark_payment_record_request"  # {42F0AFD8-6E49-47af-948F-0DD97F62394C} → {415A8C0B-565E-4c81-9725-C6390C000876}
@@ -722,7 +723,6 @@ elements:
       - "Association «IN» → fo.po-tPAM"  # {D26FD7BF-6B29-4df3-9915-5562AB569F25} → {B759FD5B-F946-41ad-9BC7-14BD382D26E1}
       - "Association «IN» → fo.po-urban_inputs"  # {D23E87A3-6CE0-4e9e-8F22-2D86CF37F2C2} → {A04E68AA-E207-4332-BB7D-95077557ADD5}
       - "Usage → Park Operator Application"  # {0184F10F-7157-4953-BC44-9FC5488F6C45} → {61B85395-4759-4f77-83E2-C9E902E8C2B4}
-      - "Usage «Instantiate» → NAP Content Provider"  # {E6FD404D-E1B5-43d7-BD72-11B0DEAA5662} → {48698837-F8BB-4dca-BBDB-736CF23C778C}
   - name: "Pedestrian"
     guid: "{B483AF3E-A4D3-4a44-97EB-2BC267A2D817}"
     type: "Actor"
@@ -736,7 +736,7 @@ elements:
       
       Mnemonic: t.p
     links:
-      - "Aggregation «component of» → Traveller"  # {0C90398F-7B3E-4a32-9BEC-6B7F9D7C86E9} → {5F83A087-8531-4855-A274-F88A8ACBBAF0}
+      - "Abstraction «is Type of» → Traveller"  # {0C90398F-7B3E-4a32-9BEC-6B7F9D7C86E9} → {5F83A087-8531-4855-A274-F88A8ACBBAF0}
       - "Association «IN» → ft.p-emergency_call"  # {784077E2-A846-4819-A773-A4588F979F05} → {946E76D4-88D6-4a12-A89E-A5BF100099D3}
       - "Association «IN» → ft.p-presence_indication"  # {C6EBF05A-07C8-4754-84EE-82A9FBF9E2FA} → {CF637A36-241E-482e-A41B-7F7895947E6E}
       - "Association «IN» → ft.p-urban_data"  # {F887A686-FC6B-4e3b-80EB-CBDE1821B434} → {F9620601-80BB-4e7a-97DC-1C1F4CA6C175}
@@ -753,7 +753,7 @@ elements:
       
       Mnemonic: esp.peo
     links:
-      - "Aggregation «component of» → External Service Provider"  # {99D1050B-0366-453b-A496-1DB7F8230A55} → {73960376-E008-4811-B5BB-B58A1E143730}
+      - "Abstraction «is Type of» → External Service Provider"  # {99D1050B-0366-453b-A496-1DB7F8230A55} → {73960376-E008-4811-B5BB-B58A1E143730}
       - "Association «IN» → fesp.peo-event_data"  # {98C36645-3ABB-4acb-9C56-337481412C18} → {198E219B-C2F4-42df-B7C3-F95DAFAE4807}
       - "Association «IN» → fesp.peo-planned_events"  # {07D48716-8B8A-4351-B860-0377D5C8E975} → {E41AD1BA-FA31-4ef8-92B6-2B3CCE1D2A92}
   - name: "Pre-Trip Traveller"
@@ -769,7 +769,7 @@ elements:
       
       Mnemonic: t.ptt
     links:
-      - "Aggregation «component of» → Traveller"  # {EA2DCA9A-03BE-4137-8AD9-E7697148EBAB} → {5F83A087-8531-4855-A274-F88A8ACBBAF0}
+      - "Abstraction «is Type of» → Traveller"  # {EA2DCA9A-03BE-4137-8AD9-E7697148EBAB} → {5F83A087-8531-4855-A274-F88A8ACBBAF0}
       - "Association «IN» → ft.ptt-additional_trip_parameters"  # {A9152236-EE14-43d5-A02F-8CD77FC482E2} → {958D7BA6-A5D4-49ba-97C1-4559E9C79A01}
       - "Association «IN» → ft.ptt-basic_trip_parameters"  # {34EE2216-B760-4176-88F0-B497ECE429D2} → {F01DADE9-820B-4b2f-AA99-8F0F79FC4511}
       - "Association «IN» → ft.ptt-booking_approval"  # {EA6E1961-20FC-43f4-88D0-78569A7BFA05} → {C1E47840-005E-47d5-8560-EE65D9FC427F}
@@ -797,7 +797,7 @@ elements:
       
       Mnemonic: d.ptd
     links:
-      - "Aggregation «component of» → Driver"  # {009E33C8-B55A-49e4-B403-1873E4D3EE76} → {0C560BF0-702E-48c1-B7F0-69F55BF03556}
+      - "Abstraction «is Type of» → Driver"  # {009E33C8-B55A-49e4-B403-1873E4D3EE76} → {0C560BF0-702E-48c1-B7F0-69F55BF03556}
       - "Association «IN» → fd.ptd-assign_vehicle_to_service"  # {B6BC46BA-9DFE-493b-900D-B416DC270D06} → {18725561-066C-44b8-8227-6FD9124D052B}
       - "Association «IN» → fd.ptd-control_feedbk"  # {185D9A84-97FB-4b36-9BCB-175DEE5F9993} → {176CA711-3247-4497-B1BD-463FA22758BB}
       - "Association «IN» → fd.ptd-driver_status"  # {A0911BBE-46E7-48b9-8743-DAF9349C361C} → {4DFB28C0-50C8-40ff-BB76-54C2A79228F3}
@@ -816,7 +816,7 @@ elements:
       
       Mnemonic: mo.ptmo
     links:
-      - "Aggregation «component of» → Maintenance Organisation"  # {1A04BAC3-CB6B-4973-874C-4D9F59397581} → {C531C2A9-B828-456d-8F56-C342DBA4F25F}
+      - "Abstraction «is Type of» → Maintenance Organisation"  # {1A04BAC3-CB6B-4973-874C-4D9F59397581} → {C531C2A9-B828-456d-8F56-C342DBA4F25F}
       - "Association «IN» → fmo.ptmo-plans"  # {86EDFD0C-77F6-42d9-AAB4-46FD0E048CEC} → {28CFF771-DA75-44b9-8E5D-E5306E7057E0}
   - name: "Public Transport Management System"
     guid: "{749DF1B3-1602-4c00-83E3-1F18E9539D04}"
@@ -831,7 +831,7 @@ elements:
       
       Mnemonic: ors.ptms
     links:
-      - "Aggregation «component of» → Other Related System"  # {B524B464-DA61-4f5a-8EE2-D67FF8E117B2} → {AB919AF2-B1C5-45bf-8731-FB6EC44C2A2E}
+      - "Abstraction «is Type of» → Other Related System"  # {B524B464-DA61-4f5a-8EE2-D67FF8E117B2} → {AB919AF2-B1C5-45bf-8731-FB6EC44C2A2E}
       - "Association «IN» → fors.ptms-control_parameters"  # {9F3A961C-B276-4e85-A48D-0F26CA57382C} → {54BA5D49-7BF9-41ee-924F-ECC0376C80DC}
       - "Association «IN» → fors.ptms-plans"  # {28CE5F30-F2C5-4b13-A65A-0CA8B148DF8F} → {68FB4015-CA72-4c7e-8900-E69494F515A7}
       - "Association «IN» → fors.ptms-pt_planning"  # {E000DC7F-63A6-4203-AC3B-95CFCAE861BC} → {4F691769-3F64-4021-AFDF-15C263B745F4}
@@ -848,7 +848,7 @@ elements:
       
       Mnemonic: o.pto
     links:
-      - "Aggregation «component of» → Operator"  # {622BB9A7-34C6-423c-A0F1-7ECF53CA5049} → {102BBDF5-FF2D-4077-AD52-BEE0EA237E1C}
+      - "Abstraction «is Type of» → Operator"  # {622BB9A7-34C6-423c-A0F1-7ECF53CA5049} → {102BBDF5-FF2D-4077-AD52-BEE0EA237E1C}
       - "Association «IN» → fo.pto-PT_driver_management_inputs"  # {C24A841E-5152-4714-B0BB-18D2B268CA84} → {A5AC0EFA-861C-433a-83B3-D648F88093C8}
       - "Association «IN» → fo.pto-PT_vehicle_static_data"  # {E4A6DA11-2AEA-4959-84EE-5C69D39E59D6} → {EACED9EB-BFB3-40ac-AD48-A7CF1341C410}
       - "Association «IN» → fo.pto-change_service_delivery_criteria"  # {B298124E-4925-4ca9-9002-0EE3124FC1D4} → {81C0FBFE-DB7E-4c64-B69E-81E595228496}
@@ -885,7 +885,7 @@ elements:
       
       Mnemonic: t.ptp
     links:
-      - "Aggregation «component of» → Traveller"  # {BDA3CBC4-22EA-429c-9683-376CB1921017} → {5F83A087-8531-4855-A274-F88A8ACBBAF0}
+      - "Abstraction «is Type of» → Traveller"  # {BDA3CBC4-22EA-429c-9683-376CB1921017} → {5F83A087-8531-4855-A274-F88A8ACBBAF0}
       - "Association «IN» → ft.ptp-current_fare_credit_request"  # {76C0F995-EDA9-4f40-A549-16A9D893D2FF} → {D90FCD37-16B4-4c02-92EC-B323746334E8}
       - "Association «IN» → ft.ptp-passenger_emergency"  # {E5B8D03B-4332-440e-8560-58295C00E448} → {A7A794EB-3F21-4a82-BCC1-EAB1AAEC350E}
       - "Association «IN» → ft.ptp-pay_for_journey"  # {9809A3CD-9B0B-4422-8B27-72DFB8AC1983} → {76C59B8C-AC4B-43e4-9E66-CAF325A8998C}
@@ -905,7 +905,7 @@ elements:
       
       Mnemonic: ors.pts
     links:
-      - "Aggregation «component of» → Other Related System"  # {9993E81D-2FF3-4683-907A-362C8F7340BC} → {AB919AF2-B1C5-45bf-8731-FB6EC44C2A2E}
+      - "Abstraction «is Type of» → Other Related System"  # {9993E81D-2FF3-4683-907A-362C8F7340BC} → {AB919AF2-B1C5-45bf-8731-FB6EC44C2A2E}
       - "Association «IN» → fors.pts-arrival_prediction_data"  # {FEE6948C-93ED-4dfe-8493-EA29C43AD784} → {625870DF-CAD3-4580-8771-898B860C21A3}
   - name: "Public Transport Vehicle"
     guid: "{26AF8AAA-289F-4bb7-B55B-405CEEFF79B1}"
@@ -920,7 +920,7 @@ elements:
       
       Mnemonic: v.ptv
     links:
-      - "Aggregation «component of» → Vehicle"  # {C8E47EBA-5814-424a-BA79-4D679BEBAD38} → {9021465A-4479-4fa8-B8DB-3481C001B9C3}
+      - "Abstraction «is Type of» → Vehicle"  # {C8E47EBA-5814-424a-BA79-4D679BEBAD38} → {9021465A-4479-4fa8-B8DB-3481C001B9C3}
       - "Association «IN» → fv.ptv-alarms"  # {B379A177-FFA8-4a80-A7D4-95F25E5BE34B} → {8DFF0C48-02E6-4dee-84C8-F468E085C4D4}
       - "Association «IN» → fv.ptv-control_feedbk"  # {840519CD-417B-4bde-9617-972FB3093DF1} → {861D900E-EF63-4afb-9AC1-3AF6DF2BC00B}
       - "Association «IN» → fv.ptv-local_priority_request"  # {B1979CB4-75DF-4fc5-BC40-8D8298E58EAD} → {D6BC5C1E-AF8F-4c5e-A67D-AFD750A5F13C}
@@ -941,7 +941,7 @@ elements:
       
       Mnemonic: o.rmo
     links:
-      - "Aggregation «component of» → Operator"  # {F2C852B1-8890-497d-867E-BF4DEF42FA0D} → {102BBDF5-FF2D-4077-AD52-BEE0EA237E1C}
+      - "Abstraction «is Type of» → Operator"  # {F2C852B1-8890-497d-867E-BF4DEF42FA0D} → {102BBDF5-FF2D-4077-AD52-BEE0EA237E1C}
       - "Association «IN» → fo.rmo-confirm_maintenance_activities"  # {54AB6ABD-52D3-42b2-82B4-48039D3381D6} → {83D267BB-AF4C-4346-8236-833A2E765D19}
       - "Association «IN» → fo.rmo-confirmed_de-icing_activities"  # {F6980EDC-9EE4-499e-8A84-04EF7C4DDE60} → {442E7907-18DE-4255-9D01-6E24A1C68CB1}
       - "Association «IN» → fo.rmo-maintenance_commands"  # {4C6C0150-4494-4f33-A25A-CB9F0C8BFFFB} → {DB5F8FC3-1F45-4752-87AC-90782D176308}
@@ -962,7 +962,7 @@ elements:
       
       Mnemonic: mo.rmo
     links:
-      - "Aggregation «component of» → Maintenance Organisation"  # {C560226C-6665-45b7-8F92-E13A32E03F11} → {C531C2A9-B828-456d-8F56-C342DBA4F25F}
+      - "Abstraction «is Type of» → Maintenance Organisation"  # {C560226C-6665-45b7-8F92-E13A32E03F11} → {C531C2A9-B828-456d-8F56-C342DBA4F25F}
       - "Association «IN» → fmo.rmo-de-icing_activity_update"  # {DC7C0296-A6D3-4783-A9FD-F98842F153AA} → {2C40877D-E08C-471f-B99F-859A225D33F4}
       - "Association «IN» → fmo.rmo-equipment_maintenance_activity_update"  # {FF8F88A0-4A4F-42b4-BC8A-2BBF399D4D79} → {F8397908-F9D8-46cb-AB72-56C57B4E3DDF}
       - "Association «IN» → fmo.rmo-infrastructure_diagnostics"  # {A725E95E-40A4-4edd-A345-9BC144E3D47A} → {F3F7A896-B78B-41f9-85F2-E948CDA5CC1D}
@@ -982,7 +982,7 @@ elements:
       
       Mnemonic: o.rno
     links:
-      - "Aggregation «component of» → Operator"  # {CCFCD73A-7414-4dab-9206-0AD35329A45C} → {102BBDF5-FF2D-4077-AD52-BEE0EA237E1C}
+      - "Abstraction «is Type of» → Operator"  # {CCFCD73A-7414-4dab-9206-0AD35329A45C} → {102BBDF5-FF2D-4077-AD52-BEE0EA237E1C}
       - "Association «IN» → fo.rno-bus_lane_inputs"  # {71C6B409-BCCE-4e4c-AA5A-83EE78076427} → {FD78417A-AE88-4e25-AF0D-8B5534B09DB0}
       - "Association «IN» → fo.rno-confirm_environmental_actions"  # {DE220F87-55CC-46ad-B2BC-BE4466B2A90F} → {03F66A0F-0F5D-492f-9EB1-2A0C96B2479C}
       - "Association «IN» → fo.rno-create_incident_strategy"  # {078B6B8D-9F36-494c-A554-074AD73DFB80} → {E2AAA6DB-942E-4ed8-B34D-7BEB7D25281A}
@@ -1027,7 +1027,7 @@ elements:
       
       Mnemonic: t.st
     links:
-      - "Aggregation «component of» → Traveller"  # {C17F641E-7625-45ad-8A2B-FBD4873B2CC7} → {5F83A087-8531-4855-A274-F88A8ACBBAF0}
+      - "Abstraction «is Type of» → Traveller"  # {C17F641E-7625-45ad-8A2B-FBD4873B2CC7} → {5F83A087-8531-4855-A274-F88A8ACBBAF0}
       - "Association «IN» → ft.st-traveller_emergency_at_stop"  # {5F78132C-899D-44a2-B220-ABCB1D32E8B2} → {F743B5B8-B2AA-454c-A3A1-C7EF3789DDA7}
       - "Association «IN» → ft.st-traveller_presence_at_stop"  # {CD926912-E2C2-4dfd-80C1-D94BC00A7340} → {E47D9CB4-F1B8-42e7-8BE3-B8A44FDA8A72}
   - name: "Stationary Object"
@@ -1043,7 +1043,7 @@ elements:
       
       Mnemonic: ve.so
     links:
-      - "Aggregation «component of» → Vehicle Environment"  # {9FE6ECF1-ACD7-4a1f-BA8A-CB55314A8149} → {934987E7-82A3-48fb-A8DA-EDB2F5D850E7}
+      - "Abstraction «is Type of» → Vehicle Environment"  # {9FE6ECF1-ACD7-4a1f-BA8A-CB55314A8149} → {934987E7-82A3-48fb-A8DA-EDB2F5D850E7}
       - "Association «IN» → fve.so-object_presence_indication"  # {4F412991-E843-4478-BA15-95CEA5663AA5} → {F6833E8A-6EB1-432b-854F-C73C4F526ECB}
   - name: "Traffic Signal Controller"
     guid: "{29644FE4-8D9E-44e5-AAE8-17A4A49388D9}"
@@ -1058,7 +1058,7 @@ elements:
       
       Mnemonic: ors.tsc
     links:
-      - "Aggregation «component of» → Other Related System"  # {83A657EE-D837-4753-BA00-BD3D716B01E1} → {AB919AF2-B1C5-45bf-8731-FB6EC44C2A2E}
+      - "Abstraction «is Type of» → Other Related System"  # {83A657EE-D837-4753-BA00-BD3D716B01E1} → {AB919AF2-B1C5-45bf-8731-FB6EC44C2A2E}
       - "Association «IN» → fors.tsc-local_priority_request_details"  # {139C8482-656A-4e44-8867-1223369471C5} → {04E080C8-DB8C-4f17-8A7B-2A1C2714C402}
   - name: "Traffic Simulation System"
     guid: "{3521BB9A-DD94-496c-8F94-FAD65008DE37}"
@@ -1073,7 +1073,7 @@ elements:
       
       Mnemonic: ors.tss
     links:
-      - "Aggregation «component of» → Other Related System"  # {4365FAFF-C53E-499f-AEE6-38E3230CEA3F} → {AB919AF2-B1C5-45bf-8731-FB6EC44C2A2E}
+      - "Abstraction «is Type of» → Other Related System"  # {4365FAFF-C53E-499f-AEE6-38E3230CEA3F} → {AB919AF2-B1C5-45bf-8731-FB6EC44C2A2E}
       - "Association «IN» → fors.tss-traffic_prediction_results"  # {7C311714-BA96-4dbe-8D4D-C66678765E1F} → {A9A5ED3A-2F18-450c-BAD9-17EEDB86705E}
   - name: "Traffic and Travel Information Provider"
     guid: "{75CC9989-0384-406c-8F42-CD32AEA7DDC2}"
@@ -1088,7 +1088,7 @@ elements:
       
       Mnemonic: esp.ttip
     links:
-      - "Aggregation «component of» → External Service Provider"  # {0450DB08-F5CF-4357-A423-1171D690D64E} → {73960376-E008-4811-B5BB-B58A1E143730}
+      - "Abstraction «is Type of» → External Service Provider"  # {0450DB08-F5CF-4357-A423-1171D690D64E} → {73960376-E008-4811-B5BB-B58A1E143730}
       - "Association «IN» → fesp.ttip-access_criteria"  # {C75B0D4B-2DA8-42c5-BFBE-A9FAD0F87F2E} → {BE80D41E-86AF-4435-AF77-CE2BE0BABB68}
       - "Association «IN» → fesp.ttip-contract_statistics_request"  # {9F3B4A47-AAAD-4841-B4E2-C398D57C9C71} → {AA3B423D-87AF-4a85-8A2B-0D2849E1181F}
       - "Association «IN» → fesp.ttip-request_current_incident_strategies"  # {614C6C7D-8AE9-49a4-A6B6-FD2D4B58B9C1} → {8CB9C876-4DF7-4b1a-8063-54BB3EAF4EBC}
@@ -1109,7 +1109,7 @@ elements:
       
       Mnemonic: o.tio
     links:
-      - "Aggregation «component of» → Operator"  # {8FC3F7F6-245C-40e9-B6C4-A15D09A8ABB7} → {102BBDF5-FF2D-4077-AD52-BEE0EA237E1C}
+      - "Abstraction «is Type of» → Operator"  # {8FC3F7F6-245C-40e9-B6C4-A15D09A8ABB7} → {102BBDF5-FF2D-4077-AD52-BEE0EA237E1C}
       - "Association «IN» → fo.tio-GTP_requests"  # {F0DD1F8E-FB40-49c5-BF7F-B8656A1D8288} → {FCC3CDDA-A31C-4cbf-8217-04E3A7107605}
       - "Association «IN» → fo.tio-current_travel_information_request"  # {D963CBA1-51FF-4f68-B3CC-65C7E26E43B8} → {6E0B8EC5-927E-4e8d-9963-6E1EE21DA7BF}
       - "Association «IN» → fo.tio-inter-urban_road_network_data_update"  # {AEEF945B-F50C-46d4-A299-48B92459A436} → {4A00540A-3BAE-40ee-851C-AFE3171867C4}
@@ -1136,7 +1136,7 @@ elements:
       
       Mnemonic: d.tpd
     links:
-      - "Aggregation «component of» → Driver"  # {CC9210B3-ADAA-429e-AB35-30E4B6B22097} → {0C560BF0-702E-48c1-B7F0-69F55BF03556}
+      - "Abstraction «is Type of» → Driver"  # {CC9210B3-ADAA-429e-AB35-30E4B6B22097} → {0C560BF0-702E-48c1-B7F0-69F55BF03556}
       - "Association «IN» → fd.tpd-accept_revised_vehicle_trip_plan"  # {B1FF2E3F-E2E7-489f-9CE8-AC238052E58D} → {F23CA0C8-EA4B-435f-938C-BD4269ACD691}
       - "Association «IN» → fd.tpd-implement_vehicle_trip_plan"  # {0B16B03D-27F3-4827-8C46-66D125702C4E} → {90D91877-7E7A-4f2f-9983-573998C793A5}
       - "Association «IN» → fd.tpd-modified_vehicle_trip_plan_data"  # {64828318-3C88-4249-BCB7-699E45F99F68} → {FCF9B9B1-E71B-4c84-876F-75388365A908}
@@ -1161,7 +1161,7 @@ elements:
       
       Mnemonic: bti.tms
     links:
-      - "Aggregation «component of» → Bridge/Tunnel Infrastructure"  # {2B412C0F-4430-4bb5-B363-C0134A05F8F7} → {238D1096-B655-4900-BF9D-2B03E46D0D25}
+      - "Abstraction «is Type of» → Bridge/Tunnel Infrastructure"  # {2B412C0F-4430-4bb5-B363-C0134A05F8F7} → {238D1096-B655-4900-BF9D-2B03E46D0D25}
       - "Association «IN» → fbti.tms-tunnel_system_inputs"  # {CE10796C-80C2-458f-ADD5-1D774690B06C} → {3757C2BB-926B-4575-81B9-664B6710BAA5}
   - name: "Tunnel Operator"
     guid: "{C24E9DB7-F2A5-484b-9A3B-BA2B354D5AA7}"
@@ -1176,7 +1176,7 @@ elements:
       
       Mnemonic: o.tnlo
     links:
-      - "Aggregation «component of» → Operator"  # {5E51AC6F-9D1A-4f68-8A4B-E5D4A56E313F} → {102BBDF5-FF2D-4077-AD52-BEE0EA237E1C}
+      - "Abstraction «is Type of» → Operator"  # {5E51AC6F-9D1A-4f68-8A4B-E5D4A56E313F} → {102BBDF5-FF2D-4077-AD52-BEE0EA237E1C}
       - "Association «IN» → fo.tnlo-exceptional_condition_action_response"  # {00EBB643-ACB2-460e-A8C4-DA1A6A1CEDA5} → {66686032-5DB7-4f28-B8E3-729837358706}
       - "Association «IN» → fo.tnlo-tunnel_action_definitions"  # {463C3A42-0B1E-4e84-99F7-4102AF1DC0AC} → {4BFB37CC-6AA8-4e8e-BFBC-76FE8A58C5D4}
       - "Association «IN» → fo.tnlo-tunnel_operator_inputs"  # {6BD0644E-259B-4b6a-B47D-8A9F2AC07FA5} → {FAA4FDD4-6188-4909-BA7D-9FF6F0783B2C}
@@ -1193,7 +1193,7 @@ elements:
       
       Mnemonic: o.ulzo
     links:
-      - "Aggregation «component of» → Operator"  # {C08ECE27-F6DB-4fc4-9DA2-D3D4B8C88966} → {102BBDF5-FF2D-4077-AD52-BEE0EA237E1C}
+      - "Abstraction «is Type of» → Operator"  # {C08ECE27-F6DB-4fc4-9DA2-D3D4B8C88966} → {102BBDF5-FF2D-4077-AD52-BEE0EA237E1C}
       - "Association «IN» → fo.ulzo-current_un/loading_zone_data_update"  # {C4B00C00-7458-4d01-800C-2C70FC03268B} → {5A7D8BBB-23AA-4f9c-8344-D59A27CDB930}
       - "Association «IN» → fo.ulzo-request_current_ul/loading_zone_data"  # {97B54215-EBEC-4801-812B-A187CBA309C6} → {4E47E336-0FDD-4fee-8C47-2C1D90C7DFD7}
       - "Association «IN» → fo.ulzo-un/loading_zone_inputs"  # {ECDBB999-D9C1-48d6-B71E-A9B9DAA5B32B} → {21372FF8-63CC-40db-927A-C3D72DC4BA3B}
@@ -1211,7 +1211,7 @@ elements:
       
       Mnemonic: ors.utms
     links:
-      - "Aggregation «component of» → Other Related System"  # {F07CA8C0-FC24-4f69-9480-6950054726D1} → {AB919AF2-B1C5-45bf-8731-FB6EC44C2A2E}
+      - "Abstraction «is Type of» → Other Related System"  # {F07CA8C0-FC24-4f69-9480-6950054726D1} → {AB919AF2-B1C5-45bf-8731-FB6EC44C2A2E}
       - "Association «IN» → fors.utms-urban_data_transfer"  # {3961362D-7C6A-48a6-9DA8-6CAB426A6F49} → {87DF2EB1-DCC9-4496-8BCE-5D729C8C259F}
       - "Association «IN» → fors.utms-urban_data_updates"  # {051ADDCB-37DC-415b-B82C-03718129CA7C} → {D7C9F930-6140-4714-A920-2557CCB0FDDB}
       - "Association «IN» → fors.utms-urban_traffic_management_strategies"  # {8953AD1D-4834-4d15-A7A8-250BF7672288} → {8E092B9F-7CE7-44d8-B708-8EC34F8704DB}
@@ -1228,7 +1228,7 @@ elements:
       
       Mnemonic: t.vs
     links:
-      - "Aggregation «component of» → Traveller"  # {C731662D-7CED-4f68-911E-9CADE2171ED4} → {5F83A087-8531-4855-A274-F88A8ACBBAF0}
+      - "Abstraction «is Type of» → Traveller"  # {C731662D-7CED-4f68-911E-9CADE2171ED4} → {5F83A087-8531-4855-A274-F88A8ACBBAF0}
       - "Association «IN» → ft.vs-accept_travel_plan"  # {B8FA9791-0BF7-491c-8A9A-1A1406283422} → {8CC1834A-4DD8-4a3b-8183-8C72301BDD83}
       - "Association «IN» → ft.vs-deregistration"  # {39471855-4830-4583-A96C-14B3B93DF473} → {B2DA8C3B-665B-4249-B021-0442B6C370BB}
       - "Association «IN» → ft.vs-personal_details"  # {29D6452E-517E-414e-BEC1-EB148778B986} → {FA522480-C353-491c-B587-A09795478500}
@@ -1248,7 +1248,7 @@ elements:
       
       Mnemonic: v.vs
     links:
-      - "Aggregation «component of» → Vehicle"  # {01546C1B-6ED8-45b0-BE26-1AD7DF2EB5A3} → {9021465A-4479-4fa8-B8DB-3481C001B9C3}
+      - "Abstraction «is Type of» → Vehicle"  # {01546C1B-6ED8-45b0-BE26-1AD7DF2EB5A3} → {9021465A-4479-4fa8-B8DB-3481C001B9C3}
       - "Association «IN» → fv.vs-current_vehicle_location"  # {9F3B3835-30FF-4faa-AC0D-50B86D2E9969} → {0A8642F1-84E9-4836-8A3A-7FB8C88A51AD}
       - "Association «IN» → fv.vs-input_data"  # {7475D912-A0CD-484b-A0CA-1711D465844F} → {2E320EF7-E80E-4655-928E-F4332DCF1D6F}
       - "Association «IN» → fv.vs-previous_vehicle_location"  # {2B949F31-EDAE-46e6-BAC2-C7412990531E} → {D0C3A004-1E4B-42df-AEC4-BC9D611FA391}
@@ -1276,7 +1276,7 @@ elements:
       
       Mnemonic: v.vea
     links:
-      - "Aggregation «component of» → Vehicle"  # {A2100D85-B63B-4a14-9388-B849FA60163C} → {9021465A-4479-4fa8-B8DB-3481C001B9C3}
+      - "Abstraction «is Type of» → Vehicle"  # {A2100D85-B63B-4a14-9388-B849FA60163C} → {9021465A-4479-4fa8-B8DB-3481C001B9C3}
       - "Association «IN» → fv.vea-eCall_activation_status"  # {68146967-0190-492f-AF26-4214CD618BD5} → {E011CC4A-C32A-4fca-A108-8AACF4A6AC14}
       - "Usage «Instantiate» → eCall Onboard Unit"  # {C3B688B6-7757-4e03-9D29-636D34A49847} → {3244E2A9-F15D-4568-9A9D-EBAD4BE0DD8C}
   - name: "Ambient Environment"

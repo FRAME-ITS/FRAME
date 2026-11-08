@@ -69,7 +69,7 @@ elements:
       Tasks: Receive content
       Mnemonic: nap.cc
     links:
-      - "Aggregation «component of» → NAP Actors"  # {C315C920-21DC-4a44-99FA-FB029F697E0F} → {E89EDD6C-D939-4b97-AB60-AAD3FA5FE237}
+      - "Abstraction «is Type of» → NAP Actors"  # {C315C920-21DC-4a44-99FA-FB029F697E0F} → {E89EDD6C-D939-4b97-AB60-AAD3FA5FE237}
       - "Association «IN» → fnap.cc-data_request"  # {A9C29A51-6961-4d68-9FEE-FF1FDA197CD4} → {AFB3FDE3-5682-463a-A966-CEF77741C6A9}
       - "Association «IN» → fnap.cc-metadata_search_request"  # {BE7AD80D-B732-4d10-B4CC-0E4C6725F9FB} → {CE5CAFBE-137B-4743-AB12-5EA3827B901A}
       - "Association «IN» → fnap.cc-registration_request"  # {92DA8F6B-1001-48b9-837A-33A0CAAECA83} → {7777AD14-8D53-466c-9949-22CFAB635676}
@@ -97,7 +97,7 @@ elements:
       Tasks: Provide content relevant to the ITS domain and according to contracts with the NAP and content consumers
       Mnemonic: nap.cp
     links:
-      - "Aggregation «component of» → NAP Actors"  # {76C6E1CB-C2D4-497d-9F52-2528B02B06E6} → {E89EDD6C-D939-4b97-AB60-AAD3FA5FE237}
+      - "Abstraction «is Type of» → NAP Actors"  # {76C6E1CB-C2D4-497d-9F52-2528B02B06E6} → {E89EDD6C-D939-4b97-AB60-AAD3FA5FE237}
       - "Association «IN» → fnap.cp-data_&_authorisation_credentials"  # {6EA16D14-D878-4ead-88A4-8F2BA81B96C4} → {60297FF0-CD09-4e8d-8221-0B0FF35E3239}
       - "Association «IN» → fnap.cp-metadata_&_authorisation_credentials"  # {CF2EA95A-F1FD-4971-81BD-1D347BDDE645} → {8D75B934-0C29-40d6-9C80-4963B533B29D}
       - "Association «IN» → fnap.cp-registration_request"  # {DCCA7AC8-F140-4289-8791-97625EDD8792} → {2165053D-3E67-4324-90F7-172FAA37E259}

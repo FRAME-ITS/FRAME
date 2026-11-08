@@ -984,7 +984,6 @@ elements:
       - "Dependency «stereotyped relationship» → FRAME_Physical_Data_Flow"  # {F39CA761-A6F9-4EDD-AD1F-68714A0D2180} → {D4B39B79-3440-41a8-B438-75EB7B8AC1F9}
       - "Dependency «stereotyped relationship» → FRAME_Requirement"  # {192953CC-B65D-4ec7-8F86-2FDA7A992B0E} → {AEE79FAA-7700-45ad-8E09-D35B1F39DD5A}
       - "Dependency «stereotyped relationship» → FRAME_TDF_HighLevelFunction"  # {F3ECEEEA-D0FB-4183-808C-09D25AAFC13F} → {09C8B8CD-52F9-4efe-9061-3AB152575ECA}
-      - "Dependency «stereotyped relationship» → FRAME_Terminator"  # {1B66F224-41BD-4A8D-BE05-3149802AE8FD} → {924DB332-8016-4030-B48A-73EA46503F2E}
       - "Dependency «stereotyped relationship» → FRAME_Terminator"  # {CC07B5A0-3685-4c55-B407-7AF87454478E} → {924DB332-8016-4030-B48A-73EA46503F2E}
       - "Extension → Actor"  # {D0CB0034-9A1F-475a-B492-36301526452D} → {962375A5-5624-41a8-9A23-DA6E292FE595}
       - "Generalization → ArchiMate3::ArchiMate_BusinessRole"  # {AF9C7459-7577-4b3f-A9AC-A3AF19BB8917} → {E94E3E4F-27D6-4463-9912-BBDD836660E1}
