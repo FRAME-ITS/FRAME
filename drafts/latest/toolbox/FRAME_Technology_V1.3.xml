@@ -670,7 +670,7 @@ AAA=</Image>
 							<stereotypedrelationship stereotype="FRAME_Profile::defines" constraint="FRAME_Profile::FRAME_ITS_Vision;FRAME_Profile::FRAME_Requirement"/>
 							<stereotypedrelationship stereotype="FRAME_Profile::fulfilled by" constraint="FRAME_Profile::FRAME_Requirement"/>
 							<stereotypedrelationship stereotype="FRAME_Profile::has" constraint="FRAME_Profile::FRAME_Business_Expectation;FRAME_Profile::FRAME_Desired_Architecture_Goals"/>
-							<stereotypedrelationship stereotype="FRAME_Profile::instants of" constraint="FRAME_Profile::FRAME_Organisation"/>
+							<stereotypedrelationship stereotype="FRAME_Profile::instance of" constraint="FRAME_Profile::FRAME_Organisation"/>
 						</stereotypedrelationships>
 						<AppliesTo>
 							<Apply type="Actor"/>
@@ -899,7 +899,7 @@ AA==</Image>
 							</Apply>
 						</AppliesTo>
 					</Stereotype>
-					<Stereotype name="instants of" metatype="instants of" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+					<Stereotype name="instance of" metatype="instance of" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 						<AppliesTo>
 							<Apply type="Association">
 								<Property name="_lineStyle" value="auto"/>
@@ -10871,7 +10871,7 @@ wQ3VtVk7wLDOVf+pnl9N9R+vHq1OjeEfN/T5+d8BAFS2xVKKLKxzAAAAAElFTkSuQmCC
 							<Tag name="FRAME_Profile::hosted by(UML::Association)" type="" description="" unit="" values="" default="hosted by"/>
 							<Tag name="FRAME_Profile::impacts(UML::Association)" type="" description="" unit="" values="" default="impacts"/>
 							<Tag name="FRAME_Profile::IN(UML::Association)" type="" description="" unit="" values="" default="IN"/>
-							<Tag name="FRAME_Profile::instants of(UML::Association)" type="" description="" unit="" values="" default="instants of"/>
+							<Tag name="FRAME_Profile::instance of(UML::Association)" type="" description="" unit="" values="" default="instance of"/>
 							<Tag name="FRAME_Profile::is Type of(UML::Abstraction)" type="" description="" unit="" values="" default="is Type of"/>
 							<Tag name="FRAME_Profile::OUT(UML::Association)" type="" description="" unit="" values="" default="OUT"/>
 							<Tag name="FRAME_Profile::owned by(UML::Association)" type="" description="" unit="" values="" default="owned by"/>

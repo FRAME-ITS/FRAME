@@ -23,8 +23,8 @@ P = c.execute("select Package_ID from t_package where Name='FRAME_Profile'").fet
 PD = c.execute("select Package_ID from t_package where Name='FRAME_Diagram'").fetchone()[0]
 PT = c.execute("select Package_ID from t_package where Name='FRAME_Toolbox' and Package_ID<>(select Parent_ID from t_package where Name='FRAME_Profile')").fetchone()[0]
 log = []
-RENAME_ST = {'Impacts': 'impacts', 'deliverd by': 'delivered by'}
-RENAME_TAG = {'Component of': 'component of', 'Defines': 'defines', 'Impacts': 'impacts', 'instant of': 'instants of',
+RENAME_ST = {'Impacts': 'impacts', 'deliverd by': 'delivered by', 'instants of': 'instance of'}
+RENAME_TAG = {'Component of': 'component of', 'Defines': 'defines', 'Impacts': 'impacts', 'instant of': 'instance of', 'instants of': 'instance of',
               'associated': 'associate', 'deliverd by': 'delivered by'}
 
 # stereotype classes

@@ -14,7 +14,8 @@ Base: technology V1.2 as it was stored in the model (drafts/latest/toolbox/FRAME
      ITS Service Added Value «delivers value to» Stakeholder replaces «defines».
   2. Quick Linker references to stereotypes that the profile does not define are mapped to the defined name
      (Component of, Defines, instant of, associated).
-  3. Stereotype names unified (not used by any connector in the model): «Impacts» → «impacts», «deliverd by» → «delivered by».
+  3. Stereotype names unified (not used by any connector in the model): «Impacts» → «impacts», «deliverd by» → «delivered by»,
+     «instants of» → «instance of» (#96; the 9 eCall links that used it are IN links, 2026-11-09_ecall_flow_links_instance_of.py).
   4. Model images of the published V1.0 file (start-page images) added, so that a new project gets them too.
   6. Quick Linker shows only the FRAME relationships for the core FRAME Repository stereotypes (_HideUmlLinks).
   7. Diagram type FRAME_Diagram refers to its toolbox as FRAME::FRAME_Toolbox (opens with the diagram).
@@ -35,7 +36,7 @@ log = []
 P = 'FRAME_Profile::'
 
 # 3. stereotype names (everywhere: definition, metatype, Quick Linker, toolbox)
-for old, new in (('Impacts', 'impacts'), ('deliverd by', 'delivered by')):
+for old, new in (('Impacts', 'impacts'), ('deliverd by', 'delivered by'), ('instants of', 'instance of')):
     n = len(re.findall(re.escape(old) + r'(?=["(])', x)) + len(re.findall(re.escape(P + old) + r'(?=["(;])', x))
     x = re.sub(r'(?<=["])' + re.escape(old) + r'(?=")', new, x)
     x = x.replace(P + old + '"', P + new + '"').replace(P + old + '(', P + new + '(').replace(P + old + ';', P + new + ';')
@@ -51,7 +52,7 @@ for st in ('delivers value to', 'triggers', 'implements', 'performs', 'delivers'
     log.append(f'new stereotype «{st}» (Association) with toolbox entry')
 
 # 2. Quick Linker references to undefined names
-for old, new in (('Component of', 'component of'), ('Defines', 'defines'), ('instant of', 'instants of'), ('associated', 'associate')):
+for old, new in (('Component of', 'component of'), ('Defines', 'defines'), ('instant of', 'instance of'), ('associated', 'associate')):
     n = x.count(f'stereotype="{P}{old}"')
     x = x.replace(f'stereotype="{P}{old}"', f'stereotype="{P}{new}"')
     log.append(f'Quick Linker: «{old}» → «{new}» ({n} rules)')

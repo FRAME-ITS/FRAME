@@ -1404,7 +1404,7 @@ elements:
     note: ""
     links:
       - "Extension → Association"  # {3EAED6E8-418C-4413-B12D-E75CE8D0B77C} → {DE6FC006-93D9-4e08-81AB-D48D1213701E}
-  - name: "instants of"
+  - name: "instance of"
     guid: "{A7D2F0F2-ACC9-442a-B43B-F67966E71FD1}"
     type: "Class"
     stereotype: "stereotype"

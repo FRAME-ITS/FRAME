@@ -521,7 +521,7 @@ elements:
       
       Note that the functionality that manages this Data Store does not enable the Communications Operator or any other entity to access these information objects.  This is to protect the identity and communications information of the Vehicles from which eCall messages are being processed.
     links:
-      - "Association «instants of» → psef_eCall_data_from_store"  # {C20DAE88-9F18-425e-8484-086DEB4E890C} → {8F7FDE8D-E199-40d5-B785-3FD0876038F6}
+      - "Association «IN» → psef_eCall_data_from_store"  # {C20DAE88-9F18-425e-8484-086DEB4E890C} → {8F7FDE8D-E199-40d5-B785-3FD0876038F6}
   - name: "D3.10 Inter-urban Service Area Data"
     guid: "{ACD78063-0815-45b6-BA8F-22C9D3336EAD}"
     type: "Object"
