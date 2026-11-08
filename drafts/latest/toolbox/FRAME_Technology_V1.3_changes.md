@@ -71,4 +71,5 @@ Built by `tools/fixes/2026-11-06_mdg_technology_V1.3.py`.
 - diagram type FRAME_Diagram: toolbox "FRAME_Toolbox" → "FRAME::FRAME_Toolbox" (1), so the FRAME toolbox opens with the diagram
 - toolbox label FRAME_Component: "Component" → "Sub-system" (1)
 - toolbox label FRAME_Application: "Application" → "Module" (1)
+- toolbox: plain UML Association ("associate" without stereotype) removed (1) - issue #92
 - model images added from V1.0: 7 (start-page images)

@@ -20,6 +20,7 @@ Base: technology V1.2 as it was stored in the model (drafts/latest/toolbox/FRAME
   6. Quick Linker shows only the FRAME relationships for the core FRAME Repository stereotypes (_HideUmlLinks).
   7. Diagram type FRAME_Diagram refers to its toolbox as FRAME::FRAME_Toolbox (opens with the diagram).
   8. Toolbox labels Sub-system (FRAME_Component) and Module (FRAME_Application); Actor «performs» Role replaces Role «defines» Actor.
+  9. Toolbox: the plain UML Association (second "associate") removed (#92).
   5. Version V1.3 (technology, FRAME_Profile, FRAME_Toolbox, FRAME_Diagram).
 """
 import sys, os, re, sqlite3
@@ -184,6 +185,13 @@ for st, old, new in (('FRAME_Component', 'Component', 'Sub-system'), ('FRAME_App
     n = len(re.findall(re.escape(t) + r'[^)]*\)" type="" description="" unit="" values="" default="' + old + '"', x))
     x = re.sub('(' + re.escape(t) + r'[^)]*\)" type="" description="" unit="" values="" default=")' + old + '"', r'\g<1>' + new + '"', x)
     log.append(f'toolbox label {st}: "{old}" → "{new}" ({n})')
+
+# 9. issue #92 point 6b: the toolbox page "FRAME Connectors" offered a second "associate" = plain UML Association
+#    (no stereotype, no arrow, no label); only the FRAME «associate» stays
+TAG = '<Tag name="UML::Association" type="" description="" unit="" values="" default="associate"/>'
+n = x.count(TAG)
+x = re.sub(r'\s*' + re.escape(TAG), '', x)
+log.append(f'toolbox: plain UML Association ("associate" without stereotype) removed ({n}) - issue #92')
 
 # 4. model images from V1.0
 v10 = open(V10, encoding='cp1252').read()

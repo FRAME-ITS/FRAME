@@ -10884,7 +10884,6 @@ wQ3VtVk7wLDOVf+pnl9N9R+vHq1OjeEfN/T5+d8BAFS2xVKKLKxzAAAAAElFTkSuQmCC
 							<Tag name="FRAME_Profile::triggers(UML::Association)" type="" description="" unit="" values="" default="triggers"/>
 							<Tag name="FRAME_Profile::delivers value to(UML::Association)" type="" description="" unit="" values="" default="delivers value to"/>
 							<Tag name="isCollapsed" type="" description="" unit="" values="" default="true"/>
-							<Tag name="UML::Association" type="" description="" unit="" values="" default="associate"/>
 						</TaggedValues>
 					</Stereotype>
 				</Stereotypes>
