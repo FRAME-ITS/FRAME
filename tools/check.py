@@ -77,6 +77,8 @@ def main(argv):
                 want = 'IN' if tf else 'OUT'
                 if st != want.lower():
                     R('in-out', f'«{k["st"]}» {label(s)} → {t["name"]}: expected «{want}» for this direction (or reverse the connector)')
+        if k['type'] == 'Association' and st not in ('in', 'out') and ((s['st'] in ENDPOINT and t['st'] in FLOW) or (s['st'] in FLOW and t['st'] in ENDPOINT)):
+            R('in-out', f'«{k["st"]}» {label(s)} → {t["name"]}: a data flow is linked to its producer / consumer by «IN» / «OUT»')
         if st == 'componentof':
             if s['st'] in FLOW and t['st'] in FLOW and (FLOW[s['st']] > FLOW[t['st']] or FLOW[s['st']] == FLOW[t['st']] == 0):
                 R('componentof', f'«{k["st"]}» {label(s)} → {t["name"]} ({t["st"].replace("FRAME_", "")}) runs whole → part or between low-level flows')

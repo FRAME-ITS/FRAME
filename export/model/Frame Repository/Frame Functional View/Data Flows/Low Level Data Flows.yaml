@@ -5602,8 +5602,8 @@ elements:
       It contains input from the In-vehicle Systems from which data objects are created containing the status of the eCall activation functionality in the Host Vehicle for use by functionality in the Provide Support for Host Vehicle Systems Functional Area.
     links:
       - "Aggregation «component of» → fv-pshvs_inputs"  # {90321956-2E6B-4fa5-A2A6-D4B9C869216F} → {8548450D-2CC2-40c1-B982-8A9521950F8F}
-      - "Association «owned by» → F5.12 Provide Vehicle Communications Interfaces"  # {2F8B9EC2-EC05-49ca-8702-A98DC3481141} → {D7C917ED-CA9B-4e92-868E-80C5A2AA7BC3}
-      - "Association «owned by» → F5.12.7 Communicate with In-vehicle Systems"  # {1A545516-C05A-4e41-89CA-CE1089B1700B} → {9B153E15-917E-4e7b-99C7-D2FFDA904992}
+      - "Association «OUT» → F5.12 Provide Vehicle Communications Interfaces"  # {2F8B9EC2-EC05-49ca-8702-A98DC3481141} → {D7C917ED-CA9B-4e92-868E-80C5A2AA7BC3}
+      - "Association «OUT» → F5.12.7 Communicate with In-vehicle Systems"  # {1A545516-C05A-4e41-89CA-CE1089B1700B} → {9B153E15-917E-4e7b-99C7-D2FFDA904992}
   - name: "fv.vs-current_vehicle_location"
     guid: "{0A8642F1-84E9-4836-8A3A-7FB8C88A51AD}"
     type: "Interface"
@@ -16828,7 +16828,7 @@ elements:
       It contains data objects that provide an indication of the failure of the eCall message to be correctly received by the Communications Network.  This failure could be for a number of reasons, but most likely it will be because some of the required data objects it should contain are missing.
     links:
       - "Aggregation «component of» → psef.pshvs_eCall_arcknowledgements"  # {9FFB3E00-DA08-4bc6-B7E4-14E6AD6F4E44} → {19376C6E-B525-4090-AF64-7A18742D0408}
-      - "Association «owned by» → F5.11.7 Provide In-vehicle eCall Facilities"  # {1D0641FB-8E18-4ddb-A68D-2842815FFE45} → {4B6AAED4-EE90-4d5f-9C66-1D1D0C9BB919}
+      - "Association «OUT» → F5.11.7 Provide In-vehicle eCall Facilities"  # {1D0641FB-8E18-4ddb-A68D-2842815FFE45} → {4B6AAED4-EE90-4d5f-9C66-1D1D0C9BB919}
   - name: "psef.pshvs_eCall_responses"
     guid: "{0457673A-639F-498a-8845-4631B8AC8DAF}"
     type: "Interface"
@@ -16903,7 +16903,7 @@ elements:
     note: |
       It contains data objects that provide a list of Public Safety Answering Points (PSAP's) that are available to receive eCall messages.
     links:
-      - "Association «owned by» → F2.1.11.2 Manage PSAP Data Stores"  # {AB26EC11-4B5C-4057-8812-D95D12367075} → {6409319D-AAE4-46c0-A424-EBA90DE58004}
+      - "Association «OUT» → F2.1.11.2 Manage PSAP Data Stores"  # {AB26EC11-4B5C-4057-8812-D95D12367075} → {6409319D-AAE4-46c0-A424-EBA90DE58004}
   - name: "psef_common_data_for_emergency_classification"
     guid: "{EE56E885-114F-4b7a-9F4E-D9B526B8D61E}"
     type: "Interface"
@@ -17041,7 +17041,7 @@ elements:
     note: |
       It contains data objects that provide details of every eCall message that is currently active and which is in the store of PSAP eCall Session Data (D2.4).  See description of D2.4 for details of the contents of this data flow.
     links:
-      - "Association «owned by» → F2.1.11.2 Manage PSAP Data Stores"  # {910FD22D-45CD-41b8-A00A-B312D2FA83CC} → {6409319D-AAE4-46c0-A424-EBA90DE58004}
+      - "Association «OUT» → F2.1.11.2 Manage PSAP Data Stores"  # {910FD22D-45CD-41b8-A00A-B312D2FA83CC} → {6409319D-AAE4-46c0-A424-EBA90DE58004}
   - name: "psef_eCall_message_status"
     guid: "{9881CB6C-616A-4500-B42E-6F29D6554FB2}"
     type: "Interface"
@@ -17059,7 +17059,7 @@ elements:
       - identity of PSAP to which eCall was sent (number - optional),
       - communication information for the Public Safety Answering Point (PSAP) to which eCall was sent (character string - numbers and letters).
     links:
-      - "Association «owned by» → F2.1.11.2 Manage PSAP Data Stores"  # {D445CB33-0639-4c96-8F17-94204E90EEFE} → {6409319D-AAE4-46c0-A424-EBA90DE58004}
+      - "Association «OUT» → F2.1.11.2 Manage PSAP Data Stores"  # {D445CB33-0639-4c96-8F17-94204E90EEFE} → {6409319D-AAE4-46c0-A424-EBA90DE58004}
   - name: "psef_eCall_responses"
     guid: "{4EF81730-96DF-40a0-B391-84FFCCE8A347}"
     type: "Interface"
@@ -17251,7 +17251,7 @@ elements:
       It contains data objects that provide the current status of an active eCall message.  See description of D2.4 for details of the contents of this data flow.
       Note that if the only data object that actually contains data is the identity of the Vehicle (VIN) then this will mean that the eCall data for this Vehicle is to be deleted because the eCall is no longer active.  If the VIN is "XXX" then the content of the Data Store is to be provided.
     links:
-      - "Association «owned by» → D2.4 PSAP eCall Sessions Data"  # {B2644200-8DB3-443a-A881-548AD2A363A8} → {69D21B54-A429-4b1c-9215-EF4F56C831B7}
+      - "Association «OUT» → D2.4 PSAP eCall Sessions Data"  # {B2644200-8DB3-443a-A881-548AD2A363A8} → {69D21B54-A429-4b1c-9215-EF4F56C831B7}
   - name: "psef_load_emergency_data"
     guid: "{BBBF5156-A240-4351-9646-556DB03022AD}"
     type: "Interface"
@@ -17328,8 +17328,8 @@ elements:
     note: |
       It contains data objects that provide a request for the Public Safety Answering Point (PSAP) to provide its current status.
     links:
-      - "Association «owned by» → F2.1.2 Manage Emergency Intervention"  # {0C8EA7D2-3BAF-49cb-8DC9-0ABA5F9EAA86} → {C982E490-F99F-42a0-BFE6-1F230467AB2C}
-      - "Association «owned by» → F2.1.2.1 Identify and Classify Emergencies"  # {3FCC909A-BEC2-4ad9-B773-C3CBE215E70B} → {0CE226C4-3FE8-48de-A914-6ADAD5CABBBA}
+      - "Association «OUT» → F2.1.2 Manage Emergency Intervention"  # {0C8EA7D2-3BAF-49cb-8DC9-0ABA5F9EAA86} → {C982E490-F99F-42a0-BFE6-1F230467AB2C}
+      - "Association «OUT» → F2.1.2.1 Identify and Classify Emergencies"  # {3FCC909A-BEC2-4ad9-B773-C3CBE215E70B} → {0CE226C4-3FE8-48de-A914-6ADAD5CABBBA}
   - name: "psef_PSAP_status_response"
     guid: "{B0E56139-96C6-49d2-A319-8FE0DCDCE779}"
     type: "Interface"
@@ -17340,8 +17340,8 @@ elements:
     note: |
       It contains data objects that provide a response to the previous request for the Public Safety Answering Point (PSAP) to provide its current status.  The response is used to compile a list of PSAP's that are available to receive eCall messages.
     links:
-      - "Association «owned by» → F2.1.11 Manage eCall Messages"  # {AEDB5B36-61A4-4714-962A-F9B9D2C74BB2} → {89ADDE3A-4642-4d57-A89E-BFAE05F44CF1}
-      - "Association «owned by» → F2.1.11.1 Manage eCall Message Transmission"  # {5C6B2466-D412-48db-8E7D-2129BC6DA33D} → {E3715257-281B-407c-BEC6-DE27BD1C0AAC}
+      - "Association «OUT» → F2.1.11 Manage eCall Messages"  # {AEDB5B36-61A4-4714-962A-F9B9D2C74BB2} → {89ADDE3A-4642-4d57-A89E-BFAE05F44CF1}
+      - "Association «OUT» → F2.1.11.1 Manage eCall Message Transmission"  # {5C6B2466-D412-48db-8E7D-2129BC6DA33D} → {E3715257-281B-407c-BEC6-DE27BD1C0AAC}
   - name: "psef_read_common_emergency_data"
     guid: "{C9C7DD89-A9DD-4c3a-B698-B9280A302ED2}"
     type: "Interface"
@@ -22946,7 +22946,7 @@ elements:
     note: |
       It contains output to the Broadcaster External Services Provider that have been created from data objects provided by functionality in the Manage Traffic Functional Area and includes information about the current state of any demand management strategies
     links:
-      - "Association «owned by» → Broadcaster"  # {2ACAD3F8-4682-481f-8E1F-477AABC0A0DA} → {4FA5F25A-9124-4023-A0AC-A2454FC4E666}
+      - "Association «OUT» → Broadcaster"  # {2ACAD3F8-4682-481f-8E1F-477AABC0A0DA} → {4FA5F25A-9124-4023-A0AC-A2454FC4E666}
   - name: "tesp.b-incident_strategy_information"
     guid: "{FED70410-2E0E-407e-910D-94BCC337ED1D}"
     type: "Interface"
@@ -22959,7 +22959,7 @@ elements:
     links:
       - "Aggregation «component of» → To External Service Provider"  # {D5A0EF07-3D72-454a-8190-21542773DD0C} → {CB0E5267-0EB0-4bc5-979C-11C135689F57}
       - "Aggregation «component of» → tesp-mt_outputs"  # {1793D980-4EBF-447b-AEA6-37AF195852C7} → {32E2EC16-4A19-44d0-827F-7D79622FC752}
-      - "Association «owned by» → Broadcaster"  # {BBB67C4C-8010-4c1a-81D3-82F22694A0EB} → {4FA5F25A-9124-4023-A0AC-A2454FC4E666}
+      - "Association «OUT» → Broadcaster"  # {BBB67C4C-8010-4c1a-81D3-82F22694A0EB} → {4FA5F25A-9124-4023-A0AC-A2454FC4E666}
   - name: "tesp.b-inter-urban_traffic_data"
     guid: "{C7D57C62-7D19-4f6f-B669-E7F7189AAA89}"
     type: "Interface"
@@ -22972,7 +22972,7 @@ elements:
     links:
       - "Aggregation «component of» → To External Service Provider"  # {B3BE4D34-18FD-47c2-8740-ED62866DD8E3} → {CB0E5267-0EB0-4bc5-979C-11C135689F57}
       - "Aggregation «component of» → tesp.b-traffic_data"  # {798A789A-8A7E-450e-95D0-72BB486F89D1} → {E408CC9F-4AEB-40ba-BA1C-AFEC8D69D879}
-      - "Association «owned by» → Broadcaster"  # {01EB461F-D667-446a-919B-BC1496AADC2D} → {4FA5F25A-9124-4023-A0AC-A2454FC4E666}
+      - "Association «OUT» → Broadcaster"  # {01EB461F-D667-446a-919B-BC1496AADC2D} → {4FA5F25A-9124-4023-A0AC-A2454FC4E666}
   - name: "tesp.b-requested_incident_data"
     guid: "{48C5E817-1DD7-46d6-92E5-93A1BB591C63}"
     type: "Interface"

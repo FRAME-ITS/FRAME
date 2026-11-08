@@ -4,6 +4,7 @@ Built by `tools/fixes/2026-11-06_mdg_technology_V1.3.py`.
 
 - stereotype «Impacts» renamed «impacts» (10 occurrences)
 - stereotype «deliverd by» renamed «delivered by» (7 occurrences)
+- stereotype «instants of» renamed «instance of» (5 occurrences)
 - new stereotype «delivers value to» (Association) with toolbox entry
 - new stereotype «triggers» (Association) with toolbox entry
 - new stereotype «implements» (Association) with toolbox entry
@@ -11,7 +12,7 @@ Built by `tools/fixes/2026-11-06_mdg_technology_V1.3.py`.
 - new stereotype «delivers» (Association) with toolbox entry
 - Quick Linker: «Component of» → «component of» (3 rules)
 - Quick Linker: «Defines» → «defines» (13 rules)
-- Quick Linker: «instant of» → «instants of» (1 rules)
+- Quick Linker: «instant of» → «instance of» (1 rules)
 - Quick Linker: «associated» → «associate» (1 rules)
 - Quick Linker reversed: «component of» Functional_Area → Low_Level_Function  becomes  Low_Level_Function → Functional_Area
 - Quick Linker reversed: «component of» Functional_Area → High_Level_Function  becomes  High_Level_Function → Functional_Area
