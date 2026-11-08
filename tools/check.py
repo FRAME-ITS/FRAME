@@ -14,6 +14,7 @@ Conventions (FRAME Repository V5.2):
   «component of» Aggregation  part → whole  (low-level → high-level data flow, high-level → high-level data flow,
                              low-level → high-level function → functional area → system, sub-terminator → terminator)
   «served by» Association     User Need → low-level function
+  «belongs to» Association    part → whole  (User Need → User Need Topic → User Need Service → User Need Group)
 """
 import sys, os, sqlite3
 from collections import defaultdict, Counter
@@ -25,8 +26,9 @@ META = ('FRAME Meta Model', 'FRAME Toolsetup')   # define stereotypes and their 
 FLOW = {'FRAME_Low_Level_Data_Flow': 0, 'FRAME_High_Level_Data_Flow': 1}
 FUNC = {'FRAME_Low_Level_Function': 0, 'FRAME_High_Level_Function': 1, 'FRAME_Functional_Area': 2, 'FRAME_System': 3}
 ENDPOINT = set(FUNC) | {'FRAME_Terminator', 'FRAME_Datastore'}
+UN = {'FRAME_User_Need': 0, 'FRAME_User_Need_Topic': 1, 'FRAME_User_Need_Service': 2, 'FRAME_User_Need_Group': 3}
 ISSUE = {'dangling': '', 'self-reference': '#62', 'in-out': '#69', 'componentof': '#80, #81', 'generalization': '#79',
-         'servedby': '', 'stereotype-spelling': '#86', 'unused-flow': '#76', 'function-flows': '', 'function-parent': '',
+         'servedby': '', 'belongsto': '#16', 'stereotype-spelling': '#86', 'unused-flow': '#76', 'function-flows': '', 'function-parent': '',
          'context-diagram': '#91', 'duplicate': '', 'release-hygiene': ''}
 norm = lambda s: (s or '').lower().replace(' ', '')
 
@@ -79,6 +81,8 @@ def main(argv):
                 R('componentof', f'«{k["st"]}» {label(s)} → {t["name"]} ({t["st"].replace("FRAME_", "")}) runs whole → part or between low-level flows')
             elif s['st'] in FUNC and t['st'] in FUNC and FUNC[s['st']] > FUNC[t['st']]:
                 R('componentof', f'«{k["st"]}» {label(s)} → {t["name"]} ({t["st"].replace("FRAME_", "")}) runs whole → part')
+        if st == 'belongsto' and s['st'] in UN and t['st'] in UN and UN[s['st']] > UN[t['st']]:
+            R('belongsto', f'«{k["st"]}» {label(s)} → {t["name"]} ({t["st"].replace("FRAME_", "")}) runs whole → part')
         if k['type'] == 'Generalization' and (s['st'] in FLOW or t['st'] in FLOW):
             R('generalization', f'Generalization {label(s)} → {t["name"]}: data flows are linked by «component of»')
         if s['st'] == 'FRAME_User_Need' and t['st'] in FUNC and st != 'servedby':

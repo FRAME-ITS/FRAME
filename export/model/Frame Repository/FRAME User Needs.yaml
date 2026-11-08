@@ -14,6 +14,8 @@ elements:
     note: |
       The Framework Architecture description shall include functional, information, physical and
       communication perspectives.
+    links:
+      - "Association «belongs to» → 1.1 Architectural Properties"  # {27E58F52-0D3A-4b8e-A540-6A823C348E7F} → {8A5216C0-F880-4a42-980F-1CC0896DCD8C}
   - name: "1.1.10"
     guid: "{17E58CA9-4B78-48dd-A944-F890391371D9}"
     type: "Requirement"
@@ -9830,21 +9832,7 @@ elements:
     note: |
       This Topic contains the activities associated with the planning and preparation of different types of Freight Transport Operations
     links:
-      - "Association «belongs to» → 9.11.1.1"  # {A7D8D297-54E2-4a32-9A4E-2A9A670BEBEC} → {23E6AFF0-4C32-48ce-8FC8-38257BD3BF16}
-      - "Association «belongs to» → 9.11.1.10"  # {DFA7D760-5461-4576-BA9B-33ACFF221A5E} → {1DA10162-3BB7-4da4-996D-5E597BAA88A1}
-      - "Association «belongs to» → 9.11.1.11"  # {8BDC0B8E-BA3D-404f-B63E-356B61B78711} → {99934146-04F6-40f7-A501-5F19B8E71C0D}
-      - "Association «belongs to» → 9.11.1.12"  # {15D899A6-AF95-4bb4-8A49-9383212D269A} → {A0516400-8819-48af-9928-2D1084DAE55E}
-      - "Association «belongs to» → 9.11.1.13"  # {9D9FB302-D273-432f-BD50-D615D2DB70F9} → {F631EED4-C8B7-4f3c-90E2-E1E78866FACE}
-      - "Association «belongs to» → 9.11.1.14"  # {DF9A887B-84BF-4d63-AEEB-6F52E07F6D09} → {5C94C15D-4447-4381-ADDF-F2D90A1EBFA3}
-      - "Association «belongs to» → 9.11.1.15"  # {8645DC47-E6E2-4809-9638-1A8A919970DD} → {BADBBCD7-3BEF-4cc4-AC2A-3DE18E02A82C}
-      - "Association «belongs to» → 9.11.1.2"  # {86AF2B89-EAB1-4d4f-946B-A793682ABE8B} → {50CEA6A4-DA8F-4c44-9025-0E489BDDC247}
-      - "Association «belongs to» → 9.11.1.3"  # {03D75E9C-7ABD-47f8-A8EC-E9D41688A747} → {41CA4238-0A3A-4d25-925B-4030F0B608EC}
-      - "Association «belongs to» → 9.11.1.4"  # {9F4CBA6C-D155-4ee8-8B2C-2B070FA7EC2E} → {B079E354-B8F2-4b98-B097-A049412E8F2B}
-      - "Association «belongs to» → 9.11.1.5"  # {502E85C3-996F-436f-B2E2-0C779B980B8D} → {9CC2B628-F45B-4507-BC20-69B2E069C35A}
-      - "Association «belongs to» → 9.11.1.6"  # {91C06599-7444-4484-A2D0-44AFAC525C16} → {7CEBA355-23A2-4178-BC45-ACE85F9644B0}
-      - "Association «belongs to» → 9.11.1.7"  # {D404BA46-ECA1-461d-A732-241390D4F96F} → {E0D33EBD-6329-475c-8176-8C4F8A329BD8}
-      - "Association «belongs to» → 9.11.1.8"  # {876E1D0F-E453-4660-A04A-6051858C8BB9} → {1AC3E21C-4311-4d0d-A127-F53D7F63F3E4}
-      - "Association «belongs to» → 9.11.1.9"  # {4B1852B2-DF00-4e61-BD53-66FF61DED7E4} → {535F2E8E-F903-4222-B4C1-AFC2262E90F7}
+      - "Association «belongs to» → 9.11 Manage Freight Transport Operations"  # {BBA04779-2A1F-40f3-A77F-C82741F4BC6E} → {4844B1BE-90B7-40a6-A31B-BFCBBF70B73E}
   - name: "9.11.1.1"
     guid: "{23E6AFF0-4C32-48ce-8FC8-38257BD3BF16}"
     type: "Requirement"
@@ -9854,6 +9842,8 @@ elements:
     order: 0
     note: |
       The system shall be able to assist the Freight Transport Operations Manager in the preparation of Freight Transport Execution Plans.
+    links:
+      - "Association «belongs to» → 9.11.1 Plan and Prepare Freight Transport Operations"  # {A7D8D297-54E2-4a32-9A4E-2A9A670BEBEC} → {9386C1CB-FC14-4556-AB24-D4DFB1436750}
   - name: "9.11.1.10"
     guid: "{1DA10162-3BB7-4da4-996D-5E597BAA88A1}"
     type: "Requirement"
@@ -9863,6 +9853,8 @@ elements:
     order: 0
     note: |
       The system shall be able to obtain information from previous operations (e.g. by the Freight Vehicle Driver) for use in later operations (e.g. road works, access to and in Freight Terminal Areas)
+    links:
+      - "Association «belongs to» → 9.11.1 Plan and Prepare Freight Transport Operations"  # {DFA7D760-5461-4576-BA9B-33ACFF221A5E} → {9386C1CB-FC14-4556-AB24-D4DFB1436750}
   - name: "9.11.1.11"
     guid: "{99934146-04F6-40f7-A501-5F19B8E71C0D}"
     type: "Requirement"
@@ -9872,6 +9864,8 @@ elements:
     order: 0
     note: |
       The system shall be able to collect data about each Freight Transport Operation to enable the performance of the Freight Transport Service to be evaluated.
+    links:
+      - "Association «belongs to» → 9.11.1 Plan and Prepare Freight Transport Operations"  # {8BDC0B8E-BA3D-404f-B63E-356B61B78711} → {9386C1CB-FC14-4556-AB24-D4DFB1436750}
   - name: "9.11.1.12"
     guid: "{A0516400-8819-48af-9928-2D1084DAE55E}"
     type: "Requirement"
@@ -9881,6 +9875,8 @@ elements:
     order: 0
     note: |
       The system shall be provided with both current (dynamic) and historical data about traffic conditions in the road network, and the availability of services from other non-road based modes of transport.
+    links:
+      - "Association «belongs to» → 9.11.1 Plan and Prepare Freight Transport Operations"  # {15D899A6-AF95-4bb4-8A49-9383212D269A} → {9386C1CB-FC14-4556-AB24-D4DFB1436750}
   - name: "9.11.1.13"
     guid: "{F631EED4-C8B7-4f3c-90E2-E1E78866FACE}"
     type: "Requirement"
@@ -9890,6 +9886,8 @@ elements:
     order: 0
     note: |
       The system shall be able to deduce information about the transport network from previous operations.
+    links:
+      - "Association «belongs to» → 9.11.1 Plan and Prepare Freight Transport Operations"  # {9D9FB302-D273-432f-BD50-D615D2DB70F9} → {9386C1CB-FC14-4556-AB24-D4DFB1436750}
   - name: "9.11.1.14"
     guid: "{5C94C15D-4447-4381-ADDF-F2D90A1EBFA3}"
     type: "Requirement"
@@ -9900,6 +9898,7 @@ elements:
     note: |
       The system shall maintain a list of standard procedures, set by the Freight Transport Operations Manager, to be adopted/enacted in the case of specific incidents.
     links:
+      - "Association «belongs to» → 9.11.1 Plan and Prepare Freight Transport Operations"  # {DF9A887B-84BF-4d63-AEEB-6F52E07F6D09} → {9386C1CB-FC14-4556-AB24-D4DFB1436750}
       - "Association «served by» → F8.6.6 Manage Incident Response Data Store"  # {E7E67DE1-2135-425b-817F-8B68F533A8BE} → {CC117A33-746F-435a-99FD-47AE519B1C96}
   - name: "9.11.1.15"
     guid: "{BADBBCD7-3BEF-4cc4-AC2A-3DE18E02A82C}"
@@ -9911,6 +9910,7 @@ elements:
     note: |
       The system shall be able to support the Freight Transport Operations Manager to negotiate the availability of third party services and/or resources, including other modes, during the transportation of Freight Transport Load Item(s) through the implementation of a Freight Transport Execution Pan.
     links:
+      - "Association «belongs to» → 9.11.1 Plan and Prepare Freight Transport Operations"  # {8645DC47-E6E2-4809-9638-1A8A919970DD} → {9386C1CB-FC14-4556-AB24-D4DFB1436750}
       - "Association «served by» → F8.6.5 Provide FTOM Interface for FTEP Monitoring"  # {134FD656-0B90-484e-BAA1-CC0EC2FD77FD} → {8AD8B9D5-30E2-40a0-BF8A-30F3F57ECDF6}
   - name: "9.11.1.2"
     guid: "{50CEA6A4-DA8F-4c44-9025-0E489BDDC247}"
@@ -9921,6 +9921,8 @@ elements:
     order: 0
     note: |
       The system shall be able to support the Freight Transport Operations Manager to establish an itinerary of one, or more, journey segments for different sets of Freight Transport Load Items.
+    links:
+      - "Association «belongs to» → 9.11.1 Plan and Prepare Freight Transport Operations"  # {86AF2B89-EAB1-4d4f-946B-A793682ABE8B} → {9386C1CB-FC14-4556-AB24-D4DFB1436750}
   - name: "9.11.1.3"
     guid: "{41CA4238-0A3A-4d25-925B-4030F0B608EC}"
     type: "Requirement"
@@ -9930,6 +9932,8 @@ elements:
     order: 0
     note: |
       The system shall be able to support the Freight Transport Operations Manager to produce Freight Transport Execution Plans that conform to the relevant road network management policies.
+    links:
+      - "Association «belongs to» → 9.11.1 Plan and Prepare Freight Transport Operations"  # {03D75E9C-7ABD-47f8-A8EC-E9D41688A747} → {9386C1CB-FC14-4556-AB24-D4DFB1436750}
   - name: "9.11.1.4"
     guid: "{B079E354-B8F2-4b98-B097-A049412E8F2B}"
     type: "Requirement"
@@ -9939,6 +9943,8 @@ elements:
     order: 0
     note: |
       The system shall enable the Freight Transport Operations Manager to access to the facilities that manage the use of Freight Terminal Areas, and for their use to be specified in a Freight Transport Execution Plan.
+    links:
+      - "Association «belongs to» → 9.11.1 Plan and Prepare Freight Transport Operations"  # {9F4CBA6C-D155-4ee8-8B2C-2B070FA7EC2E} → {9386C1CB-FC14-4556-AB24-D4DFB1436750}
   - name: "9.11.1.5"
     guid: "{9CC2B628-F45B-4507-BC20-69B2E069C35A}"
     type: "Requirement"
@@ -9948,6 +9954,8 @@ elements:
     order: 0
     note: |
       The system shall enable the Freight Terminal Area(s) identified in a Freight Transport Execution Plan to be booked once the implementation of the Plan commences, and for the expected times of arrival and/or departure to be amended.
+    links:
+      - "Association «belongs to» → 9.11.1 Plan and Prepare Freight Transport Operations"  # {502E85C3-996F-436f-B2E2-0C779B980B8D} → {9386C1CB-FC14-4556-AB24-D4DFB1436750}
   - name: "9.11.1.6"
     guid: "{7CEBA355-23A2-4178-BC45-ACE85F9644B0}"
     type: "Requirement"
@@ -9957,6 +9965,8 @@ elements:
     order: 0
     note: |
       The system shall be able to obtain current and predicted road network and traffic status information to support the planning of a Freight Transport Execution Plan.
+    links:
+      - "Association «belongs to» → 9.11.1 Plan and Prepare Freight Transport Operations"  # {91C06599-7444-4484-A2D0-44AFAC525C16} → {9386C1CB-FC14-4556-AB24-D4DFB1436750}
   - name: "9.11.1.7"
     guid: "{E0D33EBD-6329-475c-8176-8C4F8A329BD8}"
     type: "Requirement"
@@ -9966,6 +9976,8 @@ elements:
     order: 0
     note: |
       The system shall be able to provide geographic information specifically relevant to freight transport execution measures (e.g. to avoid unsuitable roads, where possible).
+    links:
+      - "Association «belongs to» → 9.11.1 Plan and Prepare Freight Transport Operations"  # {D404BA46-ECA1-461d-A732-241390D4F96F} → {9386C1CB-FC14-4556-AB24-D4DFB1436750}
   - name: "9.11.1.8"
     guid: "{1AC3E21C-4311-4d0d-A127-F53D7F63F3E4}"
     type: "Requirement"
@@ -9975,6 +9987,8 @@ elements:
     order: 0
     note: |
       The system shall be able to provide information to support the planning of a Freight Transport Execution Plan for non-standard, e.g. dangerous or overweight, cargo.
+    links:
+      - "Association «belongs to» → 9.11.1 Plan and Prepare Freight Transport Operations"  # {876E1D0F-E453-4660-A04A-6051858C8BB9} → {9386C1CB-FC14-4556-AB24-D4DFB1436750}
   - name: "9.11.1.9"
     guid: "{535F2E8E-F903-4222-B4C1-AFC2262E90F7}"
     type: "Requirement"
@@ -9985,6 +9999,7 @@ elements:
     note: |
       The system shall be able to request specific traffic management measures from the traffic management system for the passage of abnormal (e.g. overweight, over-sized) Freight Vehicles that result from abnormal Freight Transport Load Items.
     links:
+      - "Association «belongs to» → 9.11.1 Plan and Prepare Freight Transport Operations"  # {4B1852B2-DF00-4e61-BD53-66FF61DED7E4} → {9386C1CB-FC14-4556-AB24-D4DFB1436750}
       - "Association «served by» → F8.6.1 Implement FTEP"  # {997AA87D-87B4-4de5-ADBC-359F65CBE771} → {510B21B5-5C4B-43ec-A42D-BAF28FD4E528}
   - name: "9.11.2.1"
     guid: "{03442F02-E9E1-46bf-AAA7-936B31C1E439}"
@@ -9995,6 +10010,8 @@ elements:
     order: 0
     note: |
       The system shall be able to support the Freight Vehicle Driver with suitable navigation information about the route(s) to be followed for the road-based part(s) of the Freight Transport Execution Plan.
+    links:
+      - "Association «belongs to» → 9.11.2 Manage Transport Operation"  # {C901EC93-9AAC-4c6f-BBB1-C6AF2B7427EB} → {C83729F1-2C83-4ca8-AB9B-7E3227AECE0A}
   - name: "9.11.2.2"
     guid: "{EFA8A173-3EF9-444c-882F-DDE1532EF800}"
     type: "Requirement"
@@ -10004,6 +10021,8 @@ elements:
     order: 0
     note: |
       The system shall be able to support the Freight Vehicle Driver with information about the conditions on the route ahead.
+    links:
+      - "Association «belongs to» → 9.11.2 Manage Transport Operation"  # {3BD68727-58F1-43d6-94D8-DAFED8B44813} → {C83729F1-2C83-4ca8-AB9B-7E3227AECE0A}
   - name: "9.11.2.3"
     guid: "{D804D465-C4CF-48d6-9813-F5B48BB3ECA7}"
     type: "Requirement"
@@ -10013,6 +10032,8 @@ elements:
     order: 0
     note: |
       The system shall be able to provide the Freight Transport Operation Manager with information on the use of Freight Terminal Areas.
+    links:
+      - "Association «belongs to» → 9.11.2 Manage Transport Operation"  # {31EF4BB1-DADE-4e54-BFB1-797FA0840058} → {C83729F1-2C83-4ca8-AB9B-7E3227AECE0A}
   - name: "9.11.2.4"
     guid: "{672CE02F-7CA9-45a0-A366-EA83B2B0679C}"
     type: "Requirement"
@@ -10022,6 +10043,8 @@ elements:
     order: 0
     note: |
       The system shall be able to support the exchange of messages (text and audio) between the Freight Transport Operations Manager and the Freight Vehicle Driver.
+    links:
+      - "Association «belongs to» → 9.11.2 Manage Transport Operation"  # {483DC629-37C9-41ce-8A48-43F633311358} → {C83729F1-2C83-4ca8-AB9B-7E3227AECE0A}
   - name: "9.11.2.5"
     guid: "{D211DDC7-CBB7-4d6a-8885-DEF0777E345E}"
     type: "Requirement"
@@ -10031,6 +10054,8 @@ elements:
     order: 0
     note: |
       The system shall be able to monitor the passage of the Freight Vehicle, together with any current or predicted deviations or delays, and advise the Freight Vehicle Driver when there is likely to be a deviation from the planned correct driving hours.
+    links:
+      - "Association «belongs to» → 9.11.2 Manage Transport Operation"  # {12800980-5EED-45b2-8E33-A78BA01A3005} → {C83729F1-2C83-4ca8-AB9B-7E3227AECE0A}
   - name: "9.11.2.6"
     guid: "{358C0159-F730-4c8d-9234-1798CB43FE83}"
     type: "Requirement"
@@ -10040,6 +10065,8 @@ elements:
     order: 0
     note: |
       The system shall be able to monitor the passage of the Freight Vehicle, together with any current or predicted deviations or delays, and advise the Freight Transport Operations Manager when there is likely to be a deviation from the planned time schedule.
+    links:
+      - "Association «belongs to» → 9.11.2 Manage Transport Operation"  # {6A472BF8-83D1-4e31-A630-4AEA79EA4693} → {C83729F1-2C83-4ca8-AB9B-7E3227AECE0A}
   - name: "9.11.2.7"
     guid: "{489A4FF9-CA6E-4659-88EB-8CD5284BBE75}"
     type: "Requirement"
@@ -10049,6 +10076,8 @@ elements:
     order: 0
     note: |
       The system shall enable the Freight Transport Operations Manager to initiate the creation of a revised Freight Transport Execution Plan in the event that the current plan is no longer suitable.
+    links:
+      - "Association «belongs to» → 9.11.2 Manage Transport Operation"  # {22BCDBDC-D0CB-4093-BB02-F910988D5358} → {C83729F1-2C83-4ca8-AB9B-7E3227AECE0A}
   - name: "9.11.2.8"
     guid: "{5A265EB7-AED5-4dfb-ADC5-EEA18DD7ECAD}"
     type: "Requirement"
@@ -10058,6 +10087,8 @@ elements:
     order: 0
     note: |
       The system shall be able to record the route taken by the Freight Vehicle as it travels on the road network, and to store the route taken for later downloading by the Freight Transport Operations Manager.
+    links:
+      - "Association «belongs to» → 9.11.2 Manage Transport Operation"  # {17FA58F8-2D29-4835-8B38-5CEEEC40FC54} → {C83729F1-2C83-4ca8-AB9B-7E3227AECE0A}
   - name: "9.11.2.9"
     guid: "{90EF1935-D974-4740-91B6-D0994428A7A5}"
     type: "Requirement"
@@ -10067,6 +10098,8 @@ elements:
     order: 0
     note: |
       The system shall be able to the route taken by the Freight Vehicle as it travels on the road network, and to send this information to the Freight Transport Operations Manager at regular intervals.
+    links:
+      - "Association «belongs to» → 9.11.2 Manage Transport Operation"  # {8FDD275F-2711-40eb-8621-2042449E02E7} → {C83729F1-2C83-4ca8-AB9B-7E3227AECE0A}
   - name: "9.11.3.1"
     guid: "{94DF8049-83F2-4804-A9A1-D847F22A399D}"
     type: "Requirement"
@@ -10076,6 +10109,8 @@ elements:
     order: 0
     note: |
       The system shall be able to store information (e.g. by the Freight Vehicle Driver) from the current operation for use in later operations (e.g. road works, access to and in Freight Terminal Areas).
+    links:
+      - "Association «belongs to» → 9.11.3 Monitor Transport Operation"  # {ACFE7024-D700-43e3-AB8B-E27C49B3D989} → {27F7C00E-551B-42d4-896D-4816963C50B9}
   - name: "9.11.3.2"
     guid: "{18A9EF1C-7C49-4fd7-88DA-BAD892A85955}"
     type: "Requirement"
@@ -10085,6 +10120,8 @@ elements:
     order: 0
     note: |
       The system shall be able to monitor the condition (e.g. temperature, humidity, mechanical integrity) of the Freight Vehicle and report it to the Freight Vehicle Driver.
+    links:
+      - "Association «belongs to» → 9.11.3 Monitor Transport Operation"  # {38FA614E-1F6E-4308-A9A5-4A1949A4B57B} → {27F7C00E-551B-42d4-896D-4816963C50B9}
   - name: "9.11.3.3"
     guid: "{894A506E-B7DE-416c-802F-22303FBF1679}"
     type: "Requirement"
@@ -10094,6 +10131,8 @@ elements:
     order: 0
     note: |
       The system shall enable the Freight Vehicle Driver to report events to the Freight Transport Operations Manager.
+    links:
+      - "Association «belongs to» → 9.11.3 Monitor Transport Operation"  # {1A36134E-465E-4c46-9B65-E9CFEA1B386F} → {27F7C00E-551B-42d4-896D-4816963C50B9}
   - name: "9.11.3.4"
     guid: "{B300863B-966B-4fbd-AC98-7D9C9426A3C8}"
     type: "Requirement"
@@ -10103,6 +10142,8 @@ elements:
     order: 0
     note: |
       The system shall be able monitor and store the behaviour of the Freight Vehicle Driver, e.g. vehicle speed, for later downloading by the Freight Transport Operations Manager.
+    links:
+      - "Association «belongs to» → 9.11.3 Monitor Transport Operation"  # {68B34E73-3846-42d2-BB78-92099A0DC46A} → {27F7C00E-551B-42d4-896D-4816963C50B9}
   - name: "9.5.6 Hazardous Goods Vehicle Management"
     guid: "{433859FB-AAB9-4946-8EDD-86ED44C12072}"
     type: "Requirement"
@@ -10499,7 +10540,7 @@ elements:
     order: 0
     note: ""
     links:
-      - "Association «belongs to» → 1.1 Architectural Properties"  # {CEC25E5E-2E51-4b24-9819-223B1C4E8AF8} → {8A5216C0-F880-4a42-980F-1CC0896DCD8C}
+      - "Association «belongs to» → 1 General, Generic and Non-Functional"  # {93791ACF-7FF7-4fe9-8C8E-437DE87622A3} → {1D205305-E41C-42f2-98A6-88BCE1FEF5E2}
   - name: "1 General, Generic and Non-Functional"
     guid: "{1D205305-E41C-42f2-98A6-88BCE1FEF5E2}"
     type: "Requirement"
@@ -10511,8 +10552,6 @@ elements:
       This group contains the properties that either the Framework Architecture should
       possess, or that systems built in conformance to the Framework Architecture should
       possess.
-    links:
-      - "Association «belongs to» → FRAME_User_Need_Service2"  # {93791ACF-7FF7-4fe9-8C8E-437DE87622A3} → {25E15FE0-D6F7-40ab-8D54-73979109CC8D}
   - name: "1.1 Architectural Properties"
     guid: "{8A5216C0-F880-4a42-980F-1CC0896DCD8C}"
     type: "Requirement"
@@ -10522,7 +10561,7 @@ elements:
     order: 1
     note: ""
     links:
-      - "Association «belongs to» → 1.1.1"  # {27E58F52-0D3A-4b8e-A540-6A823C348E7F} → {8D031E37-BB46-4763-8F50-0B2530C58FDD}
+      - "Association «belongs to» → FRAME_User_Need_Service2"  # {CEC25E5E-2E51-4b24-9819-223B1C4E8AF8} → {25E15FE0-D6F7-40ab-8D54-73979109CC8D}
   - name: "9.5 Commercial Fleet Management"
     guid: "{101A05B5-C82E-4531-A623-56B4F8CAA667}"
     type: "Requirement"
@@ -10560,7 +10599,7 @@ elements:
     note: |
       This Service contains the activities associated with the provision of a freight transport service for a customer.
     links:
-      - "Association «belongs to» → 9.10.1 Manage Customer Requirements"  # {D105A1B3-E0E7-4e83-9595-0F06D08533C6} → {8D22560C-2FE7-492e-AB64-A607C1BFB6D3}
+      - "Association «belongs to» → 9 Freight and Fleet Operations"  # {4675E0A6-4BD8-4444-B859-66E492931DCD} → {A45F629A-43D1-45c1-8898-BCDFB91C5B4C}
   - name: "1.3 Adaptability"
     guid: "{C421F751-46C3-4240-B4FD-0C93FC9ED7C0}"
     type: "Requirement"
@@ -10588,16 +10627,7 @@ elements:
     note: |
       This Topic contains the activities associated with collecting the requirements of the customer.
     links:
-      - "Association «belongs to» → 9.10.1.1"  # {C0252874-F333-4fe2-98D9-418BABE232EF} → {E7DE6053-8789-4045-9BD6-CF7AA55B91BA}
-      - "Association «belongs to» → 9.10.1.10"  # {CED98F8B-559D-4495-9BFA-14E41E74EFBC} → {58A12915-1F3D-409e-BF7D-EA8CD7AA606B}
-      - "Association «belongs to» → 9.10.1.2"  # {8A138A15-DF9B-4c03-B8B9-1B3BA23C58AE} → {CFC986AB-9958-4030-A93F-BD47876AE3C8}
-      - "Association «belongs to» → 9.10.1.3"  # {CF5616EC-D175-462c-9E44-1B760F79BE52} → {15FD7A5F-B921-464b-954E-C4C47149BCD0}
-      - "Association «belongs to» → 9.10.1.4"  # {CE260221-C042-4075-BF77-B8ACCD0A27FD} → {6EFBF655-C872-4df8-9C1E-B13C50C4DDDA}
-      - "Association «belongs to» → 9.10.1.5"  # {098BC31F-FC02-4b95-9161-026E4174BAF8} → {3F9372AA-6E25-4d68-8639-CC5FCF5AE64D}
-      - "Association «belongs to» → 9.10.1.6"  # {6C377D92-A299-409a-A894-B068EBA41696} → {CD941384-6DE4-4df5-9FF8-BD6BAF26E87E}
-      - "Association «belongs to» → 9.10.1.7"  # {915CE11B-B198-4518-B319-6916AABA145B} → {39D83744-354C-4ff0-8DBF-5515D100C2FE}
-      - "Association «belongs to» → 9.10.1.8"  # {27A27FE2-0B14-488d-B2E7-F0C2051846C0} → {1AC1B26F-D88E-4a06-AE25-31FC385A1300}
-      - "Association «belongs to» → 9.10.1.9"  # {12060F49-A584-4178-8A77-71A5CC34554F} → {7842E544-8FC4-44aa-A428-B67CA265C451}
+      - "Association «belongs to» → 9.10 Provide Freight Transport Service"  # {D105A1B3-E0E7-4e83-9595-0F06D08533C6} → {2EF37588-7C31-48eb-8AEE-5634261A6766}
   - name: "9.11 Manage Freight Transport Operations"
     guid: "{4844B1BE-90B7-40a6-A31B-BFCBBF70B73E}"
     type: "Requirement"
@@ -10608,9 +10638,7 @@ elements:
     note: |
       This Service contains the activities associated with creating a suitable Freight Transport Execution Plan, managing its execution, and monitoring the road and vehicle conditions during its execution.
     links:
-      - "Association «belongs to» → 9.11.1 Plan and Prepare Freight Transport Operations"  # {BBA04779-2A1F-40f3-A77F-C82741F4BC6E} → {9386C1CB-FC14-4556-AB24-D4DFB1436750}
-      - "Association «belongs to» → 9.11.2 Manage Transport Operation"  # {4D79836B-A1AE-4dce-AEB4-BF87F97C0BFB} → {C83729F1-2C83-4ca8-AB9B-7E3227AECE0A}
-      - "Association «belongs to» → 9.11.3 Monitor Transport Operation"  # {1DBC07AF-2D82-4304-BA1A-39BBDC8ACFE4} → {27F7C00E-551B-42d4-896D-4816963C50B9}
+      - "Association «belongs to» → 9 Freight and Fleet Operations"  # {68E85D8A-490C-4b93-BB1D-0835B37554FC} → {A45F629A-43D1-45c1-8898-BCDFB91C5B4C}
   - name: "1.4 Constraints"
     guid: "{9076A15D-73F5-4c6f-A025-2FB4FEC72CF8}"
     type: "Requirement"
@@ -10638,6 +10666,7 @@ elements:
     note: |
       The system shall assist in the execution of a contract between a Freight Transport Service Provider and a Freight Transport User (customer).
     links:
+      - "Association «belongs to» → 9.10.1 Manage Customer Requirements"  # {C0252874-F333-4fe2-98D9-418BABE232EF} → {8D22560C-2FE7-492e-AB64-A607C1BFB6D3}
       - "Association «served by» → F8.4.1 Provide Freight Transport User Interface"  # {1979215C-AEA8-4160-9F0F-2378D0E45EDB} → {6983F8F3-33BD-4e31-A9FB-DB14981B86DB}
       - "Association «served by» → F8.4.3 Provide Freight Transport Operations Manager Interface"  # {150D14BC-E098-4b3a-976C-03D29095B298} → {8FBDF54B-6B59-4624-BAA2-0843DE946DB2}
   - name: "9.11.2 Manage Transport Operation"
@@ -10650,15 +10679,7 @@ elements:
     note: |
       This Topic contains the activities associated with the execution of different types of Freight Transport Operations
     links:
-      - "Association «belongs to» → 9.11.2.1"  # {C901EC93-9AAC-4c6f-BBB1-C6AF2B7427EB} → {03442F02-E9E1-46bf-AAA7-936B31C1E439}
-      - "Association «belongs to» → 9.11.2.2"  # {3BD68727-58F1-43d6-94D8-DAFED8B44813} → {EFA8A173-3EF9-444c-882F-DDE1532EF800}
-      - "Association «belongs to» → 9.11.2.3"  # {31EF4BB1-DADE-4e54-BFB1-797FA0840058} → {D804D465-C4CF-48d6-9813-F5B48BB3ECA7}
-      - "Association «belongs to» → 9.11.2.4"  # {483DC629-37C9-41ce-8A48-43F633311358} → {672CE02F-7CA9-45a0-A366-EA83B2B0679C}
-      - "Association «belongs to» → 9.11.2.5"  # {12800980-5EED-45b2-8E33-A78BA01A3005} → {D211DDC7-CBB7-4d6a-8885-DEF0777E345E}
-      - "Association «belongs to» → 9.11.2.6"  # {6A472BF8-83D1-4e31-A630-4AEA79EA4693} → {358C0159-F730-4c8d-9234-1798CB43FE83}
-      - "Association «belongs to» → 9.11.2.7"  # {22BCDBDC-D0CB-4093-BB02-F910988D5358} → {489A4FF9-CA6E-4659-88EB-8CD5284BBE75}
-      - "Association «belongs to» → 9.11.2.8"  # {17FA58F8-2D29-4835-8B38-5CEEEC40FC54} → {5A265EB7-AED5-4dfb-ADC5-EEA18DD7ECAD}
-      - "Association «belongs to» → 9.11.2.9"  # {8FDD275F-2711-40eb-8621-2042449E02E7} → {90EF1935-D974-4740-91B6-D0994428A7A5}
+      - "Association «belongs to» → 9.11 Manage Freight Transport Operations"  # {4D79836B-A1AE-4dce-AEB4-BF87F97C0BFB} → {4844B1BE-90B7-40a6-A31B-BFCBBF70B73E}
   - name: "9.11.3 Monitor Transport Operation"
     guid: "{27F7C00E-551B-42d4-896D-4816963C50B9}"
     type: "Requirement"
@@ -10669,10 +10690,7 @@ elements:
     note: |
       This Topic contains the activities associated with the monitoring of conditions both on the roads etc., and on the Freight Vehicle, during the execution of a Freight Transport Operation
     links:
-      - "Association «belongs to» → 9.11.3.1"  # {ACFE7024-D700-43e3-AB8B-E27C49B3D989} → {94DF8049-83F2-4804-A9A1-D847F22A399D}
-      - "Association «belongs to» → 9.11.3.2"  # {38FA614E-1F6E-4308-A9A5-4A1949A4B57B} → {18A9EF1C-7C49-4fd7-88DA-BAD892A85955}
-      - "Association «belongs to» → 9.11.3.3"  # {1A36134E-465E-4c46-9B65-E9CFEA1B386F} → {894A506E-B7DE-416c-802F-22303FBF1679}
-      - "Association «belongs to» → 9.11.3.4"  # {68B34E73-3846-42d2-BB78-92099A0DC46A} → {B300863B-966B-4fbd-AC98-7D9C9426A3C8}
+      - "Association «belongs to» → 9.11 Manage Freight Transport Operations"  # {1DBC07AF-2D82-4304-BA1A-39BBDC8ACFE4} → {4844B1BE-90B7-40a6-A31B-BFCBBF70B73E}
   - name: "1.5 Continuity"
     guid: "{FEDDDFF6-C6E4-468c-B650-DB57415BF8F1}"
     type: "Requirement"
@@ -10700,6 +10718,7 @@ elements:
     note: |
       The system shall be able to provide the Freight Transport User with the status of the Freight Transport Load Items that are of concern to that Freight Transport User in the event of a deviation (e.g. damage, loss, temperature deviation, delay to departure and/or arrival times).
     links:
+      - "Association «belongs to» → 9.10.1 Manage Customer Requirements"  # {CED98F8B-559D-4495-9BFA-14E41E74EFBC} → {8D22560C-2FE7-492e-AB64-A607C1BFB6D3}
       - "Association «served by» → F8.4.1 Provide Freight Transport User Interface"  # {CE6086B7-E4E8-4327-9EC6-BC0FDAD2A1DD} → {6983F8F3-33BD-4e31-A9FB-DB14981B86DB}
       - "Association «served by» → F8.6.2 Monitor FTEP Implementation"  # {532276C5-500D-418a-A6BE-ED2A24BE75E5} → {D320C8CB-7271-40f3-9C39-963E76B15D5B}
       - "Association «served by» → F8.7.1 Collect Data from Freight Vehicle"  # {B27EFD2E-A2C4-40ce-BCBD-54A33106B6EE} → {6BE61F07-B5AB-40d5-8408-51434FE8E9D0}
@@ -10730,6 +10749,7 @@ elements:
     note: |
       The system shall support the request for the movement of Freight Transport Load Items.
     links:
+      - "Association «belongs to» → 9.10.1 Manage Customer Requirements"  # {8A138A15-DF9B-4c03-B8B9-1B3BA23C58AE} → {8D22560C-2FE7-492e-AB64-A607C1BFB6D3}
       - "Association «served by» → F8.6.1 Implement FTEP"  # {D16AFE19-C632-43cd-8C9D-AE427EA174E9} → {510B21B5-5C4B-43ec-A42D-BAF28FD4E528}
       - "Association «served by» → F8.6.2 Monitor FTEP Implementation"  # {A68E7D75-B61B-44c7-BB21-45D40DA196DA} → {D320C8CB-7271-40f3-9C39-963E76B15D5B}
       - "Association «served by» → F8.6.3 Provide Freight Vehicle Driver Interface"  # {6E762BDD-63B0-4e88-B54E-A14B60A74D0D} → {65F5CC11-C577-45fc-BC18-4DB4BCA41E0A}
@@ -10760,6 +10780,7 @@ elements:
     note: |
       The system shall be able to maintain a database of the capabilities of the available Freight Vehicles.
     links:
+      - "Association «belongs to» → 9.10.1 Manage Customer Requirements"  # {CF5616EC-D175-462c-9E44-1B760F79BE52} → {8D22560C-2FE7-492e-AB64-A607C1BFB6D3}
       - "Association «served by» → F8.4.4 Prepare Freight Transport Execution Plan for Implementation"  # {34138676-535E-4071-8722-9D22474421EE} → {0E77F27F-D215-45d0-B051-5C6E61E59127}
       - "Association «served by» → F8.6.4 Provide Interface to Other Transport Modes"  # {40D22C35-9F38-4db9-A409-99A65B29FA6F} → {16E599A1-12F3-4e20-80D6-9447C898EB54}
   - name: "1.8 Maintainability"
@@ -10789,6 +10810,7 @@ elements:
     note: |
       The system shall be able to support the creation of a sequence of Freight Transport Operations that form (part of) a Freight Transport Execution Plan for use by the Freight Transport Operations Manager.
     links:
+      - "Association «belongs to» → 9.10.1 Manage Customer Requirements"  # {CE260221-C042-4075-BF77-B8ACCD0A27FD} → {8D22560C-2FE7-492e-AB64-A607C1BFB6D3}
       - "Association «served by» → F8.4.3 Provide Freight Transport Operations Manager Interface"  # {AA98EB25-9F41-4879-BB5A-8484E6850C3A} → {8FBDF54B-6B59-4624-BAA2-0843DE946DB2}
       - "Association «served by» → F8.4.4 Prepare Freight Transport Execution Plan for Implementation"  # {B4E3A4AF-BFAA-4bc5-8306-3D8E9E03BB82} → {0E77F27F-D215-45d0-B051-5C6E61E59127}
       - "Association «served by» → F8.5.1 Collect Road Network Data"  # {750F9BBC-493F-4f0f-9819-864470CACBF3} → {3BCBC290-332B-4aa6-A554-FB6C4DFAE8BD}
@@ -10811,9 +10833,6 @@ elements:
     order: 9
     note: |
       This Group contains activities associated with the provision of Freight Transport Services, including the management of the operations and the implementation of the Freight Transport Execution Plan.
-    links:
-      - "Association «belongs to» → 9.10 Provide Freight Transport Service"  # {4675E0A6-4BD8-4444-B859-66E492931DCD} → {2EF37588-7C31-48eb-8AEE-5634261A6766}
-      - "Association «belongs to» → 9.11 Manage Freight Transport Operations"  # {68E85D8A-490C-4b93-BB1D-0835B37554FC} → {4844B1BE-90B7-40a6-A31B-BFCBBF70B73E}
   - name: "9.10.1.5"
     guid: "{3F9372AA-6E25-4d68-8639-CC5FCF5AE64D}"
     type: "Requirement"
@@ -10824,6 +10843,7 @@ elements:
     note: |
       The system shall be able to provide an itinerary (how the Freight Transport Execution Plan is to be implemented) for inclusion in the Freight Transport Execution Plan to the Freight Transport User.
     links:
+      - "Association «belongs to» → 9.10.1 Manage Customer Requirements"  # {098BC31F-FC02-4b95-9161-026E4174BAF8} → {8D22560C-2FE7-492e-AB64-A607C1BFB6D3}
       - "Association «served by» → F8.4.1 Provide Freight Transport User Interface"  # {37FA07F2-5CE5-4801-A31D-FE192B3CFCAB} → {6983F8F3-33BD-4e31-A9FB-DB14981B86DB}
       - "Association «served by» → F8.4.3 Provide Freight Transport Operations Manager Interface"  # {B1B8C0AE-CD2B-4080-9508-291CBB3ABB0F} → {8FBDF54B-6B59-4624-BAA2-0843DE946DB2}
   - name: "1.10 Robustness"
@@ -10853,6 +10873,7 @@ elements:
     note: |
       The system shall be able to receive an itinerary (how the Freight Transport Execution Plan is to be executed) from the Freight Transport User for the Freight Transport Execution Plan.
     links:
+      - "Association «belongs to» → 9.10.1 Manage Customer Requirements"  # {6C377D92-A299-409a-A894-B068EBA41696} → {8D22560C-2FE7-492e-AB64-A607C1BFB6D3}
       - "Association «served by» → F8.4.1 Provide Freight Transport User Interface"  # {098D0212-055C-4ee5-838A-9351A77A1DB4} → {6983F8F3-33BD-4e31-A9FB-DB14981B86DB}
   - name: "1.11 Safety"
     guid: "{282BEA6C-5D1A-447f-BC63-C798F40F810E}"
@@ -10881,6 +10902,7 @@ elements:
     note: |
       The system shall support the Freight Transport Operations Manager to accept, or reject, a Freight Transport Execution Plan.
     links:
+      - "Association «belongs to» → 9.10.1 Manage Customer Requirements"  # {915CE11B-B198-4518-B319-6916AABA145B} → {8D22560C-2FE7-492e-AB64-A607C1BFB6D3}
       - "Association «served by» → F8.4.4 Prepare Freight Transport Execution Plan for Implementation"  # {7567187A-2AA1-4aec-A9EC-D599139C560F} → {0E77F27F-D215-45d0-B051-5C6E61E59127}
   - name: "1.12 Security"
     guid: "{8CEAB15C-EB48-4de1-BCBB-E093A046CE88}"
@@ -10900,6 +10922,7 @@ elements:
     note: |
       The system shall be able to provide the Freight Transport User, automatically, with the current Freight Transport Execution Status of the Freight Transport Service(s) which relate to that Freight Transport User.
     links:
+      - "Association «belongs to» → 9.10.1 Manage Customer Requirements"  # {27A27FE2-0B14-488d-B2E7-F0C2051846C0} → {8D22560C-2FE7-492e-AB64-A607C1BFB6D3}
       - "Association «served by» → F8.4.1 Provide Freight Transport User Interface"  # {E826B373-E200-498e-9685-64111B84A561} → {6983F8F3-33BD-4e31-A9FB-DB14981B86DB}
   - name: "1.13 User Friendliness"
     guid: "{4286D967-DA09-447f-92EC-79D0677F6852}"
@@ -10919,6 +10942,7 @@ elements:
     note: |
       The system shall be able to provide the Freight Transport User, on request, with the current Transport Execution Status of the Freight Transport Service(s) which relate to that Freight Transport User.
     links:
+      - "Association «belongs to» → 9.10.1 Manage Customer Requirements"  # {12060F49-A584-4178-8A77-71A5CC34554F} → {8D22560C-2FE7-492e-AB64-A607C1BFB6D3}
       - "Association «served by» → F8.4.1 Provide Freight Transport User Interface"  # {B5BF9285-EA6C-4efc-A67B-F08CA6013859} → {6983F8F3-33BD-4e31-A9FB-DB14981B86DB}
   - name: "1.14 Special Needs"
     guid: "{C79E3B93-8D47-4b61-AAAA-D6E9E8614B53}"

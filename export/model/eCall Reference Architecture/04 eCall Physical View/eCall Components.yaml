@@ -29,10 +29,10 @@ elements:
       - "Usage → eCall MSD"  # {B851AADB-9011-4575-93B5-0D061AB8F398} → {A1CFA1A2-AFC7-4848-B368-634C9C2D1590}
       - "Usage → eCall secured Voice Channel"  # {3666CCFB-390B-4666-92D6-7388DA895E4D} → {70BC610C-D747-478b-8EF1-88FF5CD2639D}
       - "Usage → redirected eCall MSD"  # {247952A3-45FF-43ff-BFF7-4D9ACB269280} → {E34C9682-9FF3-4339-8DF1-ADCB2DF05B13}
-  - name: "PSAP - eCall Mamagement Application"
+  - name: "PSAP - eCall Management Application"
     guid: "{75F571AB-C929-4046-9AA8-C4BB9C9F7D68}"
-    type: "Class"
-    stereotype: "HighLevelFunction"
+    type: "Object"
+    stereotype: "FRAME_Application"
     status: "Proposed"
     version: "1.0"
     order: 0
